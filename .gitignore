@@ -1,0 +1,16 @@
+# Media assets
+assets/audio/*.mp3
+assets/videos/*.mp4
+output*.mp4
+outputTEMP*.mp4
+*.mp4
+*.mp3
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Serena/Harness runtime state
+.serena/
+.harness/loops/progress.json
+.harness/loops/decisions.log

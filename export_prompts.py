@@ -1,0 +1,29 @@
+import os
+
+# 16 Hypnosis scene video prompts
+VIDEO_PROMPTS = [
+    "The glowing pocket watch swings gently left to right. As it swings, the camera slowly zooms into the spiral pattern, which begins to swirl. The background fades into a deep lavender.",
+    "The magician taps his top hat with the wand. A funny cartoon rabbit pops out of the hat and starts dancing. The camera pans down to show the audience clapping, with colorful confetti floating down.",
+    "The gears inside the head silhouette begin to turn slowly. A bright light bulb in the center of the brain lights up and sparkles. The camera zooms into the light bulb, transitioning the screen to a warm white light.",
+    "Mesmer winks at the camera and waves his wand. The camera pans right as glowing cosmic energy lines flow out from his wand, wrapping around a historical scroll map.",
+    "The glowing energy lines wrap around the patient. The patient smiles and raises both arms in relief. The camera tilts up to show the ceiling decorated with stars and moons.",
+    "The King frowns and points forward. The royal guard steps forward, tapping his halberd on the ground. The camera pans left to reveal a formal document unfurling with a royal seal.",
+    "Benjamin Franklin looks through his magnifying glass, which makes his eye look giant and funny. The other scientists scribble on their pads. The camera zooms in on Franklin's notebook as he draws a big question mark.",
+    "The scientist behind the patient waves his hands dramatically. The blindfolded patient remains perfectly still and yawns. A question mark pops up over the patient's head.",
+    "The scale tips heavily towards the brain side. The bottle of 'Magnetic Fluid' shatters, and small sparkles evaporate. The cartoon brain smiles and winks at the camera.",
+    "The brain's light bulb glows intensely. The camera pans down to show a patient swallowing a simple white sugar pill, instantly transforming their facial expression from sick to energetic and happy.",
+    "The metallic object in Braid's hand begins to shine with concentric rings of light. The patient's eyes show rotating spirals, and the camera zooms in closely on one eye.",
+    "The glowing lines pulse rapidly. The background darkens, and the frontal lobe of the brain goes dim while the focus center glows brightly with a warm golden light.",
+    "The colorful brain on the monitor spins in 3D. The therapist in the background gestures, and the camera pans closer to the monitor as specific regions of the brain glow and shift color.",
+    "The bright red region on the brain map slowly dissolves into a peaceful cool blue color. Tiny cartoon shield icons appear around the blue area, deflecting tiny red lightning bolts representing pain.",
+    "The patient on the bed closes their eyes and takes a deep, peaceful breath. A small green leaf sprouts from the patient's hand, representing healing. The camera slowly pans out to show the whole room in a warm, comforting light.",
+    "The person gently blows on the glowing spark. The spark rises into the air, multiplying into dozens of tiny glowing stars that light up the giant brain silhouette in the background sky, creating a beautiful constellation effect."
+]
+
+output_file = "prompts_for_veo.txt"
+with open(output_file, "w", encoding="utf-8") as f:
+    for idx, prompt in enumerate(VIDEO_PROMPTS, start=1):
+        f.write(f"[Scene {idx}] {prompt}\n")
+
+print(f"SUCCESS: 16 Video prompts exported to '{output_file}'!")
+
