@@ -8,6 +8,7 @@ from moviepy import ImageClip, AudioFileClip, concatenate_videoclips, TextClip, 
 import moviepy.video.fx as fx
 from PIL import Image
 import numpy as np
+import cv2
 
 def parse_scenario(scenario_path):
     scenes = []
@@ -73,6 +74,9 @@ def main():
     parser = argparse.ArgumentParser(description="Compile scene clips and narration into final video.")
     parser.add_argument("--scenario", required=True, help="Path to scenario.txt")
     parser.add_argument("--output", required=True, help="Output path (e.g. chiropractic_science/chiropractic_science.mp4)")
+    parser.add_argument("--remove-watermark", action="store_true", default=True, help="Remove video watermark using OpenCV Inpainting")
+    parser.add_argument("--no-remove-watermark", action="store_false", dest="remove_watermark", help="Do not remove video watermark")
+    parser.add_argument("--logo-path", default="assets/drjay_ed_logo_circle.png", help="Path to channel logo overlay image")
     args = parser.parse_args()
 
     # Ensure output folders exist
@@ -96,6 +100,15 @@ def main():
         except Exception as e:
             print(f"Warning: Failed to delete audio cache {file}: {e}")
 
+    # Load channel logo once
+    logo_clip = None
+    if args.logo_path and os.path.exists(args.logo_path):
+        logo_img = cv2.imread(args.logo_path, cv2.IMREAD_UNCHANGED)
+        if logo_img is not None and logo_img.shape[2] == 4:
+            # Convert BGRA to RGBA to match MoviePy frame format
+            logo_clip = cv2.cvtColor(logo_img, cv2.COLOR_BGRA2RGBA)
+            print(f"Loaded logo for overlay: {args.logo_path} (Size: {logo_clip.shape})")
+
     clips = []
     print("Starting video composition process...")
 
@@ -117,6 +130,48 @@ def main():
         if os.path.exists(video_path):
             print(f"Loading video clip for Scene {scene['id']} from {video_path}...")
             base_clip = VideoFileClip(video_path)
+            
+            if args.remove_watermark:
+                print(f"Applying zoom-crop to remove watermark and overlaying mini logo for Scene {scene['id']}...")
+                width, height = base_clip.size
+                
+                # 1. Dolly Zoom: Crop top-left (78% of width and height gives 998x561, exactly 16:9)
+                crop_w = int(width * 0.78)
+                crop_h = int(height * 0.78)
+                
+                # 2. Resize logo to 45x45 (25% of the original size)
+                logo_size = 45
+                overlay_params = None
+                if logo_clip is not None:
+                    resized_logo = cv2.resize(logo_clip, (logo_size, logo_size), interpolation=cv2.INTER_AREA)
+                    logo_rgb = resized_logo[:, :, :3]
+                    logo_alpha = resized_logo[:, :, 3:4] / 255.0
+                    
+                    # Align in the bottom-right corner with a 25px margin
+                    margin = 25
+                    ox_start = width - logo_size - margin
+                    oy_start = height - logo_size - margin
+                    ox_end = width - margin
+                    oy_end = height - margin
+                    
+                    overlay_params = (ox_start, oy_start, ox_end, oy_end, logo_rgb, logo_alpha)
+                
+                def remove_logo_frame(frame):
+                    # Step A: Crop and Upscale to push watermark completely out of frame
+                    cropped = frame[0:crop_h, 0:crop_w]
+                    frame_copy = cv2.resize(cropped, (width, height), interpolation=cv2.INTER_LANCZOS4)
+                    
+                    # Step B: Overlay Channel Logo (45x45 mini size)
+                    if overlay_params is not None:
+                        ox_s, oy_s, ox_e, oy_e, l_rgb, l_alpha = overlay_params
+                        patch = frame_copy[oy_s:oy_e, ox_s:ox_e]
+                        blended = (1.0 - l_alpha) * patch + l_alpha * l_rgb
+                        frame_copy[oy_s:oy_e, ox_s:ox_e] = blended.astype(np.uint8)
+                        
+                    return frame_copy
+                
+                base_clip = base_clip.image_transform(remove_logo_frame)
+                
             # Speed match video clip duration to TTS duration
             speed_factor = base_clip.duration / duration
             base_clip = base_clip.with_effects([fx.MultiplySpeed(speed_factor)]).with_audio(audio_clip)
