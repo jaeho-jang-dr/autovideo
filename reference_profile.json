@@ -1,0 +1,68 @@
+{
+  "video_path": "dopamine_loop.mp4",
+  "resolution": {
+    "width": 1024,
+    "height": 1024
+  },
+  "fps": 24.0,
+  "total_duration": 149.33,
+  "scene_count": 8,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "start": 0.0,
+      "end": 24.5,
+      "duration": 24.5
+    },
+    {
+      "scene_id": 2,
+      "start": 24.5,
+      "end": 46.17,
+      "duration": 21.67
+    },
+    {
+      "scene_id": 3,
+      "start": 46.17,
+      "end": 65.83,
+      "duration": 19.66
+    },
+    {
+      "scene_id": 4,
+      "start": 65.83,
+      "end": 84.83,
+      "duration": 19.0
+    },
+    {
+      "scene_id": 5,
+      "start": 84.83,
+      "end": 101.83,
+      "duration": 17.0
+    },
+    {
+      "scene_id": 6,
+      "start": 101.83,
+      "end": 121.33,
+      "duration": 19.5
+    },
+    {
+      "scene_id": 7,
+      "start": 121.33,
+      "end": 137.17,
+      "duration": 15.84
+    },
+    {
+      "scene_id": 8,
+      "start": 137.17,
+      "end": 149.33,
+      "duration": 12.16
+    }
+  ],
+  "subtitle_style": {
+    "font_size": 26,
+    "color": "white",
+    "stroke_color": "black",
+    "stroke_width": 2,
+    "margin_bottom": 230,
+    "max_chars_per_line": 35
+  }
+}
