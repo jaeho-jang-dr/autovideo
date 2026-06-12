@@ -1,5 +1,5 @@
 """
-place_clips.py — VEO Automation 으로 다운로드한 16개 클립을
+place_clips.py — 생성 또는 다운로드한 비디오 클립들을
 assets/videos/scene_1.mp4 ~ scene_16.mp4 로 순서대로 배치한다.
 
 사용법:

@@ -14,3 +14,11 @@ __pycache__/
 .serena/
 .harness/loops/progress.json
 .harness/loops/decisions.log
+
+# Playwright and Chrome profiles
+assets/chrome_profile/
+.playwright-mcp/
+
+# Local debug artifacts (screenshots, downloads, driver cmd queue)
+debug/
+/scene_9*/
