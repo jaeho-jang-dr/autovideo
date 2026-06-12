@@ -78,7 +78,38 @@ def wrap_text(text, max_chars=30):
         lines.append(' '.join(current_line))
     return '\n'.join(lines)
 
-def make_cloned_video(profile_path="reference_profile.json", output_path="cloned_video.mp4"):
+def parse_scenario_file(path):
+    scenes = []
+    if not os.path.exists(path):
+        print(f"Error: Scenario file not found: {path}")
+        return scenes
+        
+    import re
+    current_scene = {}
+    scene_pat = re.compile(r"\[Scene\s+(\d+)\]", re.IGNORECASE)
+    
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line_str = line.strip()
+            if not line_str:
+                continue
+            m = scene_pat.match(line_str)
+            if m:
+                if current_scene and "text" in current_scene:
+                    scenes.append(current_scene)
+                current_scene = {"id": int(m.group(1))}
+            elif ":" in line_str:
+                parts = line_str.split(":", 1)
+                key = parts[0].strip().lower()
+                val = parts[1].strip()
+                if key in ("text", "image", "motion"):
+                    current_scene[key] = val
+                    
+        if current_scene and "text" in current_scene:
+            scenes.append(current_scene)
+    return scenes
+
+def make_cloned_video(profile_path="reference_profile.json", output_path="cloned_video.mp4", scenario_path=None):
     if not os.path.exists(profile_path):
         print(f"Error: Profile file not found: {profile_path}")
         return False
@@ -87,16 +118,37 @@ def make_cloned_video(profile_path="reference_profile.json", output_path="cloned
         profile = json.load(f)
         
     ref_scenes = profile.get("scenes", [])
+    if not ref_scenes and profile_path != "reference_profile.json":
+        if os.path.exists("reference_profile.json"):
+            try:
+                with open("reference_profile.json", "r", encoding="utf-8") as ref_f:
+                    ref_profile = json.load(ref_f)
+                    ref_scenes = ref_profile.get("scenes", [])
+                    print("Loaded scene timings from reference_profile.json fallback.")
+            except Exception as e:
+                print(f"Warning: Could not load fallback reference_profile.json: {e}")
+                
     sub_style = profile.get("subtitle_style", {})
     
+    # Load scenario scenes
+    if scenario_path:
+        scenes_data = parse_scenario_file(scenario_path)
+        if not scenes_data:
+            print("Error: Loaded scenario data is empty.")
+            return False
+    else:
+        scenes_data = SCENES
+        
     # Check if we have enough video assets
-    num_scenes = min(len(SCENES), len(ref_scenes))
+    num_scenes = min(len(scenes_data), len(ref_scenes))
     print(f"Cloning {num_scenes} scenes based on reference profile...")
     
     # Pre-flight check for videos
     missing = []
-    for i in range(1, num_scenes + 1):
-        video_file = f"assets/videos/scene_{i}.mp4"
+    for idx in range(num_scenes):
+        scene_cfg = scenes_data[idx]
+        scene_id = scene_cfg["id"]
+        video_file = f"assets/videos/scene_{scene_id}.mp4"
         if not os.path.exists(video_file):
             missing.append(video_file)
             
@@ -109,7 +161,7 @@ def make_cloned_video(profile_path="reference_profile.json", output_path="cloned
     clips = []
     
     for idx in range(num_scenes):
-        scene_cfg = SCENES[idx]
+        scene_cfg = scenes_data[idx]
         ref_scene = ref_scenes[idx]
         
         # Reference duration for this scene
@@ -139,7 +191,7 @@ def make_cloned_video(profile_path="reference_profile.json", output_path="cloned
             fallback_found = False
             for root, dirs, files in os.walk("assets/videos"):
                 for file in files:
-                    if file.endswith(".mp4"):
+                    if file.endswith(".mp4") and not file.startswith("scene_1_clean"):
                         video_file = os.path.join(root, file)
                         fallback_found = True
                         break
@@ -201,4 +253,11 @@ def make_cloned_video(profile_path="reference_profile.json", output_path="cloned
     return True
 
 if __name__ == "__main__":
-    make_cloned_video()
+    import argparse
+    parser = argparse.ArgumentParser(description="Create cloned video using style profile.")
+    parser.add_argument("--profile", default="reference_profile.json", help="Path to style profile JSON")
+    parser.add_argument("--scenario", default=None, help="Path to scenario txt file (optional)")
+    parser.add_argument("--output", default="cloned_video.mp4", help="Path to output video mp4")
+    args = parser.parse_args()
+    
+    make_cloned_video(profile_path=args.profile, output_path=args.output, scenario_path=args.scenario)

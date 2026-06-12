@@ -72,7 +72,7 @@
 
 *   대본 5~6초당 한 프레임 이미지 생성 (프롬프트 뒤에 `No watermark, no text, no binary code, no letters, no signatures.` 명시하여 워터마크 원천 차단)
 *   비디오 생성 프롬프트 설계 시, 단순 줌인/팬 무빙이 아닌 **3~4초 동안 다른 사물/장면 노출, 다차원 카메라 워킹, 오브젝트/인물 상호작용** 등 실제 물리 동작 변화가 유도되도록 구체적으로 작성
-*   Google Flow / Veo를 이용해 3~4초 길이 비디오 클립(.mp4)을 제작해 `assets/videos/` 폴더에 배치
+*   `flow_automator.py` 자동 생성 스크립트를 사용하여 3~4초 길이 비디오 클립(.mp4)을 생성 및 `assets/videos/` 폴더에 배치. **(이 자동 생성 작업은 나중에도 Claude Code가 전담해야 하며, 한 이미지당 한 클립의 누락 없는 완벽한 생성 및 다운로드 다운을 위해 반드시 `/goal` 슬래시 명령을 통해 실행해야 함)**
 *   자세한 내용은 [VEO_WORKFLOW.md](file:///D:/Entertainments/DevEnvironment/autovideo/VEO_WORKFLOW.md) 참조
 
 ---

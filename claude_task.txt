@@ -1,0 +1,19 @@
+[프로젝트: autovideo, 스택: Python + Playwright (GUI 자동화 전용)]
+[작업 목표]:
+이미 flow_automator.py 파일에 최신 대시보드 경유 진입 로직과 미디어 팝업창 자동 닫기(XPath 기반 click_add_to_prompt) 로직이 구현되어 있습니다.
+Claude Code CLI는 자신의 Bash 도구를 활용하여 python flow_automator.py --scene 1 --auto 명령을 직접 실행하고, 사용자 개입 및 권한 승인 팝업 없이 100% 자동으로 비디오를 생성하고 assets/videos/scene_1.mp4로 정상 다운로드 완료하는지 최종 검증하십시오.
+
+[필수 요구사항]:
+1. flow_automator.py (file:///d:/Entertainments/DevEnvironment/autovideo/flow_automator.py)를 확인하고, 최근에 추가된 click_add_to_prompt(page) 및 XPath 선택자 로직이 정상적이고 견고하게 코딩되어 있는지 필요하다면 검토 및 보강하십시오.
+2. Bash 도구를 사용하여 python flow_automator.py --scene 1 --auto 명령을 직접 구동하십시오.
+3. 실행 과정에서 생성되는 디버그용 스크린샷들(debug/wait_dl_*.png 및 debug/scene1_*.png)을 직접 읽거나 뷰어(또는 file_view)를 통해 수시로 분석하여, 생성/대기/다운로드 프로세스가 락(Lock)에 걸리지 않고 원활하게 흘러가고 있는지 시각적으로 직접 판단하고 자가 수정(Self-correction)을 가하십시오.
+4. 비디오 생성에는 수 분이 소요되므로, 다운로드 이벤트가 수신되거나 assets/videos/scene_1.mp4가 저장될 때까지 쉘 프로세스가 도중에 끊기지 않도록 참을성 있게 대기 및 모니터링을 완수하십시오.
+
+[성공 기준]:
+- python flow_automator.py --scene 1 --auto 실행 시, 로그인 직후부터 비디오 다운로드 완료까지 터미널에서 수동 입력을 요청하지 않고 100% 자동으로 진행되어야 함.
+- 비디오가 최종적으로 assets/videos/scene_1.mp4 경로에 성공적으로 다운로드되어 저장되어야 함.
+
+[제약 조건 및 원칙]:
+- API 사용 금지: Google Veo API 등 어떠한 API도 호출하지 말고 100% 브라우저 GUI 자동화(Playwright) 방식으로만 동작하게 하십시오.
+- UTF-8 인코딩 사용 (BOM 제외)
+- .harness/context/principles.md 파일의 개발 원칙 및 MoviePy 2.x 규칙 준수

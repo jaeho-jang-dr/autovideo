@@ -13,7 +13,7 @@
          ↓
 [3] Google Flow / Image Generator로 베이스 이미지 생성 (1024x1024)
          ↓
-[4] Veo (Image-to-Video) 기반 4~5초 모션 비디오 클립(.mp4) 생성
+[4] flow_automator.py 실행 (비디오 클립 자동 생성 및 다운로드)
          ↓
 [5] make_video.py 실행 (TTS 오디오 매칭, 자막 합성 및 최종 렌더링)
 ```
@@ -36,6 +36,7 @@
 
 ### 3단계: Veo를 활용한 비디오 클립 생성 (Google Flow)
 *   생성한 `scene_X.png`를 기반으로 **Veo(Image-to-Video) 모형**을 이용하여 **3~4초 분량의 역동적인 비디오 클립**(`assets/videos/scene_X.mp4`)을 생성합니다.
+*   이 과정은 Playwright 자동화 스크립트인 `python flow_automator.py`를 통해 Google Chrome의 로그인 프로필 컨텍스트를 사용하여 Google Flow 웹 페이지 상에서 완전 자동으로 실행 및 다운로드됩니다.
 *   **단순 이미지 무빙 금지:** 단순히 베이스 이미지 자체를 평면적으로 흔들거나 확대하는 수준에 그쳐서는 안 되며, 3~4초 동안 시간의 흐름에 따라 **장면의 변화와 카메라 워크가 어우러진 복합적인 동영상 작업**이 유도되도록 프롬프트를 정교하게 설계해야 합니다.
 *   **비디오(모션) 프롬프트 필수 구성 요소:**
     *   **카메라 다차원 무빙 (Camera Work):** 1차원적인 줌인/패닝을 넘어 플라이스루(Flythrough), 궤도 비행(Orbital shot), 극적인 돌리 줌(Dolly zoom), 180도 회전(Rotate to reveal) 등 공간감을 극대화하는 카메라 워크 지시.

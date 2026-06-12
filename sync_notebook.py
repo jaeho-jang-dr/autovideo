@@ -77,7 +77,9 @@ def sync():
         "GEMINI.md",
         "영상제작.md",
         "FLOW_MANUAL.md",
-        "VEO_WORKFLOW.md"
+        "VEO_WORKFLOW.md",
+        "scenario.txt",
+        "chiropractic_science_prompts.txt"
     ]
     
     # Get current sources to avoid duplicate uploads

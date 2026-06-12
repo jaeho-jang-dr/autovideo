@@ -1,0 +1,15 @@
+{
+  "resolution": {
+    "width": 1024,
+    "height": 1024
+  },
+  "fps": 24.0,
+  "subtitle_style": {
+    "font_size": 26,
+    "color": "#1A1A1A",
+    "stroke_color": "#F5F5F0",
+    "stroke_width": 1,
+    "margin_bottom": 200,
+    "max_chars_per_line": 35
+  }
+}
