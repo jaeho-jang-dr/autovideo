@@ -23,7 +23,7 @@ Claude Code — 코드 생성·명령 결정·셸 실행·자가수정
 
 - **목적**: 유튜브 교양/지식 콘텐츠 자동 제작 파이프라인 (대본 추출, TTS 생성, 이미지/비디오 합성, 자막 삽입 및 합본 인코딩)
 - **스택**: Python + MoviePy 2.2.1 (v2.x API 사용 필수) + gTTS
-- **영상 제작 워크플로우**: 주제 선정 -> NotebookLM 소스 검색 -> 프로젝트 폴더 생성 및 래퍼런스 적재(스샷/URL) -> 시나리오(scenario.txt) 및 스크립트 도출 -> Google Flow(autoveo_flow.py) 비디오 자동 생성/다운로드 -> 최종 컴파일(make_video.py, 전용 폴더 저장) -> 특이점 명세 파일([video_name]_spec.md) 보존 -> 목차/스샷 기반 데이터화 순서의 7단계 AI 영상 제작 라이프사이클을 준수합니다. (자세한 내용은 [VEO_WORKFLOW.md](file:///D:/Entertainments/DevEnvironment/autovideo/VEO_WORKFLOW.md) 및 [principles.md](file:///d:/Entertainments/DevEnvironment/autovideo/.harness/context/principles.md#L88) 참조)
+- **영상 제작 워크플로우**: 주제 선정 -> NotebookLM 소스 검색 -> 프로젝트 폴더 생성 및 레퍼런스 적재(스샷/URL) -> 시나리오(scenario.txt) 및 극도의 정밀 스크립트 도출(롱폼: 5초당 1컷, 쇼츠: 4초당 1컷) -> Google Flow(autoveo_flow.py) 비디오 자동 생성/다운로드 -> 최종 컴파일(make_video.py, 전용 폴더 저장) -> 초정밀 역공학 명세 파일([video_name]_spec.md) 보존 -> 목차/스샷 기반 데이터화 순서의 7단계 AI 영상 제작 라이프사이클을 준수합니다. (자세한 내용은 [VEO_WORKFLOW.md](file:///D:/Entertainments/DevEnvironment/autovideo/VEO_WORKFLOW.md) 및 [principles.md](file:///d:/Entertainments/DevEnvironment/autovideo/.harness/context/principles.md#L88) 참조)
   - 정적 이미지 줌인 효과 연출(Ken Burns)은 **금지**하며, 5~6초 단위 대본마다 생성된 이미지를 Veo를 통해 4~5초 비디오 클립으로 만들고 이들을 합성하여 컴파일합니다.
 - **하네스 버전**: 1.0 (생성: 2026-06-11)
 - **비디오 오디오 및 렌더링 디폴트 (실수 방지 규칙)**:
