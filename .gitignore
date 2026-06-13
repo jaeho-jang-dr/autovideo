@@ -22,3 +22,12 @@ assets/chrome_profile/
 # Local debug artifacts (screenshots, downloads, driver cmd queue)
 debug/
 /scene_9*/
+
+# Web (Astro) build artifacts
+web/node_modules/
+web/dist/
+web/.astro/
+
+# Sensitive env files
+.env
+.env.local

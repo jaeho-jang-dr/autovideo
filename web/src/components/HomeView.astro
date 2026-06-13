@@ -1,0 +1,44 @@
+---
+import { channel, episodes, counts, type Lang } from '../lib/content';
+import { t } from '../lib/i18n';
+import CategoryPills from './CategoryPills.astro';
+import EpisodeCard from './EpisodeCard.astro';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const tr = t(lang);
+
+// 발행본 우선, 그다음 우선순위/코드 순.
+const sorted = [...episodes].sort((a, b) => {
+  const pa = a.status === 'published' ? 0 : 1;
+  const pb = b.status === 'published' ? 0 : 1;
+  return pa - pb || a.priority - b.priority || a.code.localeCompare(b.code);
+});
+const concept = channel.concept ?? '';
+---
+<section class="hero container">
+  <span class="eyebrow">{channel.benchmark ? `${channel.benchmark}-style learning` : 'Learn deeply'}</span>
+  <h1>{lang === 'en' ? 'The World, Through a' : '세상을 해부하는'} <span class="grad-text">{lang === 'en' ? "Doctor's Eyes" : '의사의 시선'}</span></h1>
+  <p class="lead">{lang === 'en' ? tr.tagline : concept || tr.tagline}</p>
+
+  <div class="stats">
+    <div class="stat glass neon"><div class="num grad-text">{counts.episodes}</div><div class="label">{tr.stat_episodes}</div></div>
+    <div class="stat glass neon"><div class="num grad-text">{counts.published}</div><div class="label">{tr.stat_published}</div></div>
+    <div class="stat glass neon"><div class="num grad-text">{counts.categories}</div><div class="label">{tr.stat_categories}</div></div>
+  </div>
+
+  <div style="margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+    <a class="btn btn-primary" href="#lessons">{tr.explore}</a>
+  </div>
+</section>
+
+<section class="section container" id="lessons">
+  <div class="section-head">
+    <h2>{tr.nav_lessons}</h2>
+    <p>{tr.script_desc}</p>
+  </div>
+  <div style="margin-bottom:24px;"><CategoryPills lang={lang} /></div>
+  <div class="grid">
+    {sorted.map((e) => <EpisodeCard episode={e} lang={lang} />)}
+  </div>
+</section>

@@ -1,0 +1,20 @@
+---
+import {
+  categories, catName, categoryUrl, homeUrl,
+  type Lang,
+} from '../lib/content';
+import { t } from '../lib/i18n';
+
+interface Props { lang: Lang; active?: string; }
+const { lang, active } = Astro.props;
+const tr = t(lang);
+const sorted = [...categories].sort((a, b) => a.priority - b.priority || a.code.localeCompare(b.code));
+---
+<div class="pills">
+  <a class={`pill ${!active ? 'active' : ''}`} href={`${homeUrl(lang)}#lessons`}>{tr.all_lessons}</a>
+  {sorted.map((c) => (
+    <a class={`pill ${active === c.code ? 'active' : ''}`} href={categoryUrl(c.code, lang)}>
+      {catName(c, lang)}<span class="count">{c.count}</span>
+    </a>
+  ))}
+</div>

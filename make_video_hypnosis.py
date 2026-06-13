@@ -1,6 +1,6 @@
 import os
 import sys
-from gtts import gTTS
+from tts_manager import save_tts
 from moviepy import AudioFileClip, concatenate_videoclips, TextClip, CompositeVideoClip, VideoFileClip
 import moviepy.video.fx as fx
 
@@ -136,8 +136,7 @@ for idx, scene in enumerate(SCENES):
             os.remove(audio_path)
         except Exception as e:
             print(f"Warning: Could not remove old audio {audio_path}: {e}")
-    tts = gTTS(text=scene['text'], lang='ko')
-    tts.save(audio_path)
+    save_tts(scene['text'], audio_path, lang='ko')
         
     # Read audio duration and speed up the narration by 10% (1.1x speed)
     audio_clip = AudioFileClip(audio_path)

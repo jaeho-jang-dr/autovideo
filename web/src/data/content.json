@@ -1,0 +1,516 @@
+{
+  "channel": {
+    "channel_handle": "drjay-ed",
+    "domain": "drjayed.com",
+    "youtube_handle": "@drjay-ed",
+    "concept": "의사의 메스로 세상을 해부하고, 만화가의 상상력으로 꿰매다.",
+    "languages": "kr,en",
+    "benchmark": "TED-Ed"
+  },
+  "categories": [
+    {
+      "code": "CA",
+      "name_kr": "상상력 해부학",
+      "name_en": "Comic Anatomy",
+      "medical_lens": "만화·영화 캐릭터를 성장판·골강도·근건·역학으로 해부",
+      "priority": 1,
+      "count": 5
+    },
+    {
+      "code": "IMP",
+      "name_kr": "절대 불가능·영원한 난제",
+      "name_en": "The Impossible & The Unsolvable",
+      "medical_lens": "물리/수학/철학 난제에 항상성·진단 불확실성 등 의학 다리 연결",
+      "priority": 1,
+      "count": 6
+    },
+    {
+      "code": "MD",
+      "name_kr": "닥터 제이의 시선",
+      "name_en": "World Through MD's Eyes",
+      "medical_lens": "역사·예술·사회 현상을 정렬·하중·병리의 눈으로 재해석",
+      "priority": 1,
+      "count": 5
+    },
+    {
+      "code": "GEN",
+      "name_kr": "3대가 함께 보는 계몽 노트",
+      "name_en": "Enlightenment for All",
+      "medical_lens": "신경가소성·영양·회복으로 세대 공감과 건강을 잇기",
+      "priority": 2,
+      "count": 4
+    },
+    {
+      "code": "LM",
+      "name_kr": "라이프 메카닉스",
+      "name_en": "Life Mechanics",
+      "medical_lens": "바이크·파크골프·걷기로 풀어내는 균형·체중이동·자율신경",
+      "priority": 2,
+      "count": 4
+    }
+  ],
+  "episodes": [
+    {
+      "code": "CA-001",
+      "category": "CA",
+      "title_kr": "피터팬은 왜 늙지 않을까?",
+      "title_en": "Why Doesn't Peter Pan Age?",
+      "hook_kr": "영원히 어린아이인 피터팬, 그의 성장판은 어떻게 되어 있을까?",
+      "logline_kr": "성장판 폐쇄와 성장호르몬으로 본 '영원한 어린이'의 불가능",
+      "status": "idea",
+      "priority": 1,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "CA-002",
+      "category": "CA",
+      "title_kr": "진격의 거인이 실존한다면?",
+      "title_en": "If Titans Were Real",
+      "hook_kr": "50m 거인은 한 걸음 떼는 순간 제 뼈에 으스러진다?",
+      "logline_kr": "제곱-세제곱 법칙과 골강도 한계 (스케일의 저주)",
+      "status": "idea",
+      "priority": 1,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "CA-003",
+      "category": "CA",
+      "title_kr": "아이언맨 슈트를 입으면 척추는 무사할까?",
+      "title_en": "Would Iron Man's Spine Survive?",
+      "hook_kr": "초음속으로 날아오를 때, 슈트 속 사람의 척추에 무슨 일이?",
+      "logline_kr": "G포스·추간판 압박·충격흡수의 역학",
+      "status": "idea",
+      "priority": 1,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "IMP-001",
+      "category": "IMP",
+      "title_kr": "공짜 에너지가 불가능한 이유",
+      "title_en": "Why Free Energy Is Impossible",
+      "hook_kr": "넣지 않아도 영원히 도는 바퀴, 왜 한 번도 성공 못 했나?",
+      "logline_kr": "열역학 제2법칙 ↔ 인체 항상성·대사의 비유",
+      "status": "idea",
+      "priority": 1,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "IMP-002",
+      "category": "IMP",
+      "title_kr": "빛보다 빠를 수 없는 이유",
+      "title_en": "Why Nothing Can Outrun Light",
+      "hook_kr": "시속 300km 바이크와 광속은 왜 차원이 다른 이야기일까?",
+      "logline_kr": "상대성 질량 증가 ↔ 신경전달 속도 비유",
+      "status": "idea",
+      "priority": 1,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "IMP-006",
+      "category": "IMP",
+      "title_kr": "트롤리 딜레마와 자율주행",
+      "title_en": "The Trolley Problem & Self-Driving Cars",
+      "hook_kr": "5명을 살릴까 1명을 살릴까, 답이 없는 문제를 기계가 푼다?",
+      "logline_kr": "의사의 생명윤리 관점에서 본 알고리즘의 벽",
+      "status": "idea",
+      "priority": 1,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "LM-004",
+      "category": "LM",
+      "title_kr": "하루 8천보, 무릎은 정말 닳을까?",
+      "title_en": "Do 8,000 Steps Wear Out Your Knees?",
+      "hook_kr": "많이 걸으면 무릎이 닳는다는 말, 사실일까?",
+      "logline_kr": "연골 영양·관절 부하의 과학 (TED-Ed '1만보' 정면 대결)",
+      "status": "idea",
+      "priority": 1,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "MD-000",
+      "category": "MD",
+      "title_kr": "메스머와 최면술의 탄생",
+      "title_en": "Mesmer and the Birth of Hypnosis",
+      "hook_kr": "회중시계가 흔들리면 정말 마음이 움직일까?",
+      "logline_kr": "암시·자율신경 반응으로 본 최면의 의학사 (회중시계 오프닝)",
+      "status": "published",
+      "priority": 1,
+      "runtime_sec": 136,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": [
+        {
+          "seq": 1,
+          "script_kr": "천천히 회전하는 회중시계를 바라봅니다. 최면술사의 부드러운 목소리를 따라가다 보면, 어느새 깊은 몰입 상태에 빠지게 됩니다.",
+          "script_en": "You gaze at a slowly spinning pocket watch. As you follow the hypnotist's soft voice, you slip almost unknowingly into a deep state of absorption.",
+          "duration_sec": 9.9
+        },
+        {
+          "seq": 2,
+          "script_kr": "많은 이들이 최면을 단순한 마술쇼나 타인을 마음대로 조종하는 기이한 눈속임으로 생각하곤 합니다.",
+          "script_en": "Many people think of hypnosis as a mere magic show, or a bizarre trick for bending other people to one's will.",
+          "duration_sec": 7.6
+        },
+        {
+          "seq": 3,
+          "script_kr": "하지만 과연 이 최면술은 대중의 인식처럼 실제로 우리 뇌와 몸에 효과가 있는 과학적 현상일까요?",
+          "script_en": "But is hypnosis really a scientific phenomenon that affects our brain and body, the way popular belief assumes?",
+          "duration_sec": 7.6
+        },
+        {
+          "seq": 4,
+          "script_kr": "최면의 기원은 18세기 오스트리아의 의사 프란츠 안톤 메스머의 황당한 주장으로 거슬러 올라갑니다.",
+          "script_en": "The origins of hypnosis trace back to the outlandish claims of an 18th-century Austrian physician, Franz Anton Mesmer.",
+          "duration_sec": 7.7
+        },
+        {
+          "seq": 5,
+          "script_kr": "그는 우주로부터 흐르는 눈에 보이지 않는 힘인 '동물 자기'를 조절해 만병을 고칠 수 있다고 선전했습니다.",
+          "script_en": "He proclaimed that by manipulating an invisible force flowing from the cosmos — \"animal magnetism\" — he could cure every illness.",
+          "duration_sec": 8.4
+        },
+        {
+          "seq": 6,
+          "script_kr": "하지만 그의 화려한 치료실과 신비주의 치료법은 곧 프랑스 왕실의 큰 의심을 사게 되었습니다.",
+          "script_en": "But his lavish treatment rooms and mystical cures soon drew deep suspicion from the French royal court.",
+          "duration_sec": 7.3
+        },
+        {
+          "seq": 7,
+          "script_kr": "이에 따라 프랑스 왕실은 벤자민 프랭클린을 필두로 당대 최고의 과학자들로 구성된 위원회를 소집했습니다.",
+          "script_en": "In response, the French crown convened a commission of the era's finest scientists, led by Benjamin Franklin.",
+          "duration_sec": 8.1
+        },
+        {
+          "seq": 8,
+          "script_kr": "그들은 과학사 최초로 환자의 눈을 가리고 진짜 자석인 척 속이는 '맹검 실험'을 최초로 시도했습니다.",
+          "script_en": "They ran the first blind experiment in scientific history — blindfolding patients and deceiving them about whether a real magnet was even present.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 9,
+          "script_kr": "실험 결과, 환자가 에너지가 흐른다고 착각했을 때만 몸이 반응했고, 동물 자기는 실체가 없는 사기로 판명났습니다.",
+          "script_en": "The body reacted only when patients believed energy was flowing — and animal magnetism was exposed as a baseless fraud.",
+          "duration_sec": 9.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "비록 사기극으로 끝났지만, 이는 인간의 상상력과 기대가 몸에 반응을 일으키는 '플라시보 효과'의 시초가 되었습니다.",
+          "script_en": "Though it ended as a hoax, it marked the dawn of the \"placebo effect\" — proof that imagination and expectation can stir real bodily responses.",
+          "duration_sec": 9.1
+        },
+        {
+          "seq": 11,
+          "script_kr": "그 뒤 19세기 의사 제임스 브레이드가 나타나 최면을 마법이나 종교가 아닌 신경 생리학적 관점으로 재정의했습니다.",
+          "script_en": "Later, the 19th-century physician James Braid redefined hypnosis not as magic or religion, but through the lens of neurophysiology.",
+          "duration_sec": 9.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "그는 특정 물체에 고도로 주의를 집중하면, 뇌가 일시적인 신경성 수면과 강한 몰입 상태에 빠진다는 사실을 밝혀냈습니다.",
+          "script_en": "He found that intense focus on a single object can send the brain into a temporary \"nervous sleep\" and a powerful state of absorption.",
+          "duration_sec": 9.4
+        },
+        {
+          "seq": 13,
+          "script_kr": "오늘날 현대 과학은 fMRI 장치를 이용해 최면 상태의 뇌를 들여다봄으로써 그 작동 기전을 완벽히 규명했습니다.",
+          "script_en": "Today, modern science has mapped its mechanism by peering into the hypnotized brain with fMRI scanners.",
+          "duration_sec": 8.9
+        },
+        {
+          "seq": 14,
+          "script_kr": "놀랍게도 최면 상태에서는 통증 신호를 인지하는 뇌의 전대상피질 부위 활성도가 극적으로 감소합니다.",
+          "script_en": "Remarkably, under hypnosis the activity of the anterior cingulate cortex — the region that registers pain — drops dramatically.",
+          "duration_sec": 7.7
+        },
+        {
+          "seq": 15,
+          "script_kr": "덕분에 현대 의학에서는 약물 마취가 어려운 환자들의 무마취 수술이나 극심한 심리 치료에 최면을 직접 활용하고 있습니다.",
+          "script_en": "Thanks to this, modern medicine now uses hypnosis directly for anesthesia-free surgery in patients who can't tolerate drugs, and for intensive psychotherapy.",
+          "duration_sec": 9.4
+        },
+        {
+          "seq": 16,
+          "script_kr": "최면은 초자연적 마법이 아닌, 인간의 상상력과 뇌 과학이 만들어내는 정교하고 강력한 우리 마음의 도구입니다.",
+          "script_en": "Hypnosis is no supernatural magic, but a precise and powerful tool of the mind — forged by human imagination and the science of the brain.",
+          "duration_sec": 8.6
+        }
+      ]
+    },
+    {
+      "code": "MD-001",
+      "category": "MD",
+      "title_kr": "나폴레옹의 손은 왜 늘 옷 속에 있었나",
+      "title_en": "Why Napoleon Hid His Hand",
+      "hook_kr": "초상화 속 그 손, 멋인가 병의 흔적인가?",
+      "logline_kr": "역사 인물의 자세·습관에서 읽는 숨은 질병",
+      "status": "idea",
+      "priority": 1,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "MD-003",
+      "category": "MD",
+      "title_kr": "스마트폰과 거북목, 인류의 다음 진화?",
+      "title_en": "Text Neck: A New Human Spine?",
+      "hook_kr": "고개 숙인 현대인의 목, 진화일까 퇴화일까?",
+      "logline_kr": "경추 전만 소실과 하중 증가의 미래",
+      "status": "idea",
+      "priority": 1,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "CA-004",
+      "category": "CA",
+      "title_kr": "헐크처럼 근육이 폭발하면 힘줄은 버틸까?",
+      "title_en": "Could Tendons Survive the Hulk?",
+      "hook_kr": "근육이 10배 커지면 가장 먼저 찢어지는 곳은?",
+      "logline_kr": "건·인대 인장강도와 근력의 불균형",
+      "status": "idea",
+      "priority": 2,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "CA-005",
+      "category": "CA",
+      "title_kr": "스파이더맨처럼 벽을 오르려면?",
+      "title_en": "What It Takes to Climb Like Spider-Man",
+      "hook_kr": "사람이 손끝으로 벽에 붙으려면 몸이 어떻게 바뀌어야 할까?",
+      "logline_kr": "체중 대비 접착력·관절 부하의 생체역학",
+      "status": "idea",
+      "priority": 2,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "GEN-001",
+      "category": "GEN",
+      "title_kr": "5살 손주의 뇌와 60대 할아버지의 뇌가 만날 때",
+      "title_en": "When Two Brains, 60 Years Apart, Meet",
+      "hook_kr": "어린 뇌와 나이 든 뇌가 대화하면 어떤 기적이 일어날까?",
+      "logline_kr": "신경가소성과 시냅스로 본 세대 간 학습",
+      "status": "idea",
+      "priority": 2,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "GEN-002",
+      "category": "GEN",
+      "title_kr": "뼈와 관절을 살리는 밥상",
+      "title_en": "The Dinner-Table Orthopedist",
+      "hook_kr": "오늘 식탁이 10년 뒤 내 무릎을 결정한다?",
+      "logline_kr": "칼슘·비타민D·단백질의 정형외과",
+      "status": "idea",
+      "priority": 2,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "GEN-004",
+      "category": "GEN",
+      "title_kr": "잠은 왜 최고의 명약인가",
+      "title_en": "Why Sleep Is the Best Medicine",
+      "hook_kr": "밤사이 우리 몸은 어떤 수리를 할까?",
+      "logline_kr": "수면 중 회복·성장호르몬·조직 재생",
+      "status": "idea",
+      "priority": 2,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "IMP-003",
+      "category": "IMP",
+      "title_kr": "할아버지 역설, 시간여행과 인과율",
+      "title_en": "The Grandfather Paradox",
+      "hook_kr": "과거로 가 할아버지를 막으면 지금의 나는?",
+      "logline_kr": "인과율과 기억의 의학적 비유",
+      "status": "idea",
+      "priority": 2,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "IMP-004",
+      "category": "IMP",
+      "title_kr": "괴델의 불완전성, AI도 못 푸는 문제",
+      "title_en": "Godel's Incompleteness",
+      "hook_kr": "아무리 똑똑한 AI도 절대 못 푸는 수학 문제가 있다?",
+      "logline_kr": "'참이나 증명 불가' ↔ 진단의 본질적 불확실성",
+      "status": "idea",
+      "priority": 2,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "LM-001",
+      "category": "LM",
+      "title_kr": "바이크의 바람을 뇌는 왜 '치유'로 느낄까",
+      "title_en": "Why the Wind Feels Like Healing",
+      "hook_kr": "달릴 때의 그 해방감, 뇌 속에선 무슨 일이?",
+      "logline_kr": "자율신경·도파민·전정감각의 치유 메커니즘",
+      "status": "idea",
+      "priority": 2,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "LM-003",
+      "category": "LM",
+      "title_kr": "인간이 두 발로 선 날, 역사가 바뀐 이유",
+      "title_en": "The Day We Stood Upright",
+      "hook_kr": "직립보행 한 번이 인류의 운명을 바꿨다?",
+      "logline_kr": "척추 S커브와 직립의 인류학",
+      "status": "idea",
+      "priority": 2,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "MD-002",
+      "category": "MD",
+      "title_kr": "도시도 척추측만증에 걸린다",
+      "title_en": "Cities Get Scoliosis Too",
+      "hook_kr": "꼬불꼬불 잘못 깔린 도로망과 휜 척추는 같은 병을 앓는다?",
+      "logline_kr": "정렬·하중분산 원리의 도시-인체 평행이론",
+      "status": "idea",
+      "priority": 2,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "MD-004",
+      "category": "MD",
+      "title_kr": "명화 속 자세가 말해주는 그 시대의 병",
+      "title_en": "Disease Hidden in Masterpieces",
+      "hook_kr": "거장이 그린 인물의 비틀린 자세, 우연이 아니다?",
+      "logline_kr": "미술 속 자세 진단학(고병리)",
+      "status": "idea",
+      "priority": 2,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "GEN-003",
+      "category": "GEN",
+      "title_kr": "나이 듦은 퇴화가 아니라 완숙기다",
+      "title_en": "Aging Is Ripening, Not Decline",
+      "hook_kr": "늙는다는 건 정말 무너지는 걸까?",
+      "logline_kr": "노화를 적응·완숙으로 재정의",
+      "status": "idea",
+      "priority": 3,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "IMP-005",
+      "category": "IMP",
+      "title_kr": "튜링 정지문제, 완벽한 백신은 불가능",
+      "title_en": "Turing's Halting Problem",
+      "hook_kr": "무한루프를 미리 알려주는 완벽한 프로그램은 왜 못 만드나?",
+      "logline_kr": "정지 문제 ↔ 만성통증 악순환의 비유",
+      "status": "idea",
+      "priority": 3,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    },
+    {
+      "code": "LM-002",
+      "category": "LM",
+      "title_kr": "파크골프 18홀과 인생의 사계절",
+      "title_en": "18 Holes and Four Seasons of Life",
+      "hook_kr": "한 라운드를 도는 동안 우리는 인생을 한 번 산다?",
+      "logline_kr": "균형·체중이동에 담긴 삶의 리듬",
+      "status": "idea",
+      "priority": 3,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "scenes": []
+    }
+  ],
+  "counts": {
+    "episodes": 24,
+    "published": 1,
+    "categories": 5
+  }
+}

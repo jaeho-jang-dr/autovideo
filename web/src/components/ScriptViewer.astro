@@ -1,0 +1,38 @@
+---
+import type { Scene, Lang } from '../lib/content';
+import { t } from '../lib/i18n';
+
+interface Props { scenes: Scene[]; lang: Lang; }
+const { scenes, lang } = Astro.props;
+const tr = t(lang);
+const rows = [...scenes].sort((a, b) => a.seq - b.seq);
+const hasScenes = rows.length > 0;
+---
+<section class="script-panel glass neon">
+  <div class="ph">
+    <h2 class="grad-text">{tr.script_title}</h2>
+    <span class="desc">{tr.script_desc}</span>
+  </div>
+
+  {hasScenes ? (
+    <div class="script-grid">
+      <div class="script-colhead">
+        <span>#</span>
+        <span class="c-kr">{tr.col_kr}</span>
+        <span class="c-en">{tr.col_en}</span>
+      </div>
+      {rows.map((s) => (
+        <div class="scene-row">
+          <span class="seq">{String(s.seq).padStart(2, '0')}</span>
+          <div class="kr">
+            {s.script_kr}
+            {s.duration_sec ? <span class="dur">⏱ {s.duration_sec}s</span> : null}
+          </div>
+          <div class="en">{s.script_en}</div>
+        </div>
+      ))}
+    </div>
+  ) : (
+    <p class="empty-note">{tr.no_script}</p>
+  )}
+</section>

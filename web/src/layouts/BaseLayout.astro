@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+import { channel, homeUrl, type Lang } from '../lib/content';
+import { t } from '../lib/i18n';
+
+interface Props {
+  title: string;
+  description?: string;
+  lang: Lang;
+  altUrl: string;       // 같은 페이지의 반대 언어 URL (언어 토글용)
+  active?: 'home' | 'lessons';
+}
+
+const { title, description = '', lang, altUrl, active } = Astro.props;
+const tr = t(lang);
+const koUrl = lang === 'ko' ? Astro.url.pathname : altUrl;
+const enUrl = lang === 'en' ? Astro.url.pathname : altUrl;
+const handle = channel.youtube_handle ?? '@drjay-ed';
+---
+<!doctype html>
+<html lang={lang === 'en' ? 'en' : 'ko'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container bar">
+        <a class="brand" href={homeUrl(lang)} aria-label="drjay-ed home">
+          <span class="logo"><img src="/logo.png" alt="" width="34" height="34" /></span>
+          <span>drjay<span class="grad-text">-ed</span></span>
+        </a>
+        <nav class="nav">
+          <a href={homeUrl(lang)} class={active === 'home' ? 'active' : ''}>{tr.nav_home}</a>
+          <a href={`${homeUrl(lang)}#lessons`} class={active === 'lessons' ? 'active' : ''}>{tr.nav_lessons}</a>
+          <span class="lang-switch" role="group" aria-label="language">
+            <a href={koUrl} class={lang === 'ko' ? 'active' : ''} hreflang="ko">KO</a>
+            <a href={enUrl} class={lang === 'en' ? 'active' : ''} hreflang="en">EN</a>
+          </span>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container row">
+        <span>© drjay-ed · {handle}</span>
+        <span>{tr.footer}</span>
+      </div>
+    </footer>
+  </body>
+</html>

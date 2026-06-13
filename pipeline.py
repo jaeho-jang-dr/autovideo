@@ -20,7 +20,7 @@ import shutil
 import argparse
 import traceback
 from playwright.sync_api import sync_playwright
-from gtts import gTTS
+from tts_manager import save_tts
 from moviepy import AudioFileClip, concatenate_videoclips, TextClip, CompositeVideoClip, VideoFileClip
 import moviepy.video.fx as fx
 
@@ -401,8 +401,7 @@ def compile_final_video(scenes, output_path):
                 os.remove(audio_path)
             except Exception:
                 pass
-        tts = gTTS(text=scene['text'], lang='ko')
-        tts.save(audio_path)
+        save_tts(scene['text'], audio_path, lang='ko')
 
         # Apply speed multiplier 1.1
         audio_clip = AudioFileClip(audio_path)

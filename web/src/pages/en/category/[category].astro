@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CategoryView from '../../../components/CategoryView.astro';
+import { categories, getCategory, catName } from '../../../lib/content';
+
+export function getStaticPaths() {
+  return categories.map((c) => ({ params: { category: c.code } }));
+}
+
+const { category } = Astro.params;
+const code = category!;
+const cat = getCategory(code);
+const lang = 'en' as const;
+const name = cat ? catName(cat, lang) : code;
+---
+<BaseLayout
+  lang={lang}
+  altUrl={`/category/${code}/`}
+  active="lessons"
+  title={`${name} · drjay-ed`}
+  description={name}
+>
+  <CategoryView lang={lang} code={code} />
+</BaseLayout>

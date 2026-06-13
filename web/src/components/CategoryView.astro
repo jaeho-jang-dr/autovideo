@@ -1,0 +1,37 @@
+---
+import {
+  getCategory, episodesByCategory, catName, homeUrl,
+  type Lang,
+} from '../lib/content';
+import { t } from '../lib/i18n';
+import CategoryPills from './CategoryPills.astro';
+import EpisodeCard from './EpisodeCard.astro';
+
+interface Props { lang: Lang; code: string; }
+const { lang, code } = Astro.props;
+const tr = t(lang);
+const cat = getCategory(code);
+const list = episodesByCategory(code).sort((a, b) => {
+  const pa = a.status === 'published' ? 0 : 1;
+  const pb = b.status === 'published' ? 0 : 1;
+  return pa - pb || a.priority - b.priority || a.code.localeCompare(b.code);
+});
+---
+<section class="section container">
+  <div class="lesson-head">
+    <div class="crumbs">
+      <a href={homeUrl(lang)}>{tr.nav_home}</a><span>/</span><span>{cat ? catName(cat, lang) : code}</span>
+    </div>
+    <h1>{cat ? catName(cat, lang) : code}</h1>
+    {cat?.medical_lens && lang === 'ko' && (
+      <p class="sub"><strong style="color:var(--neon-cyan)">{tr.lens}</strong> · {cat.medical_lens}</p>
+    )}
+    <p class="sub" style="color:var(--text-2)">{list.length} {tr.lessons_in}</p>
+  </div>
+
+  <div style="margin-bottom:26px;"><CategoryPills lang={lang} active={code} /></div>
+
+  <div class="grid">
+    {list.map((e) => <EpisodeCard episode={e} lang={lang} />)}
+  </div>
+</section>

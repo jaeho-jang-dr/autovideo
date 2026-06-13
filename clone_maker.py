@@ -1,7 +1,7 @@
 import os
 import sys
 import json
-from gtts import gTTS
+from tts_manager import save_tts
 from moviepy import AudioFileClip, concatenate_videoclips, TextClip, CompositeVideoClip, VideoFileClip
 import moviepy.video.fx as fx
 
@@ -175,8 +175,7 @@ def make_cloned_video(profile_path="reference_profile.json", output_path="cloned
                 os.remove(audio_path)
             except Exception:
                 pass
-        tts = gTTS(text=scene_cfg["text"], lang="ko")
-        tts.save(audio_path)
+        save_tts(scene_cfg["text"], audio_path, lang="ko")
         
         # Load audio
         audio_clip = AudioFileClip(audio_path)
