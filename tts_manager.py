@@ -38,13 +38,32 @@ def save_tts_gtts(text, output_path, lang='ko'):
     # gTTS는 기본적으로 한국어('ko') 및 영어('en') 등을 지원합니다.
     tts = gTTS(text=text, lang=lang)
     tts.save(output_path)
+    try:
+        txt_cache_path = output_path + ".txt"
+        with open(txt_cache_path, "w", encoding="utf-8") as f:
+            f.write(text.strip())
+    except Exception:
+        pass
     return True
 
 def save_tts(text, output_path, lang='ko', voice_id=None):
     """
     ElevenLabs API를 호출하여 TTS 오디오 파일을 생성하고 저장한다.
     실패하거나 설정이 없을 경우 gTTS로 자동 Fallback한다.
+    스마트 텍스트 캐싱이 내장되어 있어 내용 변경이 없으면 API 호출을 건너뜁니다.
     """
+    # 스마트 텍스트 캐시 확인
+    txt_cache_path = output_path + ".txt"
+    if os.path.exists(output_path) and os.path.exists(txt_cache_path):
+        try:
+            with open(txt_cache_path, "r", encoding="utf-8") as f:
+                cached_text = f.read().strip()
+            if cached_text == text.strip():
+                print(f"[TTS] Cache HIT for {output_path}. Text matches. Skipping API request.")
+                return True
+        except Exception as e:
+            print(f"[TTS] Cache check warning: {e}")
+
     api_key = os.environ.get("ELEVEN_API_KEY", "").strip()
     
     # API 키가 없으면 바로 gTTS 사용
@@ -93,6 +112,12 @@ def save_tts(text, output_path, lang='ko', voice_id=None):
         if response.status_code == 200:
             with open(output_path, "wb") as f:
                 f.write(response.content)
+            # 캐시 텍스트 저장
+            try:
+                with open(txt_cache_path, "w", encoding="utf-8") as f:
+                    f.write(text.strip())
+            except Exception:
+                pass
             print(f"[TTS] Successfully generated: {output_path} via ElevenLabs")
             return True
         else:
