@@ -1,2 +1,7 @@
-[Scene 901] A magical glowing golden pocket watch swinging gently on a chain, deep lavender misty background, swirling hypnotic spiral, cinematic soft light. No watermark, no text, no letters, no signatures. :: The glowing pocket watch swings gently left to right on its chain. The camera slowly pushes in toward the spiral, which begins to swirl and rotate hypnotically. Sparkling golden particles drift through the deep lavender mist.
-[Scene 902] A cheerful cartoon stage magician pulling a fluffy white rabbit out of a black top hat, colorful confetti, bright theater stage. No watermark, no text, no letters, no signatures. :: The magician taps his top hat with a wand and a funny cartoon rabbit pops out and starts dancing. The camera pans down to show the audience clapping while colorful confetti floats through the air.
+[Scene 901]
+text: 천천히 회전하는 회중시계를 바라봅니다. 최면술사의 목소리를 따라 깊은 몰입 상태에 빠집니다.
+image: assets/images/scene_1.png
+
+[Scene 902]
+text: 많은 이들이 최면을 단순한 눈속임으로 생각하지만 실제 우리 몸에 효과가 있는 과학적 현상입니다.
+image: assets/images/scene_2.png

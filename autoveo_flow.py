@@ -83,6 +83,30 @@ POSTERS_JS = r"""
 """
 
 
+# Finished VIDEO tile: a play_circle overlay AND a real poster img (the only
+# reliable way to target the *video* — not the still image — for download).
+VIDEO_DONE_JS = r"""
+() => {
+  let best=null, area=Infinity;
+  for (const el of document.querySelectorAll('div,button,a,li')) {
+    const t = el.textContent||'';
+    if (!t.includes('play_circle')) continue;
+    let poster=false;
+    for (const im of el.querySelectorAll('img')) {
+      const s=im.getAttribute('src')||'';
+      const r=im.getBoundingClientRect();
+      if (/media\.getMediaUrlRedirect|googleusercontent/.test(s) && r.width>200){poster=true;break;}
+    }
+    if (!poster) continue;
+    const r = el.getBoundingClientRect();
+    if (r.width<250 || r.height<150) continue;
+    const a=r.width*r.height;
+    if (a<area){area=a; best={x:Math.round(r.x+r.width/2), y:Math.round(r.y+r.height/2)};}
+  }
+  return best;
+}
+"""
+
 # Is the composer showing the standard model chip (i.e. NOT in Agent mode)?
 HAS_CHIP_JS = r"""
 () => {
@@ -244,15 +268,17 @@ def generate(page):
     return click_text(page, "arrow_forward", ymin=540)
 
 
-def wait_image(page, timeout=120):
-    """Image gen takes ~35-40s; wait for the result poster."""
+def wait_image(page, timeout=600):
+    """Image gen can take several minutes under load — wait patiently for the
+    result poster (do NOT bail early; that just wastes the whole scene)."""
     page.wait_for_timeout(25000)
     deadline = time.time() + timeout
     while time.time() < deadline:
         if page.evaluate(BIG_MEDIA_IMG_JS):
             page.wait_for_timeout(1500)
             return True
-        time.sleep(3)
+        log(f"  ... 이미지 아직 생성 중, 8s 후 재확인 ({int(deadline-time.time())}s 남음)")
+        time.sleep(8)
     return False
 
 
@@ -280,13 +306,15 @@ def animate_image(page):
 
 
 
-def try_download_leftmost(page, tmp_path):
-    """Download the left-most (newest = video) poster's 원본 MP4 to tmp_path.
-    Returns True only if the saved file is a real MP4 (i.e. the clip is done)."""
-    posters = page.evaluate(POSTERS_JS)
-    if not posters:
-        return False
-    target = posters[0]                       # left-most = newest = the video
+def try_download_video(page, tmp_path):
+    """Download the FINISHED video tile (play_circle overlay + real poster) as the
+    원본 MP4. Returns True only if a real MP4 is saved — the only reliable 'done'
+    signal. While the clip still renders there is no play_circle tile, so we return
+    False fast and let the caller retry (instead of repeatedly grabbing the still
+    image's JPEG poster, which was the old left-most-poster bug)."""
+    target = page.evaluate(VIDEO_DONE_JS)
+    if not target:
+        return False                          # no finished-video tile yet
     try:
         with page.expect_download(timeout=60000) as dl:
             if not open_tile_menu(page, target):
@@ -309,7 +337,7 @@ def try_download_leftmost(page, tmp_path):
     return False
 
 
-def make_video(page, out_path, motion_prompt, n, budget_s=360):
+def make_video(page, out_path, motion_prompt, n, budget_s=600):
     """Generate the clip, then download-and-verify until a real MP4 arrives."""
     fill_prompt(page, motion_prompt)
     if not generate(page):
@@ -318,11 +346,11 @@ def make_video(page, out_path, motion_prompt, n, budget_s=360):
     log("동영상 생성 중... (이미지보다 오래 걸림)")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)   # pre-create target dir
     tmp = os.path.join(DL_DIR, f"_scene_{n}.bin")
-    page.wait_for_timeout(110000)             # min wait — Veo rarely finishes faster
+    page.wait_for_timeout(65000)              # 참고치: 영상 ~70s 완성. 65s 후부터 확인 시작
     deadline = time.time() + budget_s
     while time.time() < deadline:
         shot(page, f"s{n}_vid_poll")
-        if try_download_leftmost(page, tmp):
+        if try_download_video(page, tmp):
             shutil.move(tmp, out_path)
             return True
         log(f"  ... 아직 렌더링 중, 20s 후 재시도 ({int(deadline-time.time())}s 남음)")

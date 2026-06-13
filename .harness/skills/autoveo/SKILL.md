@@ -67,6 +67,22 @@ python merge_clips.py output.mp4 assets/videos/scene_1.mp4 assets/videos/scene_2
 6. **다운로드**: 결과 타일 호버 → `⋮` → `다운로드` → **`720p 원본 크기`** (서브메뉴.
    `270p GIF`/`1080p 업스케일`/`4K(유료)`도 있음). 다운로드 전 대상 폴더를 미리 생성.
 
+## 검증된 운영 수치 & 다운로드 핵심 (2026-06-13 실측, 프로젝트 내내 적용)
+- **이미지 ~40초**(Nano Banana 2, 0크레딧) · **동영상 ~70초**(Veo 8s). 부하 시 더 걸리므로
+  이미지 대기는 **넉넉히(최대 ~10분)** — 과거 145초로 끊어 *생성 진행 중인 걸 죽이고* 다음 씬으로
+  성급히 넘어간 게 실패 원인이었다. 한 씬 전체 사이클(이미지→애니메이션→영상→다운로드) ≈ **2.3분**.
+- **다운로드 타일 선택 = 가장 중요한 함정.** 결과 캔버스에서 **동영상 타일은 이미지 타일의 "왼쪽"**
+  (최신=좌측)에 생긴다. 그러나 *좌측 포스터를 무작정 받으면* 아직 렌더링 중일 때 **정지 이미지의
+  JPEG 포스터**를 받아 무한 "아직 렌더링 중"에 빠진다(과거 4분+ 헛돎). → 반드시 **완성 영상 타일
+  (`play_circle` 오버레이 + 실제 media 포스터 img)** 을 `VIDEO_DONE_JS`로 찾아, 그 타일의 ⋮ →
+  `다운로드` → `720p 원본 크기`. 저장 파일 헤더가 `ftyp`(MP4)인지 검증하고 아니면 재시도.
+- **autoveo_flow.py 반영분:** `wait_image(timeout=600)` + 8초 간격 로그, 영상 최소대기 65초,
+  `try_download_video()`(VIDEO_DONE_JS 사용; 좌측-포스터 버그 폐기). 한 번에 **하나씩** `--scene N`.
+- **프로필 락:** 실행 사이엔 `assets\chrome_profile`를 쓰는 chrome를 모두 종료하고
+  `assets\chrome_profile\SingletonLock`을 삭제. 드라이버(autoveo/flow_driver)를 동시에 두 개 띄우지 말 것.
+- **출력 네이밍:** `--prompts intro_outro_prompts.txt` → `intro_outro/scene_N.mp4`
+  (`_prompts` 접미사 제거한 폴더명).
+
 ## 설계 원칙 / 제약
 - **No API / No Extension**: `labs.google/fx/tools/flow` 웹 UI + 계정 OAuth만 사용.
 - **이미지 생성도 Flow 안에서**(Nano Banana 2, 0크레딧) — 별도 이미지 API/CLI 불필요.

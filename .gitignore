@@ -5,6 +5,10 @@ output*.mp4
 outputTEMP*.mp4
 *.mp4
 *.mp3
+*.wav
+
+# Local diagnostic/verification screenshots
+scratch/io_check/
 
 # Python cache
 __pycache__/
