@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LessonView from '../../../components/LessonView.astro';
+import { episodes, getEpisode, epTitle } from '../../../lib/content';
+
+export function getStaticPaths() {
+  return episodes.map((e) => ({ params: { code: e.code } }));
+}
+
+const { code } = Astro.params;
+const episode = getEpisode(code!)!;
+const lang = 'en' as const;
+---
+<BaseLayout
+  lang={lang}
+  altUrl={`/lesson/${episode.code}/`}
+  active="lessons"
+  title={`${epTitle(episode, lang)} · drjay-ed`}
+  description={episode.title_en}
+>
+  <LessonView lang={lang} episode={episode} />
+</BaseLayout>

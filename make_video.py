@@ -3,7 +3,7 @@ import sys
 import argparse
 import glob
 import re
-from gtts import gTTS
+from tts_manager import save_tts
 from moviepy import ImageClip, AudioFileClip, concatenate_videoclips, TextClip, CompositeVideoClip, VideoFileClip
 import moviepy.video.fx as fx
 from PIL import Image
@@ -115,10 +115,9 @@ def main():
     for scene in scenes:
         audio_path = f"assets/audio/scene_{scene['id']}.mp3"
         
-        # Generate TTS (Always female gTTS)
+        # Generate TTS (Via ElevenLabs / gTTS Fallback)
         print(f"Generating TTS for Scene {scene['id']}...")
-        tts = gTTS(text=scene['text'], lang='ko')
-        tts.save(audio_path)
+        save_tts(scene['text'], audio_path, lang='ko')
         
         # Load audio and apply 1.1x speed MultiplySpeed
         raw_audio = AudioFileClip(audio_path)

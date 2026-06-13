@@ -1,0 +1,28 @@
+---
+import {
+  epTitle, getCategory, catName, lessonUrl,
+  type Episode, type Lang,
+} from '../lib/content';
+import { t, fmtRuntime } from '../lib/i18n';
+
+interface Props { episode: Episode; lang: Lang; }
+const { episode, lang } = Astro.props;
+const tr = t(lang);
+const cat = getCategory(episode.category);
+const published = episode.status === 'published';
+const sub = lang === 'en' ? (episode.logline_kr ? episode.title_en : '') : (episode.hook_kr ?? '');
+---
+<a class="card glass neon" href={lessonUrl(episode.code, lang)}>
+  <div class="badge-row">
+    <span class="cat-badge">{cat ? catName(cat, lang) : episode.category}</span>
+    <span class={`status-badge ${published ? 'published' : 'upcoming'}`}>
+      {published ? tr.published_badge : tr.upcoming_badge}
+    </span>
+  </div>
+  <h3>{epTitle(episode, lang)}</h3>
+  {sub && <p class="hook">{sub}</p>}
+  <div class="meta">
+    <span>{episode.code}</span>
+    {episode.runtime_sec ? <span>· {fmtRuntime(episode.runtime_sec, lang)}</span> : null}
+  </div>
+</a>
