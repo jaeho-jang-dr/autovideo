@@ -77,6 +77,8 @@ def main():
     parser.add_argument("--remove-watermark", action="store_true", default=True, help="Remove video watermark using OpenCV Inpainting")
     parser.add_argument("--no-remove-watermark", action="store_false", dest="remove_watermark", help="Do not remove video watermark")
     parser.add_argument("--logo-path", default="assets/drjay_ed_logo_circle.png", help="Path to channel logo overlay image")
+    parser.add_argument("--intro", default="assets/intro.mp4", help="Path to intro video clip")
+    parser.add_argument("--outro", default="assets/outro.mp4", help="Path to outro video clip")
     args = parser.parse_args()
 
     # Ensure output folders exist
@@ -224,8 +226,24 @@ def main():
         clips.append(video_scene)
         print(f"Scene {scene['id']} prepared. Duration: {duration:.2f}s")
 
+    print("Preparing final clips assembly...")
+    final_clips = []
+    
+    # 1. Add Intro (if exists)
+    if args.intro and os.path.exists(args.intro):
+        print(f"Including Intro: {args.intro}")
+        final_clips.append(VideoFileClip(args.intro))
+        
+    # 2. Add scenes
+    final_clips.extend(clips)
+    
+    # 3. Add Outro (if exists)
+    if args.outro and os.path.exists(args.outro):
+        print(f"Including Outro: {args.outro}")
+        final_clips.append(VideoFileClip(args.outro))
+
     print("Merging all scenes into final video...")
-    final_video = concatenate_videoclips(clips, method="compose")
+    final_video = concatenate_videoclips(final_clips, method="compose")
     final_video.write_videofile(
         args.output,
         fps=24,

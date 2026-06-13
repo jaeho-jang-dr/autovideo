@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "$p='D:\\Entertainments\\DevEnvironment\\autovideo\\web'; if (-not (Get-NetTCPConnection -LocalPort 4321 -State Listen -ErrorAction SilentlyContinue)) { Start-Process pwsh -WindowStyle Hidden -WorkingDirectory $p -ArgumentList '-NoProfile','-Command','npm run dev' }",
+            "async": true,
+            "statusMessage": "웹 미리보기 서버(localhost:4321) 확인/기동"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -63,6 +63,8 @@ CREATE TABLE IF NOT EXISTS episodes (
     youtube_en   TEXT,
     publish_date TEXT,
     views        INTEGER DEFAULT 0,
+    reverse_spec TEXT,                    -- 연출 역공학 명세 (JSON/Text)
+    style_profile TEXT,                   -- 디자인 스타일 프로필 (JSON/Name)
     notes        TEXT,
     created_at   TEXT DEFAULT CURRENT_TIMESTAMP
 );
@@ -197,6 +199,12 @@ def connect():
 def cmd_init(_):
     conn = connect()
     conn.executescript(SCHEMA)
+    # 기존 DB 컬럼 마이그레이션 안전장치
+    for col in ["reverse_spec", "style_profile"]:
+        try:
+            conn.execute(f"ALTER TABLE episodes ADD COLUMN {col} TEXT")
+        except sqlite3.OperationalError:
+            pass
     conn.commit()
     conn.close()
     print(f"[OK] 스키마 생성 완료 -> {DB_PATH}")

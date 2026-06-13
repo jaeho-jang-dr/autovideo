@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { channel, homeUrl, type Lang } from '../lib/content';
+import { channel, homeUrl, categories, catName, categoryUrl, type Lang } from '../lib/content';
 import { t } from '../lib/i18n';
 
 interface Props {
@@ -26,12 +26,18 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+    {import.meta.env.PUBLIC_NAVER_VERIFICATION && (
+      <meta name="naver-site-verification" content={import.meta.env.PUBLIC_NAVER_VERIFICATION} />
+    )}
+    {import.meta.env.PUBLIC_GOOGLE_VERIFICATION && (
+      <meta name="google-site-verification" content={import.meta.env.PUBLIC_GOOGLE_VERIFICATION} />
+    )}
   </head>
   <body>
     <header class="site-header">
       <div class="container bar">
         <a class="brand" href={homeUrl(lang)} aria-label="drjay-ed home">
-          <span class="logo"><img src="/logo.png" alt="" width="34" height="34" /></span>
+          <span class="logo"><img src="/logo.png" alt="" width="28" height="28" /></span>
           <span>drjay<span class="grad-text">-ed</span></span>
         </a>
         <nav class="nav">
@@ -50,9 +56,55 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
     </main>
 
     <footer class="site-footer">
-      <div class="container row">
-        <span>© drjay-ed · {handle}</span>
-        <span>{tr.footer}</span>
+      <div class="container footer-sitemap">
+        <!-- Column 1: Brand / Concept -->
+        <div class="footer-col">
+          <h4>drjay-ed</h4>
+          <p style="margin-bottom: 12px; font-weight: 500;">
+            {lang === 'en' ? "Dissecting the world with a doctor's scalpel, stitching it back with a cartoonist's imagination." : "의사의 메스로 세상을 해부하고, 만화가의 상상력으로 꿰매다."}
+          </p>
+          <p style="font-size: 0.78rem;">
+            Benchmark: TED-Ed Concept
+          </p>
+        </div>
+
+        <!-- Column 2: Categories -->
+        <div class="footer-col">
+          <h4>{lang === 'en' ? 'Categories' : '주제 분류'}</h4>
+          <ul>
+            {categories.map((c) => (
+              <li>
+                <a href={categoryUrl(c.code, lang)}>{catName(c, lang)}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Column 3: Links & Utilities -->
+        <div class="footer-col">
+          <h4>{lang === 'en' ? 'Resources' : '바로가기'}</h4>
+          <ul>
+            <li><a href={homeUrl(lang)}>{tr.nav_home}</a></li>
+            <li><a href={`${homeUrl(lang)}#lessons`}>{tr.nav_lessons}</a></li>
+            <li>
+              <span style="display: inline-block; margin-top: 4px;">
+                <span class="lang-switch" role="group" aria-label="language">
+                  <a href={koUrl} class={lang === 'ko' ? 'active' : ''} hreflang="ko">KO</a>
+                  <a href={enUrl} class={lang === 'en' ? 'active' : ''} hreflang="en">EN</a>
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <div class="copy">
+          © {new Date().getFullYear()} drjay-ed · {handle}
+        </div>
+        <div class="meta-links">
+          <a href={`https://youtube.com/${handle}`} target="_blank" rel="noopener noreferrer">YouTube Channel</a>
+        </div>
       </div>
     </footer>
   </body>

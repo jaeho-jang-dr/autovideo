@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw
 import os
 
 def process_ultra_simple():
-    src_path = r"C:\Users\antigravity\.gemini\antigravity\brain\4cd55d9c-1adb-4786-a194-85a1ba5fa899\drjay_ed_logo_ultra_simple_1781251760706.png"
+    src_path = r"assets/drjay_ed_logo.png"
     if not os.path.exists(src_path):
         print("Source image not found.")
         return

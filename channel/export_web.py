@@ -55,7 +55,8 @@ def main():
     episodes = []
     for r in cur.execute(
             "SELECT code, category, title_kr, title_en, hook_kr, logline_kr, "
-            "status, priority, runtime_sec, youtube_kr, youtube_en, publish_date "
+            "status, priority, runtime_sec, youtube_kr, youtube_en, publish_date, "
+            "reverse_spec, style_profile "
             "FROM episodes ORDER BY priority, code"):
         ep = dict(r)
         ep["scenes"] = scenes_by_episode.get(ep["code"], [])

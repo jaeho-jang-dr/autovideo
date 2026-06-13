@@ -207,6 +207,60 @@ def open_tile_menu(page, center):
     return True
 
 
+def upload(page, image_path):
+    """Inject an existing image into the hidden file input across all frames.
+    Logs which frame/index accepted it, then tries to confirm via the
+    '프롬프트에 추가'/'Add to prompt'/'Add media' button if one appears."""
+    image_path = os.path.abspath(image_path)
+    if not os.path.exists(image_path):
+        log(f"upload: file missing {image_path}")
+        return False
+    done = False
+    for i, fr in enumerate(page.frames):
+        try:
+            inputs = fr.locator("input[type='file']")
+            for j in range(inputs.count()):
+                try:
+                    inputs.nth(j).set_input_files(image_path, timeout=5000)
+                    log(f"upload OK set_input_files frame[{i}][{j}] {image_path}")
+                    done = True
+                    break
+                except Exception as e:
+                    log(f"upload try frame[{i}][{j}]: {str(e)[:70]}")
+        except Exception:
+            pass
+        if done:
+            break
+    if not done:
+        log("upload: no file input accepted the image")
+        return False
+    page.wait_for_timeout(2500)
+    # Best-effort confirm (the new uploaded ingredient may need a confirm click)
+    for t in ("프롬프트에 추가", "Add to prompt", "추가", "Add"):
+        if click_text(page, t):
+            log(f"upload: confirmed via '{t}'")
+            break
+    page.wait_for_timeout(1500)
+    return True
+
+
+def animate(page):
+    """Hover the largest generated/uploaded image tile -> its ⋮ menu ->
+    '애니메이션 적용' so the image becomes the first frame of a video."""
+    center = page.evaluate(BIG_MEDIA_IMG_JS)
+    if not center:
+        log("animate: no big image tile found")
+        return False
+    log(f"animate: tile center {center}")
+    if not open_tile_menu(page, center):
+        log("animate: tile ⋮ menu open fail")
+        return False
+    ok = (click_text(page, "애니메이션 적용") or click_text(page, "애니메이션")
+          or click_text(page, "Animate"))
+    log(f"animate: 애니메이션 적용 -> {ok}")
+    return ok
+
+
 def dlvideo(page, out_path):
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     tile = page.evaluate(VIDEO_DONE_JS)
@@ -276,6 +330,10 @@ def do(page, parts):
     elif verb == "vidstatus":
         r = page.evaluate(VIDEO_DONE_JS)
         log(f"vidstatus: {'DONE '+str(r) if r else 'none(생성중/없음)'}")
+    elif verb == "upload":
+        upload(page, parts[1])
+    elif verb == "animate":
+        animate(page)
     elif verb == "dlvideo":
         dlvideo(page, parts[1])
     elif verb in ("dump", "shot"):

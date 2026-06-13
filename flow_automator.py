@@ -307,10 +307,36 @@ def click_add_to_prompt_by_ratio(page):
 
 
 def click_add_to_prompt(page, timeout_ms=30000):
-    """Wait up to timeout_ms for the '프롬프트에 추가' button via a recursive JS
-    shadow-DOM scanner, then click it. Falls back to a ratio mouse click."""
-    print("[Upload] '프롬프트에 추가' 버튼 대기 중 (JS Deep Shadow DOM 스캔)...")
-    deadline = time.time() + timeout_ms / 1000
+    """Wait up to timeout_ms for the '프롬프트에 추가' button, then click it.
+    Uses standard and universal selectors first, then falls back to a recursive JS shadow-DOM scanner."""
+    print("[Upload] '프롬프트에 추가' 버튼 대기 중 (일반 로케이터 및 JS Shadow 스캔)...")
+    
+    # Give the modal 2 seconds to completely load and render
+    page.wait_for_timeout(2000)
+    
+    selectors = [
+        "button:has-text('프롬프트에 추가')", "button:has-text('Add to prompt')",
+        "button:has-text('Add to project')",
+        "[role='button']:has-text('프롬프트에 추가')", "[role='button']:has-text('Add to prompt')",
+        "text=프롬프트에 추가", "text=Add to prompt",
+        "*:has-text('프롬프트에 추가')", "*:has-text('Add to prompt')"
+    ]
+    
+    # 1. Fast standard scan loop
+    for sel in selectors:
+        for f in page.frames:
+            try:
+                # Use last() to target the innermost text node
+                loc = f.locator(sel).last
+                if loc.is_visible(timeout=200):
+                    loc.click(timeout=1000)
+                    print(f"[Upload OK] 일반 로케이터로 클릭 성공: {sel}")
+                    page.wait_for_timeout(1500)
+                    return True
+            except Exception:
+                pass
+
+    # 2. Recursive JS Shadow DOM scanner fallback
     js_script = """
     (targetText) => {
         function search(node) {
@@ -322,8 +348,18 @@ def click_add_to_prompt(page, timeout_ms=30000):
                 }
                 const txt = (node.textContent || node.innerText || "").trim();
                 if (txt.includes(targetText) && node.offsetWidth > 0 && node.offsetHeight > 0) {
-                    const childCount = node.children ? node.children.length : 0;
-                    if (childCount <= 2) {
+                    // Check if any child element contains the text.
+                    // If a child contains it, we should let the recursion find the child instead.
+                    let childContains = false;
+                    const children = node.children || [];
+                    for (let i = 0; i < children.length; i++) {
+                        const childTxt = (children[i].textContent || children[i].innerText || "").trim();
+                        if (childTxt.includes(targetText)) {
+                            childContains = true;
+                            break;
+                        }
+                    }
+                    if (!childContains) {
                         node.click();
                         return txt;
                     }
@@ -338,18 +374,34 @@ def click_add_to_prompt(page, timeout_ms=30000):
         return search(document.body);
     }
     """
+    deadline = time.time() + timeout_ms / 1000
     while time.time() < deadline:
+        # Standard selectors retry in loop
+        for sel in selectors:
+            for f in page.frames:
+                try:
+                    loc = f.locator(sel).last
+                    if loc.is_visible(timeout=100):
+                        loc.click(timeout=800)
+                        print(f"[Upload OK] 일반 로케이터 루프 내 클릭 성공: {sel}")
+                        page.wait_for_timeout(1500)
+                        return True
+                except Exception:
+                    pass
+                    
+        # JS deep scan retry
         for f in page.frames:
             try:
                 for text in ["프롬프트에 추가", "Add to prompt", "Add to project"]:
                     clicked_text = f.evaluate(js_script, text)
                     if clicked_text:
                         print(f"[Upload OK] JS Deep 스캔 성공 클릭: '{clicked_text}'")
-                        page.wait_for_timeout(2000)
+                        page.wait_for_timeout(1500)
                         return True
             except Exception:
                 pass
         time.sleep(0.5)
+        
     print("[Upload WARN] '프롬프트에 추가' 버튼 미감지 — 비율 좌표 클릭으로 폴백.")
     click_add_to_prompt_by_ratio(page)
     return False
@@ -372,8 +424,8 @@ def upload_image(page, image_path):
                     inputs.nth(j).set_input_files(image_path, timeout=5000)
                     print(f"[Upload OK] set_input_files Frame[{i}][{j}]")
                     page.wait_for_timeout(2500)
-                    click_add_to_prompt(page)
-                    return True
+                    success = click_add_to_prompt(page)
+                    return success
                 except Exception as e:
                     print(f"[Upload WARN] direct input Frame[{i}][{j}]: "
                           f"{str(e)[:80]}")
@@ -409,8 +461,8 @@ def upload_image(page, image_path):
                 fc.value.set_files(image_path)
                 print(f"[Upload OK] file_chooser via '{sel}'")
                 page.wait_for_timeout(2500)
-                click_add_to_prompt(page)
-                return True
+                success = click_add_to_prompt(page)
+                return success
             except Exception:
                 # Dialog opened without immediate chooser — try the input again
                 page.wait_for_timeout(800)
@@ -420,8 +472,8 @@ def upload_image(page, image_path):
                         inp.set_input_files(image_path, timeout=4000)
                         print(f"[Upload OK] dialog input via '{sel}'")
                         page.wait_for_timeout(2500)
-                        click_add_to_prompt(page)
-                        return True
+                        success = click_add_to_prompt(page)
+                        return success
                     except Exception:
                         pass
                 # Try a nested "업로드/Upload" menu item inside the dialog

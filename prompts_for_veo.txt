@@ -14,3 +14,6 @@
 [Scene 14] The bright red region on the brain map slowly dissolves into a peaceful cool blue color. Tiny cartoon shield icons appear around the blue area, deflecting tiny red lightning bolts representing pain.
 [Scene 15] The patient on the bed closes their eyes and takes a deep, peaceful breath. A small green leaf sprouts from the patient's hand, representing healing. The camera slowly pans out to show the whole room in a warm, comforting light.
 [Scene 16] The person gently blows on the glowing spark. The spark rises into the air, multiplying into dozens of tiny glowing stars that light up the giant brain silhouette in the background sky, creating a beautiful constellation effect.
+[Scene 901] Minimalist flat pastel illustration of an open book, pencil, stethoscope, lightbulb glowing, warm cream background, cozy drawing, camera zoom in slowly :: smooth slow motion camera zoom in to warm light
+[Scene 902] Cozy flat pastel illustration of library bookshelves, potted plants, warm sage green background, cozy and calm, camera pan slowly :: calm slow motion camera panning slowly
+
