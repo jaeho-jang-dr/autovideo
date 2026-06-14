@@ -1,0 +1,365 @@
+[Scene 0]
+text: 헬스인들이 절대 피할 수 없는 부상과 통증의 미스터리, 그 과학적인 비밀을 지금 밝혀드립니다.
+text_en: Today, we uncover the medical mysteries and scientific secrets behind gym injuries and chronic pain.
+image: TED-Ed style flat crayon illustration of a title slide with very large, bold, clean lettering reading "Workout Injury Science", centered on a solid pale pastel yellow background, soft colored pencil border. Minimalist design, high contrast. No watermark, no signatures.
+motion: :: slow motion soft yellow and orange highlights trace the title text on the card, camera zooming in slowly
+
+[Scene 1]
+text: 건강해지려고 시작한 운동인데, 왜 우리는 오히려 병원을 찾게 되는 걸까요?
+text_en: We start exercising to get healthy, but why do we often end up visiting the doctor instead?
+image: TED-Ed style flat crayon illustration of a confused character walking with a gym bag towards a clinic sign, solid single-tone pale yellow background, colored pencil drawing style. No watermark, no signatures.
+motion: :: slow motion the character walks slowly under a warm sun, camera panning slowly
+
+[Scene 2]
+text: 웨이트 트레이닝 부상의 무려 68.9%는 무리한 고중량 욕심 때문에 발생합니다.
+text_en: An astonishing 68.9% of weightlifting injuries are caused by ego lifting heavy weights beyond one's capacity.
+image: TED-Ed style flat crayon illustration of a giant scale balancing a tiny weightlifter and a massive, heavy barbell, soft pastel beige background, crayon sketch texture. No watermark, no signatures.
+motion: :: slow motion the scale tips down under the heavy barbell, camera zooming out slowly
+
+[Scene 3]
+text: 무거운 바벨 아래에서 우리는 한계를 시험하지만, 한 끗 차이로 부상의 늪에 빠지죠.
+text_en: Under heavy barbells, we test our limits, but just one wrong move can lead to injury.
+image: TED-Ed style flat crayon illustration of an expressive cartoon character grimacing while trying to hold up a shaking barbell, soft peach-colored background, rough crayon sketches. No watermark, no signatures.
+motion: :: slow motion the barbell shakes violently in the character's hands, camera rotating slowly
+
+[Scene 4]
+text: 대표적인 고중량 운동인 벤치프레스는 가슴 근육 외에도 많은 관절에 극도의 부담을 줍니다.
+text_en: The bench press, a classic heavy compound lift, places extreme stress on multiple joints beyond just chest muscles.
+image: TED-Ed style flat crayon illustration of a character lying on a gym bench, lifting a glowing red barbell under heavy strain, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion red warning waves radiate from the barbell down to the bench, camera tilting down
+
+[Scene 5]
+text: 제어할 수 없는 무거운 덤벨이 좌우로 흔들리며 관절의 정상 범위를 벗어날 때, 부상은 시작됩니다.
+text_en: When uncontrollable heavy dumbbells wobble and force joints out of their normal range of motion, injury occurs.
+image: TED-Ed style flat crayon illustration of a dumbbell slipping sideways from a cartoon character's hand, leaving dotted trajectory lines, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion the falling dumbbell rotates slowly in mid-air, camera zooming in slowly
+
+[Scene 6]
+text: 가장 흔하게 다치는 첫 번째 부위는 어깨이며, 대표적인 질환은 어깨충돌증후군입니다.
+text_en: The first and most commonly injured area is the shoulder, with shoulder impingement syndrome leading the list.
+image: TED-Ed style flat crayon illustration of a shoulder joint with a bright red warning glow on the outer shoulder, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the red warning glow on the shoulder pulses slowly, camera panning slowly
+
+[Scene 7]
+text: 팔을 머리 위로 올릴 때, 어깨뼈인 견봉과 회전근개 힘줄 사이의 공간이 좁아집니다.
+text_en: Raising your arm overhead narrows the space between the acromion bone and the rotator cuff tendons.
+image: TED-Ed style flat crayon illustration of an anatomical view of a shoulder bone structure closing in on a blue tendon, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the bones close in and pinch the blue tendon, camera zooming in slowly
+
+[Scene 8]
+text: 이 좁은 틈에서 견봉과 힘줄이 반복적으로 부딪히고 긁히며 염증을 유발합니다.
+text_en: In this narrow gap, the bone and tendon repeatedly collide and rub, causing inflammation.
+image: TED-Ed style flat crayon illustration of a bone surface scraping against a red irritated tendon, producing yellow friction sparks, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion yellow friction sparks fly off the red irritated tendon, camera rotating slowly
+
+[Scene 9]
+text: 특히 팔을 옆으로 들어 올릴 때 60도에서 120도 사이 구간에서 날카로운 통증이 느껴집니다.
+text_en: Pain is sharply felt in the specific arc between 60 and 120 degrees when raising the arm sideways.
+image: TED-Ed style flat crayon illustration of a character raising their arm with a colorful protractor showing 60 to 120 degrees glowing red, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the arm sweeps slowly through the red 60-120 degree angle, camera tilting down
+
+[Scene 10]
+text: 밤에는 아픈 쪽으로 누우면 체중이 가해져 통증이 심해지고 잠을 자기 어려워집니다.
+text_en: At night, lying on the injured shoulder increases pressure, causing severe night pain that disrupts sleep.
+image: TED-Ed style flat crayon illustration of a character awake in bed at night, holding a glowing red shoulder, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion moon beams drift through the bedroom window, camera zooming out slowly
+
+[Scene 11]
+text: 이를 계속 방치하면 결국 회전근개 힘줄이 닳아 끊어지는 파열로 이어지게 됩니다.
+text_en: If left unaddressed, the friction eventually wears down the rotator cuff, leading to a tendon tear.
+image: TED-Ed style flat crayon illustration of a thick rope tendon fraying and snapping under pressure, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion the frayed fibers pull apart under tension, camera panning slowly
+
+[Scene 12]
+text: 두 번째로 흔한 부위는 무거운 하중을 지탱하는 허리로, 주로 요추 염좌가 발생합니다.
+text_en: The second most common area is the lower back, which bears heavy loads and is prone to lumbar sprains.
+image: TED-Ed style flat crayon illustration of a lower back spine model highlighted with a red circle, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the red highlighted circle on the spine pulses, camera zooming in slowly
+
+[Scene 13]
+text: 데드리프트나 스쿼트를 수행할 때 고관절을 경첩처럼 접는 '힙 힌지'가 무너지기 쉽습니다.
+text_en: During deadlifts or squats, it is easy to lose the 'hip hinge'—folding the hips backward like a hinge.
+image: TED-Ed style flat crayon illustration of a character trying to fold their hips but showing an orange broken hinge symbol over the pelvis, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the broken hinge symbol glows and fades, camera rotating slowly
+
+[Scene 14]
+text: 힙 힌지가 무너지면 허리가 둥글게 말려 요추에 극심한 기계적 스트레스가 집중됩니다.
+text_en: Losing the hinge causes the spine to bend, concentrating extreme mechanical stress on the lumbar vertebrae.
+image: TED-Ed style flat crayon illustration of a character lifting a barbell with a curved, bent spine highlighted in red, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion the red curved spine bends further under weight, camera tilting down
+
+[Scene 15]
+text: 굽어진 척추뼈 사이에서 디스크가 강한 압력을 받아 뒤쪽 신경관으로 밀려나게 됩니다.
+text_en: The spinal disc under heavy compression is pushed backward toward the spinal nerve canal.
+image: TED-Ed style flat crayon illustration of a disc model where the inner gel core shifts backward and touches yellow nerve roots, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the inner gel core presses backward against the yellow nerve roots, camera panning slowly
+
+[Scene 16]
+text: 이 밀려난 디스크가 신경을 누르면 엉덩이와 다리까지 찌릿하게 저리는 디스크 탈출증이 됩니다.
+text_en: When this protruding disc pinches the nerves, it causes radiating pain down the legs, known as a herniated disc.
+image: TED-Ed style flat crayon illustration of red lightning waves radiating from the lower spine down a character's leg, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the red lightning waves flow down the leg, camera zooming out slowly
+
+[Scene 17]
+text: 세 번째는 흔히 담이 결렸다고 표현하는 근막통증증후군입니다.
+text_en: The third is myofascial pain syndrome, commonly referred to as getting a painful muscle knot.
+image: TED-Ed style flat crayon illustration of a character grimacing and rubbing their stiff neck and upper back, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion the character massages their neck with a pained expression, camera zooming in slowly
+
+[Scene 18]
+text: 지속적인 긴장과 부하로 인해 근육 섬유가 뭉쳐 단단한 결절인 '통증유발점'이 형성됩니다.
+text_en: Continuous tension and overload cause muscle fibers to knot, forming tight nodules called 'trigger points'.
+image: TED-Ed style flat crayon illustration of microscopic muscle fibers having a tight, red-colored knot in the middle, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the red knot pulses with warm light, camera rotating slowly
+
+[Scene 19]
+text: 이 유발점은 다친 부위뿐만 아니라 주변의 엉뚱한 부위까지 아프게 만드는 '연관통'을 유발합니다.
+text_en: These trigger points send pain signals elsewhere, causing referred pain in distant, seemingly unrelated areas.
+image: TED-Ed style flat crayon illustration of a shoulder trigger point radiating dotted red lines of pain up to the temple and jaw, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the red dotted lines move upward to the temple, camera panning slowly
+
+[Scene 20]
+text: 뭉친 근육이 주변 미세혈관을 눌러 혈류가 차단되고 근육 세포에 산소가 부족해집니다.
+text_en: The tight muscle knot compresses surrounding capillaries, cutting off blood flow and depriving cells of oxygen.
+image: TED-Ed style flat crayon illustration of a narrow blood vessel squeezed tight by muscle fibers, preventing red cells from passing, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion the red blood cells slow down and stack up, camera tilting down
+
+[Scene 21]
+text: 네 번째는 스쿼트나 레그프레스 시 과도한 하중이 가해지는 무릎 관절의 부상입니다.
+text_en: The fourth is the knee joint, which faces high forces during exercises like squats and leg presses.
+image: TED-Ed style flat crayon illustration of a knee joint supporting a heavy load from above, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the knee joint bends slowly under heavy load, camera zooming out slowly
+
+[Scene 22]
+text: 앉고 일어날 때 무릎이 안쪽으로 모이거나 뒤틀리면 관절 사이의 완충 패드가 압착됩니다.
+text_en: If the knees collapse inward or twist while lifting, the cushioning pads within the joint are compressed.
+image: TED-Ed style flat crayon illustration of knees collapsing inward under a barbell, with red directional arrows pointing inward, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the knees collapse inward following the red arrows, camera panning slowly
+
+[Scene 23]
+text: 이 회전력과 압력이 합쳐지면 무릎 뼈 사이의 '반월상 연골판'이 찢어지고 파열됩니다.
+text_en: This combination of rotation and compression tears the meniscus, the shock-absorbing cartilage in the knee.
+image: TED-Ed style flat crayon illustration of a blue crescent-shaped cartilage cracking under a twisting force, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion a red crack line spreads across the blue cartilage, camera zooming in slowly
+
+[Scene 24]
+text: 다섯 번째는 고중량 데드리프트 시 흔히 발생하는 이두근 건 파열입니다.
+text_en: The fifth is a biceps tendon rupture, a common injury during heavy deadlifts.
+image: TED-Ed style flat crayon illustration of a character lifting a heavy barbell off the floor, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the barbell rises slowly, camera tilting down
+
+[Scene 25]
+text: 손바닥을 뒤집어 잡는 '얼터네이트 그립' 시, 뒤집힌 팔의 이두근 힘줄이 무거운 하중을 이기지 못하고 뜯겨 나갑니다.
+text_en: In an alternate grip, the biceps tendon of the supinated arm bears uneven tension, causing it to tear.
+image: TED-Ed style flat crayon illustration of a hand grasping a barbell bar with palm facing forward, highlight on the inner elbow tendon glowing red, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the red highlighted inner elbow tendon pulses, camera rotating slowly
+
+[Scene 26]
+text: 벤치프레스를 할 때 바벨 무게 때문에 손목이 뒤로 꺾이면서 인대가 늘어나는 부상도 매우 흔합니다.
+text_en: During bench presses, letting the wrist bend too far backward stretches and sprains the wrist ligaments.
+image: TED-Ed style flat crayon illustration of a hand holding a barbell with the wrist bent sharply backward at a red highlighted angle, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion the red highlighted wrist angle flashes, camera zooming out slowly
+
+[Scene 27]
+text: 운동 중 이처럼 다치거나 통증을 느끼면 즉시 올바른 응급처치를 시작해야 합니다.
+text_en: If you experience an injury or pain during a workout, you must start proper emergency treatment immediately.
+image: TED-Ed style flat crayon illustration of a medical first-aid kit displaying "R.I.C.E." on the lid, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the first-aid kit lid opens to reveal glowing letters, camera panning slowly
+
+[Scene 28]
+text: 먼저 RICE 법칙의 'R'은 안정(Rest)으로, 부상 부위의 추가 손상을 막기 위해 즉시 운동을 중단하는 것입니다.
+text_en: First, the 'R' in R.I.C.E. stands for Rest, meaning you stop exercising immediately to prevent further damage.
+image: TED-Ed style flat crayon illustration of a character sitting comfortably in an armchair with a soft blanket, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the character relaxes, taking a deep breath, camera zooming in slowly
+
+[Scene 29]
+text: 두 번째 'I'는 냉찜질(Ice)로, 혈관을 수축시켜 출혈을 줄이고 신경 통증 신호를 무디게 만듭니다.
+text_en: Second, 'Ice' constricts blood vessels to reduce bleeding and dulls nerve pain signals.
+image: TED-Ed style flat crayon illustration of a blue ice pack placed on a red swollen joint, emitting gentle cold sparkles, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion blue cold sparkles radiate outward from the ice pack, camera rotating slowly
+
+[Scene 30]
+text: 세 번째 'C'는 압박(Compression)이며, 붕대로 부상 부위를 탄탄하게 감아 내부 출혈과 부종을 방지합니다.
+text_en: Third, 'Compression' wraps the injured area securely with a bandage to prevent internal bleeding and swelling.
+image: TED-Ed style flat crayon illustration of a hand wrapping a clean white elastic bandage around a sprained ankle, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the bandage wraps smoothly around the ankle, camera tilting down
+
+[Scene 31]
+text: 마지막 'E'는 거상(Elevation)으로, 다친 부위를 심장보다 높이 올려 중력에 의해 체액이 쏠리는 것을 막습니다.
+text_en: Finally, 'Elevation' involves raising the injured limb above the heart level to prevent fluid accumulation.
+image: TED-Ed style flat crayon illustration of a leg elevated high on a stack of soft pillows, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the pillows shift slightly under the leg, camera zooming out slowly
+
+[Scene 32]
+text: 이 RICE 응급처치를 부상 후 초기 24시간 내에 확실히 수행하면 회복 기간을 50%나 줄일 수 있습니다.
+text_en: Applying this R.I.C.E. protocol within the first 24 hours can reduce the overall recovery period by 50%.
+image: TED-Ed style flat crayon illustration of a calendar page with dates quickly turning into golden stars, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion the dates transform into sparkling golden stars, camera panning slowly
+
+[Scene 33]
+text: 최근 헬스장 필수품이 된 폼롤러도 유연성과 피로 물질 배출에 좋지만 오용하면 치명적입니다.
+text_en: Foam rollers, a gym essential for flexibility and waste removal, can be dangerous if used incorrectly.
+image: TED-Ed style flat crayon illustration of a black foam roller with warning yellow stripes around it, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the foam roller rolls forward slowly, camera zooming in slowly
+
+[Scene 34]
+text: 특히 폼롤러를 허리나 무릎 관절에 직접 대고 강한 압박을 주며 문지르는 행동은 매우 위험합니다.
+text_en: Specifically, placing the foam roller directly under your lower back or knee joints is highly dangerous.
+image: TED-Ed style flat crayon illustration of a character rolling their lower back on a foam roller with a large red X marks on the spine, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the red X marks flash repeatedly, camera rotating slowly
+
+[Scene 35]
+text: 요추는 갈비뼈 같은 지지 구조물이 없기 때문에 직접 압박하면 척추뼈의 과도한 꺾임과 통증을 유발합니다.
+text_en: Since the lumbar spine lacks supporting ribs, direct pressure can cause spinal hyperextension and injury.
+image: TED-Ed style flat crayon illustration of lumbar vertebrae bending unnaturally under heavy roller pressure, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion the lumbar vertebrae bend under pressure, camera tilting down
+
+[Scene 36]
+text: 대신 둔근과 같이 뼈가 보호되는 두꺼운 근육 부위를 간접적으로 롤링해 주는 것이 안전합니다.
+text_en: Instead, safely roll thick, protected muscle areas like the glutes to relieve tension.
+image: TED-Ed style flat crayon illustration of a character rolling their glutes on a foam roller, highlighting a green massage zone, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the green massage zone pulses with comforting light, camera panning slowly
+
+[Scene 37]
+text: 또한 허벅지 뒤쪽인 햄스트링을 부드럽게 풀어주면 요추의 긴장도 자연스럽게 완화됩니다.
+text_en: Gently releasing the hamstrings on the back of the thighs also naturally reduces tension in the lower back.
+image: TED-Ed style flat crayon illustration of a character rolling their hamstrings, highlighting the back of the thighs in green, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the green highlighted hamstring muscles stretch and relax, camera zooming out slowly
+
+[Scene 38]
+text: 운동 시기별 스트레칭의 과학도 중요합니다. 운동 전과 후는 완전히 다른 스트레칭이 필요하죠.
+text_en: The science of stretching at different times is also key; pre- and post-workout require different approaches.
+image: TED-Ed style flat crayon illustration of a character standing between two paths labeled "Warm-up" and "Cool-down", soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion the paths light up in yellow and blue, camera zooming in slowly
+
+[Scene 39]
+text: 운동 전에는 관절을 사방으로 움직이며 체온을 올리는 동적 스트레칭을 통해 관절 가동 범위를 늘립니다.
+text_en: Before working out, perform dynamic stretching to raise body temperature and increase joint mobility.
+image: TED-Ed style flat crayon illustration of a character performing dynamic hip circles and high knees, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the character rotates their hips smoothly, camera rotating slowly
+
+[Scene 40]
+text: 운동 후에는 뭉친 근육을 15초 이상 지그시 늘려 고정하는 정적 스트레칭으로 신경계 긴장을 늦춥니다.
+text_en: After working out, use static stretching—holding a stretch for 15+ seconds—to calm the nervous system.
+image: TED-Ed style flat crayon illustration of a character sitting on a mat and reaching for their toes in a deep static stretch, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the character holds the stretch, breathing out slowly, camera tilting down
+
+[Scene 41]
+text: 만약 반동을 주는 탄성 스트레칭을 억지로 하면 오히려 근육이 찢어지는 파열이 일어날 수 있습니다.
+text_en: If you force ballistic stretching by bouncing, you risk tearing the muscle fibers instead.
+image: TED-Ed style flat crayon illustration of a character bouncing aggressively to stretch, with red jagged lines appearing on muscles, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion red jagged lines pulse on the leg muscles, camera panning slowly
+
+[Scene 42]
+text: 이렇듯 전에는 동적으로 몸을 깨우고, 후에는 정적으로 몸을 가라앉히는 스트레칭이 예방의 기본입니다.
+text_en: Waking the body dynamically beforehand and calming it statically afterward is the foundation of prevention.
+image: TED-Ed style flat crayon illustration of a sun rising on one side and a moon setting on the other, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the sun and moon cycle smoothly, camera zooming out slowly
+
+[Scene 43]
+text: 이제 운동이 끝났다면, 손상된 근육이 스스로를 재건하는 진짜 회복의 과학을 배워볼 시간입니다.
+text_en: Now that the workout is done, it is time to learn the true science of how damaged muscle rebuilds itself.
+image: TED-Ed style flat crayon illustration of a character walking out of a gym into a glowing light, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the glowing light shines warmer, camera panning slowly
+
+[Scene 44]
+text: 운동을 통해 미세한 상처를 입은 근섬유는 휴식을 취할 때 더 두껍고 튼튼하게 초과 회복됩니다.
+text_en: Muscle fibers micro-torn during exercise undergo supercompensation, growing thicker and stronger during rest.
+image: TED-Ed style flat crayon illustration of torn muscle fibers repairing and building a thicker layer, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion new protein layers lock onto the fibers, camera zooming in slowly
+
+[Scene 45]
+text: 근육의 이러한 단백질 합성 주기는 운동이 끝난 후 약 48시간에서 72시간 동안 활발하게 열려 있습니다.
+text_en: This crucial muscle protein synthesis window remains highly active for 48 to 72 hours after exercise.
+image: TED-Ed style flat crayon illustration of a clock face turning into a barbell with a highlighted "48-72h" label, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the clock hands sweep forward to highlight the 48-72h block, camera tilting down
+
+[Scene 46]
+text: 만약 휴식기 없이 매일 같은 근육에 무거운 자극을 준다면, 근육은 합성되지 못하고 손상만 누적됩니다.
+text_en: Without adequate rest, training the same muscle group daily blocks synthesis and accumulates damage.
+image: TED-Ed style flat crayon illustration of a tired muscle cell sagging under weight, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the tired muscle cell sighs and droops, camera rotating slowly
+
+[Scene 47]
+text: 결국 근육 성장의 진짜 마법은 무거운 쇠를 들 때가 아닌, 잘 쉬고 영양을 공급할 때 일어납니다.
+text_en: In the end, the real magic of muscle growth happens during nutrition and sleep, not on the lifting platform.
+image: TED-Ed style flat crayon illustration of a character sleeping soundly in a cozy bed, dreams of protein shakes floating above, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion cloud bubbles float and shift above the sleeping character, camera zooming out slowly
+
+[Scene 48]
+text: 부상으로 인해 강제로 운동을 쉬어야 할 때, 많은 헬스인들은 근손실의 두려움으로 불안해합니다.
+text_en: When forced to rest due to injury, many lifters face intense anxiety over losing their hard-earned muscle.
+image: TED-Ed style flat crayon illustration of a character nervously checking their arm muscles in a mirror with anxiety squiggles, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the anxiety squiggles float around the character's head, camera panning slowly
+
+[Scene 49]
+text: 그러나 너무 조급해할 필요 없습니다. 우리 몸에는 놀라운 '머슬 메모리'가 장착되어 있으니까요.
+text_en: But there is no need to rush; our bodies are equipped with an incredible mechanism called muscle memory.
+image: TED-Ed style flat crayon illustration of a brain inside a muscle cell wearing a tiny graduation cap, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the brain-muscle smiles and winks, camera zooming in slowly
+
+[Scene 50]
+text: 과거 운동을 통해 늘어났던 근육 세포 속의 '근핵'들은 운동을 쉬어도 파괴되지 않고 그대로 보존됩니다.
+text_en: The myonuclei gained during prior training are not destroyed during rest; they remain preserved inside the muscle.
+image: TED-Ed style flat crayon illustration of muscle fibers containing glowing golden spherical nuclei, soft pastel beige background, crayon texture. No watermark, no signatures.
+motion: :: slow motion the golden nuclei glow brighter under soft light, camera tilting down
+
+[Scene 51]
+text: 2주에서 3주간 휴식 후 다시 바벨을 잡았을 때, 이 근핵들이 단백질 합성을 초고속으로 활성화합니다.
+text_en: When you lift weights again after a 2-3 week break, these nuclei fast-track protein synthesis.
+image: TED-Ed style flat crayon illustration of a muscle expanding rapidly like a balloon to its original size, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the muscle shape expands to a full round shape, camera rotating slowly
+
+[Scene 52]
+text: 덕분에 처음 몸을 만들 때보다 훨씬 더 짧은 시간 안에 예전의 근육량과 근력을 회복할 수 있습니다.
+text_en: Thanks to this, you regain your original muscle mass and strength in a fraction of the time it took initially.
+image: TED-Ed style flat crayon illustration of a character lifting a barbell easily with a proud smile, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the character lifts the barbell high with a smile, camera panning slowly
+
+[Scene 53]
+text: 이제는 가만히 누워 있는 대신 더 빠른 재생을 돕는 '능동적 회복', 즉 액티브 리커버리에 주목해보세요.
+text_en: Now, instead of just staying in bed, focus on active recovery to speed up the healing process.
+image: TED-Ed style flat crayon illustration of a character jumping up energetically from a couch, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion the character leaps forward with light trails, camera zooming in slowly
+
+[Scene 54]
+text: 능동적 회복은 심박수를 가볍게 올려 온몸의 미세혈관을 확장하고 혈액 순환을 극대화하는 기법입니다.
+text_en: Active recovery involves light cardiovascular exercise to dilate microvessels and maximize blood circulation.
+image: TED-Ed style flat crayon illustration of a circular arrow showing blood flowing smoothly through a human body, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the blood flow arrows pulse and move along the body outline, camera tilting down
+
+[Scene 55]
+text: 가벼운 걷기나 고정 자전거, 수영, 요가처럼 관절 and 건에 부담을 주지 않는 활동이 대표적입니다.
+text_en: Low-impact activities like walking, stationary cycling, swimming, or yoga are perfect examples.
+image: TED-Ed style flat crayon illustration of a grid showing characters walking, swimming, cycling, and stretching, solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the characters move inside their grid panels, camera rotating slowly
+
+[Scene 56]
+text: 이 기법은 가만히 누워 쉴 때보다 근육 내 젖산과 노폐물을 30% 이상 빠르게 청소해 줍니다.
+text_en: This technique clears out lactic acid and metabolic waste over 30% faster than completely passive rest.
+image: TED-Ed style flat crayon illustration of a tiny friendly vacuum cleaner sucking up green waste particles inside a blood vessel, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion the vacuum cleaner vacuums the green particles, camera zooming out slowly
+
+[Scene 57]
+text: 통증이 없는 가벼운 범위의 움직임은 영양소 공급과 손상 조직 치유를 가속화하는 핵심입니다.
+text_en: Gentle movement within a pain-free range is key to boosting nutrient supply and accelerating tissue repair.
+image: TED-Ed style flat crayon illustration of a green shield protecting a moving leg joint, soft peach-colored background. No watermark, no signatures.
+motion: :: slow motion the green shield glows protectively around the joint, camera panning slowly
+
+[Scene 58]
+text: 장기적으로 부상을 방지하려면 근력뿐만 아니라 심폐와 유연성을 조합하는 크로스 트레이닝이 필요합니다.
+text_en: For long-term injury prevention, you need cross-training that combines strength, cardio, and flexibility.
+image: TED-Ed style flat crayon illustration of three overlapping circles labeled "Strength", "Cardio", and "Flexibility", solid single-tone pale yellow background. No watermark, no signatures.
+motion: :: slow motion the overlapping circles spin and merge at the center, camera zooming in slowly
+
+[Scene 59]
+text: 단단한 나무도 바람에 흔들리듯, 유연하고 다채로운 자극만이 신체 불균형과 조기 부상을 막아냅니다.
+text_en: Just as a strong tree sways in the wind, a flexible, varied training routine prevents structural imbalances.
+image: TED-Ed style flat crayon illustration of a strong tree with deep roots and flexible branches swaying in a storm, soft pastel beige background. No watermark, no signatures.
+motion: :: slow motion the tree branches sway gracefully in the wind, camera tilting down
+
+[Scene 60]
+text: 고통을 이겨내는 무리한 리프팅 대신 지혜로운 과학적 운동으로 평생 건강하고 부상 없는 몸을 만드세요!
+text_en: Instead of ego lifting through pain, use scientific training to build a healthy, injury-free body for life!
+image: TED-Ed style flat crayon illustration of an ending slide with lettering reading "Train Smart, Recover Scientifically!", centered on a solid pale pastel yellow background, soft colored pencil border. Minimalist design. No watermark, no signatures.
+motion: :: slow motion the lettering shines with a warm yellow glow, camera zooming out slowly
