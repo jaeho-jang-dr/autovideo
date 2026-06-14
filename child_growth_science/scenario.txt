@@ -1,0 +1,545 @@
+[Scene 0]
+text: 우리 아이 키는 과연 몇 센티미터까지 자랄까요? 오늘 소아 성장의 숨겨진 과학을 만나봅니다.
+text_en: How tall will your child grow? Today, we explore the hidden science behind pediatric growth.
+image: TED-Ed style flat crayon illustration of a title slide with very large, bold, clean lettering reading "How Tall Will I Grow?", centered on a simple solid cream-colored textured paper background, soft colored pencil border. Minimalist design, high contrast, clean typography. No watermark, no signatures.
+motion: :: slow motion yellow and orange highlights trace the title text on the card, camera zooming in slowly
+
+[Scene 1]
+text: "엄마, 나도 아빠처럼 크게 자랄 수 있어요?" 아이의 이 한마디는 부모의 마음을 설레게 하죠.
+text_en: "Mom, will I grow as tall as Dad?" This simple question always fills a parent's heart with curiosity.
+image: TED-Ed style flat crayon illustration of a tiny child sprout with big curious eyes looking up at a tall parent sprout, soft warm cream background, colored pencil texture. No watermark, no text, no signatures.
+motion: :: slow motion the child sprout sways gently side to side, camera zooming in slowly
+
+[Scene 2]
+text: 아이의 성장판이 열려 있는 시기는 우리 인생에서 단 한 번뿐인 귀중한 시간입니다.
+text_en: The window when a child's growth plates remain open is a unique, precious time in their life.
+image: TED-Ed style flat crayon illustration of a child's skeletal hand wrist X-ray highlighting open growth plates (soft blue cartilage zones), soft pastel green background. No watermark, no signatures.
+motion: :: slow motion the soft blue cartilage zones glow gently, camera tilting down
+
+[Scene 3]
+text: 많은 부모님들이 키는 오직 유전으로만 결정된다고 믿고 계십니다.
+text_en: Many parents believe that a child's height is determined solely by genetics.
+image: TED-Ed style flat crayon illustration of a clean medical diagram of a DNA double-helix showing genetic base pairs, soft lavender background, crayon texture. No watermark, no signatures.
+motion: :: slow motion the DNA double-helix rotates slowly along its vertical axis, camera panning up
+
+[Scene 4]
+text: 하지만 현대 과학이 밝혀낸 진실은 유전의 한계를 넘어서는 희망을 보여줍니다.
+text_en: However, modern science reveals a truth that offers hope beyond genetic limitations.
+image: TED-Ed style flat crayon illustration of a dark wall with a bright door opening to reveal a sunny garden, soft pastel coral background, sketch texture. No watermark, no text, no signatures.
+motion: :: slow motion warm light beams stream out of the opening doorway, camera zooming out
+
+[Scene 5]
+text: 우선 유전적인 잠재치를 계산하는 간단한 수학 공식이 있습니다. 바로 부모 중간 키 공식이죠.
+text_en: First, there is a simple mathematical formula to calculate genetic potential: Mid-Parental Height.
+image: TED-Ed style flat crayon illustration of a clean blackboard showing mathematical formulas: "Mid-Parental Height (MPH) Formula" with "Boys = (Father + Mother + 13)/2" and "Girls = (Father + Mother - 13)/2" written in white chalk, soft pastel cream background.
+motion: :: slow motion chalk formulas shine with a soft glow, camera rotating slowly
+
+[Scene 6]
+text: 아들의 예상 키는 아빠와 엄마의 키를 더한 뒤 13센티미터를 더하고, 2로 나누어 구합니다.
+text_en: For boys, add the father's and mother's heights, add thirteen centimeters, and divide by two.
+image: TED-Ed style flat crayon illustration of a boy sprout standing next to a large vertical ruler marked with height centimeter metrics, soft pastel blue background. No watermark, no signatures.
+motion: :: slow motion the height metrics on the ruler highlight in blue, camera panning up slowly
+
+[Scene 7]
+text: 딸의 예상 키는 아빠와 엄마의 키를 더한 뒤 13센티미터를 빼고, 똑같이 2로 나눕니다.
+text_en: For girls, add the parents' heights, subtract thirteen centimeters, and divide by two.
+image: TED-Ed style flat crayon illustration of a girl sprout standing next to a vertical growth chart ruler with centimeter markings, soft pastel coral background. No watermark, no signatures.
+motion: :: slow motion the centimeter markings glow softly, camera panning up slowly
+
+[Scene 8]
+text: 이 계산으로 나온 숫자는 평균치일 뿐, 절대적인 목적지가 결코 아닙니다.
+text_en: The number from this calculation is only a statistical average, not a final destination.
+image: TED-Ed style flat crayon illustration of a signpost with arrows pointing in multiple colorful directions, soft cream background, hand-drawn paper texture. No watermark, no text, no signatures.
+motion: :: slow motion the arrows swing gently in the breeze, camera zooming out slowly
+
+[Scene 9]
+text: 유전이 최종 키에 미치는 영향은 대략 70에서 80퍼센트 정도라고 알려져 있습니다.
+text_en: Genetics is estimated to account for about seventy to eighty percent of the variation in final height.
+image: TED-Ed style flat crayon illustration of a clean bar chart showing "Genetics: 70-80%" and "Environment: 20-30%" in distinct colorful bars, soft lavender background, crayon texture.
+motion: :: slow motion the bar heights adjust slightly with warm light pulses, camera tilting down
+
+[Scene 10]
+text: 나머지 20에서 30퍼센트는 수면, 영양, 운동 같은 후천적인 환경 요인이 결정하죠.
+text_en: The remaining twenty to thirty percent is determined by environmental factors like sleep, nutrition, and exercise.
+image: TED-Ed style flat crayon illustration of icons representing Sleep (crescent moon), Nutrition (vitamin block), and Exercise (running shoe) watering a growing seed, soft yellow background. No watermark, no signatures.
+motion: :: slow motion warm droplets fall onto the seed from the icons, camera zooming in
+
+[Scene 11]
+text: 뼈가 자란다는 것은 구체적으로 어떤 원리일까요? 핵심은 바로 성장판에 있습니다.
+text_en: What is the biological mechanism of bone growth? The key lies within the growth plates.
+image: TED-Ed style flat crayon illustration of a detailed cutaway of a leg bone joint showing the epiphyseal plate (growth plate) as a soft blue cartilage zone, soft mint background.
+motion: :: slow motion the epiphyseal cartilage zone pulses with a soft orange light, camera rotating slowly
+
+[Scene 12]
+text: 의학적으로 성장판은 뼈의 양쪽 끝에 위치한 부드러운 연골 조직, 즉 초자연골입니다.
+text_en: Clinically, growth plates are soft cartilage tissues located at the ends of long bones, known as hyaline cartilage.
+image: TED-Ed style flat crayon illustration of a microscope view of chondrocytes (cartilage cells) stacked in organized columns within the bone plate, soft pastel teal background.
+motion: :: slow motion the stacked chondrocyte layers expand slightly, camera zooming out slowly
+
+[Scene 13]
+text: 이 성장판 속의 연골 세포들이 끊임없이 분열하면서 뼈의 길이를 늘이게 됩니다.
+text_en: Cartilage cells within these growth plates actively divide to lengthen the skeletal bone.
+image: TED-Ed style flat crayon illustration of a micro-scale view of cartilage cells actively dividing and multiplying under a soft warm spotlight, soft yellow background.
+motion: :: slow motion the cells divide and multiply in warm golden light, camera panning right
+
+[Scene 14]
+text: 연골 세포가 분열하여 종렬을 이루고, 칼슘을 흡수해 단단한 뼈로 변해가는 과정이죠.
+text_en: These cartilage cells multiply, stack into columns, calcify, and gradually transform into solid bone.
+image: TED-Ed style flat crayon illustration of soft cartilage cell columns calcifying and transforming into hard white bone tissue from bottom to top, soft cream background.
+motion: :: slow motion the cells calcify into solid bone texture, camera zooming in
+
+[Scene 15]
+text: 하지만 사춘기가 시작되면 성호르몬이 분비되어 이 성장판을 서서히 닫히게 만듭니다.
+text_en: However, with the onset of puberty, sex hormones begin to gradually close these growth plates.
+image: TED-Ed style flat crayon illustration of sex hormones like estrogen and testosterone molecules entering a bone joint, soft pastel coral background.
+motion: :: slow motion the hormone molecules drift into the cartilage plate, camera tilting slowly up
+
+[Scene 16]
+text: 연골 조직이 완전히 단단한 뼈로 바뀌는 것, 이를 성장판이 닫혔다고 표현합니다.
+text_en: The process where cartilage completely ossifies into solid bone is known as growth plate closure.
+image: TED-Ed style flat crayon illustration of the growth plate completely fused and ossified into a thin solid white line, soft lavender background.
+motion: :: slow motion the solid fused line glows with a warm light, camera rotating slowly
+
+[Scene 17]
+text: 우리 아이의 진짜 성장 속도를 알기 위해선 실제 나이보다 뼈 나이를 확인해야 합니다.
+text_en: To understand a child's true growth velocity, we must check their bone age rather than chronological age.
+image: TED-Ed style flat crayon illustration of a side-by-side comparison of a wrist X-ray showing growth plates vs a ticking clock, soft warm cream background.
+motion: :: slow motion the wrist bones in the X-ray glow softly, camera zooming in slowly
+
+[Scene 18]
+text: 뼈 나이는 보통 왼쪽 손과 손목의 엑스레이 사진을 찍어 간단히 측정할 수 있습니다.
+text_en: Bone age is typically measured by taking a simple X-ray of the left hand and wrist.
+image: TED-Ed style flat crayon illustration of a pediatric hand-wrist X-ray diagram showing carpal bones and distal radius growth plates, soft blue background.
+motion: :: slow motion the wrist bones pulse with gentle golden highlights, camera panning down slowly
+
+[Scene 19]
+text: 소아청소년과에서는 뼈의 화골핵 크기와 성숙도를 표준 자료와 비교하여 분석하죠.
+text_en: Pediatricians compare the size and maturity of bone ossification centers against standard reference data.
+image: TED-Ed style flat crayon illustration of a medical book showing hand bone maturation charts side-by-side with a slide comparison, soft green background.
+motion: :: slow motion pages of the book turn slowly, revealing different hand charts, camera rotating slowly
+
+[Scene 20]
+text: 대표적으로 그로일리히-파일 도감이나 태너-화이트하우스 점수법이 사용됩니다.
+text_en: Standard methods include the Greulich-Pyle Atlas and the Tanner-Whitehouse scoring system.
+image: TED-Ed style flat crayon illustration of two charts labeled "Greulich-Pyle Atlas" and "Tanner-Whitehouse Score" under a soft examination light, soft yellow background.
+motion: :: slow motion the light moves across the charts, camera zooming out slowly
+
+[Scene 21]
+text: 주민등록상 나이는 같아도 뼈 나이는 아이마다 다르게 갈 수 있습니다.
+text_en: Even if children share the same birth year, their bone ages can progress at completely different rates.
+image: TED-Ed style flat crayon illustration of two clocks side by side, one labeled "Chronological Age" and the other "Bone Age", soft pastel coral background.
+motion: :: slow motion the hands of the Bone Age clock spin at a different rate, camera panning left
+
+[Scene 22]
+text: 뼈 나이가 실제 나이보다 어리다면 앞으로 자랄 수 있는 기간이 더 많이 남았다는 뜻입니다.
+text_en: If the bone age is younger than the actual age, it means there is more time left for growth.
+image: TED-Ed style flat crayon illustration of a winding green path extending far into a sunny forest, soft pastel green background. No watermark, no text, no signatures.
+motion: :: slow motion the green path stretches further into the background, camera tracking slowly forward
+
+[Scene 23]
+text: 반대로 뼈 나이가 너무 빠르다면 성장판이 일찍 닫혀 최종 키가 작아질 수 있죠.
+text_en: Conversely, if the bone age is advanced, growth plates may close early, limiting final height.
+image: TED-Ed style flat crayon illustration of a path ending abruptly at a wooden fence, soft lavender background, crayon texture. No watermark, no text, no signatures.
+motion: :: slow motion a leaf falls gently at the end of the short path, camera zooming in slowly
+
+[Scene 24]
+text: 따라서 성장 검사는 뼈 나이를 미리 파악해 대처하는 매우 유용한 지표가 됩니다.
+text_en: Therefore, growth screening is a valuable tool to evaluate bone age and prepare timely interventions.
+image: TED-Ed style flat crayon illustration of a parent sprout and doctor sprout looking at a glowing chart together, soft yellow background. No watermark, no text, no signatures.
+motion: :: slow motion the chart line curves gently upwards with a warm golden glow, camera rotating slowly
+
+[Scene 25]
+text: 이제 성장판을 지키고 키를 늘리는 첫 번째 비밀, 바로 수면의 과학으로 들어가 봅니다.
+text_en: Now, let's explore the first secret to protecting growth plates and maximizing height: the science of sleep.
+image: TED-Ed style flat crayon illustration of a crescent moon cradled by a large soft cloud, soft midnight blue background, colored pencil texture. No watermark, no text, no signatures.
+motion: :: slow motion tiny stars twinkle around the crescent moon, camera panning down slowly
+
+[Scene 26]
+text: 키 성장 호르몬은 하루 종일 일정하게 나오는 것이 절대 아닙니다.
+text_en: Growth hormone is not released in a continuous, steady flow throughout the day.
+image: TED-Ed style flat crayon illustration of a timeline chart with flat lines suddenly spiking into high waves, representing growth hormone release pulses, soft pastel teal background.
+motion: :: slow motion golden hormone waves spike upwards along the timeline, camera zooming out slowly
+
+[Scene 27]
+text: 뇌하수체에서 분비되는 성장 호르몬은 파도처럼 주기적인 파동을 그리며 분비되죠.
+text_en: Secreted by the pituitary gland, growth hormone is released in distinct, pulsatile waves.
+image: TED-Ed style flat crayon illustration of a brain cross-section highlighting the pituitary gland at the base releasing golden hormone packets, soft purple background.
+motion: :: slow motion warm energy rings expand from the pituitary gland, camera rotating slowly
+
+[Scene 28]
+text: 놀랍게도 하루 전체 성장 호르몬 분비량의 70에서 80퍼센트가 깊은 잠을 잘 때 나옵니다.
+text_en: Remarkably, seventy to eighty percent of daily growth hormone is released during deep sleep.
+image: TED-Ed style flat crayon illustration of a sleep stage chart showing Stage N3 deep sleep highlighted with large hormone wave spikes, soft blue-gray background.
+motion: :: slow motion glowing golden bubbles rise slowly from the deep sleep stage, camera tilting up slowly
+
+[Scene 29]
+text: 의학적으로 수면은 얕은 잠인 렘 수면과 깊은 비렘 수면 단계로 구성됩니다.
+text_en: Medically, sleep consists of alternating cycles of light REM sleep and deep non-REM sleep.
+image: TED-Ed style flat crayon illustration of waves of different heights rolling gently across the screen, soft lavender background. No watermark, no text, no signatures.
+motion: :: slow motion the lavender sleep waves roll from left to right, camera panning right slowly
+
+[Scene 30]
+text: 이 중 가장 깊은 수면 단계인 비렘 수면 3단계, 즉 서파 수면이 핵심입니다.
+text_en: The key stage is Stage N3 of non-REM sleep, also known as deep slow-wave sleep.
+image: TED-Ed style flat crayon illustration of a child sprout sleeping cozy in bed next to a sleep wave graph (slow delta waves), soft dark blue background.
+motion: :: slow motion the sleep waves ripple slowly with a warm glow, camera zooming in slowly
+
+[Scene 31]
+text: 깊은 서파 수면에 들어가면 뇌하수체는 비로소 가장 큰 성장 호르몬 맥박을 방출합니다.
+text_en: During deep slow-wave sleep, the pituitary gland releases its largest pulses of growth hormone.
+image: TED-Ed style flat crayon illustration of a diagram of pituitary hormone pulses spiking high during deep slow-wave sleep cycles, soft indigo background.
+motion: :: slow motion the hormone pulses expand as waves, camera rotating slowly
+
+[Scene 32]
+text: 이 강력한 호르몬 맥박은 보통 잠든 지 1시간에서 2시간 뒤 첫 깊은 수면 때 나타나죠.
+text_en: This powerful hormonal peak typically occurs one to two hours after falling asleep, during the first deep cycle.
+image: TED-Ed style flat crayon illustration of a timeline showing "1 to 2 Hours" passing after falling asleep, marking the first deep wave spike, soft pastel indigo background.
+motion: :: slow motion the timeline indicator slides from 0 to 2 hours, camera zooming out slowly
+
+[Scene 33]
+text: 따라서 단순히 길게 자는 것보다 깨지 않고 깊은 잠에 드는 수면의 질이 훨씬 중요합니다.
+text_en: Therefore, the quality of deep sleep is far more critical than just the overall duration of sleep.
+image: TED-Ed style flat crayon illustration of a sparkling golden key opening a door to a starry sky, soft dark teal background. No watermark, no text, no signatures.
+motion: :: slow motion the starry sky behind the open door twinkles warmly, camera tracking slowly forward
+
+[Scene 34]
+text: 깊은 수면을 방해하는 가장 무서운 방해꾼은 밤늦게 만지는 스마트폰 화면입니다.
+text_en: The greatest disrupter of deep sleep is the smartphone screen used late at night.
+image: TED-Ed style flat crayon illustration of a small sprout looking at a glowing phone emitting sharp blue rays, soft dark gray background. No watermark, no text, no signatures.
+motion: :: slow motion the blue rays flicker and cast moving shadows on the sprout, camera zooming in slowly
+
+[Scene 35]
+text: 화면에서 나오는 청색광은 잠을 부르는 호르몬인 멜라토닌 분비를 억제합니다.
+text_en: Blue light emitted from screens suppresses melatonin, the hormone that signals sleep.
+image: TED-Ed style flat crayon illustration of blue light rays from a smartphone screen blocking and pushing away purple melatonin hormone bubbles, soft charcoal background.
+motion: :: slow motion the blue rays actively push away the purple melatonin bubbles, camera panning down slowly
+
+[Scene 36]
+text: 멜라토닌이 억제되면 몸은 낮이라고 착각하여 서파 수면 단계로 쉽게 진입하지 못하죠.
+text_en: When melatonin is suppressed, the body mistaken night for day, failing to enter deep slow-wave sleep.
+image: TED-Ed style flat crayon illustration of a clock showing "Day" and "Night" indicators confused by blue light interference, soft purple background.
+motion: :: slow motion the clock dial flickers with confused orange light, camera rotating slowly
+
+[Scene 37]
+text: 결국 성장 호르몬의 분비 기회가 절반으로 깎이거나 맥박이 약해지게 됩니다.
+text_en: Consequently, the release opportunity for growth hormone is halved, and the pulses become weak.
+image: TED-Ed style flat crayon illustration of a golden growth hormone tap dripping very slowly, soft pastel coral background.
+motion: :: slow motion a single golden droplet falls from the tap slowly, camera zooming in slowly
+
+[Scene 38]
+text: 아이가 자기 한 시간 전에는 집안의 불을 낮추고 스마트 기기를 멀리해야 합니다.
+text_en: Parents should dim house lights and keep smart devices away at least one hour before bed.
+image: TED-Ed style flat crayon illustration of a parent sprout turning down a warm table lamp, soft cozy warm yellow background. No watermark, no text, no signatures.
+motion: :: slow motion the lamplight dims gently, creating a warm and peaceful glow, camera zooming out
+
+[Scene 39]
+text: 암막 커튼으로 빛을 완전히 차단하는 것도 깊은 서파 수면을 유도하는 좋은 방법이죠.
+text_en: Using blackout curtains to block light completely is also an excellent way to guide deep N3 sleep.
+image: TED-Ed style flat crayon illustration of thick dark blue curtains gently closing to reveal stars outside, soft cream background. No watermark, no text, no signatures.
+motion: :: slow motion the curtains close slowly, shutting out the background glow, camera tilting down
+
+[Scene 40]
+text: 꿀잠이 뼈를 늘려주는 통로라면, 영양은 그 뼈를 채우는 튼튼한 건축 자재입니다.
+text_en: If sound sleep is the pathway that lengthens bones, nutrition is the building material that fills them.
+image: TED-Ed style flat crayon illustration of a strong brick bridge being built by small friendly hands, soft warm yellow background. No watermark, no text, no signatures.
+motion: :: slow motion a new golden brick is placed neatly on the bridge structure, camera rotating slowly
+
+[Scene 41]
+text: 흔히 키 크는 영양소라고 하면 칼슘만 떠올리지만, 사실 더 중요한 파트너들이 있습니다.
+text_en: When thinking of growth nutrients, many only recall calcium, but there are far more critical partners.
+image: TED-Ed style flat crayon illustration of Calcium, Zinc, Vitamin D, and Arginine icons depicted as strong structural bricks, soft mint background.
+motion: :: slow motion the nutrient bricks pulse with warm light, camera zooming in slowly
+
+[Scene 42]
+text: 첫째는 칼슘을 뼈로 데려다주는 배달 트럭, 바로 비타민 D입니다.
+text_en: The first is Vitamin D, which acts as the delivery truck bringing calcium directly into the bones.
+image: TED-Ed style flat crayon illustration of a toy delivery truck labeled "Vitamin D" carrying white Calcium blocks into a bone canal under a warm sun, soft yellow background.
+motion: :: slow motion the Vitamin D truck rolls forward smoothly, camera panning left
+
+[Scene 43]
+text: 비타민 D가 없으면 우리가 먹은 칼슘은 소장에서 흡수되지 못하고 대부분 몸 밖으로 나가버립니다.
+text_en: Without Vitamin D, the calcium we consume cannot be absorbed in the gut and is mostly excreted.
+image: TED-Ed style flat crayon illustration of Calcium blocks bouncing off a locked intestinal wall gate due to lack of Vitamin D, soft pastel coral background.
+motion: :: slow motion the blocks bounce off and drop into a stream below, camera zooming out slowly
+
+[Scene 44]
+text: 비타민 D는 장에서 칼슘 흡수율을 높여 뼈가 단단해지는 칼슘 침착을 돕는 필수 요소죠.
+text_en: Vitamin D is essential to boost intestinal calcium absorption, helping deposit calcium into bone matrix.
+image: TED-Ed style flat crayon illustration of a sunbeam transforming into golden keys that unlock cell doors, soft warm yellow background. No watermark, no text, no signatures.
+motion: :: slow motion the golden keys turn inside the locks, releasing soft light, camera rotating slowly
+
+[Scene 45]
+text: 두 번째 영웅은 성장판의 설계도이자 지휘관인 아연입니다.
+text_en: The second unsung hero is Zinc, acting as the structural blueprint and commander of the growth plate.
+image: TED-Ed style flat crayon illustration of a cartoon Zinc atom character holding a blueprint, organizing dividing cells inside a bone plate, soft blue background.
+motion: :: slow motion the blueprint unrolls to reveal cell structures, camera zooming in
+
+[Scene 46]
+text: 아연은 세포 분열과 유전자 합성에 필수적이며, 성장판의 연골 세포 활성을 직접 자극합니다.
+text_en: Zinc is essential for cell division and DNA synthesis, directly stimulating cartilage cells in the growth plate.
+image: TED-Ed style flat crayon illustration of cells dividing rapidly under a glowing blue light representing Zinc activation, soft pastel green background.
+motion: :: slow motion the cells divide under the blue light, camera panning up slowly
+
+[Scene 47]
+text: 셋째는 성장 호르몬을 부르는 단백질의 핵심 아미노산, L-아르기닌입니다.
+text_en: The third is L-Arginine, a crucial amino acid in protein that triggers growth hormone secretion.
+image: TED-Ed style flat crayon illustration of a chemical chain of L-Arginine amino acid pearls folding into a strong protein shape, soft peach background.
+motion: :: slow motion the pearl chain folds into a protein structure, camera rotating slowly
+
+[Scene 48]
+text: 아르기닌은 뇌하수체를 직접 자극하여 혈중 성장 호르몬의 수준을 유의미하게 올립니다.
+text_en: Arginine directly stimulates the pituitary gland to significantly raise growth hormone levels.
+image: TED-Ed style flat crayon illustration of L-Arginine molecules stimulating a golden pituitary valve to release growth hormone, soft lavender background.
+motion: :: slow motion the golden valve opens, releasing a stream of glowing light, camera zooming out
+
+[Scene 49]
+text: 소고기, 돼지고기, 닭고기 같은 양질의 동물성 단백질과 생선에 아르기닌이 풍부하게 들어 있죠.
+text_en: Rich sources of arginine include high-quality animal proteins like beef, pork, chicken, and fish.
+image: TED-Ed style flat crayon illustration of a wooden plate filled with fresh salmon, chicken breast, and beef cuts, soft warm cream background. No watermark, no text, no signatures.
+motion: :: slow motion steam rises gently from the fresh food plate, camera panning right slowly
+
+[Scene 50]
+text: 하지만 특정 영양제를 먹이는 것보다 더 중요한 것은 자연식을 통한 균형 잡힌 섭취입니다.
+text_en: However, a balanced diet from natural foods is far more important than single nutrient supplements.
+image: TED-Ed style flat crayon illustration of a colorful salad bowl containing green leaves, eggs, and nuts, soft mint background. No watermark, no text, no signatures.
+motion: :: slow motion nuts fall gently into the salad bowl from above, camera zooming in slowly
+
+[Scene 51]
+text: 인스턴트 식품에 들어 있는 다량의 인 성분은 오히려 칼슘 흡수를 방해하므로 조심해야 합니다.
+text_en: Beware of processed foods; excess phosphorus in them can actively inhibit calcium absorption.
+image: TED-Ed style flat crayon illustration of a shiny red soda can and fries casting dark shadows on a calcium brick, soft lavender background. No watermark, no text, no signatures.
+motion: :: slow motion the dark shadow slowly covers the calcium brick, camera tilting down slowly
+
+[Scene 52]
+text: 영양 자재가 채워졌다면, 뼈에 성장을 지시할 신호가 필요합니다. 바로 운동의 압력입니다.
+text_en: Once nutritional materials are supplied, we need a signal to guide bone growth: the pressure of exercise.
+image: TED-Ed style flat crayon illustration of mechanical stress arrows pressing down vertically on a growth plate joint during exercise, soft pastel orange background.
+motion: :: slow motion the vertical arrows compress and expand the joint model, camera zooming out slowly
+
+[Scene 53]
+text: 성장판 속 연골 세포들은 외부에서 가해지는 물리적인 자극을 받을 때 더 활발하게 움직입니다.
+text_en: Cartilage cells within the growth plates become highly active when subjected to mechanical stimulation.
+image: TED-Ed style flat crayon illustration of cartilage cells responding to gentle rhythmic waves of light, soft pastel blue background. No watermark, no text, no signatures.
+motion: :: slow motion the light waves ripple across the cell layer rhythmically, camera rotating slowly
+
+[Scene 54]
+text: 특히 성장판에 수직으로 가해지는 부드러운 충격이 뼈의 성장을 촉진하는 핵심 동력입니다.
+text_en: In particular, dynamic vertical impacts are the core force that triggers longitudinal bone growth.
+image: TED-Ed style flat crayon illustration of mechanical stress vectors acting on a springy growth plate model, soft pastel yellow background.
+motion: :: slow motion the mechanical vectors pulse rhythmically on the growth plate, camera panning up
+
+[Scene 55]
+text: 줄넘기, 농구, 가벼운 제자리점프가 대표적으로 수직 압력을 주는 좋은 운동입니다.
+text_en: Exercises like jump rope, basketball, and light vertical jumps are perfect examples of vertical loading.
+image: TED-Ed style flat crayon illustration of a child sprout joyfully jumping rope with a glowing golden rope, soft mint background. No watermark, no text, no signatures.
+motion: :: slow motion the child sprout jumps up as the golden rope swings underneath, camera zooming in
+
+[Scene 56]
+text: 점프를 할 때 성장판 연골에 미세한 압박과 이완이 반복되며 혈류량이 증가하게 되죠.
+text_en: Jumping creates compression and relaxation cycles in the cartilage, increasing local blood flow.
+image: TED-Ed style flat crayon illustration of a diagram showing compression and relaxation cycles acting on epiphyseal cartilage, soft lavender background.
+motion: :: slow motion the cartilage layer expands and contracts under soft pulses, camera tilting down
+
+[Scene 57]
+text: 이는 성장판 주위의 혈관 형성을 돕고 세포 성장에 필요한 산소와 영양분을 빠르게 공급합니다.
+text_en: This aids blood vessel formation near the plates, delivering vital oxygen and nutrients for cell division.
+image: TED-Ed style flat crayon illustration of blood vessels forming near the growth plate, delivering oxygen and nutrients, soft yellow background.
+motion: :: slow motion nutrients flow rapidly through the red blood vessels, camera rotating slowly
+
+[Scene 58]
+text: 일부 부모님들은 무거운 것을 들면 성장판이 눌려 키가 안 자란다고 걱정하시기도 합니다.
+text_en: Some parents worry that lifting weights compresses the growth plates and stunts a child's growth.
+image: TED-Ed style flat crayon illustration of a heavy gray stone sitting on top of a tiny fragile sprout, soft charcoal background. No watermark, no text, no signatures.
+motion: :: slow motion the gray stone sways slightly but the sprout remains firm, camera zooming in slowly
+
+[Scene 59]
+text: 의학적 증거에 따르면 적절한 근력 운동은 뼈 밀도를 높여주지 성장판을 다치게 하지 않습니다.
+text_en: Clinical evidence shows that moderate strength training increases bone density without damaging plates.
+image: TED-Ed style flat crayon illustration of a bone density chart showing bone density increasing under moderate resistance training, soft pastel orange background.
+motion: :: slow motion the density chart bars rise steadily, camera zooming out
+
+[Scene 60]
+text: 다만, 뼈와 관절이 아직 미성숙하므로 무리한 고중량 운동보다는 맨몸 운동이 적합합니다.
+text_en: However, because bones and joints are immature, bodyweight exercises are far safer than heavy weights.
+image: TED-Ed style flat crayon illustration of a sprout doing a gentle push-up on a soft mossy ground, soft green background. No watermark, no text, no signatures.
+motion: :: slow motion the sprout pushes up steadily from the mossy ground, camera panning right slowly
+
+[Scene 61]
+text: 또한 하루 20분 정도의 스트레칭은 뼈를 둘러싼 근육과 힘줄을 부드럽게 이완해 줍니다.
+text_en: Additionally, twenty minutes of daily stretching relaxes the muscles and tendons surrounding the bone.
+image: TED-Ed style flat crayon illustration of a long green vine stretching and twisting gently around a wooden pole, soft cream background. No watermark, no text, no signatures.
+motion: :: slow motion the green vine stretches its leaves outward towards the sun, camera rotating slowly
+
+[Scene 62]
+text: 밤에 잘 때 뼈가 늘어나는 공간적 여유를 만들어주어 성장 속도를 극대화하는 보조 수단이죠.
+text_en: This creates spatial room for bones to expand during sleep, maximizing overall growth velocity.
+image: TED-Ed style flat crayon illustration of a sprout sleeping in a spacious wooden cradle with starlight shining down, soft indigo background. No watermark, no text, no signatures.
+motion: :: slow motion starlight beams drift gently down onto the sleeping sprout, camera zooming out slowly
+
+[Scene 63]
+text: 하지만 아무리 잘 먹고 잘 자도, 성장을 막는 보이지 않는 적이 있습니다. 바로 소아비만입니다.
+text_en: Yet, no matter how well a child eats and sleeps, a silent growth blocker exists: childhood obesity.
+image: TED-Ed style flat crayon illustration of a large dark shadow looming over a bright sunny field, soft lavender background. No watermark, no text, no signatures.
+motion: :: slow motion the dark shadow creeps slowly across the bright field, camera tilting down slowly
+
+[Scene 64]
+text: 소아비만이 키를 가로막는 원인은 내분비학적으로 명확히 설명됩니다.
+text_en: The mechanism by which childhood obesity stunts height is clearly defined in endocrinology.
+image: TED-Ed style flat crayon illustration of an endocrine pathway diagram showing Obesity leading to Leptin, GnRH, and early Estrogen release, soft pastel teal background.
+motion: :: slow motion energy dots flow through the hormone pathway diagram, camera rotating slowly
+
+[Scene 65]
+text: 체내에 지방 세포가 과도하게 쌓이면, 지방에서 분비되는 호르몬인 렙틴의 혈중 농도가 급증합니다.
+text_en: When excess fat cells accumulate, blood levels of leptin, a hormone secreted by fat, spike rapidly.
+image: TED-Ed style flat crayon illustration of round yellow fat cells releasing red leptin molecule dots into a blood vessel tube, soft peach background.
+motion: :: slow motion the red leptin dots multiply and float through the vessel, camera zooming in slowly
+
+[Scene 66]
+text: 올라간 렙틴 호르몬은 뇌의 시상하부를 자극하여 키스펩틴이라는 유전자를 깨우게 되죠.
+text_en: Elevated leptin acts on the hypothalamus in the brain, activating the kisspeptin gene.
+image: TED-Ed style flat crayon illustration of leptin dots stimulating the brain's hypothalamus to activate the kisspeptin gene spark, soft purple background.
+motion: :: slow motion the kisspeptin spark ignites and pulses with orange light, camera rotating slowly
+
+[Scene 67]
+text: 키스펩틴은 다시 성선자극호르몬 방출호르몬, 즉 GnRH의 조기 분비를 유발합니다.
+text_en: Kisspeptin subsequently triggers the premature secretion of gonadotropin-releasing hormone, or GnRH.
+image: TED-Ed style flat crayon illustration of kisspeptin spark releasing GnRH keys down a neural pathway to the pituitary gland, soft lavender background.
+motion: :: slow motion the GnRH keys travel down the pathway, camera panning down slowly
+
+[Scene 68]
+text: 이 복잡한 호르몬 도미노는 결국 아이의 사춘기를 앞당기는 성조숙증으로 이어집니다.
+text_en: This hormone cascade ultimately leads to precocious puberty, advancing the onset of adolescence.
+image: TED-Ed style flat crayon illustration of domino blocks labeled "Obesity -> Leptin -> GnRH -> Precocious Puberty" falling towards a fast-spinning clock, soft cream background.
+motion: :: slow motion the dominoes fall and strike the fast clock, camera zooming out
+
+[Scene 69]
+text: 사춘기가 일찍 시작되면 몸에서는 에스트로겐과 같은 성호르몬이 조기에 다량 분비됩니다.
+text_en: Early puberty causes the body to release large amounts of sex hormones like estrogen prematurely.
+image: TED-Ed style flat crayon illustration of a warm red sunburst spreading its rays across a blue landscape, soft coral background. No watermark, no text, no signatures.
+motion: :: slow motion the red rays expand and warm up the landscape outline, camera rotating slowly
+
+[Scene 70]
+text: 에스트로겐은 뼈를 빨리 자라게 하는 동시에, 성장판 세포를 파괴하여 융합을 촉진합니다.
+text_en: Estrogen temporarily accelerates bone growth while promoting the fusion and closure of plates.
+image: TED-Ed style flat crayon illustration of estrogen molecules accelerating bone fusion, closing the growth plate into a solid white line prematurely, soft lavender background.
+motion: :: slow motion the growth plate ossifies rapidly into a solid white line, camera zooming in slowly
+
+[Scene 71]
+text: 결과적으로 성장판이 닫히는 속도가 비정상적으로 빨라지게 되는 것입니다.
+text_en: As a result, the closure velocity of the growth plates accelerates abnormally.
+image: TED-Ed style flat crayon illustration of a growth plate closure timeline accelerating abnormally under a strong wind, soft pastel gray background.
+motion: :: slow motion the timeline dial spins rapidly, camera panning right slowly
+
+[Scene 72]
+text: 비만인 아이들은 초반에 또래보다 키가 크고 발육이 빨라 보여 부모님이 안심하기 쉽습니다.
+text_en: Obese children often appear taller than peers early on, which can easily mislead parents.
+image: TED-Ed style flat crayon illustration of a heavy sprout standing taller than a thin sprout on a small hill, soft mint background. No watermark, no text, no signatures.
+motion: :: slow motion the heavy sprout stands proud while the sun shines, camera zooming out slowly
+
+[Scene 73]
+text: 하지만 이는 성장 기간을 미리 당겨 쓴 것일 뿐이며, 최종 키는 예상보다 훨씬 작아집니다.
+text_en: However, this is just borrowing future growth time; their final adult height will be shorter.
+image: TED-Ed style flat crayon illustration of the tall heavy sprout suddenly stopping while a small sprout keeps growing past it, soft lavender background. No watermark, no text, no signatures.
+motion: :: slow motion the small sprout gently grows taller than the heavy sprout, camera panning up
+
+[Scene 74]
+text: 일반적으로 과도한 지방 세포는 성장호르몬이 지방을 분해하는 데 소모되도록 낭비하게 만듭니다.
+text_en: Typically, fat cells consume growth hormone for lipolysis, wasting its bone-growing potential.
+image: TED-Ed style flat crayon illustration of growth hormone molecules being wasted and diverted to dissolve fat cells instead of targeting bone plates, soft peach background.
+motion: :: slow motion the hormone stream is diverted onto fat tissue, camera rotating slowly
+
+[Scene 75]
+text: 뼈로 가야 할 아까운 성장 호르몬이 지방 세포를 분해하는 데 다 쓰여버리는 셈이죠.
+text_en: Valuable growth hormone that should go to the bones is instead spent breaking down fat cells.
+image: TED-Ed style flat crayon illustration of a bone joint looking pale and deprived of hormone pulses while fat cells glow, soft pastel gray background.
+motion: :: slow motion the joint dims while surrounding fat cells pulse bright, camera zooming in slowly
+
+[Scene 76]
+text: 따라서 소아비만은 키 성장에 있어 최악의 적이며, 반드시 예방해야 할 1순위 조건입니다.
+text_en: Thus, childhood obesity is a major threat to height growth and must be actively prevented.
+image: TED-Ed style flat crayon illustration of a warning sign decorated with green leaves next to a healthy apple, soft yellow background. No watermark, no text, no signatures.
+motion: :: slow motion the green leaves on the warning sign flutter gently, camera zooming out slowly
+
+[Scene 77]
+text: 탄수화물과 설탕이 가득한 음료수를 줄이고, 활동량을 늘려 체지방률을 조절해 주세요.
+text_en: Reduce carbohydrates and sugary sodas, and increase physical activity to manage body fat.
+image: TED-Ed style flat crayon illustration of a child sprout running happily next to a tumbling soda cup, soft pastel teal background. No watermark, no text, no signatures.
+motion: :: slow motion the child sprout jogs forward while the soda cup rolls away, camera panning right
+
+[Scene 78]
+text: 그렇다면 우리 아이 키 성장을 위해 부모님이 오늘 당장 실천할 수 있는 것은 무엇일까요?
+text_en: What can parents do today to support their child's optimal height growth?
+image: TED-Ed style flat crayon illustration of a parent sprout holding a checklist scroll with leaf badges, soft warm cream background. No watermark, no text, no signatures.
+motion: :: slow motion the checklist scroll unrolls slowly, revealing leaf symbols, camera rotating slowly
+
+[Scene 79]
+text: 첫째, 밤 9시부터 10시 사이에는 아이가 완전히 수면에 빠져들도록 침실을 어둡게 조성합니다.
+text_en: First, dim the bedroom to ensure your child falls asleep between nine and ten PM.
+image: TED-Ed style flat crayon illustration of a cozy dark bedroom with starlight shining through a window, soft dark blue background. No watermark, no text, no signatures.
+motion: :: slow motion a shooting star passes across the night window frame, camera zooming in slowly
+
+[Scene 80]
+text: 빛이 차단된 방에서 멜라토닌이 충분히 분비되어야 깊은 N3 서파 수면이 완성됩니다.
+text_en: Blocking light allows sufficient melatonin release, paving the way for deep N3 slow-wave sleep.
+image: TED-Ed style flat crayon illustration of melatonin bubbles filling the room warmly in a completely dark bedroom, soft indigo background.
+motion: :: slow motion the purple melatonin bubbles float peacefully, camera tilting down slowly
+
+[Scene 81]
+text: 둘째, 매일 저녁 가벼운 줄넘기 500회나 트램펄린 점프로 성장판을 직접 깨워줍니다.
+text_en: Second, trigger the growth plates with five hundred jumps on a jump rope or trampoline daily.
+image: TED-Ed style flat crayon illustration of a child sprout jumping on a mini trampoline under a warm sunset, soft coral background. No watermark, no text, no signatures.
+motion: :: slow motion the sprout child bounces high with a happy smile, camera panning up slowly
+
+[Scene 82]
+text: 이 수직 자극 운동은 성장판의 혈류를 촉진해 영양소가 뼈 끝까지 닿게 만듭니다.
+text_en: This vertical stimulation boosts blood circulation, delivering nutrients to the bone ends.
+image: TED-Ed style flat crayon illustration of blood circulation pathways lighting up in the leg joint during exercise, soft teal background.
+motion: :: slow motion nutrients and oxygen flow rapidly through the glowing pathways, camera rotating slowly
+
+[Scene 83]
+text: 셋째, 정제 당류와 포화 지방이 가득한 배달 음식 대신 양질의 단백질 식단을 제공합니다.
+text_en: Third, replace sugary, high-fat delivery foods with high-quality protein meals.
+image: TED-Ed style flat crayon illustration of a hand swapping a burger box for a fresh egg and fish plate, soft peach background. No watermark, no text, no signatures.
+motion: :: slow motion the fresh egg and fish plate glows under a soft warm spotlight, camera zooming in
+
+[Scene 84]
+text: 닭고기, 생선, 두부에 풍부한 아르기닌과 아연은 연골 세포가 자라날 소중한 벽돌이 됩니다.
+text_en: Arginine and zinc in chicken, fish, and tofu serve as precious bricks to build cartilage cells.
+image: TED-Ed style flat crayon illustration of a small sprout building a strong house using small white mineral blocks, soft mint background. No watermark, no text, no signatures.
+motion: :: slow motion the sprout places a new mineral block on the cottage wall, camera rotating slowly
+
+[Scene 85]
+text: 마지막으로 아이의 체중 변화를 정기적으로 체크해 과체중 비만으로 가지 않도록 돕습니다.
+text_en: Finally, monitor your child's weight regularly to prevent obesity and early plate fusion.
+image: TED-Ed style flat crayon illustration of a parent sprout measuring a child's body mass index (BMI) on a wooden chart scale, soft cream background.
+motion: :: slow motion the chart scale adjusts into correct healthy range, camera zooming out
+
+[Scene 86]
+text: 성장은 아이와 부모님이 함께 걷는 긴 호흡의 여행이자, 따뜻한 관심의 열매입니다.
+text_en: Growth is a long, shared journey for parents and children, nurtured by warm care.
+image: TED-Ed style flat crayon illustration of a parent sprout and child sprout walking hand-in-hand along a flowery path, soft sunny yellow background. No watermark, no text, no signatures.
+motion: :: slow motion butterflies flutter around the walking sprout characters, camera panning right slowly
+
+[Scene 87]
+text: 조급한 마음으로 호르몬 주사를 고민하기보다, 오늘 한 시간의 건강한 생활 습관이 먼저입니다.
+text_en: Before rushing into clinical growth hormone therapy, focus on fostering healthy daily habits today.
+image: TED-Ed style flat crayon illustration of a syringe crossing out with a soft red mark next to a fresh apple, soft lavender background. No watermark, no text, no signatures.
+motion: :: slow motion the fresh apple glows with a soft, natural green halo, camera zooming in slowly
+
+[Scene 88]
+text: 부모님이 심어준 건강한 수면과 균형 잡힌 영양은 평생의 기초 체력이 될 것입니다.
+text_en: The sleep habits and balanced nutrition you provide today build a lifetime foundation for health.
+image: TED-Ed style flat crayon illustration of a tall strong tree with deep roots spreading under the fertile soil, soft green background. No watermark, no text, no signatures.
+motion: :: slow motion the roots expand slowly deeper into the warm soil, camera tilting down slowly
+
+[Scene 89]
+text: 작은 새싹이 스스로의 힘으로 따뜻한 하늘을 향해 높이 뻗어나가도록 함께 지켜봐 주세요.
+text_en: Let's support the tiny sprout as it reaches high toward the warm sky with its own strength.
+image: TED-Ed style flat crayon illustration of the child sprout reaching its leaves towards a beautiful sunny sky, soft warm coral background. No watermark, no text, no signatures.
+motion: :: slow motion warm sun rays beam down on the happy sprout as it sways, camera zooming out slowly
+
+[Scene 90]
+text: 의사의 눈으로 세상을 분석하고 만화가의 마음으로 전합니다. 구독하고 건강한 내일을 만나세요.
+text_en: Analyzed through a doctor's eyes and delivered with a cartoonist's heart. Subscribe for a healthier tomorrow.
+image: TED-Ed style flat crayon illustration of a circular logo badge reading "drjay-ed" surrounded by small green leaves, soft warm yellow background. No watermark, no text inside illustration except logo name, no signatures.
+motion: :: slow motion the circular logo badge spins slowly while green leaves drift gently in the background, camera rotating slowly

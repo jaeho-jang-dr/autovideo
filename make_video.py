@@ -26,15 +26,19 @@ def parse_scenario(scenario_path):
         scene_id = int(raw_blocks[i])
         block_text = raw_blocks[i+1]
         
-        # Extract text:
+        # Extract text & text_en
         text_match = re.search(r'text:\s*(.*)', block_text, re.IGNORECASE)
-        if text_match:
-            text = text_match.group(1).strip()
-            scenes.append({
-                "id": scene_id,
-                "text": text,
-                "image": f"assets/images/scene_{scene_id}.png" 
-            })
+        text_en_match = re.search(r'text_en:\s*(.*)', block_text, re.IGNORECASE)
+        
+        text = text_match.group(1).strip() if text_match else ""
+        text_en = text_en_match.group(1).strip() if text_en_match else ""
+        
+        scenes.append({
+            "id": scene_id,
+            "text": text,
+            "text_en": text_en,
+            "image": f"assets/images/scene_{scene_id}.png" 
+        })
     return scenes
 
 # Text wrap helper
@@ -70,6 +74,30 @@ def make_zoom(clip, duration, zoom_ratio=0.03):
         return np.array(img_resized)
     return clip.transform(effect)
 
+def draw_rounded_rect(img, pt1, pt2, color, thickness, radius):
+    x1, y1 = pt1
+    x2, y2 = pt2
+    w = x2 - x1
+    h = y2 - y1
+    r = min(radius, w // 2, h // 2)
+    
+    if thickness < 0: # Filled
+        cv2.rectangle(img, (x1 + r, y1), (x2 - r, y2), color, -1)
+        cv2.rectangle(img, (x1, y1 + r), (x2, y2 - r), color, -1)
+        cv2.circle(img, (x1 + r, y1 + r), r, color, -1)
+        cv2.circle(img, (x2 - r, y1 + r), r, color, -1)
+        cv2.circle(img, (x1 + r, y2 - r), r, color, -1)
+        cv2.circle(img, (x2 - r, y2 - r), r, color, -1)
+    else: # Border
+        cv2.line(img, (x1 + r, y1), (x2 - r, y1), color, thickness)
+        cv2.line(img, (x1 + r, y2), (x2 - r, y2), color, thickness)
+        cv2.line(img, (x1, y1 + r), (x1, y2 - r), color, thickness)
+        cv2.line(img, (x2, y1 + r), (x2, y2 - r), color, thickness)
+        cv2.ellipse(img, (x1 + r, y1 + r), (r, r), 180, 0, 90, color, thickness)
+        cv2.ellipse(img, (x2 - r, y1 + r), (r, r), 270, 0, 90, color, thickness)
+        cv2.ellipse(img, (x1 + r, y2 - r), (r, r), 90, 0, 90, color, thickness)
+        cv2.ellipse(img, (x2 - r, y2 - r), (r, r), 0, 0, 90, color, thickness)
+
 def main():
     parser = argparse.ArgumentParser(description="Compile scene clips and narration into final video.")
     parser.add_argument("--scenario", required=True, help="Path to scenario.txt")
@@ -78,7 +106,8 @@ def main():
     parser.add_argument("--no-remove-watermark", action="store_false", dest="remove_watermark", help="Do not remove video watermark")
     parser.add_argument("--logo-path", default="assets/drjay_ed_logo_circle.png", help="Path to channel logo overlay image")
     parser.add_argument("--intro", default="assets/intro.mp4", help="Path to intro video clip")
-    parser.add_argument("--outro", default="assets/outro.mp4", help="Path to outro video clip")
+    parser.add_argument("--outro", default="assets/outro.mp4", help="Path to outro video clip or image")
+    parser.add_argument("--annotations", default="", help="Path to annotations.json containing scene medical text overlays")
     args = parser.parse_args()
 
     # Ensure output folders exist
@@ -93,6 +122,17 @@ def main():
     if not scenes:
         print("No scenes parsed. Exiting.")
         sys.exit(1)
+
+    # Load annotations
+    annotations = {}
+    if args.annotations and os.path.exists(args.annotations):
+        import json
+        try:
+            with open(args.annotations, "r", encoding="utf-8") as f:
+                annotations = json.load(f)
+            print(f"Loaded {len(annotations)} annotations for visual overlay.")
+        except Exception as e:
+            print(f"Error loading annotations from {args.annotations}: {e}")
 
     # Clean audio cache to prevent narration mismatch
     print("Clearing gTTS audio cache to force regeneration...")
@@ -117,8 +157,8 @@ def main():
     for scene in scenes:
         audio_path = f"assets/audio/scene_{scene['id']}.mp3"
         
-        # Generate TTS (Via ElevenLabs / gTTS Fallback)
-        print(f"Generating TTS for Scene {scene['id']}...")
+        # Generate TTS (한국어 나레이션 고정)
+        print(f"Generating TTS for Scene {scene['id']} (ko)...")
         save_tts(scene['text'], audio_path, lang='ko')
         
         # Load audio and apply 1.1x speed MultiplySpeed
@@ -192,9 +232,10 @@ def main():
                 base_clip = ImageClip(img_path).with_duration(duration).with_audio(audio_clip)
                 base_clip = make_zoom(base_clip, duration)
         
-        # Subtitle creation
-        wrapped_text = wrap_text(scene['text'], max_chars=35)
+        # Subtitle creation (영어 자막 기본 적용)
+        wrapped_text = wrap_text(scene['text_en'], max_chars=35)
         font_path = r'C:\Windows\Fonts\malgun.ttf'
+        font_path_bold = r'C:\Windows\Fonts\malgunbd.ttf'
         
         try:
             txt_clip = TextClip(
@@ -220,7 +261,78 @@ def main():
             )
             
         txt_clip = txt_clip.with_position(('center', img_height - 230)).with_duration(duration)
-        video_scene = CompositeVideoClip([base_clip, txt_clip])
+        
+        # Check if this scene has a medical annotation overlay
+        scene_annotation = annotations.get(str(scene['id']))
+        composite_elements = [base_clip, txt_clip]
+        
+        if scene_annotation:
+            print(f"Adding annotation overlay for Scene {scene['id']}: {scene_annotation}")
+            ann_text = wrap_text(scene_annotation, max_chars=25)
+            # Measure size first using bold font and larger size 26
+            try:
+                temp_clip = TextClip(
+                    text=ann_text,
+                    font=font_path_bold,
+                    font_size=26,
+                    color='#000000',  # Crisp pure black for maximum contrast
+                    method='caption',
+                    size=(360, None)
+                )
+            except Exception:
+                temp_clip = TextClip(
+                    text=ann_text,
+                    font_size=26,
+                    color='#000000',
+                    method='caption',
+                    size=(360, None)
+                )
+            ann_w, ann_h = temp_clip.size
+            temp_clip.close()
+
+            # Calculate proportional padding based on the number of lines
+            num_lines = ann_text.count('\n') + 1
+            text_padding_y = 12 + num_lines * 10  # 1 line: 22, 2 lines: 32, 3 lines: 42
+            box_padding_y = 16 + num_lines * 12   # 1 line: 28, 2 lines: 40, 3 lines: 52
+            
+            # Recreate TextClip with proportional height padding to prevent Hangul bottom clipping
+            try:
+                ann_txt_clip = TextClip(
+                    text=ann_text,
+                    font=font_path_bold,
+                    font_size=26,
+                    color='#000000',
+                    method='caption',
+                    size=(ann_w, ann_h + text_padding_y)
+                )
+            except Exception:
+                ann_txt_clip = TextClip(
+                    text=ann_text,
+                    font_size=26,
+                    color='#000000',
+                    method='caption',
+                    size=(ann_w, ann_h + text_padding_y)
+                )
+
+            # Proportional padding around text (horizontal 32px, vertical based on line count)
+            box_w = ann_w + 32
+            box_h = ann_h + text_padding_y + box_padding_y
+
+            box_img = np.zeros((box_h, box_w, 4), dtype=np.uint8)
+            # Fill sprout green (RGBA: [224, 245, 224, 200])
+            draw_rounded_rect(box_img, (1, 1), (box_w - 2, box_h - 2), [224, 245, 224, 200], -1, 10)
+            # Border darker green (RGBA: [46, 125, 50, 255])
+            draw_rounded_rect(box_img, (1, 1), (box_w - 2, box_h - 2), [46, 125, 50, 255], 2, 10)
+
+            from moviepy import ImageClip
+            ann_bg_clip = ImageClip(box_img).with_duration(duration)
+            ann_txt_clip = ann_txt_clip.with_position(('center', 'center')).with_duration(duration)
+
+            ann_composite = CompositeVideoClip([ann_bg_clip, ann_txt_clip], size=(box_w, box_h))
+            ann_composite = ann_composite.with_position((45, 45)).with_duration(duration)
+            composite_elements.append(ann_composite)
+            
+        video_scene = CompositeVideoClip(composite_elements)
         video_scene = video_scene.with_effects([fx.CrossFadeIn(0.5)])
         
         clips.append(video_scene)
@@ -240,15 +352,28 @@ def main():
     # 3. Add Outro (if exists)
     if args.outro and os.path.exists(args.outro):
         print(f"Including Outro: {args.outro}")
-        final_clips.append(VideoFileClip(args.outro))
+        if args.outro.lower().endswith(('.mp4', '.avi', '.mov', '.mkv')):
+            final_clips.append(VideoFileClip(args.outro))
+        else:
+            print(f"Outro target is an image. Building 8-second static outro with fades...")
+            outro_duration = 8.0
+            outro_img_clip = ImageClip(args.outro).with_duration(outro_duration)
+            outro_img_clip = make_zoom(outro_img_clip, outro_duration, zoom_ratio=0.01)
+            outro_clip = CompositeVideoClip([outro_img_clip])
+            outro_clip = outro_clip.with_effects([fx.CrossFadeIn(0.5), fx.CrossFadeOut(0.5)])
+            final_clips.append(outro_clip)
 
     print("Merging all scenes into final video...")
     final_video = concatenate_videoclips(final_clips, method="compose")
+    cpu_cores = os.cpu_count() or 4
+    print(f"Utilizing all {cpu_cores} CPU threads for compilation...")
     final_video.write_videofile(
         args.output,
         fps=24,
         codec="libx264",
-        audio_codec="aac"
+        audio_codec="aac",
+        threads=cpu_cores,
+        ffmpeg_params=["-threads", str(cpu_cores)]
     )
     print(f"SUCCESS: {args.output} has been rendered successfully!")
 
