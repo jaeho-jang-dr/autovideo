@@ -34,10 +34,15 @@ python autoveo_flow.py --prompts <에피소드>_prompts.txt --scene 1
 #   검증 수치: 이미지 ~40s / 동영상 ~70s, 한 씬 ~2.3분. 성급히 끊지 말 것.
 #   다운로드는 '완성 영상 타일(play_circle+포스터, 이미지 왼쪽)'을 잡는다. 자세히는 .harness/skills/autoveo/SKILL.md.
 
-# (2) 본편 합성 + 인트로/아웃트로 앞뒤 부착 (음성 자동 재컴파일)
+# (2) 본편 합성 + 인트로/아웃트로 앞뒤 부착 (음성 자동 재컴파일) + 토글 자막(CC)
 python make_video.py --scenario <에피소드>.txt --output <에피소드>/<에피소드>.mp4 \
-                     --intro assets/intro.mp4 --outro assets/outro.mp4
+                     --intro assets/intro.mp4 --outro assets/outro.mp4 \
+                     --annotations <에피소드>/annotations.json --no-burn-subs --embed-subs
 ```
+**★ 자막 표준(2026-06-16~): 영어/한글 자막은 화면에 굽지 않는다.** `--no-burn-subs` 로 번인을 끄고
+`--embed-subs` 로 `en/ko` SRT를 만들어 mp4 안에 **소프트 CC 트랙(mov_text, 기본 OFF)** 으로 내장한다.
+→ 유튜브·VLC에서 시청자가 **영어 / 한글 / 끄기** 를 직접 선택. 사이드카 `<out>.en.srt`·`<out>.ko.srt`
+도 함께 생성되어 유튜브 자막 업로드에 그대로 쓴다. **좌상단 한글 키워드 박스(어노테이션)는 그래픽이라 그대로 유지**한다.
 **★ 음성 재컴파일 규칙:** 새 본편을 만들 때마다 `make_video.py` 가 본편 각 씬 음성을 그 영상에 맞게
 **자동 재생성+싱크**한다(기존 `assets/audio/scene_*.mp3` 캐시 강제 삭제 → 대본 TTS 새로 생성 → 1.1배속
 → Veo 클립을 나레이션 길이에 배속 싱크). 인트로/아웃트로는 자체 음성 완성품이라 그대로 붙고,

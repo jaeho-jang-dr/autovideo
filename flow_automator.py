@@ -63,7 +63,10 @@ def parse_prompts(prompt_file):
         for line in f:
             m = pattern.match(line.strip())
             if m:
-                prompts[int(m.group(1))] = m.group(2).strip()
+                body = m.group(2).strip()
+                if "::" in body:
+                    body = body.split("::")[-1].strip()
+                prompts[int(m.group(1))] = body
     return prompts
 
 
@@ -232,12 +235,31 @@ def open_editor(page, is_interactive, timeout_ms=60000):
 
     if "accounts.google.com" in page.url:
         print("[AUTH] 구글 로그인 페이지로 리디렉트 됨.")
+        try:
+            acc = None
+            for sel in ["text=drjang00@gmail.com", "text=Jaeho Jang", "text=jaeho-jang"]:
+                try:
+                    loc = page.locator(sel).first
+                    if loc.is_visible(timeout=1500):
+                        acc = loc
+                        break
+                except Exception:
+                    pass
+            if acc:
+                print("[AUTH] 계정 프로필 감지. 클릭을 시도합니다...")
+                acc.click(timeout=3000, force=True)
+                page.wait_for_timeout(4000)
+        except Exception as auth_err:
+            print(f"[AUTH WARN] 계정 자동 선택 클릭 실패: {auth_err}")
+
         if is_interactive:
             input("로그인 완료 후 [Enter] 를 누르세요...")
         else:
-            print("자동 모드: 로그인 완료를 최대 90초 대기...")
+            print("\n*** [ACTION REQUIRED] ***")
+            print("새로운 Chrome 창이 열렸습니다. 구글 계정 비밀번호를 입력하여 로그인을 완료해주세요.")
+            print("로그인이 완료되면 스크립트가 자동으로 감지하고 진행합니다 (최대 10분 대기)...")
             try:
-                page.wait_for_url("**/labs.google/**", timeout=90000)
+                page.wait_for_url("**/labs.google/**", timeout=600000)
                 print("[AUTH OK] labs.google 복귀 확인.")
             except Exception:
                 print("[AUTH WARN] labs.google 복귀 미감지. 계속 진행합니다.")
@@ -743,7 +765,8 @@ def wait_and_download(page, output_path, timeout_seconds=420):
 # ---------------------------------------------------------------------------
 
 def automate_flow(scene_id=None, prompt_file="prompts_for_veo.txt",
-                  auto=False, debug_only=False, verify=False, force=False):
+                  auto=False, debug_only=False, verify=False, force=False,
+                  image_dir="assets/images", video_dir="assets/videos"):
     prompts = parse_prompts(prompt_file)
     if not prompts:
         print("[ERROR] No prompts loaded.")
@@ -759,7 +782,7 @@ def automate_flow(scene_id=None, prompt_file="prompts_for_veo.txt",
 
     profile_dir = os.path.abspath("assets/chrome_profile")
     os.makedirs(profile_dir, exist_ok=True)
-    os.makedirs("assets/videos", exist_ok=True)
+    os.makedirs(video_dir, exist_ok=True)
     os.makedirs(DEBUG_DIR, exist_ok=True)
     os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
@@ -821,8 +844,8 @@ def automate_flow(scene_id=None, prompt_file="prompts_for_veo.txt",
         # Scene processing loop
         # -----------------------------------------------------------------
         for idx, num in enumerate(scenes_to_process):
-            image_path = os.path.abspath(f"assets/images/scene_{num}.png")
-            output_path = os.path.abspath(f"assets/videos/scene_{num}.mp4")
+            image_path = os.path.abspath(os.path.join(image_dir, f"scene_{num}.png"))
+            output_path = os.path.abspath(os.path.join(video_dir, f"scene_{num}.mp4"))
             prompt_text = prompts[num]
 
             if not os.path.exists(image_path):
@@ -933,6 +956,10 @@ if __name__ == "__main__":
                         help="에디터 진입 후 DOM/프레임 구조만 덤프하고 종료")
     parser.add_argument("--prompts", default="prompts_for_veo.txt",
                         help="프롬프트 파일 경로 (기본 prompts_for_veo.txt)")
+    parser.add_argument("--image-dir", default="assets/images",
+                        help="이미지 입력 디렉토리 (기본 assets/images)")
+    parser.add_argument("--video-dir", default="assets/videos",
+                        help="비디오 저장 디렉토리 (기본 assets/videos)")
     args = parser.parse_args()
 
     automate_flow(
@@ -942,4 +969,6 @@ if __name__ == "__main__":
         verify=args.verify,
         force=args.force,
         debug_only=args.debug,
+        image_dir=args.image_dir,
+        video_dir=args.video_dir,
     )
