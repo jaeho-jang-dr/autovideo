@@ -76,7 +76,9 @@ def main():
         "--output", OUTPUT_VIDEO,
         "--intro", "assets/intro.mp4",
         "--outro", os.path.join(TARGET_DIR, "scene_0_thumbnail.png"),
-        "--annotations", r"child_growth_science\annotations.json"
+        "--annotations", r"child_growth_science\annotations.json",
+        # 표준: 영어/한글 자막은 굽지 않고 토글 가능한 CC(소프트 트랙)로 내장 (한글 박스는 유지)
+        "--no-burn-subs", "--embed-subs"
     ]
     
     print(f"컴파일 명령어 실행: {' '.join(compile_cmd)}")
