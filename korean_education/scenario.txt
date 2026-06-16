@@ -1,0 +1,64 @@
+[Scene 0]
+text: 안녕하세요! 세상에서 가장 쉽고 과학적인 문자, 한글의 세계에 오신 것을 환영합니다.
+text_en: Hello! Welcome to the world of Hangul, the easiest and most scientific alphabet in the world.
+motion: :: [zoom_bounce] a clean 2D vector line art book opens, Korean letters (한글) gently float up on a solid flat beige background (#F5F5F0), camera slowly zooming in
+
+[Scene 1]
+text: 한글의 모음은 우주의 기본 요소인 하늘(•), 땅(ㅡ), 사람(ㅣ)의 모양을 본떠 만들어졌습니다.
+text_en: Hangul's vowels were created based on three basic elements of the universe: the sky (•), the land (ㅡ), and the human (ㅣ).
+motion: :: [pulse] minimalist 2D vector graphic showing three elements: a dot at top, a flat line in middle, a vertical line on right on a flat background (#F5F5F0), colored black (#111111) with a soft yellow glow (#FFD700) around the dot, camera orbiting slowly
+
+[Scene 2]
+text: 이 세 가지 우주 원소가 서로 만나 결합하면서 '아, 어, 오, 우' 같은 모음이 태어납니다.
+text_en: When these three cosmic elements combine, they form standard vowels like "A, EO, O, U".
+motion: :: [pulse] minimalist line-art animation showing the dot (•) sliding and merging with the vertical line (ㅣ) to dynamically form the letters "아" and "어" on a flat background (#F5F5F0), camera slowly panning right
+
+[Scene 3]
+text: 자음은 우리의 신비로운 목구멍, 혀, 입술, 이 등 발음 기관의 움직임과 모양을 그대로 본떴습니다.
+text_en: The consonants are designed to mimic the shape and movement of our vocal organs: throat, tongue, lips, and teeth.
+motion: :: [zoom_bounce] clean minimalist profile outline of a human head showing the oral cavity and tongue, the tongue and vocal cords are highlighted in soft yellow (#FFD700) on a flat background (#F5F5F0), camera slowly tilting down
+
+[Scene 4]
+text: 게다가 소리가 더 거세질수록 획을 하나씩 더해가는 '가획의 원리'를 적용해 형태와 소리가 일치하죠.
+text_en: Moreover, by adding strokes as the sound gets stronger, the shape of the letter perfectly matches its sound.
+motion: :: [rotation] a clean black outline showing "ㄱ" morphing into "ㅋ", then "ㄴ" morphing into "ㄷ" and "ㅌ", with a yellow line tracing the added stroke on a flat background (#F5F5F0), camera panning slowly
+
+[Scene 5]
+text: 한글은 알파벳처럼 나란히 쓰지 않고, 네모난 사각형 블록 안에 초성, 중성, 종성을 함께 모아씁니다.
+text_en: Rather than writing letters in a line, Hangul groups consonants and vowels together into square syllable blocks.
+motion: :: [zoom_bounce] clean 2D vector graphic showing parts "ㄱ", "ㅏ", "ㅇ" floating and assembling into a perfect square block "강" on a flat background (#F5F5F0), camera zooming in slowly
+
+[Scene 6]
+text: 모음의 세로 획이 길게 서 있으면, 자음의 오른쪽에 나란히 붙여서 '가'처럼 씁니다.
+text_en: If the vowel has a vertical stroke, it is placed to the right of the consonant, like "가".
+motion: :: [pulse] minimal line-art illustration showing a green block grid where "ㄱ" sits on the left and "ㅏ" slides in on the right to form "가" on a flat background (#F5F5F0), camera panning slowly
+
+[Scene 7]
+text: 모음의 가로 획이 길게 누워 있으면, 자음의 아래쪽에 붙여서 '고'처럼 씁니다.
+text_en: If the vowel has a horizontal stroke, it is placed directly under the consonant, like "고".
+motion: :: [pulse] minimal line-art illustration showing a green block grid where "ㄱ" sits on top and "ㅗ" slides in underneath to form "고" on a flat background (#F5F5F0), camera tilting slowly
+
+[Scene 8]
+text: 자음이 음절의 맨 밑바닥에 받침으로 들어가 '강'처럼 소리의 삼중주를 완성하기도 합니다.
+text_en: Consonants can also go at the very bottom as a final sound (Batchim), completing the syllable block like "강".
+motion: :: [zoom_bounce] the syllable block "강" is displayed in clean black outlines, with the bottom consonant "ㅇ" highlighted in bright yellow (#FFD700) on a flat background (#F5F5F0), camera zooming out slowly
+
+[Scene 9]
+text: 한글을 쓰는 두 가지 대원칙은 아주 간단합니다. 왼쪽에서 오른쪽으로, 그리고 위에서 아래로!
+text_en: The two main rules of writing Hangul are simple: from left to right, and from top to bottom!
+motion: :: [shake] top-down overhead angle of a clean hand holding a stylus tracing the stroke order of "ㄹ" with yellow arrows showing direction on a flat background (#F5F5F0), camera slowly rotating
+
+[Scene 10]
+text: 가장 발음하기 힘든 '으'는 미소를 지으며 입술을 양옆으로 찢어 목구멍 안에서 소리를 내면 쉽습니다.
+text_en: The tricky "EU [ɯ]" sound is easy if you stretch your lips wide as if smiling, letting the sound rise from the throat.
+motion: :: [pulse] minimalist mouth illustration stretching wide horizontally with small yellow arrows indicating tension at the corners of the mouth on a flat background (#F5F5F0), camera orbiting slowly
+
+[Scene 11]
+text: 턱을 넓게 내리는 '어'와 입술을 동그랗게 앞으로 모으는 '오'의 입 모양 차이도 눈으로 기억해보세요.
+text_en: Compare the mouth shapes: "EO [ʌ]" with the jaw dropped down, and "O [o]" with the lips rounded forward.
+motion: :: [rotation] side-by-side 2D vector mouth comparison: one mouth open vertically and one mouth small and circular, with accent yellow arrows pointing at the lips on a flat background (#F5F5F0), camera panning slowly
+
+[Scene 12]
+text: 한글의 과학적인 원리와 함께라면 쓰기와 발음도 즐겁습니다. 새로운 배움을 구독과 좋아요로 함께해요!
+text_en: With Hangul's scientific principles, reading and writing are fun. Subscribe and like to join the journey!
+motion: :: [rotation] a clean minimalist line-art bell icon and a heart icon popping up with soft animations on a flat background (#F5F5F0), camera craning up
