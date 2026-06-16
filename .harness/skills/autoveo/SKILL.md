@@ -67,6 +67,11 @@ python merge_clips.py output.mp4 assets/videos/scene_1.mp4 assets/videos/scene_2
 6. **다운로드**: 결과 타일 호버 → `⋮` → `다운로드` → **`720p 원본 크기`** (서브메뉴.
    `270p GIF`/`1080p 업스케일`/`4K(유료)`도 있음). 다운로드 전 대상 폴더를 미리 생성.
 
+## ★ 한 씬씩 확실히 만드는 검증된 수동 레시피 → [SCENE_RECIPE.md](./SCENE_RECIPE.md)
+autoveo_flow.py 자동화가 봇 감지/다운로드 타일 오인으로 막힐 때, `flow_driver.py`로 화면 보며
+한 단계씩(이미지 모드→이미지 생성→다시시도→애니메이션→영상→왼쪽 타일 다운로드) 따라하면 확실하다.
+**Claude Code CLI는 이 레시피를 그대로 재현**할 수 있다. binge scene 1·2·3 엔드투엔드 검증(2026-06-13).
+
 ## 검증된 운영 수치 & 다운로드 핵심 (2026-06-13 실측, 프로젝트 내내 적용)
 - **이미지 ~40초**(Nano Banana 2, 0크레딧) · **동영상 ~70초**(Veo 8s). 부하 시 더 걸리므로
   이미지 대기는 **넉넉히(최대 ~10분)** — 과거 145초로 끊어 *생성 진행 중인 걸 죽이고* 다음 씬으로
@@ -78,6 +83,11 @@ python merge_clips.py output.mp4 assets/videos/scene_1.mp4 assets/videos/scene_2
   `다운로드` → `720p 원본 크기`. 저장 파일 헤더가 `ftyp`(MP4)인지 검증하고 아니면 재시도.
 - **autoveo_flow.py 반영분:** `wait_image(timeout=600)` + 8초 간격 로그, 영상 최소대기 65초,
   `try_download_video()`(VIDEO_DONE_JS 사용; 좌측-포스터 버그 폐기). 한 번에 **하나씩** `--scene N`.
+- **★ 죽이지 말고 화면을 봐라 (반복 금지):** 다운로드가 안 된다고 **프로세스/chrome을 죽이지 말 것.**
+  Flow 영상은 **클라우드(대시보드/프로젝트)에 저장**되므로 생성만 끝났으면 다운로드 실패는 복구 가능하다.
+  죽이면 완성된 화면만 날린다. 순서: ① **스크린샷부터 찍어 화면을 직접 본다(추측 금지)** →
+  ② **완성 영상 타일 = 결과 캔버스에서 이미지의 "왼쪽"**(`play_circle`+포스터) → ③ 호버→⋮→다운로드→720p 원본.
+  안 보이면 대시보드로 돌아가 그 영상 썸네일을 다시 연다. 라이브 복구는 `flow_driver.py`로 화면 보며 조작.
 - **프로필 락:** 실행 사이엔 `assets\chrome_profile`를 쓰는 chrome를 모두 종료하고
   `assets\chrome_profile\SingletonLock`을 삭제. 드라이버(autoveo/flow_driver)를 동시에 두 개 띄우지 말 것.
 - **출력 네이밍:** `--prompts intro_outro_prompts.txt` → `intro_outro/scene_N.mp4`

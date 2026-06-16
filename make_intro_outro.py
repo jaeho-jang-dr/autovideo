@@ -42,14 +42,14 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 # --- 나레이션 대본 (사람이 수정하는 단일 원천) ---------------------------------
 # 영어 채널명을 한글 발음으로 읽지 않는다("닥터제이 에드" 금지). 자연스러운 한국어로.
 INTRO_TEXT = "의사의 메스로 세상을 해부하고, 만화가의 상상력으로 꿰맵니다."
-OUTRO_TEXT = "오늘도 함께해주셔서 감사합니다. 구독과 좋아요로 함께해 주세요."
+OUTRO_TEXT = "새로운 지식의 여정을 응원합니다. 구독과 좋아요로 함께해 주세요."
 
 # --- 규격 ---------------------------------------------------------------------
 W, H, FPS = 1280, 720, 24
 SPEED = 1.1                 # 나레이션 10% 빠르게 (채널 디폴트)
 LEAD = 0.3                  # 페이드인 동안 무음
 SEG_INTRO = 8.0            # 인트로 = Flow 클립 1개 풀 8초
-SEG_OUTRO = 4.0           # 아웃트로 = 두 클립을 각 4초로 트림해 4+4=8초
+SEG_OUTRO = 6.0           # 아웃트로 = 오디오 및 감쇄 벨소리 여운을 포함하여 6초 설정
 VIDEO_FADE = 0.4
 FONT = r"C:\Windows\Fonts\malgun.ttf"
 LOGO = "assets/drjay_ed_logo_circle.png"
@@ -168,13 +168,58 @@ def build_intro(logo, force=True):
     print(f"intro.mp4 완료: {base.duration:.2f}s")
 
 
+def generate_bell_chime(output_path, duration=1.5, sample_rate=44100):
+    import wave
+    import struct
+    import math
+    num_samples = int(sample_rate * duration)
+    frequencies = [880.0, 1320.0, 1760.0, 2200.0]
+    amplitudes = [0.4, 0.2, 0.1, 0.05]
+    decays = [3.0, 5.0, 7.0, 9.0]
+    
+    frames = []
+    for i in range(num_samples):
+        t = i / sample_rate
+        val = 0.0
+        for f, a, d in zip(frequencies, amplitudes, decays):
+            val += a * math.sin(2 * math.pi * f * t) * math.exp(-d * t)
+        val = max(-1.0, min(1.0, val))
+        fade_len = int(sample_rate * 0.1)
+        if i > num_samples - fade_len:
+            fade_factor = (num_samples - i) / fade_len
+            val *= fade_factor
+        ival = int(val * 32767)
+        frames.append(struct.pack('<h', ival))
+        
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with wave.open(output_path, 'wb') as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(sample_rate)
+        w.writeframes(b''.join(frames))
+    print(f"Generated bell chime sound -> {output_path}")
+
 def build_outro(logo, force=True):
-    print("\n=== 아웃트로 합성 (scene_2 4초 + scene_3 4초 = 8초) ===")
+    print("\n=== 아웃트로 합성 (scene_3 종 4초 단독) ===")
+    chime_wav = _abs("assets/audio/bell_chime.wav")
+    if force or not os.path.exists(chime_wav):
+        generate_bell_chime(chime_wav)
+
     mp3 = make_narration(OUTRO_TEXT, "assets/audio/outro_narration.mp3", force)
-    a = process_clip(CLIP_OUTRO_A, SEG_OUTRO, logo)
-    b = process_clip(CLIP_OUTRO_B, SEG_OUTRO, logo)
-    base = concatenate_videoclips([a, b], method="compose").with_audio(
-        CompositeAudioClip([narration_audio(mp3)]))
+    
+    # 4초짜리 종/알림벨 클립 단독 사용
+    base = process_clip(CLIP_OUTRO_B, SEG_OUTRO, logo)
+    
+    # 오디오 합성 (나레이션 + 2.5초 시점에 종소리 시작)
+    nar = narration_audio(mp3)
+    chime = AudioFileClip(chime_wav)
+    
+    mixed_audio = CompositeAudioClip([
+        nar, 
+        chime.with_start(2.5)
+    ]).with_duration(SEG_OUTRO)
+    
+    base = base.with_audio(mixed_audio)
     finalize(base, OUTRO_TEXT, "assets/outro.mp4")
     print(f"outro.mp4 완료: {base.duration:.2f}s")
 

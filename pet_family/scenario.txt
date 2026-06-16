@@ -1,0 +1,119 @@
+[Scene 0]
+text: 안녕하세요, 저는 진도견 홍시와 함께 사는 보호자입니다. 오늘은 우리 홍시와 이웃이 함께 행복해지는 법을 들려드릴게요.
+text_en: Hello, I am the owner who lives with my Jindo dog, Hongsi. Today, I will share how my Hongsi and our neighbors can be happy together.
+image: pet_family/scene_0.png
+motion: :: slow motion warm sunlight gently spreads across the cozy neighborhood as a few leaves drift by, camera slowly zooming in on the owner and the dog
+
+[Scene 1]
+text: 우리 홍시는 흑색 바탕에 하얀 털이 드문드문 섞인 이쁜 암컷 진도견입니다.
+text_en: My Hongsi is a beautiful female Jindo dog, black-furred with sparse white patches scattered throughout.
+image: pet_family/scene_1.png
+motion: :: slow motion the dog tilts her head and her ears twitch softly, camera slowly orbiting around her face
+
+[Scene 2]
+text: 얼마 전 산길에서 오소리와 싸우다 다친 홍시를 안고 밤새 울며 간호했던 그 밤, 우리는 진짜 가족이 되었습니다.
+text_en: When Hongsi was hurt fighting a badger on a mountain trail recently, I held her all night crying and nursing her. That night, we truly became family.
+image: pet_family/scene_2.png
+motion: :: slow motion a soft warm glow rises over Jindo dog Hongsi resting gently, as owner's hand softly strokes her back, camera slowly zooming in
+
+[Scene 3]
+text: 하지만 엘리베이터에서 홍시를 본 이웃이 흠칫 뒤로 물러설 때, 내 마음 한구석이 시려옵니다.
+text_en: Yet when a neighbor flinches and steps back upon seeing Hongsi in the elevator, a corner of my heart aches.
+image: pet_family/scene_3.png
+motion: :: slow motion the neighbor shifts uneasily toward the corner, camera slowly tilting from the people down to the dog
+
+[Scene 4]
+text: 그분들을 탓할 수는 없어요. 과거에 개에게 물린 기억이 있다면, 큰 개는 그 자체로 공포일 테니까요.
+text_en: I cannot blame them. To someone bitten by a dog before, a large dog can feel like pure fear itself.
+image: pet_family/scene_4.png
+motion: :: slow motion the faint shadow of a memory behind the person pulses softly, camera slowly zooming in on the worried face
+
+[Scene 5]
+text: 게다가 목줄을 풀어놓거나 배변을 치우지 않는 일부 보호자의 무책임이 갈등을 더 깊게 만들죠.
+text_en: Moreover, irresponsible owners who unleash their dogs or leave waste behind deepen the conflict even further.
+image: pet_family/scene_5.png
+motion: :: slow motion an off-leash dog dashes across the lawn while bystanders step back, camera slowly panning across the park
+
+[Scene 6]
+text: 그래서 나는 홍시를 위해, 그리고 이웃을 위해 책임 있는 보호자가 되기로 마음먹었습니다.
+text_en: So, for Hongsi and for our neighbors, I made up my mind to become a responsible guardian.
+image: pet_family/scene_6.png
+motion: :: slow motion the owner takes a confident breath as soft light rises behind them, camera slowly tilting up from the leash to their faces
+
+[Scene 7]
+text: 독일에서는 훈데슈토이어라는 반려견 세금을 걷어, 깨끗한 공원과 배변 봉투 시설에 다시 씁니다.
+text_en: In Germany, a dog tax called Hundesteuer is collected and reinvested into clean parks and waste-bag stations.
+image: pet_family/scene_7.png
+motion: :: slow motion coins gently flow from a public fund jar back into the clean park facilities, camera slowly panning across the tidy park
+
+[Scene 8]
+text: 세금은 부담이 아니라, 반려견과 함께 사는 책임을 사회가 나누어 지는 따뜻한 약속이었습니다.
+text_en: The tax is not a burden but a warm promise, society sharing the responsibility of living alongside dogs.
+image: pet_family/scene_8.png
+motion: :: slow motion a warm heart at the center of joined hands glows and pulses softly, camera slowly orbiting around the circle
+
+[Scene 9]
+text: 일본에서는 반려견이 뛰놀 수 있는 도그 런 구역과 산책 구역을 따로 나누어 운영합니다.
+text_en: In Japan, separate dog-run areas and walking zones are designated so dogs have their own space to play.
+image: pet_family/scene_9.png
+motion: :: slow motion tiny dogs play inside the fenced zone while people stroll the separate path, camera slowly tilting down over the map
+
+[Scene 10]
+text: 정해진 구역 안에서 홍시는 마음껏 달리고, 그 밖에서는 이웃이 편안하게 지나갈 수 있게 되었죠.
+text_en: Within the designated areas Hongsi runs freely, while outside them neighbors can pass by at ease.
+image: pet_family/scene_10.png
+motion: :: slow motion the dog bounds happily across the grass with ears flowing, camera tracking and panning alongside her run
+
+[Scene 11]
+text: 어느 아파트에는 엘리베이터에 반려견 탑승 중이라고 알리는 버튼이 새로 생겼습니다.
+text_en: In one apartment, an elevator now has a button that signals a dog is on board.
+image: pet_family/scene_11.png
+motion: :: slow motion a paw-marked button lights up warmly as a finger presses it, camera slowly pushing in on the glowing button
+
+[Scene 12]
+text: 버튼을 누르면 기다리던 이웃이 미리 알 수 있어, 놀라거나 마주칠 일이 크게 줄어듭니다.
+text_en: Pressing it lets waiting neighbors know in advance, greatly reducing surprises and unwanted encounters.
+image: pet_family/scene_12.png
+motion: :: slow motion the glowing signal gently pulses while the neighbors relax and step aside, camera slowly tilting up to the indicator
+
+[Scene 13]
+text: 우리 동네에서는 보호자들이 모여 함께 배우는 반려견 사회화 훈련 모임을 시작했습니다.
+text_en: In our neighborhood, owners gathered and started a community training group for dog socialization.
+image: pet_family/scene_13.png
+motion: :: slow motion the dogs sit attentively as the gentle trainer gestures, camera slowly orbiting around the training circle
+
+[Scene 14]
+text: 홍시는 앉아와 기다려를 배우고, 나는 다른 보호자들과 노하우를 나누며 함께 성장했어요.
+text_en: Hongsi learned to sit and wait, while I grew together with other owners by sharing know-how.
+image: pet_family/scene_14.png
+motion: :: slow motion the dog holds her sit and wags her tail proudly, camera slowly panning from the owner's hand to the dog
+
+[Scene 15]
+text: 이제 엘리베이터에서 나는 목줄을 2미터 이내로 짧게 잡고, 홍시를 내 다리 옆에 바짝 세웁니다.
+text_en: Now, in the elevator, I hold the leash short within two meters and keep Hongsi close beside my leg.
+image: pet_family/scene_15.png
+motion: :: slow motion the dog stays calmly tucked beside the leg as the doors softly close, camera slowly tilting down along the short leash
+
+[Scene 16]
+text: 사람을 어려워하는 날엔 노란 리본을 달아, 오늘은 거리를 지켜달라는 신호를 보냅니다.
+text_en: On days she is shy around people, I tie a yellow ribbon to signal that we need some distance today.
+image: pet_family/scene_16.png
+motion: :: slow motion the yellow ribbon flutters gently in a soft breeze, camera slowly orbiting around the ribbon and the dog
+
+[Scene 17]
+text: 이웃도 동의 없이 함부로 만지거나 소리치지 않고, 한 걸음 물러나 존중을 보여줍니다.
+text_en: Neighbors, too, show respect, not touching or shouting without consent, and taking a step back.
+image: pet_family/scene_17.png
+motion: :: slow motion the neighbor calmly steps back giving space, camera slowly panning between the neighbor and the owner
+
+[Scene 18]
+text: 배변 봉투를 꼭 챙기고 흔적을 깨끗이 치우는 작은 습관이, 결국 모두의 신뢰를 쌓아 올립니다.
+text_en: Always carrying waste bags and cleaning up every trace, these small habits build everyone's trust.
+image: pet_family/scene_18.png
+motion: :: slow motion the cleaned spot sparkles softly as the bag is tied, camera slowly tilting down to the tidy ground
+
+[Scene 19]
+text: 조금씩 배려가 쌓이면, 사람도 홍시도 모두 안전한 따뜻한 이웃이 됩니다. 우리 홍시, 사랑해 주세요.
+text_en: As care builds little by little, people and Hongsi alike become safe, warm neighbors. Please love my Hongsi.
+image: pet_family/scene_19.png
+motion: :: slow motion everyone waves warmly as petals drift through the air, camera slowly zooming out and craning up over the happy neighborhood
