@@ -53,19 +53,596 @@
     {
       "code": "CA-001",
       "category": "CA",
-      "title_kr": "피터팬은 왜 늙지 않을까?",
-      "title_en": "Why Doesn't Peter Pan Age?",
-      "hook_kr": "영원히 어린아이인 피터팬, 그의 성장판은 어떻게 되어 있을까?",
-      "logline_kr": "성장판 폐쇄와 성장호르몬으로 본 '영원한 어린이'의 불가능",
-      "status": "idea",
+      "title_kr": "몰아보기는 정말 우리 몸에 나쁠까?",
+      "title_en": "Is Binge Watching Bad For You?",
+      "hook_kr": "침대에 누워 드라마를 몰아보는 일, 정말 우리 몸에 괜찮을까요?",
+      "logline_kr": "뇌 도파민 회로, 신체 비활동성(정형외과적 디스크 하중/혈전/대사), 안구 피로/수면 분석 및 해결책",
+      "status": "scripted",
       "priority": 1,
-      "runtime_sec": null,
+      "runtime_sec": 125,
       "youtube_kr": null,
       "youtube_en": null,
       "publish_date": null,
       "reverse_spec": null,
       "style_profile": null,
-      "scenes": []
+      "scenes": [
+        {
+          "seq": 1,
+          "script_kr": "침대에 누워 드라마를 몰아보는 일은 이제 흔한 일상이 되었습니다.",
+          "script_en": "Lying in bed and binge-watching TV dramas has become a common daily habit for many of us.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 2,
+          "script_kr": "\"한 화만 더 봐야지\" 하다가 결국 밤을 새워본 적이 있으신가요?",
+          "script_en": "Have you ever said just one more episode and then ended up staying awake all night?",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 3,
+          "script_kr": "넷플릭스의 자동 재생 버튼은 우리의 뇌를 강력하게 유혹합니다.",
+          "script_en": "The auto-play button on streaming platforms acts as a powerful temptation for our human brain.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 4,
+          "script_kr": "전 세계 성인의 약 70퍼센트 이상이 몰아보기를 즐긴다고 답했습니다.",
+          "script_en": "Studies show that over seventy percent of adults worldwide regularly enjoy binge-watching their favorite shows.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 5,
+          "script_kr": "정형외과 의사의 입장에서 몰아보기는 우리 몸에 어떤 영향을 미칠까요?",
+          "script_en": "From my perspective as an orthopedic doctor, how does this habit physically impact our entire body?",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 6,
+          "script_kr": "오늘 우리는 몰아보기가 몸과 마음에 미치는 영향을 파헤쳐 보겠습니다.",
+          "script_en": "Today, we will dissect the scientific effects of binge-watching on both your body and mind.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 7,
+          "script_kr": "편안해 보이는 소파는 사실 우리 뼈와 근육의 적이 될 수 있습니다.",
+          "script_en": "That comfortable-looking sofa can actually turn out to be a hidden enemy for your spine.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 8,
+          "script_kr": "어두운 방에서 번쩍이는 화면은 눈의 피로를 극대화하는 주범입니다.",
+          "script_en": "Watching flashing screens in a dark room is the main culprit for extreme eye fatigue.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 9,
+          "script_kr": "우리의 뇌 속에서는 엄청난 화학물질이 쉴 새 없이 쏟아지고 있죠.",
+          "script_en": "Inside our brain, an enormous cascade of chemicals is being released without a single pause.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "몰아보기는 정말 우리 건강을 심각하게 망치는 주범일까요?",
+          "script_en": "Is binge-watching truly a serious danger that ruins our overall physical and mental health?",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 11,
+          "script_kr": "의사의 칼날 같은 시선과 만화가의 상상력으로 해부해 봅니다.",
+          "script_en": "Let us dissect this modern habit with a surgeon's precision and a cartoonist's imagination.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "지금부터 몰아보기가 만드는 신체 변화의 지도를 함께 따라가 보시죠.",
+          "script_en": "Now, let us follow the map of biological changes caused by continuous screen viewing.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "몰아보기를 시작하면 뇌의 보상 회로가 활발하게 작동하기 시작합니다.",
+          "script_en": "When you start binge-watching, the reward pathways in your brain immediately light up with activity.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "쾌락의 호르몬인 '도파민'이 뇌 속에서 홍수처럼 분비되는 것입니다.",
+          "script_en": "A pleasure-inducing chemical called dopamine begins to flood your brain like a sudden rushing wave.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "다음 이야기에 대한 호기심이 도파민 분비를 끊임없이 촉진하죠.",
+          "script_en": "Curiosity about the next episode continuously stimulates this ongoing release of rewarding dopamine signals.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "손가락 하나 움직이지 않아도 다음 화면이 나오니 멈출 수 없습니다.",
+          "script_en": "Since the next episode plays automatically, your brain experiences instant gratification without any effort.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "이러한 신경학적 자극은 가벼운 약물 중독과 매우 유사한 패턴입니다.",
+          "script_en": "This neurological cycle is highly similar to the behavioral patterns seen in mild substance addictions.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "화려한 화면과 입체 음향은 시각과 청각을 강력하게 사로잡습니다.",
+          "script_en": "Vibrant visual displays and stereo sound systems strongly capture your sensory attention for hours.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "도파민의 홍수 속에서 우리는 시간 감각을 완전히 잃어버리게 됩니다.",
+          "script_en": "Under this heavy flood of dopamine, we completely lose track of time and environment.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "뇌는 더 자극적인 반전을 원하며 계속해서 도파민을 요구합니다.",
+          "script_en": "The brain craves more shocking twists and continuously demands higher levels of chemical stimulation.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "하지만 마침내 드라마가 모두 끝나면 도파민 분비는 급격히 멈춥니다.",
+          "script_en": "However, when the series finally ends, this dopamine production comes to a sudden halt.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "이 순간 밀려오는 깊은 공허함을 '포스트 몰아보기 우울증'이라 부릅니다.",
+          "script_en": "The sudden emptiness felt at this point is called post-binge watching depression by psychologists.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "과도하게 자극받았던 도파민 수용체들이 무뎌진 결과입니다.",
+          "script_en": "This down-depression occurs because your overstimulated dopamine receptors become temporarily numbed and unresponsive.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "즐거웠던 기분은 순식간에 가라앉고 심한 짜증과 피로가 몰려옵니다.",
+          "script_en": "The previous excitement quickly vanishes, replaced by sudden irritability, exhaustion, and mental fatigue.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "우리는 이 우울함을 달래려 또 다른 새로운 영상을 찾아 헤맵니다.",
+          "script_en": "To escape this negative mood, we immediately start searching for another series to watch.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "뇌를 피로하게 만드는 악순환의 고리가 이렇게 완성되는 것입니다.",
+          "script_en": "This creates a vicious cycle that leaves your brain chronically exhausted and chemically unbalanced.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 27,
+          "script_kr": "과도한 정보 입력은 뇌의 기억과 집중 능력을 떨어뜨리게 됩니다.",
+          "script_en": "This constant input of excessive information degrades your brain's capacity for memory and concentration.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 28,
+          "script_kr": "결국 즐거움을 위해 시작한 시청이 정신적 탈진을 부르는 셈이죠.",
+          "script_en": "Ultimately, what began as relaxing entertainment turns into a state of severe mental exhaustion.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 29,
+          "script_kr": "이제 정형외과 의사의 전문 분야인 신체 움직임을 살펴보겠습니다.",
+          "script_en": "Now, let us examine physical movement, which is my main field as a surgeon.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 30,
+          "script_kr": "우리가 자리에 앉는 순간, 다리 근육의 전기적 활동은 완전히 멈춥니다.",
+          "script_en": "The moment you sit down, the electrical activity in your leg muscles completely shuts off.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 31,
+          "script_kr": "근육이 일을 하지 않으니 칼로리 소모량은 분당 1칼로리로 떨어지죠.",
+          "script_en": "Because your muscles are completely inactive, calorie burning drops to just one calorie per minute.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 32,
+          "script_kr": "지방을 분해하는 효소인 '지단백 리파아제'가 급격히 줄어들게 됩니다.",
+          "script_en": "The production of lipoprotein lipase, an essential enzyme that breaks down fat, drops dramatically.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 33,
+          "script_kr": "이로 인해 혈액 속의 유해한 지방 수치와 체중이 증가하게 됩니다.",
+          "script_en": "Consequently, levels of harmful fats in your blood rise, causing rapid weight gain.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 34,
+          "script_kr": "엉덩이와 허벅지 뒷부분의 혈관들이 몸무게에 짓눌려 수축합니다.",
+          "script_en": "The blood vessels in your buttocks and back thighs are compressed under your weight.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 35,
+          "script_kr": "혈액 순환이 느려지면서 심장으로 돌아가는 혈액의 힘이 약해집니다.",
+          "script_en": "As blood circulation slows down, the returning pressure of blood to your heart weakens.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 36,
+          "script_kr": "다리에 피가 고이면서 발과 발목이 붓는 현상이 발생하게 되죠.",
+          "script_en": "Blood pools in your lower limbs, which often causes your feet and ankles to swell.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 37,
+          "script_kr": "장시간 움직이지 않으면 다리 정맥에 피떡인 '혈전'이 생길 수 있습니다.",
+          "script_en": "Sitting motionless for hours can cause dangerous blood clots to form in your veins.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 38,
+          "script_kr": "이 혈전이 떨어져 나가 폐혈관을 막으면 생명이 위태로워집니다.",
+          "script_en": "If these blood clots travel to your lungs, they can cause fatal pulmonary embolism.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 39,
+          "script_kr": "앉은 자세는 서 있을 때보다 척추에 두 배 이상의 압박을 줍니다.",
+          "script_en": "A sitting posture places twice as much pressure on your spinal discs as standing.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 40,
+          "script_kr": "특히 화면에 몰입하여 몸을 앞으로 굽히면 압박은 훨씬 심해집니다.",
+          "script_en": "If you hunch forward to look at the screen, that pressure increases even more.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 41,
+          "script_kr": "머리가 앞으로 숙여지면 목뼈는 무려 15킬로그램의 하중을 견뎌야 합니다.",
+          "script_en": "When your head tilts forward, your neck bones must bear a heavy extra load.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 42,
+          "script_kr": "이 하중이 누적되면 목 디스크가 튀어나오는 심각한 손상을 유발하죠.",
+          "script_en": "This cumulative pressure from bad posture can eventually cause painful cervical disc herniation.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 43,
+          "script_kr": "허리 주변의 근육들은 척추를 지탱하려다 결국 지쳐서 굳어집니다.",
+          "script_en": "The muscles supporting your spine exhaust themselves and eventually become painfully tight and stiff.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 44,
+          "script_kr": "굳어진 근육들은 골반을 뒤틀리게 만들어 체형을 망가뜨립니다.",
+          "script_en": "These chronically stiff muscles can pull your pelvis completely out of its natural alignment.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 45,
+          "script_kr": "움직임이 없는 관절은 윤활액이 마르면서 뻣뻣하고 아프게 변하죠.",
+          "script_en": "Joints that remain motionless lose their natural lubricating fluid, leading to early degeneration.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 46,
+          "script_kr": "전신의 대사 기능이 가라앉아 당뇨병과 고혈압 위험이 올라갑니다.",
+          "script_en": "Your body's overall metabolic rate drops, significantly rising the long-term risk of diabetes.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 47,
+          "script_kr": "쓰지 않는 엉덩이와 허벅지 근육은 시간이 갈수록 녹아내립니다.",
+          "script_en": "Without regular physical use, your large gluteal and thigh muscles slowly waste away over time.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 48,
+          "script_kr": "뼈에 자극이 전달되지 않아 골밀도가 낮아지고 골다공증이 생깁니다.",
+          "script_en": "Lacking physical impact, your bones lose density and become increasingly weak and brittle over time.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 49,
+          "script_kr": "이상한 자세로 오래 누워있으면 좌골신경이 눌려 다리가 저립니다.",
+          "script_en": "Lying in awkward positions presses your sciatic nerve, causing severe numbness in legs.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 50,
+          "script_kr": "무릎을 굽힌 채 앉아 있으면 다리 뒷부분의 인대가 짧아집니다.",
+          "script_en": "Keeping your knees bent for long hours shortens the critical tendons behind your legs.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 51,
+          "script_kr": "드라마를 다 보고 일어설 때 온몸이 찌푸둥하고 아픈 이유입니다.",
+          "script_en": "This muscle tightness is why your whole body feels stiff and painful after watching.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 52,
+          "script_kr": "앉아만 있는 습관은 우리 뼈를 갉아먹는 조용한 살인자입니다.",
+          "script_en": "A sedentary lifestyle is a silent killer that slowly destroys your entire skeletal system.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 53,
+          "script_kr": "다음으로 몰아보기가 우리의 눈과 뇌에 주는 타격을 알아봅시다.",
+          "script_en": "Next, let us examine the damage that binge-watching causes to your eyes and brain.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 54,
+          "script_kr": "디지털 화면에서는 파장이 짧고 에너지가 강한 청색광이 방출됩니다.",
+          "script_en": "Digital screens emit high-energy blue light which easily penetrates deep into your visual organs.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 55,
+          "script_kr": "이 청색광은 눈의 망막 세포를 직접 공격해 시력을 저하시킵니다.",
+          "script_en": "This intense blue light directly damages key light-sensitive cells in your retina over time.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 56,
+          "script_kr": "가까운 화면만 쳐다보면 모양체 근육이 굳어져 초점 조절이 힘듭니다.",
+          "script_en": "Staring closely at screens freezes your focusing muscles, causing temporary blurry vision problems later.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 57,
+          "script_kr": "화면에 집중할 때 우리의 눈 깜빡임 횟수는 절반 이하로 줄어듭니다.",
+          "script_en": "When focusing on a show, your normal blink rate drops by more than half.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 58,
+          "script_kr": "눈물이 빠르게 마르면서 심한 안구건조증과 각막 염증이 생기죠.",
+          "script_en": "The protective tear film evaporates quickly, leading to dry eyes and corneal inflammation.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 59,
+          "script_kr": "화면의 강한 불빛은 뇌신경을 자극하여 심한 두통을 유발합니다.",
+          "script_en": "Strong glare from the screen overstimulates sensory nerves, causing severe chronic tension headaches.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 60,
+          "script_kr": "청색광은 수면을 돕는 호르몬인 '멜라토닌'의 생성을 방해합니다.",
+          "script_en": "Blue light exposure actively suppresses melatonin, the hormone that tells your body to sleep.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 61,
+          "script_kr": "뇌는 화면 불빛을 햇빛으로 착각하여 계속 낮이라고 인식합니다.",
+          "script_en": "The brain mistakes artificial screen light for sunshine and remains in a daytime state.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 62,
+          "script_kr": "몸의 천연 생체시계인 '생체 리듬'이 엉망으로 꼬이게 되죠.",
+          "script_en": "Your body's internal biological clock, the circadian rhythm, becomes completely disrupted and misaligned.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 63,
+          "script_kr": "침대에 누워도 잠이 오지 않고 머릿속이 맑아지는 이유입니다.",
+          "script_en": "This is why you feel wide awake when trying to sleep after watching.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 64,
+          "script_kr": "텔레비전을 볼 때 뇌는 매우 수동적인 상태인 알파파를 방출합니다.",
+          "script_en": "While watching television, your brain emits alpha waves, indicating a highly passive state.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 65,
+          "script_kr": "생각하는 회로는 쉬고 오직 시각 정보를 받는 뇌 부위만 일하죠.",
+          "script_en": "Critical thinking pathways go dark, while only visual processing regions remain active.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 66,
+          "script_kr": "이 상태가 계속되면 뇌의 논리적 사고 능력이 서서히 약화됩니다.",
+          "script_en": "If this state continues for long hours, your capacity for logical reasoning gradually weakens.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 67,
+          "script_kr": "긴장감 넘치는 스릴러물은 스트레스 호르몬인 코르티솔을 높입니다.",
+          "script_en": "Watching intense thrillers triggers the release of cortisol, your body's primary stress hormone.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 68,
+          "script_kr": "심장 박동이 빨라지고 혈압이 상승하여 몸이 비상 상태에 놓입니다.",
+          "script_en": "Your heart rate accelerates and blood pressure rises, putting your body in constant danger.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 69,
+          "script_kr": "몸은 가만히 있어도 뇌와 심장은 전쟁터에 있는 것처럼 지치게 되죠.",
+          "script_en": "Even though you are sitting still, your brain and heart remain completely exhausted.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 70,
+          "script_kr": "자는 동안 진행되어야 할 기억 정리 과정이 방해를 받습니다.",
+          "script_en": "The crucial process of memory consolidation that occurs during deep sleep is severely disrupted.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 71,
+          "script_kr": "아침에 일어났을 때 개운하지 않고 뇌가 뿌옇게 느껴집니다.",
+          "script_en": "You wake up feeling unrefreshed, experiencing what doctors call brain fog next morning.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 72,
+          "script_kr": "뇌의 휴식 시간을 빼앗는 몰아보기는 뇌를 서서히 병들게 합니다.",
+          "script_en": "Binge-watching deprives your brain of essential rest, causing gradual cognitive decline over time.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 73,
+          "script_kr": "부족한 잠은 우리 몸의 면역 체계를 송두리째 무너뜨립니다.",
+          "script_en": "Sleep deprivation caused by late-night viewing completely breaks down your body's immune defenses.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 74,
+          "script_kr": "병원균과 싸우는 면역 세포인 '림프구'의 활성도가 급격히 떨어집니다.",
+          "script_en": "The activity of lymphocytes, the cells that fight off invading pathogens, drops significantly.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 75,
+          "script_kr": "잠이 부족해지면 식욕을 자극하는 호르몬인 '그렐린'이 증가합니다.",
+          "script_en": "When sleep is restricted, your body produces more ghrelin, the hunger-stimulating hormone.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 76,
+          "script_kr": "반면 배부름을 느끼게 하는 '렙틴' 호르몬은 크게 줄어들게 되죠.",
+          "script_en": "Meanwhile, levels of leptin, the hormone that signals fullness, drop sharply in blood.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 77,
+          "script_kr": "이로 인해 늦은 밤 피자나 치킨 같은 고열량 음식을 갈망합니다.",
+          "script_en": "This food craving makes you choose high-calorie junk food late at night.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 78,
+          "script_kr": "밤늦게 음식을 먹고 바로 누우면 역류성 식도염이 생기기 쉽습니다.",
+          "script_en": "Eating late and lying down immediately leads to painful acid reflux in esophagus.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 79,
+          "script_kr": "밤에는 신진대사가 느려져 섭취한 칼로리가 대부분 지방으로 쌓입니다.",
+          "script_en": "Since metabolism slows down at night, most consumed calories are stored as fat.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 80,
+          "script_kr": "이는 복부 비만을 유발하고 장기를 압박하는 내장지방이 됩니다.",
+          "script_en": "This pattern leads to abdominal obesity and builds dangerous visceral fat around organs.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 81,
+          "script_kr": "호르몬 교란과 지방 축적은 인슐린 저항성을 높여 당뇨를 부릅니다.",
+          "script_en": "Hormonal disruption and fat accumulation raise insulin resistance, eventually causing type-two diabetes.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 82,
+          "script_kr": "몰아보기 시간만큼 우리는 운동하고 움직일 시간을 잃어버립니다.",
+          "script_en": "Every hour spent watching a screen is an hour lost for healthy exercise.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 83,
+          "script_kr": "방 안에 홀로 갇혀 있으면 사람들과의 교류가 차단되어 고립되죠.",
+          "script_en": "Staying isolated in your room reduces real-life social interactions and real human connection.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 84,
+          "script_kr": "사회적 고립은 외로움을 키우고 우울증 증상을 더욱 심화시킵니다.",
+          "script_en": "This social isolation increases feelings of loneliness and worsens overall symptoms of depression.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 85,
+          "script_kr": "그렇다면 우리는 좋아하는 드라마를 평생 보지 말아야 할까요?",
+          "script_en": "Does this mean we should never watch our favorite dramas again for life?",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 86,
+          "script_kr": "당연히 아닙니다! 핵심은 신체의 균형을 지키는 건강한 습관입니다.",
+          "script_en": "Absolutely not! The key is establishing healthy habits to maintain your body's balance.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 87,
+          "script_kr": "매 편이 끝날 때마다 자리를 털고 일어나 기지개를 켜십시오.",
+          "script_en": "Every time an episode ends, stand up and stretch your entire body thoroughly.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 88,
+          "script_kr": "눈 건강을 위해 이십 분마다 이십 피트 먼 곳을 이십 초간 보세요.",
+          "script_en": "For eye health, follow the twenty-twenty-twenty rule and look at distant objects regularly.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 89,
+          "script_kr": "시청 시작 전에 미리 시간을 정해두고 타이머를 맞추는 게 좋습니다.",
+          "script_en": "Decide on a viewing limit beforehand and set a loud timer to stop.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 90,
+          "script_kr": "저녁 시간 이후에는 화면의 청색광 차단 필터를 꼭 활성화하세요.",
+          "script_en": "Always activate the blue light filter on your devices during evening viewing sessions.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 91,
+          "script_kr": "화면을 보면서 실내 자전거를 타거나 가벼운 스쿼트를 해보세요.",
+          "script_en": "Try riding an indoor bicycle or doing light squats while watching your show.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 92,
+          "script_kr": "늦은 밤 간식은 탄산음료 대신 따뜻한 차나 물을 선택하세요.",
+          "script_en": "Choose warm herbal tea or water instead of sugary sodas for night snacks.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 93,
+          "script_kr": "잠들기 최소 한 시간 전에는 전자기기를 침대에서 멀리 치우세요.",
+          "script_en": "Keep all electronic devices away from your bed at least one hour before sleeping.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 94,
+          "script_kr": "주말에는 야외로 나가 햇빛을 받으며 가볍게 뼈를 자극해야 합니다.",
+          "script_en": "Go outside on weekends to soak up sunlight and gently stimulate your bones.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 95,
+          "script_kr": "우리 몸의 뼈와 신경은 정직하게 우리가 움직이는 만큼 건강해집니다.",
+          "script_en": "Our bones and nerves stay healthy in direct proportion to how much we move.",
+          "duration_sec": 5.0
+        },
+        {
+          "seq": 96,
+          "script_kr": "현명한 시청 습관으로 소중한 뼈와 눈의 건강을 꼭 지켜내세요.",
+          "script_en": "Protect your precious bones and eyes by practicing smart and balanced viewing habits.",
+          "duration_sec": 5.0
+        }
+      ]
     },
     {
       "code": "CA-002",

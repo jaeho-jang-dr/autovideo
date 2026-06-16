@@ -107,10 +107,10 @@ image: TED-Ed style flat crayon illustration of a side-by-side comparison of a w
 motion: :: slow motion the wrist bones in the X-ray glow softly, camera zooming in slowly
 
 [Scene 18]
-text: 뼈 나이는 보통 왼쪽 손과 손목의 엑스레이 사진을 찍어 간단히 측정할 수 있습니다.
-text_en: Bone age is typically measured by taking a simple X-ray of the left hand and wrist.
-image: TED-Ed style flat crayon illustration of a pediatric hand-wrist X-ray diagram showing carpal bones and distal radius growth plates, soft blue background.
-motion: :: slow motion the wrist bones pulse with gentle golden highlights, camera panning down slowly
+text: 왼쪽 손목 엑스레이를 찍으면 수근골이라 불리는 8개의 작은 손목뼈들이 나타나며, 이들의 화골핵 크기로 골연령을 측정합니다.
+text_en: An X-ray of the left wrist reveals the eight small carpal bones, and skeletal age is measured by evaluating their ossification.
+image: TED-Ed style flat crayon illustration of a pediatric left wrist X-ray diagram. The 8 carpal bones (Scaphoid, Lunate, Triquetrum, Pisiform, Trapezium, Trapezoid, Capitate, Hamate) are clearly labeled with clean, readable text pointers at their exact anatomical positions. Soft blue background, chalk crayon texture. No watermark, no signatures.
+motion: :: slow motion the 8 labeled carpal bones pulse with gentle golden highlights, camera panning down slowly
 
 [Scene 19]
 text: 소아청소년과에서는 뼈의 화골핵 크기와 성숙도를 표준 자료와 비교하여 분석하죠.

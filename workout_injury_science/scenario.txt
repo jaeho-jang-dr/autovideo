@@ -361,5 +361,5 @@ motion: :: slow motion the tree branches sway gracefully in the wind, camera til
 [Scene 60]
 text: 고통을 이겨내는 무리한 리프팅 대신 지혜로운 과학적 운동으로 평생 건강하고 부상 없는 몸을 만드세요!
 text_en: Instead of ego lifting through pain, use scientific training to build a healthy, injury-free body for life!
-image: TED-Ed style flat crayon illustration of an ending slide with lettering reading "Train Smart, Recover Scientifically!", centered on a solid pale pastel yellow background, soft colored pencil border. Minimalist design. No watermark, no signatures.
+image: flat crayon illustration of an ending slide with lettering reading "Train Smart, Recover Scientifically!", centered on a solid pale pastel yellow background, soft colored pencil border. Minimalist design. No watermark, no signatures.
 motion: :: slow motion the lettering shines with a warm yellow glow, camera zooming out slowly
