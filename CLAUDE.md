@@ -6,9 +6,9 @@
 ---
 
 ## 역할 정의
-- **Claude Code**: 코드 생성, 명령어 결정, 셸 실행, 에러 자가수정
-- **Antigravity (Gemini)**: 고수준 계획, 파일 편집, 판단, 조율
-- **사용자**: 의도 설정, 최종 검증, Human Gate 승인
+- **사용자**: 제작자 (Producer) - 기획 및 예산 승인, 최종 검증, 요구사항 정의.
+- **Claude Code**: 감독 (Director) - 고수준 설계, 코드 생성, 명령어 결정, 셸 실행, 조감독(Gemini)에게 직접 작업 지시 및 조율.
+- **Antigravity (Gemini)**: 조감독 (Assistant Director) - 감독(Claude)의 지시 수령, 파일 직접 편집, 세부 수행 내용 기록, 감독(Claude) 또는 제작자(사용자)에게 진행 상황 보고.
 
 ---
 
@@ -23,6 +23,16 @@
 | 표준 작업 루프 | `.harness/loops/task_loop.md` |
 | 현재 작업 상태 | `.harness/loops/progress.json` |
 | 사람 개입 시점 | `.harness/human/review_gates.md` |
+| 공용 에셋 카탈로그 | `autovideo_assets.md` |
+| 역공학 및 딥리서치 인덱스 | `reverse_engineering_catalog.md` |
+| 조감독 협업 및 소통 프로토콜 | `GEMINI.md` |
+| 최종 출력 및 씬 비디오 인덱스 | `autovideo_outputs.md` |
+| AI 역할 구성 및 이력 | `.harness/context/roles_config.md` |
+
+
+
+
+
 
 ---
 
