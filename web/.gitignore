@@ -22,3 +22,13 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# deploy platform local state
+.vercel/
+.wrangler/
+.dev.vars
+
+.vercel
+
+# cloudflare api token (local only)
+.cf_token.env

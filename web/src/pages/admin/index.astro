@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Google OAuth Client ID — 빌드시 PUBLIC_GOOGLE_CLIENT_ID 로 주입 (없으면 안내 표시)
+const clientId = import.meta.env.PUBLIC_GOOGLE_CLIENT_ID || '';
+// 관리자 허용 계정 (이 두 계정만 입장 가능)
+const ADMIN_EMAILS = ['drjang00@gmail.com', 'drjang000@gmail.com'];
+---
+<BaseLayout
+  lang="ko"
+  altUrl="/admin/"
+  title="관리자 콘솔 · drjay-ed"
+  description="drjay-ed 운영 관리자 콘솔"
+>
+  <section class="admin-wrap">
+    <div class="admin-card">
+      <!-- 로그인 상태 -->
+      <div id="admin-login">
+        <div class="crest">🦄</div>
+        <h1>관리자 콘솔</h1>
+        <p class="desc">drjay-ed 운영 콘솔입니다.<br />승인된 Google 계정만 입장할 수 있습니다.</p>
+
+        <div class="gsi-host" id="gsi-host"></div>
+        <div class="admin-status" id="admin-status" aria-live="polite"></div>
+
+        {!clientId && (
+          <div class="admin-note">
+            ⚠️ Google 로그인을 활성화하려면 환경변수 <code>PUBLIC_GOOGLE_CLIENT_ID</code> 를 설정해야 합니다.
+            (Google Cloud Console → OAuth 클라이언트 ID 발급 → 승인된 JS 원본에 사이트 도메인 등록)
+          </div>
+        )}
+        <div class="admin-note">
+          관리자 계정: <code>drjang00@gmail.com</code> · <code>drjang000@gmail.com</code>
+        </div>
+      </div>
+
+      <!-- 대시보드 상태 (로그인 성공 후) -->
+      <div id="admin-dash" class="admin-dash" hidden>
+        <div class="who">
+          <div class="av" id="dash-av">D</div>
+          <div>
+            <div style="font-weight:700;color:var(--text-0)" id="dash-name">관리자</div>
+            <div style="font-size:0.82rem;color:var(--text-2)" id="dash-email">—</div>
+          </div>
+        </div>
+        <ul>
+          <li>📚 에피소드 콘텐츠 관리 <span style="color:var(--text-2)">(준비 중)</span></li>
+          <li>🎬 영상 파이프라인 상태 <span style="color:var(--text-2)">(준비 중)</span></li>
+          <li>🌐 배포 · 도메인 관리 <span style="color:var(--text-2)">(준비 중)</span></li>
+        </ul>
+        <button class="btn-signout" id="btn-signout">로그아웃</button>
+      </div>
+    </div>
+  </section>
+
+  {clientId && <script is:inline src="https://accounts.google.com/gsi/client" async></script>}
+
+  <script is:inline define:vars={{ clientId, ADMIN_EMAILS }}>
+    const $ = (id) => document.getElementById(id);
+
+    function decodeJwt(token) {
+      try {
+        const p = token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
+        return JSON.parse(decodeURIComponent(escape(atob(p))));
+      } catch (e) { return null; }
+    }
+    function setErr(msg) {
+      const s = $('admin-status');
+      s.textContent = msg; s.className = 'admin-status err';
+    }
+    function showDash(p) {
+      $('admin-login').hidden = true;
+      const d = $('admin-dash'); d.hidden = false;
+      $('dash-name').textContent = p.name || p.email;
+      $('dash-email').textContent = p.email;
+      $('dash-av').textContent = (p.name || p.email || '?').trim().charAt(0).toUpperCase();
+    }
+
+    function handleCredential(resp) {
+      const p = decodeJwt(resp.credential);
+      if (!p) { setErr('로그인 정보를 읽지 못했습니다. 다시 시도해 주세요.'); return; }
+      const email = (p.email || '').toLowerCase();
+      if (!p.email_verified || !ADMIN_EMAILS.includes(email)) {
+        setErr('접근 권한이 없는 계정입니다: ' + (email || '알 수 없음'));
+        if (window.google) google.accounts.id.disableAutoSelect();
+        return;
+      }
+      sessionStorage.setItem('drjay_admin', JSON.stringify({ email: p.email, name: p.name, t: Date.now() }));
+      showDash(p);
+    }
+
+    // 세션 복원
+    try {
+      const saved = JSON.parse(sessionStorage.getItem('drjay_admin') || 'null');
+      if (saved && ADMIN_EMAILS.includes((saved.email || '').toLowerCase())) showDash(saved);
+    } catch (e) {}
+
+    function signOut() {
+      sessionStorage.removeItem('drjay_admin');
+      if (window.google) google.accounts.id.disableAutoSelect();
+      location.reload();
+    }
+    const btn = $('btn-signout');
+    if (btn) btn.addEventListener('click', signOut);
+
+    function initGsi() {
+      if (!window.google || !window.google.accounts || !clientId) return;
+      google.accounts.id.initialize({ client_id: clientId, callback: handleCredential, auto_select: false });
+      google.accounts.id.renderButton($('gsi-host'), {
+        theme: 'outline', size: 'large', shape: 'pill', text: 'signin_with', width: 320,
+      });
+    }
+    if (clientId) {
+      let tries = 0;
+      const iv = setInterval(() => {
+        if (window.google && window.google.accounts) { clearInterval(iv); initGsi(); }
+        else if (++tries > 120) clearInterval(iv);
+      }, 60);
+    }
+  </script>
+</BaseLayout>
