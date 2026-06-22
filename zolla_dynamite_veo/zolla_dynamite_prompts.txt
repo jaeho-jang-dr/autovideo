@@ -1,0 +1,20 @@
+# 졸라 다이나마이트 Veo 씬 프롬프트 (가이드 이미지 업로드 기반)
+# 형식: [Scene N | dur=Xs | guide=Gn|PREV | trans=last|cut] <image/모션 프롬프트>
+# 공통 스타일(STYLE는 생성 스크립트에서 자동 부가):
+#   hand-drawn black-ink stickman style "Zollaman" (black hair) and "Zollagirl" (orange bun), TWICE as large filling much of the frame,
+#   full-screen background of a classical Parthenon temple shown at 50% transparency (faint, see-through), 9:16 vertical,
+#   colorful Lego-like jamo blocks of irregular sizes spinning in, no text, no watermark.
+
+[Scene 1 | dur=6s | guide=G1 | trans=last] Zollaman and Zollagirl stand center holding hands and smiling warmly in front of the faint 50%-transparent Parthenon; they gently let go of hands and settle into a ready stance as the camera slowly pushes in.
+
+[Scene 2 | dur=4s | guide=PREV | trans=cut] A first swarm of colorful Lego-like Korean jamo blocks of all different sizes whirls in from the upper right, spinning and tumbling, orbiting around the two characters who bounce lightly; the blocks float irregularly, never aligned.
+
+[Scene 3 | dur=7s | guide=G2 | trans=cut] Second and third swarms of mismatched-size colorful jamo blocks spin in from the left and from above, all whirling chaotically in mid-air; the two characters build up an energetic dance, knees bouncing, shoulders rolling.
+
+[Scene 4 | dur=3s | guide=G3 | trans=cut] On the beat drop both characters hit a sharp synchronized original power move in perfect unison — a quick jump landing into arms-up and a crisp point — fast and punchy, a rapid snappy shot.
+
+[Scene 5 | dur=8s | guide=PREV | trans=last] The duo keeps dancing in sync while the floating jamo blocks begin streaming toward two invisible rows, their irregular sizes smoothly normalizing and their tilts straightening as they approach.
+
+[Scene 6 | dur=5s | guide=G4 | trans=cut] The jamo blocks snap into two neat rows, all now uniform in size (still colorful Lego blocks), forming the Korean words; the two characters dance triumphantly beside them.
+
+[Scene 7 | dur=4s | guide=PREV | trans=last] The words stand fully assembled; the two characters step together, join hands again and strike a happy final pose facing the audience, the faint Parthenon glowing behind them.
