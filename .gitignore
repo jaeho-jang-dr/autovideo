@@ -35,3 +35,12 @@ web/.astro/
 # Sensitive env files
 .env
 .env.local
+
+# motion-capture / zolla_dynamite_veo 중간산물 (대용량·재생성 가능)
+*.npy
+*.pt
+*.gif
+zolla_dynamite_veo/_*
+zolla_dynamite_veo/source/
+zolla_dynamite_veo/guides/
+zolla_dynamite_veo/__pycache__/

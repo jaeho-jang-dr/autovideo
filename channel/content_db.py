@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS episodes (
 
 CREATE TABLE IF NOT EXISTS scenes (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    episode     TEXT NOT NULL REFERENCES episodes(code),
+    episode     TEXT NOT NULL REFERENCES episodes(code) ON DELETE CASCADE,
     seq         INTEGER NOT NULL,
     script_kr   TEXT,                     -- 이 컷의 나레이션(한)
     script_en   TEXT,                     -- 이 컷의 나레이션(영)
@@ -82,9 +82,110 @@ CREATE TABLE IF NOT EXISTS scenes (
     UNIQUE(episode, seq)
 );
 
+CREATE TABLE IF NOT EXISTS techniques (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    name            TEXT UNIQUE NOT NULL,
+    description     TEXT,
+    reference_url   TEXT,
+    python_template TEXT,
+    created_at      TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS episode_techniques (
+    episode_code TEXT REFERENCES episodes(code) ON DELETE CASCADE,
+    technique_id INTEGER REFERENCES techniques(id) ON DELETE CASCADE,
+    PRIMARY KEY (episode_code, technique_id)
+);
+
+CREATE TABLE IF NOT EXISTS assets (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    name_kr     TEXT NOT NULL,
+    name_en     TEXT NOT NULL,
+    type        TEXT NOT NULL, -- 'character', 'object', 'animal', 'bgm', 'sfx', 'background'
+    file_path   TEXT,
+    flow_prompt TEXT,
+    embedding   TEXT,          -- SQLite 임베딩 (텍스트/JSON으로만 저장)
+    created_at  TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS scene_objects (
+    id         INTEGER PRIMARY KEY AUTOINCREMENT,
+    episode    TEXT NOT NULL,
+    scene_seq  INTEGER NOT NULL,
+    asset_id   INTEGER REFERENCES assets(id) ON DELETE SET NULL,
+    cx         INTEGER NOT NULL,
+    cy         INTEGER NOT NULL,
+    scale      REAL DEFAULT 1.0,
+    z_order    INTEGER DEFAULT 3,
+    is_point   BOOLEAN DEFAULT 0,
+    motion_type TEXT,
+    FOREIGN KEY(episode, scene_seq) REFERENCES scenes(episode, seq) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS scene_transitions (
+    id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    episode             TEXT NOT NULL REFERENCES episodes(code) ON DELETE CASCADE,
+    from_scene_seq      INTEGER NOT NULL,
+    to_scene_seq        INTEGER NOT NULL,
+    transition_type     TEXT NOT NULL,
+    exported_frame_path TEXT,
+    created_at          TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS web_lessons (
+    id             INTEGER PRIMARY KEY AUTOINCREMENT,
+    episode_code   TEXT UNIQUE NOT NULL REFERENCES episodes(code) ON DELETE CASCADE,
+    quiz_question  TEXT,
+    quiz_options   TEXT,
+    quiz_answer    TEXT,
+    dig_deeper_doc TEXT
+);
+
 CREATE TABLE IF NOT EXISTS channel_meta (
     key   TEXT PRIMARY KEY,
     value TEXT
+);
+
+-- 영상 제작 트래커: 용량 큰 영상 바이너리는 DB에 넣지 않는다.
+-- 영상은 로컬(또는 나중에 유튜브)에 두고, DB에는 '이름 + 링크(경로/URL) + 모든 제작정보'만 연결 저장.
+CREATE TABLE IF NOT EXISTS video_projects (
+    name        TEXT PRIMARY KEY,        -- 예: 'pianoduo'
+    title_kr    TEXT,
+    description TEXT,
+    local_dir   TEXT,                    -- 클립/최종본이 있는 로컬 폴더(링크)
+    final_path  TEXT,                    -- 최종 컴파일 mp4 로컬 경로(링크, 바이너리 아님)
+    youtube_url TEXT,                    -- 나중에 유튜브 업로드 시 URL
+    drive_url   TEXT,                    -- 구글 드라이브 링크(있으면)
+    bgm_path    TEXT,
+    n_scenes    INTEGER,
+    runtime_sec REAL,
+    status      TEXT DEFAULT 'generating', -- generating / compiled / review / published
+    notes       TEXT,
+    created_at  TEXT DEFAULT CURRENT_TIMESTAMP,
+    updated_at  TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS video_clips (
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    project       TEXT NOT NULL REFERENCES video_projects(name) ON DELETE CASCADE,
+    scene_no      INTEGER NOT NULL,
+    scene_name    TEXT,                  -- 영상(클립) 이름 = 항상 연결 저장
+    chunk         INTEGER,               -- 청크 번호(빠른전환 경계 그룹)
+    ref_anchor    TEXT,                  -- piano_stand/back/front/side 또는 PREV
+    base_image    TEXT,                  -- 사용한 기본/이전프레임 이미지 경로(링크)
+    image_prompt  TEXT,
+    motion_prompt TEXT,
+    transition_in TEXT,                  -- 'fast'(청크경계) / 'last_frame'(청크내부)
+    duration_sec  REAL,
+    file_path     TEXT,                  -- 클립 mp4 로컬 경로(링크, 바이너리 저장 안 함)
+    youtube_url   TEXT,                  -- 개별 공개 시 URL(옵션)
+    last_frame_path TEXT,                -- 마지막 프레임 png(다음 씬 연장용)
+    status        TEXT,                  -- success / fail / needs_redo
+    distortion_check TEXT,               -- ok / distorted / facing / hands_off / redo
+    notes         TEXT,
+    created_at    TEXT DEFAULT CURRENT_TIMESTAMP,
+    updated_at    TEXT DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(project, scene_no)
 );
 """
 
@@ -194,6 +295,50 @@ def connect():
     conn = sqlite3.connect(DB_PATH)
     conn.execute("PRAGMA foreign_keys = ON")
     return conn
+
+
+# ---- 영상 제작 기록 API (다른 스크립트에서 import 해서 사용) ----------------
+
+def upsert_project(name, **fields):
+    """video_projects 행을 생성/갱신. 영상 바이너리는 저장하지 않고 경로/URL만 링크."""
+    conn = connect()
+    conn.executescript(SCHEMA)
+    cols = ["title_kr", "description", "local_dir", "final_path", "youtube_url",
+            "drive_url", "bgm_path", "n_scenes", "runtime_sec", "status", "notes"]
+    data = {k: fields[k] for k in cols if k in fields}
+    conn.execute("INSERT OR IGNORE INTO video_projects(name) VALUES (?)", (name,))
+    if data:
+        sets = ", ".join(f"{k}=?" for k in data) + ", updated_at=CURRENT_TIMESTAMP"
+        conn.execute(f"UPDATE video_projects SET {sets} WHERE name=?",
+                     (*data.values(), name))
+    conn.commit()
+    conn.close()
+
+
+def log_clip(project, scene_no, **fields):
+    """씬 클립 1개의 모든 제작정보를 DB에 upsert. file_path/youtube_url 은 링크만 저장."""
+    conn = connect()
+    conn.executescript(SCHEMA)
+    conn.execute("INSERT OR IGNORE INTO video_projects(name) VALUES (?)", (project,))
+    cols = ["scene_name", "chunk", "ref_anchor", "base_image", "image_prompt",
+            "motion_prompt", "transition_in", "duration_sec", "file_path",
+            "youtube_url", "last_frame_path", "status", "distortion_check", "notes"]
+    data = {k: fields[k] for k in cols if k in fields}
+    row = conn.execute(
+        "SELECT id FROM video_clips WHERE project=? AND scene_no=?",
+        (project, scene_no)).fetchone()
+    if row:
+        if data:
+            sets = ", ".join(f"{k}=?" for k in data) + ", updated_at=CURRENT_TIMESTAMP"
+            conn.execute(f"UPDATE video_clips SET {sets} WHERE id=?",
+                         (*data.values(), row[0]))
+    else:
+        keys = ["project", "scene_no"] + list(data.keys())
+        ph = ", ".join("?" * len(keys))
+        conn.execute(f"INSERT INTO video_clips({', '.join(keys)}) VALUES ({ph})",
+                     (project, scene_no, *data.values()))
+    conn.commit()
+    conn.close()
 
 
 def cmd_init(_):
@@ -335,6 +480,41 @@ def cmd_set_status(args):
     conn.close()
 
 
+def cmd_projects(_):
+    conn = connect()
+    conn.executescript(SCHEMA)
+    rows = conn.execute(
+        "SELECT name, title_kr, status, n_scenes, runtime_sec, final_path, youtube_url "
+        "FROM video_projects ORDER BY updated_at DESC").fetchall()
+    print(f"\n{'NAME':14s} {'STATUS':12s} {'SCN':>3s} {'SEC':>6s}  LINK")
+    print("-" * 78)
+    for name, t, st, n, sec, fp, yt in rows:
+        link = yt or fp or "-"
+        print(f"{name:14s} {st or '-':12s} {n or 0:3d} {sec or 0:6.1f}  {link}")
+    print(f"\n총 {len(rows)}개 프로젝트\n")
+    conn.close()
+
+
+def cmd_clips(args):
+    conn = connect()
+    conn.executescript(SCHEMA)
+    q = ("SELECT scene_no, scene_name, ref_anchor, transition_in, duration_sec, "
+         "status, distortion_check, file_path FROM video_clips")
+    params = []
+    if args.project:
+        q += " WHERE project=?"; params.append(args.project)
+    q += " ORDER BY project, scene_no"
+    rows = conn.execute(q, params).fetchall()
+    print(f"\n{'#':>3s} {'NAME':18s} {'REF':11s} {'TRANS':10s} {'SEC':>4s} "
+          f"{'STATUS':8s} {'CHECK':10s} PATH")
+    print("-" * 100)
+    for no, nm, ref, tr, sec, st, ck, fp in rows:
+        print(f"{no:3d} {nm or '-':18s} {ref or '-':11s} {tr or '-':10s} "
+              f"{sec or 0:4.1f} {st or '-':8s} {ck or '-':10s} {fp or '-'}")
+    print(f"\n총 {len(rows)}개 클립\n")
+    conn.close()
+
+
 def main():
     p = argparse.ArgumentParser(description="drjay-ed 콘텐츠 DB 매니저")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -351,6 +531,9 @@ def main():
     ss = sub.add_parser("set-status")
     ss.add_argument("code"); ss.add_argument("status")
     ss.set_defaults(func=cmd_set_status)
+    sub.add_parser("projects").set_defaults(func=cmd_projects)
+    cl = sub.add_parser("clips"); cl.add_argument("--project")
+    cl.set_defaults(func=cmd_clips)
     args = p.parse_args()
     args.func(args)
 
