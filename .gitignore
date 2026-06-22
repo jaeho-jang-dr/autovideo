@@ -44,3 +44,7 @@ zolla_dynamite_veo/_*
 zolla_dynamite_veo/source/
 zolla_dynamite_veo/guides/
 zolla_dynamite_veo/__pycache__/
+
+# lessons 렌더/미리보기 산물
+lessons/_*
+lessons/__pycache__/
