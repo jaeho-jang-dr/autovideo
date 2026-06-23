@@ -12,12 +12,15 @@ const tr = t(lang);
 
 <div class="groove glass">
   <div class="groove-cockpit">
-    <!-- 상단 콕핏 헤더: 리셋 버튼과 심플 타이틀 -->
+    <!-- 상단 콕핏 헤더: 홈으로 링크, 리셋 버튼과 심플 타이틀 -->
     <div class="cockpit-header">
       <div class="header-main">
         <h2>{tr.groove_title}</h2>
       </div>
-      <button id="btn-reset" class="action-mini-btn" title="초기화">↺ Reset</button>
+      <div class="header-actions">
+        <a href="/" class="action-mini-btn home-btn" title="홈으로">🏠 홈으로</a>
+        <button id="btn-reset" class="action-mini-btn" title="초기화">↺ Reset</button>
+      </div>
     </div>
 
     <!-- 콕핏 모드 선택 스위처 바 (가로 1줄 줄바꿈 방지) -->
@@ -137,31 +140,67 @@ const tr = t(lang);
       </div>
     </div>
 
-    <!-- 하단 3분할 조작부 그리드 (콕핏 조작 데크) -->
+    <!-- 하단 콕핏 키보드 독 (2단 구성: 상단 자모 패드 결합, 하단 큼직한 제어 패널) -->
     <div class="cockpit-keyboard-dock">
-      <!-- 좌하단: 자음 D-pad -->
-      <div class="keyboard-group-panel left-pad-panel">
-        <span class="panel-label">🎹 자음 (Consonants)</span>
-        <div class="launchpad dpad-layout">
-          <button class="pad cho glass" data-jamo="ㄱ" aria-label="자음 기역">ㄱ</button>
-          <button class="pad cho glass" data-jamo="ㄴ" aria-label="자음 니은">ㄴ</button>
-          <button class="pad cho glass" data-jamo="ㅁ" aria-label="자음 미음">ㅁ</button>
-          <button class="pad cho glass" data-jamo="ㅅ" aria-label="자음 시옷">ㅅ</button>
-          <button class="pad cho glass" data-jamo="ㅇ" aria-label="자음 이응">ㅇ</button>
+      
+      <!-- 1단: 자음 D-pad & 모음 Action-pad (중간 키가 빠져서 물리적으로 바짝 붙음) -->
+      <div class="keyboard-pads-row">
+        <!-- 좌측: 자음 D-pad -->
+        <div class="keyboard-group-panel left-pad-panel">
+          <span class="panel-label">🎹 자음 (Consonants)</span>
+          <div class="launchpad dpad-layout">
+            <button class="pad cho glass" data-jamo="ㄱ" aria-label="자음 기역">ㄱ</button>
+            <button class="pad cho glass" data-jamo="ㄴ" aria-label="자음 니은">ㄴ</button>
+            <button class="pad cho glass" data-jamo="ㅁ" aria-label="자음 미음">ㅁ</button>
+            <button class="pad cho glass" data-jamo="ㅅ" aria-label="자음 시옷">ㅅ</button>
+            <button class="pad cho glass" data-jamo="ㅇ" aria-label="자음 이응">ㅇ</button>
+          </div>
+        </div>
+
+        <!-- 우측: 모음 Action-pad & BGM 플레이어 -->
+        <div class="keyboard-group-panel right-pad-panel">
+          <span class="panel-label">☄️ 모음 & 비트 (Vowels & Beat)</span>
+          <div class="vowels action-layout">
+            <button class="pad jung glass" data-jamo="•" aria-label="하늘 아래아">•</button>
+            <button class="pad jung glass" data-jamo="ㅡ" aria-label="땅 으">ㅡ</button>
+            <button class="pad jung glass" data-jamo="ㅣ" aria-label="사람 이">ㅣ</button>
+          </div>
+
+          <!-- BGM 플레이어 위젯 -->
+          <div class="music-player-widget glass">
+            <div class="music-info">
+              <span class="disc-icon" id="disc-icon">💿</span>
+              <div class="track-details">
+                <span class="track-title">K-POP Beat</span>
+                <div id="playback-status" class="status-indicator">Stopped</div>
+              </div>
+            </div>
+            <div class="player-controls">
+              <div class="eq-container" id="eq-animation">
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+              </div>
+              <button id="btn-toggle-bgm" class="player-btn" aria-label="Play beat">
+                <span class="play-icon">▶</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- 하단 중간: 제어 및 보조 세트 -->
-      <div class="keyboard-group-panel center-control-panel">
-        <span class="panel-label">🎛️ 조작 (Controls)</span>
-        <div class="center-controls-grid">
-          <!-- 상단: 지우기, 스페이스 -->
-          <div class="controls-top-row">
-            <button id="btn-backspace" class="control-btn backspace-btn glass" title="글자 지우기">⌫ 지우기</button>
-            <button id="btn-space" class="control-btn space-btn glass" title="띄어쓰기">␣ 띄어쓰기</button>
-          </div>
-          <!-- 중간: 마이크 버튼 및 언어 선택 바 -->
-          <div class="controls-mid-row">
+      <!-- 2단: 중간 제어 및 보조 세트 (자모 패드 아래로 내리고 크기 대폭 확장) -->
+      <div class="keyboard-group-panel bottom-control-panel">
+        <span class="panel-label">🎛️ 조작 컨트롤 (Controls)</span>
+        <div class="bottom-controls-grid">
+          <button id="btn-backspace" class="control-btn backspace-btn glass" title="글자 지우기">⌫ 지우기</button>
+          <button id="btn-space" class="control-btn space-btn glass" title="띄어쓰기">␣ 띄어쓰기</button>
+          <button id="btn-enter" class="control-btn enter-btn glass" title="글자 확정">↵ 확정</button>
+          <button id="btn-speak-word" class="control-btn speak-btn glass" title="전체 문장 소리내기">🔊 전체 읽기</button>
+          
+          <!-- 마이크 버튼 및 언어 선택 바 -->
+          <div class="mic-lang-row">
             <div class="lang-selector-bar glass">
               <button id="btn-lang-ko" class="lang-toggle-btn active">KO</button>
               <button id="btn-lang-en" class="lang-toggle-btn">EN</button>
@@ -169,45 +208,8 @@ const tr = t(lang);
             
             <button id="btn-mic" class="mic-btn-fab">
               <div class="mic-glow-ring"></div>
-              <span class="mic-icon">🎤</span>
+              <span class="mic-icon">🎤 코치 마이크</span>
               <span id="mic-text" class="sr-only">{tr.groove_mic}</span>
-            </button>
-          </div>
-          <!-- 하단: 확정, 전체 읽기 -->
-          <div class="controls-bottom-row">
-            <button id="btn-enter" class="control-btn enter-btn glass" title="글자 확정">↵ 확정</button>
-            <button id="btn-speak-word" class="control-btn speak-btn glass" title="전체 문장 소리내기">🔊 전체 읽기</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 우하단: 모음 Action-pad & BGM 플레이어 -->
-      <div class="keyboard-group-panel right-pad-panel">
-        <span class="panel-label">☄️ 모음 & 비트 (Vowels & Beat)</span>
-        <div class="vowels action-layout">
-          <button class="pad jung glass" data-jamo="•" aria-label="하늘 아래아">•</button>
-          <button class="pad jung glass" data-jamo="ㅡ" aria-label="땅 으">ㅡ</button>
-          <button class="pad jung glass" data-jamo="ㅣ" aria-label="사람 이">ㅣ</button>
-        </div>
-
-        <!-- BGM 플레이어 위젯 -->
-        <div class="music-player-widget glass">
-          <div class="music-info">
-            <span class="disc-icon" id="disc-icon">💿</span>
-            <div class="track-details">
-              <span class="track-title">K-POP Beat</span>
-              <div id="playback-status" class="status-indicator">Stopped</div>
-            </div>
-          </div>
-          <div class="player-controls">
-            <div class="eq-container" id="eq-animation">
-              <span class="eq-bar"></span>
-              <span class="eq-bar"></span>
-              <span class="eq-bar"></span>
-              <span class="eq-bar"></span>
-            </div>
-            <button id="btn-toggle-bgm" class="player-btn" aria-label="Play beat">
-              <span class="play-icon">▶</span>
             </button>
           </div>
         </div>
@@ -254,8 +256,10 @@ const tr = t(lang);
   box-sizing: border-box;
   width: 100%;
   max-width: 540px; /* 오락기 콕핏 기기 느낌을 위한 컴팩트 가로폭 */
+  min-height: 860px; /* 모바일 세로 비율의 긴 화면을 활용하여 상하 길이를 여유있게 늘림 */
+  height: calc(100dvh - 32px); /* 모바일 긴 화면에 맞게 */
   margin: 0 auto;
-  padding: 12px;
+  padding: 16px 12px;
   color: var(--gv-text-0);
   background: radial-gradient(120% 100% at 50% 0%, var(--gv-bg-1), var(--gv-bg-0));
   border: 2px solid var(--gv-border);
@@ -264,6 +268,17 @@ const tr = t(lang);
   text-align: left;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 1px 0 hsl(0 0% 100% / 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.groove-cockpit {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .groove .glass {
@@ -282,7 +297,6 @@ const tr = t(lang);
   align-items: center;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--gv-border);
-  margin-bottom: 8px;
 }
 
 .header-main h2 {
@@ -298,19 +312,22 @@ const tr = t(lang);
 
 .header-actions {
   display: flex;
-  gap: 6px;
+  gap: 8px; /* 6px -> 8px 여유 */
   align-items: center;
 }
 
 .action-mini-btn {
   background: transparent;
   border: 1px solid var(--gv-border);
-  color: var(--gv-text-2);
-  font-size: 0.7rem;
-  padding: 3px 8px;
-  border-radius: 6px;
+  color: var(--gv-text-1);
+  font-size: 0.85rem; /* 0.7rem -> 0.85rem 누르기 쉽게 스케일 업 */
+  padding: 6px 12px; /* 패딩 큼직하게 늘림 */
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .action-mini-btn:hover {
@@ -320,11 +337,10 @@ const tr = t(lang);
 }
 
 .home-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
   text-decoration: none;
+  gap: 3px;
 }
+
 .home-btn:hover {
   color: var(--gv-text-0) !important;
   background: hsl(216 100% 50% / 0.15) !important;
@@ -337,7 +353,6 @@ const tr = t(lang);
   grid-template-columns: repeat(4, 1fr);
   gap: 4px;
   padding: 4px;
-  margin-bottom: 8px;
   border-radius: var(--gv-radius-sm);
 }
 
@@ -347,7 +362,7 @@ const tr = t(lang);
   color: var(--gv-text-2);
   font-size: clamp(10px, 2.5vw, 12px);
   font-weight: 800;
-  padding: 6px 2px;
+  padding: 8px 2px;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -372,15 +387,15 @@ const tr = t(lang);
 /* 중앙 메인 HUD 모니터 */
 .cockpit-main-monitor {
   width: 100%;
-  padding: 8px;
-  min-height: 130px;
-  max-height: 180px;
-  margin-bottom: 8px;
+  padding: 10px;
+  min-height: 160px; /* 세로로 늘림 */
+  max-height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  flex-grow: 1;
 }
 
 .monitor-view {
@@ -409,7 +424,7 @@ const tr = t(lang);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 110px;
+  height: 140px; /* 110px -> 140px로 넉넉하게 확장 */
   position: relative;
   box-shadow: inset 0 0 20px rgba(0,0,0,0.9);
 }
@@ -418,18 +433,18 @@ const tr = t(lang);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90px;
+  height: 120px;
 }
 
 .syllable {
-  font-size: clamp(2.5rem, 10vw, 3.8rem);
+  font-size: clamp(3.5rem, 12vw, 5.0rem); /* 한글 낱자 크게 스케일 업 */
   font-weight: 900;
   background: var(--gv-grad);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   transition: transform 0.15s cubic-bezier(.2, 1.4, .4, 1);
-  filter: drop-shadow(0 0 10px hsl(266 100% 64% / 0.15));
+  filter: drop-shadow(0 0 15px hsl(266 100% 64% / 0.25));
 }
 
 .syllable.pop {
@@ -498,8 +513,8 @@ const tr = t(lang);
 .english-input {
   width: 100%;
   box-sizing: border-box;
-  padding: 8px 12px;
-  font-size: 0.8rem;
+  padding: 10px 14px;
+  font-size: 0.9rem;
   color: var(--gv-text-0);
   background: hsl(245 30% 6% / 0.8) !important;
   border: 1px solid var(--gv-border);
@@ -554,7 +569,7 @@ const tr = t(lang);
 }
 
 .phrase-list {
-  max-height: 85px;
+  max-height: 105px; /* 약간 여유 있게 */
   overflow-y: auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -588,13 +603,13 @@ const tr = t(lang);
 }
 
 .phrase-ko {
-  font-size: 0.78rem;
+  font-size: 1.05rem; /* 한글 텍스트 크게 */
   font-weight: 800;
   color: var(--gv-neon-jung);
 }
 
 .phrase-en {
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   color: var(--gv-text-2);
 }
 
@@ -614,7 +629,7 @@ const tr = t(lang);
 }
 
 .game-hud-panel {
-  padding: 6px 10px;
+  padding: 8px 12px;
   background: hsl(245 40% 5% / 0.85) !important;
   border: 1.5px solid var(--gv-neon-cho);
   border-radius: var(--gv-radius-sm);
@@ -683,10 +698,10 @@ const tr = t(lang);
 .hud-quiz-box {
   background: hsl(245 35% 8% / 0.8) !important;
   border-radius: 6px !important;
-  padding: 4px 8px !important;
+  padding: 6px 10px !important;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
   border: 1px solid var(--gv-border);
 }
 
@@ -716,13 +731,13 @@ const tr = t(lang);
 }
 
 .q-text {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: var(--gv-text-1);
   margin: 0;
 }
 
 .q-target-ko {
-  font-size: 0.78rem;
+  font-size: 1.1rem; /* 한글 퀴즈 텍스트 크게 */
   font-weight: 800;
   color: #fff;
   margin: 0;
@@ -732,11 +747,11 @@ const tr = t(lang);
 .word-board-section {
   display: flex;
   flex-direction: column;
-  padding: 6px 10px;
-  margin-bottom: 2px;
+  padding: 10px 14px; /* 단어 조립판 큼직하게 확장 */
+  margin-bottom: 4px;
   background: hsl(245 35% 8% / 0.7) !important;
   border-color: var(--gv-border-active);
-  min-height: 48px;
+  min-height: 64px;
   justify-content: center;
 }
 
@@ -744,7 +759,7 @@ const tr = t(lang);
   display: flex;
   align-items: center;
   gap: 8px;
-  min-height: 20px;
+  min-height: 24px;
 }
 
 .lang-badge {
@@ -767,15 +782,15 @@ const tr = t(lang);
 }
 
 .word-text {
-  font-size: clamp(0.95rem, 3.8vw, 1.25rem);
-  font-weight: 800;
+  font-size: clamp(1.35rem, 5.2vw, 1.8rem); /* 단어 조판 한글 크게 스케일 업 */
+  font-weight: 900;
   color: var(--gv-text-0);
   word-break: break-all;
-  text-shadow: 0 0 10px hsl(182 100% 50% / 0.15);
+  text-shadow: 0 0 15px hsl(182 100% 50% / 0.25);
 }
 
 .english-text {
-  font-size: clamp(0.75rem, 3vw, 0.9rem);
+  font-size: clamp(0.85rem, 3.2vw, 1.05rem);
   font-weight: 700;
   color: var(--gv-text-1);
   word-break: break-all;
@@ -785,9 +800,8 @@ const tr = t(lang);
 .agent-section {
   display: flex;
   gap: 8px;
-  padding: 6px 8px;
-  margin-top: 6px;
-  margin-bottom: 0;
+  padding: 8px;
+  margin-top: 4px;
   align-items: center;
   background: hsl(245 35% 10% / 0.6) !important;
 }
@@ -810,22 +824,29 @@ const tr = t(lang);
 }
 
 .chat-bubble {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   line-height: 1.35;
   color: var(--gv-text-1);
   background: hsl(245 25% 15% / 0.7);
-  padding: 5px 8px;
+  padding: 6px 10px;
   border-radius: 4px 10px 10px 10px;
   border: 1px solid var(--gv-border);
 }
 
-/* 하단 3분할 콕핏 키보드 독 */
+/* 하단 2단 콕핏 키보드 독 */
 .cockpit-keyboard-dock {
-  display: grid;
-  grid-template-columns: 1fr 0.9fr 1.1fr;
-  gap: 6px;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-bottom: 6px;
+  gap: 8px;
+}
+
+.keyboard-pads-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px; /* 자음과 모음을 물리적으로 바짝 밀착 */
+  width: 100%;
+  margin-bottom: 2px;
 }
 
 .keyboard-group-panel {
@@ -835,6 +856,14 @@ const tr = t(lang);
   background: hsl(245 30% 12% / 0.45);
   border: 1px solid var(--gv-border);
   border-radius: var(--gv-radius-sm);
+}
+
+.left-pad-panel {
+  padding-right: 2px; /* 자음 패널의 우측 패딩 축소로 자모 밀착 극대화 */
+}
+
+.right-pad-panel {
+  padding-left: 2px; /* 모음 패널의 좌측 패딩 축소로 자모 밀착 극대화 */
 }
 
 .panel-label {
@@ -849,17 +878,17 @@ const tr = t(lang);
   padding-bottom: 2px;
 }
 
-/* 좌하단 자음 D-pad */
+/* 좌하단 자음 D-pad (대형화) */
 .dpad-layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 4px;
+  gap: 6px;
   width: 100%;
   aspect-ratio: 1;
-  max-width: 110px;
+  max-width: 170px; /* 자음 자판 140px -> 170px로 크게 확장 */
   margin: 0 auto;
-  padding: 6px;
+  padding: 8px;
   background: hsl(245 35% 5% / 0.8);
   border-radius: 50%;
   border: 2px solid var(--gv-border);
@@ -873,11 +902,11 @@ const tr = t(lang);
 .dpad-layout button:nth-child(4) { grid-column: 3; grid-row: 2; }
 .dpad-layout button:nth-child(5) { grid-column: 2; grid-row: 3; }
 
-/* 3D 기계식 네온 키캡 */
+/* 3D 기계식 네온 키캡 (키크기 & 한글 자모 초대형화) */
 .pad {
   border-radius: 50% !important;
   font-weight: 900 !important;
-  font-size: clamp(0.95rem, 3.5vw, 1.15rem) !important;
+  font-size: clamp(1.4rem, 5.5vw, 1.8rem) !important; /* 한글 자음/모음 키캡 낱자 크기 대폭 키움 */
   transition: all 0.08s ease !important;
   user-select: none;
   cursor: pointer;
@@ -933,9 +962,9 @@ const tr = t(lang);
 .action-layout {
   display: flex;
   justify-content: space-around;
-  gap: 4px;
+  gap: 6px;
   margin-bottom: 6px;
-  padding: 4px;
+  padding: 10px 6px; /* 패딩 넓혀 키 크기 확보 */
   background: hsl(245 35% 6% / 0.5);
   border-radius: 8px;
 }
@@ -945,7 +974,7 @@ const tr = t(lang);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 6px;
+  padding: 6px 8px;
   border-radius: 8px !important;
   background: hsl(245 35% 14% / 0.4) !important;
   border-color: var(--gv-border);
@@ -1043,41 +1072,39 @@ const tr = t(lang);
   100% { height: 10px; }
 }
 
-/* 하단 중간 제어 패널 */
-.center-controls-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.controls-top-row, .controls-bottom-row {
+/* 2단 하단 제어 패널 (중간 기능 키들 아래로 내리고 크기 대폭 확장) */
+.bottom-controls-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px; /* 간격 확장 */
+  width: 100%;
 }
 
-.controls-mid-row {
+.mic-lang-row {
+  grid-column: span 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4px;
+  gap: 8px;
+  margin-top: 4px;
 }
 
 .control-btn {
   background: var(--gv-surface);
   border: 1px solid var(--gv-border);
   color: var(--gv-text-0);
-  font-size: clamp(9px, 2.3vw, 11px);
-  font-weight: 700;
-  padding: 6px 1px;
-  border-radius: 6px;
+  font-size: 1.05rem; /* 중간 기능 키 글자 키움 */
+  font-weight: 800; /* 두껍게 */
+  padding: 14px 4px; /* 터치하기 좋은 패딩 */
+  border-radius: 12px; /* 둥글게 */
   cursor: pointer;
   transition: all 0.15s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2px;
+  gap: 6px;
   white-space: nowrap;
+  height: 54px; /* 높이 확실히 늘림 */
 }
 
 .control-btn:hover {
@@ -1121,17 +1148,20 @@ const tr = t(lang);
   filter: brightness(1.1);
 }
 
-/* 마이크 및 언어 선택 바 */
+/* 마이크 버튼 (알약형 캡슐 키우고 폰트 확대) */
 .mic-btn-fab {
   position: relative;
   background: hsl(182 100% 50% / 0.08);
   border: 1px solid var(--gv-neon-jung);
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
+  width: auto;
+  flex: 1;
+  height: 48px; /* 38px -> 48px */
+  border-radius: 24px !important; /* 19px -> 24px */
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   cursor: pointer;
   transition: all 0.2s;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
@@ -1151,14 +1181,17 @@ const tr = t(lang);
 }
 
 .mic-icon {
-  font-size: 0.85rem;
+  font-size: 0.95rem; /* 글자 키움 */
+  font-weight: 800;
+  color: var(--gv-neon-jung);
   z-index: 2;
+  white-space: nowrap;
 }
 
 .mic-glow-ring {
   position: absolute;
   inset: -1px;
-  border-radius: 50%;
+  border-radius: 24px;
   border: 1.5px solid var(--gv-neon-jung);
   opacity: 0;
   pointer-events: none;
@@ -1176,30 +1209,39 @@ const tr = t(lang);
   animation: pulseRing 1.4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
 }
 
+.mic-btn-fab.recording .mic-icon {
+  color: var(--gv-neon-cho);
+}
+
 @keyframes pulseRing {
   0% { transform: scale(1); opacity: 0.8; }
-  100% { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(1.4, 1.6); opacity: 0; }
 }
 
 .lang-selector-bar {
   display: flex;
-  padding: 1.5px;
+  padding: 2px;
   background: hsl(245 30% 8% / 0.8) !important;
   border: 1px solid var(--gv-border);
-  border-radius: 12px !important;
-  gap: 1px;
+  border-radius: 24px !important;
+  gap: 2px;
+  height: 48px; /* 38px -> 48px */
+  align-items: center;
 }
 
 .lang-toggle-btn {
   background: transparent;
   border: none;
   color: var(--gv-text-2);
-  font-size: 0.52rem;
+  font-size: 0.85rem; /* 0.65rem -> 0.85rem */
   font-weight: 800;
-  padding: 2px 4px;
-  border-radius: 10px;
+  padding: 6px 14px;
+  border-radius: 22px;
   cursor: pointer;
   transition: all 0.15s;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .lang-toggle-btn.active {
@@ -1738,6 +1780,9 @@ const tr = t(lang);
           coachBubble.textContent = "게임 아케이드 모드. 위 모니터의 Start 버튼을 눌러 게임을 시작하세요!";
         }
       }
+      
+      // 언어 업데이트 반영
+      updateUIForLanguage();
     });
   });
 
@@ -2234,6 +2279,52 @@ const tr = t(lang);
       }
     });
   }
+  // 언어 모드에 맞춰 UI 메뉴 텍스트 다국어 업데이트
+  function updateUIForLanguage() {
+    const isEn = state.langMode === 'en';
+    
+    // 1. Reset 버튼
+    const btnReset = document.getElementById('btn-reset');
+    if (btnReset) {
+      btnReset.textContent = isEn ? '↺ Reset' : '↺ 초기화';
+    }
+
+    // 2. 홈 버튼
+    const homeBtn = document.querySelector('.home-btn');
+    if (homeBtn) {
+      homeBtn.textContent = isEn ? '🏠 Home' : '🏠 홈으로';
+    }
+
+    // 3. 지우기 버튼
+    const btnBackspace = document.getElementById('btn-backspace');
+    if (btnBackspace) {
+      btnBackspace.textContent = isEn ? '⌫ Clear' : '⌫ 지우기';
+    }
+
+    // 4. 띄어쓰기 버튼
+    const btnSpace = document.getElementById('btn-space');
+    if (btnSpace) {
+      btnSpace.textContent = isEn ? '␣ Space' : '␣ 띄어쓰기';
+    }
+
+    // 5. 확정 버튼
+    const btnEnter = document.getElementById('btn-enter');
+    if (btnEnter) {
+      btnEnter.textContent = isEn ? '↵ Done' : '↵ 확정';
+    }
+
+    // 6. 전체 읽기 버튼
+    const btnSpeakWord = document.getElementById('btn-speak-word');
+    if (btnSpeakWord) {
+      btnSpeakWord.textContent = isEn ? '🔊 Speak All' : '🔊 전체 읽기';
+    }
+
+    // 7. 마이크 코치 버튼
+    const micIcon = document.querySelector('#btn-mic .mic-icon');
+    if (micIcon) {
+      micIcon.textContent = isEn ? '🎤 Coach Mic' : '🎤 코치 마이크';
+    }
+  }
 
   // 언어 모드 토글 버튼 바인딩
   const btnLangKo = document.getElementById('btn-lang-ko');
@@ -2245,6 +2336,7 @@ const tr = t(lang);
       btnLangKo.classList.add('active');
       btnLangEn.classList.remove('active');
       updateDisplay();
+      updateUIForLanguage();
       
       const coachBubble = document.getElementById('coach-bubble');
       if (coachBubble) {
@@ -2257,6 +2349,7 @@ const tr = t(lang);
       btnLangEn.classList.add('active');
       btnLangKo.classList.remove('active');
       updateDisplay();
+      updateUIForLanguage();
       
       const coachBubble = document.getElementById('coach-bubble');
       if (coachBubble) {
@@ -2264,6 +2357,9 @@ const tr = t(lang);
       }
     });
   }
+
+  // 초기 로드 시 1회 다국어 UI 적용
+  updateUIForLanguage();
 
   // ── 한글 아케이드 게임 엔진 ──
   const QUIZ_POOL = [
