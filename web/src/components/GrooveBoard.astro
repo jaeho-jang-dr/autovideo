@@ -431,9 +431,10 @@ const tr = t(lang);
 
 .syllable-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* center -> flex-start 로 변경 */
   justify-content: center;
   height: 106px; /* 120px -> 106px로 줄임 */
+  padding-top: 8px; /* 윗정렬 시 아래 겹받침 공간 확보 */
 }
 
 .syllable {
@@ -445,13 +446,10 @@ const tr = t(lang);
   color: transparent;
   transition: transform 0.15s cubic-bezier(.2, 1.4, .4, 1);
   filter: drop-shadow(0 0 15px hsl(266 100% 64% / 0.25));
-  transform: translateY(-8px); /* 위로 올려서 아래 겹받침 짤림 완벽 해결 */
-  display: inline-block;
-  line-height: 1.1;
 }
 
 .syllable.pop {
-  transform: translateY(-8px) scale(1.15);
+  transform: scale(1.15);
 }
 
 /* 조음 피드백 */
