@@ -2441,6 +2441,21 @@ const tr = t(lang);
     if (micIcon) {
       micIcon.textContent = isEn ? '🎤 Coach Mic' : '🎤 코치 마이크';
     }
+
+    // 8. 상방 모드 스위처 버튼 번역
+    const switcherBtns = document.querySelectorAll('.switcher-btn');
+    switcherBtns.forEach(btn => {
+      const mode = btn.getAttribute('data-mode');
+      if (mode === 'launchpad') {
+        btn.innerHTML = isEn ? '🎹 Pad' : '🎹 런치';
+      } else if (mode === 'translator') {
+        btn.innerHTML = isEn ? '🌐 Trans' : '🌐 번역';
+      } else if (mode === 'phrases') {
+        btn.innerHTML = isEn ? '📖 Phrase' : '📖 상황';
+      } else if (mode === 'game') {
+        btn.innerHTML = isEn ? '🎮 Game' : '🎮 게임';
+      }
+    });
   }
 
   // 언어 모드 토글 버튼 바인딩
