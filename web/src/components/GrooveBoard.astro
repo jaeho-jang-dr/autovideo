@@ -146,6 +146,12 @@ const tr = t(lang);
         <span class="lang-badge kor">KOR</span>
         <span id="word-text" class="word-text">—</span>
       </div>
+      <!-- 발음 법칙 및 변음 현상 안내 바 추가 -->
+      <div id="phonetic-row" class="phonetic-row glass hidden">
+        <span class="phonetic-label">🗣 발음 (Phonetics):</span>
+        <span id="phonetic-pron" class="phonetic-pron">[구지]</span>
+        <span id="phonetic-rule" class="phonetic-rule">구개음화</span>
+      </div>
     </div>
 
     <!-- 하단 콕핏 키보드 독 (2단 구성: 상단 자모 패드 결합, 하단 큼직한 제어 패널) -->
@@ -517,6 +523,39 @@ const tr = t(lang);
 .syllable.no-audio {
   opacity: 0.35;
   filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.3));
+}
+
+.phonetic-row {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: rgba(0, 255, 180, 0.08) !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(0, 255, 180, 0.2) !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  animation: fadeInMonitor 0.25s ease-out;
+}
+
+.phonetic-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--gv-accent);
+}
+
+.phonetic-pron {
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #00ffb4;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.phonetic-rule {
+  font-size: 0.76rem;
+  color: var(--gv-foreground-muted);
 }
 
 .anatomy-avatar {
@@ -1535,6 +1574,74 @@ const tr = t(lang);
     if (micBtn) {
       micBtn.disabled = (state.langMode === 'ko' && !state.currentSyllable);
     }
+
+    // 발음 설명 실시간 체크
+    updatePhonetics();
+  }
+
+  interface PhoneticInfo {
+    pron: string;
+    ruleKo: string;
+    ruleEn: string;
+  }
+
+  // 한글 발음 법칙 실시간 표기 및 설명 사전
+  const LOCAL_PHONETIC_MAP: Record<string, PhoneticInfo> = {
+    '굳이': { pron: '[구지]', ruleKo: '구개음화: 받침 ㄷ이 조사/접미사 이와 만나 [ㅈ]로 발음', ruleEn: 'Palatalization: ㄷ sound changes to [ㅈ] before 이' },
+    '같이': { pron: '[가치]', ruleKo: '구개음화: 받침 ㅌ이 조사/접미사 이와 만나 [ㅊ]로 발음', ruleEn: 'Palatalization: ㅌ sound changes to [ㅊ] before 이' },
+    '돋보기': { pron: '[돋뽀기]', ruleKo: '경음화: 받침 ㄷ 뒤에 연결되는 ㅂ이 된소리 [ㅃ]로 발음', ruleEn: 'Tensification: ㅂ changes to double consonant [ㅃ] after ㄷ' },
+    '꽃이': { pron: '[꼬치]', ruleKo: '연음 법칙: 받침 ㅊ이 모음 이와 만나 뒷글자 초성으로 연음', ruleEn: 'Linking Rule: ㅊ sound carries over to the next syllable' },
+    '맛있어요': { pron: '[마시써요]', ruleKo: '연음 법칙: 받침 ㅅ들이 모음으로 시작하는 어미와 만나 연음', ruleEn: 'Linking Rule: 받침 ㅅ carries over to the next vowel sounds' },
+    '합니다': { pron: '[함니다]', ruleKo: '비음화: 받침 ㅂ이 ㄴ을 만나 비음 [ㅁ]으로 발음', ruleEn: 'Nasalization: ㅂ sound nasalizes to [ㅁ] before ㄴ' },
+    '국물': { pron: '[궁물]', ruleKo: '비음화: 받침 ㄱ이 ㅁ을 만나 비음 [ㅇ]으로 발음', ruleEn: 'Nasalization: ㄱ sound nasalizes to [ㅇ] before ㅁ' },
+    '밥 먹어요': { pron: '[밤머거요]', ruleKo: '비음화 및 연음: 받침 ㅂ이 머를 만나 [ㅁ]이 되고, 먹의 받침 ㄱ이 어와 만나 [거]로 연음', ruleEn: 'Nasalization & Linking: ㅂ changes to [ㅁ], and ㄱ links with 어' },
+    '신라': { pron: '[실라]', ruleKo: '유음화: 받침 ㄴ이 ㄹ을 만나 [ㄹ]로 발음', ruleEn: 'Lateralization: ㄴ changes to [ㄹ] before/after ㄹ' },
+    '칼날': { pron: '[칼랄]', ruleKo: '유음화: ㄹ 뒤의 ㄴ이 [ㄹ]로 발음', ruleEn: 'Lateralization: ㄴ changes to [ㄹ] after ㄹ' },
+    '독립': { pron: '[동닙]', ruleKo: '상호비음화: 받침 ㄱ과 ㄹ이 서로 만나 [ㅇ]과 [ㄴ]으로 발음', ruleEn: 'Mutual Nasalization: ㄱ and ㄹ nasalize to [ㅇ] and [ㄴ]' },
+    '백마': { pron: '[뱅마]', ruleKo: '비음화: 받침 ㄱ이 ㅁ을 만나 비음 [ㅇ]으로 발음', ruleEn: 'Nasalization: ㄱ sound nasalizes to [ㅇ] before ㅁ' },
+    '국민': { pron: '[궁민]', ruleKo: '비음화: 받침 ㄱ이 ㅁ을 만나 비음 [ㅇ]으로 발음', ruleEn: 'Nasalization: ㄱ sound nasalizes to [ㅇ] before ㅁ' },
+    '낱낱이': { pron: '[난나치]', ruleKo: '비음화 및 구개음화: ㅌ이 ㄴ 앞에서 [ㄴ]이 되고, 뒤의 ㅌ이 이와 만나 [ㅊ]로 발음', ruleEn: 'Nasalization & Palatalization: ㅌ becomes [ㄴ], and ㅌ palatalizes to [ㅊ]' },
+    '맏이': { pron: '[마지]', ruleKo: '구개음화: 받침 ㄷ이 이와 만나 [ㅈ]로 발음', ruleEn: 'Palatalization: ㄷ sound changes to [ㅈ] before 이' },
+    '해돋이': { pron: '[해도지]', ruleKo: '구개음화: 받침 ㄷ이 이와 만나 [ㅈ]로 발음', ruleEn: 'Palatalization: ㄷ sound changes to [ㅈ] before 이' },
+    '끝이': { pron: '[끄치]', ruleKo: '구개음화: 받침 ㅌ이 이와 만나 [ㅊ]로 발음', ruleEn: 'Palatalization: ㅌ sound changes to [ㅊ] before 이' },
+    '붙여': { pron: '[부쳐]', ruleKo: '구개음화: 받침 ㅌ이 여와 만나 [쳐]로 발음', ruleEn: 'Palatalization: ㅌ sound changes to [ㅊ] before 여' }
+  };
+
+  // 발음 법칙 실시간 갱신 함수
+  function updatePhonetics() {
+    const currentText = renderSyllable();
+    const finalSyllable = (currentText !== '—' && currentText !== state.cho) ? currentText : '';
+    const fullText = (state.word + finalSyllable).trim();
+
+    const phoneticRow = document.getElementById('phonetic-row');
+    const phoneticPron = document.getElementById('phonetic-pron');
+    const phoneticRule = document.getElementById('phonetic-rule');
+
+    if (!phoneticRow || !phoneticPron || !phoneticRule) return;
+
+    if (!fullText) {
+      phoneticRow.classList.add('hidden');
+      return;
+    }
+
+    // LOCAL_PHONETIC_MAP에서 매칭되는 단어가 있는지 찾기 (가장 긴 매치 우선)
+    let matchedKey = '';
+    for (const key in LOCAL_PHONETIC_MAP) {
+      if (fullText.includes(key)) {
+        if (!matchedKey || key.length > matchedKey.length) {
+          matchedKey = key;
+        }
+      }
+    }
+
+    if (matchedKey) {
+      const match = LOCAL_PHONETIC_MAP[matchedKey];
+      phoneticPron.textContent = match.pron;
+      phoneticRule.textContent = state.langMode === 'en' ? match.ruleEn : match.ruleKo;
+      phoneticRow.classList.remove('hidden');
+    } else {
+      phoneticRow.classList.add('hidden');
+    }
   }
 
   function updateWordDisplay() {
@@ -1556,6 +1663,9 @@ const tr = t(lang);
 
     // 게임 정답 실시간 스캔 채점 호출
     checkGameAnswer();
+
+    // 발음 설명 실시간 체크
+    updatePhonetics();
   }
 
   // 천지인 입력 가능한 모든 유효 접두사 집합 생성
@@ -2578,6 +2688,9 @@ const tr = t(lang);
         btn.innerHTML = isEn ? '🎮 Game' : '🎮 게임';
       }
     });
+
+    // 발음 설명 언어 동적 갱신
+    updatePhonetics();
   }
 
   // 언어 모드 토글 버튼 바인딩
