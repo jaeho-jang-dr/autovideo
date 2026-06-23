@@ -424,7 +424,7 @@ const tr = t(lang);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 140px; /* 110px -> 140px로 넉넉하게 확장 */
+  height: 124px; /* 140px -> 124px로 조금 줄임 */
   position: relative;
   box-shadow: inset 0 0 20px rgba(0,0,0,0.9);
 }
@@ -433,11 +433,11 @@ const tr = t(lang);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120px;
+  height: 106px; /* 120px -> 106px로 줄임 */
 }
 
 .syllable {
-  font-size: clamp(3.5rem, 12vw, 5.0rem); /* 한글 낱자 크게 스케일 업 */
+  font-size: clamp(3.2rem, 11vw, 4.6rem); /* 글자 크기 미세 축소로 짤림 방지 */
   font-weight: 900;
   background: var(--gv-grad);
   -webkit-background-clip: text;
@@ -445,10 +445,13 @@ const tr = t(lang);
   color: transparent;
   transition: transform 0.15s cubic-bezier(.2, 1.4, .4, 1);
   filter: drop-shadow(0 0 15px hsl(266 100% 64% / 0.25));
+  transform: translateY(-8px); /* 위로 올려서 아래 겹받침 짤림 완벽 해결 */
+  display: inline-block;
+  line-height: 1.1;
 }
 
 .syllable.pop {
-  transform: scale(1.15);
+  transform: translateY(-8px) scale(1.15);
 }
 
 /* 조음 피드백 */
@@ -1283,7 +1286,7 @@ const tr = t(lang);
 
   // 자음/모음 데이터 맵
   const CHO_LIST = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'];
-  const JUNG_LIST = ['ㅏ','ㅐ','ㅑ','ㅒ','ㅓ','ㅔ','ㅕ','ㅖ','ㅗ','ㅘ','ㅙ','ㅚ','요','ㅜ','ㅝ','ㅞ','ㅟ','ㅠ','ㅡ','ㅢ','ㅣ'];
+  const JUNG_LIST = ['ㅏ','ㅐ','ㅑ','ㅒ','ㅓ','ㅔ','ㅕ','ㅖ','ㅗ','ㅘ','ㅙ','ㅚ','ㅛ','ㅜ','ㅝ','ㅞ','ㅟ','ㅠ','ㅡ','ㅢ','ㅣ'];
   const JONG_LIST = ['', 'ㄱ', 'ㄲ', 'ㄳ', 'ㄴ', 'ㅈ', 'ㄶ', 'ㄷ', 'ㄹ', 'ㄺ', 'ㄻ', 'ㄼ', 'ㄽ', 'ㄾ', 'ㄿ', 'ㅀ', 'ㅁ', 'ㅂ', 'ㅄ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'];
 
   // 자음 순환 사이클 정의
