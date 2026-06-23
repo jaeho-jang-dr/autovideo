@@ -514,24 +514,25 @@ new_css = """<style>
   color: #fff;
   margin: 0;
 }
-
-/* 글로벌 단어 조립판 */
+/* 글로벌 단어 조립판 (세로 넉넉하게 확장하여 받침 짤림 해결 및 약간 상향 정렬) */
 .word-board-section {
   display: flex;
   flex-direction: column;
-  padding: 10px 14px; /* 단어 조립판 큼직하게 확장 */
+  padding: 8px 14px 16px 14px; /* 위쪽 패딩은 8px로 좁혀 위로 올리고, 아래쪽 패딩은 16px로 넓혀 받침 공간 확보 */
   margin-bottom: 4px;
   background: hsl(245 35% 8% / 0.7) !important;
   border-color: var(--gv-border-active);
-  min-height: 64px;
-  justify-content: center;
+  min-height: 80px; /* 64px -> 80px로 넉넉하게 확장 */
+  justify-content: flex-start; /* 글자를 그 칸의 약간 위로 쓰여지게 만듦 */
+  overflow: visible; /* 잘림 원천 차단 */
 }
 
 .word-display-row {
   display: flex;
   align-items: center;
   gap: 8px;
-  min-height: 24px;
+  min-height: 32px; /* 24px -> 32px로 높임 */
+  transform: translateY(-2px); /* 글자를 약간 위로 들어올림 */
 }
 
 .lang-badge {
@@ -558,6 +559,7 @@ new_css = """<style>
   font-weight: 900;
   color: var(--gv-text-0);
   word-break: break-all;
+  line-height: 1.45; /* line-height를 충분히 주어 받침 짤림 해결 */
   text-shadow: 0 0 15px hsl(182 100% 50% / 0.25);
 }
 
