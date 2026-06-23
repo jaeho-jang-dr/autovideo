@@ -1604,7 +1604,9 @@ const tr = t(lang);
     '맏이': { pron: '[마지]', ruleKo: '구개음화: 받침 ㄷ이 이와 만나 [ㅈ]로 발음', ruleEn: 'Palatalization: ㄷ sound changes to [ㅈ] before 이' },
     '해돋이': { pron: '[해도지]', ruleKo: '구개음화: 받침 ㄷ이 이와 만나 [ㅈ]로 발음', ruleEn: 'Palatalization: ㄷ sound changes to [ㅈ] before 이' },
     '끝이': { pron: '[끄치]', ruleKo: '구개음화: 받침 ㅌ이 이와 만나 [ㅊ]로 발음', ruleEn: 'Palatalization: ㅌ sound changes to [ㅊ] before 이' },
-    '붙여': { pron: '[부쳐]', ruleKo: '구개음화: 받침 ㅌ이 여와 만나 [쳐]로 발음', ruleEn: 'Palatalization: ㅌ sound changes to [ㅊ] before 여' }
+    '붙여': { pron: '[부쳐]', ruleKo: '구개음화: 받침 ㅌ이 여와 만나 [쳐]로 발음', ruleEn: 'Palatalization: ㅌ sound changes to [ㅊ] before 여' },
+    '값이 싸다': { pron: '[갑씨 싸다]', ruleKo: '연음 법칙: 겹받침 ㅄ에서 ㅅ이 뒤의 이로 연음되어 [갑씨]로 발음되고, 싸다와 매끄럽게 연결', ruleEn: 'Linking Rule: The second consonant ㅅ in ㅄ carries over to 이, pronounced [gap-ssi ssada]' },
+    '값이': { pron: '[갑씨]', ruleKo: '연음 법칙 (된소리): 겹받침 ㅄ 뒤에 모음 이가 오면, 뒷자음 ㅅ이 된소리 [ㅆ]으로 연음되어 발음', ruleEn: 'Linking Rule (Tense): The second consonant ㅅ in ㅄ carries over as double consonant [ㅆ] before 이' }
   };
 
   // 발음 법칙 실시간 갱신 함수
@@ -1807,11 +1809,48 @@ const tr = t(lang);
     }
   }
 
+  // 기계음의 발음 교정을 위해 대표 변음 단어들을 기계음에 전달하기 전 발음 텍스트로 치환하는 헬퍼 함수
+  function getPhoneticSubstitute(text: string): string {
+    let processed = text;
+    // 발음 치환 테이블 정의 (기계음 SpeechSynthesis 오독 방지 및 연음 구현용)
+    const SUBSTITUTE_MAP: Record<string, string> = {
+      '값이': '갑씨',
+      '굳이': '구지',
+      '같이': '가치',
+      '돋보기': '돋뽀기',
+      '꽃이': '꼬치',
+      '맛있어요': '마시써요',
+      '합니다': '함니다',
+      '국물': '궁물',
+      '밥 먹어요': '밤머거요',
+      '신라': '실라',
+      '칼날': '칼랄',
+      '독립': '동닙',
+      '백마': '뱅마',
+      '국민': '궁민',
+      '낱낱이': '난나치',
+      '맏이': '마지',
+      '해돋이': '해도지',
+      '끝이': '끄치',
+      '붙여': '부쳐'
+    };
+
+    // 가장 긴 키를 먼저 치환하여 중복 치환 간섭 최소화
+    const sortedKeys = Object.keys(SUBSTITUTE_MAP).sort((a, b) => b.length - a.length);
+    for (const key of sortedKeys) {
+      if (processed.includes(key)) {
+        processed = processed.replace(new RegExp(key, 'g'), SUBSTITUTE_MAP[key]);
+      }
+    }
+    return processed;
+  }
+
   // 문장 전체를 일반 구어체 속도로 자연스럽게 연음 법칙을 살려 낭독하는 함수
   function speakSentenceNatural(text: string) {
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
+      const phoneticText = getPhoneticSubstitute(text);
+      const utterance = new SpeechSynthesisUtterance(phoneticText);
       utterance.lang = 'ko-KR';
       utterance.rate = 1.08; // 1.08배속으로 더 자연스럽고 시원시원한 일반 대화 톤
       utterance.pitch = 1.0;
