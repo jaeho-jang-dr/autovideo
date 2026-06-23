@@ -11,222 +11,199 @@ const tr = t(lang);
 ---
 
 <div class="groove glass">
-  <div class="groove-header">
-    <h2>{tr.groove_title}</h2>
-    <p class="subtitle">{tr.groove_sub}</p>
-  </div>
-
-  <!-- [상주 고정 헤더] 1단계: 단어 조립판 (Word Board) -->
-  <div class="word-board-section glass">
-    <div class="word-board-header">
-      <span class="word-title">{lang === 'ko' ? '단어 조립판 & 번역기' : 'Word Board & Translator'}</span>
-      <button id="btn-reset" class="action-mini-btn" title="초기화">↺ Reset</button>
-    </div>
-    <div class="word-display-container">
-      <div class="word-display-row" id="english-row" style="display: none;">
-        <span class="lang-badge eng">ENG</span>
-        <span id="english-text" class="english-text">—</span>
+  <div class="groove-cockpit">
+    <!-- 상단 콕핏 헤더: 오락기 상단 전광판 컨셉 -->
+    <div class="cockpit-header">
+      <div class="header-main">
+        <h2>{tr.groove_title}</h2>
+        <p class="subtitle">{tr.groove_sub}</p>
       </div>
-      <div class="word-display-row">
-        <span class="lang-badge kor">KOR</span>
-        <span id="word-text" class="word-text">—</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- [상주 고정 헤더] 2단계: 단어 입력 제어 컨트롤 바 -->
-  <div class="word-controls">
-    <button id="btn-backspace" class="control-btn backspace-btn glass" title="글자 지우기">⌫ 지우기</button>
-    <button id="btn-space" class="control-btn space-btn glass" title="띄어쓰기">␣ 띄어쓰기</button>
-    <button id="btn-enter" class="control-btn enter-btn glass" title="글자 확정">↵ 확정</button>
-    <button id="btn-speak-word" class="control-btn speak-btn glass" title="전체 문장 소리내기">🔊 전체 읽기</button>
-  </div>
-
-  <!-- [중간] 4단 메뉴 탭 바 -->
-  <div class="mode-tabs-bar glass">
-    <button class="mode-tab-btn active" data-tab="launchpad">🎹 {lang === 'ko' ? '런치패드' : 'Launchpad'}</button>
-    <button class="mode-tab-btn" data-tab="translator">🌐 {lang === 'ko' ? '통번역기' : 'Translator'}</button>
-    <button class="mode-tab-btn" data-tab="phrases">📖 {lang === 'ko' ? '상황 표현' : 'Phrases'}</button>
-    <button class="mode-tab-btn" data-tab="game">🎮 {lang === 'ko' ? '한글 게임' : 'Game'}</button>
-  </div>
-
-  <!-- [하단] 탭별 콘텐츠 영역 -->
-  
-  <!-- 파트 1: 런치패드 (Launchpad) -->
-  <div id="tab-launchpad" class="tab-content active">
-    <!-- 세련된 BGM 플레이어 위젯 -->
-    <div class="music-player-widget glass" style="margin-bottom: 1rem;">
-      <div class="music-info">
-        <span class="disc-icon" id="disc-icon">💿</span>
-        <div class="track-details">
-          <span class="track-title">K-POP Beat Loop #1</span>
-          <div id="playback-status" class="status-indicator">Stopped</div>
-        </div>
-      </div>
-      
-      <div class="player-controls">
-        <div class="eq-container" id="eq-animation">
-          <span class="eq-bar"></span>
-          <span class="eq-bar"></span>
-          <span class="eq-bar"></span>
-          <span class="eq-bar"></span>
-        </div>
-        <button id="btn-toggle-bgm" class="player-btn" aria-label="Play beat">
-          <span class="play-icon">▶</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- 모핑 디스플레이 및 조음 상형 알림판 -->
-    <div class="display-section glass neon-glow">
-      <div class="syllable-container">
-        <span id="display-syllable" class="syllable">—</span>
-      </div>
-      
-      <div id="articulatory-popup" class="anatomy-card glass hidden">
-        <div class="anatomy-avatar" id="anatomy-emoji">👅</div>
-        <div class="anatomy-text">
-          <strong id="anatomy-title">ㄱ</strong>
-          <p id="anatomy-desc">설근폐후(혀뿌리가 목구멍을 막는 모양)</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- 한글 비트 런치패드 -->
-    <div class="pad-section">
-      <div class="pad-group">
-        <h4 class="pad-group-title">자음 (Consonants) - 터치 시 ㄲ, ㅋ 등으로 순환</h4>
-        <div class="launchpad">
-          <button class="pad cho glass" data-jamo="ㄱ" aria-label="자음 기역">ㄱ</button>
-          <button class="pad cho glass" data-jamo="ㄴ" aria-label="자음 니은">ㄴ</button>
-          <button class="pad cho glass" data-jamo="ㅁ" aria-label="자음 미음">ㅁ</button>
-          <button class="pad cho glass" data-jamo="ㅅ" aria-label="자음 시옷">ㅅ</button>
-          <button class="pad cho glass" data-jamo="ㅇ" aria-label="자음 이응">ㅇ</button>
-        </div>
-      </div>
-
-      <div class="pad-group" style="margin-top: 1.2rem;">
-        <h4 class="pad-group-title">천지인 모음 (Cosmic Vowels)</h4>
-        <div class="vowels">
-          <button class="pad jung glass" data-jamo="•" aria-label="하늘 아래아">•</button>
-          <button class="pad jung glass" data-jamo="ㅡ" aria-label="땅 으">ㅡ</button>
-          <button class="pad jung glass" data-jamo="ㅣ" aria-label="사람 이">ㅣ</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 파트 2: 영어 통번역기 (Translator) -->
-  <div id="tab-translator" class="tab-content">
-    <!-- 영어 직접 입력 텍스트 박스 -->
-    <div class="english-input-wrapper-card glass">
-      <span class="input-card-title">{lang === 'ko' ? '영어 텍스트 직접 입력' : 'English Text Input'}</span>
-      <div class="english-input-wrapper">
-        <input type="text" id="input-english" placeholder="Type English sentence here... (Press Enter)" class="english-input glass" />
-      </div>
-    </div>
-
-    <!-- 그루브 코치 AI 에이전트 & 마이크 컨트롤 -->
-    <div class="agent-section glass">
-      <div class="agent-avatar">🤖</div>
-      <div class="agent-chat">
-        <div class="chat-bubble" id="coach-bubble">
-          {lang === 'ko' ? "영어 모드로 전환 후 마이크를 누르면 영어 회화 연습이 가능합니다!" : "Switch to English mode and tap the mic to practice English speech!"}
-        </div>
-        
-        <div class="chat-controls" style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
-          <!-- KO / EN 토글 스위치 바 -->
-          <div class="lang-selector-bar glass">
-            <button id="btn-lang-ko" class="lang-toggle-btn active">KO</button>
-            <button id="btn-lang-en" class="lang-toggle-btn">EN</button>
-          </div>
-          
-          <button id="btn-mic" class="mic-btn-fab">
-            <div class="mic-glow-ring"></div>
-            <span class="mic-icon">🎤</span>
-            <span id="mic-text" class="sr-only">{tr.groove_mic}</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 파트 3: 상황 표현 가이드 (Phrases) -->
-  <div id="tab-phrases" class="tab-content">
-    <div class="situation-helper-section glass">
-      <div class="situation-header">
-        <span class="situation-title">{lang === 'ko' ? '상황별 필수 표현' : 'Situation Phrase Guide'}</span>
-      </div>
-      
-      <!-- 상황 카테고리 탭 -->
-      <div class="situation-tabs">
-        <button class="tab-btn active" data-category="restaurant">🍔 {lang === 'ko' ? '식당' : 'Dining'}</button>
-        <button class="tab-btn" data-category="restroom">🚻 {lang === 'ko' ? '화장실' : 'Restroom'}</button>
-        <button class="tab-btn" data-category="airport">✈️ {lang === 'ko' ? '공항' : 'Airport'}</button>
-        <button class="tab-btn" data-category="station">🚄 {lang === 'ko' ? '기차역' : 'Station'}</button>
-      </div>
-      
-      <!-- 예문 목록 -->
-      <div class="phrase-list" id="phrase-list">
-        <button class="phrase-card" data-phrase="물 주세요">
-          <span class="phrase-ko">물 주세요</span>
-          <span class="phrase-en">Please give me water</span>
-        </button>
-        <button class="phrase-card" data-phrase="밥 주세요">
-          <span class="phrase-ko">밥 주세요</span>
-          <span class="phrase-en">Please give me rice</span>
-        </button>
-        <button class="phrase-card" data-phrase="맛있어요">
-          <span class="phrase-ko">맛있어요</span>
-          <span class="phrase-en">It is delicious</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- 파트 4: 한글 게임 (Hangeul Game) -->
-  <div id="tab-game" class="tab-content">
-    <div class="game-wrapper glass">
-      <div class="game-header-panel">
-        <span class="game-title">🎮 {lang === 'ko' ? '한글 비트 마스터 아케이드' : 'Hangeul Beat Master'}</span>
-        <div class="score-board">
-          <div class="score-item">
-            <span class="score-label">SCORE</span>
-            <span id="game-score" class="score-val">0</span>
-          </div>
-          <div class="score-item">
-            <span class="score-label">COMBO</span>
-            <span id="game-combo" class="score-val">0</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 타임 네온 게이지 바 -->
-      <div class="timer-gauge-container glass">
-        <div id="game-timer-bar" class="timer-bar" style="width: 100%;"></div>
-        <span id="game-timer-text" class="timer-text">30s</span>
-      </div>
-
-      <!-- 퀴즈 타겟 출제 구역 -->
-      <div class="quiz-card glass">
-        <span class="quiz-badge">QUIZ TARGET</span>
-        <div class="quiz-question-row">
-          <span class="quiz-lang">ENG</span>
-          <p id="quiz-english" class="quiz-text">—</p>
-        </div>
-        <div class="quiz-answer-row">
-          <span class="quiz-lang">KOR</span>
-          <p id="quiz-korean" class="quiz-target-ko">Game Start를 눌러주세요</p>
-        </div>
-      </div>
-
-      <div class="game-controls-panel">
+      <div class="header-actions">
+        <button id="btn-reset" class="action-mini-btn" title="초기화">↺ Reset</button>
         <button id="btn-game-toggle" class="game-start-btn">🚀 Game Start</button>
       </div>
     </div>
+
+    <!-- 5분할 메인 그리드 콘솔 -->
+    <div class="cockpit-grid">
+      
+      <!-- [좌상단]: 영어 통번역 모듈 계기판 -->
+      <div class="cockpit-module translator-module glass">
+        <div class="module-title">🌐 {lang === 'ko' ? '영어 통번역기' : 'Translator'}</div>
+        
+        <div class="english-input-wrapper-card">
+          <input type="text" id="input-english" placeholder="Type English & Press Enter..." class="english-input glass" />
+        </div>
+
+        <div class="agent-section">
+          <div class="agent-avatar">🤖</div>
+          <div class="agent-chat">
+            <div class="chat-bubble" id="coach-bubble">
+              {lang === 'ko' ? "마이크를 누르거나 영어를 타이핑해 보세요!" : "Tap the mic or type in English!"}
+            </div>
+            
+            <div class="chat-controls">
+              <div class="lang-selector-bar glass">
+                <button id="btn-lang-ko" class="lang-toggle-btn active">KO</button>
+                <button id="btn-lang-en" class="lang-toggle-btn">EN</button>
+              </div>
+              
+              <button id="btn-mic" class="mic-btn-fab">
+                <div class="mic-glow-ring"></div>
+                <span class="mic-icon">🎤</span>
+                <span id="mic-text" class="sr-only">{tr.groove_mic}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- [우상단]: 상황별 대화 카드 가이드 계기판 -->
+      <div class="cockpit-module phrases-module glass">
+        <div class="module-title">📖 {lang === 'ko' ? '상황 표현 가이드' : 'Phrases'}</div>
+        
+        <div class="situation-tabs">
+          <button class="tab-btn active" data-category="restaurant">🍔 {lang === 'ko' ? '식당' : 'Dining'}</button>
+          <button class="tab-btn" data-category="restroom">🚻 {lang === 'ko' ? '화장실' : 'Restroom'}</button>
+          <button class="tab-btn" data-category="airport">✈️ {lang === 'ko' ? '공항' : 'Airport'}</button>
+          <button class="tab-btn" data-category="station">🚄 {lang === 'ko' ? '기차역' : 'Station'}</button>
+        </div>
+        
+        <div class="phrase-list" id="phrase-list">
+          <button class="phrase-card" data-phrase="물 주세요">
+            <span class="phrase-ko">물 주세요</span>
+            <span class="phrase-en">Please give me water</span>
+          </button>
+          <button class="phrase-card" data-phrase="밥 주세요">
+            <span class="phrase-ko">밥 주세요</span>
+            <span class="phrase-en">Please give me rice</span>
+          </button>
+          <button class="phrase-card" data-phrase="맛있어요">
+            <span class="phrase-ko">맛있어요</span>
+            <span class="phrase-en">It is delicious</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- [중앙]: 메인 HUD 디스플레이 & 조립 모니터 -->
+      <div class="cockpit-center glass">
+        
+        <!-- 게임 스코어 & 콤보 & 타이머 (게임 아케이드 실행 시 동적 노출되는 HUD 구조) -->
+        <div class="game-hud-panel glass hidden" id="game-hud-panel">
+          <div class="hud-score-row">
+            <div class="hud-item">
+              <span class="hud-label">SCORE</span>
+              <span id="game-score" class="hud-val">0</span>
+            </div>
+            <div class="hud-timer-container">
+              <div id="game-timer-bar" class="timer-bar" style="width: 100%;"></div>
+              <span id="game-timer-text" class="timer-text">30s</span>
+            </div>
+            <div class="hud-item">
+              <span class="hud-label">COMBO</span>
+              <span id="game-combo" class="hud-val">0</span>
+            </div>
+          </div>
+          <!-- 퀴즈 타겟 -->
+          <div class="hud-quiz-box glass">
+            <div class="quiz-row">
+              <span class="q-badge eng">ENG</span>
+              <p id="quiz-english" class="q-text">—</p>
+            </div>
+            <div class="quiz-row">
+              <span class="q-badge kor">KOR</span>
+              <p id="quiz-korean" class="q-target-ko">Game Start!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 중앙 조음 낱자 & 조음 상형 모니터 -->
+        <div class="center-display-monitor">
+          <div class="syllable-container">
+            <span id="display-syllable" class="syllable">—</span>
+          </div>
+          
+          <div id="articulatory-popup" class="anatomy-card glass hidden">
+            <div class="anatomy-avatar" id="anatomy-emoji">👅</div>
+            <div class="anatomy-text">
+              <strong id="anatomy-title">ㄱ</strong>
+              <p id="anatomy-desc">설근폐후(혀뿌리가 목구멍을 막는 모양)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 글로벌 단어 조립판 (KOR/ENG) -->
+        <div class="word-board-section glass">
+          <div class="word-display-row" id="english-row" style="display: none;">
+            <span class="lang-badge eng">ENG</span>
+            <span id="english-text" class="english-text">—</span>
+          </div>
+          <div class="word-display-row">
+            <span class="lang-badge kor">KOR</span>
+            <span id="word-text" class="word-text">—</span>
+          </div>
+        </div>
+
+        <!-- [중앙 정밀 정렬]: 자음 D-pad와 모음 액션 키보드 밀착 도크 -->
+        <div class="cockpit-keyboard-dock">
+          <!-- 자음 런치패드 D-pad -->
+          <div class="keyboard-group-panel left-pad-panel">
+            <span class="panel-label">🎹 자음 (Consonants)</span>
+            <div class="launchpad dpad-layout">
+              <button class="pad cho glass" data-jamo="ㄱ" aria-label="자음 기역">ㄱ</button>
+              <button class="pad cho glass" data-jamo="ㄴ" aria-label="자음 니은">ㄴ</button>
+              <button class="pad cho glass" data-jamo="ㅁ" aria-label="자음 미음">ㅁ</button>
+              <button class="pad cho glass" data-jamo="ㅅ" aria-label="자음 시옷">ㅅ</button>
+              <button class="pad cho glass" data-jamo="ㅇ" aria-label="자음 이응">ㅇ</button>
+            </div>
+          </div>
+
+          <!-- 모음 천지인 패드 -->
+          <div class="keyboard-group-panel right-pad-panel">
+            <span class="panel-label">☄️ 모음 & 비트 (Vowels & Beat)</span>
+            <div class="vowels action-layout">
+              <button class="pad jung glass" data-jamo="•" aria-label="하늘 아래아">•</button>
+              <button class="pad jung glass" data-jamo="ㅡ" aria-label="땅 으">ㅡ</button>
+              <button class="pad jung glass" data-jamo="ㅣ" aria-label="사람 이">ㅣ</button>
+            </div>
+
+            <!-- BGM 플레이어 위젯 -->
+            <div class="music-player-widget glass">
+              <div class="music-info">
+                <span class="disc-icon" id="disc-icon">💿</span>
+                <div class="track-details">
+                  <span class="track-title">K-POP Beat</span>
+                  <div id="playback-status" class="status-indicator">Stopped</div>
+                </div>
+              </div>
+              <div class="player-controls">
+                <div class="eq-container" id="eq-animation">
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                </div>
+                <button id="btn-toggle-bgm" class="player-btn" aria-label="Play beat">
+                  <span class="play-icon">▶</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 조립 제어 버튼 세트 -->
+        <div class="word-controls">
+          <button id="btn-backspace" class="control-btn backspace-btn glass" title="글자 지우기">⌫ 지우기</button>
+          <button id="btn-space" class="control-btn space-btn glass" title="띄어쓰기">␣ 띄어쓰기</button>
+          <button id="btn-enter" class="control-btn enter-btn glass" title="글자 확정">↵ 확정</button>
+          <button id="btn-speak-word" class="control-btn speak-btn glass" title="전체 문장 소리내기">🔊 전체 읽기</button>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
-</div>
+
 
 <style>
 /* 화이트 테마 오염 방지 - .groove 스코프로 완전히 격리된 다크 네온 글래스 테마 */
@@ -268,7 +245,7 @@ const tr = t(lang);
 
 @media (min-width: 768px) {
   .groove {
-    max-width: 580px;
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1160,6 +1137,480 @@ const tr = t(lang);
   background: var(--gv-grad);
   color: #fff;
   box-shadow: 0 2px 6px hsl(268 100% 66% / 0.3);
+}
+
+/* ── 콕핏 메인 레이아웃 및 그리드 시스템 ── */
+.groove-cockpit {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 데스크탑/태블릿 3열 대시보드 레이아웃 */
+.cockpit-grid {
+  display: grid;
+  grid-template-columns: 290px 1fr 290px;
+  grid-template-areas: "translator center phrases";
+  gap: 16px;
+  margin-top: 1.2rem;
+}
+
+.translator-module {
+  grid-area: translator;
+}
+
+.phrases-module {
+  grid-area: phrases;
+}
+
+.cockpit-center {
+  grid-area: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: var(--gv-radius) !important;
+  background: hsl(245 35% 8% / 0.5) !important;
+  border: 1px solid var(--gv-border-active);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* 콕핏 모듈 공통 가독성 */
+.cockpit-module {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: var(--gv-surface);
+  border: 1px solid var(--gv-border);
+  border-radius: var(--gv-radius-sm);
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.05);
+}
+
+.module-title {
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--gv-text-1);
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+  border-left: 3px solid var(--gv-neon-cho);
+  padding-left: 6px;
+}
+
+/* 오락기 상단 전광판 헤더 */
+.cockpit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gv-border);
+  margin-bottom: 0.5rem;
+}
+
+.header-main h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0;
+  background: var(--gv-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.header-main .subtitle {
+  font-size: 0.8rem;
+  color: var(--gv-text-1);
+  margin: 2px 0 0 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* 중앙 조립 키보드 묶음 도크 */
+.cockpit-keyboard-dock {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+  width: 100%;
+  margin: 1.2rem 0;
+}
+
+.keyboard-group-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: hsl(245 30% 12% / 0.45);
+  border: 1px solid var(--gv-border);
+  border-radius: var(--gv-radius-sm);
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.05);
+}
+
+.panel-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--gv-text-2);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  border-bottom: 1px dashed var(--gv-border);
+  padding-bottom: 4px;
+}
+
+/* 자음 D-pad 조이패드 레이아웃 (약간 둥글게 십자형 배치) */
+.dpad-layout {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-rows: repeat(3, 1fr) !important;
+  gap: 8px !important;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 150px;
+  margin: 0 auto;
+  padding: 10px;
+  background: hsl(245 35% 5% / 0.8);
+  border-radius: 50%; /* 둥근 휠 구조 */
+  border: 3px solid var(--gv-border);
+  position: relative;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.9), 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* D-pad 5개 버튼 위치 수동 조정 */
+.dpad-layout button:nth-child(1) { grid-column: 2; grid-row: 1; } /* ㄱ: 상 */
+.dpad-layout button:nth-child(2) { grid-column: 1; grid-row: 2; } /* ㄴ: 좌 */
+.dpad-layout button:nth-child(3) { grid-column: 2; grid-row: 2; } /* ㅁ: 중 */
+.dpad-layout button:nth-child(4) { grid-column: 3; grid-row: 2; } /* ㅅ: 우 */
+.dpad-layout button:nth-child(5) { grid-column: 2; grid-row: 3; } /* ㅇ: 하 */
+
+/* 모음 액션 버튼 레이아웃 */
+.action-layout {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 10px;
+  background: hsl(245 35% 6% / 0.5);
+  border-radius: 12px;
+}
+
+/* 3D 기계식 네온 키캡 버튼 공통 스타일 */
+.pad {
+  border-radius: 50% !important;
+  font-weight: 900 !important;
+  font-size: 1.25rem !important;
+  transition: all 0.08s ease !important;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+/* 자음 패드 3D 입체 효과 */
+.pad.cho {
+  background: linear-gradient(135deg, hsl(325 100% 64%), hsl(325 100% 42%)) !important;
+  border: 1px solid hsl(325 100% 75% / 0.4) !important;
+  color: #fff !important;
+  box-shadow: 
+    0 5px 0 hsl(325 100% 22%), 
+    0 8px 15px rgba(0, 0, 0, 0.6),
+    inset 0 2px 3px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.3) !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+.pad.cho:hover {
+  filter: brightness(1.15);
+}
+
+.pad.cho:active {
+  transform: translateY(4px) !important;
+  box-shadow: 
+    0 1px 0 hsl(325 100% 22%), 
+    0 2px 5px rgba(0, 0, 0, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 모음 패드 3D 입체 효과 */
+.pad.jung {
+  background: linear-gradient(135deg, hsl(182 100% 50%), hsl(182 100% 32%)) !important;
+  border: 1px solid hsl(182 100% 75% / 0.4) !important;
+  color: #fff !important;
+  box-shadow: 
+    0 5px 0 hsl(182 100% 16%), 
+    0 8px 15px rgba(0, 0, 0, 0.6),
+    inset 0 2px 3px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.3) !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+.pad.jung:hover {
+  filter: brightness(1.15);
+}
+
+.pad.jung:active {
+  transform: translateY(4px) !important;
+  box-shadow: 
+    0 1px 0 hsl(182 100% 16%), 
+    0 2px 5px rgba(0, 0, 0, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 중앙 메인 디스플레이 모니터 */
+.center-display-monitor {
+  width: 100%;
+  background: radial-gradient(circle at center, hsl(245 40% 10%), hsl(245 50% 3%));
+  border: 2px solid var(--gv-border-active);
+  border-radius: var(--gv-radius-sm);
+  padding: 16px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  position: relative;
+  box-shadow: 0 0 20px hsl(268 100% 66% / 0.15), inset 0 0 25px rgba(0,0,0,0.9);
+}
+
+/* 게임 아케이드 HUD 스타일 */
+.game-hud-panel {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  background: hsl(245 40% 5% / 0.85) !important;
+  border: 1px solid var(--gv-neon-cho);
+  border-radius: var(--gv-radius-sm);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.game-hud-panel.hidden {
+  display: none !important;
+}
+
+.hud-score-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.hud-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hud-label {
+  font-size: 0.58rem;
+  font-weight: 800;
+  color: var(--gv-text-2);
+}
+
+.hud-val {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--gv-neon-cho);
+  text-shadow: var(--gv-glow-cho);
+}
+
+.hud-timer-container {
+  flex: 1;
+  position: relative;
+  height: 14px;
+  background: hsl(245 35% 8%);
+  border-radius: 10px;
+  border: 1px solid var(--gv-border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hud-timer-container .timer-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: var(--gv-grad);
+  transition: width 0.2s linear;
+}
+
+.hud-timer-container .timer-text {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #fff;
+  z-index: 2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+
+.hud-quiz-box {
+  background: hsl(245 35% 8% / 0.8) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid var(--gv-border);
+}
+
+.quiz-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.q-badge {
+  font-size: 0.55rem;
+  font-weight: 800;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.q-badge.eng {
+  background: hsl(182 100% 50% / 0.15);
+  color: var(--gv-neon-jung);
+  border: 1px solid hsl(182 100% 50% / 0.3);
+}
+
+.q-badge.kor {
+  background: hsl(325 100% 64% / 0.15);
+  color: var(--gv-neon-cho);
+  border: 1px solid hsl(325 100% 64% / 0.3);
+}
+
+.q-text {
+  font-size: 0.78rem;
+  color: var(--gv-text-1);
+  margin: 0;
+}
+
+.q-target-ko {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+}
+
+/* 마이크 버튼 크기 최적화 */
+.mic-btn-fab {
+  width: 44px;
+  height: 44px;
+  font-size: 1.1rem;
+}
+
+/* 상황 표현 가이드 스크롤 뷰 */
+.phrase-list {
+  max-height: 160px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.phrase-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.phrase-list::-webkit-scrollbar-thumb {
+  background: var(--gv-border);
+  border-radius: 2px;
+}
+
+/* 모바일 세로 뷰포트 반응형 최적화 (양손 엄지 쥐기 각도 지원) */
+@media (max-width: 768px) {
+  .groove {
+    padding: 10px;
+  }
+  
+  .cockpit-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "translator phrases"
+      "center center";
+    gap: 10px;
+  }
+  
+  .cockpit-center {
+    padding: 12px;
+  }
+  
+  .center-display-monitor {
+    min-height: 120px;
+    padding: 10px;
+  }
+  
+  .dpad-layout {
+    max-width: 130px;
+    padding: 8px;
+  }
+  
+  .action-layout {
+    padding: 6px;
+    gap: 6px;
+  }
+
+  .pad {
+    font-size: 1.05rem !important;
+  }
+  
+  .pad.cho {
+    box-shadow: 
+      0 3px 0 hsl(325 100% 22%), 
+      0 5px 8px rgba(0, 0, 0, 0.6),
+      inset 0 1px 2px rgba(255, 255, 255, 0.4),
+      inset 0 -1px 2px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .pad.cho:active {
+    transform: translateY(2px) !important;
+    box-shadow: 
+      0 1px 0 hsl(325 100% 22%), 
+      0 1px 3px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  .pad.jung {
+    box-shadow: 
+      0 3px 0 hsl(182 100% 16%), 
+      0 5px 8px rgba(0, 0, 0, 0.6),
+      inset 0 1px 2px rgba(255, 255, 255, 0.4),
+      inset 0 -1px 2px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .pad.jung:active {
+    transform: translateY(2px) !important;
+    box-shadow: 
+      0 1px 0 hsl(182 100% 16%), 
+      0 1px 3px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  .music-player-widget {
+    padding: 6px 10px;
+  }
+  
+  .music-player-widget .disc-icon {
+    font-size: 1.3rem;
+  }
+  
+  .music-player-widget .track-title {
+    font-size: 0.7rem;
+  }
+  
+  .music-player-widget .status-indicator {
+    font-size: 0.6rem;
+  }
+  
+  .music-player-widget .player-btn {
+    width: 28px;
+    height: 28px;
+  }
 }
 </style>
 
@@ -2146,34 +2597,6 @@ const tr = t(lang);
     });
   }
 
-  // 3단 메뉴 탭 제어 스크립트
-  const modeTabBtns = document.querySelectorAll('.mode-tabs-bar .mode-tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
-
-  modeTabBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const target = e.currentTarget as HTMLButtonElement;
-      const tabName = target.getAttribute('data-tab') || 'launchpad';
-
-      // 탭 버튼 active 클래스 제어
-      modeTabBtns.forEach(b => b.classList.remove('active'));
-      target.classList.add('active');
-
-      // 탭 콘텐츠 노출 제어
-      tabContents.forEach(content => {
-        const contentId = content.getAttribute('id');
-        if (contentId === `tab-${tabName}`) {
-          content.classList.add('active');
-        } else {
-          content.classList.remove('active');
-        }
-      });
-      
-      // 탭 전환 시 기존 성우 오디오 큐 정지
-      stopSentenceQueue();
-    });
-  });
-
   // ── 한글 아케이드 게임 엔진 ──
   const QUIZ_POOL = [
     { ko: '물 주세요', en: 'Please give me water' },
@@ -2200,6 +2623,10 @@ const tr = t(lang);
   function startArcadeGame() {
     stopArcadeGame(); // 안전 정지
     
+    // 게임 HUD 패널 노출
+    const hudPanel = document.getElementById('game-hud-panel');
+    if (hudPanel) hudPanel.classList.remove('hidden');
+
     gameState.isPlaying = true;
     gameState.score = 0;
     gameState.combo = 0;
@@ -2243,6 +2670,10 @@ const tr = t(lang);
       gameState.timerId = null;
     }
     
+    // 게임 HUD 패널 숨김
+    const hudPanel = document.getElementById('game-hud-panel');
+    if (hudPanel) hudPanel.classList.add('hidden');
+
     triggerGameBGM(false);
 
     const toggleBtn = document.getElementById('btn-game-toggle');
