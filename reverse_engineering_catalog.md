@@ -33,6 +33,7 @@
 | `korean_education_spec.md` | K-Lingo Journey: 한글 교육 플랫폼 및 K-Pop AI 음원 역공학 명세서 (Specification) | [korean_education_spec.md](file:///D:/Entertainments/DevEnvironment/autovideo/korean_education_spec.md) | 본 문서는 K-POP 및 과학 융합형 외국인 대상 한글 교육 플랫폼 **"K-Lingo Journey"** 시제품 웹페이지 설계, 게이미피케이션 알고리즘, 로컬 GPU 가속 AI 음원 생성 및 브라우저 연동 구현 세부 명세를 기록하고 보존하기 위해 작성되었습니다. |
 | `pet_family_spec.md` | Video Specification & Analysis: Pet Family ("Hongsi") | [pet_family_spec.md](file:///D:/Entertainments/DevEnvironment/autovideo/child_growth_science/pet_family_spec.md) | 이 문서는 AI 영상 제작 라이프사이클(P10) 6단계에 의거하여, 옆집 암컷 진도견 **홍시**를 주인공으로 제작된 반려동물 공존 다큐멘터리 영상의 연출 명세서 및 기술 비평 보고서입니다. |
 | `pet_family_spec.md` | Video Specification & Analysis: Pet Family ("Hongsi") | [pet_family_spec.md](file:///D:/Entertainments/DevEnvironment/autovideo/pet_family/pet_family_spec.md) | 이 문서는 AI 영상 제작 라이프사이클(P10) 6단계에 의거하여, 옆집 암컷 진도견 **홍시**를 주인공으로 제작된 반려동물 공존 다큐멘터리 영상의 연출 명세서 및 기술 비평 보고서입니다. |
+| `think_english_reverse_engineering.md` | YouTube Reference (MpiWuR-yL9k) Reverse Engineering Guidelines | [think_english_reverse_engineering.md](file:///C:/Users/antigravity/.gemini/antigravity/brain/ea11ac2b-77b0-4d5a-98ea-c249b22ddb89/think_english_reverse_engineering.md) | 유튜브 레퍼런스 비디오 및 스크린샷에 대한 2D 라인아트 모션 그래픽, 타이포그래피, 효과음 싱크 역공학 상세 가이드라인입니다. |
 
 ## Video & Topic Deep Research (딥리서치 소스 자료)
 

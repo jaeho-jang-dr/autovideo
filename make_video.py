@@ -7,6 +7,7 @@ import subprocess
 from tts_manager import save_tts
 from moviepy import ImageClip, AudioFileClip, concatenate_videoclips, TextClip, CompositeVideoClip, VideoFileClip
 import moviepy.video.fx as fx
+from moviepy.audio.fx import MultiplyVolume
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 import cv2
@@ -132,25 +133,180 @@ def draw_rounded_rect(img, pt1, pt2, color, thickness, radius):
         cv2.ellipse(img, (x1 + r, y2 - r), (r, r), 90, 0, 90, color, thickness)
         cv2.ellipse(img, (x2 - r, y2 - r), (r, r), 0, 0, 90, color, thickness)
 
+def apply_text_bounce(clip, duration):
+    """자막 생성 첫 0.3초 동안 스케일을 0 -> 1.1 -> 1.0으로 애니메이션합니다 (CapCut 텍스트 튕기기 효과)."""
+    def effect(get_frame, t):
+        frame = get_frame(t)
+        img = Image.fromarray(frame)
+        w, h = img.size
+        if t < 0.3:
+            # Bounce interpolation: t=0 -> scale=0, t=0.15 -> scale=1.1, t=0.3 -> scale=1.0
+            if t < 0.15:
+                scale = (t / 0.15) * 1.1
+            else:
+                scale = 1.1 - ((t - 0.15) / 0.15) * 0.1
+        else:
+            scale = 1.0
+        
+        if scale == 1.0:
+            return frame
+            
+        # Resize around center
+        new_w, new_h = max(1, int(w * scale)), max(1, int(h * scale))
+        resized_img = img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+        
+        # Place on transparent background of original size
+        canvas = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        paste_x = (w - new_w) // 2
+        paste_y = (h - new_h) // 2
+        canvas.paste(resized_img, (paste_x, paste_y))
+        return np.array(canvas)
+        
+    return clip.transform(effect)
+
+def generate_sfx_files():
+    import wave
+    import struct
+    import math
+    
+    os.makedirs("assets/audio", exist_ok=True)
+    
+    # 1. Whoosh SFX (Book page turning/paper flip simulation)
+    whoosh_path = "assets/audio/whoosh.wav"
+    if os.path.exists(whoosh_path):
+        try: os.remove(whoosh_path)
+        except Exception: pass
+        
+    print("Generating soft book page turn SFX dynamically...")
+    import random
+    sample_rate = 44100
+    duration = 0.5
+    num_samples = int(sample_rate * duration)
+    raw_data = []
+    
+    for i in range(num_samples):
+        t = i / sample_rate
+        # Gentle low frequency hum
+        base_wave = 0.15 * math.sin(2 * math.pi * 180 * t)
+        # White noise for paper friction
+        noise = 0.35 * (random.random() * 2.0 - 1.0)
+        val = base_wave + noise
+        
+        # Envelope mimicking paper friction: rises quickly, fades gradually
+        if t < 0.2:
+            env = math.sin(math.pi * (t / 0.4))
+        else:
+            env = math.cos(math.pi * ((t - 0.2) / 0.6))
+        val = val * max(0.0, env)
+        raw_data.append(val)
+        
+    # Apply moving average low pass filter (window=12) to shave off high frequency noise
+    filtered_data = []
+    window_size = 12
+    for idx in range(len(raw_data)):
+        start_idx = max(0, idx - window_size + 1)
+        sub_seg = raw_data[start_idx:idx+1]
+        avg_val = sum(sub_seg) / len(sub_seg)
+        val_int = int(max(-32768, min(32767, avg_val * 32767)))
+        filtered_data.append(val_int)
+        
+    try:
+        with wave.open(whoosh_path, 'w') as f:
+            f.setnchannels(1)
+            f.setsampwidth(2)
+            f.setframerate(sample_rate)
+            for v in filtered_data:
+                f.writeframesraw(struct.pack('<h', v))
+        print("Successfully generated Page Turn SFX [OK]")
+    except Exception as e:
+        print(f"Warning: Failed to write page turn SFX: {e}")
+
+
+    # 2. Pop SFX (0.15초, 800Hz decay sine wave)
+    pop_path = "assets/audio/pop.wav"
+    if not os.path.exists(pop_path):
+        print("Pop SFX sound file not found. Generating dynamically...")
+        sample_rate = 44100
+        duration = 0.15
+        num_samples = int(sample_rate * duration)
+        data = []
+        for i in range(num_samples):
+            t = i / sample_rate
+            # 800Hz sine wave decaying exponentially
+            val = math.sin(2 * math.pi * 800 * t) * math.exp(-30.0 * t)
+            val_int = int(max(-32768, min(32767, val * 32767)))
+            data.append(val_int)
+            
+        try:
+            with wave.open(pop_path, 'w') as f:
+                f.setnchannels(1)
+                f.setsampwidth(2)
+                f.setframerate(sample_rate)
+                for v in data:
+                    f.writeframesraw(struct.pack('<h', v))
+            print("Successfully generated Pop SFX [OK]")
+        except Exception as e:
+            print(f"Warning: Failed to write pop SFX: {e}")
+
+def download_bgm():
+    bgm_path = "assets/audio/lofi_bgm.mp3"
+    if os.path.exists(bgm_path) and os.path.getsize(bgm_path) > 1000000:
+        print("BGM file already exists [OK]")
+        return True
+        
+    import urllib.request
+    # btahir/open-lofi repository's CC0 Lofi Track (Focus 1.mp3)
+    url = "https://raw.githubusercontent.com/btahir/open-lofi/main/music/Focus%2C%20Rituals%20%26%20Daily%20Routines/Focus%201.mp3"
+    print(f"Downloading background Lofi BGM (CC0) from {url}...")
+    try:
+        req = urllib.request.Request(
+            url, 
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+        )
+        with urllib.request.urlopen(req) as response, open(bgm_path, 'wb') as out_file:
+            out_file.write(response.read())
+        print("Successfully downloaded BGM [OK]")
+        return True
+    except Exception as e:
+        print(f"Warning: Failed to download BGM ({e}). Fallback to rendering without BGM.")
+        return False
+
 def apply_shake(clip, intensity=10):
-    """삼각함수를 사용해 프레임을 흔들어 흔들림 효과를 적용합니다."""
+    """[무력화] 화면 전체 흔들림 방지를 위해 오리지널 클립을 그대로 반환합니다."""
+    return clip
+
+def apply_pulse(clip, min_alpha=0.7, frequency=2.0):
+    """[무력화] 화면 전체 번쩍거림 방지를 위해 오리지널 클립을 그대로 반환합니다."""
+    return clip
+
+def apply_focus_ripple(clip):
+    """화면이 흔들리거나 번쩍거리는 대신, 핵심 구강/조음 영역에 노란색/주황색 원형 파문을 1.2초간 오버레이합니다."""
     def effect(get_frame, t):
         frame = get_frame(t)
         h, w = frame.shape[:2]
-        dx = int(intensity * np.sin(2 * np.pi * 8 * t))
-        dy = int(intensity * np.cos(2 * np.pi * 6 * t))
-        M = np.float32([[1, 0, dx], [0, 1, dy]])
-        return cv2.warpAffine(frame, M, (w, h), borderMode=cv2.BORDER_REFLECT)
+        
+        # 씬 시작 후 1.2초 동안만 파문 애니메이션 적용
+        if t < 1.2:
+            # 반경 팽창 (30px -> 180px) 및 투명도 페이드아웃 (0.9 -> 0.0)
+            r = int(30 + (t / 1.2) * 150)
+            alpha = max(0.0, 0.9 - (t / 1.2))
+            
+            # 우측 구강 단면 영역 (x: 880, y: 250 부근)을 강조하도록 조율
+            # 일반 씬에서는 정중앙 또는 핵심 영역 매핑
+            center = (880, 250) if w == 1280 else (w // 2, h // 2)
+            
+            overlay = frame.copy()
+            # 바깥쪽 굵은 옐로우 링 (BGR: [0, 215, 255])
+            cv2.circle(overlay, center, r, (0, 215, 255), 4, lineType=cv2.LINE_AA)
+            # 안쪽 얇은 오렌지 링 (BGR: [0, 165, 255])
+            cv2.circle(overlay, center, max(1, r - 8), (0, 165, 255), 2, lineType=cv2.LINE_AA)
+            
+            # 알파 블렌딩 오버레이
+            frame = cv2.addWeighted(overlay, alpha, frame, 1.0 - alpha, 0)
+            
+        return frame
     return clip.transform(effect)
 
-def apply_pulse(clip, min_alpha=0.7, frequency=2.0):
-    """리드미컬하게 밝기를 변화시켜 점멸 효과를 적용합니다."""
-    def effect(get_frame, t):
-        frame = get_frame(t)
-        factor = min_alpha + (1.0 - min_alpha) * (0.5 + 0.5 * np.sin(2 * np.pi * frequency * t))
-        pulsed = np.clip(frame.astype(float) * factor, 0, 255).astype(np.uint8)
-        return pulsed
-    return clip.transform(effect)
 
 def apply_staccato_rotation(clip, max_angle=5, steps_per_sec=4):
     """시간을 이산적으로 흘려 끊어지는 듯한 회전(staccato) 효과를 적용합니다."""
@@ -283,6 +439,10 @@ def main():
     # Ensure output folders exist
     os.makedirs("assets/audio", exist_ok=True)
     
+    # Generate BGM and SFX dynamically for CapCut style effects
+    generate_sfx_files()
+    download_bgm()
+    
     output_dir = os.path.dirname(args.output)
     if output_dir:
         os.makedirs(output_dir, exist_ok=True)
@@ -372,36 +532,35 @@ def main():
             base_clip = VideoFileClip(video_path)
             
             if args.remove_watermark:
-                print(f"Applying zoom-crop to remove watermark and overlaying mini logo for Scene {scene['id']}...")
+                print(f"Overlaying channel logo directly to cover Veo watermark for Scene {scene['id']}...")
                 width, height = base_clip.size
                 
-                # 1. Dolly Zoom: Crop top-left (78% of width and height gives 998x561, exactly 16:9)
-                crop_w = int(width * 0.78)
-                crop_h = int(height * 0.78)
+                # Veo watermark parameters (1280x720 coordinates from make_intro_outro.py)
+                WM_CX, WM_CY, LOGO_SIZE = 1145, 598, 76
                 
-                # 2. Resize logo to 45x45 (25% of the original size)
-                logo_size = 45
+                # Scale parameters based on actual clip size relative to 1280x720
+                ls = int(LOGO_SIZE * width / 1280) if width != 1280 else LOGO_SIZE
+                
                 overlay_params = None
                 if logo_clip is not None:
-                    resized_logo = cv2.resize(logo_clip, (logo_size, logo_size), interpolation=cv2.INTER_AREA)
+                    resized_logo = cv2.resize(logo_clip, (ls, ls), interpolation=cv2.INTER_AREA)
                     logo_rgb = resized_logo[:, :, :3]
                     logo_alpha = resized_logo[:, :, 3:4] / 255.0
                     
-                    # Align in the bottom-right corner with a 25px margin
-                    margin = 25
-                    ox_start = width - logo_size - margin
-                    oy_start = height - logo_size - margin
-                    ox_end = width - margin
-                    oy_end = height - margin
+                    cx = int(WM_CX * width / 1280)
+                    cy = int(WM_CY * height / 720)
                     
-                    overlay_params = (ox_start, oy_start, ox_end, oy_end, logo_rgb, logo_alpha)
+                    x0 = cx - ls // 2
+                    y0 = cy - ls // 2
+                    x0 = max(0, min(x0, width - ls))
+                    y0 = max(0, min(y0, height - ls))
+                    
+                    overlay_params = (x0, y0, x0 + ls, y0 + ls, logo_rgb, logo_alpha)
                 
                 def remove_logo_frame(frame):
-                    # Step A: Crop and Upscale to push watermark completely out of frame
-                    cropped = frame[0:crop_h, 0:crop_w]
-                    frame_copy = cv2.resize(cropped, (width, height), interpolation=cv2.INTER_LANCZOS4)
+                    frame_copy = frame.copy()
                     
-                    # Step B: Overlay Channel Logo (45x45 mini size)
+                    # Overlay Channel Logo directly over the watermark (no crop, full composition preserved)
                     if overlay_params is not None:
                         ox_s, oy_s, ox_e, oy_e, l_rgb, l_alpha = overlay_params
                         patch = frame_copy[oy_s:oy_e, ox_s:ox_e]
@@ -441,12 +600,9 @@ def main():
         
         # Apply dynamic motion effects if tags exist in scene['motion']
         motion_str = scene.get('motion', '').lower()
-        if "[shake]" in motion_str:
-            print(f"Applying [shake] motion filter for Scene {scene['id']}")
-            base_clip = apply_shake(base_clip, shake_intensity)
-        if "[pulse]" in motion_str:
-            print(f"Applying [pulse] motion filter for Scene {scene['id']}")
-            base_clip = apply_pulse(base_clip, pulse_min_alpha, pulse_freq)
+        if "[shake]" in motion_str or "[pulse]" in motion_str:
+            print(f"Applying [focus_ripple] highlight filter instead of shake/pulse for Scene {scene['id']}")
+            base_clip = apply_focus_ripple(base_clip)
         if "[rotation]" in motion_str:
             print(f"Applying [rotation] motion filter for Scene {scene['id']}")
             base_clip = apply_staccato_rotation(base_clip, rot_max_angle, rot_steps)
@@ -477,10 +633,10 @@ def main():
 
         composite_elements = [base_clip]
 
-        # Bottom subtitle (영어 자막) — burned ONLY when --no-burn-subs is not set.
+        # Bottom subtitle (한국어 자막) — burned ONLY when --no-burn-subs is not set.
         # For toggleable YouTube CC (en/ko/off) we skip burning and export SRT instead.
-        if not args.no_burn_subs and scene['text_en'].strip():
-            wrapped_text = wrap_text(scene['text_en'], max_chars=max_chars)
+        if not args.no_burn_subs and scene['text'].strip():
+            wrapped_text = wrap_text(scene['text'], max_chars=max_chars)
             try:
                 txt_clip = TextClip(
                     text=wrapped_text,
@@ -511,7 +667,72 @@ def main():
             # Align at the bottom with a 70px margin (safe zone)
             y_pos = img_height - txt_h - 70
             txt_clip = txt_clip.with_position(('center', y_pos)).with_duration(duration)
+            txt_clip = apply_text_bounce(txt_clip, duration)
             composite_elements.append(txt_clip)
+
+        # Custom layer effects for 2D Line Craft integration test (Scene 1 and Scene 2)
+        if scene['id'] == 1:
+            # Create a red arrow image using PIL
+            arrow_w, arrow_h = 60, 60
+            arrow_img = Image.new("RGBA", (arrow_w, arrow_h), (0, 0, 0, 0))
+            draw = ImageDraw.Draw(arrow_img)
+            # Draw a sleek red arrow pointing down-left pointing at (5, 55) from (55, 5)
+            draw.line([(55, 5), (20, 40)], fill=(255, 23, 68, 255), width=6)
+            draw.polygon([(5, 55), (35, 50), (15, 30)], fill=(255, 23, 68, 255))
+            
+            arrow_path = "scratch/arrow_effect.png"
+            os.makedirs("scratch", exist_ok=True)
+            arrow_img.save(arrow_path)
+            
+            # Create ImageClip for arrow (fly in from 1100, 150 to 880, 350 between 2.5s and 3.2s)
+            arrow_layer = ImageClip(arrow_path).with_duration(3.0).with_start(2.5)
+            
+            def arrow_pos(t):
+                if t < 0.7:
+                    ratio = t / 0.7
+                    x = 1100 - (1100 - 880) * ratio
+                    y = 150 + (350 - 150) * ratio
+                else:
+                    x = 880
+                    y = 350
+                return (int(x), int(y))
+                
+            arrow_layer = arrow_layer.with_position(arrow_pos)
+            composite_elements.append(arrow_layer)
+            print("Injected [Red Arrow Fly-in] effect layer to Scene 1")
+
+        elif scene['id'] == 2:
+            # Create a target highlight circle with dashed lines and 'ACTIVE' text using PIL
+            circle_size = 150
+            circle_img = Image.new("RGBA", (circle_size, circle_size), (0, 0, 0, 0))
+            draw = ImageDraw.Draw(circle_img)
+            draw.arc([(10, 10), (140, 140)], start=0, end=360, fill=(255, 235, 59, 230), width=4)
+            font_p = r"C:\Windows\Fonts\malgunbd.ttf"
+            try:
+                fnt = ImageFont.truetype(font_p, 16)
+            except IOError:
+                fnt = ImageFont.load_default()
+            draw.text((45, 65), "ACTIVE", font=fnt, fill=(255, 235, 59, 255))
+            
+            circle_path = "scratch/gear_target_effect.png"
+            os.makedirs("scratch", exist_ok=True)
+            circle_img.save(circle_path)
+            
+            # Create ImageClip for target circle (starts at 3.0s, duration 2.5s)
+            circle_layer = ImageClip(circle_path).with_duration(2.5).with_start(3.0)
+            circle_layer = circle_layer.with_position((780, 360))
+            
+            # Slowly rotate
+            def rotate_circle(get_frame, t):
+                frame = get_frame(t)
+                h, w = frame.shape[:2]
+                angle = t * 40 # 40 deg/sec
+                M = cv2.getRotationMatrix2D((w // 2, h // 2), angle, 1.0)
+                return cv2.warpAffine(frame, M, (w, h), borderMode=cv2.BORDER_TRANSPARENT)
+                
+            circle_layer = circle_layer.transform(rotate_circle)
+            composite_elements.append(circle_layer)
+            print("Injected [Target Indicator Rotation] effect layer to Scene 2")
 
         # Check if this scene has a medical annotation overlay
         scene_annotation = annotations.get(str(scene['id']))
@@ -631,16 +852,117 @@ def main():
 
     print("Merging all scenes into final video...")
     final_video = concatenate_videoclips(final_clips, method="compose")
+    
+    # 4K Upscale (3840x2160) for YouTube VP09 codec benefit will be done via optimized ffmpeg post-processing
+    print("Post-processing will upscale final video to 4K (3840x2160) via ffmpeg.")
+
+    # Audio Mixing: Lofi BGM + Transition Whoosh + Pop SFX
+    print("Applying professional audio mixing: Lofi BGM + Transition SFX + Pop Sound Effects...")
+    try:
+        from moviepy import CompositeAudioClip
+        audio_elements = []
+        
+        # 1. Original voice narration audio track
+        if final_video.audio is not None:
+            audio_elements.append(final_video.audio)
+            
+        # 2. Add Background Lofi Music
+        bgm_path = "assets/audio/lofi_bgm.mp3"
+        if os.path.exists(bgm_path):
+            import math
+            bgm_clip = AudioFileClip(bgm_path)
+            if bgm_clip.duration < final_video.duration:
+                # Loop BGM to cover the entire video duration
+                loops = int(math.ceil(final_video.duration / bgm_clip.duration))
+                bgm_clips = []
+                for i in range(loops):
+                    t_start = i * bgm_clip.duration
+                    bgm_clips.append(bgm_clip.with_start(t_start))
+                bgm_full = CompositeAudioClip(bgm_clips).with_duration(final_video.duration)
+            else:
+                bgm_full = bgm_clip.with_duration(final_video.duration)
+            
+            # Lower BGM volume to -16dB (multiply by 0.15) so it doesn't overpower narration
+            bgm_full = bgm_full.with_effects([MultiplyVolume(0.15)])
+            audio_elements.append(bgm_full)
+            
+        # 3. Add sound effects (SFX) at scene transitions
+        whoosh_path = "assets/audio/whoosh.wav"
+        pop_path = "assets/audio/pop.wav"
+        
+        t_curr = intro_dur
+        for ko, en, dur in scene_timings:
+            # Transition whoosh SFX (0.6s) at the start of each scene
+            if os.path.exists(whoosh_path):
+                w_sfx = AudioFileClip(whoosh_path).with_start(t_curr).with_effects([MultiplyVolume(0.12)])
+                audio_elements.append(w_sfx)
+
+                
+            # Pop SFX (0.15s) at 0.15s offset for scenes with dynamic motions (bounce/pulse)
+            if os.path.exists(pop_path):
+                p_sfx = AudioFileClip(pop_path).with_start(t_curr + 0.15).with_effects([MultiplyVolume(0.55)])
+                audio_elements.append(p_sfx)
+                
+            t_curr += dur
+            
+        if audio_elements:
+            mixed_audio = CompositeAudioClip(audio_elements).with_duration(final_video.duration)
+            final_video = final_video.with_audio(mixed_audio)
+            print("Successfully mixed narration, BGM, and transition SFX [OK]")
+    except Exception as mix_err:
+        print(f"Warning: Audio mixing process encountered an error ({mix_err}). Compiling with original audio.")
+
     cpu_cores = os.cpu_count() or 4
     print(f"Utilizing all {cpu_cores} CPU threads for compilation...")
+    
+    # 1. Render 720p temporary file first (10x faster)
+    temp_720p = args.output + ".720p.mp4"
+    if os.path.exists(temp_720p):
+        try:
+            os.remove(temp_720p)
+        except Exception:
+            pass
+            
     final_video.write_videofile(
-        args.output,
+        temp_720p,
         fps=24,
         codec="libx264",
         audio_codec="aac",
         threads=cpu_cores,
         ffmpeg_params=["-threads", str(cpu_cores)]
     )
+    
+    # 2. Upscale to 4K using highly-optimized ffmpeg Lanczos filter
+    print("Upscaling final video to 4K (3840x2160) via optimized ffmpeg Lanczos filter...")
+    upscale_cmd = [
+        "ffmpeg", "-y",
+        "-i", temp_720p,
+        "-vf", "scale=3840:2160:flags=lanczos",
+        "-c:v", "libx264",
+        "-preset", "fast",
+        "-crf", "18",
+        "-c:a", "aac",
+        "-b:a", "192k",
+        args.output
+    ]
+    try:
+        subprocess.run(upscale_cmd, check=True)
+        print("4K Upscale completed successfully via ffmpeg! [OK]")
+        if os.path.exists(temp_720p):
+            try:
+                os.remove(temp_720p)
+            except Exception:
+                pass
+    except Exception as e:
+        print(f"Warning: ffmpeg 4K upscale failed ({e}). Reverting to original 720p.")
+        if os.path.exists(temp_720p):
+            if os.path.exists(args.output):
+                try:
+                    os.remove(args.output)
+                except Exception:
+                    pass
+            os.rename(temp_720p, args.output)
+            
     print(f"SUCCESS: {args.output} has been rendered successfully!")
 
     # --- Export toggleable subtitles (SRT) + optionally embed as soft CC tracks ---
@@ -677,7 +999,7 @@ def main():
                 cmd += ["-map", "0:v", "-map", "0:a?"]
                 for i in range(len(sub_inputs)):
                     cmd += ["-map", str(i + 1)]
-                cmd += ["-c:v", "copy", "-c:a", "copy", "-c:s", "mov_text"]
+                cmd += ["-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-c:s", "mov_text"]
                 for i, (lang, title, _) in enumerate(sub_inputs):
                     cmd += [f"-metadata:s:s:{i}", f"language={lang}",
                             f"-metadata:s:s:{i}", f"title={title}",

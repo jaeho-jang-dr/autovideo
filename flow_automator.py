@@ -848,10 +848,10 @@ def automate_flow(scene_id=None, prompt_file="prompts_for_veo.txt",
             output_path = os.path.abspath(os.path.join(video_dir, f"scene_{num}.mp4"))
             prompt_text = prompts[num]
 
-            if not os.path.exists(image_path):
-                print(f"\n[SKIP] Image not found: {image_path}")
-                skipped.append(num)
-                continue
+            has_image = os.path.exists(image_path)
+            if not has_image:
+                print(f"\n[INFO] Image not found: {image_path} -> Text-to-Video 모드로 진행")
+                image_path = None
 
             # Idempotent: don't re-burn credits on clips we already have.
             if (not force) and (not verify) and os.path.exists(output_path) \
@@ -860,7 +860,7 @@ def automate_flow(scene_id=None, prompt_file="prompts_for_veo.txt",
                 skipped.append(num)
                 continue
 
-            print(f"\n{'='*60}\nScene {num}\n  Image : {image_path}\n"
+            print(f"\n{'='*60}\nScene {num}\n  Image : {image_path if image_path else 'None (Text-to-Video)'}\n"
                   f"  Prompt: {prompt_text[:90]}\n{'='*60}")
 
             try:
@@ -870,10 +870,14 @@ def automate_flow(scene_id=None, prompt_file="prompts_for_veo.txt",
                     save_screenshot(page, f"scene{num}_00_fresh")
 
                 # Step 1: upload
-                print("\n[Step 1] 이미지 업로드...")
-                uploaded = upload_image(page, image_path)
-                page.wait_for_timeout(1500)
-                save_screenshot(page, f"scene{num}_01_upload")
+                if image_path:
+                    print("\n[Step 1] 이미지 업로드...")
+                    uploaded = upload_image(page, image_path)
+                    page.wait_for_timeout(1500)
+                    save_screenshot(page, f"scene{num}_01_upload")
+                else:
+                    print("\n[Step 1] 이미지 업로드 건너뜀 (Text-to-Video)")
+                    uploaded = True
 
                 # Step 2: prompt
                 print("\n[Step 2] 프롬프트 입력...")

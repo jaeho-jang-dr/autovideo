@@ -2,3 +2,4 @@ gTTS==2.5.1
 moviepy==1.0.3
 Pillow==10.3.0
 pygame==2.5.2
+pyJianYingDraft

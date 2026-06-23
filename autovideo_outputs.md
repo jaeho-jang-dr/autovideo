@@ -842,4 +842,20 @@
 | `workout_injury_backup.mp4` | [workout_injury_backup.mp4](file:///D:/Entertainments/DevEnvironment/autovideo/workout_injury_science/workout_injury_backup.mp4) | 128.19 MB | Google Flow(Veo)에서 생성 및 다운로드된 원본 비디오 클립 |
 
 
+## 프로젝트: `line_craft`
+
+### Final Compiled Video (최종 합본 비디오)
+
+| 파일명 (Filename) | 파일 절대 경로 (Absolute File Path) | 파일 크기 (Size) | 상태 및 설명 (Description) |
+| :--- | :--- | :--- | :--- |
+| `line_craft_final.mp4` | [line_craft_final.mp4](file:///D:/Entertainments/DevEnvironment/autovideo/line_craft/line_craft_final.mp4) | 25.30 MB | MoviePy 및 FFmpeg로 믹싱/4K 렌더링된 최종 비디오 |
+
+### Scene Video Clip (개별 씬 클립)
+
+| 파일명 (Filename) | 파일 절대 경로 (Absolute File Path) | 파일 크기 (Size) | 상태 및 설명 (Description) |
+| :--- | :--- | :--- | :--- |
+| `scene_1.mp4` | [scene_1.mp4](file:///D:/Entertainments/DevEnvironment/autovideo/line_craft/scene_1.mp4) | 1.83 MB | Google Flow(Veo)에서 생성 및 다운로드된 원본 비디오 클립 |
+| `scene_2.mp4` | [scene_2.mp4](file:///D:/Entertainments/DevEnvironment/autovideo/line_craft/scene_2.mp4) | 1.68 MB | Google Flow(Veo)에서 생성 및 다운로드된 원본 비디오 클립 |
+
 ---
+

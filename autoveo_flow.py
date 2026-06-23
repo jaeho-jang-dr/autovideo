@@ -36,11 +36,37 @@ import sys
 import time
 import shutil
 import argparse
+import subprocess
 import traceback
 from playwright.sync_api import sync_playwright
 
 class BrowserRebootException(Exception):
     pass
+
+
+def force_kill_profile_chrome():
+    """프로필(assets/chrome_profile)을 쓰는 크롬만 강제 종료하고 락 파일을 제거한다.
+    사용자의 일반 크롬 세션은 CommandLine 필터로 보존한다(절대 건드리지 않음)."""
+    try:
+        ps = (
+            "Get-CimInstance Win32_Process -Filter \"Name='chrome.exe'\" | "
+            "Where-Object { $_.CommandLine -like '*assets\\chrome_profile*' } | "
+            "ForEach-Object { try { Stop-Process -Id $_.ProcessId -Force "
+            "-ErrorAction SilentlyContinue } catch {} }"
+        )
+        subprocess.run(["powershell", "-NoProfile", "-Command", ps], timeout=30)
+    except Exception as e:
+        try:
+            log(f"  [REBOOT] chrome 강제종료 중 경고: {e}")
+        except Exception:
+            pass
+    for lock in ("SingletonLock", "SingletonCookie", "SingletonSocket"):
+        try:
+            p = os.path.join(PROFILE, lock)
+            if os.path.exists(p) or os.path.islink(p):
+                os.remove(p)
+        except Exception:
+            pass
 
 
 for _s in (sys.stdout, sys.stderr):
@@ -172,7 +198,19 @@ def log(m):
 
 def shot(page, name):
     try:
+        # Toggle DevTools F12 to capture console logs for diagnostics
+        try:
+            page.keyboard.press("F12")
+            page.wait_for_timeout(2500)
+        except Exception:
+            pass
         page.screenshot(path=os.path.abspath(os.path.join(DBG, f"{name}.png")))
+        # Toggle DevTools off to avoid interference
+        try:
+            page.keyboard.press("F12")
+            page.wait_for_timeout(500)
+        except Exception:
+            pass
     except Exception:
         pass
 
@@ -256,20 +294,34 @@ def click_text(page, t, ymin=None, timeout=4000):
                     box = loc.bounding_box()
                     if ymin is not None and (not box or box["y"] < ymin):
                         continue
-                    loc.click(timeout=timeout)
-                    return True
+                    try:
+                        loc.click(timeout=timeout, force=True)
+                        return True
+                    except Exception:
+                        loc.click(timeout=timeout)
+                        return True
         except Exception:
             pass
     return False
 
 
 def open_new_project(page):
+    # 이미 프로젝트 페이지에 정상 진입해 있고 프롬프트 입력창이 활성화되어 있다면 바로 진행
+    if "/project/" in page.url:
+        try:
+            if page.locator(PROMPT_SELECTOR).first.is_visible(timeout=3000):
+                log("  [NAV] 이미 프로젝트 화면에 정상 진입해 있습니다. 바로 진행합니다.")
+                return True
+        except Exception:
+            pass
+
     # 브라우저 기동 직후 첫 내비게이션이 net::ERR_CONNECTION_RESET 등으로 일시 실패하는
     # 경우가 있어, 일시적 네트워크 오류에 한해 짧은 백오프로 재시도한다(씬 영구 누락 방지).
     last_err = None
     for attempt in range(4):
         try:
-            page.goto(BASE, wait_until="domcontentloaded", timeout=60000)
+            log(f"  [NAV] {BASE}로 이동 중... (시도 {attempt+1}/4)")
+            page.goto(BASE, wait_until="commit", timeout=30000)
             last_err = None
             break
         except Exception as e:
@@ -329,7 +381,22 @@ def open_new_project(page):
         pass
     dismiss(page)
     if "/project/" not in page.url:
-        click_text(page, "새 프로젝트") or click_text(page, "New project")
+        success_click = (
+            click_text(page, "+ 새 프로젝트") or 
+            click_text(page, "새 프로젝트") or 
+            click_text(page, "+ New project") or 
+            click_text(page, "New project")
+        )
+        if not success_click:
+            try:
+                for sel in ["div:has-text('새 프로젝트')", "div:has-text('New project')", "div:has-text('+')"]:
+                    loc = page.locator(sel).first
+                    if loc.is_visible(timeout=1000):
+                        loc.click(timeout=3000, force=True)
+                        success_click = True
+                        break
+            except Exception:
+                pass
         page.wait_for_timeout(4000)
         dismiss(page)
     for _ in range(40):
@@ -345,11 +412,33 @@ def open_new_project(page):
 def set_image_mode(page, aspect="16:9", count="1x"):
     """Exit Agent mode if needed, then select 이미지 / aspect / count."""
     if not page.evaluate(HAS_CHIP_JS):
-        click_text(page, "에이전트", ymin=540)      # toggle Agent OFF
-        page.wait_for_timeout(900)
+        # 1. Try to close the agent sidebar first if visible
+        closed_sidebar = False
+        for close_sel in [
+            "button[aria-label*='닫기']",
+            "button[aria-label*='Close']",
+            "button[aria-label*='close']",
+            "button:has(.material-icons:has-text('close'))",
+            "button:has-text('close')",
+            ".material-icons:has-text('close')"
+        ]:
+            try:
+                loc = page.locator(close_sel).first
+                if loc.is_visible(timeout=500):
+                    loc.click(timeout=1000)
+                    log(f"  [CLI-AUTO] 에이전트 사이드바 닫기 클릭 성공: {close_sel}")
+                    closed_sidebar = True
+                    page.wait_for_timeout(1000)
+                    break
+            except Exception:
+                pass
+        
+        if not closed_sidebar:
+            click_text(page, "에이전트")      # toggle Agent OFF
+            page.wait_for_timeout(900)
     # open the model chip menu (chip label may be 동영상.. or Nano Banana..)
     for t in ("Nano Banana", "crop_16_9", "동영상", "이미지"):
-        if click_text(page, t, ymin=540):
+        if click_text(page, t):
             break
     page.wait_for_timeout(1200)
     click_text(page, "이미지")
@@ -362,21 +451,170 @@ def set_image_mode(page, aspect="16:9", count="1x"):
     page.wait_for_timeout(500)
 
 
+def set_os_clipboard(text):
+    """OS 클립보드에 UTF-8 텍스트를 안정적으로 올린다 (한글 자모 포함 대응)."""
+    import subprocess, tempfile
+    fd, p = tempfile.mkstemp(suffix=".txt")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            f.write(text)
+        subprocess.run(
+            ["powershell", "-NoProfile", "-Command",
+             f"Get-Content -Raw -Encoding UTF8 -LiteralPath '{p}' | Set-Clipboard"],
+            check=False,
+        )
+    finally:
+        try:
+            os.remove(p)
+        except Exception:
+            pass
+
+
 def fill_prompt(page, text):
     b = page.locator(PROMPT_SELECTOR).first
-    b.click()
-    page.wait_for_timeout(150)
+    
+    # 1. 텍스트 박스 클릭 및 포커스 확보 (다양한 방법 동원)
+    focus_success = False
+    for attempt in range(3):
+        try:
+            if attempt == 0:
+                b.click(timeout=2000)
+            elif attempt == 1:
+                b.click(force=True, timeout=2000)
+            else:
+                b.evaluate("el => el.focus()")
+            focus_success = True
+            break
+        except Exception:
+            page.wait_for_timeout(150)
+            
+    if not focus_success:
+        log("  [WARN] 포커스 획득 실패.")
+        
+    page.wait_for_timeout(200)
+    
+    # 2. 기존 텍스트 비우기 — 실제 키 입력으로 Slate 모델까지 동기화
     try:
-        b.press("Control+A")
-        b.press("Delete")
+        b.click(timeout=1500)
     except Exception:
         pass
-    page.keyboard.type(text, delay=4)
+    try:
+        b.press("Control+a")
+        page.wait_for_timeout(80)
+        b.press("Delete")
+        page.wait_for_timeout(120)
+    except Exception:
+        pass
+
+    # 3. 프롬프트 입력 — OS 클립보드 붙여넣기(Ctrl+V)를 사용한다.
+    def _editor_text():
+        try:
+            return (b.evaluate("el => el.innerText") or "").strip()
+        except Exception:
+            return ""
+
+    target = (text or "").strip()
+    probe = target[:18]
+    pasted_ok = False
+
+    try:
+        set_os_clipboard(text)
+        page.wait_for_timeout(150)
+        b.press("Control+v")
+        page.wait_for_timeout(450)
+        cur = _editor_text()
+        if cur and probe and probe in cur:
+            pasted_ok = True
+            log("  [CLI-AUTO] OS 클립보드 붙여넣기 성공 ✔")
+        else:
+            log(f"  [WARN] 붙여넣기 후 에디터 불일치 (len={len(cur)}).")
+    except Exception as e:
+        log(f"  [WARN] OS 클립보드 붙여넣기 실패: {e}")
+
+    # 4. 폴백 — 실제 키보드 타이핑 (keydown/beforeinput/input 완전 발생 → Slate 모델 갱신)
+    if not pasted_ok:
+        try:
+            b.press("Control+a")
+            page.wait_for_timeout(60)
+            b.press("Delete")
+            page.wait_for_timeout(100)
+            page.keyboard.type(text, delay=12)
+            page.wait_for_timeout(300)
+            cur = _editor_text()
+            if cur and probe and probe in cur:
+                log("  [CLI-AUTO] 키보드 타이핑 폴백 성공 ✔")
+            else:
+                log(f"  [WARN] 타이핑 후에도 에디터 내용 불일치 (len={len(cur)}).")
+        except Exception as e:
+            log(f"  [WARN] 키보드 타이핑 폴백 실패: {e}")
+        
+    # 5. 생성 버튼 활성화 대기 (aria-disabled="true"가 해제될 때까지 최대 3초 대기)
+    try:
+        deadline = time.time() + 3.0
+        btn_activated = False
+        while time.time() < deadline:
+            is_disabled = page.evaluate("""() => {
+                const btn = Array.from(document.querySelectorAll('button')).find(btn => 
+                    btn.textContent.includes('arrow_forward') || 
+                    (btn.getAttribute('aria-label') && (btn.getAttribute('aria-label').includes('만들기') || btn.getAttribute('aria-label').includes('Generate') || btn.getAttribute('aria-label').includes('생성')))
+                );
+                if (!btn) return true;
+                return btn.getAttribute('aria-disabled') === 'true' || btn.disabled;
+            }""")
+            if not is_disabled:
+                log("  [CLI-AUTO] 생성 버튼 활성화 상태 감지 ✔")
+                btn_activated = True
+                break
+            page.wait_for_timeout(200)
+        if not btn_activated:
+            log("  [WARN] 생성 버튼이 여전히 비활성화(aria-disabled=true) 상태입니다. 강제 클릭을 시도합니다.")
+    except Exception:
+        pass
+        
     page.wait_for_timeout(300)
 
 
 def generate(page):
-    return click_text(page, "arrow_forward", ymin=540)
+    # Debug info to trace button selectors and disabled states
+    try:
+        buttons_info = page.evaluate("""() => {
+            return Array.from(document.querySelectorAll('button')).map(b => ({
+                text: b.textContent || '',
+                aria: b.getAttribute('aria-label') || '',
+                disabled: b.disabled,
+                visible: b.getBoundingClientRect().width > 0,
+                className: b.className || '',
+                html: b.outerHTML.substring(0, 150)
+            }));
+        }""")
+        log("=== [DEBUG] 화면의 모든 버튼 목록 ===")
+        for idx, btn in enumerate(buttons_info):
+            if btn['visible']:
+                log(f"Button {idx}: text='{btn['text']}', aria='{btn['aria']}', disabled={btn['disabled']}, html='{btn['html']}'")
+    except Exception as dbg_err:
+        log(f"=== [DEBUG] 버튼 스캔 에러: {dbg_err}")
+
+    # 1. Try with the original text click first (no Y limit to prevent resolution scale bugs)
+    if click_text(page, "arrow_forward", timeout=3000):
+        return True
+        
+    # 2. Selector fallback list for the submit/generate button
+    for sel in [
+        "button:has-text('arrow_forward')",
+        "button[aria-label*='생성']",
+        "button[aria-label*='Generate']",
+        "button:has(.material-icons:has-text('arrow_forward'))",
+        "button:has(svg)",
+        "button:has-text('제출')"
+    ]:
+        try:
+            loc = page.locator(sel).first
+            if loc.is_visible():
+                loc.click(force=True, timeout=2000)
+                return True
+        except Exception:
+            pass
+    return False
 
 
 def wait_image(page, n, timeout_s=40):
@@ -626,7 +864,12 @@ def make_video(page, out_path, motion_prompt, n, budget_s=80):
         log(f"비디오 생성 명령 실행 (시도 {retry_count + 1}/{max_retries})")
         if not generate(page):
             log("[ERR] 동영상 생성 버튼 클릭 실패")
-            return False
+            retry_count += 1
+            if retry_count >= max_retries:
+                log("  [ERR] 3회 연속 비디오 생성 실패. 브라우저 재기동(Reboot)을 위해 예외를 발생시킵니다.")
+                raise BrowserRebootException("3 consecutive video generation failures")
+            page.wait_for_timeout(3000)
+            continue
             
         # 1. 80초 동안 무조건 완성 대기 (디스크 낭비 방지)
         log("동영상 생성 중... (80초 완성 대기)")
@@ -760,6 +1003,77 @@ def make_video(page, out_path, motion_prompt, n, budget_s=80):
     return False
 
 
+def upload_image(page, image_path):
+    """기존 이미지 파일을 Flow 의 숨은 file input 에 주입(set_input_files) + '추가' 확인.
+    (flow_driver.upload 와 동일 로직 — 세종 초상화 등 레퍼런스 업로드용)."""
+    image_path = os.path.abspath(image_path)
+    if not os.path.exists(image_path):
+        log(f"  [UPLOAD] 파일 없음: {image_path}")
+        return False
+    done = False
+    for i, fr in enumerate(page.frames):
+        try:
+            inputs = fr.locator("input[type='file']")
+            for j in range(inputs.count()):
+                try:
+                    inputs.nth(j).set_input_files(image_path, timeout=5000)
+                    log(f"  [UPLOAD] OK set_input_files frame[{i}][{j}] {image_path}")
+                    done = True
+                    break
+                except Exception:
+                    pass
+        except Exception:
+            pass
+        if done:
+            break
+    if not done:
+        log("  [UPLOAD] 어떤 file input 도 이미지를 받지 못함")
+        return False
+    page.wait_for_timeout(2500)
+    for t in ("프롬프트에 추가", "Add to prompt", "추가", "Add"):
+        if click_text(page, t):
+            log(f"  [UPLOAD] 확인 클릭 '{t}'")
+            break
+    page.wait_for_timeout(2500)
+    return True
+
+
+def make_scene_upload(page, n, image_path, motion_prompt):
+    """업로드 기반 씬: 텍스트→이미지 대신 레퍼런스 이미지를 업로드해 첫 프레임으로 쓰고,
+    이후 모션→영상→다운로드는 검증된 make_video 파이프라인을 그대로 사용."""
+    global OUT_DIR
+    out_path = os.path.join(OUT_DIR, f"scene_{n}.mp4")
+    log(f"=== Scene {n} (업로드 기반: {os.path.basename(image_path)}) ===")
+    if not open_new_project(page):
+        log("[ERR] 프로젝트/컴포저 진입 실패")
+        return False
+    shot(page, f"s{n}_00_editor")
+    if not upload_image(page, image_path):
+        log("[ERR] 이미지 업로드 실패")
+        shot(page, f"s{n}_upload_fail")
+        return False
+    page.wait_for_timeout(9000)   # 업로드 타일이 완전히 준비(렌더 완료)될 때까지 충분히 대기
+    animated = False
+    for attempt in range(4):
+        if animate_image(page):
+            animated = True
+            break
+        log(f"  [UPLOAD] 애니메이션 적용 재시도 {attempt+1}/4 (타일 준비 대기)...")
+        page.wait_for_timeout(4000)
+    if not animated:
+        log("[ERR] '애니메이션 적용' 실패")
+        shot(page, f"s{n}_animate_fail")
+        return False
+    page.wait_for_timeout(1500)
+    shot(page, f"s{n}_02_animate")
+    if make_video(page, out_path, motion_prompt, n):
+        log(f"[OK] Scene {n} (업로드) → {out_path}")
+        shot(page, f"s{n}_03_done")
+        return True
+    log(f"[FAIL] Scene {n} 영상 생성/다운로드 실패")
+    return False
+
+
 def make_scene(page, n, image_prompt, motion_prompt, force=False):
     global OUT_DIR
     out_path = os.path.join(OUT_DIR, f"scene_{n}.mp4")
@@ -787,8 +1101,14 @@ def make_scene(page, n, image_prompt, motion_prompt, force=False):
         set_image_mode(page)
         fill_prompt(page, image_prompt)
         if not generate(page):
+            shot(page, f"s{n}_generate_fail")
             log("[ERR] 이미지 생성 버튼 클릭 실패")
-            return False
+            img_retry += 1
+            if img_retry >= max_img_retry:
+                log("  [ERR] 이미지 생성 3회 연속 실패. 브라우저 재기동(Reboot)을 요청합니다.")
+                raise BrowserRebootException("3 consecutive image generation failures")
+            page.wait_for_timeout(3000)
+            continue
             
         if wait_image(page, n):
             img_success = True
@@ -846,6 +1166,8 @@ def main():
     ap.add_argument("--prompts", default="prompts_for_veo.txt")
     ap.add_argument("--scene", type=int)
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--upload", default="", help="이 이미지를 업로드해 첫 프레임으로 사용(텍스트→이미지 생성 대신). --scene N 과 함께 사용.")
+    ap.add_argument("--motion", default="", help="업로드 씬의 모션 프롬프트 직접 지정(미지정 시 프롬프트 파일의 모션 사용).")
     args = ap.parse_args()
 
     scenes = parse_prompts(args.prompts)
@@ -878,17 +1200,47 @@ def main():
 
     todo = [args.scene] if args.scene else sorted(scenes)
 
+    class BrowserWrapper:
+        def __init__(self, obj, is_cdp):
+            self.obj = obj
+            self.is_cdp = is_cdp
+        def close(self):
+            if self.is_cdp:
+                try:
+                    self.obj.disconnect()
+                    log("  [CDP] CDP 연결이 정상적으로 종료(disconnect)되었습니다.")
+                except Exception as e:
+                    log(f"  [CDP] disconnect 오류: {e}")
+            else:
+                try:
+                    self.obj.close()
+                except Exception as e:
+                    log(f"  [BROWSER] close 오류: {e}")
+
     ok, fail = [], []
     with sync_playwright() as p:
         def launch_browser():
-            c = p.chromium.launch_persistent_context(
-                PROFILE, channel="chrome", headless=False, locale="ko-KR", no_viewport=True,
-                accept_downloads=True, downloads_path=DL_DIR,
-                ignore_default_args=["--enable-automation"],
-                args=["--start-maximized", "--disable-blink-features=AutomationControlled",
-                      "--no-first-run", "--disable-session-crashed-bubble", "--lang=ko-KR"])
-            pg = c.pages[0] if c.pages else c.new_page()
-            return c, pg
+            import urllib.request
+            try:
+                urllib.request.urlopen("http://localhost:9222/json", timeout=2)
+                log("  [CDP] localhost:9222에서 실행 중인 크롬 감지! CDP 연결을 시도합니다.")
+                c = p.chromium.connect_over_cdp("http://localhost:9222")
+                if c.contexts:
+                    ctx = c.contexts[0]
+                    pg = ctx.pages[0] if ctx.pages else ctx.new_page()
+                else:
+                    pg = c.new_page()
+                return BrowserWrapper(c, True), pg
+            except Exception:
+                log("  [CDP] localhost:9222 감지 실패. 새 브라우저 컨텍스트를 기동합니다.")
+                c = p.chromium.launch_persistent_context(
+                    PROFILE, channel="chrome", headless=False, locale="ko-KR", no_viewport=True,
+                    accept_downloads=True, downloads_path=DL_DIR,
+                    ignore_default_args=["--enable-automation"],
+                    args=["--start-maximized", "--disable-blink-features=AutomationControlled",
+                          "--no-first-run", "--disable-session-crashed-bubble", "--lang=ko-KR"])
+                pg = c.pages[0] if c.pages else c.new_page()
+                return BrowserWrapper(c, False), pg
 
         ctx, page = launch_browser()
         idx = 0
@@ -907,7 +1259,10 @@ def main():
                 continue
 
             try:
-                success = make_scene(page, n, *scenes[n], force=args.force)
+                if args.upload:
+                    success = make_scene_upload(page, n, args.upload, args.motion or scenes[n][1])
+                else:
+                    success = make_scene(page, n, *scenes[n], force=args.force)
                 
                 # 성공 및 실패 여부를 진행도 파일에 기록
                 import json
@@ -924,13 +1279,14 @@ def main():
                     fail.append(n)
                 idx += 1
             except BrowserRebootException as re_err:
-                log(f"[REBOOT] 브라우저 재기동 요구 발생: {re_err}. 5초 대기 후 세션을 재시작합니다.")
+                log(f"[REBOOT] 브라우저 재기동 요구 발생: {re_err}. 크롬 강제 종료 후 5초 쿨다운 뒤 세션을 재시작합니다.")
                 try:
                     ctx.close()
                 except Exception:
                     pass
-                time.sleep(5)
-                ctx, page = launch_browser()
+                force_kill_profile_chrome()   # 제약: 프로필 크롬 강제 종료 + 락 제거
+                time.sleep(5)                  # 제약: 5초 쿨다운
+                ctx, page = launch_browser()   # 제약: 세션 재기동
             except Exception as e:
                 log(f"[ERR] Scene {n} 일반 에러: {e}")
                 traceback.print_exc()
