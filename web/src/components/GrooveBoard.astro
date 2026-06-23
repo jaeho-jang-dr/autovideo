@@ -1697,6 +1697,18 @@ const tr = t(lang);
     }
   }
 
+  // 문장 전체를 일반 구어체 속도로 자연스럽게 연음 법칙을 살려 낭독하는 함수
+  function speakSentenceNatural(text: string) {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'ko-KR';
+      utterance.rate = 1.08; // 1.08배속으로 더 자연스럽고 시원시원한 일반 대화 톤
+      utterance.pitch = 1.0;
+      window.speechSynthesis.speak(utterance);
+    }
+  }
+
   // 영어-한글 로컬 번역 캐시 사전
   const LOCAL_TRANSLATION_MAP: Record<string, string> = {
     'water please': '물 주세요',
@@ -2206,13 +2218,12 @@ const tr = t(lang);
 
   if (btnSpeakWord) {
     btnSpeakWord.addEventListener('click', () => {
-      if (state.word) {
-        playSentence(state.word);
-      } else {
-        const text = renderSyllable();
-        if (text !== '—') {
-          playSentence(text);
-        }
+      const currentText = renderSyllable();
+      const finalSyllable = (currentText !== '—') ? currentText : '';
+      const fullText = state.word + finalSyllable;
+      
+      if (fullText.trim()) {
+        speakSentenceNatural(fullText);
       }
     });
   }
