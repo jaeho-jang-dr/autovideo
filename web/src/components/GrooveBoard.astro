@@ -1846,7 +1846,11 @@ const tr = t(lang);
       const jamo = btn.getAttribute('data-jamo') || '';
       const isCho = btn.classList.contains('cho');
       
-      await ensureAudio();
+      try {
+        await ensureAudio();
+      } catch (err) {
+        console.warn("AudioContext init failed, proceeding without sound:", err);
+      }
       
       // 햅틱 효과 클래스 트리거
       btn.classList.add('hit');
