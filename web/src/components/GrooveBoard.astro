@@ -41,6 +41,8 @@ const tr = t(lang);
             <span id="display-syllable" class="syllable">—</span>
           </div>
           
+          <div id="no-audio-badge" class="no-audio-badge hidden">⚠️ {lang === 'ko' ? '소리 없음' : 'No Sound'}</div>
+          
           <div id="articulatory-popup" class="anatomy-card glass hidden">
             <div class="anatomy-avatar" id="anatomy-emoji">👅</div>
             <div class="anatomy-text">
@@ -468,6 +470,26 @@ const tr = t(lang);
   border-radius: 8px !important;
   border-color: var(--gv-border-active);
   z-index: 10;
+}
+
+.no-audio-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: hsl(0 80% 40% / 0.85);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid hsl(0 100% 50% / 0.5);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.syllable.no-audio {
+  opacity: 0.35;
+  filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.3));
 }
 
 .anatomy-avatar {
@@ -1412,13 +1434,68 @@ const tr = t(lang);
     return String.fromCharCode(0xAC00 + (ci * 21 + ji) * 28 + finalJongIdx);
   }
 
+  // 970개 음원 데이터베이스 존재 여부 체크 함수
+  function hasAudio(char: string): boolean {
+    if (!char || char === '—') return false;
+    
+    // 1. 단독 자음/모음 에셋 확인
+    if (JAMO_AUDIO_MAP[char]) return true;
+    if (char === '•') return true;
+    
+    // 2. 1글자 완성형 음절 분해 분석
+    if (char.length === 1) {
+      const code = char.charCodeAt(0);
+      if (code >= 0xAC00 && code <= 0xD7A3) {
+        const offset = code - 0xAC00;
+        const jongIdx = offset % 28;
+        const jungIdx = Math.floor(offset / 28) % 21;
+        const choIdx = Math.floor(Math.floor(offset / 28) / 21);
+        
+        const cho = CHO_LIST[choIdx];
+        const jung = JUNG_LIST[jungIdx];
+        const jong = JONG_LIST[jongIdx];
+        
+        // 필수 추가 상용 음절 목록
+        const extraSyllables = new Set([
+          '물', '주', '세', '요', '밥', '맛', '있', '어', '화', '장', '실', '디', '에', '휴', '지', '여', '권', '기', '비', '행', '표', '차',
+          '없', '닭', '앉', '않', '읽', '잃', '짧', '넓', '밟', '맑', '젊', '읊', '끓', '굶', '값', '몫', '넋', '삯', '핥', '흙'
+        ]);
+        if (extraSyllables.has(char)) return true;
+        
+        // 규칙 1: 초성 5개(ㄱ,ㄴ,ㅁ,ㅅ,ㅇ) 기반 조합 + 종성 6개(없음, ㄱ, ㄴ, ㅁ, ㅅ, ㅇ)
+        const choseongsBase = new Set(['ㄱ', 'ㄴ', 'ㅁ', 'ㅅ', 'ㅇ']);
+        const jongseongsBase = new Set(['', 'ㄱ', 'ㄴ', 'ㅁ', 'ㅅ', 'ㅇ']);
+        if (choseongsBase.has(cho) && jongseongsBase.has(jong)) {
+          return true;
+        }
+        
+        // 규칙 2: 19개 전체 자음 * 21개 모음 * 받침 없음
+        if (jong === '') {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
   function updateDisplay() {
     const displayEl = document.getElementById('display-syllable');
+    const badgeEl = document.getElementById('no-audio-badge');
     if (!displayEl) return;
     
     const text = renderSyllable();
     displayEl.textContent = text;
     state.currentSyllable = text !== '—' && text.length === 1 && text !== state.cho ? text : '';
+
+    // 소리 지원 여부 실시간 스캔 및 배지 제어
+    const isComposite = text !== '—' && text !== state.cho; // 단순 단독자음 입력이 아닌 조어 상태
+    if (isComposite && !hasAudio(text)) {
+      displayEl.classList.add('no-audio');
+      if (badgeEl) badgeEl.classList.remove('hidden');
+    } else {
+      displayEl.classList.remove('no-audio');
+      if (badgeEl) badgeEl.classList.add('hidden');
+    }
 
     // 모핑 팝 애니메이션
     displayEl.classList.add('pop');
@@ -1555,6 +1632,13 @@ const tr = t(lang);
   };
 
   function speakKo(text: string) {
+    // 조어된 글자 중 오디오 데이터베이스에 없는 글자는 읽지 않고 즉시 스킵
+    const isComposite = text !== '—' && !JAMO_AUDIO_MAP[text] && text !== '•';
+    if (isComposite && !hasAudio(text)) {
+      console.warn("Audio asset unavailable for syllable, skipping playback:", text);
+      return;
+    }
+
     // 낱자 기호가 입력된 경우 맵핑 테이블을 통해 한글 명칭 파일명으로 변환
     const filename = JAMO_AUDIO_MAP[text] || text;
     
