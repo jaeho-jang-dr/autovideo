@@ -2009,10 +2009,30 @@ const tr = t(lang);
     }
   }
 
+  function shouldFallbackToNatural(text: string): boolean {
+    for (const char of text) {
+      // 일반적인 문장 부호 및 공백, 특수문자 무시
+      if (/[\s.,\/#!$%\^&\*;:{}=\-_`~()?"'’“•—\[\]\+\<\>\@\|\\`]/g.test(char)) {
+        continue;
+      }
+      // 로컬 성우 음원이 없는 실질적 글자가 하나라도 존재하면 폴백
+      if (!hasAudio(char)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   function playSentence(text: string) {
     stopSentenceQueue(); // 기존 재생 중이던 것 중단
 
     if (!text.trim()) return;
+
+    // 만약 데이터베이스에 없는 글자가 포함되어 있다면, 낱자 단위 재생을 피하고 문장 통낭독으로 자동 우회
+    if (shouldFallbackToNatural(text)) {
+      speakSentenceNatural(text);
+      return;
+    }
 
     // 문자를 글자 하나하나 단위로 쪼개기 (공백 및 특수문자 유지)
     audioQueue = Array.from(text);
