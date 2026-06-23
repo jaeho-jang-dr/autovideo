@@ -26,6 +26,11 @@ export const ui = {
     published_badge: '발행됨',
     upcoming_badge: '예정',
     footer: '교육은 즐거워야 합니다.',
+    nav_groove: '그루브',
+    groove_title: '한글 그루브 박스',
+    groove_sub: '자모를 두드려 한글을 만들고, AI 코치와 발음을 맞춰보세요',
+    groove_mic: '발음 코치 🎤',
+    groove_play: '테마송 재생',
   },
   en: {
     nav_home: 'Home',
@@ -51,6 +56,11 @@ export const ui = {
     published_badge: 'Published',
     upcoming_badge: 'Upcoming',
     footer: 'Learning should be a joy.',
+    nav_groove: 'Groove',
+    groove_title: 'Hangeul Groove Box',
+    groove_sub: 'Tap the jamo, build Hangeul, and match your pronunciation with the AI coach',
+    groove_mic: 'Pronunciation Coach 🎤',
+    groove_play: 'Play theme',
   },
 } as const;
 
