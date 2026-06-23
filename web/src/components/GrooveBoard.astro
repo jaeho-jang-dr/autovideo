@@ -144,7 +144,8 @@ const tr = t(lang);
       </div>
       <div class="word-display-row">
         <span class="lang-badge kor">KOR</span>
-        <span id="word-text" class="word-text">—</span>
+        <input type="text" id="word-text" class="word-text word-text-input" value="" placeholder="여기에 한글을 붙여넣으세요 (Paste Korean here)" />
+        <button id="btn-clear-all" class="clear-all-btn" aria-label="Clear all words" title="한꺼번에 지우기" style="display: none;">×</button>
       </div>
       <!-- 발음 법칙 및 변음 현상 안내 바 추가 -->
       <div id="phonetic-row" class="phonetic-row glass hidden">
@@ -1352,6 +1353,58 @@ const tr = t(lang);
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+/* 단어 조립판 한꺼번에 지우기(×) 버튼 */
+.clear-all-btn {
+  background: transparent;
+  border: none;
+  color: var(--gv-text-2);
+  font-size: 1.5rem;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0 8px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  user-select: none;
+  margin-left: auto; /* 우측 정렬 유지 */
+  flex-shrink: 0;
+}
+
+.clear-all-btn:hover {
+  color: var(--gv-neon-cho);
+  transform: scale(1.2);
+  text-shadow: 0 0 8px var(--gv-neon-cho);
+}
+
+@media (max-width: 420px) {
+  .clear-all-btn {
+    font-size: 1.4rem;
+    padding: 0 6px;
+  }
+}
+
+/* 단어 조립판 한글 붙여넣기(Paste) 입력 박스 — 기존 .word-text 스펙에 녹아들도록 처리 */
+.word-text-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--gv-neon-cho);
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-shadow: 0 0 6px hsl(160, 100%, 50%, 0.3);
+}
+.word-text-input::placeholder {
+  color: var(--gv-text-3, var(--gv-text-2));
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-shadow: none;
+  opacity: 0.6;
+}
 </style>
 
 <script>
@@ -1605,8 +1658,9 @@ const tr = t(lang);
     '해돋이': { pron: '[해도지]', ruleKo: '구개음화: 받침 ㄷ이 이와 만나 [ㅈ]로 발음', ruleEn: 'Palatalization: ㄷ sound changes to [ㅈ] before 이' },
     '끝이': { pron: '[끄치]', ruleKo: '구개음화: 받침 ㅌ이 이와 만나 [ㅊ]로 발음', ruleEn: 'Palatalization: ㅌ sound changes to [ㅊ] before 이' },
     '붙여': { pron: '[부쳐]', ruleKo: '구개음화: 받침 ㅌ이 여와 만나 [쳐]로 발음', ruleEn: 'Palatalization: ㅌ sound changes to [ㅊ] before 여' },
-    '값이 싸다': { pron: '[갑씨 싸다]', ruleKo: '연음 법칙: 겹받침 ㅄ에서 ㅅ이 뒤의 이로 연음되어 [갑씨]로 발음되고, 싸다와 매끄럽게 연결', ruleEn: 'Linking Rule: The second consonant ㅅ in ㅄ carries over to 이, pronounced [gap-ssi ssada]' },
-    '값이': { pron: '[갑씨]', ruleKo: '연음 법칙 (된소리): 겹받침 ㅄ 뒤에 모음 이가 오면, 뒷자음 ㅅ이 된소리 [ㅆ]으로 연음되어 발음', ruleEn: 'Linking Rule (Tense): The second consonant ㅅ in ㅄ carries over as double consonant [ㅆ] before 이' }
+    '값이 싸다': { pron: '[갑시 싸다]', ruleKo: '연음 법칙: 겹받침 ㅄ에서 ㅅ이 뒤의 이로 연음되어 [갑시]로 발음되고, 싸다와 연결됩니다.', ruleEn: 'Linking Rule: The second consonant ㅅ in ㅄ carries over to 이, pronounced [gap-si ssada]' },
+    '값이': { pron: '[갑시]', ruleKo: '연음 법칙: 겹받침 ㅄ 뒤에 모음 이가 오면, 뒷자음 ㅅ이 다음 첫소리로 넘어가 [갑시]로 발음됩니다.', ruleEn: 'Linking Rule: When 이 follows the cluster ㅄ, the second consonant ㅅ carries over to the next syllable, pronounced [gap-si]' },
+    '읽는다': { pron: '[익는다]', ruleKo: '자음 단순화 및 비음화: 겹받침 ㄺ 뒤에 ㄴ이 오면 ㄹ이 탈락하고, ㄱ이 ㄴ을 만나 비음 [ㅇ]으로 변하여 최종적으로 [익는다] 또는 [잉는다]로 발음됩니다.', ruleEn: 'Cluster simplification & nasalization: before ㄴ the cluster ㄺ drops ㄹ, and ㄱ nasalizes to [ㅇ], yielding [ik-neunda] / [ing-neunda]' }
   };
 
   // 발음 법칙 실시간 갱신 함수
@@ -1647,9 +1701,16 @@ const tr = t(lang);
   }
 
   function updateWordDisplay() {
-    const wordTextEl = document.getElementById('word-text');
+    const wordTextEl = document.getElementById('word-text') as HTMLInputElement | null;
     if (wordTextEl) {
-      wordTextEl.textContent = state.word || '—';
+      // input 박스이므로 value로 동기화 (비었을 땐 빈 문자열을 셋해 placeholder가 보이도록)
+      wordTextEl.value = state.word;
+    }
+
+    // 단어가 있으면 한꺼번에 지우기(×) 버튼 노출, 비어 있으면 숨김
+    const clearAllEl = document.getElementById('btn-clear-all');
+    if (clearAllEl) {
+      clearAllEl.style.display = state.word ? 'flex' : 'none';
     }
 
     const englishTextEl = document.getElementById('english-text');
@@ -1804,7 +1865,7 @@ const tr = t(lang);
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'ko-KR';
-      utterance.rate = 0.92;
+      utterance.rate = 2.5; // 2.5배속 폴백 낭독 (0.92 -> 2.5 상향)
       window.speechSynthesis.speak(utterance);
     }
   }
@@ -1814,7 +1875,8 @@ const tr = t(lang);
     let processed = text;
     // 발음 치환 테이블 정의 (기계음 SpeechSynthesis 오독 방지 및 연음 구현용)
     const SUBSTITUTE_MAP: Record<string, string> = {
-      '값이': '갑씨',
+      '값이': '갑시',
+      '읽는다': '익는다',
       '굳이': '구지',
       '같이': '가치',
       '돋보기': '돋뽀기',
@@ -1852,7 +1914,7 @@ const tr = t(lang);
       const phoneticText = getPhoneticSubstitute(text);
       const utterance = new SpeechSynthesisUtterance(phoneticText);
       utterance.lang = 'ko-KR';
-      utterance.rate = 1.08; // 1.08배속으로 더 자연스럽고 시원시원한 일반 대화 톤
+      utterance.rate = 2.5; // 2.5배속 쾌속 낭독 (1.08 -> 2.5 상향)
       utterance.pitch = 1.0;
       window.speechSynthesis.speak(utterance);
     }
@@ -1973,7 +2035,7 @@ const tr = t(lang);
     if (char === ' ') {
       setTimeout(() => {
         playNextInQueue();
-      }, 350); // 띄어쓰기는 350ms 무음 딜레이
+      }, 140); // 띄어쓰기 무음 딜레이 (350ms -> 140ms, 2.5배 단축)
       return;
     }
 
@@ -1983,15 +2045,16 @@ const tr = t(lang);
     
     activeAudio = new Audio(audioUrl);
     activeAudio.volume = 0.85;
+    activeAudio.playbackRate = 2.5; // 2.5배속 쾌속 재생 설정
 
     let fallbackTriggered = false;
 
     const handleNext = () => {
       if (fallbackTriggered) return;
-      // 다음 글자 재생 전 약간의 글자 간 간격(80ms)을 주어 자연스럽게 연결
+      // 다음 글자 재생 전 글자 간 간격 (80ms -> 32ms, 2.5배 단축)으로 빠르게 연결
       setTimeout(() => {
         playNextInQueue();
-      }, 80);
+      }, 32);
     };
 
     activeAudio.addEventListener('ended', handleNext);
@@ -2256,6 +2319,55 @@ const tr = t(lang);
     });
   }
 
+  // 단어 조립판 한꺼번에 지우기(×) 버튼
+  const btnClearAll = document.getElementById('btn-clear-all');
+  if (btnClearAll) {
+    btnClearAll.addEventListener('click', () => {
+      state.word = '';
+      state.english = '';
+      state.cho = null;
+      state.jung = null;
+      state.jong = null;
+      state.jamoSeq = [];
+      state.currentSyllable = '';
+      state.lastPadType = null;
+      state.lastPadValue = null;
+      state.cycleIdx = 0;
+
+      const engInput = document.getElementById('input-english') as HTMLInputElement;
+      if (engInput) engInput.value = '';
+
+      updateDisplay();
+      updateWordDisplay();
+
+      const coachBubble = document.getElementById('coach-bubble');
+      if (coachBubble) {
+        coachBubble.textContent = "조립판이 한꺼번에 지워졌습니다.";
+      }
+    });
+  }
+
+  // 단어 조립판 KOR input 박스: 직접 타이핑/외부 한글 복사-붙여넣기(Paste) 실시간 동기화
+  const wordTextEl = document.getElementById('word-text') as HTMLInputElement | null;
+  if (wordTextEl) {
+    const syncInput = () => {
+      state.word = wordTextEl.value;
+      updatePhonetics();
+      checkGameAnswer();
+
+      // 붙여넣은 텍스트가 있으면 한꺼번에 지우기(×) 버튼 즉시 노출
+      const btnClearAll = document.getElementById('btn-clear-all');
+      if (btnClearAll) {
+        btnClearAll.style.display = state.word ? 'flex' : 'none';
+      }
+    };
+
+    wordTextEl.addEventListener('input', syncInput);
+    wordTextEl.addEventListener('paste', () => {
+      setTimeout(syncInput, 50); // 클립보드 텍스트가 입력창에 안착된 후 스캔하도록 딜레이
+    });
+  }
+
   if (btnBackspace) {
     btnBackspace.addEventListener('click', () => {
       // 1. 현재 조립 중인 한글이 있을 때
@@ -2370,9 +2482,12 @@ const tr = t(lang);
       const currentText = renderSyllable();
       const finalSyllable = (currentText !== '—') ? currentText : '';
       const fullText = state.word + finalSyllable;
-      
+
       if (fullText.trim()) {
-        speakSentenceNatural(fullText);
+        // 기계음(SpeechSynthesis) 전체 읽기를 제거하고, 한글 발음 법칙으로 연음화한 뒤
+        // 로컬 gTTS 성우 음원(/audio/jamo/*.mp3)을 낱자 단위로 순차 결합 재생한다.
+        const phoneticText = getPhoneticSubstitute(fullText);
+        playSentence(phoneticText);
       }
     });
   }
