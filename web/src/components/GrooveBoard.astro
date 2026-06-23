@@ -742,24 +742,25 @@ const tr = t(lang);
   color: #fff;
   margin: 0;
 }
-
-/* 글로벌 단어 조립판 */
+/* 글로벌 단어 조립판 (세로 넉넉하게 확장하여 받침 짤림 해결 및 약간 상향 정렬) */
 .word-board-section {
   display: flex;
   flex-direction: column;
-  padding: 10px 14px; /* 단어 조립판 큼직하게 확장 */
+  padding: 8px 14px 16px 14px; /* 위쪽 패딩은 8px로 좁혀 위로 올리고, 아래쪽 패딩은 16px로 넓혀 받침 공간 확보 */
   margin-bottom: 4px;
   background: hsl(245 35% 8% / 0.7) !important;
   border-color: var(--gv-border-active);
-  min-height: 64px;
-  justify-content: center;
+  min-height: 80px; /* 64px -> 80px로 넉넉하게 확장 */
+  justify-content: flex-start; /* 글자를 그 칸의 약간 위로 쓰여지게 만듦 */
+  overflow: visible; /* 잘림 원천 차단 */
 }
 
 .word-display-row {
   display: flex;
   align-items: center;
   gap: 8px;
-  min-height: 24px;
+  min-height: 32px; /* 24px -> 32px로 높임 */
+  transform: translateY(-2px); /* 글자를 약간 위로 들어올림 */
 }
 
 .lang-badge {
@@ -786,6 +787,7 @@ const tr = t(lang);
   font-weight: 900;
   color: var(--gv-text-0);
   word-break: break-all;
+  line-height: 1.45; /* line-height를 충분히 주어 받침 짤림 해결 */
   text-shadow: 0 0 15px hsl(182 100% 50% / 0.25);
 }
 
@@ -1303,22 +1305,67 @@ const tr = t(lang);
 
   // 천지인 모음 조합 결정표 (jamoSeq.join('') -> 완성 중성)
   const VOWEL_COMBINATIONS: Record<string, string> = {
+    // 기본 단모음
+    'ㅣ': 'ㅣ',
+    'ㅡ': 'ㅡ',
+    '•': '•',
+    
+    // ㅣ, • 조합 (ㅏ, ㅐ, ㅑ, ㅒ, ㅓ, ㅔ, ㅕ, ㅖ)
     'ㅣ•': 'ㅏ',
     'ㅣ••': 'ㅑ',
     '•ㅣ': 'ㅓ',
     '••ㅣ': 'ㅕ',
+    'ㅣ•ㅣ': 'ㅐ',
+    'ㅣ••ㅣ': 'ㅒ',
+    '•ㅣㅣ': 'ㅔ',
+    '••ㅣㅣ': 'ㅖ',
+    
+    // ㅡ, • 조합 (ㅗ, ㅛ, ㅜ, ㅠ)
     '•ㅡ': 'ㅗ',
-    '••ㅡ': '요',
+    '••ㅡ': 'ㅛ',
     'ㅡ•': 'ㅜ',
     'ㅡ••': 'ㅠ',
-    'ㅡ': 'ㅡ',
-    'ㅣ': 'ㅣ',
-    'ㅡㅣ': 'ㅢ',
-    'ㅏㅣ': 'ㅐ',
-    'ㅓㅣ': 'ㅔ'
+    
+    // 이중 모음 결합 (와, 왜, 외, 워, 웨, 위, 의)
+    '•ㅡㅣ•': 'ㅘ',
+    '•ㅡㅣ•ㅣ': 'ㅙ',
+    '•ㅡㅣ': 'ㅚ',
+    'ㅡ••ㅣ': 'ㅝ',
+    'ㅡ••ㅣㅣ': 'ㅞ',
+    'ㅡ•ㅣ': 'ㅟ',
+    'ㅡㅣ': 'ㅢ'
   };
 
-  // ── Web Audio API ──
+  // 겹받침 합성 매핑 테이블
+  const COMPLEX_JONG_MAP: Record<string, string> = {
+    'ㄱㅅ': 'ㄳ',
+    'ㄴㅈ': 'ㄵ',
+    'ㄴㅎ': 'ㄶ',
+    'ㄹㄱ': 'ㄺ',
+    'ㄹㅁ': 'ㄻ',
+    'ㄹㅂ': 'ㄼ',
+    'ㄹㅅ': 'ㄽ',
+    'ㄹㅌ': 'ㄾ',
+    'ㄹㅍ': 'ㄿ',
+    'ㄹㅎ': 'ㅀ',
+    'ㅂㅅ': 'ㅄ'
+  };
+
+  // 겹받침 분해 매핑 테이블
+  const DECOMPOSE_JONG_MAP: Record<string, [string, string]> = {
+    'ㄳ': ['ㄱ', 'ㅅ'],
+    'ㄵ': ['ㄴ', 'ㅈ'],
+    'ㄶ': ['ㄴ', 'ㅎ'],
+    'ㄺ': ['ㄹ', 'ㄱ'],
+    'ㄻ': ['ㄹ', 'ㅁ'],
+    'ㄼ': ['ㄹ', 'ㅂ'],
+    'ㄽ': ['ㄹ', 'ㅅ'],
+    'ㄾ': ['ㄹ', 'ㅌ'],
+    'ㄿ': ['ㄹ', 'ㅍ'],
+    'ㅀ': ['ㄹ', 'ㅎ'],
+    'ㅄ': ['ㅂ', 'ㅅ']
+  };
+
   let audioCtx: AudioContext | null = null;
   let songBuffer: AudioBuffer | null = null;
   let songSource: AudioBufferSourceNode | null = null;
@@ -1404,40 +1451,44 @@ const tr = t(lang);
     checkGameAnswer();
   }
 
+  // 천지인 입력 가능한 모든 유효 접두사 집합 생성
+  const VALID_VOWEL_PREFIXES = new Set<string>();
+  for (const key in VOWEL_COMBINATIONS) {
+    for (let i = 1; i <= key.length; i++) {
+      VALID_VOWEL_PREFIXES.add(key.slice(0, i));
+    }
+  }
+
   // 모음 상태 처리기
   function composeVowel(seq: string[]) {
-    // 1단계: 빌딩 블록 조합
-    let combined = seq.join('');
+    const combined = seq.join('');
+    
+    // 1. 완벽히 매칭되는 모음이 있으면 그것을 반환
     if (VOWEL_COMBINATIONS[combined]) {
       return VOWEL_COMBINATIONS[combined];
     }
     
-    // 2단계: 복합 매칭 (예: ㅣ + • = ㅏ 이고, 여기에 ㅣ 추가 시 ㅐ)
-    let base = '';
-    for (let char of seq) {
-      if (!base) {
-        base = char;
-      } else {
-        const next = base + char;
-        if (VOWEL_COMBINATIONS[next]) {
-          base = VOWEL_COMBINATIONS[next];
-        } else {
-          base += char;
+    // 2. 만약 현재 입력 시퀀스가 유효한 모음의 접두사 중 하나라면,
+    // 매칭되는 도중이므로 임시로 빈 모음이나 이전 단계 모음을 유지
+    if (VALID_VOWEL_PREFIXES.has(combined)) {
+      // 최대한 매칭 가능한 이전 단계 모음이라도 찾아서 반환 (예: "•ㅡㅣ" 까지 쳤을 때 "ㅚ" 반환)
+      for (let len = combined.length - 1; len > 0; len--) {
+        const sub = combined.slice(0, len);
+        if (VOWEL_COMBINATIONS[sub]) {
+          return VOWEL_COMBINATIONS[sub];
         }
       }
+      return null;
     }
     
-    const result = VOWEL_COMBINATIONS[base] || null;
-    
-    // 안전 장치: 조합이 성립되지 않고 천지인 입력 갯수가 3개 이상 쌓이면, 
-    // 마지막에 누른 천지인 하나만 남겨서 조어가 끊기지 않도록 방어
-    if (!result && seq.length >= 3) {
+    // 3. 만약 유효하지 않은 조합 시퀀스가 쌓였다면 안전하게 마지막 입력만 남김
+    if (seq.length > 0) {
       const last = seq[seq.length - 1];
       state.jamoSeq = [last];
       return VOWEL_COMBINATIONS[last] || null;
     }
     
-    return result;
+    return null;
   }
 
   // 조음 상형 팝업 제어
@@ -1819,15 +1870,23 @@ const tr = t(lang);
             state.cycleIdx = 0;
           }
         } else {
-          // 종성(jong) 단계 순환
+          // 종성(jong) 단계 순환 및 겹받침 합성
           if (state.lastPadType === 'jong' && state.lastPadValue === jamo) {
             state.cycleIdx = (state.cycleIdx + 1) % cycle.length;
             state.jong = cycle[state.cycleIdx];
           } else {
-            state.jong = jamo;
-            state.lastPadType = 'jong';
-            state.lastPadValue = jamo;
-            state.cycleIdx = 0;
+            // 이미 종성이 존재하고 복자음 합성이 가능한 경우
+            if (state.jong && COMPLEX_JONG_MAP[state.jong + jamo]) {
+              state.jong = COMPLEX_JONG_MAP[state.jong + jamo];
+              state.lastPadType = 'jong';
+              state.lastPadValue = jamo;
+              state.cycleIdx = 0;
+            } else {
+              state.jong = jamo;
+              state.lastPadType = 'jong';
+              state.lastPadValue = jamo;
+              state.cycleIdx = 0;
+            }
           }
         }
         
@@ -1838,9 +1897,21 @@ const tr = t(lang);
       } else {
         // 모음 입력
         if (state.cho && state.jong) {
-          // 연음 법칙
+          // 연음 법칙: 겹받침(복자음)이 있을 경우 마지막 자음만 초성으로 넘김
           const prevJong = state.jong;
-          state.cho = prevJong;
+          if (DECOMPOSE_JONG_MAP[prevJong]) {
+            const [first, second] = DECOMPOSE_JONG_MAP[prevJong];
+            state.word += String.fromCharCode(
+              0xAC00 + (CHO_LIST.indexOf(state.cho) * 21 + JUNG_LIST.indexOf(state.jung!)) * 28 + JONG_LIST.indexOf(first)
+            );
+            state.cho = second; // 겹받침 중 두 번째 자음이 다음 글자의 초성으로 넘어감
+          } else {
+            const text = renderSyllable();
+            if (text !== '—') {
+              state.word += text;
+            }
+            state.cho = prevJong;
+          }
           state.jamoSeq = [jamo];
           state.jung = composeVowel(state.jamoSeq);
           state.jong = null;
@@ -1911,8 +1982,15 @@ const tr = t(lang);
       // 1. 현재 조립 중인 한글이 있을 때
       if (state.cho) {
         if (state.jong) {
-          state.jong = null;
-          state.lastPadType = 'jung';
+          // 겹받침(복자음)이면 앞의 자음만 남김
+          if (DECOMPOSE_JONG_MAP[state.jong]) {
+            state.jong = DECOMPOSE_JONG_MAP[state.jong][0];
+            state.lastPadType = 'jong';
+            state.lastPadValue = state.jong;
+          } else {
+            state.jong = null;
+            state.lastPadType = 'jung';
+          }
         } else if (state.jung) {
           state.jamoSeq.pop();
           state.jung = composeVowel(state.jamoSeq);
@@ -1926,7 +2004,39 @@ const tr = t(lang);
       } 
       // 2. 조립 중인 한글이 없고 조립판 단어가 있을 때
       else if (state.word) {
-        state.word = state.word.slice(0, -1);
+        // 단어의 마지막 글자가 겹받침을 가지고 있는지 확인하고 쪼갤 수 있다면 쪼개기
+        const lastChar = state.word.slice(-1);
+        const code = lastChar.charCodeAt(0);
+        if (code >= 0xAC00 && code <= 0xD7A3) {
+          const offset = code - 0xAC00;
+          const jongIdx = offset % 28;
+          const jungIdx = Math.floor((offset % 588) / 28);
+          const choIdx = Math.floor(offset / 588);
+          
+          if (jongIdx > 0) {
+            const currentJong = JONG_LIST[jongIdx];
+            if (DECOMPOSE_JONG_MAP[currentJong]) {
+              // 마지막 완성형 글자의 겹받침을 분해하여 뒤쪽만 제거
+              const firstJong = DECOMPOSE_JONG_MAP[currentJong][0];
+              const newChar = String.fromCharCode(
+                0xAC00 + (choIdx * 21 + jungIdx) * 28 + JONG_LIST.indexOf(firstJong)
+              );
+              state.word = state.word.slice(0, -1) + newChar;
+            } else {
+              // 단일 받침이면 받침만 제거
+              const newChar = String.fromCharCode(
+                0xAC00 + (choIdx * 21 + jungIdx) * 28
+              );
+              state.word = state.word.slice(0, -1) + newChar;
+            }
+          } else {
+            // 받침이 없으면 글자 전체 삭제
+            state.word = state.word.slice(0, -1);
+          }
+        } else {
+          // 완성형 한글이 아니면 그냥 한 자 지우기
+          state.word = state.word.slice(0, -1);
+        }
       }
       
       updateDisplay();
