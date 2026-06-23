@@ -2028,18 +2028,8 @@ const tr = t(lang);
 
     if (!text.trim()) return;
 
-    // 만약 데이터베이스에 없는 글자가 포함되어 있다면, 낱자 단위 재생을 피하고 문장 통낭독으로 자동 우회
-    if (shouldFallbackToNatural(text)) {
-      speakSentenceNatural(text);
-      return;
-    }
-
-    // 문자를 글자 하나하나 단위로 쪼개기 (공백 및 특수문자 유지)
-    audioQueue = Array.from(text);
-    isPlayingQueue = true;
-    currentQueueIndex = 0;
-    
-    playNextInQueue();
+    // 모든 문장/단어 전체 읽기는 연음 법칙이 적용된 자연스러운 통낭독(speakSentenceNatural)을 사용합니다.
+    speakSentenceNatural(text);
   }
 
   async function playNextInQueue() {
