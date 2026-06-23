@@ -37,17 +37,23 @@ const tr = t(lang);
       <!-- 1. 런치패드 모드 모니터 뷰 -->
       <div id="monitor-content-launchpad" class="monitor-view active">
         <div class="center-display-monitor">
-          <div class="syllable-container">
-            <span id="display-syllable" class="syllable">—</span>
+          <!-- 왼편: 한글 글자 조어 영역 -->
+          <div class="syllable-left-zone">
+            <div class="syllable-container">
+              <span id="display-syllable" class="syllable">—</span>
+            </div>
           </div>
           
-          <div id="no-audio-badge" class="no-audio-badge hidden">⚠️ {lang === 'ko' ? '소리 없음' : 'No Sound'}</div>
-          
-          <div id="articulatory-popup" class="anatomy-card glass hidden">
-            <div class="anatomy-avatar" id="anatomy-emoji">👅</div>
-            <div class="anatomy-text">
-              <strong id="anatomy-title">ㄱ</strong>
-              <p id="anatomy-desc">설근폐후(혀뿌리가 목구멍을 막는 모양)</p>
+          <!-- 오른편: 조음 설명 및 소리 없음 안내 영역 -->
+          <div class="monitor-right-zone">
+            <div id="no-audio-badge" class="no-audio-badge hidden">⚠️ {lang === 'ko' ? '소리 없음' : 'No Sound'}</div>
+            
+            <div id="articulatory-popup" class="anatomy-card glass hidden">
+              <div class="anatomy-avatar" id="anatomy-emoji">👅</div>
+              <div class="anatomy-text">
+                <strong id="anatomy-title">ㄱ</strong>
+                <p id="anatomy-desc">설근폐후(혀뿌리가 목구멍을 막는 모양)</p>
+              </div>
             </div>
           </div>
         </div>
@@ -416,7 +422,7 @@ const tr = t(lang);
   to { opacity: 1; transform: scale(1); }
 }
 
-/* 1. 런치패드 모드 모니터 뷰 내부 display */
+/* 1. 런치패드 모드 모니터 뷰 내부 display (좌우 분할 개편) */
 .center-display-monitor {
   width: 100%;
   background: radial-gradient(circle at center, hsl(245 40% 10%), hsl(245 50% 3%));
@@ -424,23 +430,41 @@ const tr = t(lang);
   border-radius: var(--gv-radius-sm);
   padding: 8px;
   display: flex;
+  flex-direction: row; /* 좌우 배치 */
   align-items: center;
-  justify-content: center;
-  height: 124px; /* 140px -> 124px로 조금 줄임 */
+  justify-content: space-between;
+  height: 124px;
   position: relative;
   box-shadow: inset 0 0 20px rgba(0,0,0,0.9);
 }
 
+.syllable-left-zone {
+  width: 52%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px dashed hsl(245 30% 15%); /* 미세한 구분 점선 */
+}
+
+.monitor-right-zone {
+  width: 45%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .syllable-container {
   display: flex;
-  align-items: flex-start; /* center -> flex-start 로 변경 */
+  align-items: center; /* 원래대로 정중앙 정렬 */
   justify-content: center;
-  height: 106px; /* 120px -> 106px로 줄임 */
-  padding-top: 8px; /* 윗정렬 시 아래 겹받침 공간 확보 */
+  height: 100%;
 }
 
 .syllable {
-  font-size: clamp(3.2rem, 11vw, 4.6rem); /* 글자 크기 미세 축소로 짤림 방지 */
+  font-size: clamp(3.2rem, 11vw, 4.6rem);
   font-weight: 900;
   background: var(--gv-grad);
   -webkit-background-clip: text;
@@ -454,28 +478,30 @@ const tr = t(lang);
   transform: scale(1.15);
 }
 
-/* 조음 피드백 */
+/* 조음 피드백 (우측 분할 영역 내부 absolute 배치) */
 .anatomy-card {
   position: absolute;
-  bottom: 6px;
-  left: 6px;
-  right: 6px;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 4px 8px;
-  background: hsl(245 40% 6% / 0.5) !important; /* 0.95 -> 0.5 로 변경하여 50% 투명화 */
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px); /* 글래스모피즘 블러 필터 */
-  border-radius: 8px !important;
+  gap: 6px;
+  padding: 6px;
+  background: hsl(245 40% 6% / 0.6) !important; /* 약간의 투명도 유지 */
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-radius: 6px !important;
   border-color: var(--gv-border-active);
   z-index: 10;
 }
 
 .no-audio-badge {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: hsl(0 80% 40% / 0.85);
   color: white;
   font-size: 0.72rem;
@@ -483,8 +509,9 @@ const tr = t(lang);
   padding: 2px 6px;
   border-radius: 4px;
   border: 1px solid hsl(0 100% 50% / 0.5);
-  z-index: 10;
+  z-index: 5;
   pointer-events: none;
+  white-space: nowrap;
 }
 
 .syllable.no-audio {
