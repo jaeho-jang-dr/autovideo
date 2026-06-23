@@ -142,7 +142,19 @@ def log(msg):
 
 def shot(page):
     try:
+        # Toggle DevTools F12 to capture console logs for diagnostics
+        try:
+            page.keyboard.press("F12")
+            page.wait_for_timeout(2500)
+        except Exception:
+            pass
         page.screenshot(path=os.path.abspath(os.path.join(DBG, "_live.png")))
+        # Toggle DevTools off to avoid interference
+        try:
+            page.keyboard.press("F12")
+            page.wait_for_timeout(500)
+        except Exception:
+            pass
     except Exception as e:
         log(f"shot fail: {e}")
 
@@ -183,9 +195,14 @@ def click_text(page, t, ymin=None, timeout=4000):
                     box = loc.bounding_box()
                     if ymin is not None and (not box or box["y"] < float(ymin)):
                         continue
-                    loc.click(timeout=timeout)
-                    log(f"clicktext OK '{t}' via {sel}")
-                    return True
+                    try:
+                        loc.click(timeout=timeout, force=True)
+                        log(f"clicktext OK '{t}' via {sel} (forced)")
+                        return True
+                    except Exception:
+                        loc.click(timeout=timeout)
+                        log(f"clicktext OK '{t}' via {sel}")
+                        return True
         except Exception:
             pass
     log(f"clicktext MISS '{t}'")
@@ -315,8 +332,21 @@ def do(page, parts):
             b.press("Control+A"); b.press("Delete")
         except Exception:
             pass
-        page.keyboard.type(parts[1], delay=4)
-        log("fillprompt done")
+        # ★ 복사·붙여넣기 입력 (사용자 요구: 타이핑 금지). Slate.js 모델 갱신용 Ctrl+V.
+        import subprocess as _sp, tempfile as _tf
+        _fd, _p = _tf.mkstemp(suffix=".txt")
+        with os.fdopen(_fd, "w", encoding="utf-8") as _f:
+            _f.write(parts[1])
+        _sp.run(["powershell", "-NoProfile", "-Command",
+                 f"Get-Content -Raw -Encoding UTF8 -LiteralPath '{_p}' | Set-Clipboard"], check=False)
+        try:
+            os.remove(_p)
+        except Exception:
+            pass
+        page.wait_for_timeout(200)
+        b.press("Control+v")
+        page.wait_for_timeout(200)
+        log("fillprompt done (clipboard paste)")
     elif verb == "key":
         page.keyboard.press(parts[1])
         log(f"key {parts[1]}")

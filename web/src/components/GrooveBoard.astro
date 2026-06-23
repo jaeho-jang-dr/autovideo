@@ -1865,7 +1865,7 @@ const tr = t(lang);
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'ko-KR';
-      utterance.rate = 2.5; // 2.5배속 폴백 낭독 (0.92 -> 2.5 상향)
+      utterance.rate = 1.0; // 사람이 대화할 때의 자연스러운 표준 속도로 낭독
       window.speechSynthesis.speak(utterance);
     }
   }
@@ -1914,7 +1914,7 @@ const tr = t(lang);
       const phoneticText = getPhoneticSubstitute(text);
       const utterance = new SpeechSynthesisUtterance(phoneticText);
       utterance.lang = 'ko-KR';
-      utterance.rate = 2.5; // 2.5배속 쾌속 낭독 (1.08 -> 2.5 상향)
+      utterance.rate = 1.0; // 사람이 대화할 때의 자연스러운 표준 속도로 낭독
       utterance.pitch = 1.0;
       window.speechSynthesis.speak(utterance);
     }
@@ -2055,7 +2055,7 @@ const tr = t(lang);
     if (char === ' ') {
       setTimeout(() => {
         playNextInQueue();
-      }, 140); // 띄어쓰기 무음 딜레이 (350ms -> 140ms, 2.5배 단축)
+      }, 350); // 띄어쓰기 무음 딜레이 (사람이 이야기할 때의 자연스러운 간격 350ms)
       return;
     }
 
@@ -2065,16 +2065,16 @@ const tr = t(lang);
     
     activeAudio = new Audio(audioUrl);
     activeAudio.volume = 0.85;
-    activeAudio.playbackRate = 2.5; // 2.5배속 쾌속 재생 설정
+    activeAudio.playbackRate = 1.0; // 사람이 이야기할 때의 자연스러운 표준 속도 (1.0배속)
 
     let fallbackTriggered = false;
 
     const handleNext = () => {
       if (fallbackTriggered) return;
-      // 다음 글자 재생 전 글자 간 간격 (80ms -> 32ms, 2.5배 단축)으로 빠르게 연결
+      // 다음 글자 재생 전 글자 간 간격 (사람이 이야기할 때의 자연스러운 연결 80ms)
       setTimeout(() => {
         playNextInQueue();
-      }, 32);
+      }, 80);
     };
 
     activeAudio.addEventListener('ended', handleNext);

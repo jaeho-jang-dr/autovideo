@@ -13,6 +13,17 @@ GUI 자동화**로 수행합니다. 로그인된 크롬 프로필(`assets/chrome
 > 검증 완료(2026-06-12): 회중시계·마술사 2개 장면을 이미지 생성→영상화→다운로드
 > →합치기까지 엔드투엔드로 성공. 각 클립 8초 1280×720 24fps, 합본 16초.
 
+## ★ 검증된 최선의 방법 (2026-06-17, 사용자 확정 — 제미나이가 영상제작을 위임하면 Claude는 반드시 이대로)
+1. **단일 연속 세션**: `python autoveo_flow.py --prompts <project>_prompts.txt` 를 **딱 한 번** 통째로 실행한다.
+   창 하나에서 프로젝트를 옮겨가며 이미 만든 씬은 자동 스킵(`progress_scenes.json` + 파일 존재). 실패해도 **같은 명령 재실행**하면 done 스킵·미완만 재시도.
+   → **씬마다 `--scene N` 으로 쪼개 chrome 를 죽이고 새로 띄우지 말 것**: 창이 떴다 닫혔다 깜빡이고 생성 중 조기 종료를 부른다(사용자가 명시적으로 싫어함).
+2. **프롬프트 입력 = 클립보드 붙여넣기(Ctrl+V)**: Flow 입력창은 Slate.js 라 `execCommand('insertText')` 는 DOM만 바꾸고 내부 모델 갱신에 실패 →
+   "만들기" 버튼이 `aria-disabled=true` 로 **영구 비활성** → 이미지 0장 → **무한 재시도(과거 루프의 진짜 원인)**. **버튼 비활성 = 프롬프트 미등록이지 한도(quota) 아님.**
+   `set_os_clipboard()` + Ctrl+V 로 Slate paste 핸들러가 모델을 갱신해 버튼이 활성화된다(코드 반영됨: `fill_prompt`).
+3. **출력 폴더 = prompts 파일명으로 결정**: autoveo 는 basename 에서 `_prompts` 를 떼 OUT_DIR 을 정한다 → prompts 파일명을 **`<project>_prompts.txt`** 로 둬야 클립이 `<project>/` 로 직접 저장된다.
+   → **generic `prompts_for_veo.txt` 금지**: 여러 프로젝트가 공용 `prompts_for_veo/` 에 섞여 오염된다(실사고: pet_family 0~19 클립이 korean_education 0~19 로 새어 들어가 영상이 잘못 만들어짐).
+4. **죽이지 말고 기다려라**: 씬당 ~2.3분(이미지 ~40s, 영상 ~70s+다운로드). 일시 결함(다운로드 실패·브라우저 크래시)은 재실행으로 복구된다.
+
 ## 전제 조건
 - 로컬 **Google Chrome** 설치 + Google 계정으로 Flow 로그인 (세션이
   `assets/chrome_profile`에 저장됨. 최초 1회만 수동 로그인).

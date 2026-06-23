@@ -7,6 +7,9 @@ ElevenLabs 및 gTTS 통합 TTS 매니저.
 import os
 import requests
 from gtts import gTTS
+import asyncio
+import edge_tts
+
 
 def load_env():
     """프로젝트 루트의 .env 파일을 수동 파싱하여 os.environ에 주입 (외부 패키지 의존성 제거)"""
@@ -46,10 +49,66 @@ def save_tts_gtts(text, output_path, lang='ko'):
         pass
     return True
 
+def save_tts_edge_tts(text, output_path, lang='ko'):
+    """edge-tts를 사용하여 고품질 Neural 음성을 생성하고 저장하는 함수"""
+    edge_voice = os.environ.get("EDGE_ACTIVE_VOICE", "sunhi").strip().lower()
+    
+    if lang.startswith('ko'):
+        if edge_voice == "injoon":
+            voice = "ko-KR-InJoonNeural"  # 남성 (차분함)
+        elif edge_voice == "hyunsu":
+            voice = "ko-KR-HyunsuMultilingualNeural"  # 남성 (다국어)
+        else:
+            voice = "ko-KR-SunHiNeural"  # 여성 (꾀꼬리/기본)
+    elif lang.startswith('en'):
+        voice = "en-US-EmmaMultilingualNeural"
+    else:
+        voice = "ko-KR-SunHiNeural"
+        
+    print(f"[TTS] Generating edge-tts (voice={voice}, lang={lang})...")
+    
+    async def _async_gen():
+        communicate = edge_tts.Communicate(text, voice)
+        await communicate.save(output_path)
+        
+    try:
+        try:
+            loop = asyncio.get_event_loop()
+        except RuntimeError:
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            
+        if loop.is_running():
+            try:
+                import nest_asyncio
+                nest_asyncio.apply()
+            except ImportError:
+                print("[TTS] Warning: nest_asyncio is not installed, might fail if loop is running.")
+            
+            # Run coroutine in the running loop
+            coro = _async_gen()
+            future = asyncio.run_coroutine_threadsafe(coro, loop)
+            future.result(timeout=30)
+        else:
+            loop.run_until_complete(_async_gen())
+            
+        # 캐시 텍스트 저장
+        try:
+            txt_cache_path = output_path + ".txt"
+            with open(txt_cache_path, "w", encoding="utf-8") as f:
+                f.write(text.strip())
+        except Exception:
+            pass
+        print(f"[TTS] Successfully generated edge-tts: {output_path}")
+        return True
+    except Exception as e:
+        print(f"[TTS] Edge-TTS generation failed: {e}")
+        return False
+
 def save_tts(text, output_path, lang='ko', voice_id=None):
     """
     ElevenLabs API를 호출하여 TTS 오디오 파일을 생성하고 저장한다.
-    실패하거나 설정이 없을 경우 gTTS로 자동 Fallback한다.
+    실패하거나 설정이 없을 경우 edge-tts로 2차 시도하고, 마지막으로 gTTS로 자동 Fallback한다.
     스마트 텍스트 캐싱이 내장되어 있어 내용 변경이 없으면 API 호출을 건너뜁니다.
     """
     # 스마트 텍스트 캐시 확인
@@ -66,9 +125,11 @@ def save_tts(text, output_path, lang='ko', voice_id=None):
 
     api_key = os.environ.get("ELEVEN_API_KEY", "").strip()
     
-    # API 키가 없으면 바로 gTTS 사용
+    # API 키가 없으면 바로 edge-tts 사용
     if not api_key:
-        print("[TTS] ELEVEN_API_KEY not set. Using gTTS.")
+        print("[TTS] ELEVEN_API_KEY not set. Using edge-tts.")
+        if save_tts_edge_tts(text, output_path, lang):
+            return True
         return save_tts_gtts(text, output_path, lang)
         
     # Voice ID 설정 파싱
@@ -122,9 +183,13 @@ def save_tts(text, output_path, lang='ko', voice_id=None):
             return True
         else:
             print(f"[TTS] ElevenLabs API error: {response.status_code} - {response.text}")
+            if save_tts_edge_tts(text, output_path, lang):
+                return True
             return save_tts_gtts(text, output_path, lang)
     except Exception as e:
         print(f"[TTS] Connection to ElevenLabs failed: {e}")
+        if save_tts_edge_tts(text, output_path, lang):
+            return True
         return save_tts_gtts(text, output_path, lang)
 
 if __name__ == "__main__":

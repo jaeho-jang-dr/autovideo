@@ -29,10 +29,13 @@
 
 ### 2. 본편 영상 제작 재개 절차 (Claude가 실행)
 ```bash
-# (1) Flow 로 본편 씬 클립 생성/다운로드 — 하나씩(--scene N), 충분히 대기
-python autoveo_flow.py --prompts <에피소드>_prompts.txt --scene 1
-#   검증 수치: 이미지 ~40s / 동영상 ~70s, 한 씬 ~2.3분. 성급히 끊지 말 것.
-#   다운로드는 '완성 영상 타일(play_circle+포스터, 이미지 왼쪽)'을 잡는다. 자세히는 .harness/skills/autoveo/SKILL.md.
+# (1) Flow 로 본편 씬 클립 생성/다운로드 — ★ 단일 연속 세션 (2026-06-17 확정, 사용자가 "최고"로 평가한 방법)
+python autoveo_flow.py --prompts <에피소드>_prompts.txt
+#   한 창에서 통째로 실행: 이미 만든 씬은 자동 스킵, 미완만 연속 생성. 실패해도 같은 명령을 그대로 재실행(done 스킵·미완 재시도).
+#   ★ 씬마다 --scene N 으로 쪼개 chrome 죽이고 새로 띄우지 말 것 — 창 깜빡임 + 생성 중 조기 종료의 원인.
+#   ★ 프롬프트 입력은 클립보드 붙여넣기(Slate.js 모델 갱신). "만들기" 버튼 비활성 = 프롬프트 미등록이지 한도 아님.
+#   ★ prompts 파일명은 반드시 <에피소드>_prompts.txt — generic prompts_for_veo.txt 쓰면 여러 프로젝트가 prompts_for_veo/ 에 섞여 오염됨.
+#   검증 수치: 이미지 ~40s / 동영상 ~70s, 한 씬 ~2.3분. 성급히 끊지 말 것. 상세: .harness/skills/autoveo/SKILL.md (★ 검증된 최선의 방법).
 
 # (2) 본편 합성 + 인트로/아웃트로 앞뒤 부착 (음성 자동 재컴파일) + 토글 자막(CC)
 python make_video.py --scenario <에피소드>.txt --output <에피소드>/<에피소드>.mp4 \
