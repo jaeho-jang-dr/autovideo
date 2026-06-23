@@ -1,0 +1,2366 @@
+---
+import { t } from '../lib/i18n';
+import type { Lang } from '../lib/content';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const tr = t(lang);
+---
+
+<div class="groove glass">
+  <div class="groove-header">
+    <h2>{tr.groove_title}</h2>
+    <p class="subtitle">{tr.groove_sub}</p>
+  </div>
+
+  <!-- [상주 고정 헤더] 1단계: 단어 조립판 (Word Board) -->
+  <div class="word-board-section glass">
+    <div class="word-board-header">
+      <span class="word-title">{lang === 'ko' ? '단어 조립판 & 번역기' : 'Word Board & Translator'}</span>
+      <button id="btn-reset" class="action-mini-btn" title="초기화">↺ Reset</button>
+    </div>
+    <div class="word-display-container">
+      <div class="word-display-row" id="english-row" style="display: none;">
+        <span class="lang-badge eng">ENG</span>
+        <span id="english-text" class="english-text">—</span>
+      </div>
+      <div class="word-display-row">
+        <span class="lang-badge kor">KOR</span>
+        <span id="word-text" class="word-text">—</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- [상주 고정 헤더] 2단계: 단어 입력 제어 컨트롤 바 -->
+  <div class="word-controls">
+    <button id="btn-backspace" class="control-btn backspace-btn glass" title="글자 지우기">⌫ 지우기</button>
+    <button id="btn-space" class="control-btn space-btn glass" title="띄어쓰기">␣ 띄어쓰기</button>
+    <button id="btn-enter" class="control-btn enter-btn glass" title="글자 확정">↵ 확정</button>
+    <button id="btn-speak-word" class="control-btn speak-btn glass" title="전체 문장 소리내기">🔊 전체 읽기</button>
+  </div>
+
+  <!-- [중간] 4단 메뉴 탭 바 -->
+  <div class="mode-tabs-bar glass">
+    <button class="mode-tab-btn active" data-tab="launchpad">🎹 {lang === 'ko' ? '런치패드' : 'Launchpad'}</button>
+    <button class="mode-tab-btn" data-tab="translator">🌐 {lang === 'ko' ? '통번역기' : 'Translator'}</button>
+    <button class="mode-tab-btn" data-tab="phrases">📖 {lang === 'ko' ? '상황 표현' : 'Phrases'}</button>
+    <button class="mode-tab-btn" data-tab="game">🎮 {lang === 'ko' ? '한글 게임' : 'Game'}</button>
+  </div>
+
+  <!-- [하단] 탭별 콘텐츠 영역 -->
+  
+  <!-- 파트 1: 런치패드 (Launchpad) -->
+  <div id="tab-launchpad" class="tab-content active">
+    <!-- 세련된 BGM 플레이어 위젯 -->
+    <div class="music-player-widget glass" style="margin-bottom: 1rem;">
+      <div class="music-info">
+        <span class="disc-icon" id="disc-icon">💿</span>
+        <div class="track-details">
+          <span class="track-title">K-POP Beat Loop #1</span>
+          <div id="playback-status" class="status-indicator">Stopped</div>
+        </div>
+      </div>
+      
+      <div class="player-controls">
+        <div class="eq-container" id="eq-animation">
+          <span class="eq-bar"></span>
+          <span class="eq-bar"></span>
+          <span class="eq-bar"></span>
+          <span class="eq-bar"></span>
+        </div>
+        <button id="btn-toggle-bgm" class="player-btn" aria-label="Play beat">
+          <span class="play-icon">▶</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 모핑 디스플레이 및 조음 상형 알림판 -->
+    <div class="display-section glass neon-glow">
+      <div class="syllable-container">
+        <span id="display-syllable" class="syllable">—</span>
+      </div>
+      
+      <div id="articulatory-popup" class="anatomy-card glass hidden">
+        <div class="anatomy-avatar" id="anatomy-emoji">👅</div>
+        <div class="anatomy-text">
+          <strong id="anatomy-title">ㄱ</strong>
+          <p id="anatomy-desc">설근폐후(혀뿌리가 목구멍을 막는 모양)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 한글 비트 런치패드 -->
+    <div class="pad-section">
+      <div class="pad-group">
+        <h4 class="pad-group-title">자음 (Consonants) - 터치 시 ㄲ, ㅋ 등으로 순환</h4>
+        <div class="launchpad">
+          <button class="pad cho glass" data-jamo="ㄱ" aria-label="자음 기역">ㄱ</button>
+          <button class="pad cho glass" data-jamo="ㄴ" aria-label="자음 니은">ㄴ</button>
+          <button class="pad cho glass" data-jamo="ㅁ" aria-label="자음 미음">ㅁ</button>
+          <button class="pad cho glass" data-jamo="ㅅ" aria-label="자음 시옷">ㅅ</button>
+          <button class="pad cho glass" data-jamo="ㅇ" aria-label="자음 이응">ㅇ</button>
+        </div>
+      </div>
+
+      <div class="pad-group" style="margin-top: 1.2rem;">
+        <h4 class="pad-group-title">천지인 모음 (Cosmic Vowels)</h4>
+        <div class="vowels">
+          <button class="pad jung glass" data-jamo="•" aria-label="하늘 아래아">•</button>
+          <button class="pad jung glass" data-jamo="ㅡ" aria-label="땅 으">ㅡ</button>
+          <button class="pad jung glass" data-jamo="ㅣ" aria-label="사람 이">ㅣ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 파트 2: 영어 통번역기 (Translator) -->
+  <div id="tab-translator" class="tab-content">
+    <!-- 영어 직접 입력 텍스트 박스 -->
+    <div class="english-input-wrapper-card glass">
+      <span class="input-card-title">{lang === 'ko' ? '영어 텍스트 직접 입력' : 'English Text Input'}</span>
+      <div class="english-input-wrapper">
+        <input type="text" id="input-english" placeholder="Type English sentence here... (Press Enter)" class="english-input glass" />
+      </div>
+    </div>
+
+    <!-- 그루브 코치 AI 에이전트 & 마이크 컨트롤 -->
+    <div class="agent-section glass">
+      <div class="agent-avatar">🤖</div>
+      <div class="agent-chat">
+        <div class="chat-bubble" id="coach-bubble">
+          {lang === 'ko' ? "영어 모드로 전환 후 마이크를 누르면 영어 회화 연습이 가능합니다!" : "Switch to English mode and tap the mic to practice English speech!"}
+        </div>
+        
+        <div class="chat-controls" style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+          <!-- KO / EN 토글 스위치 바 -->
+          <div class="lang-selector-bar glass">
+            <button id="btn-lang-ko" class="lang-toggle-btn active">KO</button>
+            <button id="btn-lang-en" class="lang-toggle-btn">EN</button>
+          </div>
+          
+          <button id="btn-mic" class="mic-btn-fab">
+            <div class="mic-glow-ring"></div>
+            <span class="mic-icon">🎤</span>
+            <span id="mic-text" class="sr-only">{tr.groove_mic}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 파트 3: 상황 표현 가이드 (Phrases) -->
+  <div id="tab-phrases" class="tab-content">
+    <div class="situation-helper-section glass">
+      <div class="situation-header">
+        <span class="situation-title">{lang === 'ko' ? '상황별 필수 표현' : 'Situation Phrase Guide'}</span>
+      </div>
+      
+      <!-- 상황 카테고리 탭 -->
+      <div class="situation-tabs">
+        <button class="tab-btn active" data-category="restaurant">🍔 {lang === 'ko' ? '식당' : 'Dining'}</button>
+        <button class="tab-btn" data-category="restroom">🚻 {lang === 'ko' ? '화장실' : 'Restroom'}</button>
+        <button class="tab-btn" data-category="airport">✈️ {lang === 'ko' ? '공항' : 'Airport'}</button>
+        <button class="tab-btn" data-category="station">🚄 {lang === 'ko' ? '기차역' : 'Station'}</button>
+      </div>
+      
+      <!-- 예문 목록 -->
+      <div class="phrase-list" id="phrase-list">
+        <button class="phrase-card" data-phrase="물 주세요">
+          <span class="phrase-ko">물 주세요</span>
+          <span class="phrase-en">Please give me water</span>
+        </button>
+        <button class="phrase-card" data-phrase="밥 주세요">
+          <span class="phrase-ko">밥 주세요</span>
+          <span class="phrase-en">Please give me rice</span>
+        </button>
+        <button class="phrase-card" data-phrase="맛있어요">
+          <span class="phrase-ko">맛있어요</span>
+          <span class="phrase-en">It is delicious</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 파트 4: 한글 게임 (Hangeul Game) -->
+  <div id="tab-game" class="tab-content">
+    <div class="game-wrapper glass">
+      <div class="game-header-panel">
+        <span class="game-title">🎮 {lang === 'ko' ? '한글 비트 마스터 아케이드' : 'Hangeul Beat Master'}</span>
+        <div class="score-board">
+          <div class="score-item">
+            <span class="score-label">SCORE</span>
+            <span id="game-score" class="score-val">0</span>
+          </div>
+          <div class="score-item">
+            <span class="score-label">COMBO</span>
+            <span id="game-combo" class="score-val">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 타임 네온 게이지 바 -->
+      <div class="timer-gauge-container glass">
+        <div id="game-timer-bar" class="timer-bar" style="width: 100%;"></div>
+        <span id="game-timer-text" class="timer-text">30s</span>
+      </div>
+
+      <!-- 퀴즈 타겟 출제 구역 -->
+      <div class="quiz-card glass">
+        <span class="quiz-badge">QUIZ TARGET</span>
+        <div class="quiz-question-row">
+          <span class="quiz-lang">ENG</span>
+          <p id="quiz-english" class="quiz-text">—</p>
+        </div>
+        <div class="quiz-answer-row">
+          <span class="quiz-lang">KOR</span>
+          <p id="quiz-korean" class="quiz-target-ko">Game Start를 눌러주세요</p>
+        </div>
+      </div>
+
+      <div class="game-controls-panel">
+        <button id="btn-game-toggle" class="game-start-btn">🚀 Game Start</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<style>
+/* 화이트 테마 오염 방지 - .groove 스코프로 완전히 격리된 다크 네온 글래스 테마 */
+.groove {
+  --gv-bg-0: hsl(245 42% 6%);
+  --gv-bg-1: hsl(245 35% 10%);
+  --gv-surface: hsl(245 30% 15% / 0.55);
+  --gv-surface-2: hsl(245 30% 22% / 0.7);
+  --gv-border: hsl(255 60% 80% / 0.15);
+  --gv-border-active: hsl(255 70% 85% / 0.35);
+  --gv-text-0: hsl(250 30% 98%);
+  --gv-text-1: hsl(250 18% 78%);
+  --gv-text-2: hsl(250 14% 60%);
+  
+  --gv-neon-cho: hsl(325 100% 64%);
+  --gv-neon-jung: hsl(182 100% 50%);
+  --gv-neon-accent: hsl(268 100% 66%);
+  --gv-grad: linear-gradient(135deg, var(--gv-neon-cho), var(--gv-neon-accent) 55%, var(--gv-neon-jung));
+  
+  --gv-glow-cho: 0 0 20px hsl(325 100% 64% / 0.45);
+  --gv-glow-jung: 0 0 20px hsl(182 100% 50% / 0.45);
+  --gv-radius: 24px;
+  --gv-radius-sm: 14px;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: clamp(14px, 4vw, 24px);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: var(--gv-text-0);
+  background: radial-gradient(120% 100% at 50% 0%, var(--gv-bg-1), var(--gv-bg-0));
+  border: 1px solid var(--gv-border);
+  border-radius: var(--gv-radius);
+  font-family: 'Outfit', 'Inter', 'Noto Sans KR', sans-serif;
+  text-align: left;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 hsl(0 0% 100% / 0.05);
+}
+
+@media (min-width: 768px) {
+  .groove {
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.groove .glass {
+  background: var(--gv-surface);
+  border: 1px solid var(--gv-border);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-radius: var(--gv-radius-sm);
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.05);
+}
+
+.groove-header {
+  margin-bottom: 1.2rem;
+}
+
+.groove-header h2 {
+  font-size: clamp(1.4rem, 5vw, 1.8rem);
+  font-weight: 800;
+  margin: 0 0 4px 0;
+  background: var(--gv-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.02em;
+}
+
+.groove-header .subtitle {
+  font-size: clamp(0.8rem, 3vw, 0.9rem);
+  color: var(--gv-text-1);
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+}
+
+/* 세련된 뮤직 플레이어 위젯 */
+.music-player-widget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-radius: var(--gv-radius-sm) !important;
+  background: hsl(245 35% 14% / 0.4) !important;
+  border-color: var(--gv-border);
+}
+
+.music-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.disc-icon {
+  font-size: 1.8rem;
+  display: inline-block;
+  user-select: none;
+  transform-origin: center;
+}
+
+.disc-icon.spinning {
+  animation: spinDisc 3s linear infinite;
+}
+
+@keyframes spinDisc {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.track-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.track-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gv-text-0);
+}
+
+.status-indicator {
+  font-size: 0.72rem;
+  color: var(--gv-text-2);
+  font-family: monospace;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.player-btn {
+  background: var(--gv-grad);
+  border: none;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s;
+}
+
+.player-btn:active {
+  transform: scale(0.9);
+}
+
+.player-btn .play-icon {
+  font-size: 0.9rem;
+  margin-left: 2px;
+}
+
+/* 미니 이퀄라이저 바 */
+.eq-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 18px;
+  width: 25px;
+}
+
+.eq-bar {
+  width: 3px;
+  height: 2px;
+  background-color: var(--gv-neon-jung);
+  border-radius: 1px;
+}
+
+.eq-container.active .eq-bar {
+  animation: bounceEq 0.8s ease-in-out infinite alternate;
+}
+
+.eq-container.active .eq-bar:nth-child(1) { animation-delay: 0.1s; animation-duration: 0.6s; }
+.eq-container.active .eq-bar:nth-child(2) { animation-delay: 0.3s; animation-duration: 0.9s; }
+.eq-container.active .eq-bar:nth-child(3) { animation-delay: 0.0s; animation-duration: 0.7s; }
+.eq-container.active .eq-bar:nth-child(4) { animation-delay: 0.2s; animation-duration: 0.8s; }
+
+@keyframes bounceEq {
+  0% { height: 2px; }
+  100% { height: 18px; }
+}
+
+/* 단어 조립판 (Word Board) */
+.word-board-section {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  margin-top: 1rem;
+  border-radius: var(--gv-radius-sm) !important;
+  background: hsl(245 35% 8% / 0.7) !important;
+  border-color: var(--gv-border-active);
+}
+
+.word-board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.word-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--gv-text-2);
+  letter-spacing: 0.05em;
+}
+
+.action-mini-btn {
+  background: transparent;
+  border: 1px solid var(--gv-border);
+  color: var(--gv-text-2);
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.action-mini-btn:hover {
+  color: var(--gv-text-0);
+  background: hsl(0 100% 60% / 0.12);
+  border-color: hsl(0 100% 60% / 0.3);
+}
+
+.word-display {
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 4px 0;
+}
+
+.word-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--gv-text-0);
+  letter-spacing: 0.02em;
+  word-break: break-all;
+  text-shadow: 0 0 10px hsl(182 100% 50% / 0.15);
+}
+
+.cursor-blink {
+  font-size: 1.3rem;
+  color: var(--gv-neon-jung);
+  font-weight: 400;
+  margin-left: 2px;
+  animation: blink 0.9s infinite step-end;
+}
+
+@keyframes blink {
+  from, to { color: transparent }
+  50% { color: var(--gv-neon-jung); }
+}
+
+/* 모핑 디스플레이 구역 */
+.display-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 130px;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  overflow: hidden;
+  background: hsl(245 40% 6% / 0.6) !important;
+}
+
+.display-section.neon-glow::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: var(--gv-grad);
+  filter: blur(70px);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.syllable-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  z-index: 2;
+}
+
+.syllable {
+  font-size: clamp(3rem, 14vw, 4.6rem);
+  font-weight: 900;
+  background: var(--gv-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: transform 0.18s cubic-bezier(.2, 1.4, .4, 1);
+  display: inline-block;
+  filter: drop-shadow(0 0 15px hsl(266 100% 64% / 0.15));
+}
+
+.syllable.pop {
+  transform: scale(1.18);
+  filter: drop-shadow(0 0 25px hsl(266 100% 64% / 0.35));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .syllable {
+    transition: none;
+  }
+}
+
+/* 조음 상형 피드백 카드 */
+.anatomy-card {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  background: hsl(245 40% 6% / 0.9) !important;
+  border-radius: var(--gv-radius-sm) !important;
+  border-color: var(--gv-border-active);
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.25s, transform 0.25s;
+  transform: translateY(0);
+}
+
+.anatomy-card.hidden {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+
+.anatomy-avatar {
+  font-size: 1.2rem;
+  background: var(--gv-surface-2);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gv-border);
+}
+
+.anatomy-text {
+  flex: 1;
+}
+
+.anatomy-text strong {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--gv-neon-cho);
+}
+
+.anatomy-text p {
+  margin: 1px 0 0 0;
+  font-size: 0.7rem;
+  color: var(--gv-text-1);
+}
+
+/* 런치패드 패널 */
+.pad-group-title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--gv-text-2);
+  margin: 0 0 6px 0;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.launchpad {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.vowels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.pad {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-size: clamp(1.3rem, 5.5vw, 1.8rem);
+  font-weight: 800;
+  color: var(--gv-text-0);
+  background: var(--gv-surface);
+  border: 1px solid var(--gv-border);
+  border-radius: var(--gv-radius-sm);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.08s ease, box-shadow 0.15s ease, background 0.15s, border-color 0.15s;
+}
+
+.pad.cho {
+  color: var(--gv-neon-cho);
+  border-color: hsl(325 100% 64% / 0.2);
+}
+
+.pad.cho:hover {
+  box-shadow: var(--gv-glow-cho);
+  background: hsl(325 100% 64% / 0.06);
+  border-color: hsl(325 100% 64% / 0.4);
+}
+
+.pad.jung {
+  color: var(--gv-neon-jung);
+  border-color: hsl(182 100% 50% / 0.2);
+}
+
+.pad.jung:hover {
+  box-shadow: var(--gv-glow-jung);
+  background: hsl(182 100% 50% / 0.06);
+  border-color: hsl(182 100% 50% / 0.4);
+}
+
+.pad:active, .pad.hit {
+  transform: scale(0.92);
+  filter: brightness(1.2);
+}
+
+.pad.cho:active, .pad.cho.hit {
+  box-shadow: var(--gv-glow-cho);
+  background: hsl(325 100% 64% / 0.2) !important;
+  border-color: var(--gv-neon-cho);
+}
+
+.pad.jung:active, .pad.jung.hit {
+  box-shadow: var(--gv-glow-jung);
+  background: hsl(182 100% 50% / 0.2) !important;
+  border-color: var(--gv-neon-jung);
+}
+
+/* 단어 입력 제어 컨트롤 바 */
+.word-controls {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr 1.4fr;
+  gap: 8px;
+  margin-top: 1.2rem;
+}
+
+.control-btn {
+  background: var(--gv-surface);
+  border: 1px solid var(--gv-border);
+  color: var(--gv-text-0);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 10px 4px;
+  border-radius: var(--gv-radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.control-btn:hover {
+  background: var(--gv-surface-2);
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+}
+
+.backspace-btn:hover {
+  color: hsl(350, 100%, 65%);
+  border-color: hsl(350 100% 65% / 0.3);
+  background: hsl(350 100% 65% / 0.06);
+}
+
+.space-btn:hover {
+  color: var(--gv-neon-jung);
+  border-color: hsl(182 100% 50% / 0.3);
+  background: hsl(182 100% 50% / 0.06);
+}
+
+.enter-btn {
+  background: hsl(245 40% 16% / 0.6);
+  border-color: var(--gv-border-active);
+}
+
+.enter-btn:hover {
+  color: var(--gv-neon-cho);
+  border-color: hsl(325 100% 64% / 0.4);
+  background: hsl(325 100% 64% / 0.08);
+}
+
+.speak-btn {
+  background: var(--gv-grad) !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px hsl(268 100% 66% / 0.25);
+}
+
+.speak-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px hsl(268 100% 66% / 0.45);
+}
+
+.speak-btn:active {
+  transform: translateY(1px) scale(0.96);
+}
+
+/* AI 에이전트 피드백 영역 */
+.agent-section {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  margin-top: 1.2rem;
+  align-items: center;
+  background: hsl(245 35% 10% / 0.6) !important;
+  border-radius: var(--gv-radius-sm) !important;
+}
+
+.agent-avatar {
+  font-size: 1.6rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--gv-surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gv-border);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
+.agent-chat {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.chat-bubble {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--gv-text-1);
+  background: hsl(245 25% 15% / 0.7);
+  padding: 8px 12px;
+  border-radius: 4px 12px 12px 12px;
+  border: 1px solid var(--gv-border);
+  min-height: 36px;
+  flex: 1;
+}
+
+.chat-controls {
+  flex-shrink: 0;
+}
+
+/* 펄싱 링이 있는 입체적인 FAB 스타일의 마이크 버튼 */
+.mic-btn-fab {
+  position: relative;
+  background: var(--gv-surface-2);
+  border: 1px solid var(--gv-border);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.mic-btn-fab:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.mic-btn-fab:not(:disabled) {
+  border-color: var(--gv-neon-jung);
+  background: hsl(182 100% 50% / 0.08);
+}
+
+.mic-btn-fab:not(:disabled):hover {
+  transform: translateY(-2px);
+  background: hsl(182 100% 50% / 0.15);
+  box-shadow: 0 6px 16px hsl(182 100% 50% / 0.3);
+}
+
+.mic-btn-fab:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+.mic-btn-fab .mic-icon {
+  font-size: 1.2rem;
+  z-index: 2;
+  transition: transform 0.2s;
+}
+
+.mic-glow-ring {
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  border: 2px solid var(--gv-neon-jung);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 녹음 중일 때 입체적인 펄싱 애니메이션 */
+.mic-btn-fab.recording {
+  border-color: var(--gv-neon-cho) !important;
+  background: hsl(325 100% 64% / 0.15) !important;
+  box-shadow: 0 0 20px hsl(325 100% 64% / 0.4) !important;
+}
+
+.mic-btn-fab.recording .mic-glow-ring {
+  border-color: var(--gv-neon-cho);
+  animation: pulseRing 1.4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+.mic-btn-fab.recording .mic-icon {
+  transform: scale(1.1);
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* 상황별 대화 가이드 패널 스타일 */
+.situation-helper-section {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  margin-top: 1.2rem;
+  background: hsl(245 35% 8% / 0.5) !important;
+  border-radius: var(--gv-radius-sm) !important;
+  border-color: var(--gv-border);
+}
+
+.situation-header {
+  margin-bottom: 10px;
+}
+
+.situation-title {
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--gv-text-1);
+  letter-spacing: 0.05em;
+  background: linear-gradient(90deg, var(--gv-neon-jung), var(--gv-neon-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.situation-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.tab-btn {
+  background: hsl(245 30% 12% / 0.6);
+  border: 1px solid var(--gv-border);
+  color: var(--gv-text-2);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: var(--gv-text-0);
+  background: hsl(245 30% 18% / 0.8);
+}
+
+.tab-btn.active {
+  color: var(--gv-text-0);
+  background: hsl(268 100% 66% / 0.15);
+  border-color: var(--gv-neon-accent);
+  box-shadow: 0 0 10px hsl(268 100% 66% / 0.3);
+}
+
+.phrase-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.phrase-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px 14px;
+  background: hsl(245 30% 12% / 0.4);
+  border: 1px solid var(--gv-border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  text-align: left;
+}
+
+.phrase-card:hover {
+  transform: translateY(-1px);
+  background: hsl(245 30% 18% / 0.6);
+  border-color: var(--gv-neon-jung);
+  box-shadow: 0 4px 12px hsl(182 100% 50% / 0.15);
+}
+
+.phrase-card:active {
+  transform: translateY(1px);
+}
+
+.phrase-ko {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--gv-neon-jung);
+}
+
+.phrase-en {
+  font-size: 0.7rem;
+  color: var(--gv-text-2);
+  margin-top: 2px;
+}
+
+/* 탭 콘텐츠 노출 제어 */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeInTab 0.25s ease-out;
+}
+
+@keyframes fadeInTab {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 3단/4단 메뉴 탭 바 디자인 */
+.mode-tabs-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: 4px;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+  background: hsl(245 35% 8% / 0.7) !important;
+  border-radius: var(--gv-radius-sm) !important;
+  border-color: var(--gv-border);
+}
+
+.mode-tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--gv-text-2);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 10px 4px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.mode-tab-btn:hover {
+  color: var(--gv-text-0);
+  background: hsl(245 30% 16% / 0.5);
+}
+
+.mode-tab-btn.active {
+  background: var(--gv-grad);
+  color: #fff;
+  box-shadow: 0 4px 12px hsl(268 100% 66% / 0.35);
+}
+
+/* 영어 입력 카드 */
+.english-input-wrapper-card {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  margin-bottom: 1rem;
+  background: hsl(245 35% 8% / 0.5) !important;
+  border-radius: var(--gv-radius-sm) !important;
+  border-color: var(--gv-border);
+}
+
+.input-card-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--gv-text-1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+/* 영어 입력창 및 하이브리드 보드 스타일 */
+.english-input-wrapper {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.english-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  color: var(--gv-text-0);
+  background: hsl(245 30% 6% / 0.5) !important;
+  border: 1px solid var(--gv-border);
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.english-input:focus {
+  border-color: var(--gv-neon-jung);
+  box-shadow: 0 0 10px hsl(182 100% 50% / 0.2);
+}
+
+.word-display-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 4px 0;
+}
+
+.word-display-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 28px;
+}
+
+.lang-badge {
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+.lang-badge.eng {
+  background: hsl(182 100% 50% / 0.15);
+  color: var(--gv-neon-jung);
+  border: 1px solid hsl(182 100% 50% / 0.3);
+}
+
+.lang-badge.kor {
+  background: hsl(325 100% 64% / 0.15);
+  color: var(--gv-neon-cho);
+  border: 1px solid hsl(325 100% 64% / 0.3);
+}
+
+.english-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gv-text-1);
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0.01em;
+  word-break: break-all;
+}
+
+/* 언어 선택 토글 바 */
+.lang-selector-bar {
+  display: flex;
+  padding: 2px;
+  background: hsl(245 30% 8% / 0.8) !important;
+  border: 1px solid var(--gv-border);
+  border-radius: 20px !important;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+.lang-toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--gv-text-2);
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.lang-toggle-btn.active {
+  background: var(--gv-grad);
+  color: #fff;
+  box-shadow: 0 2px 6px hsl(268 100% 66% / 0.3);
+}
+</style>
+
+<script>
+  // ── SSOT 상태 ──
+  const state = {
+    cho: null as string | null,
+    jamoSeq: [] as string[],
+    jung: null as string | null,
+    jong: null as string | null,
+    combo: 0,
+    currentSyllable: '',
+    word: '',
+    english: '',
+    langMode: 'ko' as 'ko' | 'en',
+    // 오토마타 순환 제어용 추가 필드
+    lastPadType: null as 'cho' | 'jong' | 'jung' | null,
+    lastPadValue: null as string | null,
+    cycleIdx: 0
+  };
+
+  // 자음/모음 데이터 맵
+  const CHO_LIST = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'];
+  const JUNG_LIST = ['ㅏ','ㅐ','ㅑ','ㅒ','ㅓ','ㅔ','ㅕ','ㅖ','ㅗ','ㅘ','ㅙ','ㅚ','요','ㅜ','ㅝ','ㅞ','ㅟ','ㅠ','ㅡ','ㅢ','ㅣ'];
+  const JONG_LIST = ['', 'ㄱ', 'ㄲ', 'ㄳ', 'ㄴ', 'ㅈ', 'ㄶ', 'ㄷ', 'ㄹ', 'ㄺ', 'ㄻ', 'ㄼ', 'ㄽ', 'ㄾ', 'ㄿ', 'ㅀ', 'ㅁ', 'ㅂ', 'ㅄ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'];
+
+  // 자음 순환 사이클 정의
+  const CONSONANT_CYCLES: Record<string, string[]> = {
+    'ㄱ': ['ㄱ', 'ㄲ', 'ㅋ'],
+    'ㄴ': ['ㄴ', 'ㄷ', 'ㄸ', 'ㅌ', 'ㄹ'],
+    'ㅁ': ['ㅁ', 'ㅂ', 'ㅃ', 'ㅍ'],
+    'ㅅ': ['ㅅ', 'ㅆ', 'ㅈ', 'ㅉ', 'ㅊ'],
+    'ㅇ': ['ㅇ', 'ㅎ']
+  };
+
+  const ANATOMY_MAP: Record<string, { title: string; desc: string; emoji: string }> = {
+    'ㄱ': { title: 'ㄱ (G/K - Velar)', desc: '舌근閉喉 (Tongue root blocks throat)', emoji: '👅' },
+    'ㄴ': { title: 'ㄴ (N - Alveolar)', desc: '舌尖抵齒 (Tongue tip taps upper gums)', emoji: '🦷' },
+    'ㅁ': { title: 'ㅁ (M - Bilabial)', desc: '口形상형 (Outline of meeting lips)', emoji: '👄' },
+    'ㅅ': { title: 'ㅅ (S - Dental)', desc: '齒形상형 (Sharp teeth creating friction)', emoji: '🦷' },
+    'ㅇ': { title: 'ㅇ (Ng - Glottal)', desc: '喉形상형 (Circular outline of open throat)', emoji: '⭕' }
+  };
+
+  // 천지인 모음 조합 결정표 (jamoSeq.join('') -> 완성 중성)
+  const VOWEL_COMBINATIONS: Record<string, string> = {
+    'ㅣ•': 'ㅏ',
+    'ㅣ••': 'ㅑ',
+    '•ㅣ': 'ㅓ',
+    '••ㅣ': 'ㅕ',
+    '•ㅡ': 'ㅗ',
+    '••ㅡ': '요',
+    'ㅡ•': 'ㅜ',
+    'ㅡ••': 'ㅠ',
+    'ㅡ': 'ㅡ',
+    'ㅣ': 'ㅣ',
+    'ㅡㅣ': 'ㅢ',
+    'ㅏㅣ': 'ㅐ',
+    'ㅓㅣ': 'ㅔ'
+  };
+
+  // ── Web Audio API ──
+  let audioCtx: AudioContext | null = null;
+  let songBuffer: AudioBuffer | null = null;
+  let songSource: AudioBufferSourceNode | null = null;
+  let bgmGain: GainNode | null = null;
+  let isBgmPlaying = false;
+
+  async function ensureAudio() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+      bgmGain = audioCtx.createGain();
+      bgmGain.gain.setValueAtTime(0.15, audioCtx.currentTime); // BGM 볼륨
+      bgmGain.connect(audioCtx.destination);
+    }
+    if (audioCtx.state === 'suspended') {
+      await audioCtx.resume();
+    }
+  }
+
+  async function loadSong(url: string) {
+    if (songBuffer) return songBuffer;
+    const res = await fetch(url);
+    const arr = await res.arrayBuffer();
+    if (!audioCtx) return null;
+    songBuffer = await audioCtx.decodeAudioData(arr);
+    return songBuffer;
+  }
+
+  // ── 한글 합자 렌더링 ──
+  function renderSyllable() {
+    if (!state.cho) return '—';
+    if (!state.jung) return state.cho; // 자음 단독
+    
+    const ci = CHO_LIST.indexOf(state.cho);
+    const ji = JUNG_LIST.indexOf(state.jung);
+    
+    if (ci < 0 || ji < 0) return state.cho;
+    
+    const jongIdx = state.jong ? JONG_LIST.indexOf(state.jong) : 0;
+    const finalJongIdx = jongIdx < 0 ? 0 : jongIdx;
+    
+    return String.fromCharCode(0xAC00 + (ci * 21 + ji) * 28 + finalJongIdx);
+  }
+
+  function updateDisplay() {
+    const displayEl = document.getElementById('display-syllable');
+    if (!displayEl) return;
+    
+    const text = renderSyllable();
+    displayEl.textContent = text;
+    state.currentSyllable = text !== '—' && text.length === 1 && text !== state.cho ? text : '';
+
+    // 모핑 팝 애니메이션
+    displayEl.classList.add('pop');
+    setTimeout(() => {
+      displayEl.classList.remove('pop');
+    }, 150);
+
+    // AI 에이전트 마이크 버튼 제어 (EN 모드일 때는 항상 활성화)
+    const micBtn = document.getElementById('btn-mic') as HTMLButtonElement;
+    if (micBtn) {
+      micBtn.disabled = (state.langMode === 'ko' && !state.currentSyllable);
+    }
+  }
+
+  function updateWordDisplay() {
+    const wordTextEl = document.getElementById('word-text');
+    if (wordTextEl) {
+      wordTextEl.textContent = state.word || '—';
+    }
+
+    const englishTextEl = document.getElementById('english-text');
+    const englishRow = document.getElementById('english-row');
+    if (englishTextEl && englishRow) {
+      if (state.english) {
+        englishTextEl.textContent = state.english;
+        englishRow.style.display = 'flex';
+      } else {
+        englishRow.style.display = 'none';
+      }
+    }
+
+    // 게임 정답 실시간 스캔 채점 호출
+    checkGameAnswer();
+  }
+
+  // 모음 상태 처리기
+  function composeVowel(seq: string[]) {
+    // 1단계: 빌딩 블록 조합
+    let combined = seq.join('');
+    if (VOWEL_COMBINATIONS[combined]) {
+      return VOWEL_COMBINATIONS[combined];
+    }
+    
+    // 2단계: 복합 매칭 (예: ㅣ + • = ㅏ 이고, 여기에 ㅣ 추가 시 ㅐ)
+    let base = '';
+    for (let char of seq) {
+      if (!base) {
+        base = char;
+      } else {
+        const next = base + char;
+        if (VOWEL_COMBINATIONS[next]) {
+          base = VOWEL_COMBINATIONS[next];
+        } else {
+          base += char;
+        }
+      }
+    }
+    
+    const result = VOWEL_COMBINATIONS[base] || null;
+    
+    // 안전 장치: 조합이 성립되지 않고 천지인 입력 갯수가 3개 이상 쌓이면, 
+    // 마지막에 누른 천지인 하나만 남겨서 조어가 끊기지 않도록 방어
+    if (!result && seq.length >= 3) {
+      const last = seq[seq.length - 1];
+      state.jamoSeq = [last];
+      return VOWEL_COMBINATIONS[last] || null;
+    }
+    
+    return result;
+  }
+
+  // 조음 상형 팝업 제어
+  let popupTimeout: number | null = null;
+  function showAnatomy(jamo: string) {
+    const popup = document.getElementById('articulatory-popup');
+    const title = document.getElementById('anatomy-title');
+    const desc = document.getElementById('anatomy-desc');
+    const emoji = document.getElementById('anatomy-emoji');
+    if (!popup || !title || !desc || !emoji) return;
+
+    if (popupTimeout) {
+      clearTimeout(popupTimeout);
+    }
+
+    const data = ANATOMY_MAP[jamo];
+    if (data) {
+      title.textContent = data.title;
+      desc.textContent = data.desc;
+      emoji.textContent = data.emoji;
+      popup.classList.remove('hidden');
+
+      popupTimeout = window.setTimeout(() => {
+        popup.classList.add('hidden');
+      }, 1200);
+    } else {
+      popup.classList.add('hidden');
+    }
+  }
+
+  // 1.5초 확정 타이머
+  let commitTimeout: number | null = null;
+  function scheduleCommit() {
+    if (commitTimeout) {
+      clearTimeout(commitTimeout);
+    }
+    commitTimeout = window.setTimeout(() => {
+      const text = renderSyllable();
+      if (text !== '—' && text !== state.cho) {
+        speakKo(text); // 확정 시 가볍게 읽어주기
+      }
+    }, 1500);
+  }
+
+  // ── Web Speech API 코치 ──
+  const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+  let recognizer: any = null;
+
+  // 자모 기호 및 특수조합에 대한 MP3 파일명 맵핑 테이블 (19개 자음 전체로 확장)
+  const JAMO_AUDIO_MAP: Record<string, string> = {
+    // 19개 자음 기호 -> 파일명
+    'ㄱ': '기역', 'ㄲ': '쌍기역', 'ㅋ': '키읔',
+    'ㄴ': '니은', 'ㄷ': '디귿', 'ㄸ': '쌍디귿', 'ㅌ': '티읔', 'ㄹ': '리을',
+    'ㅁ': '미음', 'ㅂ': '비읍', 'ㅃ': '쌍비읍', 'ㅍ': '피읔',
+    'ㅅ': '시옷', 'ㅆ': '쌍시옷', 'ㅈ': '지읒', 'ㅉ': '쌍지읒', 'ㅊ': '치읓',
+    'ㅇ': '이응', 'ㅎ': '히읗',
+    // 모음 기호 -> 파일명
+    'ㅏ': '아', 'ㅐ': '애', 'ㅑ': '야', 'ㅓ': '어', 'ㅔ': '에', 'ㅕ': '여', 
+    'ㅗ': '오', '요': '요', 'ㅜ': '우', 'ㅠ': '유', 'ㅡ': '으', 'ㅢ': '의', 'ㅣ': '이',
+    '•': '아래아'
+  };
+
+  function speakKo(text: string) {
+    // 낱자 기호가 입력된 경우 맵핑 테이블을 통해 한글 명칭 파일명으로 변환
+    const filename = JAMO_AUDIO_MAP[text] || text;
+    
+    // 로컬의 고품질 gTTS MP3 발음 파일 우선 재생 시도
+    const audioUrl = `/audio/jamo/${encodeURIComponent(filename)}.mp3`;
+    const audio = new Audio(audioUrl);
+    
+    audio.volume = 0.85;
+    
+    audio.addEventListener('error', () => {
+      // 로컬 파일이 없거나 오류 시 내장 SpeechSynthesis로 안전하게 백업 폴백
+      fallbackSpeak(text);
+    });
+    
+    audio.play().catch(err => {
+      console.warn("Audio auto-play blocked or error, falling back:", err);
+      fallbackSpeak(text);
+    });
+  }
+
+  // 폴백용 브라우저 음성 합성 함수 (띄어쓰기 등 문장 전체는 무조건 SpeechSynthesis 사용)
+  function fallbackSpeak(text: string) {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'ko-KR';
+      utterance.rate = 0.92;
+      window.speechSynthesis.speak(utterance);
+    }
+  }
+
+  // 영어-한글 로컬 번역 캐시 사전
+  const LOCAL_TRANSLATION_MAP: Record<string, string> = {
+    'water please': '물 주세요',
+    'please give me water': '물 주세요',
+    'give me water': '물 주세요',
+    'rice please': '밥 주세요',
+    'please give me rice': '밥 주세요',
+    'give me rice': '밥 주세요',
+    'it is delicious': '맛있어요',
+    'delicious': '맛있어요',
+    'where is the restroom': '화장실 어디에요',
+    'where is the toilet': '화장실 어디에요',
+    'restroom please': '화장실 어디에요',
+    'toilet paper please': '휴지 주세요',
+    'please give me toilet paper': '휴지 주세요',
+    'here is my passport': '여권 여기 있어요',
+    'passport please': '여권 여기 있어요',
+    'where is the airplane': '비행기 어디에요',
+    'where is the plane': '비행기 어디에요',
+    'ticket please': '표 주세요',
+    'please give me a ticket': '표 주세요',
+    'where is the train': '기차 어디에요',
+    'train please': '기차 어디에요'
+  };
+
+  async function translateSentence(englishText: string) {
+    const coachBubble = document.getElementById('coach-bubble');
+    if (coachBubble) coachBubble.textContent = "번역 중... (Translating...)";
+
+    // 1. 소문자 정규화 후 로컬 매핑 사전 조회
+    const cleanText = englishText.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim();
+    if (LOCAL_TRANSLATION_MAP[cleanText]) {
+      const translated = LOCAL_TRANSLATION_MAP[cleanText];
+      state.word = translated;
+      updateWordDisplay();
+      
+      if (coachBubble) {
+        coachBubble.innerHTML = `인식: <strong>"${englishText}"</strong><br>번역: <strong>"${translated}"</strong> (로컬 매치)`;
+      }
+
+      // 성우 음성 큐 재생
+      playSentence(translated);
+      return;
+    }
+
+    // 2. 사전에 없으면 실시간 무료 번역 API 호출
+    try {
+      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(englishText)}&langpair=en|ko`;
+      const res = await fetch(url);
+      const data = await res.json();
+      
+      const translated = data?.responseData?.translatedText || '';
+      if (translated) {
+        state.word = translated;
+        updateWordDisplay();
+        
+        if (coachBubble) {
+          coachBubble.innerHTML = `인식: <strong>"${englishText}"</strong><br>번역: <strong>"${translated}"</strong> (실시간 번역)`;
+        }
+
+        // 성우 음성 큐 재생
+        playSentence(translated);
+      } else {
+        throw new Error("Empty translation result");
+      }
+    } catch (err) {
+      console.warn("Translation API failed, fallback to raw input:", err);
+      if (coachBubble) {
+        coachBubble.textContent = `번역 실패: 네트워크 연결을 확인하세요. ("${englishText}")`;
+      }
+    }
+  }
+
+  // 문장/단어 내 각 글자를 성우 발음 MP3로 순차 재생하는 큐 엔진
+  let audioQueue: string[] = [];
+  let currentQueueIndex = 0;
+  let activeAudio: HTMLAudioElement | null = null;
+  let isPlayingQueue = false;
+
+  function stopSentenceQueue() {
+    isPlayingQueue = false;
+    audioQueue = [];
+    currentQueueIndex = 0;
+    if (activeAudio) {
+      activeAudio.pause();
+      activeAudio = null;
+    }
+  }
+
+  function playSentence(text: string) {
+    stopSentenceQueue(); // 기존 재생 중이던 것 중단
+
+    if (!text.trim()) return;
+
+    // 문자를 글자 하나하나 단위로 쪼개기 (공백 및 특수문자 유지)
+    audioQueue = Array.from(text);
+    isPlayingQueue = true;
+    currentQueueIndex = 0;
+    
+    playNextInQueue();
+  }
+
+  async function playNextInQueue() {
+    if (!isPlayingQueue || currentQueueIndex >= audioQueue.length) {
+      isPlayingQueue = false;
+      return;
+    }
+
+    const char = audioQueue[currentQueueIndex];
+    currentQueueIndex++;
+
+    // 공백(띄어쓰기)인 경우 일정 시간 딜레이 후 다음 문자 진행
+    if (char === ' ') {
+      setTimeout(() => {
+        playNextInQueue();
+      }, 350); // 띄어쓰기는 350ms 무음 딜레이
+      return;
+    }
+
+    // 자모 오디오 맵 상 기호 이름 매핑 적용
+    const filename = JAMO_AUDIO_MAP[char] || char;
+    const audioUrl = `/audio/jamo/${encodeURIComponent(filename)}.mp3`;
+    
+    activeAudio = new Audio(audioUrl);
+    activeAudio.volume = 0.85;
+
+    let fallbackTriggered = false;
+
+    const handleNext = () => {
+      if (fallbackTriggered) return;
+      // 다음 글자 재생 전 약간의 글자 간 간격(80ms)을 주어 자연스럽게 연결
+      setTimeout(() => {
+        playNextInQueue();
+      }, 80);
+    };
+
+    activeAudio.addEventListener('ended', handleNext);
+
+    activeAudio.addEventListener('error', () => {
+      fallbackTriggered = true;
+      // 로컬 파일이 없으면 브라우저 TTS로 이 글자만 읽어주고 다음 글자로 넘어감
+      fallbackSpeak(char);
+      // TTS 발음 시간에 맞추어 일정 시간 후 다음 글자 재생 진행
+      setTimeout(() => {
+        playNextInQueue();
+      }, 500);
+    });
+
+    try {
+      await ensureAudio();
+      await activeAudio.play();
+    } catch (err) {
+      console.warn("Audio queue play failed, fallback to TTS:", err);
+      fallbackTriggered = true;
+      fallbackSpeak(char);
+      setTimeout(() => {
+        playNextInQueue();
+      }, 500);
+    }
+  }
+
+  function levenshtein(a: string, b: string): number {
+    const tmp: number[][] = [];
+    const alen = a.length, blen = b.length;
+    if (alen === 0) return blen;
+    if (blen === 0) return alen;
+    for (let i = 0; i <= alen; i++) tmp[i] = [i];
+    for (let j = 0; j <= blen; j++) tmp[0][j] = j;
+    for (let i = 1; i <= alen; i++) {
+      for (let j = 1; j <= blen; j++) {
+        tmp[i][j] = Math.min(
+          tmp[i - 1][j] + 1,
+          tmp[i][j - 1] + 1,
+          tmp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
+        );
+      }
+    }
+    return tmp[alen][blen];
+  }
+
+  function scorePronunciation(heard: string, target: string): number {
+    if (heard.includes(target)) return 100;
+    const dist = levenshtein(heard, target);
+    const maxLen = Math.max(heard.length, target.length);
+    return Math.max(0, Math.round((1 - dist / maxLen) * 90));
+  }
+
+  // ── DOM 이벤트 바인딩 ──
+  // 패드 이벤트 바인딩
+  const pads = document.querySelectorAll('.pad');
+  pads.forEach(p => {
+    p.addEventListener('click', async (e) => {
+      const btn = e.currentTarget as HTMLButtonElement;
+      const jamo = btn.getAttribute('data-jamo') || '';
+      const isCho = btn.classList.contains('cho');
+      
+      await ensureAudio();
+      
+      // 햅틱 효과 클래스 트리거
+      btn.classList.add('hit');
+      setTimeout(() => btn.classList.remove('hit'), 100);
+
+      if (isCho) {
+        // 자음 입력 및 순환 오토마타
+        const cycle = CONSONANT_CYCLES[jamo];
+        
+        if (!state.jung) {
+          // 초성(cho) 단계 순환
+          if (state.lastPadType === 'cho' && state.lastPadValue === jamo) {
+            state.cycleIdx = (state.cycleIdx + 1) % cycle.length;
+            state.cho = cycle[state.cycleIdx];
+          } else {
+            state.cho = jamo;
+            state.jamoSeq = [];
+            state.jung = null;
+            state.jong = null;
+            state.lastPadType = 'cho';
+            state.lastPadValue = jamo;
+            state.cycleIdx = 0;
+          }
+        } else {
+          // 종성(jong) 단계 순환
+          if (state.lastPadType === 'jong' && state.lastPadValue === jamo) {
+            state.cycleIdx = (state.cycleIdx + 1) % cycle.length;
+            state.jong = cycle[state.cycleIdx];
+          } else {
+            state.jong = jamo;
+            state.lastPadType = 'jong';
+            state.lastPadValue = jamo;
+            state.cycleIdx = 0;
+          }
+        }
+        
+        // 기계음 대신 성우 목소리로 명칭 재생
+        const currentJamo = (!state.jung) ? state.cho! : state.jong!;
+        speakKo(currentJamo);
+        showAnatomy(jamo);
+      } else {
+        // 모음 입력
+        if (state.cho && state.jong) {
+          // 연음 법칙
+          const prevJong = state.jong;
+          state.cho = prevJong;
+          state.jamoSeq = [jamo];
+          state.jung = composeVowel(state.jamoSeq);
+          state.jong = null;
+          state.lastPadType = 'jung';
+          state.lastPadValue = jamo;
+          state.cycleIdx = 0;
+        } else if (state.cho) {
+          state.jamoSeq.push(jamo);
+          state.jung = composeVowel(state.jamoSeq);
+          state.lastPadType = 'jung';
+          state.lastPadValue = jamo;
+        } else {
+          state.cho = 'ㅇ';
+          state.jamoSeq = [jamo];
+          state.jung = composeVowel(state.jamoSeq);
+          state.jong = null;
+          state.lastPadType = 'jung';
+          state.lastPadValue = jamo;
+          state.cycleIdx = 0;
+        }
+        
+        // 현재 구성된 모음 소리 성우 목소리로 재생
+        if (state.jung) {
+          speakKo(state.jung);
+        }
+      }
+
+      updateDisplay();
+      scheduleCommit();
+    });
+  });
+
+  // 단어 입력 제어 버튼들 이벤트 바인딩
+  const btnReset = document.getElementById('btn-reset');
+  const btnBackspace = document.getElementById('btn-backspace');
+  const btnSpace = document.getElementById('btn-space');
+  const btnEnter = document.getElementById('btn-enter');
+  const btnSpeakWord = document.getElementById('btn-speak-word');
+
+  if (btnReset) {
+    btnReset.addEventListener('click', () => {
+      state.cho = null;
+      state.jung = null;
+      state.jong = null;
+      state.jamoSeq = [];
+      state.currentSyllable = '';
+      state.word = '';
+      state.english = ''; // 영어 클리어
+      state.lastPadType = null;
+      state.lastPadValue = null;
+      state.cycleIdx = 0;
+      
+      const engInput = document.getElementById('input-english') as HTMLInputElement;
+      if (engInput) engInput.value = ''; // 인풋 클리어
+      
+      updateDisplay();
+      updateWordDisplay();
+      
+      const coachBubble = document.getElementById('coach-bubble');
+      if (coachBubble) {
+        coachBubble.textContent = "조립판이 초기화되었습니다. 패드를 눌러 새로운 단어를 만들어 보세요!";
+      }
+    });
+  }
+
+  if (btnBackspace) {
+    btnBackspace.addEventListener('click', () => {
+      // 1. 현재 조립 중인 한글이 있을 때
+      if (state.cho) {
+        if (state.jong) {
+          state.jong = null;
+          state.lastPadType = 'jung';
+        } else if (state.jung) {
+          state.jamoSeq.pop();
+          state.jung = composeVowel(state.jamoSeq);
+          if (!state.jung) {
+            state.lastPadType = 'cho';
+          }
+        } else {
+          state.cho = null;
+          state.lastPadType = null;
+        }
+      } 
+      // 2. 조립 중인 한글이 없고 조립판 단어가 있을 때
+      else if (state.word) {
+        state.word = state.word.slice(0, -1);
+      }
+      
+      updateDisplay();
+      updateWordDisplay();
+    });
+  }
+
+  if (btnSpace) {
+    btnSpace.addEventListener('click', () => {
+      const text = renderSyllable();
+      if (text !== '—') {
+        state.word += text;
+      }
+      state.word += ' ';
+      
+      state.cho = null;
+      state.jung = null;
+      state.jong = null;
+      state.jamoSeq = [];
+      state.lastPadType = null;
+      state.lastPadValue = null;
+      state.cycleIdx = 0;
+      
+      updateDisplay();
+      updateWordDisplay();
+    });
+  }
+
+  if (btnEnter) {
+    btnEnter.addEventListener('click', () => {
+      const text = renderSyllable();
+      if (text !== '—') {
+        state.word += text;
+        speakKo(text); // 확정된 글자 성우 음성으로 들려주기
+      }
+      
+      state.cho = null;
+      state.jung = null;
+      state.jong = null;
+      state.jamoSeq = [];
+      state.lastPadType = null;
+      state.lastPadValue = null;
+      state.cycleIdx = 0;
+      
+      updateDisplay();
+      updateWordDisplay();
+    });
+  }
+
+  if (btnSpeakWord) {
+    btnSpeakWord.addEventListener('click', () => {
+      if (state.word) {
+        playSentence(state.word);
+      } else {
+        const text = renderSyllable();
+        if (text !== '—') {
+          playSentence(text);
+        }
+      }
+    });
+  }
+
+  // BGM 재생 버튼
+  const bgmBtn = document.getElementById('btn-toggle-bgm');
+  const statusText = document.getElementById('playback-status');
+  const discIcon = document.getElementById('disc-icon');
+  const eqAnim = document.getElementById('eq-animation');
+
+  if (bgmBtn && statusText) {
+    bgmBtn.addEventListener('click', async () => {
+      await ensureAudio();
+      
+      const playIcon = bgmBtn.querySelector('.play-icon');
+      
+      if (isBgmPlaying) {
+        // 정지
+        if (songSource) {
+          songSource.stop();
+          songSource = null;
+        }
+        isBgmPlaying = false;
+        
+        if (playIcon) playIcon.textContent = '▶';
+        if (discIcon) discIcon.classList.remove('spinning');
+        if (eqAnim) eqAnim.classList.remove('active');
+        
+        statusText.textContent = 'Stopped';
+        statusText.style.color = '';
+      } else {
+        // 재생
+        statusText.textContent = 'Loading...';
+        try {
+          const buf = await loadSong('/audio/kpop_song_1.wav');
+          if (buf && audioCtx && bgmGain) {
+            songSource = audioCtx.createBufferSource();
+            songSource.buffer = buf;
+            songSource.loop = true;
+            songSource.connect(bgmGain);
+            songSource.start(0);
+            
+            isBgmPlaying = true;
+            
+            if (playIcon) playIcon.textContent = '⏸';
+            if (discIcon) discIcon.classList.add('spinning');
+            if (eqAnim) eqAnim.classList.add('active');
+            
+            statusText.textContent = 'Looping';
+            statusText.style.color = '#00F0FF';
+          }
+        } catch (err) {
+          statusText.textContent = 'Error';
+          if (discIcon) discIcon.classList.remove('spinning');
+          if (eqAnim) eqAnim.classList.remove('active');
+          console.error('Audio load failed:', err);
+        }
+      }
+    });
+  }
+
+  // 마이크 코치 버튼
+  const micBtn = document.getElementById('btn-mic') as HTMLButtonElement;
+  const coachBubble = document.getElementById('coach-bubble');
+  if (micBtn && coachBubble) {
+    const micIcon = micBtn.querySelector('.mic-icon');
+    const micText = document.getElementById('mic-text');
+
+    // SpeechRecognition 인스턴스 생성 여부 파악하여 안내문구
+    if (!SR) {
+      micBtn.style.display = 'none';
+      coachBubble.innerHTML += '<br><small style="color:hsl(350, 100%, 65%);">(음성 인식이 지원되지 않는 브라우저입니다. Chrome을 사용해 주세요.)</small>';
+    } else {
+      micBtn.addEventListener('click', async () => {
+        if (!state.currentSyllable && state.langMode === 'ko') return;
+        
+        await ensureAudio();
+        
+        // 이미 녹음 중이면 리턴
+        if (micBtn.classList.contains('recording')) return;
+
+        try {
+          // 에코/노이즈 캔슬러 및 자동 감도 조절 옵션을 강제 주입하여 음성 유입 성능을 극대화
+          await navigator.mediaDevices.getUserMedia({ 
+            audio: {
+              echoCancellation: true,
+              noiseSuppression: true,
+              autoGainControl: true
+            } 
+          });
+        } catch (err) {
+          coachBubble.textContent = '마이크 권한을 허용해 주세요! 🎤';
+          return;
+        }
+
+        if (!recognizer) {
+          recognizer = new SR();
+          recognizer.interimResults = false;
+          recognizer.maxAlternatives = 1;
+          recognizer.continuous = false;
+        }
+        
+        // 언어 모드 동적 할당
+        recognizer.lang = (state.langMode === 'en') ? 'en-US' : 'ko-KR';
+
+        // BGM 완전 음소거 (배경 소음으로 인한 마이크 인식 장애 원천 차단)
+        if (bgmGain && isBgmPlaying) {
+          bgmGain.gain.setValueAtTime(0.0, audioCtx!.currentTime);
+        }
+
+        recognizer.onstart = () => {
+          micBtn.classList.add('recording');
+          if (micIcon) micIcon.textContent = '🛑';
+          if (micText) micText.textContent = 'Listening...';
+          
+          if (state.langMode === 'en') {
+            coachBubble.textContent = "영어로 말씀해 보세요... (Speak in English...)";
+          } else {
+            coachBubble.textContent = `"${state.currentSyllable}" 발음을 또박또박 말씀해 보세요...`;
+          }
+        };
+
+        recognizer.onresult = (e: any) => {
+          const heard = e.results[0][0].transcript.trim();
+          
+          if (state.langMode === 'en') {
+            // 영어 음성 인식 완료
+            state.english = heard;
+            updateWordDisplay();
+            translateSentence(heard);
+          } else {
+            // 한글 발음 평가
+            const score = scorePronunciation(heard, state.currentSyllable);
+            
+            let comment = '';
+            if (score >= 90) {
+              comment = '완벽한 발음입니다! 🎉 K-Pop 그루브가 느껴져요!';
+              state.combo++;
+            } else if (score >= 60) {
+              comment = '거의 비슷합니다! 조금 더 또박또박 발음해볼까요?';
+            } else {
+              comment = '입모양을 조금 더 크게 벌리고 소리를 내 보세요. 다시 도전!';
+              state.combo = 0;
+            }
+
+            coachBubble.innerHTML = `인식된 발음: <strong>"${heard}"</strong> (일치율 ${score}점)<br>${comment}`;
+            
+            // 정답 TTS 재생
+            setTimeout(() => {
+              speakKo(state.currentSyllable);
+            }, 500);
+          }
+        };
+
+        recognizer.onerror = (e: any) => {
+          coachBubble.textContent = `다시 말해볼까요? (에러: ${e.error})`;
+        };
+
+        recognizer.onend = () => {
+          micBtn.classList.remove('recording');
+          if (micIcon) micIcon.textContent = '🎤';
+          if (micText) micText.textContent = 'Coach';
+          
+          // BGM 음량 복구
+          if (bgmGain && isBgmPlaying) {
+            bgmGain.gain.setValueAtTime(0.15, audioCtx!.currentTime);
+          }
+        };
+
+        recognizer.start();
+      });
+    }
+  }
+
+  // 상황별 데이터 셋
+  const PHRASE_DATA: Record<string, Array<{ ko: string; en: string; coach: string }>> = {
+    restaurant: [
+      { ko: '물 주세요', en: 'Please give me water', coach: '식당에서 물을 달라고 정중히 요청해 보세요! 🥤' },
+      { ko: '밥 주세요', en: 'Please give me rice', coach: '식사 전 밥을 요청하는 생존 한글 표현입니다. 🍚' },
+      { ko: '맛있어요', en: 'It is delicious', coach: '음식을 먹은 뒤 "맛있어요!"라고 칭찬과 긍정 피드백을 전달하세요! 😋' }
+    ],
+    restroom: [
+      { ko: '화장실 어디에요', en: 'Where is the restroom?', coach: '화장실 위치를 묻는 가장 중요한 일상 표현입니다! 🚻' },
+      { ko: '휴지 주세요', en: 'Please give me toilet paper', coach: '급한 상황에서 휴지를 부탁할 때 유용하게 쓰입니다. 🧻' }
+    ],
+    airport: [
+      { ko: '여권 여기 있어요', en: 'Here is my passport', coach: '입국 심사나 체크인 시 여권을 보여주며 사용합니다. ✈️' },
+      { ko: '비행기 어디에요', en: 'Where is the airplane?', coach: '게이트나 탑승 장소를 묻는 공항 필수 표현입니다. 🛫' }
+    ],
+    station: [
+      { ko: '표 주세요', en: 'Please give me a ticket', coach: '매표소에서 목적지 행 티켓을 요청하는 문장입니다. 🎫' },
+      { ko: '기차 어디에요', en: 'Where is the train?', coach: '기차 플랫폼의 위치를 묻는 핵심 기차역 표현입니다. 🚉' }
+    ]
+  };
+
+  // 상황 탭 & 카드 이벤트 바인딩
+  const tabBtns = document.querySelectorAll('.situation-tabs .tab-btn');
+  const phraseListEl = document.getElementById('phrase-list');
+
+  tabBtns.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      const target = e.currentTarget as HTMLButtonElement;
+      const category = target.getAttribute('data-category') || 'restaurant';
+
+      // 활성 탭 스타일 전환
+      tabBtns.forEach(b => b.classList.remove('active'));
+      target.classList.add('active');
+
+      // 리스트 갱신
+      if (phraseListEl) {
+        phraseListEl.innerHTML = '';
+        const phrases = PHRASE_DATA[category] || [];
+        
+        phrases.forEach(p => {
+          const btn = document.createElement('button');
+          btn.className = 'phrase-card';
+          btn.setAttribute('data-phrase', p.ko);
+          btn.innerHTML = `
+            <span class="phrase-ko">${p.ko}</span>
+            <span class="phrase-en">${p.en}</span>
+          `;
+          phraseListEl.appendChild(btn);
+
+          // 클릭 리스너 동적 연동
+          btn.addEventListener('click', () => {
+            handlePhraseClick(p.ko, p.coach);
+          });
+        });
+      }
+    });
+  });
+
+  // 문장 카드 클릭 공통 처리 핸들러
+  function handlePhraseClick(phrase: string, coachMsg: string) {
+    // 1. 단어 조립판에 즉시 대입
+    state.word = phrase;
+    updateWordDisplay();
+
+    // 2. 조립 중인 임시 글자 영역 초기화
+    state.cho = null;
+    state.jung = null;
+    state.jong = null;
+    state.jamoSeq = [];
+    state.lastPadType = null;
+    state.lastPadValue = null;
+    state.cycleIdx = 0;
+    updateDisplay();
+
+    // 3. 성우 연속 음성 큐 발동
+    playSentence(phrase);
+
+    // 4. AI 코치 말풍선 멘트 갱신
+    const coachBubble = document.getElementById('coach-bubble');
+    if (coachBubble) {
+      coachBubble.textContent = coachMsg;
+    }
+  }
+
+  // 초기 예문 리스트 카드들에도 클릭 핸들러 바인딩
+  const initialCards = document.querySelectorAll('.phrase-list .phrase-card');
+  initialCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      const target = e.currentTarget as HTMLButtonElement;
+      const phrase = target.getAttribute('data-phrase') || '';
+      
+      // 코치 메세지 조회
+      let coachMsg = '가이드를 터치해 단어를 배워보세요!';
+      for (const cat in PHRASE_DATA) {
+        const item = PHRASE_DATA[cat].find(p => p.ko === phrase);
+        if (item) {
+          coachMsg = item.coach;
+          break;
+        }
+      }
+      handlePhraseClick(phrase, coachMsg);
+    });
+  });
+
+  // 영어 텍스트 입력창 이벤트 바인딩
+  const inputEnglish = document.getElementById('input-english') as HTMLInputElement;
+  if (inputEnglish) {
+    inputEnglish.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const text = inputEnglish.value.trim();
+        if (text) {
+          state.english = text;
+          updateWordDisplay();
+          translateSentence(text);
+          inputEnglish.value = ''; // 입력 후 비우기
+          inputEnglish.blur(); // 포커스 아웃
+        }
+      }
+    });
+  }
+
+  // 언어 모드 토글 버튼 바인딩
+  const btnLangKo = document.getElementById('btn-lang-ko');
+  const btnLangEn = document.getElementById('btn-lang-en');
+
+  if (btnLangKo && btnLangEn) {
+    btnLangKo.addEventListener('click', () => {
+      state.langMode = 'ko';
+      btnLangKo.classList.add('active');
+      btnLangEn.classList.remove('active');
+      updateDisplay();
+      
+      const coachBubble = document.getElementById('coach-bubble');
+      if (coachBubble) {
+        coachBubble.textContent = "한국어 모드 활성화. 런치패드로 조립하거나 마이크로 발음을 연습해 보세요!";
+      }
+    });
+
+    btnLangEn.addEventListener('click', () => {
+      state.langMode = 'en';
+      btnLangEn.classList.add('active');
+      btnLangKo.classList.remove('active');
+      updateDisplay();
+      
+      const coachBubble = document.getElementById('coach-bubble');
+      if (coachBubble) {
+        coachBubble.textContent = "영어 모드 활성화. 아래 창에 타핑하거나 마이크로 영어를 말씀하세요!";
+      }
+    });
+  }
+
+  // 3단 메뉴 탭 제어 스크립트
+  const modeTabBtns = document.querySelectorAll('.mode-tabs-bar .mode-tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  modeTabBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const target = e.currentTarget as HTMLButtonElement;
+      const tabName = target.getAttribute('data-tab') || 'launchpad';
+
+      // 탭 버튼 active 클래스 제어
+      modeTabBtns.forEach(b => b.classList.remove('active'));
+      target.classList.add('active');
+
+      // 탭 콘텐츠 노출 제어
+      tabContents.forEach(content => {
+        const contentId = content.getAttribute('id');
+        if (contentId === `tab-${tabName}`) {
+          content.classList.add('active');
+        } else {
+          content.classList.remove('active');
+        }
+      });
+      
+      // 탭 전환 시 기존 성우 오디오 큐 정지
+      stopSentenceQueue();
+    });
+  });
+
+  // ── 한글 아케이드 게임 엔진 ──
+  const QUIZ_POOL = [
+    { ko: '물 주세요', en: 'Please give me water' },
+    { ko: '밥 주세요', en: 'Please give me rice' },
+    { ko: '맛있어요', en: 'It is delicious' },
+    { ko: '화장실 어디에요', en: 'Where is the restroom?' },
+    { ko: '휴지 주세요', en: 'Please give me toilet paper' },
+    { ko: '여권 여기 있어요', en: 'Here is my passport' },
+    { ko: '비행기 어디에요', en: 'Where is the airplane?' },
+    { ko: '표 주세요', en: 'Please give me a ticket' },
+    { ko: '기차 어디에요', en: 'Where is the train?' }
+  ];
+
+  const gameState = {
+    isPlaying: false,
+    score: 0,
+    combo: 0,
+    timeLeft: 30,
+    targetPhrase: '',
+    targetEnglish: '',
+    timerId: null as number | null
+  };
+
+  function startArcadeGame() {
+    stopArcadeGame(); // 안전 정지
+    
+    gameState.isPlaying = true;
+    gameState.score = 0;
+    gameState.combo = 0;
+    gameState.timeLeft = 30;
+    
+    // 점수판 초기화
+    updateGameScoreboard();
+
+    // BGM 자동 재생 트리거
+    triggerGameBGM(true);
+
+    // 첫 문제 출제
+    nextQuiz();
+
+    // 타이머 가동
+    gameState.timerId = window.setInterval(() => {
+      gameState.timeLeft--;
+      updateGameTimerUI();
+
+      if (gameState.timeLeft <= 0) {
+        stopArcadeGame();
+        const coachBubble = document.getElementById('coach-bubble');
+        if (coachBubble) {
+          coachBubble.innerHTML = `🏁 <strong>게임 종료!</strong> 최종 점수: <strong>${gameState.score}점</strong> (최대 콤보: ${gameState.combo})`;
+        }
+      }
+    }, 1000) as any;
+
+    // UI 버튼 변경
+    const toggleBtn = document.getElementById('btn-game-toggle');
+    if (toggleBtn) {
+      toggleBtn.textContent = '🛑 Game Stop';
+      toggleBtn.classList.add('playing');
+    }
+  }
+
+  function stopArcadeGame() {
+    gameState.isPlaying = false;
+    if (gameState.timerId) {
+      clearInterval(gameState.timerId);
+      gameState.timerId = null;
+    }
+    
+    triggerGameBGM(false);
+
+    const toggleBtn = document.getElementById('btn-game-toggle');
+    if (toggleBtn) {
+      toggleBtn.textContent = '🚀 Game Start';
+      toggleBtn.classList.remove('playing');
+    }
+
+    const quizKoEl = document.getElementById('quiz-korean');
+    const quizEnEl = document.getElementById('quiz-english');
+    if (quizKoEl) quizKoEl.textContent = 'Game Start를 눌러주세요';
+    if (quizEnEl) quizEnEl.textContent = '—';
+  }
+
+  function nextQuiz() {
+    if (!gameState.isPlaying) return;
+
+    // 무작위로 하나 선정
+    const idx = Math.floor(Math.random() * QUIZ_POOL.length);
+    const quiz = QUIZ_POOL[idx];
+
+    gameState.targetPhrase = quiz.ko;
+    gameState.targetEnglish = quiz.en;
+
+    const quizKoEl = document.getElementById('quiz-korean');
+    const quizEnEl = document.getElementById('quiz-english');
+    if (quizKoEl) quizKoEl.textContent = '???'; // 한글 정답은 숨깁니다
+    if (quizEnEl) quizEnEl.textContent = quiz.en; // 영어 힌트만 노출
+
+    // 퀴즈 출제 시 단어 조립판 자동 초기화
+    state.cho = null;
+    state.jung = null;
+    state.jong = null;
+    state.jamoSeq = [];
+    state.word = '';
+    state.english = '';
+    updateDisplay();
+    updateWordDisplay();
+
+    const coachBubble = document.getElementById('coach-bubble');
+    if (coachBubble) {
+      coachBubble.textContent = `영어 "${quiz.en}"에 해당하는 한글 문장을 조립해 보세요!`;
+    }
+  }
+
+  function updateGameScoreboard() {
+    const scoreEl = document.getElementById('game-score');
+    const comboEl = document.getElementById('game-combo');
+    if (scoreEl) scoreEl.textContent = String(gameState.score);
+    if (comboEl) comboEl.textContent = String(gameState.combo);
+  }
+
+  function updateGameTimerUI() {
+    const barEl = document.getElementById('game-timer-bar');
+    const textEl = document.getElementById('game-timer-text');
+    if (barEl) {
+      const pct = (gameState.timeLeft / 30) * 100;
+      barEl.style.width = `${pct}%`;
+    }
+    if (textEl) {
+      textEl.textContent = `${gameState.timeLeft}s`;
+    }
+  }
+
+  function checkGameAnswer() {
+    if (!gameState.isPlaying) return;
+
+    // 입력 단어에서 띄어쓰기를 정리하고 매칭 체크
+    const currentAns = state.word.replace(/\s+/g, '').trim();
+    const targetAns = gameState.targetPhrase.replace(/\s+/g, '').trim();
+
+    if (currentAns === targetAns) {
+      // 정답 달성!
+      gameState.score += 100 + (gameState.combo * 20); // 콤보 가속 점수
+      gameState.combo++;
+      gameState.timeLeft = Math.min(30, gameState.timeLeft + 8); // 시간 보너스
+      
+      updateGameScoreboard();
+      updateGameTimerUI();
+
+      // 우렁차게 한글 성우 정답 재생
+      playSentence(gameState.targetPhrase);
+
+      // 성공 네온 이펙트 팝업
+      const quizKoEl = document.getElementById('quiz-korean');
+      if (quizKoEl) {
+        quizKoEl.textContent = `🎉 CORRECT: ${gameState.targetPhrase}`;
+        quizKoEl.style.color = 'var(--gv-neon-jung)';
+      }
+
+      setTimeout(() => {
+        if (quizKoEl) quizKoEl.style.color = '';
+        nextQuiz();
+      }, 1200);
+    }
+  }
+
+  // 게임 BGM 트리거 제어
+  function triggerGameBGM(play: boolean) {
+    const bgmBtn = document.getElementById('btn-toggle-bgm');
+    
+    // 현재 BGM 플레이 상태와 맞지 않을 때만 강제 클릭 트리거
+    if (play && !isBgmPlaying) {
+      bgmBtn?.click();
+    } else if (!play && isBgmPlaying) {
+      bgmBtn?.click();
+    }
+  }
+
+  // 게임시작 버튼 리스너 바인딩
+  const gameToggleBtn = document.getElementById('btn-game-toggle');
+  if (gameToggleBtn) {
+    gameToggleBtn.addEventListener('click', () => {
+      if (gameState.isPlaying) {
+        stopArcadeGame();
+      } else {
+        startArcadeGame();
+      }
+    });
+  }
+</script>
