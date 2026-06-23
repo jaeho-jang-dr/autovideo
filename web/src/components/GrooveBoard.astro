@@ -12,81 +12,86 @@ const tr = t(lang);
 
 <div class="groove glass">
   <div class="groove-cockpit">
-    <!-- 상단 콕핏 헤더: 오락기 상단 전광판 컨셉 -->
+    <!-- 상단 콕핏 헤더: 리셋 버튼과 심플 타이틀 -->
     <div class="cockpit-header">
       <div class="header-main">
         <h2>{tr.groove_title}</h2>
-        <p class="subtitle">{tr.groove_sub}</p>
       </div>
-      <div class="header-actions">
-        <button id="btn-reset" class="action-mini-btn" title="초기화">↺ Reset</button>
-        <button id="btn-game-toggle" class="game-start-btn">🚀 Game Start</button>
-      </div>
+      <button id="btn-reset" class="action-mini-btn" title="초기화">↺ Reset</button>
     </div>
 
-    <!-- 5분할 메인 그리드 콘솔 -->
-    <div class="cockpit-grid">
-      
-      <!-- [좌상단]: 영어 통번역 모듈 계기판 -->
-      <div class="cockpit-module translator-module glass">
-        <div class="module-title">🌐 {lang === 'ko' ? '영어 통번역기' : 'Translator'}</div>
-        
-        <div class="english-input-wrapper-card">
-          <input type="text" id="input-english" placeholder="Type English & Press Enter..." class="english-input glass" />
-        </div>
+    <!-- 콕핏 모드 선택 스위처 바 (가로 1줄 줄바꿈 방지) -->
+    <div class="cockpit-mode-switcher glass">
+      <button class="switcher-btn active" data-mode="launchpad">🎹 {lang === 'ko' ? '런치' : 'Pad'}</button>
+      <button class="switcher-btn" data-mode="translator">🌐 {lang === 'ko' ? '번역' : 'Trans'}</button>
+      <button class="switcher-btn" data-mode="phrases">📖 {lang === 'ko' ? '상황' : 'Phrase'}</button>
+      <button class="switcher-btn" data-mode="game">🎮 {lang === 'ko' ? '게임' : 'Game'}</button>
+    </div>
 
-        <div class="agent-section">
-          <div class="agent-avatar">🤖</div>
-          <div class="agent-chat">
-            <div class="chat-bubble" id="coach-bubble">
-              {lang === 'ko' ? "마이크를 누르거나 영어를 타이핑해 보세요!" : "Tap the mic or type in English!"}
-            </div>
-            
-            <div class="chat-controls">
-              <div class="lang-selector-bar glass">
-                <button id="btn-lang-ko" class="lang-toggle-btn active">KO</button>
-                <button id="btn-lang-en" class="lang-toggle-btn">EN</button>
-              </div>
-              
-              <button id="btn-mic" class="mic-btn-fab">
-                <div class="mic-glow-ring"></div>
-                <span class="mic-icon">🎤</span>
-                <span id="mic-text" class="sr-only">{tr.groove_mic}</span>
-              </button>
+    <!-- 중앙 메인 HUD 모니터 (활성화된 모드에 따라 내장 콘텐츠 스위칭) -->
+    <div class="cockpit-main-monitor glass">
+      
+      <!-- 1. 런치패드 모드 모니터 뷰 -->
+      <div id="monitor-content-launchpad" class="monitor-view active">
+        <div class="center-display-monitor">
+          <div class="syllable-container">
+            <span id="display-syllable" class="syllable">—</span>
+          </div>
+          
+          <div id="articulatory-popup" class="anatomy-card glass hidden">
+            <div class="anatomy-avatar" id="anatomy-emoji">👅</div>
+            <div class="anatomy-text">
+              <strong id="anatomy-title">ㄱ</strong>
+              <p id="anatomy-desc">설근폐후(혀뿌리가 목구멍을 막는 모양)</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- [우상단]: 상황별 대화 카드 가이드 계기판 -->
-      <div class="cockpit-module phrases-module glass">
-        <div class="module-title">📖 {lang === 'ko' ? '상황 표현 가이드' : 'Phrases'}</div>
-        
-        <div class="situation-tabs">
-          <button class="tab-btn active" data-category="restaurant">🍔 {lang === 'ko' ? '식당' : 'Dining'}</button>
-          <button class="tab-btn" data-category="restroom">🚻 {lang === 'ko' ? '화장실' : 'Restroom'}</button>
-          <button class="tab-btn" data-category="airport">✈️ {lang === 'ko' ? '공항' : 'Airport'}</button>
-          <button class="tab-btn" data-category="station">🚄 {lang === 'ko' ? '기차역' : 'Station'}</button>
-        </div>
-        
-        <div class="phrase-list" id="phrase-list">
-          <button class="phrase-card" data-phrase="물 주세요">
-            <span class="phrase-ko">물 주세요</span>
-            <span class="phrase-en">Please give me water</span>
-          </button>
-          <button class="phrase-card" data-phrase="밥 주세요">
-            <span class="phrase-ko">밥 주세요</span>
-            <span class="phrase-en">Please give me rice</span>
-          </button>
-          <button class="phrase-card" data-phrase="맛있어요">
-            <span class="phrase-ko">맛있어요</span>
-            <span class="phrase-en">It is delicious</span>
-          </button>
+      <!-- 2. 번역 모드 모니터 뷰 -->
+      <div id="monitor-content-translator" class="monitor-view">
+        <div class="english-input-wrapper-card glass">
+          <span class="input-card-title">English Input (Press Enter)</span>
+          <div class="english-input-wrapper">
+            <input type="text" id="input-english" class="english-input" placeholder="Type English here..." />
+          </div>
         </div>
       </div>
 
-      <!-- [중앙]: 메인 HUD 디스플레이 & 조립 모니터 -->
-      <div class="cockpit-center glass">
+      <!-- 3. 상황 모드 모니터 뷰 -->
+      <div id="monitor-content-phrases" class="monitor-view">
+        <div class="situation-helper-section glass">
+          <div class="situation-header">
+            <span class="situation-title">📖 {lang === 'ko' ? '상황 표현 가이드' : 'Phrases'}</span>
+          </div>
+          <div class="situation-tabs">
+            <button class="tab-btn active" data-category="restaurant">🍔 {lang === 'ko' ? '식당' : 'Dining'}</button>
+            <button class="tab-btn" data-category="restroom">🚻 {lang === 'ko' ? '화장실' : 'Restroom'}</button>
+            <button class="tab-btn" data-category="airport">✈️ {lang === 'ko' ? '공항' : 'Airport'}</button>
+            <button class="tab-btn" data-category="station">🚄 {lang === 'ko' ? '기차역' : 'Station'}</button>
+          </div>
+          <div class="phrase-list" id="phrase-list">
+            <button class="phrase-card" data-phrase="물 주세요">
+              <span class="phrase-ko">물 주세요</span>
+              <span class="phrase-en">Please give me water</span>
+            </button>
+            <button class="phrase-card" data-phrase="밥 주세요">
+              <span class="phrase-ko">밥 주세요</span>
+              <span class="phrase-en">Please give me rice</span>
+            </button>
+            <button class="phrase-card" data-phrase="맛있어요">
+              <span class="phrase-ko">맛있어요</span>
+              <span class="phrase-en">It is delicious</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. 게임 모드 모니터 뷰 -->
+      <div id="monitor-content-game" class="monitor-view">
+        <div class="game-control-card glass">
+          <button id="btn-game-toggle" class="control-btn game-toggle-btn glass">🚀 Game Start</button>
+        </div>
         
         <!-- 게임 스코어 & 콤보 & 타이머 (게임 아케이드 실행 시 동적 노출되는 HUD 구조) -->
         <div class="game-hud-panel glass hidden" id="game-hud-panel">
@@ -116,91 +121,109 @@ const tr = t(lang);
             </div>
           </div>
         </div>
-
-        <!-- 중앙 조음 낱자 & 조음 상형 모니터 -->
-        <div class="center-display-monitor">
-          <div class="syllable-container">
-            <span id="display-syllable" class="syllable">—</span>
-          </div>
-          
-          <div id="articulatory-popup" class="anatomy-card glass hidden">
-            <div class="anatomy-avatar" id="anatomy-emoji">👅</div>
-            <div class="anatomy-text">
-              <strong id="anatomy-title">ㄱ</strong>
-              <p id="anatomy-desc">설근폐후(혀뿌리가 목구멍을 막는 모양)</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 글로벌 단어 조립판 (KOR/ENG) -->
-        <div class="word-board-section glass">
-          <div class="word-display-row" id="english-row" style="display: none;">
-            <span class="lang-badge eng">ENG</span>
-            <span id="english-text" class="english-text">—</span>
-          </div>
-          <div class="word-display-row">
-            <span class="lang-badge kor">KOR</span>
-            <span id="word-text" class="word-text">—</span>
-          </div>
-        </div>
-
-        <!-- [중앙 정밀 정렬]: 자음 D-pad와 모음 액션 키보드 밀착 도크 -->
-        <div class="cockpit-keyboard-dock">
-          <!-- 자음 런치패드 D-pad -->
-          <div class="keyboard-group-panel left-pad-panel">
-            <span class="panel-label">🎹 자음 (Consonants)</span>
-            <div class="launchpad dpad-layout">
-              <button class="pad cho glass" data-jamo="ㄱ" aria-label="자음 기역">ㄱ</button>
-              <button class="pad cho glass" data-jamo="ㄴ" aria-label="자음 니은">ㄴ</button>
-              <button class="pad cho glass" data-jamo="ㅁ" aria-label="자음 미음">ㅁ</button>
-              <button class="pad cho glass" data-jamo="ㅅ" aria-label="자음 시옷">ㅅ</button>
-              <button class="pad cho glass" data-jamo="ㅇ" aria-label="자음 이응">ㅇ</button>
-            </div>
-          </div>
-
-          <!-- 모음 천지인 패드 -->
-          <div class="keyboard-group-panel right-pad-panel">
-            <span class="panel-label">☄️ 모음 & 비트 (Vowels & Beat)</span>
-            <div class="vowels action-layout">
-              <button class="pad jung glass" data-jamo="•" aria-label="하늘 아래아">•</button>
-              <button class="pad jung glass" data-jamo="ㅡ" aria-label="땅 으">ㅡ</button>
-              <button class="pad jung glass" data-jamo="ㅣ" aria-label="사람 이">ㅣ</button>
-            </div>
-
-            <!-- BGM 플레이어 위젯 -->
-            <div class="music-player-widget glass">
-              <div class="music-info">
-                <span class="disc-icon" id="disc-icon">💿</span>
-                <div class="track-details">
-                  <span class="track-title">K-POP Beat</span>
-                  <div id="playback-status" class="status-indicator">Stopped</div>
-                </div>
-              </div>
-              <div class="player-controls">
-                <div class="eq-container" id="eq-animation">
-                  <span class="eq-bar"></span>
-                  <span class="eq-bar"></span>
-                  <span class="eq-bar"></span>
-                  <span class="eq-bar"></span>
-                </div>
-                <button id="btn-toggle-bgm" class="player-btn" aria-label="Play beat">
-                  <span class="play-icon">▶</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 조립 제어 버튼 세트 -->
-        <div class="word-controls">
-          <button id="btn-backspace" class="control-btn backspace-btn glass" title="글자 지우기">⌫ 지우기</button>
-          <button id="btn-space" class="control-btn space-btn glass" title="띄어쓰기">␣ 띄어쓰기</button>
-          <button id="btn-enter" class="control-btn enter-btn glass" title="글자 확정">↵ 확정</button>
-          <button id="btn-speak-word" class="control-btn speak-btn glass" title="전체 문장 소리내기">🔊 전체 읽기</button>
-        </div>
       </div>
 
     </div>
+
+    <!-- 중앙 하단 공통 글자 조립판 (KOR/ENG 결과가 상시 보임) -->
+    <div class="word-board-section glass">
+      <div class="word-display-row" id="english-row" style="display: none;">
+        <span class="lang-badge eng">ENG</span>
+        <span id="english-text" class="english-text">—</span>
+      </div>
+      <div class="word-display-row">
+        <span class="lang-badge kor">KOR</span>
+        <span id="word-text" class="word-text">—</span>
+      </div>
+    </div>
+
+    <!-- AI 에이전트 피드백 영역 -->
+    <div class="agent-section glass">
+      <div class="agent-avatar">🤖</div>
+      <div class="agent-chat">
+        <div class="chat-bubble" id="coach-bubble">
+          안녕하세요! Hangeul Groove 조판 콕핏에 오신 것을 환영합니다!
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 3분할 조작부 그리드 (콕핏 조작 데크) -->
+    <div class="cockpit-keyboard-dock">
+      <!-- 좌하단: 자음 D-pad -->
+      <div class="keyboard-group-panel left-pad-panel">
+        <span class="panel-label">🎹 자음 (Consonants)</span>
+        <div class="launchpad dpad-layout">
+          <button class="pad cho glass" data-jamo="ㄱ" aria-label="자음 기역">ㄱ</button>
+          <button class="pad cho glass" data-jamo="ㄴ" aria-label="자음 니은">ㄴ</button>
+          <button class="pad cho glass" data-jamo="ㅁ" aria-label="자음 미음">ㅁ</button>
+          <button class="pad cho glass" data-jamo="ㅅ" aria-label="자음 시옷">ㅅ</button>
+          <button class="pad cho glass" data-jamo="ㅇ" aria-label="자음 이응">ㅇ</button>
+        </div>
+      </div>
+
+      <!-- 하단 중간: 제어 및 보조 세트 -->
+      <div class="keyboard-group-panel center-control-panel">
+        <span class="panel-label">🎛️ 조작 (Controls)</span>
+        <div class="center-controls-grid">
+          <!-- 상단: 지우기, 스페이스 -->
+          <div class="controls-top-row">
+            <button id="btn-backspace" class="control-btn backspace-btn glass" title="글자 지우기">⌫ 지우기</button>
+            <button id="btn-space" class="control-btn space-btn glass" title="띄어쓰기">␣ 띄어쓰기</button>
+          </div>
+          <!-- 중간: 마이크 버튼 및 언어 선택 바 -->
+          <div class="controls-mid-row">
+            <div class="lang-selector-bar glass">
+              <button id="btn-lang-ko" class="lang-toggle-btn active">KO</button>
+              <button id="btn-lang-en" class="lang-toggle-btn">EN</button>
+            </div>
+            
+            <button id="btn-mic" class="mic-btn-fab">
+              <div class="mic-glow-ring"></div>
+              <span class="mic-icon">🎤</span>
+              <span id="mic-text" class="sr-only">{tr.groove_mic}</span>
+            </button>
+          </div>
+          <!-- 하단: 확정, 전체 읽기 -->
+          <div class="controls-bottom-row">
+            <button id="btn-enter" class="control-btn enter-btn glass" title="글자 확정">↵ 확정</button>
+            <button id="btn-speak-word" class="control-btn speak-btn glass" title="전체 문장 소리내기">🔊 전체 읽기</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 우하단: 모음 Action-pad & BGM 플레이어 -->
+      <div class="keyboard-group-panel right-pad-panel">
+        <span class="panel-label">☄️ 모음 & 비트 (Vowels & Beat)</span>
+        <div class="vowels action-layout">
+          <button class="pad jung glass" data-jamo="•" aria-label="하늘 아래아">•</button>
+          <button class="pad jung glass" data-jamo="ㅡ" aria-label="땅 으">ㅡ</button>
+          <button class="pad jung glass" data-jamo="ㅣ" aria-label="사람 이">ㅣ</button>
+        </div>
+
+        <!-- BGM 플레이어 위젯 -->
+        <div class="music-player-widget glass">
+          <div class="music-info">
+            <span class="disc-icon" id="disc-icon">💿</span>
+            <div class="track-details">
+              <span class="track-title">K-POP Beat</span>
+              <div id="playback-status" class="status-indicator">Stopped</div>
+            </div>
+          </div>
+          <div class="player-controls">
+            <div class="eq-container" id="eq-animation">
+              <span class="eq-bar"></span>
+              <span class="eq-bar"></span>
+              <span class="eq-bar"></span>
+              <span class="eq-bar"></span>
+            </div>
+            <button id="btn-toggle-bgm" class="player-btn" aria-label="Play beat">
+              <span class="play-icon">▶</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -2073,6 +2096,69 @@ const tr = t(lang);
   }
 
   // ── DOM 이벤트 바인딩 ──
+  // 콕핏 모드 스위처 바인딩
+  const switcherBtns = document.querySelectorAll('.switcher-btn');
+  const monitorViews = document.querySelectorAll('.monitor-view');
+
+  switcherBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const target = e.currentTarget as HTMLButtonElement;
+      const mode = target.getAttribute('data-mode') || 'launchpad';
+
+      // 1. 스위처 버튼 활성화 스타일
+      switcherBtns.forEach(b => b.classList.remove('active'));
+      target.classList.add('active');
+
+      // 2. 모니터 뷰 스위칭
+      monitorViews.forEach(view => {
+        view.classList.remove('active');
+      });
+      const targetMonitor = document.getElementById(`monitor-content-${mode}`);
+      if (targetMonitor) {
+        targetMonitor.classList.add('active');
+      }
+      
+      // 3. 만약 게임 모드가 아니면 게임 중단
+      if (mode !== 'game' && gameState.isPlaying) {
+        stopArcadeGame();
+      }
+      
+      // 4. 모드에 따라 언어 모드 및 가이드 연동
+      const coachBubble = document.getElementById('coach-bubble');
+      if (mode === 'translator') {
+        state.langMode = 'en';
+        const btnLangKo = document.getElementById('btn-lang-ko');
+        const btnLangEn = document.getElementById('btn-lang-en');
+        if (btnLangKo && btnLangEn) {
+          btnLangKo.classList.remove('active');
+          btnLangEn.classList.add('active');
+        }
+        if (coachBubble) {
+          coachBubble.textContent = "영어 번역 모드. 위 모니터 입력창에 직접 타이핑하거나 마이크로 말씀해 주세요!";
+        }
+      } else if (mode === 'launchpad') {
+        state.langMode = 'ko';
+        const btnLangKo = document.getElementById('btn-lang-ko');
+        const btnLangEn = document.getElementById('btn-lang-en');
+        if (btnLangKo && btnLangEn) {
+          btnLangKo.classList.add('active');
+          btnLangEn.classList.remove('active');
+        }
+        if (coachBubble) {
+          coachBubble.textContent = "한국어 조립 모드. 아래 좌/우 런치패드를 눌러 글자를 조립해 보세요!";
+        }
+      } else if (mode === 'phrases') {
+        if (coachBubble) {
+          coachBubble.textContent = "상황 표현 모드. 위 모니터에서 카테고리를 골라 상황별 표현을 연습하세요!";
+        }
+      } else if (mode === 'game') {
+        if (coachBubble) {
+          coachBubble.textContent = "게임 아케이드 모드. 위 모니터의 Start 버튼을 눌러 게임을 시작하세요!";
+        }
+      }
+    });
+  });
+
   // 패드 이벤트 바인딩
   const pads = document.querySelectorAll('.pad');
   pads.forEach(p => {
