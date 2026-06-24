@@ -1,0 +1,540 @@
+---
+import { grammarData } from '../data/grammarData';
+import type { Lang } from '../lib/content';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const isEn = lang === 'en';
+
+const L = {
+  title: isEn ? 'Hangeul Grammar Lab' : '한글 문법 연구소',
+  subtitle: isEn
+    ? 'Study Hangeul pronunciation mechanics, vocal organs, and stroke orders easily.'
+    : '조음 기관의 원리부터 받침 규칙, 획순까지 쉽고 재미있게 배우는 한글 가이드.',
+  tipLabel: isEn ? 'Hack' : '꿀팁',
+  listen: isEn ? 'Listen' : '듣기',
+  anatomyTitle: isEn ? 'Interactive Vocal Organ Chart' : '인터랙티브 조음 기관 도해',
+  anatomyDesc: isEn
+    ? 'Select a consonant type or hover on items to highlight the active sound-forming zone.'
+    : '자음 항목을 선택하거나 마우스를 올리면 소리가 생성되는 조음 부위가 강조됩니다.',
+  zones: {
+    lips: isEn ? 'Lips (Bilabial)' : '입술 (순음)',
+    teeth: isEn ? 'Teeth (Dental)' : '치아 (치음)',
+    tongue: isEn ? 'Tongue (Alveolar)' : '혀 (설음)',
+    palate: isEn ? 'Palate (Velar)' : '입천장 (아음)',
+    throat: isEn ? 'Throat (Glottal)' : '목구멍 (후음)',
+  }
+};
+---
+
+<div class="grammar-lab">
+  <div class="container">
+    <header class="lab-header">
+      <span class="lab-eyebrow">{isEn ? 'GRAMMAR & PHONICS' : '한글 문법 & 발음'}</span>
+      <h1>{L.title}</h1>
+      <p class="lab-lead">{L.subtitle}</p>
+    </header>
+
+    <div class="lab-layout">
+      <!-- 왼쪽: 인터랙티브 조음기관 SVG 도해 -->
+      <div class="anatomy-panel glass">
+        <h3>{L.anatomyTitle}</h3>
+        <p>{L.anatomyDesc}</p>
+        
+        <div class="svg-container">
+          <svg viewBox="0 0 200 200" aria-label="Vocal organ diagram">
+            <!-- 머리 외곽 프로필 -->
+            <path d="M 20 40 C 20 10, 180 10, 180 60 C 180 90, 190 100, 170 120 C 160 130, 160 145, 160 160 C 160 180, 130 190, 120 190" stroke="#d5cbb6" stroke-width="2.5" fill="none" />
+            <!-- 목 뒷부분 -->
+            <path d="M 160 160 L 160 195" stroke="#d5cbb6" stroke-width="2.5" />
+            
+            <!-- 입술 (Lips - 양순음 ㅁ,ㅂ,ㅍ) -->
+            <path id="zone-lips" class="organ-zone" d="M 38 98 C 45 98, 48 94, 52 94 C 55 94, 52 108, 46 108 C 40 108, 38 102, 38 98 Z" />
+            
+            <!-- 치아 (Teeth - 치음 ㅅ,ㅆ) -->
+            <path id="zone-teeth" class="organ-zone" d="M 58 88 L 59 93 M 57 101 L 58 106" stroke-width="3" />
+            
+            <!-- 입천장/치조 (Palate - 연구개음 ㄱ,ㅋ / 경구개음 ㅈ,ㅊ) -->
+            <path id="zone-palate" class="organ-zone" d="M 58 84 C 70 80, 95 80, 110 90 C 120 98, 125 110, 125 125" />
+            
+            <!-- 혀 (Tongue - 설단음 ㄴ,ㄷ,ㄹ) -->
+            <path id="zone-tongue" class="organ-zone" d="M 62 106 C 70 106, 85 104, 98 108 C 110 112, 115 124, 114 135 C 105 136, 92 130, 80 120 C 70 112, 64 108, 62 106 Z" />
+            
+            <!-- 목구멍/성대 (Throat - 후음 ㅇ,ㅎ) -->
+            <path id="zone-throat" class="organ-zone" d="M 125 125 C 128 140, 128 165, 125 185 M 145 135 L 145 185" />
+            
+            <!-- 공기 흐름 화살표 (선화 점선) -->
+            <path d="M 120 180 C 118 160, 105 145, 95 135 C 80 120, 60 115, 45 110" stroke="#b5852a" stroke-dasharray="4,4" stroke-width="1.5" fill="none" />
+          </svg>
+        </div>
+
+        <div class="anatomy-legend">
+          <span class="legend-badge" data-zone="lips">👄 {L.zones.lips}</span>
+          <span class="legend-badge" data-zone="teeth">🦷 {L.zones.teeth}</span>
+          <span class="legend-badge" data-zone="tongue">👅 {L.zones.tongue}</span>
+          <span class="legend-badge" data-zone="palate">⛰️ {L.zones.palate}</span>
+          <span class="legend-badge" data-zone="throat">🕳️ {L.zones.throat}</span>
+        </div>
+      </div>
+
+      <!-- 오른쪽: 탭 및 상세 문법 공부 영역 -->
+      <div class="grammar-panel glass">
+        <!-- 탭 네비게이션 -->
+        <div class="tab-list" role="tablist" aria-label="Grammar tabs">
+          {grammarData.map((sec, i) => (
+            <button
+              class:list={["tab-btn", { active: i === 0 }]}
+              role="tab"
+              data-target={sec.id}
+              aria-selected={i === 0 ? 'true' : 'false'}
+              type="button"
+            >
+              {isEn ? sec.title_en : sec.title_ko}
+            </button>
+          ))}
+        </div>
+
+        <!-- 탭 콘텐츠 -->
+        <div class="tab-contents">
+          {grammarData.map((sec, i) => (
+            <div class:list={["tab-content", { hidden: i !== 0 }]} id={`content-${sec.id}`}>
+              <div class="section-intro">
+                <p>{isEn ? sec.intro_en : sec.intro_ko}</p>
+              </div>
+
+              <div class="cards-list">
+                {sec.items.map((item) => (
+                  <div 
+                    class="grammar-card glass-card" 
+                    data-highlight={item.visual_highlight || ''}
+                  >
+                    <div class="card-header">
+                      <h3>{isEn ? item.name_en : item.name_ko}</h3>
+                      {item.ipa && <span class="ipa-badge">{item.ipa}</span>}
+                      {item.sound_play && (
+                        <button 
+                          class="play-btn" 
+                          data-sound={item.sound_play}
+                          title={L.listen}
+                          aria-label={`${L.listen} ${item.sound_play}`}
+                        >
+                          🔊 {L.listen}
+                        </button>
+                      )}
+                    </div>
+                    
+                    <p class="card-details">{isEn ? item.details_en : item.details_ko}</p>
+                    
+                    {(item.tip_ko || item.tip_en) && (
+                      <div class="card-tip">
+                        <span class="tip-tag">💡 {L.tipLabel}</span>
+                        <p>{isEn ? item.tip_en : item.tip_ko}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ---- 조음 기관 및 카드 호버/포커스 연동 ----
+  const cards = document.querySelectorAll('.grammar-card');
+  const badges = document.querySelectorAll('.legend-badge');
+
+  function highlightZone(zoneName) {
+    // 모든 존 해제
+    document.querySelectorAll('.organ-zone').forEach(z => z.classList.remove('highlighted'));
+    badges.forEach(b => b.classList.remove('active'));
+    
+    if (!zoneName) return;
+    
+    // 특정 존 강조
+    const zone = document.getElementById(`zone-${zoneName}`);
+    if (zone) zone.classList.add('highlighted');
+    
+    const badge = document.querySelector(`.legend-badge[data-zone="${zoneName}"]`);
+    if (badge) badge.classList.add('active');
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      const zone = card.getAttribute('data-highlight');
+      if (zone) highlightZone(zone);
+    });
+    card.addEventListener('mouseleave', () => {
+      highlightZone(null);
+    });
+  });
+
+  badges.forEach(badge => {
+    badge.addEventListener('mouseenter', () => {
+      const zone = badge.getAttribute('data-zone');
+      highlightZone(zone);
+    });
+    badge.addEventListener('mouseleave', () => {
+      highlightZone(null);
+    });
+  });
+
+  // ---- 탭 제어 ----
+  const tabs = document.querySelectorAll('.tab-btn');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-target');
+      
+      // 탭 토글
+      tabs.forEach(t => {
+        const on = t === tab;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+
+      // 콘텐츠 토글
+      contents.forEach(c => {
+        c.classList.toggle('hidden', c.getAttribute('id') !== `content-${target}`);
+      });
+    });
+  });
+
+  // ---- 브라우저 내장 Web Speech API TTS 출력 (우회 정책 적용) ----
+  const playButtons = document.querySelectorAll('.play-btn');
+
+  function playTTS(text) {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel(); // 큐 비우기
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'ko-KR';
+      utterance.rate = 0.85; // 듣기 쉬운 템포
+      utterance.volume = 1.0;
+      window.speechSynthesis.speak(utterance);
+    } else {
+      console.warn('SpeechSynthesis not supported in this browser.');
+    }
+  }
+
+  playButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const sound = btn.getAttribute('data-sound');
+      if (sound) playTTS(sound);
+    });
+  });
+</script>
+
+<style>
+  .grammar-lab {
+    /* 기존 훈민정음 페이지의 배색 테마 계승 */
+    --c-bg: #f4ecdb;
+    --c-panel: #faf4e8;
+    --c-card: #fffdf7;
+    --c-ink: #1c1813;
+    --c-ink-2: #5b5142;
+    --c-ink-3: #8c7f6a;
+    --c-line: rgba(28, 24, 19, 0.12);
+    --c-line-strong: rgba(28, 24, 19, 0.22);
+    --c-gold: #b5852a;
+    --c-gold-soft: rgba(181, 133, 42, 0.16);
+    --c-glow: rgba(181, 133, 42, 0.45);
+    --c-radius: 18px;
+
+    color: var(--c-ink);
+    min-height: 100vh;
+    padding: 40px 0 80px;
+    background:
+      radial-gradient(900px 520px at 12% -8%, rgba(181, 133, 42, 0.10), transparent 60%),
+      radial-gradient(820px 480px at 92% 0%, rgba(120, 92, 60, 0.08), transparent 60%),
+      var(--c-bg);
+  }
+
+  .grammar-lab .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .lab-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .lab-eyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--c-gold);
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding: 5px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--c-gold-soft);
+    background: rgba(181, 133, 42, 0.07);
+  }
+
+  .lab-header h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+
+  .lab-lead {
+    font-size: 1.1rem;
+    color: var(--c-ink-2);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .lab-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+    align-items: start;
+  }
+
+  /* --- 글래스모피즘 판넬 공통 --- */
+  .glass {
+    background: rgba(250, 244, 232, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(28, 24, 19, 0.08);
+    border-radius: var(--c-radius);
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(28, 24, 19, 0.03);
+  }
+
+  /* --- 왼쪽 조음 도해 판넬 --- */
+  .anatomy-panel {
+    text-align: center;
+  }
+
+  .anatomy-panel h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .anatomy-panel p {
+    font-size: 0.8rem;
+    color: var(--c-ink-2);
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .svg-container {
+    background: var(--c-card);
+    border: 1px solid var(--c-line);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .svg-container svg {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+  }
+
+  .organ-zone {
+    fill: none;
+    stroke: rgba(28, 24, 19, 0.2);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: all 0.25s ease;
+  }
+
+  .organ-zone.highlighted {
+    stroke: var(--c-gold);
+    stroke-width: 5;
+    fill: var(--c-gold-soft);
+    filter: drop-shadow(0 0 6px var(--c-glow));
+  }
+
+  .anatomy-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .legend-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: var(--c-card);
+    border: 1px solid var(--c-line);
+    color: var(--c-ink-2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .legend-badge.active, .legend-badge:hover {
+    border-color: var(--c-gold);
+    background: var(--c-gold-soft);
+    color: var(--c-gold);
+  }
+
+  /* --- 오른쪽 디테일 문법 판넬 --- */
+  .grammar-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .tab-list {
+    display: flex;
+    gap: 8px;
+    background: rgba(28, 24, 19, 0.05);
+    padding: 5px;
+    border-radius: 12px;
+    border: 1px solid var(--c-line);
+  }
+
+  .tab-btn {
+    flex: 1;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: var(--c-ink-2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .tab-btn.active {
+    background: var(--c-card);
+    color: var(--c-gold);
+    box-shadow: 0 4px 12px rgba(28, 24, 19, 0.05);
+  }
+
+  .tab-content.hidden {
+    display: none;
+  }
+
+  .section-intro {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--c-ink-2);
+    margin-bottom: 20px;
+  }
+
+  .cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .grammar-card {
+    background: var(--c-card);
+    border: 1px solid var(--c-line);
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.3s ease;
+  }
+
+  .grammar-card:hover {
+    border-color: var(--c-gold);
+    box-shadow: 0 8px 24px var(--c-gold-soft);
+    transform: translateY(-2px);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  .card-header h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .ipa-badge {
+    font-size: 0.72rem;
+    font-family: monospace;
+    font-weight: 600;
+    color: var(--c-gold);
+    background: var(--c-gold-soft);
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+
+  .play-btn {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid var(--c-gold);
+    color: var(--c-gold);
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .play-btn:hover {
+    background: var(--c-gold);
+    color: #fff;
+  }
+
+  .card-details {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--c-ink-2);
+    margin: 0 0 16px 0;
+  }
+
+  .card-tip {
+    background: rgba(181, 133, 42, 0.05);
+    border-left: 3px solid var(--c-gold);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    gap: 10px;
+    align-items: start;
+  }
+
+  .tip-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--c-gold);
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+
+  .card-tip p {
+    font-size: 0.82rem;
+    line-height: 1.4;
+    color: var(--c-ink-2);
+    margin: 0;
+  }
+
+  /* --- 반응형 레이아웃 --- */
+  @media (max-width: 820px) {
+    .lab-layout {
+      grid-template-columns: 1fr;
+    }
+    
+    .svg-container {
+      max-width: 300px;
+      margin: 0 auto 20px auto;
+    }
+  }
+</style>

@@ -10,7 +10,7 @@ export function getStaticPaths() {
 const { category } = Astro.params;
 const code = category!;
 const cat = getCategory(code);
-const lang = 'en' as const;
+const lang = 'ko' as const;
 const name = cat ? catName(cat, lang) : code;
 ---
 <BaseLayout
