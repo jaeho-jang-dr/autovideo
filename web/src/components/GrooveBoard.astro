@@ -1303,24 +1303,24 @@ const tr = t(lang);
 .launchpad.dpad-layout .pad-wrapper:nth-child(4) { grid-column: 3; grid-row: 2; }
 .launchpad.dpad-layout .pad-wrapper:nth-child(5) { grid-column: 2; grid-row: 3; }
 
-/* 우하단 모음 D-pad 배치 (3개 모음 천지인 삼각 배치 & 내부 밀착) */
 .vowels.dpad-layout {
-  padding: 24px; /* 패딩을 늘려 내부 삼각형 수축 */
+  max-width: 185px; /* 모음 키캡 10% 확대를 위해 max-width 확장 */
+  padding: 8px; /* 내부 가용 공간을 넓혀 키캡 물리적 크기 확대 */
 }
 .vowels.dpad-layout .pad-wrapper:nth-child(1) { 
   grid-column: 2; 
   grid-row: 1; 
-  transform: translateY(12px); /* 상단 모음을 아래로 더 수축 */
+  transform: translateY(16px); /* 상단 모음을 아래로 더 수축 */
 }
 .vowels.dpad-layout .pad-wrapper:nth-child(2) { 
   grid-column: 1; 
   grid-row: 3; 
-  transform: translate(12px, -12px); /* 좌하단 모음을 우상향으로 더 수축 */
+  transform: translate(16px, -16px); /* 좌하단 모음을 우상향으로 더 수축 */
 }
 .vowels.dpad-layout .pad-wrapper:nth-child(3) { 
   grid-column: 3; 
   grid-row: 3; 
-  transform: translate(-12px, -12px); /* 우하단 모음을 좌상향으로 더 수축 */
+  transform: translate(-16px, -16px); /* 우하단 모음을 좌상향으로 더 수축 */
 }
 
 /* 3D 기계식 네온 키캡 (키크기 & 한글 자모 초대형화) */
@@ -3741,7 +3741,7 @@ const tr = t(lang);
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(phoneticText);
       utterance.lang = 'ko-KR';
-      utterance.volume = 0.85;
+      utterance.volume = 1.0; // tts 음량 최대치 상향
       utterance.rate = 1.0;
       
       const voices = window.speechSynthesis.getVoices();
@@ -3917,7 +3917,7 @@ const tr = t(lang);
         window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(targetText);
         utterance.lang = 'ko-KR';
-        utterance.volume = 0.85;
+        utterance.volume = 1.0; // tts 음량 최대치 상향
         utterance.rate = 1.0;
         
         const voices = window.speechSynthesis.getVoices();
