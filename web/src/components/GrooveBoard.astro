@@ -1339,8 +1339,9 @@ const tr = t(lang);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  aspect-ratio: 1;
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 1 / 1 !important;
 }
 
 .pad.cho {
@@ -2022,7 +2023,11 @@ const tr = t(lang);
 /* 🎹 Hangeul Keyboard Hover/Touch Popup Styles */
 .pad-wrapper {
   position: relative;
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .pad-popup {
@@ -2141,12 +2146,12 @@ const tr = t(lang);
 
 /* 아래아 모음의 완벽한 원형 벡터 아이콘 스타일 */
 .araea-dot {
-  width: 14px;
-  height: 14px;
+  width: 9px;
+  height: 9px;
   background-color: currentColor;
   border-radius: 50%;
   display: inline-block;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.85); /* 부드러운 네온 광채 */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.85); /* 부드러운 네온 광채 */
 }
 
 .stage-instruction-box {
@@ -4257,8 +4262,8 @@ const tr = t(lang);
       btn.classList.add('hit');
       setTimeout(() => btn.classList.remove('hit'), 100);
 
-      // 더블 탭 감지 (850ms 미만 & 동일 버튼 연속 클릭)
-      const isDoubleTap = (lastTapPad === btn && (currentTime - lastTapTime) < 850);
+      // 더블 탭 감지 (동일 버튼 연속 클릭 - 속도 제한 제거)
+      const isDoubleTap = (lastTapPad === btn);
       lastTapPad = btn;
       lastTapTime = currentTime;
 
@@ -4389,6 +4394,8 @@ const tr = t(lang);
       state.lastPadType = null;
       state.lastPadValue = null;
       state.cycleIdx = 0;
+      lastTapPad = null;
+      lastTapTime = 0;
       
       const engInput = document.getElementById('input-english') as HTMLInputElement;
       if (engInput) engInput.value = ''; // 인풋 클리어
@@ -4417,6 +4424,8 @@ const tr = t(lang);
       state.lastPadType = null;
       state.lastPadValue = null;
       state.cycleIdx = 0;
+      lastTapPad = null;
+      lastTapTime = 0;
 
       const engInput = document.getElementById('input-english') as HTMLInputElement;
       if (engInput) engInput.value = '';
@@ -4454,6 +4463,8 @@ const tr = t(lang);
 
   if (btnBackspace) {
     btnBackspace.addEventListener('click', () => {
+      lastTapPad = null;
+      lastTapTime = 0;
       // 1. 현재 조립 중인 한글이 있을 때
       if (state.cho) {
         if (state.jong) {
@@ -4521,6 +4532,8 @@ const tr = t(lang);
 
   if (btnSpace) {
     btnSpace.addEventListener('click', () => {
+      lastTapPad = null;
+      lastTapTime = 0;
       const text = renderSyllable();
       if (text !== '—') {
         state.word += text;
@@ -4542,6 +4555,8 @@ const tr = t(lang);
 
   if (btnEnter) {
     btnEnter.addEventListener('click', () => {
+      lastTapPad = null;
+      lastTapTime = 0;
       const text = renderSyllable();
       if (text !== '—') {
         state.word += text;
@@ -4563,6 +4578,8 @@ const tr = t(lang);
 
   if (btnSpeakWord) {
     btnSpeakWord.addEventListener('click', () => {
+      lastTapPad = null;
+      lastTapTime = 0;
       const currentText = renderSyllable();
       const finalSyllable = (currentText !== '—') ? currentText : '';
       const fullText = state.word + finalSyllable;
