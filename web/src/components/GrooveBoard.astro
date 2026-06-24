@@ -4973,6 +4973,8 @@ const tr = t(lang);
       coachBubble.innerHTML += '<br><small style="color:hsl(350, 100%, 65%);">(음성 인식이 지원되지 않는 브라우저입니다. Chrome을 사용해 주세요.)</small>';
     } else {
       micBtn.addEventListener('click', () => {
+        const coachBubble = document.getElementById('coach-bubble');
+
         if (!recognizer && SR) {
           try {
             recognizer = new SR();
@@ -5066,20 +5068,19 @@ const tr = t(lang);
                 bgmGain.gain.setValueAtTime(0.15, audioCtx!.currentTime);
               }
             };
-          } catch (err) {
+          } catch (err: any) {
             console.error("SpeechRecognition lazy initialization failed:", err);
+            if (coachBubble) {
+              coachBubble.textContent = `음성 인식 초기화 실패: ${err.message || err}`;
+            }
           }
         }
 
         if (!recognizer) {
           console.warn("Speech recognition is not initialized or supported.");
-          return;
-        }
-
-        ensureAudio().catch(err => console.warn("AudioContext resume failed:", err));
-
-        if (isRecording) {
-          recognizer.stop();
+          if (coachBubble) {
+            coachBubble.textContent = "이 브라우저/기기에서는 음성 인식이 지원되지 않습니다. Safari 또는 Chrome 브라우저에서 실행해 주세요.";
+          }
           return;
         }
 
@@ -5095,8 +5096,20 @@ const tr = t(lang);
           } else {
             targetText = state.word;
           }
-          // 한국어 발음 연습인데 타겟 텍스트가 없으면 녹음 미작동
-          if (!targetText) return;
+          // 한국어 발음 연습인데 타겟 텍스트가 없으면 녹음 미작동 및 문구 노출
+          if (!targetText) {
+            if (coachBubble) {
+              coachBubble.textContent = "연습할 자모음이나 단어를 먼저 선택해 주세요!";
+            }
+            return;
+          }
+        }
+
+        ensureAudio().catch(err => console.warn("AudioContext resume failed:", err));
+
+        if (isRecording) {
+          recognizer.stop();
+          return;
         }
 
         currentTargetText = targetText;
@@ -5110,10 +5123,30 @@ const tr = t(lang);
         }
 
         try {
+          // 사용자 클릭 시 반응성 극대화를 위해 즉각 UI 변경
+          isRecording = true;
+          micBtn.classList.add('recording');
+          if (micIcon) micIcon.textContent = '🛑';
+          if (micText) micText.textContent = 'Listening...';
+          if (coachBubble) {
+            if (state.langMode === 'en') {
+              coachBubble.textContent = "영어로 말씀해 보세요... (Speak in English...)";
+            } else {
+              coachBubble.textContent = `"${currentTargetText}" 발음을 또박또박 말씀해 보세요...`;
+            }
+          }
+
           recognizer.start();
-        } catch (err) {
-          console.warn("Recognizer start failed (already running?):", err);
-          // 안전 장치: 에러 발생 시 BGM 볼륨 복구
+        } catch (err: any) {
+          console.warn("Recognizer start failed:", err);
+          if (coachBubble) {
+            coachBubble.textContent = `마이크 시작 오류: ${err.message || err}`;
+          }
+          // UI 상태 복구
+          isRecording = false;
+          micBtn.classList.remove('recording');
+          if (micIcon) micIcon.textContent = '🎤';
+          if (micText) micText.textContent = 'Coach';
           if (bgmGain && isBgmPlaying) {
             bgmGain.gain.setValueAtTime(0.15, audioCtx!.currentTime);
           }
