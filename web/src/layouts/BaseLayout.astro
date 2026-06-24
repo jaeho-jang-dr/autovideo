@@ -62,7 +62,8 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
           <nav class="nav">
             <a href={homeUrl(lang)} class={active === 'home' ? 'active' : ''}>{tr.nav_home}</a>
             <a href={`${homeUrl(lang)}#lessons`} class={active === 'lessons' ? 'active' : ''}>{tr.nav_lessons}</a>
-            <a href={lang === 'en' ? '/en/groove/' : '/groove/'} class={active === 'groove' ? 'active' : ''}>{tr.nav_groove}</a>
+            <a href={lang === 'en' ? '/en/groove/' : '/groove/'} class={active === 'groove' && !Astro.url.searchParams.has('play') ? 'active' : ''}>{tr.nav_groove}</a>
+            <a href={lang === 'en' ? '/en/groove/?play=game' : '/groove/?play=game'} class={Astro.url.searchParams.get('play') === 'game' ? 'active' : ''}>🎮 {lang === 'ko' ? '한글 게임' : 'Game'}</a>
             <span class="lang-switch" role="group" aria-label="language">
               <a href={koUrl} class={lang === 'ko' ? 'active' : ''} hreflang="ko">KO</a>
               <a href={enUrl} class={lang === 'en' ? 'active' : ''} hreflang="en">EN</a>
@@ -112,6 +113,7 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
               <li><a href={homeUrl(lang)}>{tr.nav_home}</a></li>
               <li><a href={`${homeUrl(lang)}#lessons`}>{tr.nav_lessons}</a></li>
               <li><a href={lang === 'en' ? '/en/groove/' : '/groove/'}>{tr.nav_groove}</a></li>
+              <li><a href={lang === 'en' ? '/en/groove/?play=game' : '/groove/?play=game'}>🎮 {lang === 'ko' ? '한글 게임' : 'Game'}</a></li>
               <li>
                 <span style="display: inline-block; margin-top: 4px;">
                   <span class="lang-switch" role="group" aria-label="language">
