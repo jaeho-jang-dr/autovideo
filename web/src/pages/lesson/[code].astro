@@ -9,14 +9,14 @@ export function getStaticPaths() {
 
 const { code } = Astro.params;
 const episode = getEpisode(code!)!;
-const lang = 'ko' as const;
+const lang = 'en' as const;
 ---
 <BaseLayout
   lang={lang}
-  altUrl={`/en/lesson/${episode.code}/`}
+  altUrl={`/ko/lesson/${episode.code}/`}
   active="lessons"
   title={`${epTitle(episode, lang)} · drjay-ed`}
-  description={episode.hook_kr ?? episode.logline_kr ?? ''}
+  description={episode.title_en}
 >
   <LessonView lang={lang} episode={episode} />
 </BaseLayout>

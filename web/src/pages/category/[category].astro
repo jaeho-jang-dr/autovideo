@@ -10,15 +10,15 @@ export function getStaticPaths() {
 const { category } = Astro.params;
 const code = category!;
 const cat = getCategory(code);
-const lang = 'ko' as const;
+const lang = 'en' as const;
 const name = cat ? catName(cat, lang) : code;
 ---
 <BaseLayout
   lang={lang}
-  altUrl={`/en/category/${code}/`}
+  altUrl={`/ko/category/${code}/`}
   active="lessons"
   title={`${name} · drjay-ed`}
-  description={cat?.medical_lens ?? ''}
+  description={name}
 >
   <CategoryView lang={lang} code={code} />
 </BaseLayout>

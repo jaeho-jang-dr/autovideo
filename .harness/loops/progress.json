@@ -8,9 +8,9 @@
   },
   "current_session": {
     "status": "completed",
-    "started": "2026-06-24",
-    "goal": "Track 2-person motion from legacy chiropractic video and compile Gonstead Sitting Technique 2D animation clip starring Injoon and Jieun",
-    "phase": "chiropractic_animation"
+    "started": "2026-06-25",
+    "goal": "Integrate the Hangeul 36-week bilingual curriculum: seed Supabase + SQLite, expose /api/curriculum, and ship bilingual Astro curriculum dashboard with lock/unlock cards, 3-step detail modal, and a gamification progress simulator",
+    "phase": "hangeul_curriculum_integration"
   },
   "completed_tasks": [
     "Created tts_manager.py supporting ElevenLabs API and gTTS fallback mechanisms",
@@ -120,7 +120,11 @@
     "Web Overhaul (2026-06-24, Gemini=조감독): Resolved '전체 읽기' (Speak Sentence) mute bug on static hosting by falling back to browser-native SpeechSynthesis at volume 1.0, bypassing 403 Forbidden CORS limits on Google Translate TTS.",
     "Web Overhaul (2026-06-24, Gemini=조감독): Enabled '옻' sound validation support by adding it to the extraSyllables hasAudio allowed set.",
     "Web Overhaul (2026-06-24, Gemini=조감독): Enlarged all vowel keycaps by exactly 10% compared to consonants (max-width: 185px, padding: 8px) and adjusted triangle compression offsets to 16px.",
-    "Tooling (2026-06-24, Gemini=조감독): Installed google-antigravity SDK (pip) and antigravity-sdk global npm package, verified agy CLI version 1.0.10 is running and in PATH."
+    "Tooling (2026-06-24, Gemini=조감독): Installed google-antigravity SDK (pip) and antigravity-sdk global npm package, verified agy CLI version 1.0.10 is running and in PATH.",
+    "Hangeul Curriculum (2026-06-25, Claude=감독): Created scripts/seed_curriculum.py — parses the 36 source week-titles (3 levels x 12), enriches each with bilingual 3-step content (Concept/Practice/Application 20m each) + target_letters, and upserts to BOTH Supabase Postgres (psycopg2, ON CONFLICT(level,week)) and channel/content.db SQLite (ON CONFLICT upsert), plus writes the static dump web/src/data/curriculum_fallback.json. Applied migration 202606250000_create_hangeul_curriculum.sql (table + unique index + RLS read-all policy). Seeded 36/36 rows to all three backends; source titles cross-validated 12 per level.",
+    "Hangeul Curriculum (2026-06-25, Claude=감독): Built the Astro curriculum dashboard — web/src/lib/curriculum.ts (typed JSON loader), web/src/components/CurriculumView.astro (warm-beige/ink-black theme, Outfit/Inter, glass panels, neon-glow hover), pages /curriculum (ko) + /ko/curriculum + /en/curriculum, and the /api/curriculum endpoint (Supabase-first with static-JSON fallback, static-build-safe with no prerender=false). Added 'Curriculum/커리큘럼' GNB+footer link and active state to BaseLayout, plus nav_curriculum i18n.",
+    "Hangeul Curriculum (2026-06-25, Claude=감독): UI features — 3 level tabs, 12 week cards/level showing week#/title/target-letters, lock/unlock cues (locked=opacity .5 + lock icon + non-interactive), 3-step detail modal with level-specific rewards (Beginner stroke-order/pronunciation, Intermediate K-culture unlocks, Advanced TOPIK mock-exam ticket), and a gamification simulator (Study% + Game-score sliders; Regular pass >=70%, Excellent free-pass >=900, Perfect free-pass =1000; localStorage free-pass streak with a 48h cooldown lockout after 5 consecutive; manual sandbox unlock + reset).",
+    "Hangeul Curriculum (2026-06-25, Claude=감독): Verified — `npm run build` green (67 pages, all curriculum routes + /api/curriculum emitted), check_encoding.py + targeted UTF-8/BOM scan clean on all 11 new/edited files, and a 12/12 Playwright headless E2E on the live dev server (lock states, locked-card guard, 3-step modal, weighted-score formula, regular-pass unlock keeps streak 0, 5x free-pass triggers 48h cooldown). NOTE: .harness/verify/check_links.py referenced in CLAUDE.md does not exist on disk — skipped per the no-guessed-commands rule."
   ],
   "pending_tasks": [
     "Sori Hangeul Mic: Resolve iOS/iPhone Safari silent microphone startup failure. User reported that clicking the mic button still yields no reaction at all. Perform intensive debugging on WebKit speech recognition click binding and console/error traps.",

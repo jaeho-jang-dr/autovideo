@@ -17,7 +17,7 @@ const sorted = [...episodes].sort((a, b) => {
 const concept = channel.concept ?? '';
 ---
 <section class="hero container">
-  <span class="eyebrow">{channel.benchmark ? `${channel.benchmark}-style learning` : 'Learn deeply'}</span>
+  <span class="eyebrow">{lang === 'en' ? 'Learn deeply' : '깊이 있는 학습'}</span>
   <h1>{lang === 'en' ? 'The World, Through a' : '세상을 해부하는'} <span class="grad-text">{lang === 'en' ? "Doctor's Eyes" : '의사의 시선'}</span></h1>
   <p class="lead">{lang === 'en' ? tr.tagline : concept || tr.tagline}</p>
 
@@ -29,6 +29,7 @@ const concept = channel.concept ?? '';
 
   <div style="margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
     <a class="btn btn-primary" href="#lessons">{tr.explore}</a>
+    <a class="btn btn-secondary glass" href={lang === 'en' ? '/curriculum/' : '/ko/curriculum/'}>{tr.nav_curriculum}</a>
   </div>
 </section>
 

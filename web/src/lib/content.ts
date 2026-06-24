@@ -79,15 +79,15 @@ export function epYoutube(e: Episode, lang: Lang): string | null {
   return lang === 'en' ? e.youtube_en : e.youtube_kr;
 }
 
-// --- prefixDefaultLocale:false 기준 URL 빌더 (ko는 접두사 없음) ---
+// --- prefixDefaultLocale:false 기준 URL 빌더 (en은 접두사 없음) ---
 export function homeUrl(lang: Lang): string {
-  return lang === 'en' ? '/en/' : '/';
+  return lang === 'ko' ? '/ko/' : '/';
 }
 export function categoryUrl(code: string, lang: Lang): string {
-  return lang === 'en' ? `/en/category/${code}/` : `/category/${code}/`;
+  return lang === 'ko' ? `/ko/category/${code}/` : `/category/${code}/`;
 }
 export function lessonUrl(code: string, lang: Lang): string {
-  return lang === 'en' ? `/en/lesson/${code}/` : `/lesson/${code}/`;
+  return lang === 'ko' ? `/ko/lesson/${code}/` : `/lesson/${code}/`;
 }
 
 // 유튜브 임베드 ID 추출: 순수 ID, 일반 URL, 단축/embed/shorts 모두 허용.

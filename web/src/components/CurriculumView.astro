@@ -11,10 +11,10 @@ const isEn = lang === 'en';
 
 // UI 라벨 (페이지가 언어별이므로 서버에서 해당 언어로 확정)
 const L = {
-  title: isEn ? 'Hangeul Curriculum' : '한글 커리큘럼',
+  title: isEn ? 'Hunminjeongeum' : '훈민정음',
   subtitle: isEn
-    ? '36 weeks · 3 levels · daily 1 hour = Concept (20m) + Interactive Practice (20m) + Real-life Application (20m).'
-    : '36주 · 3단계 · 하루 1시간 = 개념 이해(20분) + 시청각·놀이 연습(20분) + 실생활 적용(20분).',
+    ? '24 weeks (6 Months) · 3 levels · daily 1 hour = Concept (20m) + Interactive Practice (20m) + Real-life Application (20m).'
+    : '24주(6개월) · 3단계 · 하루 1시간 = 개념 이해(20분) + 시청각·놀이 연습(20분) + 실생활 적용(20분).',
   panelTitle: isEn ? 'Progress Simulator' : '진도 시뮬레이터',
   panelDesc: isEn
     ? 'Adjust the sliders to see whether the next week unlocks.'
@@ -70,7 +70,7 @@ const payload = {
     fail: isEn ? 'Not enough — keep studying' : '미달 — 조금 더 학습하세요',
     cooldownMsg: isEn ? 'Cooldown active. Try again after' : '쿨다운 잠금 중. 다음 시각 이후 재시도',
     unlockedMsg: isEn ? 'Unlocked week' : '해금됨 — 주차',
-    maxedMsg: isEn ? 'All weeks already unlocked in this level' : '이 레벨의 모든 주차가 이미 해금됨',
+    maxedMsg: isEn ? 'All weeks already unlocked' : '모든 주차가 이미 해금됨',
     needPass: isEn ? 'Pass condition not met — cannot unlock' : '통과 조건 미달 — 해금 불가',
     hours: isEn ? 'h' : '시간', mins: isEn ? 'm' : '분',
   },
@@ -187,16 +187,16 @@ const payload = {
   const REWARDS = DATA.rewards || {};
 
   // ---- localStorage 진도 상태 ----
-  const KEY_UNLOCK = (lv) => `hangeul_unlock_${lv}`;
+  const KEY_UNLOCK = 'hangeul_unlocked_week';
   const KEY_STREAK = 'hangeul_freepass_streak';
   const KEY_COOLDOWN = 'hangeul_cooldown_until';
   const COOLDOWN_MS = 48 * 60 * 60 * 1000;
 
-  const getUnlocked = (lv) => {
-    const v = parseInt(localStorage.getItem(KEY_UNLOCK(lv)) || '1', 10);
-    return isNaN(v) ? 1 : Math.min(Math.max(v, 1), 12);
+  const getUnlocked = () => {
+    const v = parseInt(localStorage.getItem(KEY_UNLOCK) || '1', 10);
+    return isNaN(v) ? 1 : Math.min(Math.max(v, 1), 24);
   };
-  const setUnlocked = (lv, n) => localStorage.setItem(KEY_UNLOCK(lv), String(Math.min(Math.max(n, 1), 12)));
+  const setUnlocked = (n) => localStorage.setItem(KEY_UNLOCK, String(Math.min(Math.max(n, 1), 24)));
   const getStreak = () => parseInt(localStorage.getItem(KEY_STREAK) || '0', 10) || 0;
   const setStreak = (n) => localStorage.setItem(KEY_STREAK, String(Math.max(0, n)));
   const getCooldown = () => parseInt(localStorage.getItem(KEY_COOLDOWN) || '0', 10) || 0;
@@ -251,8 +251,8 @@ const payload = {
   // ---- 레벨 요약/쿨다운 표시 ----
   let cooldownTimer = null;
   function refreshSummary() {
-    const up = getUnlocked(currentLevel);
-    let txt = `${LABELS.unlockedUpTo} ${up} / 12`;
+    const up = getUnlocked();
+    let txt = `${LABELS.unlockedUpTo} ${up} / 24`;
     if (inCooldown()) {
       txt += `  ·  ${LABELS.cooldownOn} (${fmtRemain(getCooldown() - Date.now())})`;
       levelSummary.classList.add('cooldown');
@@ -272,14 +272,12 @@ const payload = {
 
   // ---- 카드 잠금 렌더 ----
   function renderLocks() {
-    LEVELS.forEach((lv) => {
-      const up = getUnlocked(lv);
-      document.querySelectorAll(`.week-card[data-level="${lv}"]`).forEach((card) => {
-        const wk = parseInt(card.getAttribute('data-week'), 10);
-        const locked = wk > up;
-        card.classList.toggle('locked', locked);
-        card.setAttribute('aria-disabled', locked ? 'true' : 'false');
-      });
+    const up = getUnlocked();
+    document.querySelectorAll('.week-card').forEach((card) => {
+      const wk = parseInt(card.getAttribute('data-week'), 10);
+      const locked = wk > up;
+      card.classList.toggle('locked', locked);
+      card.setAttribute('aria-disabled', locked ? 'true' : 'false');
     });
   }
 
@@ -298,10 +296,10 @@ const payload = {
   }
 
   // ---- 다음 주 해금 ----
-  function unlockNext(lv) {
-    const up = getUnlocked(lv);
-    if (up >= 12) return { ok: false, maxed: true, week: up };
-    setUnlocked(lv, up + 1);
+  function unlockNext() {
+    const up = getUnlocked();
+    if (up >= 24) return { ok: false, maxed: true, week: up };
+    setUnlocked(up + 1);
     renderLocks();
     refreshSummary();
     return { ok: true, week: up + 1 };
@@ -318,7 +316,7 @@ const payload = {
     if (!r.anyPass) { setMsg(LABELS.needPass, 'err'); return; }
 
     const isFreePass = r.excellent || r.perfect; // 900↑ 또는 1000
-    const res = unlockNext(currentLevel);
+    const res = unlockNext();
     if (!res.ok && res.maxed) { setMsg(LABELS.maxedMsg, 'warn'); return; }
 
     if (isFreePass) {
@@ -342,13 +340,13 @@ const payload = {
 
   // 수동 해금 (샌드박스 — 규칙 무시)
   function manualUnlock() {
-    const res = unlockNext(currentLevel);
+    const res = unlockNext();
     if (!res.ok && res.maxed) { setMsg(LABELS.maxedMsg, 'warn'); return; }
     setMsg(`${LABELS.unlockedMsg} ${res.week}`, 'ok');
   }
 
   function resetProgress() {
-    LEVELS.forEach((lv) => localStorage.removeItem(KEY_UNLOCK(lv)));
+    localStorage.removeItem(KEY_UNLOCK);
     localStorage.removeItem(KEY_STREAK);
     localStorage.removeItem(KEY_COOLDOWN);
     renderLocks(); refreshReadout(); refreshSummary();

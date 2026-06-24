@@ -1,6 +1,6 @@
 ---
 import { t } from '../lib/i18n';
-import type { Lang } from '../lib/content';
+import { homeUrl, type Lang } from '../lib/content';
 
 interface Props {
   lang: Lang;
@@ -18,7 +18,11 @@ const tr = t(lang);
         <h2 id="groove-title-text">{tr.groove_title}</h2>
       </div>
       <div class="header-actions">
-        <a href="/" class="action-mini-btn home-btn" title="홈으로">🏠 홈으로</a>
+        <div class="gv-lang-switch" role="group" aria-label="language toggle">
+          <a href="/ko/groove/" class={lang === 'ko' ? 'active' : ''} hreflang="ko">KO</a>
+          <a href="/groove/" class={lang === 'en' ? 'active' : ''} hreflang="en">EN</a>
+        </div>
+        <a href={homeUrl(lang)} class="action-mini-btn home-btn" title={lang === 'en' ? 'Home' : '홈으로'}>{lang === 'en' ? '🏠 Home' : '🏠 홈으로'}</a>
         <button id="btn-reset" class="action-mini-btn" title="초기화">↺ Reset</button>
       </div>
     </div>
@@ -678,6 +682,45 @@ const tr = t(lang);
   display: flex;
   gap: 8px; /* 6px -> 8px 여유 */
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  row-gap: 6px;
+}
+
+/* 콕핏 플로팅 언어 토글 (KO | EN) — GNB가 숨겨진 그루브 단독 뷰용 */
+.gv-lang-switch {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  gap: 2px;
+  border-radius: 999px;
+  background: hsl(245 30% 14% / 0.6);
+  border: 1px solid var(--gv-border);
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.06), 0 0 12px hsl(268 100% 66% / 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.gv-lang-switch a {
+  text-decoration: none;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--gv-text-2);
+  transition: color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.gv-lang-switch a:hover {
+  color: var(--gv-text-0);
+  background: hsl(268 100% 66% / 0.16);
+}
+
+.gv-lang-switch a.active {
+  color: #fff;
+  background: var(--gv-grad);
+  box-shadow: 0 0 14px hsl(325 100% 64% / 0.5);
 }
 
 .action-mini-btn {
