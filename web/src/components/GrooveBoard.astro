@@ -1342,6 +1342,12 @@ const tr = t(lang);
   width: 100% !important;
   height: 100% !important;
   aspect-ratio: 1 / 1 !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  line-height: 1 !important;
+  overflow: hidden !important;
 }
 
 .pad.cho {
@@ -3321,7 +3327,7 @@ const tr = t(lang);
         // 필수 추가 상용 음절 목록
         const extraSyllables = new Set([
           '물', '주', '세', '요', '밥', '맛', '있', '어', '화', '장', '실', '디', '에', '휴', '지', '여', '권', '기', '비', '행', '표', '차',
-          '없', '닭', '앉', '않', '읽', '잃', '짧', '넓', '밟', '맑', '젊', '읊', '끓', '굶', '값', '몫', '넋', '삯', '핥', '흙'
+          '없', '닭', '앉', '않', '읽', '잃', '짧', '넓', '밟', '맑', '젊', '읊', '끓', '굶', '값', '몫', '넋', '삯', '핥', '흙', '옻'
         ]);
         if (extraSyllables.has(char)) return true;
         
@@ -3722,13 +3728,6 @@ const tr = t(lang);
     
     const phoneticText = getPhoneticSubstitute(text);
     
-    // 문장의 경우 100% 클라이언트 사이드 구글 번역 TTS 클라이언트 URL로 즉시 재생 (성우 음성)
-    const audioUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&client=tw-ob&q=${encodeURIComponent(phoneticText)}`;
-    const audio = new Audio(audioUrl);
-    
-    currentSentenceAudio = audio;
-    audio.volume = 0.85;
-
     // 로컬/하이브리드 개발 환경에서의 백엔드 캐시 생성을 위해 비동기 백그라운드 요청만 전송
     fetch('/api/generate-tts', {
       method: 'POST',
@@ -3736,9 +3735,25 @@ const tr = t(lang);
       body: JSON.stringify({ text: phoneticText })
     }).catch(() => {});
 
-    audio.play().catch(err => {
-      console.warn("[Sori Hangeul] Failed to play natural sentence via Google TTS:", err);
-    });
+    // 실서버 정적 호스팅(Vercel, Cloudflare Pages)에서 구글 번역 TTS URL의 403 Forbidden 및 CORS 문제를 해결하기 위해,
+    // 문장/단어 전체 읽기는 안정적인 브라우저 내장 SpeechSynthesis를 사용하여 즉시 낭독을 보장합니다.
+    if (window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(phoneticText);
+      utterance.lang = 'ko-KR';
+      utterance.volume = 0.85;
+      utterance.rate = 1.0;
+      
+      const voices = window.speechSynthesis.getVoices();
+      const koVoice = voices.find(v => v.lang.startsWith('ko'));
+      if (koVoice) {
+        utterance.voice = koVoice;
+      }
+      
+      window.speechSynthesis.speak(utterance);
+    } else {
+      console.warn("[Sori Hangeul] SpeechSynthesis is not supported in this browser.");
+    }
   }
 
   // 영어-한글 로컬 번역 캐시 사전
@@ -3897,16 +3912,31 @@ const tr = t(lang);
 
     // 비동기 gTTS 클라이언트 사이드 재생 함수 (스태틱 환경 대응)
     const playQueueTtsFallback = (targetText: string) => {
-      const fallbackUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&client=tw-ob&q=${encodeURIComponent(targetText)}`;
-      const newAudio = new Audio(fallbackUrl);
-      newAudio.volume = 0.85;
-      newAudio.addEventListener('ended', () => {
+      // 403 Forbidden 에러 회피를 위해 브라우저 내장 SpeechSynthesis 사용
+      if (window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(targetText);
+        utterance.lang = 'ko-KR';
+        utterance.volume = 0.85;
+        utterance.rate = 1.0;
+        
+        const voices = window.speechSynthesis.getVoices();
+        const koVoice = voices.find(v => v.lang.startsWith('ko'));
+        if (koVoice) {
+          utterance.voice = koVoice;
+        }
+        
+        utterance.onend = () => {
+          setTimeout(() => { playNextInQueue(); }, 80);
+        };
+        utterance.onerror = (e) => {
+          console.warn("[Sori Hangeul] SpeechSynthesis error in queue fallback:", e);
+          setTimeout(() => { playNextInQueue(); }, 80);
+        };
+        window.speechSynthesis.speak(utterance);
+      } else {
         setTimeout(() => { playNextInQueue(); }, 80);
-      });
-      newAudio.play().catch(e => {
-        console.warn("[Sori Hangeul] Dynamic Google TTS play failed in queue:", e);
-        setTimeout(() => { playNextInQueue(); }, 400);
-      });
+      }
 
       // 로컬/하이브리드 환경 캐싱 동기화 전송 (비동기)
       fetch('/api/generate-tts', {
