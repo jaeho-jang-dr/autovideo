@@ -1305,29 +1305,29 @@ const tr = t(lang);
 
 /* 우하단 모음 D-pad 배치 (3개 모음 천지인 삼각 배치 & 내부 밀착) */
 .vowels.dpad-layout {
-  padding: 18px; /* 패딩을 기존 8px에서 18px로 늘려 전체적으로 내부 삼각형 수축 */
+  padding: 24px; /* 패딩을 늘려 내부 삼각형 수축 */
 }
 .vowels.dpad-layout .pad-wrapper:nth-child(1) { 
   grid-column: 2; 
   grid-row: 1; 
-  transform: translateY(6px); /* 상단 모음을 아래로 */
+  transform: translateY(12px); /* 상단 모음을 아래로 더 수축 */
 }
 .vowels.dpad-layout .pad-wrapper:nth-child(2) { 
   grid-column: 1; 
   grid-row: 3; 
-  transform: translate(6px, -6px); /* 좌하단 모음을 우상향으로 */
+  transform: translate(12px, -12px); /* 좌하단 모음을 우상향으로 더 수축 */
 }
 .vowels.dpad-layout .pad-wrapper:nth-child(3) { 
   grid-column: 3; 
   grid-row: 3; 
-  transform: translate(-6px, -6px); /* 우하단 모음을 좌상향으로 */
+  transform: translate(-12px, -12px); /* 우하단 모음을 좌상향으로 더 수축 */
 }
 
 /* 3D 기계식 네온 키캡 (키크기 & 한글 자모 초대형화) */
 .pad {
   border-radius: 50% !important;
   font-weight: 900 !important;
-  font-size: clamp(1.4rem, 5.5vw, 1.8rem) !important; /* 한글 자음/모음 키캡 낱자 크기 대폭 키움 */
+  font-size: clamp(1.65rem, 6.2vw, 2.1rem) !important; /* 한글 자음/모음 키캡 글자 크기 조금 더 확대 */
   transition: all 0.08s ease !important;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4324,8 +4324,8 @@ const tr = t(lang);
       btn.classList.add('hit');
       setTimeout(() => btn.classList.remove('hit'), 100);
 
-      // 더블 탭 감지 (400ms 미만 & 동일 버튼 연속 클릭)
-      const isDoubleTap = (lastTapPad === btn && (currentTime - lastTapTime) < 400);
+      // 더블 탭 감지 (850ms 미만 & 동일 버튼 연속 클릭)
+      const isDoubleTap = (lastTapPad === btn && (currentTime - lastTapTime) < 850);
       lastTapPad = btn;
       lastTapTime = currentTime;
 
