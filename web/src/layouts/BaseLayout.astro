@@ -8,7 +8,7 @@ interface Props {
   description?: string;
   lang: Lang;
   altUrl: string;       // 같은 페이지의 반대 언어 URL (언어 토글용)
-  active?: 'home' | 'lessons' | 'groove';
+  active?: 'home' | 'lessons' | 'groove' | 'curriculum';
   heroVideo?: boolean;  // 페이지 전체 배경에 졸라 왈츠 영상을 상영할지 여부
   hideHeaderFooter?: boolean; // 그루브 앱 단독 뷰 여부
 }
@@ -62,6 +62,7 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
           <nav class="nav">
             <a href={homeUrl(lang)} class={active === 'home' ? 'active' : ''}>{tr.nav_home}</a>
             <a href={`${homeUrl(lang)}#lessons`} class={active === 'lessons' ? 'active' : ''}>{tr.nav_lessons}</a>
+            <a href={lang === 'en' ? '/en/curriculum/' : '/curriculum/'} class={active === 'curriculum' ? 'active' : ''}>{tr.nav_curriculum}</a>
             <a href={lang === 'en' ? '/en/groove/' : '/groove/'} class={active === 'groove' && !Astro.url.searchParams.has('play') ? 'active' : ''}>{tr.nav_groove}</a>
             <a href={lang === 'en' ? '/en/groove/?play=game' : '/groove/?play=game'} class={Astro.url.searchParams.get('play') === 'game' ? 'active' : ''}>🎮 {lang === 'ko' ? '한글 게임' : 'Game'}</a>
             <span class="lang-switch" role="group" aria-label="language">
@@ -112,6 +113,7 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
             <ul>
               <li><a href={homeUrl(lang)}>{tr.nav_home}</a></li>
               <li><a href={`${homeUrl(lang)}#lessons`}>{tr.nav_lessons}</a></li>
+              <li><a href={lang === 'en' ? '/en/curriculum/' : '/curriculum/'}>{tr.nav_curriculum}</a></li>
               <li><a href={lang === 'en' ? '/en/groove/' : '/groove/'}>{tr.nav_groove}</a></li>
               <li><a href={lang === 'en' ? '/en/groove/?play=game' : '/groove/?play=game'}>🎮 {lang === 'ko' ? '한글 게임' : 'Game'}</a></li>
               <li>

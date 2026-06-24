@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CurriculumView from '../components/CurriculumView.astro';
+
+const lang = 'ko' as const;
+---
+<BaseLayout
+  lang={lang}
+  altUrl="/en/curriculum/"
+  active="curriculum"
+  title="한글 커리큘럼 · 36주 한국어 학습 로드맵 · drjay-ed"
+  description="초급·중급·고급 각 12주, 하루 1시간(개념·연습·적용) 구성의 한글 학습 커리큘럼과 진도 시뮬레이터."
+>
+  <CurriculumView lang={lang} />
+</BaseLayout>

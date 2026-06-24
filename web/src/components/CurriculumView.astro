@@ -1,0 +1,621 @@
+---
+import type { Lang } from '../lib/content';
+import {
+  LEVELS, weeksByLevel, levelName, rewardText,
+  weekTitle, weekConcept, weekPractice, weekApplication,
+} from '../lib/curriculum';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const isEn = lang === 'en';
+
+// UI 라벨 (페이지가 언어별이므로 서버에서 해당 언어로 확정)
+const L = {
+  title: isEn ? 'Hangeul Curriculum' : '한글 커리큘럼',
+  subtitle: isEn
+    ? '36 weeks · 3 levels · daily 1 hour = Concept (20m) + Interactive Practice (20m) + Real-life Application (20m).'
+    : '36주 · 3단계 · 하루 1시간 = 개념 이해(20분) + 시청각·놀이 연습(20분) + 실생활 적용(20분).',
+  panelTitle: isEn ? 'Progress Simulator' : '진도 시뮬레이터',
+  panelDesc: isEn
+    ? 'Adjust the sliders to see whether the next week unlocks.'
+    : '슬라이더를 움직여 다음 주차가 해금되는지 확인하세요.',
+  studyLabel: isEn ? 'Study Time Completion' : '학습 시간 달성률',
+  scoreLabel: isEn ? 'Weekly Game Score' : '주간 게임 점수',
+  weighted: isEn ? 'Weighted Pass Score' : '가중 통과 점수',
+  status: isEn ? 'Status' : '판정',
+  evalBtn: isEn ? 'Evaluate & Unlock Next Week' : '평가하고 다음 주 해금',
+  manualBtn: isEn ? 'Manual Unlock (sandbox)' : '수동 해금 (샌드박스)',
+  resetBtn: isEn ? 'Reset Progress' : '진도 초기화',
+  streak: isEn ? 'Free-pass streak' : '연속 프리패스',
+  unlockedUpTo: isEn ? 'Unlocked up to week' : '해금된 주차',
+  cooldownOn: isEn ? 'Cooldown lockout active' : '쿨다운 잠금 중',
+  rules: isEn
+    ? 'Regular Pass ≥ 70%  ·  Excellent Free-Pass: score ≥ 900  ·  Perfect Free-Pass: score = 1000  ·  5 free-passes in a row → 48h cooldown'
+    : '일반 통과 ≥ 70%  ·  우수 프리패스: 점수 ≥ 900  ·  완벽 프리패스: 점수 = 1000  ·  프리패스 5회 연속 → 48시간 쿨다운',
+  step1: isEn ? 'Concept Study' : '개념 이해',
+  step2: isEn ? 'Interactive Practice' : '시청각·놀이 연습',
+  step3: isEn ? 'Real-life Application' : '실생활 적용',
+  rewardTitle: isEn ? 'Level Reward' : '레벨 보상',
+  target: isEn ? 'Target' : '학습 대상',
+  week: isEn ? 'Week' : '주차',
+  locked: isEn ? 'Locked' : '잠김',
+  close: isEn ? 'Close' : '닫기',
+};
+
+// 클라이언트 스크립트로 넘길 데이터 (현재 언어로 확정)
+const payload = {
+  lang,
+  levels: LEVELS,
+  levelNames: Object.fromEntries(LEVELS.map((lv) => [lv, levelName(lv, lang)])),
+  rewards: Object.fromEntries(LEVELS.map((lv) => [lv, rewardText(lv, lang)])),
+  weeks: LEVELS.flatMap((lv) =>
+    weeksByLevel(lv).map((w) => ({
+      level: w.level,
+      week: w.week,
+      title: weekTitle(w, lang),
+      target: w.target_letters,
+      concept: weekConcept(w, lang),
+      practice: weekPractice(w, lang),
+      application: weekApplication(w, lang),
+    }))
+  ),
+  labels: {
+    step1: L.step1, step2: L.step2, step3: L.step3,
+    rewardTitle: L.rewardTitle, target: L.target, week: L.week,
+    locked: L.locked, unlockedUpTo: L.unlockedUpTo, cooldownOn: L.cooldownOn,
+    streak: L.streak, status: L.status,
+    passRegular: isEn ? 'Regular Pass ✓' : '일반 통과 ✓',
+    passExcellent: isEn ? 'Excellent Free-Pass ★' : '우수 프리패스 ★',
+    passPerfect: isEn ? 'Perfect Free-Pass ☀' : '완벽 프리패스 ☀',
+    fail: isEn ? 'Not enough — keep studying' : '미달 — 조금 더 학습하세요',
+    cooldownMsg: isEn ? 'Cooldown active. Try again after' : '쿨다운 잠금 중. 다음 시각 이후 재시도',
+    unlockedMsg: isEn ? 'Unlocked week' : '해금됨 — 주차',
+    maxedMsg: isEn ? 'All weeks already unlocked in this level' : '이 레벨의 모든 주차가 이미 해금됨',
+    needPass: isEn ? 'Pass condition not met — cannot unlock' : '통과 조건 미달 — 해금 불가',
+    hours: isEn ? 'h' : '시간', mins: isEn ? 'm' : '분',
+  },
+};
+---
+<section class="curriculum">
+  <div class="container">
+    <header class="cur-head">
+      <span class="cur-eyebrow">{isEn ? 'Sori Hangeul · Learn Korean' : '소리 한글 · 한국어 배우기'}</span>
+      <h1>{L.title}</h1>
+      <p class="cur-lead">{L.subtitle}</p>
+    </header>
+
+    <!-- 게이미피케이션 시뮬레이션 패널 -->
+    <div class="cur-panel" id="sim-panel">
+      <div class="panel-head">
+        <h2>{L.panelTitle}</h2>
+        <p>{L.panelDesc}</p>
+      </div>
+
+      <div class="sliders">
+        <div class="slider-row">
+          <label for="study-slider">{L.studyLabel}: <b id="study-val">60</b>%</label>
+          <input type="range" id="study-slider" min="0" max="100" step="1" value="60" />
+        </div>
+        <div class="slider-row">
+          <label for="score-slider">{L.scoreLabel}: <b id="score-val">500</b> / 1000</label>
+          <input type="range" id="score-slider" min="0" max="1000" step="10" value="500" />
+        </div>
+      </div>
+
+      <div class="readout">
+        <div class="ro-item">
+          <span class="ro-label">{L.weighted}</span>
+          <span class="ro-num"><b id="weighted-val">55.0</b>%</span>
+        </div>
+        <div class="ro-item">
+          <span class="ro-label">{L.status}</span>
+          <span class="ro-status" id="status-pill">—</span>
+        </div>
+        <div class="ro-item">
+          <span class="ro-label">{L.streak}</span>
+          <span class="ro-num"><b id="streak-val">0</b> / 4</span>
+        </div>
+      </div>
+
+      <div class="panel-actions">
+        <button class="cbtn cbtn-primary" id="eval-btn" type="button">{L.evalBtn}</button>
+        <button class="cbtn cbtn-ghost" id="manual-btn" type="button">{L.manualBtn}</button>
+        <button class="cbtn cbtn-ghost" id="reset-btn" type="button">{L.resetBtn}</button>
+      </div>
+
+      <p class="panel-msg" id="panel-msg" role="status" aria-live="polite"></p>
+      <p class="panel-rules">{L.rules}</p>
+    </div>
+
+    <!-- 레벨 탭 -->
+    <div class="cur-tabs" role="tablist" aria-label="curriculum levels">
+      {LEVELS.map((lv, i) => (
+        <button
+          class:list={["tab", { active: i === 0 }]}
+          role="tab"
+          data-level={lv}
+          aria-selected={i === 0 ? 'true' : 'false'}
+          type="button"
+        >
+          {levelName(lv, lang)}{isEn ? '' : ` (${{ beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' }[lv]})`}
+        </button>
+      ))}
+    </div>
+
+    <p class="level-summary" id="level-summary"></p>
+
+    <!-- 레벨별 12카드 그리드 -->
+    {LEVELS.map((lv, i) => (
+      <div class:list={["week-grid", { hidden: i !== 0 }]} data-grid={lv}>
+        {weeksByLevel(lv).map((w) => (
+          <button class="week-card" type="button" data-level={lv} data-week={w.week}>
+            <div class="wc-top">
+              <span class="wc-week">{L.week} {w.week}</span>
+              <span class="wc-lock" aria-hidden="true">🔒</span>
+            </div>
+            <h3 class="wc-title">{weekTitle(w, lang)}</h3>
+            <p class="wc-target">{w.target_letters}</p>
+          </button>
+        ))}
+      </div>
+    ))}
+  </div>
+
+  <!-- 상세 모달 -->
+  <div class="cur-modal" id="cur-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-x" data-close aria-label={L.close} type="button">✕</button>
+      <span class="modal-week" id="modal-week"></span>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <p class="modal-target" id="modal-target"></p>
+      <ol class="modal-steps" id="modal-steps"></ol>
+      <div class="modal-reward" id="modal-reward"></div>
+    </div>
+  </div>
+
+  <script type="application/json" id="curr-data" set:html={JSON.stringify(payload)}></script>
+</section>
+
+<script>
+  // ---- 데이터 로드 ----
+  const el = document.getElementById('curr-data');
+  const DATA = JSON.parse(el ? el.textContent || '{}' : '{}');
+  const LABELS = DATA.labels || {};
+  const LEVELS = DATA.levels || [];
+  const WEEKS = DATA.weeks || [];
+  const REWARDS = DATA.rewards || {};
+
+  // ---- localStorage 진도 상태 ----
+  const KEY_UNLOCK = (lv) => `hangeul_unlock_${lv}`;
+  const KEY_STREAK = 'hangeul_freepass_streak';
+  const KEY_COOLDOWN = 'hangeul_cooldown_until';
+  const COOLDOWN_MS = 48 * 60 * 60 * 1000;
+
+  const getUnlocked = (lv) => {
+    const v = parseInt(localStorage.getItem(KEY_UNLOCK(lv)) || '1', 10);
+    return isNaN(v) ? 1 : Math.min(Math.max(v, 1), 12);
+  };
+  const setUnlocked = (lv, n) => localStorage.setItem(KEY_UNLOCK(lv), String(Math.min(Math.max(n, 1), 12)));
+  const getStreak = () => parseInt(localStorage.getItem(KEY_STREAK) || '0', 10) || 0;
+  const setStreak = (n) => localStorage.setItem(KEY_STREAK, String(Math.max(0, n)));
+  const getCooldown = () => parseInt(localStorage.getItem(KEY_COOLDOWN) || '0', 10) || 0;
+  const setCooldown = (t) => localStorage.setItem(KEY_COOLDOWN, String(t));
+  const inCooldown = () => Date.now() < getCooldown();
+
+  let currentLevel = LEVELS[0] || 'beginner';
+
+  // ---- 통과 계산 ----
+  function compute(study, score) {
+    const weighted = study * 0.5 + (score / 1000) * 100 * 0.5;
+    const perfect = score === 1000;
+    const excellent = score >= 900;
+    const regular = weighted >= 70;
+    return { weighted, perfect, excellent, regular, anyPass: perfect || excellent || regular };
+  }
+
+  // ---- DOM refs ----
+  const $ = (id) => document.getElementById(id);
+  const studySlider = $('study-slider'), scoreSlider = $('score-slider');
+  const studyVal = $('study-val'), scoreVal = $('score-val'), weightedVal = $('weighted-val');
+  const statusPill = $('status-pill'), streakVal = $('streak-val');
+  const panelMsg = $('panel-msg'), levelSummary = $('level-summary');
+
+  // ---- 슬라이더/상태 갱신 ----
+  function refreshReadout() {
+    const study = parseInt(studySlider.value, 10);
+    const score = parseInt(scoreSlider.value, 10);
+    studyVal.textContent = String(study);
+    scoreVal.textContent = String(score);
+    const r = compute(study, score);
+    weightedVal.textContent = r.weighted.toFixed(1);
+    statusPill.className = 'ro-status';
+    if (r.perfect) { statusPill.textContent = LABELS.passPerfect; statusPill.classList.add('s-perfect'); }
+    else if (r.excellent) { statusPill.textContent = LABELS.passExcellent; statusPill.classList.add('s-excellent'); }
+    else if (r.regular) { statusPill.textContent = LABELS.passRegular; statusPill.classList.add('s-pass'); }
+    else { statusPill.textContent = LABELS.fail; statusPill.classList.add('s-fail'); }
+    streakVal.textContent = String(getStreak());
+  }
+
+  function fmtRemain(ms) {
+    const totalMin = Math.max(0, Math.ceil(ms / 60000));
+    const h = Math.floor(totalMin / 60), m = totalMin % 60;
+    return `${h}${LABELS.hours} ${m}${LABELS.mins}`;
+  }
+
+  function setMsg(text, kind) {
+    panelMsg.textContent = text || '';
+    panelMsg.className = 'panel-msg' + (kind ? ' ' + kind : '');
+  }
+
+  // ---- 레벨 요약/쿨다운 표시 ----
+  let cooldownTimer = null;
+  function refreshSummary() {
+    const up = getUnlocked(currentLevel);
+    let txt = `${LABELS.unlockedUpTo} ${up} / 12`;
+    if (inCooldown()) {
+      txt += `  ·  ${LABELS.cooldownOn} (${fmtRemain(getCooldown() - Date.now())})`;
+      levelSummary.classList.add('cooldown');
+    } else {
+      levelSummary.classList.remove('cooldown');
+    }
+    levelSummary.textContent = txt;
+
+    if (cooldownTimer) { clearInterval(cooldownTimer); cooldownTimer = null; }
+    if (inCooldown()) {
+      cooldownTimer = setInterval(() => {
+        if (!inCooldown()) { clearInterval(cooldownTimer); cooldownTimer = null; }
+        refreshSummary();
+      }, 30000);
+    }
+  }
+
+  // ---- 카드 잠금 렌더 ----
+  function renderLocks() {
+    LEVELS.forEach((lv) => {
+      const up = getUnlocked(lv);
+      document.querySelectorAll(`.week-card[data-level="${lv}"]`).forEach((card) => {
+        const wk = parseInt(card.getAttribute('data-week'), 10);
+        const locked = wk > up;
+        card.classList.toggle('locked', locked);
+        card.setAttribute('aria-disabled', locked ? 'true' : 'false');
+      });
+    });
+  }
+
+  // ---- 탭 전환 ----
+  function selectLevel(lv) {
+    currentLevel = lv;
+    document.querySelectorAll('.tab').forEach((t) => {
+      const on = t.getAttribute('data-level') === lv;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.week-grid').forEach((g) => {
+      g.classList.toggle('hidden', g.getAttribute('data-grid') !== lv);
+    });
+    refreshSummary();
+  }
+
+  // ---- 다음 주 해금 ----
+  function unlockNext(lv) {
+    const up = getUnlocked(lv);
+    if (up >= 12) return { ok: false, maxed: true, week: up };
+    setUnlocked(lv, up + 1);
+    renderLocks();
+    refreshSummary();
+    return { ok: true, week: up + 1 };
+  }
+
+  // 평가 후 해금 (게이미피케이션 규칙 적용)
+  function evaluateAndUnlock() {
+    if (inCooldown()) {
+      const when = new Date(getCooldown());
+      setMsg(`${LABELS.cooldownMsg} ${when.toLocaleString()}`, 'err');
+      return;
+    }
+    const r = compute(parseInt(studySlider.value, 10), parseInt(scoreSlider.value, 10));
+    if (!r.anyPass) { setMsg(LABELS.needPass, 'err'); return; }
+
+    const isFreePass = r.excellent || r.perfect; // 900↑ 또는 1000
+    const res = unlockNext(currentLevel);
+    if (!res.ok && res.maxed) { setMsg(LABELS.maxedMsg, 'warn'); return; }
+
+    if (isFreePass) {
+      const s = getStreak() + 1;
+      if (s > 4) {
+        // 5회째 연속 프리패스 → 48h 쿨다운, 스트릭 리셋
+        setCooldown(Date.now() + COOLDOWN_MS);
+        setStreak(0);
+        setMsg(`${LABELS.unlockedMsg} ${res.week}. ${LABELS.cooldownOn} (${fmtRemain(COOLDOWN_MS)})`, 'warn');
+      } else {
+        setStreak(s);
+        setMsg(`${LABELS.unlockedMsg} ${res.week} ★`, 'ok');
+      }
+    } else {
+      setStreak(0); // 일반 통과는 스트릭 초기화
+      setMsg(`${LABELS.unlockedMsg} ${res.week} ✓`, 'ok');
+    }
+    refreshReadout();
+    refreshSummary();
+  }
+
+  // 수동 해금 (샌드박스 — 규칙 무시)
+  function manualUnlock() {
+    const res = unlockNext(currentLevel);
+    if (!res.ok && res.maxed) { setMsg(LABELS.maxedMsg, 'warn'); return; }
+    setMsg(`${LABELS.unlockedMsg} ${res.week}`, 'ok');
+  }
+
+  function resetProgress() {
+    LEVELS.forEach((lv) => localStorage.removeItem(KEY_UNLOCK(lv)));
+    localStorage.removeItem(KEY_STREAK);
+    localStorage.removeItem(KEY_COOLDOWN);
+    renderLocks(); refreshReadout(); refreshSummary();
+    setMsg('', '');
+  }
+
+  // ---- 상세 모달 ----
+  const modal = $('cur-modal');
+  function openModal(lv, wk) {
+    const w = WEEKS.find((x) => x.level === lv && x.week === wk);
+    if (!w) return;
+    $('modal-week').textContent = `${LABELS.week} ${w.week} · ${DATA.levelNames[lv]}`;
+    $('modal-title').textContent = w.title;
+    $('modal-target').textContent = `${LABELS.target}: ${w.target}`;
+    const steps = [
+      { n: 1, label: LABELS.step1, body: w.concept, time: '20' + LABELS.mins },
+      { n: 2, label: LABELS.step2, body: w.practice, time: '20' + LABELS.mins },
+      { n: 3, label: LABELS.step3, body: w.application, time: '20' + LABELS.mins },
+    ];
+    $('modal-steps').innerHTML = steps.map((s) =>
+      `<li class="mstep"><span class="ms-no">${s.n}</span>` +
+      `<div class="ms-body"><div class="ms-head"><b>${s.label}</b><span class="ms-time">${s.time}</span></div>` +
+      `<p>${s.body}</p></div></li>`
+    ).join('');
+    $('modal-reward').innerHTML =
+      `<span class="mr-label">🎁 ${LABELS.rewardTitle}</span><span class="mr-text">${REWARDS[lv] || ''}</span>`;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+  }
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  // ---- 이벤트 바인딩 ----
+  studySlider.addEventListener('input', refreshReadout);
+  scoreSlider.addEventListener('input', refreshReadout);
+  $('eval-btn').addEventListener('click', evaluateAndUnlock);
+  $('manual-btn').addEventListener('click', manualUnlock);
+  $('reset-btn').addEventListener('click', resetProgress);
+
+  document.querySelectorAll('.tab').forEach((t) =>
+    t.addEventListener('click', () => selectLevel(t.getAttribute('data-level')))
+  );
+
+  document.querySelectorAll('.week-card').forEach((card) =>
+    card.addEventListener('click', () => {
+      if (card.classList.contains('locked')) return;
+      openModal(card.getAttribute('data-level'), parseInt(card.getAttribute('data-week'), 10));
+    })
+  );
+
+  modal.querySelectorAll('[data-close]').forEach((b) => b.addEventListener('click', closeModal));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+  // ---- 초기 렌더 ----
+  refreshReadout();
+  renderLocks();
+  selectLevel(currentLevel);
+  refreshSummary();
+</script>
+
+<style>
+  .curriculum {
+    /* 따뜻한 베이지 & 잉크 블랙 (Outfit/Inter 폰트는 전역 상속) */
+    --c-bg: #f4ecdb;
+    --c-panel: #faf4e8;
+    --c-card: #fffdf7;
+    --c-ink: #1c1813;
+    --c-ink-2: #5b5142;
+    --c-ink-3: #8c7f6a;
+    --c-line: rgba(28, 24, 19, 0.12);
+    --c-line-strong: rgba(28, 24, 19, 0.22);
+    --c-gold: #b5852a;
+    --c-gold-soft: rgba(181, 133, 42, 0.16);
+    --c-glow: rgba(181, 133, 42, 0.45);
+    --c-radius: 18px;
+
+    position: relative;
+    min-height: 100vh;
+    padding: 40px 0 80px;
+    color: var(--c-ink);
+    background:
+      radial-gradient(900px 520px at 12% -8%, rgba(181, 133, 42, 0.10), transparent 60%),
+      radial-gradient(820px 480px at 92% 0%, rgba(120, 92, 60, 0.08), transparent 60%),
+      var(--c-bg);
+  }
+  .curriculum .container { max-width: 1140px; }
+
+  /* --- 헤더 --- */
+  .cur-head { text-align: center; margin-bottom: 30px; }
+  .cur-eyebrow {
+    display: inline-block; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--c-gold); font-weight: 700; margin-bottom: 12px;
+    padding: 5px 14px; border-radius: 999px;
+    border: 1px solid var(--c-gold-soft); background: rgba(181, 133, 42, 0.07);
+  }
+  .cur-head h1 {
+    font-family: var(--font-display, 'Outfit', sans-serif);
+    font-size: clamp(1.9rem, 4.4vw, 3rem); font-weight: 800; color: var(--c-ink);
+    letter-spacing: -0.02em;
+  }
+  .cur-lead { max-width: 680px; margin: 14px auto 0; color: var(--c-ink-2); font-size: 1rem; line-height: 1.6; }
+
+  /* --- 글래스 패널 공통 --- */
+  .cur-panel {
+    margin: 0 auto 36px; max-width: 880px; padding: 26px 28px;
+    border-radius: var(--c-radius);
+    background: var(--c-panel);
+    border: 1px solid var(--c-line);
+    box-shadow: 0 10px 34px rgba(60, 48, 30, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+  .panel-head h2 { font-family: var(--font-display, 'Outfit', sans-serif); font-size: 1.3rem; font-weight: 700; }
+  .panel-head p { margin: 4px 0 18px; color: var(--c-ink-3); font-size: 0.9rem; }
+
+  .sliders { display: flex; flex-direction: column; gap: 18px; }
+  .slider-row label { display: block; font-size: 0.92rem; font-weight: 500; margin-bottom: 8px; color: var(--c-ink-2); }
+  .slider-row label b { color: var(--c-gold); font-weight: 800; }
+  .slider-row input[type="range"] {
+    width: 100%; appearance: none; -webkit-appearance: none; height: 6px; border-radius: 999px;
+    background: linear-gradient(90deg, var(--c-gold) 0%, var(--c-gold) 50%, var(--c-line-strong) 50%);
+    background: rgba(28,24,19,0.12); outline: none;
+  }
+  .slider-row input[type="range"]::-webkit-slider-thumb {
+    appearance: none; -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--c-gold); border: 2px solid #fff; cursor: pointer;
+    box-shadow: 0 2px 8px var(--c-glow); transition: transform 0.15s ease;
+  }
+  .slider-row input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.12); }
+  .slider-row input[type="range"]::-moz-range-thumb {
+    width: 20px; height: 20px; border-radius: 50%; background: var(--c-gold); border: 2px solid #fff;
+    cursor: pointer; box-shadow: 0 2px 8px var(--c-glow);
+  }
+
+  .readout {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 22px 0 18px;
+  }
+  .ro-item {
+    padding: 14px; border-radius: 14px; text-align: center;
+    background: var(--c-card); border: 1px solid var(--c-line);
+  }
+  .ro-label { display: block; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--c-ink-3); margin-bottom: 6px; }
+  .ro-num { font-family: var(--font-display, 'Outfit', sans-serif); font-size: 1.3rem; }
+  .ro-num b { color: var(--c-ink); }
+  .ro-status { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.82rem; font-weight: 700; }
+  .ro-status.s-fail { color: #9a3b2f; background: rgba(154, 59, 47, 0.1); }
+  .ro-status.s-pass { color: #2f6d3b; background: rgba(47, 109, 59, 0.12); }
+  .ro-status.s-excellent { color: #8a5a14; background: rgba(181, 133, 42, 0.16); }
+  .ro-status.s-perfect { color: #fff; background: linear-gradient(120deg, #b5852a, #d8a93f); }
+
+  .panel-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .cbtn {
+    padding: 11px 18px; border-radius: 11px; font-weight: 600; font-size: 0.9rem; cursor: pointer;
+    border: 1px solid var(--c-line-strong); background: var(--c-card); color: var(--c-ink-2);
+    transition: transform 0.16s ease, box-shadow 0.22s ease, border-color 0.2s ease, background-color 0.2s ease;
+  }
+  .cbtn:hover { transform: translateY(-1px); }
+  .cbtn-primary {
+    color: #fff; border-color: transparent;
+    background: linear-gradient(120deg, #b5852a, #cf9c38);
+    box-shadow: 0 4px 14px var(--c-glow);
+  }
+  .cbtn-primary:hover { box-shadow: 0 6px 20px var(--c-glow); }
+  .cbtn-ghost:hover { border-color: var(--c-gold); box-shadow: 0 0 0 3px var(--c-gold-soft); color: var(--c-ink); }
+
+  .panel-msg { min-height: 20px; margin: 14px 0 0; font-size: 0.9rem; font-weight: 600; }
+  .panel-msg.ok { color: #2f6d3b; }
+  .panel-msg.warn { color: #8a5a14; }
+  .panel-msg.err { color: #9a3b2f; }
+  .panel-rules { margin: 10px 0 0; font-size: 0.78rem; color: var(--c-ink-3); line-height: 1.6; }
+
+  /* --- 탭 --- */
+  .cur-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 0 14px; }
+  .tab {
+    padding: 10px 20px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; cursor: pointer;
+    color: var(--c-ink-2); background: var(--c-card); border: 1px solid var(--c-line);
+    transition: color 0.2s, border-color 0.2s, box-shadow 0.22s, transform 0.16s, background-color 0.2s;
+  }
+  .tab .tab-sub { opacity: 0.7; font-size: 0.85em; }
+  .tab:hover { transform: translateY(-1px); border-color: var(--c-gold); }
+  .tab.active {
+    color: #fff; border-color: transparent;
+    background: linear-gradient(120deg, #b5852a, #cf9c38);
+    box-shadow: 0 4px 14px var(--c-glow);
+  }
+  .level-summary { text-align: center; color: var(--c-ink-2); font-size: 0.88rem; font-weight: 600; margin: 0 0 24px; }
+  .level-summary.cooldown { color: #9a3b2f; }
+
+  /* --- 주차 카드 그리드 --- */
+  .week-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  .week-grid.hidden { display: none; }
+  .week-card {
+    display: flex; flex-direction: column; gap: 8px; text-align: left;
+    padding: 20px; border-radius: var(--c-radius); cursor: pointer;
+    background: var(--c-card); border: 1px solid var(--c-line); color: var(--c-ink);
+    box-shadow: 0 3px 12px rgba(60, 48, 30, 0.06);
+    transition: transform 0.22s cubic-bezier(0.16,1,0.3,1), box-shadow 0.24s ease, border-color 0.24s ease;
+  }
+  .week-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--c-gold);
+    box-shadow: 0 12px 30px rgba(181, 133, 42, 0.22), 0 0 0 1px var(--c-glow);
+  }
+  .wc-top { display: flex; align-items: center; justify-content: space-between; }
+  .wc-week {
+    font-family: var(--font-display, 'Outfit', sans-serif); font-weight: 700; font-size: 0.78rem;
+    letter-spacing: 0.03em; text-transform: uppercase; color: var(--c-gold);
+    padding: 3px 9px; border-radius: 7px; background: var(--c-gold-soft);
+  }
+  .wc-lock { font-size: 0.9rem; opacity: 0; transition: opacity 0.2s; }
+  .wc-title { font-size: 1.04rem; font-weight: 700; line-height: 1.3; color: var(--c-ink); }
+  .wc-target { font-size: 0.82rem; color: var(--c-ink-3); line-height: 1.5; word-break: keep-all; }
+
+  /* 잠긴 카드 */
+  .week-card.locked {
+    opacity: 0.5; cursor: not-allowed; filter: grayscale(0.3);
+  }
+  .week-card.locked:hover { transform: none; border-color: var(--c-line); box-shadow: 0 3px 12px rgba(60,48,30,0.06); }
+  .week-card.locked .wc-lock { opacity: 0.7; }
+  .week-card.locked .wc-week { color: var(--c-ink-3); background: rgba(28,24,19,0.06); }
+
+  /* --- 모달 --- */
+  .cur-modal { position: fixed; inset: 0; z-index: 200; display: none; }
+  .cur-modal.open { display: grid; place-items: center; padding: 22px; }
+  .modal-backdrop { position: absolute; inset: 0; background: rgba(28, 22, 14, 0.5); backdrop-filter: blur(4px); }
+  .modal-card {
+    position: relative; width: 100%; max-width: 560px; max-height: 88vh; overflow-y: auto;
+    padding: 32px 30px; border-radius: 22px;
+    background: var(--c-panel); border: 1px solid var(--c-line-strong);
+    box-shadow: 0 30px 70px rgba(28, 18, 8, 0.4);
+    animation: modalIn 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes modalIn { from { opacity: 0; transform: translateY(14px) scale(0.98); } to { opacity: 1; transform: none; } }
+  .modal-x {
+    position: absolute; top: 16px; right: 16px; width: 34px; height: 34px; border-radius: 50%;
+    border: 1px solid var(--c-line); background: var(--c-card); color: var(--c-ink-2); cursor: pointer; font-size: 0.9rem;
+    transition: background-color 0.18s, color 0.18s;
+  }
+  .modal-x:hover { background: var(--c-gold); color: #fff; }
+  .modal-week { display: inline-block; font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--c-gold); padding: 4px 10px; border-radius: 7px; background: var(--c-gold-soft); margin-bottom: 12px; }
+  .modal-title { font-family: var(--font-display, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; line-height: 1.25; }
+  .modal-target { margin: 8px 0 20px; font-size: 0.9rem; color: var(--c-ink-2); font-weight: 600; }
+  .modal-steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+  .mstep { display: flex; gap: 14px; padding: 16px; border-radius: 14px; background: var(--c-card); border: 1px solid var(--c-line); }
+  .ms-no {
+    flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+    font-family: var(--font-display, 'Outfit', sans-serif); font-weight: 800; font-size: 0.95rem;
+    color: #fff; background: linear-gradient(120deg, #b5852a, #cf9c38);
+  }
+  .ms-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .ms-head b { font-size: 0.98rem; color: var(--c-ink); }
+  .ms-time { font-size: 0.74rem; color: var(--c-ink-3); font-weight: 600; }
+  .ms-body p { margin: 0; font-size: 0.9rem; color: var(--c-ink-2); line-height: 1.55; word-break: keep-all; }
+  .modal-reward {
+    margin-top: 20px; padding: 16px; border-radius: 14px;
+    background: rgba(181, 133, 42, 0.1); border: 1px dashed var(--c-gold);
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .mr-label { font-size: 0.78rem; font-weight: 800; color: var(--c-gold); text-transform: uppercase; letter-spacing: 0.04em; }
+  .mr-text { font-size: 0.92rem; color: var(--c-ink); line-height: 1.5; }
+
+  @media (max-width: 640px) {
+    .readout { grid-template-columns: 1fr; }
+    .week-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 420px) {
+    .week-grid { grid-template-columns: 1fr; }
+  }
+</style>
