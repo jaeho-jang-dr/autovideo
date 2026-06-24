@@ -174,7 +174,7 @@ const tr = t(lang);
             </div>
             <div class="pad-wrapper">
               <button class="pad cho glass" data-jamo="ㄴ" aria-label="자음 니은">ㄴ</button>
-              <div class="pad-popup glass">
+              <div class="pad-popup glass shift-right">
                 <button type="button" class="popup-item" data-value="ㄴ">ㄴ</button>
                 <button type="button" class="popup-item" data-value="ㄷ">ㄷ</button>
                 <button type="button" class="popup-item" data-value="ㄸ">ㄸ</button>
@@ -2048,6 +2048,19 @@ const tr = t(lang);
   transform: translateX(-50%) translateY(0);
 }
 
+/* ㄴ 패드처럼 화면 왼쪽에 치우친 경우 팝업을 오른쪽으로 시프팅 */
+.pad-popup.shift-right {
+  left: 60%;
+  transform: translateX(0) translateY(6px);
+}
+.pad-popup.shift-right.active {
+  transform: translateX(0) translateY(0);
+}
+.pad-popup.shift-right::after {
+  left: 15px;
+  transform: translateX(-50%);
+}
+
 /* Arrow pointer for popup */
 .pad-popup::after {
   content: '';
@@ -3571,10 +3584,6 @@ const tr = t(lang);
       processedFilename = getPronunciationOfSyllable(text);
     }
 
-    // 조어된 글자 중 오디오 데이터베이스에 없는 글자는 읽지 않고 즉시 스킵 (단, 동적 캐싱으로 커버되므로 로컬 MP3가 없어도 API 트리거를 위해 일단 스킵 방지)
-    const isComposite = text !== '—' && !JAMO_AUDIO_MAP[text] && text !== '•';
-    
-    // 로컬의 고품질 gTTS MP3 발음 파일 우선 재생 시도
     const audioUrl = `/audio/jamo/${encodeURIComponent(processedFilename)}.mp3`;
     const audio = new Audio(audioUrl);
     
@@ -3582,8 +3591,8 @@ const tr = t(lang);
     
     let fallbackTriggered = false;
     
-    // 비동기 gTTS 생성 트리거 함수
-    const requestTtsGeneration = async (targetText: string) => {
+    // 비동기 gTTS 생성 및 즉시 재생 함수
+    const requestTtsGenerationAndPlay = async (targetText: string) => {
       try {
         const response = await fetch('/api/generate-tts', {
           method: 'POST',
@@ -3595,7 +3604,11 @@ const tr = t(lang);
         const result = await response.json();
         if (result.success) {
           DYNAMIC_AUDIO_CACHE.add(targetText);
-          console.log(`[Sori Hangeul] Successfully generated and cached dynamic TTS for: [${targetText}]`);
+          console.log(`[Sori Hangeul] Successfully generated dynamic gTTS for: [${targetText}]`);
+          // 생성 완료 후 깨끗한 성우 음원으로 재로드 및 재생
+          const newAudio = new Audio(audioUrl);
+          newAudio.volume = 0.85;
+          newAudio.play().catch(e => console.warn("Failed to play dynamically generated jamo:", e));
         }
       } catch (e) {
         console.error(`Failed to request dynamic TTS generation for: [${targetText}]`, e);
@@ -3605,35 +3618,22 @@ const tr = t(lang);
     audio.addEventListener('error', () => {
       if (fallbackTriggered) return;
       fallbackTriggered = true;
-      // 로컬 파일이 없거나 오류 시 내장 SpeechSynthesis로 안전하게 백업 폴백
-      fallbackSpeak(text);
       
-      // 로컬 파일이 없으므로 백엔드에 gTTS 동적 생성 및 캐싱 요청 전송
-      if (isComposite) {
-        requestTtsGeneration(processedFilename);
-      }
+      // 로컬 파일이 없으므로 백엔드에 즉시 동적 생성 및 재생 요청
+      requestTtsGenerationAndPlay(processedFilename);
     });
     
     audio.play().catch(err => {
       if (fallbackTriggered) return;
       fallbackTriggered = true;
-      console.warn("Audio auto-play blocked or error, falling back:", err);
-      fallbackSpeak(text);
-      if (isComposite) {
-        requestTtsGeneration(processedFilename);
-      }
+      console.warn("Audio play failed, requesting dynamic generation:", err);
+      requestTtsGenerationAndPlay(processedFilename);
     });
   }
 
-  // 폴백용 브라우저 음성 합성 함수 (띄어쓰기 등 문장 전체는 무조건 SpeechSynthesis 사용)
+  // 폴백용 브라우저 음성 합성 함수 (기계소리 퇴출)
   function fallbackSpeak(text: string) {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'ko-KR';
-      utterance.rate = 1.0; // 사람이 대화할 때의 자연스러운 표준 속도로 낭독
-      window.speechSynthesis.speak(utterance);
-    }
+    console.log(`[Sori Hangeul] Suppressed machine synthesis for: [${text}]`);
   }
 
   // 기계음의 발음 교정을 위해 대표 변음 단어들을 기계음에 전달하기 전 발음 텍스트로 치환하는 헬퍼 함수
@@ -3673,17 +3673,56 @@ const tr = t(lang);
     return processed;
   }
 
-  // 문장 전체를 일반 구어체 속도로 자연스럽게 연음 법칙을 살려 낭독하는 함수
-  function speakSentenceNatural(text: string) {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const phoneticText = getPhoneticSubstitute(text);
-      const utterance = new SpeechSynthesisUtterance(phoneticText);
-      utterance.lang = 'ko-KR';
-      utterance.rate = 1.0; // 사람이 대화할 때의 자연스러운 표준 속도로 낭독
-      utterance.pitch = 1.0;
-      window.speechSynthesis.speak(utterance);
+  // 문장 전체를 일반 구어체 속도로 자연스럽게 연음 법칙을 살려 성우 목소리(gTTS)로 낭독하는 함수
+  let currentSentenceAudio: HTMLAudioElement | null = null;
+  async function speakSentenceNatural(text: string) {
+    if (currentSentenceAudio) {
+      currentSentenceAudio.pause();
+      currentSentenceAudio = null;
     }
+
+    if (!text.trim()) return;
+    
+    const phoneticText = getPhoneticSubstitute(text);
+    const audioUrl = `/audio/jamo/${encodeURIComponent(phoneticText)}.mp3`;
+    const audio = new Audio(audioUrl);
+    
+    currentSentenceAudio = audio;
+    audio.volume = 0.85;
+
+    let fallbackTriggered = false;
+
+    audio.addEventListener('error', async () => {
+      if (fallbackTriggered) return;
+      fallbackTriggered = true;
+      
+      try {
+        const response = await fetch('/api/generate-tts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ text: phoneticText })
+        });
+        const result = await response.json();
+        if (result.success) {
+          DYNAMIC_AUDIO_CACHE.add(phoneticText);
+          console.log(`[Sori Hangeul] Successfully generated dynamic gTTS for sentence: [${phoneticText}]`);
+          const newAudio = new Audio(audioUrl);
+          currentSentenceAudio = newAudio;
+          newAudio.volume = 0.85;
+          newAudio.play().catch(e => console.warn("Failed to play newly generated sentence:", e));
+        }
+      } catch (e) {
+        console.error("Failed to dynamically generate sentence audio:", e);
+      }
+    });
+
+    audio.play().catch(err => {
+      if (!fallbackTriggered) {
+        audio.dispatchEvent(new Event('error'));
+      }
+    });
   }
 
   // 영어-한글 로컬 번역 캐시 사전
@@ -3862,22 +3901,39 @@ const tr = t(lang);
 
     activeAudio.addEventListener('ended', handleNext);
 
-    activeAudio.addEventListener('error', () => {
+    activeAudio.addEventListener('error', async () => {
       if (fallbackTriggered) return;
       fallbackTriggered = true;
-      // 로컬 파일이 없으면 브라우저 TTS로 이 글자만 읽어주고 다음 글자로 넘어감
-      fallbackSpeak(char);
       
-      // 동적 생성 백엔드 요청
       const isComposite = char !== '—' && !JAMO_AUDIO_MAP[char] && char !== '•';
       if (isComposite) {
-        requestTtsGeneration(processedFilename);
+        try {
+          const response = await fetch('/api/generate-tts', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ text: processedFilename })
+          });
+          const result = await response.json();
+          if (result.success) {
+            DYNAMIC_AUDIO_CACHE.add(processedFilename);
+            const newAudio = new Audio(audioUrl);
+            newAudio.volume = 0.85;
+            newAudio.addEventListener('ended', () => {
+              setTimeout(() => { playNextInQueue(); }, 80);
+            });
+            await newAudio.play();
+            return;
+          }
+        } catch (e) {
+          console.error("Failed to dynamically generate queue item:", e);
+        }
       }
       
-      // TTS 발음 시간에 맞추어 일정 시간 후 다음 글자 재생 진행
       setTimeout(() => {
         playNextInQueue();
-      }, 500);
+      }, 400);
     });
 
     try {
@@ -3886,18 +3942,37 @@ const tr = t(lang);
     } catch (err) {
       if (fallbackTriggered) return;
       fallbackTriggered = true;
-      console.warn("Audio queue play failed, fallback to TTS:", err);
-      fallbackSpeak(char);
+      console.warn("Audio queue play failed, requesting dynamic TTS:", err);
       
-      // 동적 생성 백엔드 요청
       const isComposite = char !== '—' && !JAMO_AUDIO_MAP[char] && char !== '•';
       if (isComposite) {
-        requestTtsGeneration(processedFilename);
+        try {
+          const response = await fetch('/api/generate-tts', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ text: processedFilename })
+          });
+          const result = await response.json();
+          if (result.success) {
+            DYNAMIC_AUDIO_CACHE.add(processedFilename);
+            const newAudio = new Audio(audioUrl);
+            newAudio.volume = 0.85;
+            newAudio.addEventListener('ended', () => {
+              setTimeout(() => { playNextInQueue(); }, 80);
+            });
+            await newAudio.play();
+            return;
+          }
+        } catch (e) {
+          console.error("Dynamic sync queue fail:", e);
+        }
       }
       
       setTimeout(() => {
         playNextInQueue();
-      }, 500);
+      }, 400);
     }
   }
 
