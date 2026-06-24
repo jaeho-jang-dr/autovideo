@@ -3609,6 +3609,8 @@ const tr = t(lang);
   // ── Web Speech API 코치 ──
   const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
   let recognizer: any = null;
+  let currentTargetText = '';
+  let isRecording = false;
 
   // 자모 기호 및 특수조합에 대한 MP3 파일명 맵핑 테이블 (19개 자음 전체로 확장)
   const JAMO_AUDIO_MAP: Record<string, string> = {
@@ -3996,11 +3998,382 @@ const tr = t(lang);
     return tmp[alen][blen];
   }
 
+  // 1. 단음절/자모음 음성 인식 유사어 매핑 사전 (음성 인식 불완전 보정용)
+  const JAMO_RECOGNITION_MAP: Record<string, string[]> = {
+    'ㄱ': ['ㄱ', '기역', '기억', '기어', '역', '역사', '기억하'],
+    'ㄲ': ['ㄲ', '쌍기역', '쌍기억', '쌍기어', '상기역', '상기억'],
+    'ㄴ': ['ㄴ', '니은', '이은', '니을'],
+    'ㄷ': ['ㄷ', '디귿', '디급', '이것', '디', '디근'],
+    'ㄸ': ['ㄸ', '쌍디귿', '쌍디급', '상디귿', '상디급'],
+    'ㄹ': ['ㄹ', '리을', '비율', '이을', '니을', '미을'],
+    'ㅁ': ['ㅁ', '미음', '미음', '미용', '이음'],
+    'ㅂ': ['ㅂ', '비읍', '비율', '이읍', '니읍', '비읍'],
+    'ㅃ': ['ㅃ', '쌍비읍', '상비읍'],
+    'ㅅ': ['ㅅ', '시옷', '시옷', '시오', '이옷'],
+    'ㅆ': ['ㅆ', '쌍시옷', '상시옷'],
+    'ㅇ': ['ㅇ', '이응', '이음', '이용', '이응', '잉'],
+    'ㅈ': ['ㅈ', '지읒', '지읏', '지', '이읒'],
+    'ㅉ': ['ㅉ', '쌍지읒', '쌍지읏', '상지읒', '상지읏'],
+    'ㅊ': ['ㅊ', '치읓', '치읏', '치', '이읓'],
+    'ㅋ': ['ㅋ', '키읔', '키읔', '키', '이읔'],
+    'ㅌ': ['ㅌ', '티읕', '티읏', '티', '이읕'],
+    'ㅍ': ['ㅍ', '피읔', '피읏', '피', '이읔'],
+    'ㅎ': ['ㅎ', '히읗', '히읏', '히', '이읗'],
+    '•': ['•', '아래아', '아래', '아레아', '점', '아래 아'],
+    'ㅡ': ['ㅡ', '으', '그', '의', '우'],
+    'ㅣ': ['ㅣ', '이', '히', '기', '디'],
+    'ㅏ': ['ㅏ', '아', '하', '바', '가'],
+    'ㅓ': ['ㅓ', '어', '허', '더', '거'],
+    'ㅗ': ['ㅗ', '오', '호', '도', '고'],
+    'ㅜ': ['ㅜ', '우', '후', '두', '구'],
+    'ㅐ': ['ㅐ', '애', '해', '대', '개'],
+    'ㅔ': ['ㅔ', '에', '헤', '데', '게'],
+    '랴': ['랴', '야', '샤'],
+    'ㅕ': ['ㅕ', '여', '셔', '겨'],
+    'ㅛ': ['ㅛ', '요', '쇼', '교'],
+    'ㅠ': ['ㅠ', '유', '슈', '규'],
+    'ㅘ': ['ㅘ', '와', '화', '과'],
+    'ㅝ': ['ㅝ', '워', '원', '권'],
+    'ㅚ': ['ㅚ', '외', '회사', '괴'],
+    'ㅟ': ['ㅟ', '위', '쉬', '귀'],
+    'ㅢ': ['ㅢ', '의', '희', '긔'],
+    'ㅒ': ['ㅒ', '얘', '섀'],
+    'ㅖ': ['ㅖ', '예', '혜', '계'],
+    'ㅙ': ['ㅙ', '왜', '돼', '궤'],
+    'ㅞ': ['ㅞ', '웨', '훼', '궤']
+  };
+
+  // 2. 자모 발음 조언 사전 (입모양, 조음 방식 가이드)
+  const JASO_COACHING_GUIDE: Record<string, { ko: string; en: string }> = {
+    'ㅏ': { ko: '입을 크게 벌리고 "아" 소리를 내세요.', en: 'Open your mouth wide and say "ah".' },
+    'ㅓ': { ko: '입을 조금 덜 벌리고 목 안쪽에서 소리를 내세요.', en: 'Open your mouth slightly and make a sound from the back of your throat.' },
+    'ㅗ': { ko: '입술을 둥글게 모아 앞으로 내밀며 소리를 내세요.', en: 'Round your lips and push them forward.' },
+    'ㅜ': { ko: '입술을 오므리고 더 앞으로 강하게 내밀며 소리를 내세요.', en: 'Pucker your lips tightly and push them forward.' },
+    'ㅡ': { ko: '입술을 옆으로 넓게 벌리고 혀를 낮게 둔 상태에서 소리를 내세요.', en: 'Spread your lips horizontally and keep your tongue low.' },
+    'ㅣ': { ko: '입술을 양옆으로 팽팽하게 당기고 혀의 앞부분을 올려 소리를 내세요.', en: 'Pull the corners of your lips tightly horizontally and raise the front of your tongue.' },
+    'ㅐ': { ko: '입을 세로로 크게 벌려 "애" 소리를 내세요. "ㅔ"보다 턱을 더 아래로 내립니다.', en: 'Open your mouth wide vertically. Drop your jaw lower than for "ㅔ".' },
+    'ㅔ': { ko: '입을 "ㅐ"보다 조금 덜 벌리고 편안하게 소리를 내세요.', en: 'Open your mouth slightly less than for "ㅐ" and relax.' },
+    '랴': { ko: '"이"에서 시작하여 빠르게 "아" 소리로 이어지게 하세요.', en: 'Start with "ee" and glide quickly into "ah".' },
+    'ㅕ': { ko: '"이"에서 시작하여 빠르게 "어" 소리로 이어지게 하세요.', en: 'Start with "ee" and glide quickly into "eo".' },
+    'ㅛ': { ko: '"이"에서 시작하여 빠르게 "오" 소리로 이어지게 하세요.', en: 'Start with "ee" and glide quickly into "oh".' },
+    'ㅠ': { ko: '"이"에서 시작하여 빠르게 "우" 소리로 이어지게 하세요.', en: 'Start with "ee" and glide quickly into "oo".' },
+    'ㄲ': { ko: '목에 힘을 주고 공기가 밖으로 터져 나오지 않게 단단히 막으며 소리를 내세요.', en: 'Tense your throat and release the sound without letting any air puff out.' },
+    'ㅋ': { ko: '입 밖으로 공기를 강하게 훅 불어내며 거세게 소리를 내세요.', en: 'Aspirate strongly by blowing out a puff of air with the sound.' },
+    'ㄸ': { ko: '혀끝을 윗잇몸에 단단히 붙였다가 공기가 새지 않게 탁 터뜨리세요.', en: 'Press the tip of your tongue firmly against the upper gum line and release without releasing air.' },
+    'ㅌ': { ko: '혀끝을 붙였다가 공기를 강하게 뿜어내며 터뜨리세요.', en: 'Press the tip of your tongue against the upper gum line and release with a strong puff of air.' },
+    'ㅃ': { ko: '두 입술을 단단히 맞물렸다가 공기를 가두고 터뜨리세요.', en: 'Press your lips tightly together and release them sharply without letting air escape.' },
+    'ㅍ': { ko: '두 입술을 맞물렸다가 입 밖으로 바람을 강하게 불어내며 터뜨리세요.', en: 'Press your lips together and release with a strong burst of air.' },
+    'ㅆ': { ko: '혀끝을 아래 치아 안쪽에 대고 마찰을 강하고 팽팽하게 일으켜 내세요.', en: 'Place the tip of your tongue behind your lower teeth and produce a tight, strong friction sound.' },
+    'ㅉ': { ko: '혀 앞부분을 입천장에 붙였다가 공기 배출 없이 힘있게 떼며 소리를 내세요.', en: 'Press the front of your tongue against the hard palate and release forcefully without blowing air.' },
+    'ㅊ': { ko: '혀 앞부분을 입천장에 대었다가 바람을 훅 내뿜으며 떼어 내세요.', en: 'Press the front of your tongue against the hard palate and release with a strong puff of air.' }
+  };
+
+  // 3. 한글 문자열 -> 자소(초/중/종성) 배열 분해기
+  function decomposeStringToJaso(text: string): string[] {
+    const result: string[] = [];
+    for (const char of text) {
+      const code = char.charCodeAt(0);
+      if (code >= 0xAC00 && code <= 0xD7A3) {
+        const offset = code - 0xAC00;
+        const jongIdx = offset % 28;
+        const jungIdx = Math.floor(offset / 28) % 21;
+        const choIdx = Math.floor(Math.floor(offset / 28) / 21);
+        
+        result.push(CHO_LIST[choIdx]);
+        result.push(JUNG_LIST[jungIdx]);
+        if (JONG_LIST[jongIdx]) {
+          result.push(JONG_LIST[jongIdx]);
+        }
+      } else {
+        result.push(char);
+      }
+    }
+    return result;
+  }
+
+  // 4. Levenshtein 기반 DP 백트래킹을 이용한 자소 정렬 매칭기
+  interface JasoAlignment {
+    type: 'match' | 'replace' | 'delete' | 'insert';
+    target: string;
+    heard: string;
+  }
+
+  function alignJaso(targetJaso: string[], heardJaso: string[]): JasoAlignment[] {
+    const tLen = targetJaso.length;
+    const hLen = heardJaso.length;
+    
+    const dp: number[][] = Array.from({ length: tLen + 1 }, () => Array(hLen + 1).fill(0));
+    for (let i = 0; i <= tLen; i++) dp[i][0] = i;
+    for (let j = 0; j <= hLen; j++) dp[0][j] = j;
+    
+    for (let i = 1; i <= tLen; i++) {
+      for (let j = 1; j <= hLen; j++) {
+        const cost = targetJaso[i - 1] === heardJaso[j - 1] ? 0 : 1;
+        dp[i][j] = Math.min(
+          dp[i - 1][j] + 1,
+          dp[i][j - 1] + 1,
+          dp[i - 1][j - 1] + cost
+        );
+      }
+    }
+    
+    const alignment: JasoAlignment[] = [];
+    let i = tLen;
+    let j = hLen;
+    
+    while (i > 0 || j > 0) {
+      if (i > 0 && j > 0) {
+        const cost = targetJaso[i - 1] === heardJaso[j - 1] ? 0 : 1;
+        if (dp[i][j] === dp[i - 1][j - 1] + cost) {
+          alignment.push({
+            type: cost === 0 ? 'match' : 'replace',
+            target: targetJaso[i - 1],
+            heard: heardJaso[j - 1]
+          });
+          i--;
+          j--;
+          continue;
+        }
+      }
+      
+      if (i > 0 && (j === 0 || dp[i][j] === dp[i - 1][j] + 1)) {
+        alignment.push({
+          type: 'delete',
+          target: targetJaso[i - 1],
+          heard: ''
+        });
+        i--;
+      } else if (j > 0 && (i === 0 || dp[i][j] === dp[i][j - 1] + 1)) {
+        alignment.push({
+          type: 'insert',
+          target: '',
+          heard: heardJaso[j - 1]
+        });
+        j--;
+      }
+    }
+    
+    return alignment.reverse();
+  }
+
+  // 5. 정교한 발음 채점 알고리즘 (낱자/단음절/문장 종합 지원)
   function scorePronunciation(heard: string, target: string): number {
-    if (heard.includes(target)) return 100;
-    const dist = levenshtein(heard, target);
-    const maxLen = Math.max(heard.length, target.length);
-    return Math.max(0, Math.round((1 - dist / maxLen) * 90));
+    const cleanHeard = heard.trim().replace(/\s+/g, '');
+    const cleanTarget = target.trim().replace(/\s+/g, '');
+    
+    if (cleanHeard === cleanTarget) return 100;
+    if (cleanHeard.includes(cleanTarget)) return 95;
+
+    // 1) 단일 자모음 유사어 매핑 보정
+    if (JAMO_RECOGNITION_MAP[cleanTarget]) {
+      const synonyms = JAMO_RECOGNITION_MAP[cleanTarget];
+      if (synonyms.includes(cleanHeard)) return 100;
+      for (const syn of synonyms) {
+        if (cleanHeard.includes(syn) || syn.includes(cleanHeard)) return 90;
+      }
+    }
+
+    // 2) 단음절 완성형 대표음화 기반 대조 (받침 차이 허용)
+    if (cleanTarget.length === 1 && cleanHeard.length === 1) {
+      const tPron = getPronunciationOfSyllable(cleanTarget);
+      const hPron = getPronunciationOfSyllable(cleanHeard);
+      if (tPron === hPron) return 95;
+    }
+
+    // 3) 자소 수준 Levenshtein 비율 계산
+    const targetJaso = decomposeStringToJaso(cleanTarget);
+    const heardJaso = decomposeStringToJaso(cleanHeard);
+    
+    const jDist = levenshtein(targetJaso.join(''), heardJaso.join(''));
+    const maxJLen = Math.max(targetJaso.length, heardJaso.length);
+    const jasoScore = Math.max(0, Math.round((1 - jDist / maxJLen) * 100));
+
+    // 4) 글자 레벨 Levenshtein 비율 계산
+    const charDist = levenshtein(cleanTarget, cleanHeard);
+    const maxCharLen = Math.max(cleanTarget.length, cleanHeard.length);
+    const charScore = Math.max(0, Math.round((1 - charDist / maxCharLen) * 100));
+
+    // 평균치를 종합해 유연하게 산출
+    return Math.round((jasoScore * 0.6) + (charScore * 0.4));
+  }
+
+  // 6. 발음 결함 부위 정밀 진단 및 다국어 피드백 생성기
+  interface DiagnosisResult {
+    score: number;
+    koFeedback: string;
+    enFeedback: string;
+  }
+
+  function diagnosePronunciation(heard: string, target: string): DiagnosisResult {
+    const score = scorePronunciation(heard, target);
+    
+    if (score >= 90) {
+      return {
+        score,
+        koFeedback: `완벽한 발음입니다! 🎉 소리한글의 멋진 톤이 잘 드러났습니다! (인식: "${heard}")`,
+        enFeedback: `Perfect pronunciation! 🎉 You captured the beautiful tone of Sori Hangeul! (Heard: "${heard}")`
+      };
+    }
+
+    const cleanHeard = heard.trim().replace(/\s+/g, '');
+    const cleanTarget = target.trim().replace(/\s+/g, '');
+
+    const targetJaso = decomposeStringToJaso(cleanTarget);
+    const heardJaso = decomposeStringToJaso(cleanHeard);
+
+    const alignments = alignJaso(targetJaso, heardJaso);
+    
+    const mistakes: { target: string; heard: string; type: 'replace' | 'delete' | 'insert' }[] = [];
+    for (const align of alignments) {
+      if (align.type === 'replace' || align.type === 'delete' || align.type === 'insert') {
+        mistakes.push({
+          target: align.target,
+          heard: align.heard,
+          type: align.type
+        });
+      }
+    }
+
+    if (mistakes.length === 0) {
+      return {
+        score,
+        koFeedback: `거의 비슷합니다! 조금 더 또박또박하게 발음해 볼까요? (인식: "${heard}")`,
+        enFeedback: `Very close! Shall we try pronouncing it a bit more clearly? (Heard: "${heard}")`
+      };
+    }
+
+    // 대표적인 첫 번째 실수를 기반으로 조언 생성
+    const primaryMistake = mistakes[0];
+    let koMsg = `일치율: <strong>${score}점</strong> (인식: "${heard}")<br>`;
+    let enMsg = `Accuracy: <strong>${score} points</strong> (Heard: "${heard}")<br>`;
+
+    if (primaryMistake.type === 'replace') {
+      const tChar = primaryMistake.target;
+      const hChar = primaryMistake.heard;
+      
+      koMsg += `🔴 [교정 필요] '${tChar}' 소리를 내야 하는데 '${hChar}'(으)로 잘못 발음하셨습니다.`;
+      enMsg += `🔴 [Needs Correction] '${tChar}' was mispronounced as '${hChar}'.`;
+
+      const guide = JASO_COACHING_GUIDE[tChar];
+      if (guide) {
+        koMsg += `<br>💡 <strong>발음 조언:</strong> ${guide.ko}`;
+        enMsg += `<br>💡 <strong>Speech Tip:</strong> ${guide.en}`;
+      } else {
+        if (JONG_LIST.includes(tChar)) {
+          koMsg += `<br>💡 <strong>발음 조언:</strong> 받침 '${tChar}'을 낼 때는 혀나 입술 끝을 단단히 막아 공기 배출을 완전히 멈추어 주세요.`;
+          enMsg += `<br>💡 <strong>Speech Tip:</strong> Close your lips or tongue firmly for final '${tChar}' to completely block airflow.`;
+        }
+      }
+    } else if (primaryMistake.type === 'delete') {
+      const tChar = primaryMistake.target;
+      koMsg += `🔴 [교정 필요] '${tChar}' 소리가 생략되었습니다. 빼놓지 말고 소리 내어 주세요.`;
+      enMsg += `🔴 [Needs Correction] The sound '${tChar}' was omitted. Make sure to pronounce it.`;
+    } else if (primaryMistake.type === 'insert') {
+      const hChar = primaryMistake.heard;
+      koMsg += `🔴 [교정 필요] 단어에 없는 불필요한 '${hChar}' 소리가 더해졌습니다. 조금 더 간결하게 발음해 보세요.`;
+      enMsg += `🔴 [Needs Correction] An extra sound '${hChar}' was added. Try to pronounce it more cleanly.`;
+    }
+
+    return {
+      score,
+      koFeedback: koMsg,
+      enFeedback: enMsg
+    };
+  }
+
+  // SpeechRecognition 싱글톤 및 수명 주기 초기화
+  if (SR) {
+    recognizer = new SR();
+    recognizer.interimResults = false;
+    recognizer.maxAlternatives = 1;
+    recognizer.continuous = false;
+
+    recognizer.onstart = () => {
+      isRecording = true;
+      const micBtn = document.getElementById('btn-mic') as HTMLButtonElement;
+      const coachBubble = document.getElementById('coach-bubble');
+      const micIcon = micBtn?.querySelector('.mic-icon');
+      const micText = document.getElementById('mic-text');
+
+      if (micBtn) micBtn.classList.add('recording');
+      if (micIcon) micIcon.textContent = '🛑';
+      if (micText) micText.textContent = 'Listening...';
+      
+      if (coachBubble) {
+        if (state.langMode === 'en') {
+          coachBubble.textContent = "영어로 말씀해 보세요... (Speak in English...)";
+        } else {
+          coachBubble.textContent = `"${currentTargetText}" 발음을 또박또박 말씀해 보세요...`;
+        }
+      }
+    };
+
+    recognizer.onresult = (e: any) => {
+      const heard = e.results[0][0].transcript.trim();
+      const coachBubble = document.getElementById('coach-bubble');
+      
+      if (state.langMode === 'en') {
+        state.english = heard;
+        updateWordDisplay();
+        translateSentence(heard);
+      } else {
+        const evaluationTarget = currentTargetText || state.currentSyllable || state.word || '';
+        const diagnosis = diagnosePronunciation(heard, evaluationTarget);
+        if (diagnosis.score >= 90) {
+          state.combo++;
+        } else {
+          state.combo = 0;
+        }
+
+        if (coachBubble) {
+          coachBubble.innerHTML = `
+            <div class="diagnosis-container" style="display: flex; flex-direction: column; gap: 8px; text-align: left; font-size: 14px; color: #fff;">
+              <div style="padding-bottom: 4px;">
+                <div style="font-weight: 600; color: #4ade80; margin-bottom: 2px;">[KO] 한국어 피드백</div>
+                <div>${diagnosis.koFeedback}</div>
+              </div>
+              <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 6px;">
+                <div style="font-weight: 600; color: #60a5fa; margin-bottom: 2px;">[EN] English Feedback</div>
+                <div>${diagnosis.enFeedback}</div>
+              </div>
+            </div>
+          `;
+        }
+        
+        // 정답 재생 (단음절이면 speakKo, 문장이면 playSentence 호출)
+        setTimeout(() => {
+          if (evaluationTarget.length === 1) {
+            speakKo(evaluationTarget);
+          } else {
+            playSentence(evaluationTarget);
+          }
+        }, 500);
+      }
+    };
+
+    recognizer.onerror = (e: any) => {
+      console.error('SpeechRecognition error:', e);
+      const coachBubble = document.getElementById('coach-bubble');
+      if (coachBubble) {
+        coachBubble.textContent = `다시 말해볼까요? (에러: ${e.error})`;
+      }
+    };
+
+    recognizer.onend = () => {
+      isRecording = false;
+      const micBtn = document.getElementById('btn-mic') as HTMLButtonElement;
+      const micIcon = micBtn?.querySelector('.mic-icon');
+      const micText = document.getElementById('mic-text');
+
+      if (micBtn) micBtn.classList.remove('recording');
+      if (micIcon) micIcon.textContent = '🎤';
+      if (micText) micText.textContent = 'Coach';
+      
+      // BGM 음량 복구
+      if (bgmGain && isBgmPlaying) {
+        bgmGain.gain.setValueAtTime(0.15, audioCtx!.currentTime);
+      }
+    };
   }
 
   // ── DOM 이벤트 바인딩 ──
@@ -4693,6 +5066,13 @@ const tr = t(lang);
       coachBubble.innerHTML += '<br><small style="color:hsl(350, 100%, 65%);">(음성 인식이 지원되지 않는 브라우저입니다. Chrome을 사용해 주세요.)</small>';
     } else {
       micBtn.addEventListener('click', async () => {
+        await ensureAudio();
+
+        if (isRecording) {
+          recognizer.stop();
+          return;
+        }
+
         // 1. 현재 활성화된 콕핏 모드 탐색
         const activeTab = document.querySelector('.switcher-btn.active');
         const activeMode = activeTab ? activeTab.getAttribute('data-mode') : 'launchpad';
@@ -4709,95 +5089,25 @@ const tr = t(lang);
           if (!targetText) return;
         }
 
-        await ensureAudio();
-        
-        // 이미 녹음 중이면 리턴
-        if (micBtn.classList.contains('recording')) return;
+        currentTargetText = targetText;
 
-
-
-        if (!recognizer) {
-          recognizer = new SR();
-          recognizer.interimResults = false;
-          recognizer.maxAlternatives = 1;
-          recognizer.continuous = false;
-        }
-        
         // 언어 모드 동적 할당
         recognizer.lang = (state.langMode === 'en') ? 'en-US' : 'ko-KR';
-        // 인식기에 타겟 텍스트 동적 바인딩
-        recognizer.targetText = targetText;
 
         // BGM 완전 음소거 (배경 소음으로 인한 마이크 인식 장애 원천 차단)
         if (bgmGain && isBgmPlaying) {
           bgmGain.gain.setValueAtTime(0.0, audioCtx!.currentTime);
         }
 
-        recognizer.onstart = () => {
-          micBtn.classList.add('recording');
-          if (micIcon) micIcon.textContent = '🛑';
-          if (micText) micText.textContent = 'Listening...';
-          
-          if (state.langMode === 'en') {
-            coachBubble.textContent = "영어로 말씀해 보세요... (Speak in English...)";
-          } else {
-            coachBubble.textContent = `"${targetText}" 발음을 또박또박 말씀해 보세요...`;
-          }
-        };
-
-        recognizer.onresult = (e: any) => {
-          const heard = e.results[0][0].transcript.trim();
-          
-          if (state.langMode === 'en') {
-            // 영어 음성 인식 완료
-            state.english = heard;
-            updateWordDisplay();
-            translateSentence(heard);
-          } else {
-            // 한글 발음 평가 (인식기에 바인딩된 targetText 대조)
-            const evaluationTarget = (e && e.currentTarget && e.currentTarget.targetText) || targetText || state.currentSyllable || state.word || '';
-            const score = scorePronunciation(heard, evaluationTarget);
-            
-            let comment = '';
-            if (score >= 90) {
-              comment = '완벽한 발음입니다! 🎉 Sori Hangeul 그루브가 느껴져요!';
-              state.combo++;
-            } else if (score >= 60) {
-              comment = '거의 비슷합니다! 조금 더 또박또박 발음해볼까요?';
-            } else {
-              comment = '입모양을 조금 더 크게 벌리고 소리를 내 보세요. 다시 도전!';
-              state.combo = 0;
-            }
-
-            coachBubble.innerHTML = `인식된 발음: <strong>"${heard}"</strong> (일치율 ${score}점)<br>${comment}`;
-            
-            // 정답 재생 (단음절이면 speakKo, 문장이면 playSentence 호출)
-            setTimeout(() => {
-              if (evaluationTarget.length === 1) {
-                speakKo(evaluationTarget);
-              } else {
-                playSentence(evaluationTarget);
-              }
-            }, 500);
-          }
-        };
-
-        recognizer.onerror = (e: any) => {
-          coachBubble.textContent = `다시 말해볼까요? (에러: ${e.error})`;
-        };
-
-        recognizer.onend = () => {
-          micBtn.classList.remove('recording');
-          if (micIcon) micIcon.textContent = '🎤';
-          if (micText) micText.textContent = 'Coach';
-          
-          // BGM 음량 복구
+        try {
+          recognizer.start();
+        } catch (err) {
+          console.warn("Recognizer start failed (already running?):", err);
+          // 안전 장치: 에러 발생 시 BGM 볼륨 복구
           if (bgmGain && isBgmPlaying) {
             bgmGain.gain.setValueAtTime(0.15, audioCtx!.currentTime);
           }
-        };
-
-        recognizer.start();
+        }
       });
     }
   }
