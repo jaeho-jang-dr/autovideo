@@ -547,6 +547,49 @@ const tr = t(lang);
       </div>
     </div>
 
+    <!-- 🎯 발음 교정 리포트 중앙 팝업 모달 (아이폰 직관 인지용 네온 글래스 크리스탈) -->
+    <div id="mic-feedback-modal" class="mic-feedback-modal hidden" role="dialog" aria-modal="true" aria-labelledby="mfb-title">
+      <div class="mic-feedback-backdrop" id="mic-feedback-backdrop"></div>
+      <div class="mic-feedback-dialog glass">
+        <button id="mic-feedback-close" class="mic-feedback-close" aria-label="닫기 (Close)" title="닫기">×</button>
+
+        <div class="mfb-header">
+          <div id="mfb-title-icon" class="mfb-title-icon">🎤</div>
+          <h3 id="mfb-title" class="mfb-title">발음 교정 리포트</h3>
+          <p id="mfb-subtitle" class="mfb-subtitle">Pronunciation Report</p>
+        </div>
+
+        <!-- 일치율 점수 게이지 (정상 인식 시에만 노출) -->
+        <div id="mfb-score-zone" class="mfb-score-zone">
+          <div id="mfb-score-ring" class="mfb-score-ring">
+            <span id="mfb-score-value" class="mfb-score-value">0</span>
+            <span class="mfb-score-unit">점 / SCORE</span>
+          </div>
+          <div id="mfb-score-verdict" class="mfb-score-verdict">분석 중...</div>
+        </div>
+
+        <!-- 목표 / 인식 비교 그리드 (정상 인식 시에만 노출) -->
+        <div id="mfb-compare-grid" class="mfb-compare-grid">
+          <div class="mfb-cell mfb-cell-target">
+            <span class="mfb-cell-label">🎯 목표 (Target)</span>
+            <span id="mfb-target" class="mfb-cell-value">—</span>
+          </div>
+          <div class="mfb-cell mfb-cell-heard">
+            <span class="mfb-cell-label">👂 인식 (Heard)</span>
+            <span id="mfb-heard" class="mfb-cell-value">—</span>
+          </div>
+        </div>
+
+        <!-- ⚠️ 에러 안내 뷰 (마이크 권한 차단 등) — 기본 숨김, 에러 시에만 노출 -->
+        <div id="mfb-error-zone" class="mfb-error-zone hidden">
+          <div class="mfb-error-icon">🎙️</div>
+          <p id="mfb-error-msg" class="mfb-error-msg">마이크를 사용할 수 없어요.</p>
+        </div>
+
+        <button id="mic-feedback-confirm" class="mfb-confirm-btn">확인 (OK)</button>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -3078,6 +3121,300 @@ const tr = t(lang);
   filter: brightness(1.08);
 }
 
+/* ============================================================
+   🎯 발음 교정 리포트 중앙 팝업 모달 (crystal / neon dark theme)
+   ============================================================ */
+.mic-feedback-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  box-sizing: border-box;
+  animation: mfbFadeIn 0.22s ease-out;
+}
+
+.mic-feedback-modal.hidden {
+  display: none !important;
+}
+
+.mic-feedback-backdrop {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 100% at 50% 0%, hsl(245 50% 8% / 0.78), hsl(245 60% 3% / 0.92));
+  -webkit-backdrop-filter: blur(10px) saturate(130%);
+  backdrop-filter: blur(10px) saturate(130%);
+}
+
+.mic-feedback-dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  max-height: calc(100dvh - 36px);
+  overflow-y: auto;
+  padding: 22px 20px 20px;
+  border-radius: 22px;
+  background: linear-gradient(160deg, hsl(245 40% 14% / 0.92), hsl(245 50% 7% / 0.95)) !important;
+  border: 1.5px solid var(--gv-border-active);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.75),
+    0 0 40px hsl(268 100% 66% / 0.25),
+    inset 0 1px 0 hsl(0 0% 100% / 0.08);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  backdrop-filter: blur(24px) saturate(170%);
+  animation: mfbPopIn 0.3s cubic-bezier(0.18, 1.25, 0.4, 1);
+  text-align: center;
+}
+
+.mic-feedback-dialog::-webkit-scrollbar { width: 4px; }
+.mic-feedback-dialog::-webkit-scrollbar-thumb {
+  background: var(--gv-border-active);
+  border-radius: 2px;
+}
+
+.mic-feedback-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--gv-text-1);
+  background: hsl(245 30% 18% / 0.7);
+  border: 1px solid var(--gv-border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  z-index: 2;
+}
+
+.mic-feedback-close:hover {
+  color: #fff;
+  background: hsl(325 100% 60% / 0.3);
+  border-color: var(--gv-neon-cho);
+  transform: rotate(90deg);
+}
+
+/* 헤더 */
+.mfb-header {
+  margin-bottom: 16px;
+}
+
+.mfb-title-icon {
+  font-size: 2rem;
+  filter: drop-shadow(0 0 12px hsl(325 100% 64% / 0.6));
+  animation: mfbPulse 2s ease-in-out infinite;
+}
+
+.mfb-title {
+  margin: 6px 0 2px;
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  background: var(--gv-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mfb-subtitle {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gv-text-2);
+}
+
+/* 점수 게이지 */
+.mfb-score-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.mfb-score-ring {
+  --ring-color: var(--gv-neon-jung);
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at center, hsl(245 50% 6% / 0.95), hsl(245 60% 3%));
+  border: 4px solid var(--ring-color);
+  box-shadow:
+    0 0 28px hsl(182 100% 50% / 0.35),
+    inset 0 0 22px hsl(182 100% 50% / 0.18);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mfb-score-ring.good {
+  --ring-color: hsl(145 80% 55%);
+  box-shadow: 0 0 32px hsl(145 80% 55% / 0.45), inset 0 0 22px hsl(145 80% 55% / 0.2);
+}
+.mfb-score-ring.mid {
+  --ring-color: hsl(45 100% 58%);
+  box-shadow: 0 0 32px hsl(45 100% 58% / 0.45), inset 0 0 22px hsl(45 100% 58% / 0.2);
+}
+.mfb-score-ring.low {
+  --ring-color: hsl(350 100% 62%);
+  box-shadow: 0 0 32px hsl(350 100% 62% / 0.45), inset 0 0 22px hsl(350 100% 62% / 0.2);
+}
+
+.mfb-score-value {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 0 18px var(--ring-color);
+}
+
+.mfb-score-unit {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--gv-text-2);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.mfb-score-verdict {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--gv-text-0);
+}
+.mfb-score-verdict.good { color: hsl(145 80% 62%); }
+.mfb-score-verdict.mid  { color: hsl(45 100% 62%); }
+.mfb-score-verdict.low  { color: hsl(350 100% 68%); }
+
+/* 목표 / 인식 비교 그리드 */
+.mfb-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.mfb-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  border-radius: 14px;
+  background: hsl(245 35% 9% / 0.7);
+  border: 1px solid var(--gv-border);
+}
+
+.mfb-cell-target { border-color: hsl(325 100% 64% / 0.4); }
+.mfb-cell-heard  { border-color: hsl(182 100% 50% / 0.4); }
+
+.mfb-cell-label {
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--gv-text-2);
+}
+
+.mfb-cell-value {
+  font-size: 1.7rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #fff;
+  word-break: break-all;
+}
+.mfb-cell-target .mfb-cell-value { color: var(--gv-neon-cho); text-shadow: var(--gv-glow-cho); }
+.mfb-cell-heard  .mfb-cell-value { color: var(--gv-neon-jung); text-shadow: var(--gv-glow-jung); }
+
+/* 점수/비교 영역 토글 (에러 모드에서 숨김) */
+.mfb-score-zone.hidden,
+.mfb-compare-grid.hidden { display: none !important; }
+
+/* ⚠️ 에러 안내 뷰 — 권한 차단 등 해결 가이드를 큰 폰트로 중앙 노출 */
+.mfb-error-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px 10px 26px;
+  text-align: center;
+}
+
+.mfb-error-zone.hidden { display: none !important; }
+
+.mfb-error-icon {
+  font-size: 3.4rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 18px hsl(350 100% 62% / 0.7));
+  animation: mfbPulse 2s ease-in-out infinite;
+}
+
+.mfb-error-msg {
+  margin: 0;
+  font-size: 1.32rem;
+  font-weight: 800;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  color: #fff;
+  text-shadow: 0 0 14px hsl(350 100% 62% / 0.35);
+  word-break: keep-all;
+}
+.mfb-error-msg b { color: hsl(45 100% 62%); font-weight: 900; }
+
+/* 확인 버튼 */
+.mfb-confirm-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: var(--gv-grad);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 6px 18px hsl(268 100% 66% / 0.4);
+}
+
+.mfb-confirm-btn:hover { filter: brightness(1.1); }
+.mfb-confirm-btn:active { transform: translateY(2px); }
+
+@keyframes mfbFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes mfbPopIn {
+  from { opacity: 0; transform: translateY(18px) scale(0.92); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes mfbPulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 12px hsl(325 100% 64% / 0.6)); }
+  50% { transform: scale(1.12); filter: drop-shadow(0 0 20px hsl(325 100% 64% / 0.9)); }
+}
+
+@media (max-width: 380px) {
+  .mfb-score-ring { width: 112px; height: 112px; }
+  .mfb-score-value { font-size: 2.5rem; }
+  .mfb-cell-value { font-size: 1.4rem; }
+}
+
 </style>
 
 <script>
@@ -4281,6 +4618,101 @@ const tr = t(lang);
     };
   }
 
+  // 🎯 발음 교정 리포트 중앙 팝업 모달 제어
+  function hideMicFeedbackModal() {
+    const modal = document.getElementById('mic-feedback-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  // 모달 헤더(아이콘/제목/부제)를 리포트 모드 또는 에러 모드로 전환
+  function setMicFeedbackHeader(mode: 'report' | 'error') {
+    const icon = document.getElementById('mfb-title-icon');
+    const title = document.getElementById('mfb-title');
+    const subtitle = document.getElementById('mfb-subtitle');
+    if (mode === 'error') {
+      if (icon) icon.textContent = '⚠️';
+      if (title) title.textContent = '마이크 안내';
+      if (subtitle) subtitle.textContent = 'Microphone Notice';
+    } else {
+      if (icon) icon.textContent = '🎤';
+      if (title) title.textContent = '발음 교정 리포트';
+      if (subtitle) subtitle.textContent = 'Pronunciation Report';
+    }
+  }
+
+  // ⚠️ 마이크 에러 팝업: 점수/비교 영역을 숨기고 에러 가이드만 큰 폰트로 중앙 노출
+  function showMicErrorModal(msg: string) {
+    const modal = document.getElementById('mic-feedback-modal');
+    if (!modal) return;
+
+    const scoreZone = document.getElementById('mfb-score-zone');
+    const compareGrid = document.getElementById('mfb-compare-grid');
+    const errorZone = document.getElementById('mfb-error-zone');
+    const errorMsg = document.getElementById('mfb-error-msg');
+
+    if (scoreZone) scoreZone.classList.add('hidden');
+    if (compareGrid) compareGrid.classList.add('hidden');
+    if (errorZone) errorZone.classList.remove('hidden');
+    // 에러 안내 문구엔 <b> 강조 태그가 포함될 수 있어 innerHTML로 주입
+    if (errorMsg) errorMsg.innerHTML = msg;
+
+    setMicFeedbackHeader('error');
+    modal.classList.remove('hidden');
+  }
+
+  function showMicFeedbackReport(target: string, heard: string, diagnosis: DiagnosisResult) {
+    const modal = document.getElementById('mic-feedback-modal');
+    if (!modal) return;
+
+    const sc = Math.max(0, Math.min(100, Math.round(diagnosis.score)));
+    const tier = sc >= 90 ? 'good' : (sc >= 60 ? 'mid' : 'low');
+    const verdict = sc >= 90
+      ? '완벽해요! Perfect! 🎉'
+      : (sc >= 70
+          ? '아주 좋아요! Great 👍'
+          : (sc >= 50 ? '조금만 더! Almost 💪' : '다시 도전! Try again 🔁'));
+
+    const scoreZone = document.getElementById('mfb-score-zone');
+    const compareGrid = document.getElementById('mfb-compare-grid');
+    const errorZone = document.getElementById('mfb-error-zone');
+    const elScore = document.getElementById('mfb-score-value');
+    const elRing = document.getElementById('mfb-score-ring');
+    const elVerdict = document.getElementById('mfb-score-verdict');
+    const elTarget = document.getElementById('mfb-target');
+    const elHeard = document.getElementById('mfb-heard');
+
+    // 정상 인식: 에러 뷰는 숨기고 점수 링·비교 그리드만 노출
+    if (errorZone) errorZone.classList.add('hidden');
+    if (scoreZone) scoreZone.classList.remove('hidden');
+    if (compareGrid) compareGrid.classList.remove('hidden');
+    setMicFeedbackHeader('report');
+
+    if (elScore) elScore.textContent = String(sc);
+    if (elRing) { elRing.classList.remove('good', 'mid', 'low'); elRing.classList.add(tier); }
+    if (elVerdict) {
+      elVerdict.classList.remove('good', 'mid', 'low');
+      elVerdict.classList.add(tier);
+      elVerdict.textContent = verdict;
+    }
+    if (elTarget) elTarget.textContent = target || '—';
+    if (elHeard) elHeard.textContent = heard || '—';
+
+    modal.classList.remove('hidden');
+  }
+
+  // 팝업 닫기 버튼(X) · 하단 확인 버튼 · 배경(backdrop) 클릭 · ESC 키 바인딩
+  (function bindMicFeedbackModal() {
+    const closeBtn = document.getElementById('mic-feedback-close');
+    const confirmBtn = document.getElementById('mic-feedback-confirm');
+    const backdrop = document.getElementById('mic-feedback-backdrop');
+    if (closeBtn) closeBtn.addEventListener('click', hideMicFeedbackModal);
+    if (confirmBtn) confirmBtn.addEventListener('click', hideMicFeedbackModal);
+    if (backdrop) backdrop.addEventListener('click', hideMicFeedbackModal);
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape') hideMicFeedbackModal();
+    });
+  })();
+
   // SpeechRecognition 싱글톤 및 수명 주기 초기화 (iOS/WebKit 호환성을 위해 사용자 제스처 시점에 지연 생성)
 
   // ── DOM 이벤트 바인딩 ──
@@ -5042,6 +5474,9 @@ const tr = t(lang);
                   `;
                 }
                 
+                // 🎯 중앙 발음 교정 리포트 팝업 모달에 상세 데이터(목표/인식/점수/진단)를 채우고 화면 중앙 노출
+                showMicFeedbackReport(evaluationTarget, heard, diagnosis);
+
                 // 정답 재생 (단음절이면 speakKo, 문장이면 playSentence 호출)
                 setTimeout(() => {
                   if (evaluationTarget.length === 1) {
@@ -5095,6 +5530,11 @@ const tr = t(lang);
               }
               if (coachBubble && msg) {
                 coachBubble.textContent = msg;
+              }
+              // 에러 안내를 중앙 팝업으로도 크게 노출 (사용자가 즉시 인지하도록)
+              // 'aborted'(사용자 직접 중단)는 msg가 비어 있어 팝업을 띄우지 않음
+              if (msg) {
+                showMicErrorModal(msg);
               }
             };
 
@@ -5184,10 +5624,7 @@ const tr = t(lang);
           recognizer.start();
         } catch (err: any) {
           console.warn("Recognizer start failed:", err);
-          if (coachBubble) {
-            coachBubble.textContent = `마이크 시작 오류: ${err.message || err}`;
-          }
-          // UI 상태 복구
+          // UI 상태 즉시 복구
           isRecording = false;
           micBtn.classList.remove('recording');
           if (micIcon) micIcon.textContent = '🎤';
@@ -5195,6 +5632,12 @@ const tr = t(lang);
           if (bgmGain && isBgmPlaying) {
             bgmGain.gain.setValueAtTime(0.15, audioCtx!.currentTime);
           }
+          // 에러 안내를 중앙 팝업으로 크게 노출
+          const startErrMsg = '🎙 마이크를 시작할 수 없어요. 마이크 권한을 허용했는지 확인하고 다시 시도해 주세요. (Couldn\'t start the mic — allow permission and try again.)';
+          if (coachBubble) {
+            coachBubble.textContent = startErrMsg;
+          }
+          showMicErrorModal(startErrMsg);
         }
       });
     }
