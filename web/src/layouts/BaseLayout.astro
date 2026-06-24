@@ -48,7 +48,7 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
       <header class="site-header">
         <div class="container bar">
           <a class="brand" href={homeUrl(lang)} aria-label="drjay-ed home">
-            <span class="logo"><img src="/logo.png" alt="" width="28" height="28" /></span>
+            <span class="logo"><img src="/logo.png" alt="" width="36" height="36" /></span>
             <span>drjay<span class="grad-text">-ed</span></span>
           </a>
           
@@ -83,59 +83,50 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
     </main>
 
     {!hideHeaderFooter && (
-      <footer class="site-footer">
-        <div class="container footer-sitemap">
-          <!-- Column 1: Brand / Concept -->
-          <div class="footer-col">
-            <h4>drjay-ed</h4>
-            <p style="margin-bottom: 12px; font-weight: 500;">
-              {lang === 'en' ? "Dissecting the world with a doctor's scalpel, stitching it back with a cartoonist's imagination." : "의사의 메스로 세상을 해부하고, 만화가의 상상력으로 꿰매다."}
-            </p>
-            <p style="font-size: 0.78rem;">
-              Benchmark: TED-Ed Concept
-            </p>
+      <footer class="pgt-footer">
+        <div class="pgt-footer-inner">
+
+          <!-- ── Brand column ── -->
+          <div class="pgt-footer-brand">
+            <img src="/logo.png" alt="drjay-ed Logo" class="pgt-logo-img" />
+            <div class="brand-text">
+              <h2>drjay-ed</h2>
+              <div class="brand-developer">
+                <span class="info-label">Developer</span>
+                <span class="info-text">Created by <strong>Dr. Jay</strong></span>
+              </div>
+            </div>
           </div>
 
-          <!-- Column 2: Categories -->
-          <div class="footer-col">
-            <h4>{lang === 'en' ? 'Categories' : '주제 분류'}</h4>
-            <ul>
-              {categories.map((c) => (
-                <li>
-                  <a href={categoryUrl(c.code, lang)}>{catName(c, lang)}</a>
-                </li>
-              ))}
-            </ul>
+          <!-- ── Info column ── -->
+          <div class="pgt-footer-info">
+            <div class="info-block">
+              <span class="info-icon">📍</span>
+              <div>
+                <span class="info-label">Headquarters</span>
+                <span class="info-text">451 Jungang-ro, Miryang-si,<br>Gyeongsangnam-do, Republic of Korea</span>
+              </div>
+            </div>
+            <div class="info-block">
+              <span class="info-icon">🔗</span>
+              <div>
+                <span class="info-label">Official Website</span>
+                <a href="https://drjayed.com">drjayed.com</a>
+              </div>
+            </div>
           </div>
 
-          <!-- Column 3: Links & Utilities -->
-          <div class="footer-col">
-            <h4>{lang === 'en' ? 'Resources' : '바로가기'}</h4>
-            <ul>
-              <li><a href={homeUrl(lang)}>{tr.nav_home}</a></li>
-              <li><a href={`${homeUrl(lang)}#lessons`}>{tr.nav_lessons}</a></li>
-              <li><a href={lang === 'ko' ? '/ko/curriculum/' : '/curriculum/'}>{tr.nav_curriculum}</a></li>
-              <li><a href={lang === 'ko' ? '/ko/grammar/' : '/grammar/'}>{tr.nav_grammar}</a></li>
-              <li><a href={lang === 'ko' ? '/ko/groove/' : '/groove/'}>{tr.nav_groove}</a></li>
-              <li><a href={lang === 'ko' ? '/ko/groove/?play=game' : '/groove/?play=game'}>🎮 {lang === 'ko' ? '한글 게임' : 'Game'}</a></li>
-              <li>
-                <span style="display: inline-block; margin-top: 4px;">
-                  <span class="lang-switch" role="group" aria-label="language">
-                    <a href={koUrl} class={lang === 'ko' ? 'active' : ''} hreflang="ko">KO</a>
-                    <a href={enUrl} class={lang === 'en' ? 'active' : ''} hreflang="en">EN</a>
-                  </span>
-                </span>
-              </li>
-            </ul>
-          </div>
         </div>
 
-        <div class="container footer-bottom">
-          <div class="copy">
-            © {new Date().getFullYear()} drjay-ed · {handle}
-          </div>
-          <div class="meta-links">
-            <a href={`https://youtube.com/${handle}`} target="_blank" rel="noopener noreferrer">YouTube Channel</a>
+        <!-- ── Bottom bar ── -->
+        <div class="pgt-footer-bottom">
+          <div>© {new Date().getFullYear()} Jay's AI Company. All rights reserved.</div>
+          <div>
+            <a href={homeUrl(lang)}>{tr.nav_home}</a>
+            <a href={`${homeUrl(lang)}#lessons`}>{tr.nav_lessons}</a>
+            <a href={lang === 'ko' ? '/ko/curriculum/' : '/curriculum/'}>{tr.nav_curriculum}</a>
+            <a href={lang === 'ko' ? '/ko/grammar/' : '/grammar/'}>{tr.nav_grammar}</a>
+            <a href={lang === 'ko' ? '/ko/groove/' : '/groove/'}>{tr.nav_groove}</a>
           </div>
         </div>
       </footer>

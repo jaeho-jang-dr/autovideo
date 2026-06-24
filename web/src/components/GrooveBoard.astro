@@ -15,7 +15,10 @@ const tr = t(lang);
     <!-- 상단 콕핏 헤더: 홈으로 링크, 리셋 버튼과 심플 타이틀 -->
     <div class="cockpit-header">
       <div class="header-main">
-        <h2 id="groove-title-text">{tr.groove_title}</h2>
+        <h2 id="groove-title-text" class="groove-title-with-logo">
+          {tr.groove_title}
+          <img src="/logo.png" alt="Sori Hangeul Logo" class="groove-title-logo" />
+        </h2>
       </div>
       <div class="header-actions">
         <div class="gv-lang-switch" role="group" aria-label="language toggle">
@@ -594,11 +597,38 @@ const tr = t(lang);
       </div>
     </div>
 
+    <!-- Edited by Dr Jay 하단 크레딧 추가 -->
+    <div class="groove-credit">Edited by Dr Jay</div>
+
   </div>
 </div>
 
 
 <style>
+.groove-title-with-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.groove-title-logo {
+  height: 1.15em;
+  width: auto;
+  vertical-align: middle;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(182, 255, 250, 0.3);
+}
+.groove-credit {
+  font-size: 0.75rem;
+  color: var(--gv-text-2);
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+}
+
 /* 화이트 테마 오염 방지 - .groove 스코프로 완전히 격리된 다크 네온 글래스 테마 */
 .groove {
   --gv-bg-0: hsl(245 42% 6%);
