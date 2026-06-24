@@ -236,7 +236,7 @@ const tr = t(lang);
             </div>
             <div class="pad-wrapper">
               <button class="pad jung glass" data-jamo="ㅣ" aria-label="사람 이">ㅣ</button>
-              <div class="pad-popup glass">
+              <div class="pad-popup glass shift-left">
                 <button type="button" class="popup-item" data-value="ㅣ">ㅣ</button>
                 <button type="button" class="popup-item" data-value="애" style="display: none;">—</button>
                 <button type="button" class="popup-item" data-value="ㅐ">ㅐ</button>
@@ -1329,7 +1329,11 @@ const tr = t(lang);
   font-weight: 900 !important;
   font-size: clamp(1.4rem, 5.5vw, 1.8rem) !important; /* 한글 자음/모음 키캡 낱자 크기 대폭 키움 */
   transition: all 0.08s ease !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  -webkit-touch-callout: none;
   cursor: pointer;
   position: relative;
   display: flex;
@@ -2040,6 +2044,13 @@ const tr = t(lang);
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.2);
   backdrop-filter: blur(8px);
   white-space: nowrap;
+  
+  /* 길게 누를 때 브라우저 텍스트 선택/복사 및 컨텍스트 방지 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .pad-popup.active {
@@ -2059,6 +2070,21 @@ const tr = t(lang);
 .pad-popup.shift-right::after {
   left: 15px;
   transform: translateX(-50%);
+}
+
+/* ㅣ 패드처럼 화면 오른쪽에 치우친 경우 팝업을 왼쪽으로 시프팅 */
+.pad-popup.shift-left {
+  left: auto;
+  right: 100%;
+  transform: translateX(0) translateY(6px);
+}
+.pad-popup.shift-left.active {
+  transform: translateX(0) translateY(0);
+}
+.pad-popup.shift-left::after {
+  left: auto;
+  right: -17px;
+  transform: translateX(50%);
 }
 
 /* Arrow pointer for popup */
@@ -2088,6 +2114,13 @@ const tr = t(lang);
   cursor: pointer;
   transition: all 0.15s ease;
   box-sizing: border-box;
+
+  /* 길게 누를 때 브라우저 텍스트 선택/복사 및 컨텍스트 방지 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .popup-item:hover {
@@ -4175,6 +4208,10 @@ const tr = t(lang);
   // 팝업 내부 개별 자소 아이템 클릭 시 처리
   const popupItems = document.querySelectorAll('.popup-item');
   popupItems.forEach(item => {
+    // 롱프레스 텍스트 복사/선택 및 컨텍스트 메뉴 차단
+    item.addEventListener('contextmenu', (e) => e.preventDefault());
+    item.addEventListener('selectstart', (e) => e.preventDefault());
+
     item.addEventListener('click', (e) => {
       e.stopPropagation(); // 부모 패드의 일반 순환 클릭 동작 방지
       const value = item.getAttribute('data-value') || '';
@@ -4196,6 +4233,12 @@ const tr = t(lang);
     });
   });
 
+  // 팝업 컨테이너 자체도 복사/선택 및 컨텍스트 메뉴 차단
+  document.querySelectorAll('.pad-popup').forEach(popup => {
+    popup.addEventListener('contextmenu', (e) => e.preventDefault());
+    popup.addEventListener('selectstart', (e) => e.preventDefault());
+  });
+
   // 화면 외부 클릭 시 모든 팝업 일괄 닫기 및 롱프레스 락 초기화
   document.addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
@@ -4209,6 +4252,10 @@ const tr = t(lang);
   const pads = document.querySelectorAll('.pad');
   pads.forEach(p => {
     const btn = p as HTMLButtonElement;
+
+    // 롱프레스 텍스트 복사/선택 및 컨텍스트 메뉴 차단
+    btn.addEventListener('contextmenu', (e) => e.preventDefault());
+    btn.addEventListener('selectstart', (e) => e.preventDefault());
 
     // Pointerdown: 롱프레스 1초 감지 작동
     btn.addEventListener('pointerdown', (e) => {
