@@ -15,7 +15,7 @@ const tr = t(lang);
     <!-- 상단 콕핏 헤더: 홈으로 링크, 리셋 버튼과 심플 타이틀 -->
     <div class="cockpit-header">
       <div class="header-main">
-        <h2>{tr.groove_title}</h2>
+        <h2 id="groove-title-text">{tr.groove_title}</h2>
       </div>
       <div class="header-actions">
         <a href="/" class="action-mini-btn home-btn" title="홈으로">🏠 홈으로</a>
@@ -214,7 +214,7 @@ const tr = t(lang);
         <!-- 우측: 모음 Action-pad & BGM 플레이어 -->
         <div class="keyboard-group-panel right-pad-panel">
           <span class="panel-label">☄️ 모음 & 비트 (Vowels & Beat)</span>
-          <div class="vowels action-layout">
+          <div class="vowels dpad-layout">
             <div class="pad-wrapper">
               <button class="pad jung glass" data-jamo="•" aria-label="하늘 아래아">•</button>
               <div class="pad-popup glass">
@@ -301,7 +301,7 @@ const tr = t(lang);
       <div class="agent-avatar">🤖</div>
       <div class="agent-chat">
         <div class="chat-bubble" id="coach-bubble">
-          안녕하세요! 소리한글 (Sori Hangeul) 학습기에 오신 것을 환영합니다!
+          안녕하세요! 소리 한글 (Sori Hangeul) 학습기에 오신 것을 환영합니다!
         </div>
       </div>
     </div>
@@ -1278,7 +1278,7 @@ const tr = t(lang);
   padding-bottom: 2px;
 }
 
-/* 좌하단 자음 D-pad (대형화) */
+/* 자음/모음 공용 D-pad 콕핏 (대형화) */
 .dpad-layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1286,7 +1286,7 @@ const tr = t(lang);
   gap: 6px;
   width: 100%;
   aspect-ratio: 1;
-  max-width: 170px; /* 자음 자판 140px -> 170px로 크게 확장 */
+  max-width: 170px;
   margin: 0 auto;
   padding: 8px;
   background: hsl(245 35% 5% / 0.8);
@@ -1296,11 +1296,32 @@ const tr = t(lang);
   box-shadow: inset 0 0 10px rgba(0,0,0,0.9);
 }
 
-.dpad-layout button:nth-child(1) { grid-column: 2; grid-row: 1; }
-.dpad-layout button:nth-child(2) { grid-column: 1; grid-row: 2; }
-.dpad-layout button:nth-child(3) { grid-column: 2; grid-row: 2; }
-.dpad-layout button:nth-child(4) { grid-column: 3; grid-row: 2; }
-.dpad-layout button:nth-child(5) { grid-column: 2; grid-row: 3; }
+/* 좌하단 자음 D-pad 배치 (5개 자음 십자형 배치) */
+.launchpad.dpad-layout .pad-wrapper:nth-child(1) { grid-column: 2; grid-row: 1; }
+.launchpad.dpad-layout .pad-wrapper:nth-child(2) { grid-column: 1; grid-row: 2; }
+.launchpad.dpad-layout .pad-wrapper:nth-child(3) { grid-column: 2; grid-row: 2; }
+.launchpad.dpad-layout .pad-wrapper:nth-child(4) { grid-column: 3; grid-row: 2; }
+.launchpad.dpad-layout .pad-wrapper:nth-child(5) { grid-column: 2; grid-row: 3; }
+
+/* 우하단 모음 D-pad 배치 (3개 모음 천지인 삼각 배치 & 내부 밀착) */
+.vowels.dpad-layout {
+  padding: 18px; /* 패딩을 기존 8px에서 18px로 늘려 전체적으로 내부 삼각형 수축 */
+}
+.vowels.dpad-layout .pad-wrapper:nth-child(1) { 
+  grid-column: 2; 
+  grid-row: 1; 
+  transform: translateY(6px); /* 상단 모음을 아래로 */
+}
+.vowels.dpad-layout .pad-wrapper:nth-child(2) { 
+  grid-column: 1; 
+  grid-row: 3; 
+  transform: translate(6px, -6px); /* 좌하단 모음을 우상향으로 */
+}
+.vowels.dpad-layout .pad-wrapper:nth-child(3) { 
+  grid-column: 3; 
+  grid-row: 3; 
+  transform: translate(-6px, -6px); /* 우하단 모음을 좌상향으로 */
+}
 
 /* 3D 기계식 네온 키캡 (키크기 & 한글 자모 초대형화) */
 .pad {
@@ -3397,6 +3418,45 @@ const tr = t(lang);
     updatePhonetics();
   }
 
+  // 입력 제스처 및 조합을 위한 추가 전역 상태 변수들
+  let lastTapTime = 0;
+  let lastTapPad: HTMLButtonElement | null = null;
+  let longPressTimeout: number | null = null;
+  let isLongPressed = false;
+
+  // 모음 순환 사이클 정의
+  const VOWEL_CYCLES: Record<string, string[]> = {
+    '•': ['•', 'ㅏ', 'ㅓ', 'ㅗ', 'ㅜ'],
+    'ㅡ': ['ㅡ', '요', 'ㅠ', 'ㅢ'],
+    'ㅣ': ['ㅣ', 'ㅐ', 'ㅔ', 'ㅟ']
+  };
+
+  // 모음을 키 입력 시퀀스로 역매핑하는 테이블
+  const VOWEL_TO_SEQ_MAP: Record<string, string[]> = {
+    'ㅣ': ['ㅣ'],
+    'ㅡ': ['ㅡ'],
+    '•': ['•'],
+    'ㅏ': ['ㅣ', '•'],
+    'ㅑ': ['ㅣ', '•', '•'],
+    'ㅓ': ['•', 'ㅣ'],
+    'ㅕ': ['•', '•', 'ㅣ'],
+    'ㅐ': ['ㅣ', '•', 'ㅣ'],
+    'ㅒ': ['ㅣ', '•', '•', 'ㅣ'],
+    'ㅔ': ['•', 'ㅣ', 'ㅣ'],
+    'ㅖ': ['•', '•', 'ㅣ', 'ㅣ'],
+    'ㅗ': ['•', 'ㅡ'],
+    '요': ['•', '•', 'ㅡ'],
+    'ㅜ': ['ㅡ', '•'],
+    'ㅠ': ['ㅡ', '•', '•'],
+    'ㅘ': ['•', 'ㅡ', 'ㅣ', '•'],
+    'ㅙ': ['•', 'ㅡ', 'ㅣ', '•', 'ㅣ'],
+    'ㅚ': ['•', 'ㅡ', 'ㅣ'],
+    'ㅝ': ['ㅡ', '•', '•', 'ㅣ'],
+    'ㅞ': ['ㅡ', '•', '•', 'ㅣ', 'ㅣ'],
+    'ㅟ': ['ㅡ', '•', 'ㅣ'],
+    'ㅢ': ['ㅡ', 'ㅣ']
+  };
+
   // 천지인 입력 가능한 모든 유효 접두사 집합 생성
   const VALID_VOWEL_PREFIXES = new Set<string>();
   for (const key in VOWEL_COMBINATIONS) {
@@ -3405,8 +3465,8 @@ const tr = t(lang);
     }
   }
 
-  // 모음 상태 처리기
-  function composeVowel(seq: string[]) {
+  // 모음 상태 처리기 (원래 시퀀스 기반 오토마타 복구)
+  function composeVowel(seq: string[]): string | null {
     const combined = seq.join('');
     
     // 1. 완벽히 매칭되는 모음이 있으면 그것을 반환
@@ -3494,7 +3554,11 @@ const tr = t(lang);
     // 모음 기호 -> 파일명
     'ㅏ': '아', 'ㅐ': '애', 'ㅑ': '야', 'ㅓ': '어', 'ㅔ': '에', 'ㅕ': '여', 
     'ㅗ': '오', '요': '요', 'ㅜ': '우', 'ㅠ': '유', 'ㅡ': '으', 'ㅢ': '의', 'ㅣ': '이',
-    '•': '아래아'
+    '•': '아래아',
+    // 이중 모음 기호 -> 파일명
+    'ㅘ': '와', 'ㅙ': '왜', 'ㅚ': '외',
+    'ㅝ': '워', 'ㅞ': '웨', 'ㅟ': '위',
+    'ㅒ': '얘', 'ㅖ': '예'
   };
 
   function speakKo(text: string) {
@@ -4004,20 +4068,21 @@ const tr = t(lang);
         if (text !== '—') state.word += text;
         state.cho = prevJong;
       }
-      state.jamoSeq = [];
+      state.jamoSeq = VOWEL_TO_SEQ_MAP[vowelChar] ? [...VOWEL_TO_SEQ_MAP[vowelChar]] : [vowelChar];
       state.jung = vowelChar;
       state.jong = null;
       state.lastPadType = 'jung';
       state.lastPadValue = vowelChar;
       state.cycleIdx = 0;
     } else if (state.cho) {
-      state.jamoSeq = [];
+      state.jamoSeq = VOWEL_TO_SEQ_MAP[vowelChar] ? [...VOWEL_TO_SEQ_MAP[vowelChar]] : [vowelChar];
       state.jung = vowelChar;
       state.lastPadType = 'jung';
       state.lastPadValue = vowelChar;
+      state.cycleIdx = 0;
     } else {
       state.cho = 'ㅇ';
-      state.jamoSeq = [];
+      state.jamoSeq = VOWEL_TO_SEQ_MAP[vowelChar] ? [...VOWEL_TO_SEQ_MAP[vowelChar]] : [vowelChar];
       state.jung = vowelChar;
       state.jong = null;
       state.lastPadType = 'jung';
@@ -4030,33 +4095,27 @@ const tr = t(lang);
     scheduleCommit();
   }
 
-  // 키보드 자소 패드 팝업 이벤트 바인딩 (Hover 및 터치 지원)
+  // 키보드 자소 패드 팝업 이벤트 바인딩 (Hover 및 터치 롱프레스 지원)
   const padWrappers = document.querySelectorAll('.pad-wrapper');
   padWrappers.forEach(wrapper => {
     const pad = wrapper.querySelector('.pad');
     const popup = wrapper.querySelector('.pad-popup');
     if (!pad || !popup) return;
 
-    // 데스크톱 마우스 진입 시 활성화
-    wrapper.addEventListener('mouseenter', () => {
+    // 데스크톱 마우스 기기에서만 마우스 진입/리브 시 임시 활성화
+    wrapper.addEventListener('mouseenter', (e) => {
+      if ((e as MouseEvent).sourceCapabilities?.firesTouchEvents) return;
       document.querySelectorAll('.pad-popup').forEach(p => p.classList.remove('active'));
       popup.classList.add('active');
     });
 
-    // 데스크톱 마우스 리브 시 비활성화
-    wrapper.addEventListener('mouseleave', () => {
-      popup.classList.remove('active');
-    });
-
-    // 모바일 터치 이벤트 지원 (버튼을 누를 때 팝업 노출)
-    pad.addEventListener('touchstart', (e) => {
-      e.stopPropagation();
-      const isActive = popup.classList.contains('active');
-      document.querySelectorAll('.pad-popup').forEach(p => p.classList.remove('active'));
-      if (!isActive) {
-        popup.classList.add('active');
+    wrapper.addEventListener('mouseleave', (e) => {
+      if ((e as MouseEvent).sourceCapabilities?.firesTouchEvents) return;
+      // 롱프레스로 강제 활성화된 경우 리브 시 닫지 않음
+      if (!pad.getAttribute('data-long-pressed')) {
+        popup.classList.remove('active');
       }
-    }, { passive: true });
+    });
   });
 
   // 팝업 내부 개별 자소 아이템 클릭 시 처리
@@ -4065,7 +4124,7 @@ const tr = t(lang);
     item.addEventListener('click', (e) => {
       e.stopPropagation(); // 부모 패드의 일반 순환 클릭 동작 방지
       const value = item.getAttribute('data-value') || '';
-      const parentPad = item.closest('.pad-wrapper')?.querySelector('.pad');
+      const parentPad = item.closest('.pad-wrapper')?.querySelector('.pad') as HTMLButtonElement | null;
       if (!parentPad) return;
 
       const isCho = parentPad.classList.contains('cho');
@@ -4077,44 +4136,102 @@ const tr = t(lang);
         selectVowelDirectly(value);
       }
 
-      // 선택 후 팝업 닫기
+      // 선택 후 팝업 닫기 및 롱프레스 상태 속성 초기화
+      parentPad.removeAttribute('data-long-pressed');
       item.closest('.pad-popup')?.classList.remove('active');
     });
   });
 
-  // 화면 외부 클릭 시 모든 팝업 일괄 닫기
+  // 화면 외부 클릭 시 모든 팝업 일괄 닫기 및 롱프레스 락 초기화
   document.addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
     if (!target.closest('.pad-wrapper')) {
       document.querySelectorAll('.pad-popup').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.pad').forEach(p => p.removeAttribute('data-long-pressed'));
     }
   });
 
-  // 패드 이벤트 바인딩
+  // 패드 이벤트 바인딩 (Pointerdown 롱프레스 + Click/더블탭 순환 오토마타)
   const pads = document.querySelectorAll('.pad');
   pads.forEach(p => {
-    p.addEventListener('click', async (e) => {
-      const btn = e.currentTarget as HTMLButtonElement;
+    const btn = p as HTMLButtonElement;
+
+    // Pointerdown: 롱프레스 1초 감지 작동
+    btn.addEventListener('pointerdown', (e) => {
+      // 마우스 우클릭 제외
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+
+      btn.removeAttribute('data-long-pressed');
+      isLongPressed = false;
+
+      const wrapper = btn.closest('.pad-wrapper');
+      const popup = wrapper?.querySelector('.pad-popup');
+
+      if (longPressTimeout) {
+        clearTimeout(longPressTimeout);
+      }
+
+      longPressTimeout = window.setTimeout(() => {
+        isLongPressed = true;
+        btn.setAttribute('data-long-pressed', 'true');
+
+        // 모든 팝업을 닫고 이 팝업을 활성화 고정
+        document.querySelectorAll('.pad-popup').forEach(p => p.classList.remove('active'));
+        if (popup) {
+          popup.classList.add('active');
+        }
+      }, 1000); // 1.0초 누르고 있을 때
+    });
+
+    // Pointerup/Pointerleave/Pointercancel 시 롱프레스 타이머 해제
+    const clearLongPress = () => {
+      if (longPressTimeout) {
+        clearTimeout(longPressTimeout);
+        longPressTimeout = null;
+      }
+    };
+
+    btn.addEventListener('pointerup', clearLongPress);
+    btn.addEventListener('pointerleave', clearLongPress);
+    btn.addEventListener('pointercancel', clearLongPress);
+
+    // Click: 입력 및 더블 탭 순환 처리
+    btn.addEventListener('click', async (e) => {
+      // 롱프레스로 팝업이 고정 열기 처리된 경우, 이번 손떼기 클릭은 입력하지 않고 리턴
+      if (btn.getAttribute('data-long-pressed') === 'true' || isLongPressed) {
+        isLongPressed = false;
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
+
       const jamo = btn.getAttribute('data-jamo') || '';
       const isCho = btn.classList.contains('cho');
-      
+      const currentTime = Date.now();
+
       try {
         await ensureAudio();
       } catch (err) {
         console.warn("AudioContext init failed, proceeding without sound:", err);
       }
-      
+
       // 햅틱 효과 클래스 트리거
       btn.classList.add('hit');
       setTimeout(() => btn.classList.remove('hit'), 100);
 
+      // 더블 탭 감지 (400ms 미만 & 동일 버튼 연속 클릭)
+      const isDoubleTap = (lastTapPad === btn && (currentTime - lastTapTime) < 400);
+      lastTapPad = btn;
+      lastTapTime = currentTime;
+
       if (isCho) {
         // 자음 입력 및 순환 오토마타
         const cycle = CONSONANT_CYCLES[jamo];
-        
+        if (!cycle) return;
+
         if (!state.jung) {
           // 초성(cho) 단계 순환
-          if (state.lastPadType === 'cho' && state.lastPadValue === jamo) {
+          if (isDoubleTap && state.lastPadType === 'cho' && state.lastPadValue === jamo) {
             state.cycleIdx = (state.cycleIdx + 1) % cycle.length;
             state.cho = cycle[state.cycleIdx];
           } else {
@@ -4128,7 +4245,7 @@ const tr = t(lang);
           }
         } else {
           // 종성(jong) 단계 순환 및 겹받침 합성
-          if (state.lastPadType === 'jong' && state.lastPadValue === jamo) {
+          if (isDoubleTap && state.lastPadType === 'jong' && state.lastPadValue === jamo) {
             state.cycleIdx = (state.cycleIdx + 1) % cycle.length;
             state.jong = cycle[state.cycleIdx];
           } else {
@@ -4146,13 +4263,16 @@ const tr = t(lang);
             }
           }
         }
-        
+
         // 기계음 대신 성우 목소리로 명칭 재생
         const currentJamo = (!state.jung) ? state.cho! : state.jong!;
         speakKo(currentJamo);
         showAnatomy(jamo);
       } else {
-        // 모음 입력
+        // 모음 입력 및 순환
+        const cycle = VOWEL_CYCLES[jamo];
+        if (!cycle) return;
+
         if (state.cho && state.jong) {
           // 연음 법칙: 겹받침(복자음)이 있을 경우 마지막 자음만 초성으로 넘김
           const prevJong = state.jong;
@@ -4176,11 +4296,22 @@ const tr = t(lang);
           state.lastPadValue = jamo;
           state.cycleIdx = 0;
         } else if (state.cho) {
-          state.jamoSeq.push(jamo);
-          state.jung = composeVowel(state.jamoSeq);
-          state.lastPadType = 'jung';
-          state.lastPadValue = jamo;
+          if (isDoubleTap && state.lastPadType === 'jung' && state.lastPadValue === jamo) {
+            // 더블 탭 순환: 팝업 순환 후보 중 다음 문자로 순환하며, 그에 매핑되는 천지인 시퀀스를 덮어씀
+            state.cycleIdx = (state.cycleIdx + 1) % cycle.length;
+            const targetVowel = cycle[state.cycleIdx];
+            state.jamoSeq = VOWEL_TO_SEQ_MAP[targetVowel] ? [...VOWEL_TO_SEQ_MAP[targetVowel]] : [targetVowel];
+            state.jung = composeVowel(state.jamoSeq);
+          } else {
+            // 단일 클릭: 기존 입력 시퀀스에 순수하게 덧붙임 (원래 천지인 합성 흐름 복구)
+            state.jamoSeq.push(jamo);
+            state.jung = composeVowel(state.jamoSeq);
+            state.lastPadType = 'jung';
+            state.lastPadValue = jamo;
+            state.cycleIdx = 0;
+          }
         } else {
+          // 초성이 없는 경우 'ㅇ' 자동 부여
           state.cho = 'ㅇ';
           state.jamoSeq = [jamo];
           state.jung = composeVowel(state.jamoSeq);
@@ -4189,7 +4320,7 @@ const tr = t(lang);
           state.lastPadValue = jamo;
           state.cycleIdx = 0;
         }
-        
+
         // 현재 구성된 모음 소리 성우 목소리로 재생
         if (state.jung) {
           speakKo(state.jung);
@@ -4709,6 +4840,12 @@ const tr = t(lang);
   // 언어 모드에 맞춰 UI 메뉴 텍스트 다국어 업데이트
   function updateUIForLanguage() {
     const isEn = state.langMode === 'en';
+    
+    // 0. 앱 상단 타이틀 번역
+    const titleText = document.getElementById('groove-title-text');
+    if (titleText) {
+      titleText.textContent = isEn ? 'Sori Hangeul' : '소리 한글';
+    }
     
     // 1. Reset 버튼
     const btnReset = document.getElementById('btn-reset');

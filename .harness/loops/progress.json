@@ -8,9 +8,9 @@
   },
   "current_session": {
     "status": "completed",
-    "started": "2026-06-23",
-    "goal": "Implement a mobile-first 4-tab dashboard UI for Korean learning GrooveBoard, integrate full-voice-actor gTTS audio queue, and deploy live to drjayed.com/groove",
-    "phase": "web_dashboard_overhaul"
+    "started": "2026-06-24",
+    "goal": "Track 2-person motion from legacy chiropractic video and compile Gonstead Sitting Technique 2D animation clip starring Injoon and Jieun",
+    "phase": "chiropractic_animation"
   },
   "completed_tasks": [
     "Created tts_manager.py supporting ElevenLabs API and gTTS fallback mechanisms",
@@ -109,7 +109,13 @@
     "Dynamic Pronunciation Caching (2026-06-24, Gemini=조감독): Integrated Hangeul standard sound rules (e.g., '합니다' -> '함미다' and single-syllable 7-jongseong codas like '값' -> '[갑]') for single/multi-syllable speech-flow.",
     "Dynamic Pronunciation Caching (2026-06-24, Gemini=조감독): Upgraded Coach Mic to dynamically support multiple modes (launchpad, phrases, translator, game) and resolve async closure targetText binding issues.",
     "Dynamic Pronunciation Caching (2026-06-24, Gemini=조감독): Resolved browser mic hardware device locking and conflicts by removing redundant getUserMedia checks, ensuring safe and unhindered audio play.",
-    "Web Redesign (2026-06-24, Gemini=조감독): Updated website branding from 'Groove' to 'Sori Hangeul (소리한글)' and integrated 'Hangeul Game' link to the GNB navigation layout."
+    "Web Redesign (2026-06-24, Gemini=조감독): Updated website branding from 'Groove' to 'Sori Hangeul (소리한글)' and integrated 'Hangeul Game' link to the GNB navigation layout.",
+    "Chiropractic Animation (2026-06-24, Gemini=조감독): Implemented dual-person motion tracking and retargeting script (mocap_chiropractic.py) using YOLOv8-pose to trace Gonstead Sitting cervical adjustment.",
+    "Chiropractic Animation (2026-06-24, Gemini=조감독): Generated scene_1.mp4 2D line-art animation clip featuring Injoon (chiropractor) and Jieun (patient) in dual-roles.",
+    "Chiropractic Animation (2026-06-24, Gemini=조감독): Compiled the final 4K upscaled video gonstead_sitting.mp4 with speed-matched TTS narration, soft CC subtitles, annotation boxes, and channel logos, then successfully backed up to Google Drive.",
+    "Web Overhaul (2026-06-24, Gemini=조감독): Standardized app title and menu labels from legacy '한글 그루브 박스 / 그루브' to '소리 한글' (with space) globally, built Astro static pages, and successfully deployed to Cloudflare Pages (drjayed.com) and Vercel (drjayed.vercel.app) live production servers.",
+    "Web Overhaul (2026-06-24, Gemini=조감독): Redesigned the vowel keyboard layout into a circular D-pad structure to match the consonant D-pad's aesthetics, arranging '•', 'ㅡ', 'ㅣ' in a triangular configuration inside a rounded cockpit panel, and deployed the updated site live.",
+    "Web Overhaul (2026-06-24, Gemini=조감독): Updated the main app header title to dynamically sync with the client-side language toggle (Sori Hangeul / 소리 한글) and tightened the inner spacing of the vowel D-pad to contract the triangle inwardly."
   ],
   "pending_tasks": [
     "Web Admin: provide a Google OAuth Client ID (Google Cloud Console -> Credentials -> OAuth client ID, type Web, authorized JS origins = https://drjayed.com, https://www.drjayed.com, https://drjayed.pages.dev, http://localhost:4321) and set PUBLIC_GOOGLE_CLIENT_ID (web/.env + Vercel/CF env) so the /admin Google sign-in button actually renders. Allowlist already = drjang00@ + drjang000@gmail.com.",

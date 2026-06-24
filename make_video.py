@@ -903,6 +903,21 @@ def main():
                 p_sfx = AudioFileClip(pop_path).with_start(t_curr + 0.15).with_effects([MultiplyVolume(0.55)])
                 audio_elements.append(p_sfx)
                 
+            # Special chiropractic adjust tick SFX
+            # If the scenario is chiropractic-related, add a low volume pop/tick SFX at the adjust moment
+            if "gonstead_sitting" in args.scenario or "ap_thoracic" in args.scenario or "chiropractic" in args.scenario:
+                adjust_tick_path = "assets/audio/pop.wav"
+                if os.path.exists(adjust_tick_path):
+                    # Determine target frame/total frames
+                    if "ap_thoracic" in args.scenario:
+                        rel_pos = 247.0 / 286.0
+                    else:
+                        rel_pos = 236.0 / 274.0
+                    t_adjust = t_curr + dur * rel_pos
+                    # "소리도 약하게 띡 하고 나야 함" -> low volume
+                    tick_sfx = AudioFileClip(adjust_tick_path).with_start(t_adjust).with_effects([MultiplyVolume(0.18)])
+                    audio_elements.append(tick_sfx)
+                
             t_curr += dur
             
         if audio_elements:
