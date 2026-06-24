@@ -3372,10 +3372,10 @@ const tr = t(lang);
       displayEl.classList.remove('pop');
     }, 150);
 
-    // AI 에이전트 마이크 버튼 제어 (EN 모드일 때는 항상 활성화)
+    // AI 에이전트 마이크 버튼은 항상 활성화 (타겟 없을 시 클릭하면 안내 문구 노출)
     const micBtn = document.getElementById('btn-mic') as HTMLButtonElement;
     if (micBtn) {
-      micBtn.disabled = (state.langMode === 'ko' && !state.currentSyllable && !state.word);
+      micBtn.disabled = false;
     }
 
     // 발음 설명 실시간 체크
@@ -5141,10 +5141,10 @@ const tr = t(lang);
           } else {
             targetText = state.word;
           }
-          // 한국어 발음 연습인데 타겟 텍스트가 없으면 녹음 미작동 및 문구 노출
+          // 한국어 발음 연습인데 타겟 텍스트가 없으면 녹음 미작동 및 친절한 안내 문구 노출
           if (!targetText) {
             if (coachBubble) {
-              coachBubble.textContent = "연습할 자모음이나 단어를 먼저 선택해 주세요!";
+              coachBubble.textContent = "연습할 자모음이나 단어를 먼저 선택해 주세요! (Please select a letter or word first!)";
             }
             return;
           }
@@ -5373,7 +5373,7 @@ const tr = t(lang);
     }
     const micBtn = document.getElementById('btn-mic') as HTMLButtonElement;
     if (micBtn) {
-      micBtn.disabled = (state.langMode === 'ko' && !state.currentSyllable && !state.word);
+      micBtn.disabled = false;
     }
 
     // 8. 상방 모드 스위처 버튼 번역
