@@ -4281,104 +4281,7 @@ const tr = t(lang);
     };
   }
 
-  // SpeechRecognition 싱글톤 및 수명 주기 초기화
-  if (SR) {
-    try {
-      recognizer = new SR();
-      recognizer.interimResults = false;
-      recognizer.maxAlternatives = 1;
-      recognizer.continuous = false;
-
-      recognizer.onstart = () => {
-        isRecording = true;
-        const micBtn = document.getElementById('btn-mic') as HTMLButtonElement;
-        const coachBubble = document.getElementById('coach-bubble');
-        const micIcon = micBtn?.querySelector('.mic-icon');
-        const micText = document.getElementById('mic-text');
-
-        if (micBtn) micBtn.classList.add('recording');
-        if (micIcon) micIcon.textContent = '🛑';
-        if (micText) micText.textContent = 'Listening...';
-        
-        if (coachBubble) {
-          if (state.langMode === 'en') {
-            coachBubble.textContent = "영어로 말씀해 보세요... (Speak in English...)";
-          } else {
-            coachBubble.textContent = `"${currentTargetText}" 발음을 또박또박 말씀해 보세요...`;
-          }
-        }
-      };
-
-      recognizer.onresult = (e: any) => {
-        const heard = e.results[0][0].transcript.trim();
-        const coachBubble = document.getElementById('coach-bubble');
-        
-        if (state.langMode === 'en') {
-          state.english = heard;
-          updateWordDisplay();
-          translateSentence(heard);
-        } else {
-          const evaluationTarget = currentTargetText || state.currentSyllable || state.word || '';
-          const diagnosis = diagnosePronunciation(heard, evaluationTarget);
-          if (diagnosis.score >= 90) {
-            state.combo++;
-          } else {
-            state.combo = 0;
-          }
-
-          if (coachBubble) {
-            coachBubble.innerHTML = `
-              <div class="diagnosis-container" style="display: flex; flex-direction: column; gap: 8px; text-align: left; font-size: 14px; color: #fff;">
-                <div style="padding-bottom: 4px;">
-                  <div style="font-weight: 600; color: #4ade80; margin-bottom: 2px;">[KO] 한국어 피드백</div>
-                  <div>${diagnosis.koFeedback}</div>
-                </div>
-                <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 6px;">
-                  <div style="font-weight: 600; color: #60a5fa; margin-bottom: 2px;">[EN] English Feedback</div>
-                  <div>${diagnosis.enFeedback}</div>
-                </div>
-              </div>
-            `;
-          }
-          
-          // 정답 재생 (단음절이면 speakKo, 문장이면 playSentence 호출)
-          setTimeout(() => {
-            if (evaluationTarget.length === 1) {
-              speakKo(evaluationTarget);
-            } else {
-              playSentence(evaluationTarget);
-            }
-          }, 500);
-        }
-      };
-
-      recognizer.onerror = (e: any) => {
-        console.error('SpeechRecognition error:', e);
-        const coachBubble = document.getElementById('coach-bubble');
-        if (coachBubble) {
-          coachBubble.textContent = `다시 말해볼까요? (에러: ${e.error})`;
-        }
-      };
-
-      recognizer.onend = () => {
-        isRecording = false;
-        const micBtn = document.getElementById('btn-mic') as HTMLButtonElement;
-        const micIcon = micBtn?.querySelector('.mic-icon');
-        const micText = document.getElementById('mic-text');
-
-        if (micBtn) micBtn.classList.remove('recording');
-        if (micIcon) micIcon.textContent = '🎤';
-        if (micText) micText.textContent = 'Coach';
-        
-        // BGM 음량 복구
-        if (bgmGain && isBgmPlaying) {
-          bgmGain.gain.setValueAtTime(0.15, audioCtx!.currentTime);
-        }
-      };
-    } catch (err) {
-      console.error("SpeechRecognition initialization failed:", err);
-    }
-  }
+  // SpeechRecognition 싱글톤 및 수명 주기 초기화 (iOS/WebKit 호환성을 위해 사용자 제스처 시점에 지연 생성)
 
   // ── DOM 이벤트 바인딩 ──
   // 콕핏 모드 스위처 바인딩
@@ -5069,12 +4972,111 @@ const tr = t(lang);
       micBtn.style.display = 'none';
       coachBubble.innerHTML += '<br><small style="color:hsl(350, 100%, 65%);">(음성 인식이 지원되지 않는 브라우저입니다. Chrome을 사용해 주세요.)</small>';
     } else {
-      micBtn.addEventListener('click', async () => {
+      micBtn.addEventListener('click', () => {
+        if (!recognizer && SR) {
+          try {
+            recognizer = new SR();
+            recognizer.interimResults = false;
+            recognizer.maxAlternatives = 1;
+            recognizer.continuous = false;
+
+            recognizer.onstart = () => {
+              isRecording = true;
+              const micBtn = document.getElementById('btn-mic') as HTMLButtonElement;
+              const coachBubble = document.getElementById('coach-bubble');
+              const micIcon = micBtn?.querySelector('.mic-icon');
+              const micText = document.getElementById('mic-text');
+
+              if (micBtn) micBtn.classList.add('recording');
+              if (micIcon) micIcon.textContent = '🛑';
+              if (micText) micText.textContent = 'Listening...';
+              
+              if (coachBubble) {
+                if (state.langMode === 'en') {
+                  coachBubble.textContent = "영어로 말씀해 보세요... (Speak in English...)";
+                } else {
+                  coachBubble.textContent = `"${currentTargetText}" 발음을 또박또박 말씀해 보세요...`;
+                }
+              }
+            };
+
+            recognizer.onresult = (e: any) => {
+              const heard = e.results[0][0].transcript.trim();
+              const coachBubble = document.getElementById('coach-bubble');
+              
+              if (state.langMode === 'en') {
+                state.english = heard;
+                updateWordDisplay();
+                translateSentence(heard);
+              } else {
+                const evaluationTarget = currentTargetText || state.currentSyllable || state.word || '';
+                const diagnosis = diagnosePronunciation(heard, evaluationTarget);
+                if (diagnosis.score >= 90) {
+                  state.combo++;
+                } else {
+                  state.combo = 0;
+                }
+
+                if (coachBubble) {
+                  coachBubble.innerHTML = `
+                    <div class="diagnosis-container" style="display: flex; flex-direction: column; gap: 8px; text-align: left; font-size: 14px; color: #fff;">
+                      <div style="padding-bottom: 4px;">
+                        <div style="font-weight: 600; color: #4ade80; margin-bottom: 2px;">[KO] 한국어 피드백</div>
+                        <div>${diagnosis.koFeedback}</div>
+                      </div>
+                      <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 6px;">
+                        <div style="font-weight: 600; color: #60a5fa; margin-bottom: 2px;">[EN] English Feedback</div>
+                        <div>${diagnosis.enFeedback}</div>
+                      </div>
+                    </div>
+                  `;
+                }
+                
+                // 정답 재생 (단음절이면 speakKo, 문장이면 playSentence 호출)
+                setTimeout(() => {
+                  if (evaluationTarget.length === 1) {
+                    speakKo(evaluationTarget);
+                  } else {
+                    playSentence(evaluationTarget);
+                  }
+                }, 500);
+              }
+            };
+
+            recognizer.onerror = (e: any) => {
+              console.error('SpeechRecognition error:', e);
+              const coachBubble = document.getElementById('coach-bubble');
+              if (coachBubble) {
+                coachBubble.textContent = `다시 말해볼까요? (에러: ${e.error})`;
+              }
+            };
+
+            recognizer.onend = () => {
+              isRecording = false;
+              const micBtn = document.getElementById('btn-mic') as HTMLButtonElement;
+              const micIcon = micBtn?.querySelector('.mic-icon');
+              const micText = document.getElementById('mic-text');
+
+              if (micBtn) micBtn.classList.remove('recording');
+              if (micIcon) micIcon.textContent = '🎤';
+              if (micText) micText.textContent = 'Coach';
+              
+              // BGM 음량 복구
+              if (bgmGain && isBgmPlaying) {
+                bgmGain.gain.setValueAtTime(0.15, audioCtx!.currentTime);
+              }
+            };
+          } catch (err) {
+            console.error("SpeechRecognition lazy initialization failed:", err);
+          }
+        }
+
         if (!recognizer) {
           console.warn("Speech recognition is not initialized or supported.");
           return;
         }
-        await ensureAudio();
+
+        ensureAudio().catch(err => console.warn("AudioContext resume failed:", err));
 
         if (isRecording) {
           recognizer.stop();
