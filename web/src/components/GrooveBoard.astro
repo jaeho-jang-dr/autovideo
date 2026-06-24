@@ -4170,28 +4170,7 @@ const tr = t(lang);
     scheduleCommit();
   }
 
-  // 키보드 자소 패드 팝업 이벤트 바인딩 (Hover 및 터치 롱프레스 지원)
-  const padWrappers = document.querySelectorAll('.pad-wrapper');
-  padWrappers.forEach(wrapper => {
-    const pad = wrapper.querySelector('.pad');
-    const popup = wrapper.querySelector('.pad-popup');
-    if (!pad || !popup) return;
-
-    // 데스크톱 마우스 기기에서만 마우스 진입/리브 시 임시 활성화
-    wrapper.addEventListener('mouseenter', (e) => {
-      if ((e as MouseEvent).sourceCapabilities?.firesTouchEvents) return;
-      document.querySelectorAll('.pad-popup').forEach(p => p.classList.remove('active'));
-      popup.classList.add('active');
-    });
-
-    wrapper.addEventListener('mouseleave', (e) => {
-      if ((e as MouseEvent).sourceCapabilities?.firesTouchEvents) return;
-      // 롱프레스로 강제 활성화된 경우 리브 시 닫지 않음
-      if (!pad.getAttribute('data-long-pressed')) {
-        popup.classList.remove('active');
-      }
-    });
-  });
+  // 팝업은 길게 눌렀을 때만 활성화 (호버 리스너 제거 완료)
 
   // 팝업 내부 개별 자소 아이템 클릭 시 처리
   const popupItems = document.querySelectorAll('.popup-item');
@@ -4272,6 +4251,10 @@ const tr = t(lang);
 
     // Click: 입력 및 더블 탭 순환 처리
     btn.addEventListener('click', async (e) => {
+      // 일반 클릭 시에는 팝업이 활성화되지 않도록 보장하며, 혹시 롱프레스로 열려 있던 팝업이 있다면 즉시 닫음
+      document.querySelectorAll('.pad-popup').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.pad').forEach(p => p.removeAttribute('data-long-pressed'));
+
       // 롱프레스로 팝업이 고정 열기 처리된 경우, 이번 손떼기 클릭은 입력하지 않고 리턴
       if (btn.getAttribute('data-long-pressed') === 'true' || isLongPressed) {
         isLongPressed = false;
