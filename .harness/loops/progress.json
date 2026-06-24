@@ -115,7 +115,11 @@
     "Chiropractic Animation (2026-06-24, Gemini=조감독): Compiled the final 4K upscaled video gonstead_sitting.mp4 with speed-matched TTS narration, soft CC subtitles, annotation boxes, and channel logos, then successfully backed up to Google Drive.",
     "Web Overhaul (2026-06-24, Gemini=조감독): Standardized app title and menu labels from legacy '한글 그루브 박스 / 그루브' to '소리 한글' (with space) globally, built Astro static pages, and successfully deployed to Cloudflare Pages (drjayed.com) and Vercel (drjayed.vercel.app) live production servers.",
     "Web Overhaul (2026-06-24, Gemini=조감독): Redesigned the vowel keyboard layout into a circular D-pad structure to match the consonant D-pad's aesthetics, arranging '•', 'ㅡ', 'ㅣ' in a triangular configuration inside a rounded cockpit panel, and deployed the updated site live.",
-    "Web Overhaul (2026-06-24, Gemini=조감독): Updated the main app header title to dynamically sync with the client-side language toggle (Sori Hangeul / 소리 한글) and tightened the inner spacing of the vowel D-pad to contract the triangle inwardly."
+    "Web Overhaul (2026-06-24, Gemini=조감독): Updated the main app header title to dynamically sync with the client-side language toggle (Sori Hangeul / 소리 한글) and tightened the inner spacing of the vowel D-pad to contract the triangle inwardly.",
+    "Web Overhaul (2026-06-24, Gemini=조감독): Corrected Below-Ah keycap ellipse bug by setting .pad-wrapper display flex and forcing 1:1 circular aspect ratio on .pad buttons, and reduced center dot size to 9px.",
+    "Web Overhaul (2026-06-24, Gemini=조감독): Resolved '전체 읽기' (Speak Sentence) mute bug on static hosting by falling back to browser-native SpeechSynthesis at volume 1.0, bypassing 403 Forbidden CORS limits on Google Translate TTS.",
+    "Web Overhaul (2026-06-24, Gemini=조감독): Enabled '옻' sound validation support by adding it to the extraSyllables hasAudio allowed set.",
+    "Web Overhaul (2026-06-24, Gemini=조감독): Enlarged all vowel keycaps by exactly 10% compared to consonants (max-width: 185px, padding: 8px) and adjusted triangle compression offsets to 16px."
   ],
   "pending_tasks": [
     "Web Admin: provide a Google OAuth Client ID (Google Cloud Console -> Credentials -> OAuth client ID, type Web, authorized JS origins = https://drjayed.com, https://www.drjayed.com, https://drjayed.pages.dev, http://localhost:4321) and set PUBLIC_GOOGLE_CLIENT_ID (web/.env + Vercel/CF env) so the /admin Google sign-in button actually renders. Allowlist already = drjang00@ + drjang000@gmail.com.",
