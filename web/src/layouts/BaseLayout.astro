@@ -65,7 +65,7 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
             <a href={lang === 'ko' ? '/ko/curriculum/' : '/curriculum/'} class={active === 'curriculum' ? 'active' : ''}>{tr.nav_curriculum}</a>
             <a href={lang === 'ko' ? '/ko/grammar/' : '/grammar/'} class={active === 'grammar' ? 'active' : ''}>{tr.nav_grammar}</a>
             <a href={lang === 'ko' ? '/ko/groove/' : '/groove/'} class={active === 'groove' && !Astro.url.searchParams.has('play') ? 'active' : ''}>{tr.nav_groove}</a>
-            <a href={lang === 'ko' ? '/ko/groove/?play=game' : '/groove/?play=game'} class={Astro.url.searchParams.get('play') === 'game' ? 'active' : ''}>🎮 {lang === 'ko' ? '한글 게임' : 'Game'}</a>
+            <a href="javascript:void(0)" class="coming-soon-game" data-lang={lang}>🎮 {lang === 'ko' ? '한글 게임 (준비중)' : 'Game (Coming Soon)'}</a>
             <span class="lang-switch" role="group" aria-label="language">
               <a href={koUrl} class={lang === 'ko' ? 'active' : ''} hreflang="ko">KO</a>
               <a href={enUrl} class={lang === 'en' ? 'active' : ''} hreflang="en">EN</a>
@@ -142,6 +142,18 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
           menuToggle.classList.toggle('open');
         });
       }
+
+      // 한글 게임 준비 중 팝업 알림 처리
+      document.querySelectorAll('.coming-soon-game').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          const lang = el.getAttribute('data-lang');
+          const msg = lang === 'ko'
+            ? "제작 중인 기능입니다. (Coming Soon)"
+            : "Under construction. (Coming Soon)";
+          alert(msg);
+        });
+      });
     </script>
 
     <style is:global>

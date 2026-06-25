@@ -35,7 +35,7 @@ const tr = t(lang);
       <button class="switcher-btn active" data-mode="launchpad">🎹 {lang === 'ko' ? '런치' : 'Pad'}</button>
       <button class="switcher-btn" data-mode="translator">🌐 {lang === 'ko' ? '번역' : 'Trans'}</button>
       <button class="switcher-btn" data-mode="phrases">📖 {lang === 'ko' ? '상황' : 'Phrase'}</button>
-      <button class="switcher-btn" data-mode="game">🎮 {lang === 'ko' ? '게임' : 'Game'}</button>
+      <button class="switcher-btn" data-mode="game" style="opacity: 0.65;">🎮 {lang === 'ko' ? '게임 (준비중)' : 'Game (Soon)'}</button>
     </div>
 
     <!-- 중앙 메인 HUD 모니터 (활성화된 모드에 따라 내장 콘텐츠 스위칭) -->
@@ -4797,6 +4797,12 @@ const tr = t(lang);
     btn.addEventListener('click', (e) => {
       const target = e.currentTarget as HTMLButtonElement;
       const mode = target.getAttribute('data-mode') || 'launchpad';
+
+      if (mode === 'game') {
+        const isKo = window.location.pathname.includes('/ko/');
+        alert(isKo ? '제작 중인 기능입니다. (Coming Soon)' : 'Under construction. (Coming Soon)');
+        return;
+      }
 
       // 1. 스위처 버튼 활성화 스타일
       switcherBtns.forEach(b => b.classList.remove('active'));
