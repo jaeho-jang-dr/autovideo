@@ -1,0 +1,1748 @@
+[
+  {
+    "id": 1,
+    "name_kr": "지은_기상",
+    "name_en": "Jieun_Waking",
+    "type": "character",
+    "file_path": "character_waking_up.png",
+    "url": "/images/characters/character_waking_up.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform waking up and stretching in bed, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text, no signatures"
+  },
+  {
+    "id": 2,
+    "name_kr": "지은_준비",
+    "name_en": "Jieun_Packing",
+    "type": "character",
+    "file_path": "character_packing.png",
+    "url": "/images/characters/character_packing.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform placing books into a backpack on a study desk, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 3,
+    "name_kr": "지은_세수",
+    "name_en": "Jieun_Washing",
+    "type": "character",
+    "file_path": "character_washing.png",
+    "url": "/images/characters/character_washing.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair washing face at a bathroom sink, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 4,
+    "name_kr": "지은_식사",
+    "name_en": "Jieun_Eating",
+    "type": "character",
+    "file_path": "character_eating.png",
+    "url": "/images/characters/character_eating.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform eating breakfast at a dining table, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 5,
+    "name_kr": "지은_등교",
+    "name_en": "Jieun_Walking",
+    "type": "character",
+    "file_path": "character_walking.png",
+    "url": "/images/characters/character_walking.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform walking out of a door towards a street, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 26,
+    "name_kr": "지은_취침",
+    "name_en": "Jieun_Sleeping",
+    "type": "character",
+    "file_path": "character_sleeping.png",
+    "url": "/images/characters/character_sleeping.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair lying in bed sleeping, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 27,
+    "name_kr": "지은_양치",
+    "name_en": "Jieun_BrushingTeeth",
+    "type": "character",
+    "file_path": "character_brushing_teeth.png",
+    "url": "/images/characters/character_brushing_teeth.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair brushing teeth with a toothbrush, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 28,
+    "name_kr": "지은_공부",
+    "name_en": "Jieun_Studying",
+    "type": "character",
+    "file_path": "character_studying.png",
+    "url": "/images/characters/character_studying.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform sitting at a desk studying and writing, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 29,
+    "name_kr": "지은_독서",
+    "name_en": "Jieun_Reading",
+    "type": "character",
+    "file_path": "character_reading.png",
+    "url": "/images/characters/character_reading.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair holding and reading a book, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 30,
+    "name_kr": "지은_휴식",
+    "name_en": "Jieun_Sitting",
+    "type": "character",
+    "file_path": "character_sitting.png",
+    "url": "/images/characters/character_sitting.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform sitting on a chair resting, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 31,
+    "name_kr": "지은_달리기",
+    "name_en": "Jieun_Running",
+    "type": "character",
+    "file_path": "character_running.png",
+    "url": "/images/characters/character_running.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform running in a hurry, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 32,
+    "name_kr": "지은_지시",
+    "name_en": "Jieun_Pointing",
+    "type": "character",
+    "file_path": "character_pointing.png",
+    "url": "/images/characters/character_pointing.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair pointing forward with her hand, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 33,
+    "name_kr": "지은_환호",
+    "name_en": "Jieun_Cheering",
+    "type": "character",
+    "file_path": "character_cheering.png",
+    "url": "/images/characters/character_cheering.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform cheering with arms raised in joy, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 34,
+    "name_kr": "지은_인사",
+    "name_en": "Jieun_Bowing",
+    "type": "character",
+    "file_path": "character_bowing.png",
+    "url": "/images/characters/character_bowing.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform bowing politely, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 35,
+    "name_kr": "지은_생각",
+    "name_en": "Jieun_Thinking",
+    "type": "character",
+    "file_path": "character_thinking.png",
+    "url": "/images/characters/character_thinking.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair thinking with a hand on her chin, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 36,
+    "name_kr": "지은_질문",
+    "name_en": "Jieun_RaisingHand",
+    "type": "character",
+    "file_path": "character_raising_hand.png",
+    "url": "/images/characters/character_raising_hand.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform raising her hand to speak, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 37,
+    "name_kr": "지은_그리기",
+    "name_en": "Jieun_Drawing",
+    "type": "character",
+    "file_path": "character_drawing.png",
+    "url": "/images/characters/character_drawing.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair drawing on a sketchbook, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 38,
+    "name_kr": "지은_음용",
+    "name_en": "Jieun_Drinking",
+    "type": "character",
+    "file_path": "character_drinking.png",
+    "url": "/images/characters/character_drinking.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair holding a cup and drinking water, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 39,
+    "name_kr": "지은_청소",
+    "name_en": "Jieun_Cleaning",
+    "type": "character",
+    "file_path": "character_cleaning.png",
+    "url": "/images/characters/character_cleaning.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair holding a broom sweeping the floor, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 40,
+    "name_kr": "지은_개문",
+    "name_en": "Jieun_OpeningDoor",
+    "type": "character",
+    "file_path": "character_opening_door.png",
+    "url": "/images/characters/character_opening_door.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair holding a door handle to open it, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 41,
+    "name_kr": "지은_신발신기",
+    "name_en": "Jieun_Shoes",
+    "type": "character",
+    "file_path": "character_shoes.png",
+    "url": "/images/characters/character_shoes.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair bending down to put on sneakers, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 42,
+    "name_kr": "지은_대기",
+    "name_en": "Jieun_Waiting",
+    "type": "character",
+    "file_path": "character_waiting.png",
+    "url": "/images/characters/character_waiting.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform waiting at a bus stop, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 43,
+    "name_kr": "지은_작별",
+    "name_en": "Jieun_Waving",
+    "type": "character",
+    "file_path": "character_waving.png",
+    "url": "/images/characters/character_waving.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform waving her hand to say goodbye, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 44,
+    "name_kr": "지은_박수",
+    "name_en": "Jieun_Clapping",
+    "type": "character",
+    "file_path": "character_clapping.png",
+    "url": "/images/characters/character_clapping.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair clapping hands happily, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 45,
+    "name_kr": "지은_도약",
+    "name_en": "Jieun_Jumping",
+    "type": "character",
+    "file_path": "character_jumping.png",
+    "url": "/images/characters/character_jumping.png",
+    "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform jumping in the air in excitement, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
+  },
+  {
+    "id": 46,
+    "name_kr": "지은_베이스_정면",
+    "name_en": "Jieun_Base_Front",
+    "type": "character",
+    "file_path": "jieun_base_front.png",
+    "url": "/images/characters/jieun_base_front.png",
+    "flow_prompt": "Minimalist 2D line art character sheet of a Korean schoolgirl named Jieun standing straight facing the camera in a clear front view, long brown hair filled with warm brown color as her key feature, friendly smile, simple navy and white school sailor uniform with a skirt, thick clean black outlines, clean whiteboard marker drawing style, full body head to toe, on a solid flat light beige background (#F5F5F0), no text, no signatures"
+  },
+  {
+    "id": 47,
+    "name_kr": "지은_베이스_측면",
+    "name_en": "Jieun_Base_Side",
+    "type": "character",
+    "file_path": "jieun_base_side.png",
+    "url": "/images/characters/jieun_base_side.png",
+    "flow_prompt": "Minimalist 2D line art of ONE single Korean schoolgirl named Jieun, one centered full-body figure only (no extra figures, no character sheet), standing straight in a clear left-facing side profile view, long brown hair filled with warm brown color as her key feature, navy and white school sailor uniform with a skirt, thick clean black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text, no signatures"
+  },
+  {
+    "id": 48,
+    "name_kr": "지은_베이스_뒷면",
+    "name_en": "Jieun_Base_Back",
+    "type": "character",
+    "file_path": "jieun_base_back.png",
+    "url": "/images/characters/jieun_base_back.png",
+    "flow_prompt": "Minimalist 2D line art of ONE single Korean schoolgirl named Jieun, one centered full-body figure only (no extra figures, no character sheet), standing straight facing fully away from the camera in a clear back view seen from directly behind, showing the back of her long brown hair filled with warm brown color, navy and white school sailor uniform with a skirt, thick clean black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text, no signatures"
+  },
+  {
+    "id": 49,
+    "name_kr": "지은_앉음_정면",
+    "name_en": "Jieun_Sit_Front",
+    "type": "character",
+    "file_path": "jieun_sitting_front.png",
+    "url": "/images/characters/jieun_sitting_front.png",
+    "flow_prompt": "Using the uploaded reference image, keep the EXACT same Korean schoolgirl character — same brown long hair, same face, same navy and white sailor school uniform — but now draw her sitting on a simple wooden chair, front view facing the camera, one single full-body figure, minimalist 2D line art, thick clean black outlines, clean whiteboard marker style, on a solid flat light beige background (#F5F5F0), no text, no signatures"
+  },
+  {
+    "id": 50,
+    "name_kr": "지은_앉음_측면",
+    "name_en": "Jieun_Sit_Side",
+    "type": "character",
+    "file_path": "jieun_sitting_side.png",
+    "url": "/images/characters/jieun_sitting_side.png",
+    "flow_prompt": "Using the uploaded reference image, keep the EXACT same Korean schoolgirl character — same brown long hair, same face, same navy and white sailor school uniform — but now draw her sitting on a simple wooden chair, left side profile view, one single full-body figure, minimalist 2D line art, thick clean black outlines, clean whiteboard marker style, on a solid flat light beige background (#F5F5F0), no text, no signatures"
+  },
+  {
+    "id": 51,
+    "name_kr": "지은_앉음_뒷면",
+    "name_en": "Jieun_Sit_Back",
+    "type": "character",
+    "file_path": "jieun_sitting_back.png",
+    "url": "/images/characters/jieun_sitting_back.png",
+    "flow_prompt": "Using the uploaded reference image, keep the EXACT same Korean schoolgirl character — same brown long hair, same navy and white sailor school uniform — but now draw her sitting on a simple wooden chair seen from directly behind, back view, one single full-body figure, minimalist 2D line art, thick clean black outlines, clean whiteboard marker style, on a solid flat light beige background (#F5F5F0), no text, no signatures"
+  },
+  {
+    "id": 52,
+    "name_kr": "인준_베이스_정면",
+    "name_en": "Injun_Base_Front",
+    "type": "character",
+    "file_path": "injun_base_front.png",
+    "url": "/images/characters/injun_base_front.png",
+    "flow_prompt": "Minimalist 2D line art of ONE single Korean boy named Injun, one centered full-body figure only (no extra figures, no character sheet), standing straight facing the camera in a clear front view, short neat black hair as his key feature, simple casual short-sleeve t-shirt, pants and sneakers on his feet, friendly smile, thick clean black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text, no signatures"
+  },
+  {
+    "id": 53,
+    "name_kr": "인준_베이스_측면",
+    "name_en": "Injun_Base_Side",
+    "type": "character",
+    "file_path": "injun_base_side.png",
+    "url": "/images/characters/injun_base_side.png",
+    "flow_prompt": "Minimalist 2D line art of ONE single Korean boy named Injun, one centered full-body figure only (no extra figures, no character sheet), standing straight in a clear left-facing side profile view, short neat black hair as his key feature, simple casual short-sleeve t-shirt and pants, thick clean black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text, no signatures"
+  },
+  {
+    "id": 54,
+    "name_kr": "인준_베이스_뒷면",
+    "name_en": "Injun_Base_Back",
+    "type": "character",
+    "file_path": "injun_base_back.png",
+    "url": "/images/characters/injun_base_back.png",
+    "flow_prompt": "Minimalist 2D line art of ONE single Korean boy named Injun, one centered full-body figure only (no extra figures, no character sheet), standing straight facing fully away from the camera in a clear back view seen from directly behind, showing the back of his short neat black hair, simple casual short-sleeve t-shirt, pants and sneakers on his feet, thick clean black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text, no signatures"
+  },
+  {
+    "id": 55,
+    "name_kr": "지은_점프",
+    "name_en": "jieun_jumping",
+    "type": "character",
+    "file_path": "jieun_jumping.png",
+    "url": "/images/characters/jieun_jumping.png",
+    "flow_prompt": "doing an energetic STAR JUMP high in mid-air: both arms stretched out wide, both legs spread wide apart, both feet off the ground, dynamic symmetric star-shaped jumping pose, front view"
+  },
+  {
+    "id": 57,
+    "name_kr": "지은_평상복_정면",
+    "name_en": "jieun_casual_front",
+    "type": "character",
+    "file_path": "jieun_casual_front.png",
+    "url": "/images/characters/jieun_casual_front.png",
+    "flow_prompt": "standing, casual clothes (t-shirt, pants, sneakers), front view"
+  },
+  {
+    "id": 58,
+    "name_kr": "지은_평상복_측면",
+    "name_en": "jieun_casual_side",
+    "type": "character",
+    "file_path": "jieun_casual_side.png",
+    "url": "/images/characters/jieun_casual_side.png",
+    "flow_prompt": "standing, casual clothes (t-shirt, pants, sneakers), left side profile view"
+  },
+  {
+    "id": 59,
+    "name_kr": "지은_평상복_뒷모습",
+    "name_en": "jieun_casual_back",
+    "type": "character",
+    "file_path": "jieun_casual_back.png",
+    "url": "/images/characters/jieun_casual_back.png",
+    "flow_prompt": "standing, casual clothes (t-shirt, pants, sneakers), back view"
+  },
+  {
+    "id": 145,
+    "name_kr": "지은_기상",
+    "name_en": "jieun_waking_up",
+    "type": "character",
+    "file_path": "jieun_waking_up.png",
+    "url": "/images/characters/jieun_waking_up.png",
+    "flow_prompt": "waking up and stretching both arms wide while sitting up in a bed, sleepy happy face, front view"
+  },
+  {
+    "id": 146,
+    "name_kr": "지은_준비",
+    "name_en": "jieun_packing",
+    "type": "character",
+    "file_path": "jieun_packing.png",
+    "url": "/images/characters/jieun_packing.png",
+    "flow_prompt": "standing and packing school books into a school backpack on a desk, front view"
+  },
+  {
+    "id": 147,
+    "name_kr": "지은_세수",
+    "name_en": "jieun_washing_face",
+    "type": "character",
+    "file_path": "jieun_washing_face.png",
+    "url": "/images/characters/jieun_washing_face.png",
+    "flow_prompt": "leaning over a bathroom sink washing her face with both hands, front view"
+  },
+  {
+    "id": 148,
+    "name_kr": "지은_식사",
+    "name_en": "jieun_eating",
+    "type": "character",
+    "file_path": "jieun_eating.png",
+    "url": "/images/characters/jieun_eating.png",
+    "flow_prompt": "sitting at a dining table eating a meal, holding chopsticks, front view"
+  },
+  {
+    "id": 149,
+    "name_kr": "지은_걷기",
+    "name_en": "jieun_walking",
+    "type": "character",
+    "file_path": "jieun_walking.png",
+    "url": "/images/characters/jieun_walking.png",
+    "flow_prompt": "walking briskly, mid-stride with one foot forward, full-body side profile view"
+  },
+  {
+    "id": 150,
+    "name_kr": "지은_취침",
+    "name_en": "jieun_sleeping",
+    "type": "character",
+    "file_path": "jieun_sleeping.png",
+    "url": "/images/characters/jieun_sleeping.png",
+    "flow_prompt": "lying down on a bed sleeping peacefully with eyes closed, side view"
+  },
+  {
+    "id": 151,
+    "name_kr": "지은_양치",
+    "name_en": "jieun_brushing_teeth",
+    "type": "character",
+    "file_path": "jieun_brushing_teeth.png",
+    "url": "/images/characters/jieun_brushing_teeth.png",
+    "flow_prompt": "standing and brushing her teeth, holding a toothbrush near her mouth, front view"
+  },
+  {
+    "id": 152,
+    "name_kr": "지은_공부",
+    "name_en": "jieun_studying",
+    "type": "character",
+    "file_path": "jieun_studying.png",
+    "url": "/images/characters/jieun_studying.png",
+    "flow_prompt": "sitting at a desk studying, writing in a notebook with a pencil, front view"
+  },
+  {
+    "id": 153,
+    "name_kr": "지은_독서",
+    "name_en": "jieun_reading",
+    "type": "character",
+    "file_path": "jieun_reading.png",
+    "url": "/images/characters/jieun_reading.png",
+    "flow_prompt": "standing and reading an open book held in both hands, front view"
+  },
+  {
+    "id": 154,
+    "name_kr": "지은_휴식",
+    "name_en": "jieun_sitting",
+    "type": "character",
+    "file_path": "jieun_sitting.png",
+    "url": "/images/characters/jieun_sitting.png",
+    "flow_prompt": "sitting calmly on a simple wooden chair, hands on her lap, front view"
+  },
+  {
+    "id": 155,
+    "name_kr": "지은_달리기",
+    "name_en": "jieun_running",
+    "type": "character",
+    "file_path": "jieun_running.png",
+    "url": "/images/characters/jieun_running.png",
+    "flow_prompt": "running fast, both legs in a dynamic mid-stride leap, full-body side profile view"
+  },
+  {
+    "id": 156,
+    "name_kr": "지은_지시",
+    "name_en": "jieun_pointing",
+    "type": "character",
+    "file_path": "jieun_pointing.png",
+    "url": "/images/characters/jieun_pointing.png",
+    "flow_prompt": "standing and pointing forward with one arm fully extended, front view"
+  },
+  {
+    "id": 157,
+    "name_kr": "지은_환호",
+    "name_en": "jieun_cheering",
+    "type": "character",
+    "file_path": "jieun_cheering.png",
+    "url": "/images/characters/jieun_cheering.png",
+    "flow_prompt": "cheering joyfully with both fists raised high above her head, front view"
+  },
+  {
+    "id": 158,
+    "name_kr": "지은_인사",
+    "name_en": "jieun_bowing",
+    "type": "character",
+    "file_path": "jieun_bowing.png",
+    "url": "/images/characters/jieun_bowing.png",
+    "flow_prompt": "bowing politely at the waist with both hands together in front, side-front view"
+  },
+  {
+    "id": 159,
+    "name_kr": "지은_생각",
+    "name_en": "jieun_thinking",
+    "type": "character",
+    "file_path": "jieun_thinking.png",
+    "url": "/images/characters/jieun_thinking.png",
+    "flow_prompt": "standing thinking with one hand resting on her chin, head slightly tilted, front view"
+  },
+  {
+    "id": 160,
+    "name_kr": "지은_질문",
+    "name_en": "jieun_raising_hand",
+    "type": "character",
+    "file_path": "jieun_raising_hand.png",
+    "url": "/images/characters/jieun_raising_hand.png",
+    "flow_prompt": "standing and raising one hand high to answer a question, front view"
+  },
+  {
+    "id": 161,
+    "name_kr": "지은_그리기",
+    "name_en": "jieun_drawing",
+    "type": "character",
+    "file_path": "jieun_drawing.png",
+    "url": "/images/characters/jieun_drawing.png",
+    "flow_prompt": "standing and drawing a picture on a sketchbook with a pencil, front view"
+  },
+  {
+    "id": 162,
+    "name_kr": "지은_음용",
+    "name_en": "jieun_drinking",
+    "type": "character",
+    "file_path": "jieun_drinking.png",
+    "url": "/images/characters/jieun_drinking.png",
+    "flow_prompt": "standing and drinking water from a cup held in one hand, front view"
+  },
+  {
+    "id": 163,
+    "name_kr": "지은_청소",
+    "name_en": "jieun_cleaning",
+    "type": "character",
+    "file_path": "jieun_cleaning.png",
+    "url": "/images/characters/jieun_cleaning.png",
+    "flow_prompt": "sweeping the floor with a broom held in both hands, front view"
+  },
+  {
+    "id": 164,
+    "name_kr": "지은_개문",
+    "name_en": "jieun_opening_door",
+    "type": "character",
+    "file_path": "jieun_opening_door.png",
+    "url": "/images/characters/jieun_opening_door.png",
+    "flow_prompt": "opening a door with one hand on the door handle, side-front view"
+  },
+  {
+    "id": 165,
+    "name_kr": "지은_신발신기",
+    "name_en": "jieun_putting_on_shoes",
+    "type": "character",
+    "file_path": "jieun_putting_on_shoes.png",
+    "url": "/images/characters/jieun_putting_on_shoes.png",
+    "flow_prompt": "bending down to put on her shoes, front view"
+  },
+  {
+    "id": 166,
+    "name_kr": "지은_대기",
+    "name_en": "jieun_waiting",
+    "type": "character",
+    "file_path": "jieun_waiting.png",
+    "url": "/images/characters/jieun_waiting.png",
+    "flow_prompt": "standing and waiting patiently with both hands clasped in front, front view"
+  },
+  {
+    "id": 167,
+    "name_kr": "지은_작별",
+    "name_en": "jieun_waving",
+    "type": "character",
+    "file_path": "jieun_waving.png",
+    "url": "/images/characters/jieun_waving.png",
+    "flow_prompt": "standing and waving goodbye with one hand raised, big smile, front view"
+  },
+  {
+    "id": 168,
+    "name_kr": "지은_박수",
+    "name_en": "jieun_clapping",
+    "type": "character",
+    "file_path": "jieun_clapping.png",
+    "url": "/images/characters/jieun_clapping.png",
+    "flow_prompt": "standing and clapping both hands together happily, front view"
+  },
+  {
+    "id": 172,
+    "name_kr": "졸라맨_베이스",
+    "name_en": "zollaman_base",
+    "type": "character",
+    "file_path": "zollaman_base.png",
+    "url": "/images/characters/zollaman_base.png",
+    "flow_prompt": "stick-figure man (jjolla-man), short solid-BLACK hair, two dot eyes + tiny mouth, thin single-line neck/torso/arms/legs, standing relaxed front view, pure white background"
+  },
+  {
+    "id": 173,
+    "name_kr": "졸라녀_베이스",
+    "name_en": "zollanyeo_base",
+    "type": "character",
+    "file_path": "zollanyeo_base.png",
+    "url": "/images/characters/zollanyeo_base.png",
+    "flow_prompt": "stick-figure woman (jjolla-nyeo), SHORT small ORANGE hair (little bun, not voluminous), two dot eyes + tiny mouth, thin single-line neck/torso/arms/legs, standing relaxed front view, pure white background"
+  },
+  {
+    "id": 174,
+    "name_kr": "졸라_페어_표준",
+    "name_en": "zolla_pair_base",
+    "type": "character",
+    "file_path": "zolla_pair_base.png",
+    "url": "/images/characters/zolla_pair_base.png",
+    "flow_prompt": "zollaman (left) + zollanyeo (right) standing together as a pair, composited from the original PNGs WITHOUT any AI redraw (no transformation), two stick figures, pure white background"
+  },
+  {
+    "id": 175,
+    "name_kr": "졸라녀_기본",
+    "name_en": "Zollanyeo_Base",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_base.png",
+    "url": "/images/characters/zollanyeo_base.png",
+    "flow_prompt": "Using the uploaded reference image, keep the EXACT same orange short-hair female stickman character named jjolla-nyeo — same minimalist wobbly pen outline body, same orange short hair, relaxed standing pose, loose sketchy hand-drawn black pen line doodle style, on a solid flat pure white background, no text"
+  },
+  {
+    "id": 176,
+    "name_kr": "졸라커플_기본",
+    "name_en": "Zolla_Pair_Base",
+    "type": "character",
+    "file_path": "home_vocab/zolla_pair_base.png",
+    "url": "/images/characters/zolla_pair_base.png",
+    "flow_prompt": "Using the uploaded reference images, draw BOTH jjolla-man (black short-hair stickman) and jjolla-nyeo (orange short-hair stickman) standing side by side as a pair, standing pose, loose sketchy hand-drawn black pen line doodle style, on a solid flat pure white background, no text"
+  },
+  {
+    "id": 177,
+    "name_kr": "zollaman_waking_up",
+    "name_en": "Waking_Up",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_waking_up.png",
+    "url": "/images/characters/zollaman_waking_up.png",
+    "flow_prompt": "waking up and stretching in bed, winking and yawning"
+  },
+  {
+    "id": 178,
+    "name_kr": "zollaman_packing",
+    "name_en": "Packing",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_packing.png",
+    "url": "/images/characters/zollaman_packing.png",
+    "flow_prompt": "placing books into a backpack on a study desk, preparing to go out"
+  },
+  {
+    "id": 179,
+    "name_kr": "zollaman_washing",
+    "name_en": "Washing",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_washing.png",
+    "url": "/images/characters/zollaman_washing.png",
+    "flow_prompt": "washing his face at a bathroom sink with water splashing"
+  },
+  {
+    "id": 180,
+    "name_kr": "zollaman_eating",
+    "name_en": "Eating",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_eating.png",
+    "url": "/images/characters/zollaman_eating.png",
+    "flow_prompt": "eating breakfast at a dining table with a bowl and spoon"
+  },
+  {
+    "id": 181,
+    "name_kr": "zollaman_walking",
+    "name_en": "Walking",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_walking.png",
+    "url": "/images/characters/zollaman_walking.png",
+    "flow_prompt": "walking briskly on a sidewalk, mid-stride, smiling"
+  },
+  {
+    "id": 182,
+    "name_kr": "zollaman_sleeping",
+    "name_en": "Sleeping",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_sleeping.png",
+    "url": "/images/characters/zollaman_sleeping.png",
+    "flow_prompt": "lying in bed sleeping peacefully on a soft pillow"
+  },
+  {
+    "id": 183,
+    "name_kr": "zollaman_brushing_teeth",
+    "name_en": "Brushing_Teeth",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_brushing_teeth.png",
+    "url": "/images/characters/zollaman_brushing_teeth.png",
+    "flow_prompt": "brushing teeth with a toothbrush, white foam around his mouth"
+  },
+  {
+    "id": 184,
+    "name_kr": "zollaman_studying",
+    "name_en": "Studying",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_studying.png",
+    "url": "/images/characters/zollaman_studying.png",
+    "flow_prompt": "sitting at a desk studying and writing diligently in a notebook"
+  },
+  {
+    "id": 185,
+    "name_kr": "zollaman_reading",
+    "name_en": "Reading",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_reading.png",
+    "url": "/images/characters/zollaman_reading.png",
+    "flow_prompt": "holding and reading an open book, looking focused"
+  },
+  {
+    "id": 186,
+    "name_kr": "zollaman_sitting",
+    "name_en": "Sitting",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_sitting.png",
+    "url": "/images/characters/zollaman_sitting.png",
+    "flow_prompt": "sitting on a simple wooden chair resting in a relaxed posture"
+  },
+  {
+    "id": 187,
+    "name_kr": "zollaman_running",
+    "name_en": "Running",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_running.png",
+    "url": "/images/characters/zollaman_running.png",
+    "flow_prompt": "running fast in a hurry, legs wide apart, look of urgency"
+  },
+  {
+    "id": 188,
+    "name_kr": "zollaman_pointing",
+    "name_en": "Pointing",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_pointing.png",
+    "url": "/images/characters/zollaman_pointing.png",
+    "flow_prompt": "pointing forward with his hand, directing attention"
+  },
+  {
+    "id": 189,
+    "name_kr": "zollaman_cheering",
+    "name_en": "Cheering",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_cheering.png",
+    "url": "/images/characters/zollaman_cheering.png",
+    "flow_prompt": "cheering with arms raised high in joy, celebrating a victory"
+  },
+  {
+    "id": 190,
+    "name_kr": "zollaman_bowing",
+    "name_en": "Bowing",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_bowing.png",
+    "url": "/images/characters/zollaman_bowing.png",
+    "flow_prompt": "bowing politely with a slight bend at the waist, showing respect"
+  },
+  {
+    "id": 191,
+    "name_kr": "zollaman_thinking",
+    "name_en": "Thinking",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_thinking.png",
+    "url": "/images/characters/zollaman_thinking.png",
+    "flow_prompt": "thinking with a hand on his chin, looking contemplative"
+  },
+  {
+    "id": 192,
+    "name_kr": "zollaman_drawing",
+    "name_en": "Drawing",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_drawing.png",
+    "url": "/images/characters/zollaman_drawing.png",
+    "flow_prompt": "holding a pencil and drawing on a sketchbook on a table"
+  },
+  {
+    "id": 193,
+    "name_kr": "zollaman_drinking",
+    "name_en": "Drinking",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_drinking.png",
+    "url": "/images/characters/zollaman_drinking.png",
+    "flow_prompt": "holding a mug and drinking water or tea, looking refreshed"
+  },
+  {
+    "id": 194,
+    "name_kr": "zollaman_cleaning",
+    "name_en": "Cleaning",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_cleaning.png",
+    "url": "/images/characters/zollaman_cleaning.png",
+    "flow_prompt": "holding a broom and sweeping the floor, cleaning up"
+  },
+  {
+    "id": 195,
+    "name_kr": "zollaman_opening_door",
+    "name_en": "Opening_Door",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_opening_door.png",
+    "url": "/images/characters/zollaman_opening_door.png",
+    "flow_prompt": "holding a door handle and opening a wooden door to step inside"
+  },
+  {
+    "id": 196,
+    "name_kr": "zollaman_shoes",
+    "name_en": "Shoes",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_shoes.png",
+    "url": "/images/characters/zollaman_shoes.png",
+    "flow_prompt": "bending down to put on sneakers, tying shoelaces"
+  },
+  {
+    "id": 197,
+    "name_kr": "zollaman_waiting",
+    "name_en": "Waiting",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_waiting.png",
+    "url": "/images/characters/zollaman_waiting.png",
+    "flow_prompt": "standing and waiting patiently at a bus stop sign"
+  },
+  {
+    "id": 198,
+    "name_kr": "zollaman_waving",
+    "name_en": "Waving",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_waving.png",
+    "url": "/images/characters/zollaman_waving.png",
+    "flow_prompt": "waving his hand to say goodbye, smiling warmly"
+  },
+  {
+    "id": 199,
+    "name_kr": "zollaman_clapping",
+    "name_en": "Clapping",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_clapping.png",
+    "url": "/images/characters/zollaman_clapping.png",
+    "flow_prompt": "clapping hands happily with a cheerful expression"
+  },
+  {
+    "id": 200,
+    "name_kr": "zollaman_jumping",
+    "name_en": "Jumping",
+    "type": "character",
+    "file_path": "home_vocab/zollaman_jumping.png",
+    "url": "/images/characters/zollaman_jumping.png",
+    "flow_prompt": "jumping high in the air with excitement, legs bent in joy"
+  },
+  {
+    "id": 201,
+    "name_kr": "zollanyeo_waking_up",
+    "name_en": "Waking_Up",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_waking_up.png",
+    "url": "/images/characters/zollanyeo_waking_up.png",
+    "flow_prompt": "waking up and stretching in bed, winking and yawning"
+  },
+  {
+    "id": 202,
+    "name_kr": "zollanyeo_packing",
+    "name_en": "Packing",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_packing.png",
+    "url": "/images/characters/zollanyeo_packing.png",
+    "flow_prompt": "placing books into a backpack on a study desk, preparing to go out"
+  },
+  {
+    "id": 203,
+    "name_kr": "zollanyeo_washing",
+    "name_en": "Washing",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_washing.png",
+    "url": "/images/characters/zollanyeo_washing.png",
+    "flow_prompt": "washing her face at a bathroom sink with water splashing"
+  },
+  {
+    "id": 204,
+    "name_kr": "zollanyeo_eating",
+    "name_en": "Eating",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_eating.png",
+    "url": "/images/characters/zollanyeo_eating.png",
+    "flow_prompt": "eating breakfast at a dining table with a bowl and spoon"
+  },
+  {
+    "id": 205,
+    "name_kr": "zollanyeo_walking",
+    "name_en": "Walking",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_walking.png",
+    "url": "/images/characters/zollanyeo_walking.png",
+    "flow_prompt": "walking briskly on a sidewalk, mid-stride, smiling"
+  },
+  {
+    "id": 206,
+    "name_kr": "zollanyeo_sleeping",
+    "name_en": "Sleeping",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_sleeping.png",
+    "url": "/images/characters/zollanyeo_sleeping.png",
+    "flow_prompt": "lying in bed sleeping peacefully on a soft pillow"
+  },
+  {
+    "id": 207,
+    "name_kr": "zollanyeo_brushing_teeth",
+    "name_en": "Brushing_Teeth",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_brushing_teeth.png",
+    "url": "/images/characters/zollanyeo_brushing_teeth.png",
+    "flow_prompt": "brushing teeth with a toothbrush, white foam around her mouth"
+  },
+  {
+    "id": 208,
+    "name_kr": "zollanyeo_studying",
+    "name_en": "Studying",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_studying.png",
+    "url": "/images/characters/zollanyeo_studying.png",
+    "flow_prompt": "sitting at a desk studying and writing diligently in a notebook"
+  },
+  {
+    "id": 209,
+    "name_kr": "zollanyeo_reading",
+    "name_en": "Reading",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_reading.png",
+    "url": "/images/characters/zollanyeo_reading.png",
+    "flow_prompt": "holding and reading an open book, looking focused"
+  },
+  {
+    "id": 210,
+    "name_kr": "zollanyeo_sitting",
+    "name_en": "Sitting",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_sitting.png",
+    "url": "/images/characters/zollanyeo_sitting.png",
+    "flow_prompt": "sitting on a simple wooden chair resting in a relaxed posture"
+  },
+  {
+    "id": 211,
+    "name_kr": "zollanyeo_running",
+    "name_en": "Running",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_running.png",
+    "url": "/images/characters/zollanyeo_running.png",
+    "flow_prompt": "running fast in a hurry, legs wide apart, look of urgency"
+  },
+  {
+    "id": 212,
+    "name_kr": "zollanyeo_pointing",
+    "name_en": "Pointing",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_pointing.png",
+    "url": "/images/characters/zollanyeo_pointing.png",
+    "flow_prompt": "pointing forward with her hand, directing attention"
+  },
+  {
+    "id": 213,
+    "name_kr": "zollanyeo_cheering",
+    "name_en": "Cheering",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_cheering.png",
+    "url": "/images/characters/zollanyeo_cheering.png",
+    "flow_prompt": "cheering with arms raised high in joy, celebrating a victory"
+  },
+  {
+    "id": 214,
+    "name_kr": "zollanyeo_bowing",
+    "name_en": "Bowing",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_bowing.png",
+    "url": "/images/characters/zollanyeo_bowing.png",
+    "flow_prompt": "bowing politely with a slight bend at the waist, showing respect"
+  },
+  {
+    "id": 215,
+    "name_kr": "zollanyeo_thinking",
+    "name_en": "Thinking",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_thinking.png",
+    "url": "/images/characters/zollanyeo_thinking.png",
+    "flow_prompt": "thinking with a hand on her chin, looking contemplative"
+  },
+  {
+    "id": 216,
+    "name_kr": "zollanyeo_raising_hand",
+    "name_en": "Raising_Hand",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_raising_hand.png",
+    "url": "/images/characters/zollanyeo_raising_hand.png",
+    "flow_prompt": "raising her hand high to speak or answer a question"
+  },
+  {
+    "id": 217,
+    "name_kr": "zollanyeo_drawing",
+    "name_en": "Drawing",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_drawing.png",
+    "url": "/images/characters/zollanyeo_drawing.png",
+    "flow_prompt": "holding a pencil and drawing on a sketchbook on a table"
+  },
+  {
+    "id": 218,
+    "name_kr": "zollanyeo_drinking",
+    "name_en": "Drinking",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_drinking.png",
+    "url": "/images/characters/zollanyeo_drinking.png",
+    "flow_prompt": "holding a mug and drinking water or tea, looking refreshed"
+  },
+  {
+    "id": 219,
+    "name_kr": "zollanyeo_cleaning",
+    "name_en": "Cleaning",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_cleaning.png",
+    "url": "/images/characters/zollanyeo_cleaning.png",
+    "flow_prompt": "holding a broom and sweeping the floor, cleaning up"
+  },
+  {
+    "id": 220,
+    "name_kr": "zollanyeo_opening_door",
+    "name_en": "Opening_Door",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_opening_door.png",
+    "url": "/images/characters/zollanyeo_opening_door.png",
+    "flow_prompt": "holding a door handle and opening a wooden door to step inside"
+  },
+  {
+    "id": 221,
+    "name_kr": "zollanyeo_shoes",
+    "name_en": "Shoes",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_shoes.png",
+    "url": "/images/characters/zollanyeo_shoes.png",
+    "flow_prompt": "bending down to put on sneakers, tying shoelaces"
+  },
+  {
+    "id": 222,
+    "name_kr": "zollanyeo_waiting",
+    "name_en": "Waiting",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_waiting.png",
+    "url": "/images/characters/zollanyeo_waiting.png",
+    "flow_prompt": "standing and waiting patiently at a bus stop sign"
+  },
+  {
+    "id": 223,
+    "name_kr": "zollanyeo_waving",
+    "name_en": "Waving",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_waving.png",
+    "url": "/images/characters/zollanyeo_waving.png",
+    "flow_prompt": "waving her hand to say goodbye, smiling warmly"
+  },
+  {
+    "id": 224,
+    "name_kr": "zollanyeo_clapping",
+    "name_en": "Clapping",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_clapping.png",
+    "url": "/images/characters/zollanyeo_clapping.png",
+    "flow_prompt": "clapping hands happily with a cheerful expression"
+  },
+  {
+    "id": 225,
+    "name_kr": "zollanyeo_jumping",
+    "name_en": "Jumping",
+    "type": "character",
+    "file_path": "home_vocab/zollanyeo_jumping.png",
+    "url": "/images/characters/zollanyeo_jumping.png",
+    "flow_prompt": "jumping high in the air with excitement, legs bent in joy"
+  },
+  {
+    "id": 226,
+    "name_kr": "졸라커플_악수레퍼런스",
+    "name_en": "Zolla_Handshake_Ref",
+    "type": "character",
+    "file_path": "home_vocab/zolla_handshake_ref.png",
+    "url": "/images/characters/zolla_handshake_ref.png",
+    "flow_prompt": "Using the uploaded reference image, keep the EXACT same two stickman characters — jjolla-man (black short-hair male stickman) and jjolla-nyeo (orange short-hair female stickman) — but now draw them shaking hands politely, smiling, loose sketchy hand-drawn black pen line doodle style, minimalist whiteboard-doodle sketch style, on a solid flat pure white background, no text, no signatures"
+  },
+  {
+    "id": 227,
+    "name_kr": "졸라커플_악수",
+    "name_en": "Zolla_Handshake",
+    "type": "character",
+    "file_path": "home_vocab/zolla_handshake.png",
+    "url": "/images/characters/zolla_handshake.png",
+    "flow_prompt": "Using the uploaded reference image, keep the EXACT same two stickman characters — jjolla-man (black short-hair male stickman) and jjolla-nyeo (orange short-hair female stickman) — but now draw them shaking hands politely, smiling, loose sketchy hand-drawn black pen line doodle style, minimalist whiteboard-doodle sketch style, on a solid flat pure white background, no text, no signatures"
+  },
+  {
+    "id": 477,
+    "name_kr": "injun_jieun_piano_stand",
+    "name_en": "injun_jieun_piano_stand",
+    "type": "character",
+    "file_path": "injun_jieun_piano_stand.png",
+    "url": "/images/characters/injun_jieun_piano_stand.png",
+    "flow_prompt": "standing together and facing straight to the front, with a large black grand piano placed on their left side, the grand piano angled toward the front-right at a 45-degree three-quarter view, both full body"
+  },
+  {
+    "id": 481,
+    "name_kr": "injun_jieun_piano_back",
+    "name_en": "injun_jieun_piano_back",
+    "type": "character",
+    "file_path": "injun_jieun_piano_back.png",
+    "url": "/images/characters/injun_jieun_piano_back.png",
+    "flow_prompt": "sitting together side by side on one piano bench in front of a LARGE realistic black grand piano, seen from BEHIND so their backs face the viewer while they face the keyboard, the long wide keyboard built correctly INSIDE the grand piano body under the raised lid (the keys are part of the piano case, not floating or sticking out), the big grand piano filling most of the scene with correct proportions, both full body from behind, anatomically correct single keyboard"
+  },
+  {
+    "id": 483,
+    "name_kr": "injun_jieun_piano_front",
+    "name_en": "injun_jieun_piano_front",
+    "type": "character",
+    "file_path": "injun_jieun_piano_front.png",
+    "url": "/images/characters/injun_jieun_piano_front.png",
+    "flow_prompt": "the two of them sitting together on the bench playing the SAME large black grand piano from the reference image, but the whole scene rotated 180 degrees so the BIG grand piano now stands in the FRONT foreground closest to the viewer with its curved body and raised lid facing us, and the two are seen from the FRONT — their faces and upper bodies visible just behind and above the piano body (classic concert view from the audience side), both seen from the front, correct large grand piano proportions with the keyboard inside the body"
+  },
+  {
+    "id": 484,
+    "name_kr": "injun_jieun_piano_side",
+    "name_en": "injun_jieun_piano_side",
+    "type": "character",
+    "file_path": "injun_jieun_piano_side.png",
+    "url": "/images/characters/injun_jieun_piano_side.png",
+    "flow_prompt": "the two of them sitting together on the bench playing the SAME large black grand piano from the reference image, the whole scene rotated 135 degrees clockwise from the front concert view, now seen from a three-quarter diagonal angle where the big black grand piano is in the foreground turned 135 degrees, the two partly visible behind the piano body, correct large grand piano proportions with the keyboard inside the body, both full body"
+  },
+  {
+    "id": 740,
+    "name_kr": "injun_soccer",
+    "name_en": "injun_soccer",
+    "type": "character",
+    "file_path": "injun_soccer.png",
+    "url": "/images/characters/injun_soccer.png",
+    "flow_prompt": "kicking a soccer ball on a green grass field, full body dynamic motion"
+  },
+  {
+    "id": 741,
+    "name_kr": "injun_basketball",
+    "name_en": "injun_basketball",
+    "type": "character",
+    "file_path": "injun_basketball.png",
+    "url": "/images/characters/injun_basketball.png",
+    "flow_prompt": "jumping to shoot a basketball at a hoop on an outdoor court, full body"
+  },
+  {
+    "id": 742,
+    "name_kr": "injun_bicycle",
+    "name_en": "injun_bicycle",
+    "type": "character",
+    "file_path": "injun_bicycle.png",
+    "url": "/images/characters/injun_bicycle.png",
+    "flow_prompt": "riding a bicycle along a park path, full body side view"
+  },
+  {
+    "id": 743,
+    "name_kr": "injun_kite",
+    "name_en": "injun_kite",
+    "type": "character",
+    "file_path": "injun_kite.png",
+    "url": "/images/characters/injun_kite.png",
+    "flow_prompt": "running while flying a colorful kite in an open field, looking up, full body"
+  },
+  {
+    "id": 744,
+    "name_kr": "injun_badminton",
+    "name_en": "injun_badminton",
+    "type": "character",
+    "file_path": "injun_badminton.png",
+    "url": "/images/characters/injun_badminton.png",
+    "flow_prompt": "swinging a racket to hit a shuttlecock in a backyard, full body"
+  },
+  {
+    "id": 745,
+    "name_kr": "injun_baseball",
+    "name_en": "injun_baseball",
+    "type": "character",
+    "file_path": "injun_baseball.png",
+    "url": "/images/characters/injun_baseball.png",
+    "flow_prompt": "swinging a baseball bat at a playground, full body"
+  },
+  {
+    "id": 746,
+    "name_kr": "injun_tennis",
+    "name_en": "injun_tennis",
+    "type": "character",
+    "file_path": "injun_tennis.png",
+    "url": "/images/characters/injun_tennis.png",
+    "flow_prompt": "hitting a tennis ball with a racket on a court, full body"
+  },
+  {
+    "id": 747,
+    "name_kr": "injun_jump_rope",
+    "name_en": "injun_jump_rope",
+    "type": "character",
+    "file_path": "injun_jump_rope.png",
+    "url": "/images/characters/injun_jump_rope.png",
+    "flow_prompt": "jumping rope on a sidewalk, full body mid-jump"
+  },
+  {
+    "id": 748,
+    "name_kr": "injun_skateboard",
+    "name_en": "injun_skateboard",
+    "type": "character",
+    "file_path": "injun_skateboard.png",
+    "url": "/images/characters/injun_skateboard.png",
+    "flow_prompt": "riding a skateboard down a path, knees bent, full body"
+  },
+  {
+    "id": 749,
+    "name_kr": "injun_rollerblading",
+    "name_en": "injun_rollerblading",
+    "type": "character",
+    "file_path": "injun_rollerblading.png",
+    "url": "/images/characters/injun_rollerblading.png",
+    "flow_prompt": "rollerblading along a park lane, arms out for balance, full body"
+  },
+  {
+    "id": 750,
+    "name_kr": "injun_frisbee",
+    "name_en": "injun_frisbee",
+    "type": "character",
+    "file_path": "injun_frisbee.png",
+    "url": "/images/characters/injun_frisbee.png",
+    "flow_prompt": "throwing a flying disc in a park, full body"
+  },
+  {
+    "id": 751,
+    "name_kr": "injun_swing",
+    "name_en": "injun_swing",
+    "type": "character",
+    "file_path": "injun_swing.png",
+    "url": "/images/characters/injun_swing.png",
+    "flow_prompt": "sitting and swinging high on a playground swing, full body"
+  },
+  {
+    "id": 752,
+    "name_kr": "injun_slide",
+    "name_en": "injun_slide",
+    "type": "character",
+    "file_path": "injun_slide.png",
+    "url": "/images/characters/injun_slide.png",
+    "flow_prompt": "sliding down a playground slide with a smile, full body"
+  },
+  {
+    "id": 753,
+    "name_kr": "injun_jungle_gym",
+    "name_en": "injun_jungle_gym",
+    "type": "character",
+    "file_path": "injun_jungle_gym.png",
+    "url": "/images/characters/injun_jungle_gym.png",
+    "flow_prompt": "climbing on a playground jungle gym, full body"
+  },
+  {
+    "id": 754,
+    "name_kr": "injun_hiking",
+    "name_en": "injun_hiking",
+    "type": "character",
+    "file_path": "injun_hiking.png",
+    "url": "/images/characters/injun_hiking.png",
+    "flow_prompt": "hiking up a mountain trail with a small backpack and a walking stick, full body"
+  },
+  {
+    "id": 755,
+    "name_kr": "injun_fishing",
+    "name_en": "injun_fishing",
+    "type": "character",
+    "file_path": "injun_fishing.png",
+    "url": "/images/characters/injun_fishing.png",
+    "flow_prompt": "standing by a calm lake holding a fishing rod, full body side view"
+  },
+  {
+    "id": 756,
+    "name_kr": "injun_camping",
+    "name_en": "injun_camping",
+    "type": "character",
+    "file_path": "injun_camping.png",
+    "url": "/images/characters/injun_camping.png",
+    "flow_prompt": "sitting beside a small tent at a campsite, full body"
+  },
+  {
+    "id": 757,
+    "name_kr": "injun_picnic",
+    "name_en": "injun_picnic",
+    "type": "character",
+    "file_path": "injun_picnic.png",
+    "url": "/images/characters/injun_picnic.png",
+    "flow_prompt": "sitting on a picnic mat under a tree eating a sandwich, full body"
+  },
+  {
+    "id": 758,
+    "name_kr": "injun_planting_tree",
+    "name_en": "injun_planting_tree",
+    "type": "character",
+    "file_path": "injun_planting_tree.png",
+    "url": "/images/characters/injun_planting_tree.png",
+    "flow_prompt": "planting a young tree with a shovel in a garden, full body"
+  },
+  {
+    "id": 759,
+    "name_kr": "injun_watering_flowers",
+    "name_en": "injun_watering_flowers",
+    "type": "character",
+    "file_path": "injun_watering_flowers.png",
+    "url": "/images/characters/injun_watering_flowers.png",
+    "flow_prompt": "watering flowers with a watering can in a garden, full body"
+  },
+  {
+    "id": 760,
+    "name_kr": "injun_gardening",
+    "name_en": "injun_gardening",
+    "type": "character",
+    "file_path": "injun_gardening.png",
+    "url": "/images/characters/injun_gardening.png",
+    "flow_prompt": "kneeling to pull weeds in a vegetable garden, full body"
+  },
+  {
+    "id": 761,
+    "name_kr": "injun_walking_dog",
+    "name_en": "injun_walking_dog",
+    "type": "character",
+    "file_path": "injun_walking_dog.png",
+    "url": "/images/characters/injun_walking_dog.png",
+    "flow_prompt": "walking a small dog on a leash along a path, full body"
+  },
+  {
+    "id": 763,
+    "name_kr": "injun_blowing_bubbles",
+    "name_en": "injun_blowing_bubbles",
+    "type": "character",
+    "file_path": "injun_blowing_bubbles.png",
+    "url": "/images/characters/injun_blowing_bubbles.png",
+    "flow_prompt": "blowing soap bubbles outdoors, full body"
+  },
+  {
+    "id": 764,
+    "name_kr": "injun_holding_balloons",
+    "name_en": "injun_holding_balloons",
+    "type": "character",
+    "file_path": "injun_holding_balloons.png",
+    "url": "/images/characters/injun_holding_balloons.png",
+    "flow_prompt": "standing and holding a bunch of colorful balloons, full body"
+  },
+  {
+    "id": 765,
+    "name_kr": "injun_paper_airplane",
+    "name_en": "injun_paper_airplane",
+    "type": "character",
+    "file_path": "injun_paper_airplane.png",
+    "url": "/images/characters/injun_paper_airplane.png",
+    "flow_prompt": "throwing a paper airplane in a park, arm extended, full body"
+  },
+  {
+    "id": 766,
+    "name_kr": "injun_snowman",
+    "name_en": "injun_snowman",
+    "type": "character",
+    "file_path": "injun_snowman.png",
+    "url": "/images/characters/injun_snowman.png",
+    "flow_prompt": "building a snowman in the snow wearing a scarf and mittens, full body"
+  },
+  {
+    "id": 767,
+    "name_kr": "injun_sledding",
+    "name_en": "injun_sledding",
+    "type": "character",
+    "file_path": "injun_sledding.png",
+    "url": "/images/characters/injun_sledding.png",
+    "flow_prompt": "sledding down a snowy hill on a sled, full body"
+  },
+  {
+    "id": 768,
+    "name_kr": "injun_ice_skating",
+    "name_en": "injun_ice_skating",
+    "type": "character",
+    "file_path": "injun_ice_skating.png",
+    "url": "/images/characters/injun_ice_skating.png",
+    "flow_prompt": "ice skating on a frozen rink, arms out, full body"
+  },
+  {
+    "id": 769,
+    "name_kr": "injun_sandcastle",
+    "name_en": "injun_sandcastle",
+    "type": "character",
+    "file_path": "injun_sandcastle.png",
+    "url": "/images/characters/injun_sandcastle.png",
+    "flow_prompt": "crouching to build a sandcastle at the beach, full body"
+  },
+  {
+    "id": 770,
+    "name_kr": "injun_beach_ball",
+    "name_en": "injun_beach_ball",
+    "type": "character",
+    "file_path": "injun_beach_ball.png",
+    "url": "/images/characters/injun_beach_ball.png",
+    "flow_prompt": "playing with a big beach ball at the beach, full body"
+  },
+  {
+    "id": 771,
+    "name_kr": "injun_kicking_leaves",
+    "name_en": "injun_kicking_leaves",
+    "type": "character",
+    "file_path": "injun_kicking_leaves.png",
+    "url": "/images/characters/injun_kicking_leaves.png",
+    "flow_prompt": "walking and kicking autumn leaves on a path, full body"
+  },
+  {
+    "id": 772,
+    "name_kr": "injun_jogging",
+    "name_en": "injun_jogging",
+    "type": "character",
+    "file_path": "injun_jogging.png",
+    "url": "/images/characters/injun_jogging.png",
+    "flow_prompt": "jogging in a park wearing a tracksuit, full body side view"
+  },
+  {
+    "id": 773,
+    "name_kr": "injun_stretching",
+    "name_en": "injun_stretching",
+    "type": "character",
+    "file_path": "injun_stretching.png",
+    "url": "/images/characters/injun_stretching.png",
+    "flow_prompt": "doing a simple arm-and-leg stretch outdoors, full body"
+  },
+  {
+    "id": 774,
+    "name_kr": "injun_taking_photo",
+    "name_en": "injun_taking_photo",
+    "type": "character",
+    "file_path": "injun_taking_photo.png",
+    "url": "/images/characters/injun_taking_photo.png",
+    "flow_prompt": "taking a photo with a camera outdoors, both hands holding the camera, full body"
+  },
+  {
+    "id": 775,
+    "name_kr": "injun_reading_bench",
+    "name_en": "injun_reading_bench",
+    "type": "character",
+    "file_path": "injun_reading_bench.png",
+    "url": "/images/characters/injun_reading_bench.png",
+    "flow_prompt": "sitting on a park bench reading a book, full body"
+  },
+  {
+    "id": 776,
+    "name_kr": "injun_eating_icecream",
+    "name_en": "injun_eating_icecream",
+    "type": "character",
+    "file_path": "injun_eating_icecream.png",
+    "url": "/images/characters/injun_eating_icecream.png",
+    "flow_prompt": "standing and eating an ice cream cone, full body"
+  },
+  {
+    "id": 777,
+    "name_kr": "injun_drinking_water",
+    "name_en": "injun_drinking_water",
+    "type": "character",
+    "file_path": "injun_drinking_water.png",
+    "url": "/images/characters/injun_drinking_water.png",
+    "flow_prompt": "standing and drinking from a water bottle after exercise, full body"
+  },
+  {
+    "id": 778,
+    "name_kr": "injun_waving_park",
+    "name_en": "injun_waving_park",
+    "type": "character",
+    "file_path": "injun_waving_park.png",
+    "url": "/images/characters/injun_waving_park.png",
+    "flow_prompt": "standing in a park waving hello with one hand, full body"
+  },
+  {
+    "id": 779,
+    "name_kr": "injun_cheering_outdoor",
+    "name_en": "injun_cheering_outdoor",
+    "type": "character",
+    "file_path": "injun_cheering_outdoor.png",
+    "url": "/images/characters/injun_cheering_outdoor.png",
+    "flow_prompt": "standing outdoors cheering with both arms raised in joy, full body"
+  },
+  {
+    "id": 780,
+    "name_kr": "injun_jieun_studying",
+    "name_en": "injun_jieun_studying",
+    "type": "character",
+    "file_path": "injun_jieun_studying.png",
+    "url": "/images/characters/injun_jieun_studying.png",
+    "flow_prompt": "studying together at a desk with open textbooks and notebooks, both full body"
+  },
+  {
+    "id": 781,
+    "name_kr": "injun_jieun_library",
+    "name_en": "injun_jieun_library",
+    "type": "character",
+    "file_path": "injun_jieun_library.png",
+    "url": "/images/characters/injun_jieun_library.png",
+    "flow_prompt": "reading books together at a library table, both full body"
+  },
+  {
+    "id": 782,
+    "name_kr": "injun_jieun_homework_help",
+    "name_en": "injun_jieun_homework_help",
+    "type": "character",
+    "file_path": "injun_jieun_homework_help.png",
+    "url": "/images/characters/injun_jieun_homework_help.png",
+    "flow_prompt": "one explaining homework to the other at a school desk, both full body"
+  },
+  {
+    "id": 783,
+    "name_kr": "injun_jieun_group_project",
+    "name_en": "injun_jieun_group_project",
+    "type": "character",
+    "file_path": "injun_jieun_group_project.png",
+    "url": "/images/characters/injun_jieun_group_project.png",
+    "flow_prompt": "making a group project poster together on a table, both full body"
+  },
+  {
+    "id": 784,
+    "name_kr": "injun_jieun_classroom_clean",
+    "name_en": "injun_jieun_classroom_clean",
+    "type": "character",
+    "file_path": "injun_jieun_classroom_clean.png",
+    "url": "/images/characters/injun_jieun_classroom_clean.png",
+    "flow_prompt": "cleaning the classroom together with a broom and dustpan, both full body"
+  },
+  {
+    "id": 785,
+    "name_kr": "injun_jieun_school_lunch",
+    "name_en": "injun_jieun_school_lunch",
+    "type": "character",
+    "file_path": "injun_jieun_school_lunch.png",
+    "url": "/images/characters/injun_jieun_school_lunch.png",
+    "flow_prompt": "eating school lunch together with trays at a cafeteria table, both full body"
+  },
+  {
+    "id": 786,
+    "name_kr": "injun_jieun_walking_to_school",
+    "name_en": "injun_jieun_walking_to_school",
+    "type": "character",
+    "file_path": "injun_jieun_walking_to_school.png",
+    "url": "/images/characters/injun_jieun_walking_to_school.png",
+    "flow_prompt": "walking to school together carrying backpacks, both full body"
+  },
+  {
+    "id": 787,
+    "name_kr": "injun_jieun_running_late",
+    "name_en": "injun_jieun_running_late",
+    "type": "character",
+    "file_path": "injun_jieun_running_late.png",
+    "url": "/images/characters/injun_jieun_running_late.png",
+    "flow_prompt": "running to school together in a hurry with backpacks, both full body side view"
+  },
+  {
+    "id": 788,
+    "name_kr": "injun_jieun_bus",
+    "name_en": "injun_jieun_bus",
+    "type": "character",
+    "file_path": "injun_jieun_bus.png",
+    "url": "/images/characters/injun_jieun_bus.png",
+    "flow_prompt": "sitting side by side on a city bus to school holding the handrail, both full body"
+  },
+  {
+    "id": 789,
+    "name_kr": "injun_jieun_sports_day",
+    "name_en": "injun_jieun_sports_day",
+    "type": "character",
+    "file_path": "injun_jieun_sports_day.png",
+    "url": "/images/characters/injun_jieun_sports_day.png",
+    "flow_prompt": "cheering together at a school sports day waving small flags, both full body"
+  },
+  {
+    "id": 790,
+    "name_kr": "injun_jieun_tteokbokki",
+    "name_en": "injun_jieun_tteokbokki",
+    "type": "character",
+    "file_path": "injun_jieun_tteokbokki.png",
+    "url": "/images/characters/injun_jieun_tteokbokki.png",
+    "flow_prompt": "eating tteokbokki together at a street snack stall, both full body"
+  },
+  {
+    "id": 791,
+    "name_kr": "injun_jieun_convenience_store",
+    "name_en": "injun_jieun_convenience_store",
+    "type": "character",
+    "file_path": "injun_jieun_convenience_store.png",
+    "url": "/images/characters/injun_jieun_convenience_store.png",
+    "flow_prompt": "eating cup noodles at a convenience store counter, both full body"
+  },
+  {
+    "id": 792,
+    "name_kr": "injun_jieun_ice_cream",
+    "name_en": "injun_jieun_ice_cream",
+    "type": "character",
+    "file_path": "injun_jieun_ice_cream.png",
+    "url": "/images/characters/injun_jieun_ice_cream.png",
+    "flow_prompt": "standing and eating ice cream cones together, both full body"
+  },
+  {
+    "id": 793,
+    "name_kr": "injun_jieun_cafe_study",
+    "name_en": "injun_jieun_cafe_study",
+    "type": "character",
+    "file_path": "injun_jieun_cafe_study.png",
+    "url": "/images/characters/injun_jieun_cafe_study.png",
+    "flow_prompt": "studying together at a cafe table with drinks and laptops, both full body"
+  },
+  {
+    "id": 794,
+    "name_kr": "injun_jieun_bench_chat",
+    "name_en": "injun_jieun_bench_chat",
+    "type": "character",
+    "file_path": "injun_jieun_bench_chat.png",
+    "url": "/images/characters/injun_jieun_bench_chat.png",
+    "flow_prompt": "sitting on a park bench chatting together, both full body"
+  },
+  {
+    "id": 795,
+    "name_kr": "injun_jieun_basketball",
+    "name_en": "injun_jieun_basketball",
+    "type": "character",
+    "file_path": "injun_jieun_basketball.png",
+    "url": "/images/characters/injun_jieun_basketball.png",
+    "flow_prompt": "playing basketball together on an outdoor court, both full body"
+  },
+  {
+    "id": 796,
+    "name_kr": "injun_jieun_badminton",
+    "name_en": "injun_jieun_badminton",
+    "type": "character",
+    "file_path": "injun_jieun_badminton.png",
+    "url": "/images/characters/injun_jieun_badminton.png",
+    "flow_prompt": "playing badminton together in a schoolyard, both full body"
+  },
+  {
+    "id": 797,
+    "name_kr": "injun_jieun_soccer",
+    "name_en": "injun_jieun_soccer",
+    "type": "character",
+    "file_path": "injun_jieun_soccer.png",
+    "url": "/images/characters/injun_jieun_soccer.png",
+    "flow_prompt": "kicking a soccer ball back and forth on a field, both full body"
+  },
+  {
+    "id": 798,
+    "name_kr": "injun_jieun_jump_rope",
+    "name_en": "injun_jieun_jump_rope",
+    "type": "character",
+    "file_path": "injun_jieun_jump_rope.png",
+    "url": "/images/characters/injun_jieun_jump_rope.png",
+    "flow_prompt": "jumping rope together on a sidewalk, both full body"
+  },
+  {
+    "id": 799,
+    "name_kr": "injun_jieun_bicycle",
+    "name_en": "injun_jieun_bicycle",
+    "type": "character",
+    "file_path": "injun_jieun_bicycle.png",
+    "url": "/images/characters/injun_jieun_bicycle.png",
+    "flow_prompt": "riding bicycles side by side on a path, both full body"
+  },
+  {
+    "id": 800,
+    "name_kr": "injun_jieun_high_five",
+    "name_en": "injun_jieun_high_five",
+    "type": "character",
+    "file_path": "injun_jieun_high_five.png",
+    "url": "/images/characters/injun_jieun_high_five.png",
+    "flow_prompt": "giving each other a happy high-five, both full body"
+  },
+  {
+    "id": 801,
+    "name_kr": "injun_jieun_fist_bump",
+    "name_en": "injun_jieun_fist_bump",
+    "type": "character",
+    "file_path": "injun_jieun_fist_bump.png",
+    "url": "/images/characters/injun_jieun_fist_bump.png",
+    "flow_prompt": "doing a friendly fist bump, both full body"
+  },
+  {
+    "id": 802,
+    "name_kr": "injun_jieun_sharing_earphones",
+    "name_en": "injun_jieun_sharing_earphones",
+    "type": "character",
+    "file_path": "injun_jieun_sharing_earphones.png",
+    "url": "/images/characters/injun_jieun_sharing_earphones.png",
+    "flow_prompt": "listening to music sharing earphones with one earbud each, both full body"
+  },
+  {
+    "id": 803,
+    "name_kr": "injun_jieun_selfie",
+    "name_en": "injun_jieun_selfie",
+    "type": "character",
+    "file_path": "injun_jieun_selfie.png",
+    "url": "/images/characters/injun_jieun_selfie.png",
+    "flow_prompt": "taking a fun selfie together with a phone, both full body"
+  },
+  {
+    "id": 804,
+    "name_kr": "injun_jieun_board_game",
+    "name_en": "injun_jieun_board_game",
+    "type": "character",
+    "file_path": "injun_jieun_board_game.png",
+    "url": "/images/characters/injun_jieun_board_game.png",
+    "flow_prompt": "playing a board game together at a table, both full body"
+  },
+  {
+    "id": 805,
+    "name_kr": "injun_jieun_snorkeling",
+    "name_en": "injun_jieun_snorkeling",
+    "type": "character",
+    "file_path": "injun_jieun_snorkeling.png",
+    "url": "/images/characters/injun_jieun_snorkeling.png",
+    "flow_prompt": "snorkeling together in the blue sea wearing snorkel masks and life vests, both full body"
+  },
+  {
+    "id": 806,
+    "name_kr": "injun_jieun_hiking",
+    "name_en": "injun_jieun_hiking",
+    "type": "character",
+    "file_path": "injun_jieun_hiking.png",
+    "url": "/images/characters/injun_jieun_hiking.png",
+    "flow_prompt": "hiking up a mountain trail together with backpacks and walking sticks, both full body"
+  },
+  {
+    "id": 807,
+    "name_kr": "injun_jieun_swimming_pool",
+    "name_en": "injun_jieun_swimming_pool",
+    "type": "character",
+    "file_path": "injun_jieun_swimming_pool.png",
+    "url": "/images/characters/injun_jieun_swimming_pool.png",
+    "flow_prompt": "swimming together in a swimming pool wearing swim caps and goggles, both full body"
+  },
+  {
+    "id": 808,
+    "name_kr": "injun_jieun_roller_coaster",
+    "name_en": "injun_jieun_roller_coaster",
+    "type": "character",
+    "file_path": "injun_jieun_roller_coaster.png",
+    "url": "/images/characters/injun_jieun_roller_coaster.png",
+    "flow_prompt": "riding a roller coaster together at an amusement park, sitting in the seat with safety bars, both full body"
+  },
+  {
+    "id": 809,
+    "name_kr": "injun_jieun_skiing",
+    "name_en": "injun_jieun_skiing",
+    "type": "character",
+    "file_path": "injun_jieun_skiing.png",
+    "url": "/images/characters/injun_jieun_skiing.png",
+    "flow_prompt": "skiing together down a snowy slope wearing ski jackets, helmets and goggles, both full body"
+  },
+  {
+    "id": 810,
+    "name_kr": "injun_jieun_motorcycle",
+    "name_en": "injun_jieun_motorcycle",
+    "type": "character",
+    "file_path": "injun_jieun_motorcycle.png",
+    "url": "/images/characters/injun_jieun_motorcycle.png",
+    "flow_prompt": "riding one motorcycle together with Injun in front steering and Jieun behind, both wearing safety helmets, both full body side view"
+  },
+  {
+    "id": 811,
+    "name_kr": "injun_jieun_piano",
+    "name_en": "injun_jieun_piano",
+    "type": "character",
+    "file_path": "injun_jieun_piano.png",
+    "url": "/images/characters/injun_jieun_piano.png",
+    "flow_prompt": "sitting together side by side on one piano bench playing an upright piano four-hands, both figures and the piano shown from a front-right 45-degree three-quarter angle, both full body"
+  },
+  {
+    "id": 812,
+    "name_kr": "injun_bird_watching",
+    "name_en": "injun_bird_watching",
+    "type": "character",
+    "file_path": "injun_bird_watching.png",
+    "url": "/images/characters/injun_bird_watching.png",
+    "flow_prompt": "looking up through binoculars at the sky, full body"
+  }
+]
