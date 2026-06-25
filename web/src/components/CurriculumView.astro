@@ -360,7 +360,27 @@ const payload = {
     if (!w) return;
     $('modal-week').textContent = `${LABELS.week} ${w.week} · ${DATA.levelNames[lv]}`;
     $('modal-title').textContent = w.title;
-    $('modal-target').textContent = `${LABELS.target}: ${w.target}`;
+    
+    // target_letters 분할하여 clickable 칩으로 변경 (성우 음질 100% 매핑)
+    const targetLabel = LABELS.target || 'Target';
+    const targetLetters = w.target || '';
+    const letters = targetLetters.split(',').map(l => l.trim()).filter(Boolean);
+    
+    let targetHtml = `${targetLabel}: `;
+    letters.forEach(l => {
+      let audioVal = l.replace(/[\[\]\~]/g, '').trim();
+      if (audioVal.toLowerCase() === 'school') audioVal = '학교';
+      if (audioVal.toLowerCase() === 'k-drama') audioVal = '케이드라마';
+      if (audioVal.toLowerCase() === 'k-pop') audioVal = '케이팝';
+      if (audioVal.startsWith("고 ")) audioVal = audioVal.replace("고 ", "");
+      if (audioVal.startsWith("한 ")) audioVal = audioVal.replace("한 ", "");
+      if (audioVal.includes("하나열")) audioVal = "하나";
+      if (audioVal.includes("일십")) audioVal = "일";
+      
+      targetHtml += `<span class="audio-chip" data-sound="${audioVal}" title="발음 듣기">${l} 🔊</span> `;
+    });
+    $('modal-target').innerHTML = targetHtml;
+
     const steps = [
       { n: 1, label: LABELS.step1, body: w.concept, time: '20' + LABELS.mins },
       { n: 2, label: LABELS.step2, body: w.practice, time: '20' + LABELS.mins },
@@ -375,6 +395,23 @@ const payload = {
       `<span class="mr-label">🎁 ${LABELS.rewardTitle}</span><span class="mr-text">${REWARDS[lv] || ''}</span>`;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
+  }
+
+  // 모달 내 오디오 칩 클릭 이벤트 위임 리스너 추가
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      const chip = e.target.closest('.audio-chip');
+      if (chip) {
+        const sound = chip.getAttribute('data-sound');
+        if (sound) {
+          const audioUrl = `/audio/jamo/${encodeURIComponent(sound)}.mp3`;
+          const audio = new Audio(audioUrl);
+          audio.play().catch(err => {
+            console.warn('Pre-generated voice audio not found on server for text:', sound, err);
+          });
+        }
+      }
+    });
   }
   function closeModal() {
     modal.classList.remove('open');
@@ -590,6 +627,26 @@ const payload = {
     color: var(--c-gold); padding: 4px 10px; border-radius: 7px; background: var(--c-gold-soft); margin-bottom: 12px; }
   .modal-title { font-family: var(--font-display, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; line-height: 1.25; }
   .modal-target { margin: 8px 0 20px; font-size: 0.9rem; color: var(--c-ink-2); font-weight: 600; }
+  
+  .audio-chip {
+    display: inline-block;
+    padding: 3px 8px;
+    margin: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--c-gold);
+    background: var(--c-gold-soft);
+    border: 1px solid rgba(181, 133, 42, 0.3);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .audio-chip:hover {
+    background: var(--c-gold);
+    color: #fff;
+    box-shadow: 0 2px 8px var(--c-glow);
+    transform: translateY(-1px);
+  }
   .modal-steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
   .mstep { display: flex; gap: 14px; padding: 16px; border-radius: 14px; background: var(--c-card); border: 1px solid var(--c-line); }
   .ms-no {

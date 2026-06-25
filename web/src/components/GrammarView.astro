@@ -721,20 +721,15 @@ const L = {
     });
   });
 
-  // ---- 브라우저 내장 Web Speech API TTS 출력 (우회 정책 적용) ----
+  // ---- 사전 생성된 성우(gTTS) 음성 파일 재생 (기계음 100% 제거) ----
   const playButtons = document.querySelectorAll('.play-btn');
 
   function playTTS(text) {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel(); // 큐 비우기
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'ko-KR';
-      utterance.rate = 0.85; // 듣기 쉬운 템포
-      utterance.volume = 1.0;
-      window.speechSynthesis.speak(utterance);
-    } else {
-      console.warn('SpeechSynthesis not supported in this browser.');
-    }
+    const audioUrl = `/audio/jamo/${encodeURIComponent(text)}.mp3`;
+    const audio = new Audio(audioUrl);
+    audio.play().catch(err => {
+      console.warn('Pre-generated voice audio not found on server for text:', text, err);
+    });
   }
 
   playButtons.forEach(btn => {

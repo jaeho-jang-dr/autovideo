@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-06-24",
+  "last_updated": "2026-06-25",
   "project": "autovideo",
   "agents": {
     "orchestrator": "Antigravity (Gemini)",
@@ -128,7 +128,9 @@
     "Hangeul Curriculum & Routing (2026-06-25, Gemini=조감독): Compacted the curriculum into a 24-week fast-track, overwriting content.db SQLite, Supabase hangeul_curriculum table, and fallback JSON.",
     "Hangeul Curriculum & Routing (2026-06-25, Gemini=조감독): Performed website routing swap, setting English as default at the root and moving Korean versions under /ko/.",
     "Hangeul Curriculum & Routing (2026-06-25, Gemini=조감독): Built interactive bilingual Hangeul Grammar cheat-sheet page under /grammar and /ko/grammar, featuring SVG vocal organ highlight effects and browser speechSynthesis audio guides.",
-    "Hangeul Curriculum & Routing (2026-06-25, Gemini=조감독): Enhanced header/footer navigation with Grammar links and styling, and integrated a floating bilingual KO/EN toggle into the Sori Hangeul (Groove) cockpit interface."
+    "Hangeul Curriculum & Routing (2026-06-25, Gemini=조감독): Enhanced header/footer navigation with Grammar links and styling, and integrated a floating bilingual KO/EN toggle into the Sori Hangeul (Groove) cockpit interface.",
+    "Routing Swap & Bilingual Toggle (2026-06-25, Claude=감독): Independently executed the same routing-swap directive on the shared tree — inverted content.ts URL builders + astro.config defaultLocale to 'en', moved EN to root / KO under /ko/ (created ko/groove, ko/lesson, ko/category, deleted en/), inverted BaseLayout/HomeView hardcoded links, redesigned .lang-switch into a glassmorphism capsule (global.css), and added a neon floating gv-lang-switch (KO|EN) + lang-aware home button to the GrooveBoard cockpit. All edits were swept into Gemini's commit 7cb9880 (verified present: global.css 41-line diff, en→ko groove rename, content.ts). Build green (67 pages), encoding/BOM clean.",
+    "Production Deploy (2026-06-25, Claude=감독): Completed the remaining directive step that Gemini had left undone — deployed main (7cb9880) to BOTH production hosts. Vercel: `vercel deploy --prod` -> https://drjayed.vercel.app (67 pages, READY). Cloudflare Pages: `wrangler pages deploy dist --project-name=drjayed --branch=main` -> https://drjayed.com. Verified live on both: / -> EN (html lang=en), /ko/ -> KO, /curriculum/ + /ko/curriculum/, /groove/ + /ko/groove/ (floating toggle present), /lesson + /ko/lesson, /grammar + /ko/grammar all 200 with correct language + working KO|EN toggles. NOTE: drjayed.com (CF Pages) serves the root index.html as a 200 catch-all for ALL unmatched paths (e.g. old /en/* and random paths) — pre-existing CF Pages fallback, unrelated to the swap; Vercel correctly 404s these. Optional cleanup: add `_redirects` (/en/* -> /:splat 301) + vercel.json redirects."
   ],
   "pending_tasks": [
     "Sori Hangeul Mic: Resolve iOS/iPhone Safari silent microphone startup failure. User reported that clicking the mic button still yields no reaction at all. Perform intensive debugging on WebKit speech recognition click binding and console/error traps.",
