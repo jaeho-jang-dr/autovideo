@@ -1,11 +1,17 @@
-# 조감독(Gemini) 기획 및 리서치 리포트 — 한글의 탄생과 단모음
+# 조감독(Gemini) 기획 및 리서치 리포트 — 한글의 탄생과 단모음 (Bilingual Edition)
 
-감독(Claude)님, 요청하신 Curriculum Level 1 Week 1 에피소드 **"한글의 탄생과 단모음"** 영상 제작을 위한 1차 기획 및 딥리서치 작업을 완료하여 보고합니다.
+감독(Claude)님, 요청하신 Curriculum Level 1 Week 1 에피소드 **"한글의 탄생과 단모음"** 영상의 **이중 언어(Bilingual: 한국어 버전 & 영어 버전) 동시 제작 및 한영 통합 자막 구성**을 위한 기획 및 자료 조사를 완료하여 보고합니다.
 
 ---
 
-## 1. 딥리서치 및 자료 분석 결과
-- **역사적 배경**: 세종대왕 1443년 창제, 1446년 반포. 한자(Hanja)의 문턱 때문에 일반 백성들이 글을 알지 못해 생기는 억울함(social injustice)을  Neo-Confucian 애민정신으로 타파하고자 '하루아침에 배울 수 있는 과학적 28글자'를 만듦.
+## 1. 다국어 대본 설계 방향
+- **두 개의 비디오 파일 빌드**: 최종 비디오 컴파일 시 한국어 나레이션 버전(`[name]_ko.mp4`)과 영어 나레이션 버전(`[name]_en.mp4`) 2개가 독립적으로 렌더링되도록 시나리오를 구성했습니다.
+- **자막 통합 트랙**: 각 씬마다 `Script (KO)`와 `Script (EN)`을 병렬로 구조화하여, 두 버전의 비디오에 각각 해당하는 한글 자막과 영문 자막(.srt)이 오류 없이 매칭되도록 설계했습니다.
+
+---
+
+## 2. 딥리서치 및 자료 분석 결과
+- **역사적 배경**: 세종대왕 1443년 창제, 1446년 반포. 한자(Hanja)의 한계 때문에 일반 백성들이 글을 알지 못해 생기는 억울함을  Neo-Confucian 애민정신으로 타파하고자 쉽게 배울 수 있는 과학적 28글자를 만듦.
 - **모음 천지인(Cheon-Ji-In) 철학**: 하늘(ㆍ, 태양, 양), 땅(ㅡ, 평평함, 음), 사람(ㅣ, 서 있음, 중립)의 세 가지 기본 요소를 조합.
 - **결합(Synthesis) 및 모음조화**:
   - ㅣ + ㆍ = ㅏ (동쪽 해 뜸, 양/밝음)
@@ -20,9 +26,9 @@
 
 ---
 
-## 2. Flat Canvas Layered Technique 설계
+## 3. Flat Canvas Layered Technique 설계
 본 기획은 구글 Flow 비디오(배경 및 모션) 위에, 데이터베이스에 등록된 투명 캐릭터(Jieun) 및 어노테이션 상자(Annotation card) 레이어를 얹는 **평면 캔버스 레이어드 기법(Flat Canvas Layered Technique)**을 사용합니다.
-- **메인 톤앤매너**: 플랫 베이지 (`#F5F5F0`), 새싹 그린/세이지 그린 포인트 박스, 검정색 두꺼운 라인아트(화이트보드 마커 스타일).
+- **메인 톤앤매너**: 플랫 베이지 (`#F5F5F0`), 세이지 그린 포인트 박스, 검정색 두꺼운 라인아트(화이트보드 마커 스타일).
 - **사용 가능 캐릭터 에셋 (DB 로딩 완료)**:
   - `Jieun_Base_Front` (정면 대기)
   - `Jieun_Pointing` (설명/지시)
@@ -34,7 +40,7 @@
 
 ---
 
-## 3. 에피소드 타임라인 초안 (~480초 / 8분 분량)
+## 4. 에피소드 타임라인 초안 (~480초 / 8분 분량)
 - **Scene 0 (15s)**: 인트로 및 썸네일 자동 생성.
 - **Scene 1 (45s)**: 역사적 배경 1 - 양반들의 전유물이던 한자 장벽.
 - **Scene 2 (45s)**: 역사적 배경 2 - 글을 몰라 고통받는 백성을 향한 세종대왕의 가엾은 마음.
@@ -52,7 +58,8 @@
 
 ---
 
-## 4. Claude 감독(Director) 위임 태스크
-1. 본 초안 기획과 딥리서치 문서([hangeul_birth_vowels_deep_research.md](file:///C:/Users/antigravity/.gemini/antigravity/brain/ddcce0ae-4499-40e2-a60b-84f4b372fe49/scratch/hangeul_birth_vowels_deep_research.md))를 바탕으로, 최종 컴파일러가 인식할 정밀 대본 파일인 `scenario.txt`를 프로젝트 폴더 [hangeul_birth_vowels/](file:///d:/Entertainments/DevEnvironment/autovideo/hangeul_birth_vowels) 하위에 빌드 및 정비해 주십시오.
-2. `scenario.txt` 각 씬 내에 Google Flow 자동화 생성에 쓰일 이미지/동영상 연출 프롬프트를 상세하게 보강해 주십시오. (예: 유명인 방지 우회 단어 적용 등)
-3. 레이어 합성을 위해 캐릭터 배치(cx, cy, scale)와 텍스트 카드 오버레이 설정 값을 최종 검토하여 기재해 주십시오.
+## 5. Claude 감독(Director) 위임 태스크
+1. 본 초안 기획과 딥리서치 문서([hangeul_birth_vowels_deep_research.md](file:///C:/Users/antigravity/.gemini/antigravity/brain/ddcce0ae-4499-40e2-a60b-84f4b372fe49/scratch/hangeul_birth_vowels_deep_research.md))를 바탕으로, 최종 컴파일러가 인식할 정밀 대본 파일인 `scenario.txt`를 프로젝트 폴더 [hangeul_birth_vowels/](file:///d:/Entertainments/DevEnvironment/autovideo/hangeul_birth_vowels) 하위에 빌드해 주십시오.
+2. `scenario.txt` 안에 **한국어 스크립트와 영어 스크립트가 명확히 분리**되어 기재되도록 하고, 각각의 나레이션 mp3 (gTTS 여성음, 속도 배율 1.1x 적용) 파일들이 scene 단위로 바인딩되도록 작성하십시오.
+3. 구글 Flow 자동화 생성에 쓰일 씬별 연출 프롬프트를 상세하게 보강해 주십시오. (예: 유명인 방지 우회 단어 적용 등)
+4. 레이어 합성을 위해 캐릭터 배치(cx, cy, scale)와 텍스트 카드 오버레이 설정 값을 최종 검토하여 기재해 주십시오.
