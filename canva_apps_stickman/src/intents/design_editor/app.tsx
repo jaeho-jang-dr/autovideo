@@ -25,6 +25,7 @@ export const App = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeTab, setActiveTab] = useState<"character" | "letter" | "object">("character");
 
   // 로컬 개발 서버 및 프로덕션 서버 fallback 처리
   const BASE_URLS = [
@@ -98,10 +99,10 @@ export const App = () => {
 
   const filteredCharacters = characters.filter((char) => {
     const query = searchQuery.toLowerCase();
-    return (
-      char.name_kr.toLowerCase().includes(query) ||
-      char.name_en.toLowerCase().includes(query)
-    );
+    const matchesSearch = char.name_kr.toLowerCase().includes(query) ||
+      char.name_en.toLowerCase().includes(query);
+    const matchesTab = char.type === activeTab;
+    return matchesSearch && matchesTab;
   });
 
   return (
@@ -112,6 +113,34 @@ export const App = () => {
             🎨 Stickman (Zolla) Importer
           </Text>
         </Box>
+
+        {/* Tab Buttons */}
+        <div style={{ display: "flex", gap: "4px" }}>
+          {(["character", "letter", "object"] as const).map((tab) => {
+            const label = tab === "character" ? "Characters" : tab === "letter" ? "Letters" : "Objects";
+            const on = activeTab === tab;
+            return (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                style={{
+                  flex: 1,
+                  padding: "6px 4px",
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                  borderRadius: "4px",
+                  border: "1px solid rgba(0,0,0,0.1)",
+                  background: on ? "#b5852a" : "#fff",
+                  color: on ? "#fff" : "#1c1813",
+                  cursor: "pointer",
+                  transition: "all 0.15s ease"
+                }}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
 
         <input
           type="text"

@@ -40,6 +40,16 @@ const L = {
   week: isEn ? 'Week' : '주차',
   locked: isEn ? 'Locked' : '잠김',
   close: isEn ? 'Close' : '닫기',
+  
+  // 5 Components Labels
+  videoLabel: isEn ? '1. Lecture Video (7-8 mins)' : '1. 강의 동영상 (7-8분)',
+  podcastLabel: isEn ? '2. Audio Podcast (20 mins)' : '2. 오디오 팟캐스트 (20분)',
+  pdfLabel: isEn ? '3. Study Guide PDF (15 pages)' : '3. 학습 가이드 PDF (15페이지)',
+  notesLabel: isEn ? '4. Lecture & Study Notes' : '4. 강의 및 학습 노트',
+  gameLabel: isEn ? '5. Interactive Hangeul Game' : '5. 아케이드 한글 게임',
+  downloadPdf: isEn ? 'Download Study Guide PDF' : '학습 가이드 PDF 다운로드',
+  playGame: isEn ? 'Launch Hangeul Game Cockpit' : '한글 게임 콕핏 실행',
+  prepLabel: isEn ? 'Coming Soon / Under Preparation' : '준비 중 / 순차 개방 예정',
 };
 
 // 클라이언트 스크립트로 넘길 데이터 (현재 언어로 확정)
@@ -73,6 +83,16 @@ const payload = {
     maxedMsg: isEn ? 'All weeks already unlocked' : '모든 주차가 이미 해금됨',
     needPass: isEn ? 'Pass condition not met — cannot unlock' : '통과 조건 미달 — 해금 불가',
     hours: isEn ? 'h' : '시간', mins: isEn ? 'm' : '분',
+    
+    // 5 Components
+    videoLabel: L.videoLabel,
+    podcastLabel: L.podcastLabel,
+    pdfLabel: L.pdfLabel,
+    notesLabel: L.notesLabel,
+    gameLabel: L.gameLabel,
+    downloadPdf: L.downloadPdf,
+    playGame: L.playGame,
+    prepLabel: L.prepLabel,
   },
 };
 ---
@@ -148,10 +168,15 @@ const payload = {
     {LEVELS.map((lv, i) => (
       <div class:list={["week-grid", { hidden: i !== 0 }]} data-grid={lv}>
         {weeksByLevel(lv).map((w) => (
-          <button class="week-card" type="button" data-level={lv} data-week={w.week}>
+          <button class={`week-card${lv === 'beginner' && (w.week === 1 || w.week === 2) ? ' has-thumb' : ''}`} type="button" data-level={lv} data-week={w.week}>
+            {lv === 'beginner' && (w.week === 1 || w.week === 2) && (
+              <img class="wc-thumb" src={`/docs/hangeul_w${w.week}_thumbnail_${lang}.png`} alt={weekTitle(w, lang)} loading="lazy" />
+            )}
             <div class="wc-top">
               <span class="wc-week">{L.week} {w.week}</span>
-              <span class="wc-lock" aria-hidden="true">🔒</span>
+              {lv === 'beginner' && (w.week === 1 || w.week === 2)
+                ? <span class="wc-play" aria-hidden="true">▶</span>
+                : <span class="wc-lock" aria-hidden="true">🔒</span>}
             </div>
             <h3 class="wc-title">{weekTitle(w, lang)}</h3>
             <p class="wc-target">{w.target_letters}</p>
@@ -169,7 +194,42 @@ const payload = {
       <span class="modal-week" id="modal-week"></span>
       <h2 class="modal-title" id="modal-title"></h2>
       <p class="modal-target" id="modal-target"></p>
-      <ol class="modal-steps" id="modal-steps"></ol>
+      
+      <!-- 5 Components Sequential Structure -->
+      <div class="modal-components">
+        <!-- 1. Video Section -->
+        <div class="mcomp-section" id="mcomp-video-sec">
+          <h4 class="mcomp-title">{L.videoLabel}</h4>
+          <div class="mcomp-content" id="mcomp-video-content"></div>
+        </div>
+
+        <!-- 2. Podcast Section -->
+        <div class="mcomp-section" id="mcomp-podcast-sec">
+          <h4 class="mcomp-title">{L.podcastLabel}</h4>
+          <div class="mcomp-content" id="mcomp-podcast-content"></div>
+        </div>
+
+        <!-- 3. PDF Section -->
+        <div class="mcomp-section" id="mcomp-pdf-sec">
+          <h4 class="mcomp-title">{L.pdfLabel}</h4>
+          <div class="mcomp-content" id="mcomp-pdf-content"></div>
+        </div>
+
+        <!-- 4. Study Notes Section -->
+        <div class="mcomp-section" id="mcomp-notes-sec">
+          <h4 class="mcomp-title">{L.notesLabel}</h4>
+          <div class="mcomp-content">
+            <ol class="modal-steps" id="modal-steps"></ol>
+          </div>
+        </div>
+
+        <!-- 5. Game Section -->
+        <div class="mcomp-section" id="mcomp-game-sec">
+          <h4 class="mcomp-title">{L.gameLabel}</h4>
+          <div class="mcomp-content" id="mcomp-game-content"></div>
+        </div>
+      </div>
+
       <div class="modal-reward" id="modal-reward"></div>
     </div>
   </div>
@@ -185,6 +245,121 @@ const payload = {
   const LEVELS = DATA.levels || [];
   const WEEKS = DATA.weeks || [];
   const REWARDS = DATA.rewards || {};
+
+  // ---- 1주차 상세 공부 노트 (Bilingual) ----
+  const WEEK1_NOTES = {
+    ko: [
+      {
+        n: 1,
+        label: LABELS.step1,
+        time: '20' + LABELS.mins,
+        body: `
+          <div class="notes-detail">
+            <h5>1. 한글의 창제 배경</h5>
+            <p>한글(훈민정음)은 1443년 세종대왕에 의해 창제되었습니다. 당시 백성들은 한자가 너무 복잡하여 글을 읽고 쓰지 못했고, 이로 인해 억울한 일을 겪었습니다. 세종대왕은 백성들을 가엾게 여겨 누구나 쉽게 배울 수 있는 새로운 문자 28자를 만들었습니다.</p>
+            <h5>2. 모음의 천지인(天地人) 창제 원리</h5>
+            <p>한글 모음은 우주의 세 가지 기본 요소인 하늘(•), 땅(ㅡ), 사람(ㅣ)을 본떠서 만들었습니다.</p>
+            <ul>
+              <li><strong>하늘 (•)</strong>: 둥근 하늘을 상징하는 점.</li>
+              <li><strong>땅 (ㅡ)</strong>: 평평한 땅을 상징하는 가로선.</li>
+              <li><strong>사람 (ㅣ)</strong>: 서 있는 사람을 상징하는 세로선.</li>
+            </ul>
+            <h5>3. 모음 조화와 8개 단모음</h5>
+            <p>천지인이 결합하여 다양한 단모음(ㅏ, ㅓ, ㅗ, ㅜ 등)을 형성하며, 양성 모음(ㅏ, ㅗ)과 음성 모음(ㅓ, ㅜ)이 어울리는 자연스러운 모음 조화 규칙을 가집니다.</p>
+          </div>
+        `
+      },
+      {
+        n: 2,
+        label: LABELS.step2,
+        time: '20' + LABELS.mins,
+        body: `
+          <div class="notes-detail">
+            <h5>1. 단모음 8개 발음의 핵심 법칙</h5>
+            <p>한국어 단모음(ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ)을 발음할 때는 소리를 내는 도중에 입술이나 혀가 흔들리지 않고 고정되어 있어야 합니다. (영어의 이중모음화 현상과 다름)</p>
+            <h5>2. 입모양 집중 트레이닝</h5>
+            <ul>
+              <li><strong>'ㅓ' vs 'ㅗ'</strong>: 'ㅓ'는 턱을 아래로 떨어뜨리며 입을 세로로 크게 벌리고 입술은 평평하게 유지합니다. 반대로 'ㅗ'는 빨대를 문 것처럼 입술을 동그랗게 모아야 합니다.</li>
+              <li><strong>'ㅜ' vs 'ㅡ'</strong>: 'ㅜ'는 입술을 동그랗게 모아 앞으로 쭉 내밀고, 'ㅡ'는 양옆으로 납작하게 벌려 억지 미소를 짓듯이 발음합니다.</li>
+            </ul>
+            <h5>3. 자석 블록을 이용한 모아쓰기</h5>
+            <p>초성(자음), 중성(모음)의 결합을 음절 상자(Elkonin Box) 속에서 시각화하여 단모음의 위치를 체득합니다.</p>
+          </div>
+        `
+      },
+      {
+        n: 3,
+        label: LABELS.step3,
+        time: '20' + LABELS.mins,
+        body: `
+          <div class="notes-detail">
+            <h5>1. 거울 보고 입모양 자가점검</h5>
+            <p>거울 앞에서 단모음들을 발음하며 스스로 입 모양을 점검합니다. 특히 'ㅗ, ㅜ' 발음 시에만 입술이 둥글려지고, 'ㅓ, ㅡ' 발음 시에는 입술이 납작하고 평평하게 유지되는지 눈으로 확인합니다.</p>
+            <h5>2. 일상 속 소리한글 콕핏 연계</h5>
+            <p>소리한글 게임 콕핏에 접속하여 3D 기계식 네온 키보드로 단모음의 음질을 듣고 직접 따라 하며 마이크 평가를 받아 봅니다.</p>
+            <h5>3. 나의 첫 단어 매칭</h5>
+            <p>'아이, 오이, 우유, 여우'와 같이 단모음만으로 구성된 실생활 기초 단어를 정확한 발음으로 또박또박 읽는 연습을 기록해 봅니다.</p>
+          </div>
+        `
+      }
+    ],
+    en: [
+      {
+        n: 1,
+        label: LABELS.step1,
+        time: '20' + LABELS.mins,
+        body: `
+          <div class="notes-detail">
+            <h5>1. Background of Hangeul's Creation</h5>
+            <p>Hangeul (originally called Hunminjeongeum) was created in 1443 by King Sejong the Great. At that time, commoners suffered because they couldn't read or write the complex Chinese characters. Pitying his people, King Sejong created 28 new letters that anyone could easily learn.</p>
+            <h5>2. The Cheon-Ji-In (Heaven-Earth-Human) Vowel Principle</h5>
+            <p>Hangeul vowels were modeled after the three fundamental elements of the universe:</p>
+            <ul>
+              <li><strong>Heaven (•)</strong>: A round dot symbolizing the circular sky.</li>
+              <li><strong>Earth (ㅡ)</strong>: A horizontal line symbolizing the flat ground.</li>
+              <li><strong>Human (ㅣ)</strong>: A vertical line symbolizing a standing person.</li>
+            </ul>
+            <h5>3. Vowel Harmony & the 8 Simple Vowels</h5>
+            <p>Combining these shapes creates the basic vowels (ㅏ, ㅓ, ㅗ, ㅜ, etc.). They follow the rule of Vowel Harmony, where bright vowels (ㅏ, ㅗ) and dark vowels (ㅓ, ㅜ) naturally cluster together.</p>
+          </div>
+        `
+      },
+      {
+        n: 2,
+        label: LABELS.step2,
+        time: '20' + LABELS.mins,
+        body: `
+          <div class="notes-detail">
+            <h5>1. Core Principle of the 8 Simple Vowels</h5>
+            <p>When pronouncing Korean monophthongs (ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ), your mouth and tongue shapes must remain perfectly static and stable throughout the sound.</p>
+            <h5>2. Targeted Mouth Shape Training</h5>
+            <ul>
+              <li><strong>'ㅓ' vs 'ㅗ'</strong>: For 'ㅓ', drop your jaw vertically to open wide while keeping your lips flat. For 'ㅗ', round your lips tightly as if holding a straw.</li>
+              <li><strong>'ㅜ' vs 'ㅡ'</strong>: For 'ㅜ', purse your lips tightly and push them forward. For 'ㅡ', stretch your lips flat horizontally as if forcing a smile.</li>
+            </ul>
+            <h5>3. Syllable Assembling (Elkonin Box)</h5>
+            <p>Practice visualizing and placing vowel blocks alongside consonant blocks inside the Elkonin box to master syllable structures.</p>
+          </div>
+        `
+      },
+      {
+        n: 3,
+        label: LABELS.step3,
+        time: '20' + LABELS.mins,
+        body: `
+          <div class="notes-detail">
+            <h5>1. Mirror Self-Check</h5>
+            <p>Say the simple vowels in front of a mirror. Ensure your lips are round ONLY for 'ㅗ' and 'ㅜ', and remain completely flat for 'ㅓ' and 'ㅡ'.</p>
+            <h5>2. Practice with Sori Hangeul Cockpit</h5>
+            <p>Access the arcade game cockpit, press the 3D mechanical neon keys to hear the native pronunciation, and record your voice to receive real-time pronunciation feedback.</p>
+            <h5>3. My First Word Matching</h5>
+            <p>Practice reading basic, real-life words composed solely of simple vowels (e.g., 아이 [child], 오이 [cucumber], 우유 [milk], 여우 [fox]) with clear, accurate vocalization.</p>
+          </div>
+        `
+      }
+    ]
+  };
+
 
   // ---- localStorage 진도 상태 ----
   const KEY_UNLOCK = 'hangeul_unlocked_week';
@@ -381,20 +556,77 @@ const payload = {
     });
     $('modal-target').innerHTML = targetHtml;
 
-    const steps = [
-      { n: 1, label: LABELS.step1, body: w.concept, time: '20' + LABELS.mins },
-      { n: 2, label: LABELS.step2, body: w.practice, time: '20' + LABELS.mins },
-      { n: 3, label: LABELS.step3, body: w.application, time: '20' + LABELS.mins },
-    ];
+    // 5 Components Dynamic Content Binding
+    const isWeek1 = lv === 'beginner' && wk === 1;
+    const wkNum = (lv === 'beginner' && (wk === 1 || wk === 2)) ? wk : 0;   // 영상 있는 주차
+    const langSuffix = DATA.lang === 'ko' ? 'ko' : 'en';
+
+    // (1) Video Content
+    const videoContentEl = $('mcomp-video-content');
+    if (wkNum) {
+      const vsfx = DATA.lang === 'ko' ? 'ko' : 'en';
+      const fsLabel = DATA.lang === 'ko' ? '전체화면' : 'Fullscreen';
+      videoContentEl.innerHTML = `
+        <div class="mcomp-video-wrap">
+          <video class="mcomp-video-player" id="lesson-video" controls playsinline preload="metadata"
+                 poster="/docs/hangeul_w${wkNum}_thumbnail_${vsfx}.png" src="/docs/hangeul_w${wkNum}_stickman_${vsfx}.mp4"></video>
+          <button class="mcomp-fs-btn" type="button" aria-label="${fsLabel}" title="${fsLabel}">⛶</button>
+        </div>`;
+      const _v = videoContentEl.querySelector('#lesson-video');
+      const _fs = videoContentEl.querySelector('.mcomp-fs-btn');
+      if (_fs && _v) _fs.addEventListener('click', () => {
+        const fn = _v.requestFullscreen || _v.webkitRequestFullscreen || _v.webkitEnterFullscreen || _v.msRequestFullscreen;
+        if (fn) { try { fn.call(_v); } catch (e) { _v.play(); } } else { _v.play(); }
+      });
+    } else {
+      videoContentEl.innerHTML = `<div class="mcomp-placeholder">${LABELS.prepLabel}</div>`;
+    }
+
+    // (2) Podcast Content
+    const podcastContentEl = $('mcomp-podcast-content');
+    if (isWeek1) {
+      const podcastFileSuffix = DATA.lang === 'ko' ? '' : '_en';
+      podcastContentEl.innerHTML = `<audio class="mcomp-audio-player" controls src="/audio/podcasts/hangeul_week_1_podcast${podcastFileSuffix}.m4a"></audio>`;
+    } else {
+      podcastContentEl.innerHTML = `<div class="mcomp-placeholder">${LABELS.prepLabel}</div>`;
+    }
+
+    // (3) PDF Content
+    const pdfContentEl = $('mcomp-pdf-content');
+    if (isWeek1) {
+      const pdfFileSuffix = DATA.lang === 'ko' ? '' : '_en';
+      pdfContentEl.innerHTML = `<a class="mcomp-link-btn" href="/docs/hangeul_week_1_guide${pdfFileSuffix}.pdf" download>📁 ${LABELS.downloadPdf}</a>`;
+    } else {
+      pdfContentEl.innerHTML = `<div class="mcomp-placeholder">${LABELS.prepLabel}</div>`;
+    }
+
+    // (4) Study Notes (Steps)
+    let steps = [];
+    if (isWeek1) {
+      steps = WEEK1_NOTES[DATA.lang] || [];
+    } else {
+      steps = [
+        { n: 1, label: LABELS.step1, body: `<p>${w.concept}</p>`, time: '20' + LABELS.mins },
+        { n: 2, label: LABELS.step2, body: `<p>${w.practice}</p>`, time: '20' + LABELS.mins },
+        { n: 3, label: LABELS.step3, body: `<p>${w.application}</p>`, time: '20' + LABELS.mins },
+      ];
+    }
     $('modal-steps').innerHTML = steps.map((s) =>
       `<li class="mstep"><span class="ms-no">${s.n}</span>` +
       `<div class="ms-body"><div class="ms-head"><b>${s.label}</b><span class="ms-time">${s.time}</span></div>` +
-      `<p>${s.body}</p></div></li>`
+      `<div class="ms-body-desc">${s.body}</div></div></li>`
     ).join('');
+
+    // (5) Game Content
+    const gameContentEl = $('mcomp-game-content');
+    gameContentEl.innerHTML = `<a class="mcomp-link-btn" href="${DATA.lang === 'ko' ? '/ko/groove' : '/groove'}">🎮 ${LABELS.playGame}</a>`;
+
     $('modal-reward').innerHTML =
       `<span class="mr-label">🎁 ${LABELS.rewardTitle}</span><span class="mr-text">${REWARDS[lv] || ''}</span>`;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
+    const _mc = modal.querySelector('.modal-card');
+    if (_mc) _mc.scrollTop = 0;   // 영상이 맨 위에 보이도록
   }
 
   // 모달 내 오디오 칩 클릭 이벤트 위임 리스너 추가
@@ -596,6 +828,18 @@ const payload = {
   .wc-lock { font-size: 0.9rem; opacity: 0; transition: opacity 0.2s; }
   .wc-title { font-size: 1.04rem; font-weight: 700; line-height: 1.3; color: var(--c-ink); }
   .wc-target { font-size: 0.82rem; color: var(--c-ink-3); line-height: 1.5; word-break: keep-all; }
+  /* 1주차: 영상 썸네일 카드 */
+  .week-card.has-thumb { padding-top: 0; overflow: hidden; }
+  .wc-thumb {
+    width: calc(100% + 40px); margin: 0 -20px 12px; aspect-ratio: 16 / 9; object-fit: cover;
+    display: block; border-bottom: 1px solid var(--c-line);
+  }
+  .wc-play {
+    font-size: 0.78rem; color: #fff; background: var(--c-gold); width: 24px; height: 24px;
+    border-radius: 50%; display: grid; place-items: center; padding-left: 2px;
+    box-shadow: 0 2px 8px var(--c-glow);
+  }
+  .week-card.has-thumb:hover .wc-thumb { filter: brightness(1.04); }
 
   /* 잠긴 카드 */
   .week-card.locked {
@@ -610,8 +854,8 @@ const payload = {
   .cur-modal.open { display: grid; place-items: center; padding: 22px; }
   .modal-backdrop { position: absolute; inset: 0; background: rgba(28, 22, 14, 0.5); backdrop-filter: blur(4px); }
   .modal-card {
-    position: relative; width: 100%; max-width: 560px; max-height: 88vh; overflow-y: auto;
-    padding: 32px 30px; border-radius: 22px;
+    position: relative; width: 100%; max-width: 1180px; max-height: 92vh; overflow-y: auto;
+    padding: 30px 30px; border-radius: 22px;
     background: var(--c-panel); border: 1px solid var(--c-line-strong);
     box-shadow: 0 30px 70px rgba(28, 18, 8, 0.4);
     animation: modalIn 0.26s cubic-bezier(0.16, 1, 0.3, 1);
@@ -658,6 +902,11 @@ const payload = {
   .ms-head b { font-size: 0.98rem; color: var(--c-ink); }
   .ms-time { font-size: 0.74rem; color: var(--c-ink-3); font-weight: 600; }
   .ms-body p { margin: 0; font-size: 0.9rem; color: var(--c-ink-2); line-height: 1.55; word-break: keep-all; }
+  .ms-body-desc { font-size: 0.9rem; color: var(--c-ink-2); line-height: 1.55; word-break: keep-all; }
+  .notes-detail h5 { font-size: 0.92rem; font-weight: 700; color: var(--c-ink); margin: 12px 0 6px 0; }
+  .notes-detail p { font-size: 0.88rem; color: var(--c-ink-2); margin: 0 0 10px 0; line-height: 1.5; }
+  .notes-detail ul { margin: 6px 0 10px 16px; padding: 0; font-size: 0.88rem; color: var(--c-ink-2); }
+  .notes-detail li { margin-bottom: 4px; }
   .modal-reward {
     margin-top: 20px; padding: 16px; border-radius: 14px;
     background: rgba(181, 133, 42, 0.1); border: 1px dashed var(--c-gold);
@@ -665,6 +914,95 @@ const payload = {
   }
   .mr-label { font-size: 0.78rem; font-weight: 800; color: var(--c-gold); text-transform: uppercase; letter-spacing: 0.04em; }
   .mr-text { font-size: 0.92rem; color: var(--c-ink); line-height: 1.5; }
+
+  /* 5 Components Sequential Styles */
+  .modal-components {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  .mcomp-section {
+    background: var(--c-card);
+    border: 1px solid var(--c-line);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 4px 14px rgba(60, 48, 30, 0.04);
+  }
+  .mcomp-title {
+    font-family: var(--font-display, 'Outfit', sans-serif);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--c-gold);
+    margin: 0 0 12px 0;
+    border-left: 3px solid var(--c-gold);
+    padding-left: 8px;
+    line-height: 1.2;
+  }
+  .mcomp-content {
+    font-size: 0.9rem;
+    color: var(--c-ink-2);
+  }
+  .mcomp-placeholder {
+    padding: 14px;
+    background: rgba(28, 24, 19, 0.03);
+    border: 1px dashed var(--c-line);
+    border-radius: 8px;
+    text-align: center;
+    color: var(--c-ink-3);
+    font-style: italic;
+    font-size: 0.85rem;
+  }
+  .mcomp-link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.16s ease, box-shadow 0.22s ease, background-color 0.2s ease, color 0.2s ease;
+    border: 1px solid var(--c-gold);
+    background: var(--c-gold-soft);
+    color: var(--c-gold);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .mcomp-link-btn:hover {
+    background: var(--c-gold);
+    color: #fff;
+    box-shadow: 0 4px 12px var(--c-glow);
+    transform: translateY(-1px);
+  }
+  .mcomp-video-wrap { position: relative; width: 100%; display: flex; justify-content: center; }
+  .mcomp-video-player {
+    width: 100%;
+    max-width: calc(74vh * 16 / 9);   /* 데스크톱처럼 크게, 세로 화면에서도 안 잘리게 */
+    max-height: 74vh;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  .mcomp-fs-btn {
+    position: absolute; top: 10px; right: 10px; z-index: 2;
+    width: 38px; height: 38px; border-radius: 10px; cursor: pointer;
+    border: none; background: rgba(20, 16, 10, 0.55); color: #fff; font-size: 1.05rem;
+    display: grid; place-items: center; backdrop-filter: blur(3px);
+    transition: background-color 0.18s, transform 0.18s;
+  }
+  .mcomp-fs-btn:hover { background: var(--c-gold); transform: scale(1.06); }
+  .mcomp-audio-player {
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+  }
 
   @media (max-width: 640px) {
     .readout { grid-template-columns: 1fr; }

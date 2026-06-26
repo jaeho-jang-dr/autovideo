@@ -414,6 +414,7 @@ def main():
     parser.add_argument("--srt-en", default="", help="Path to write an English .srt subtitle (timed from text_en)")
     parser.add_argument("--srt-ko", default="", help="Path to write a Korean .srt subtitle (timed from the narration text)")
     parser.add_argument("--embed-subs", action="store_true", help="After rendering, mux en/ko SRT into the mp4 as soft (toggleable) CC tracks; auto-writes <out>.en.srt / <out>.ko.srt if --srt paths are not given")
+    parser.add_argument("--lang", choices=["ko", "en"], default="ko", help="Narration + burned-subtitle language. ko: scene text / Korean TTS. en: scene text_en / English TTS. Default ko (backward compatible).")
     args = parser.parse_args()
 
     # Load profile if provided
@@ -516,9 +517,12 @@ def main():
             else:
                 print("Warning: scene_0.png or image file not found. Skipping thumbnail auto-generation.")
         
-        # Generate TTS (한국어 나레이션 고정)
-        print(f"Generating TTS for Scene {scene['id']} (ko)...")
-        save_tts(scene['text'], audio_path, lang='ko')
+        # Generate TTS in the selected narration language (ko: text / en: text_en).
+        narration_text = scene['text_en'] if args.lang == 'en' else scene['text']
+        if not narration_text.strip():
+            narration_text = scene['text']  # fall back to Korean if English is missing
+        print(f"Generating TTS for Scene {scene['id']} ({args.lang})...")
+        save_tts(narration_text, audio_path, lang=args.lang)
         
         # Load audio and apply 1.1x speed MultiplySpeed
         raw_audio = AudioFileClip(audio_path)
@@ -633,10 +637,14 @@ def main():
 
         composite_elements = [base_clip]
 
-        # Bottom subtitle (한국어 자막) — burned ONLY when --no-burn-subs is not set.
-        # For toggleable YouTube CC (en/ko/off) we skip burning and export SRT instead.
-        if not args.no_burn_subs and scene['text'].strip():
-            wrapped_text = wrap_text(scene['text'], max_chars=max_chars)
+        # Bottom subtitle — burned ONLY when --no-burn-subs is not set, in the
+        # selected narration language. For toggleable YouTube CC (en/ko/off) we
+        # skip burning and export SRT instead.
+        sub_source = scene['text_en'] if args.lang == 'en' else scene['text']
+        if not sub_source.strip():
+            sub_source = scene['text']
+        if not args.no_burn_subs and sub_source.strip():
+            wrapped_text = wrap_text(sub_source, max_chars=max_chars)
             try:
                 txt_clip = TextClip(
                     text=wrapped_text,
