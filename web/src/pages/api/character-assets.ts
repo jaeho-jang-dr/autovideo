@@ -28,7 +28,7 @@ export const GET: APIRoute = async () => {
       const { data, error } = await supabase
         .from('assets')
         .select('id,name_kr,name_en,type,file_path,flow_prompt')
-        .eq('type', 'character')
+        .in('type', ['character', 'letter', 'object'])
         .order('id', { ascending: true });
       if (!error && data && data.length > 0) {
         return json({ source: 'supabase', count: data.length, characters: data });

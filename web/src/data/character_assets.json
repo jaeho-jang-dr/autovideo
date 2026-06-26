@@ -45,6 +45,186 @@
     "flow_prompt": "Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform walking out of a door towards a street, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text"
   },
   {
+    "id": 6,
+    "name_kr": "침대",
+    "name_en": "Bed",
+    "type": "object",
+    "file_path": "bed.png",
+    "url": "/images/objects/bed.png",
+    "flow_prompt": "Minimalist 2D line art of a simple bed"
+  },
+  {
+    "id": 7,
+    "name_kr": "이불",
+    "name_en": "Blanket",
+    "type": "object",
+    "file_path": "blanket.png",
+    "url": "/images/objects/blanket.png",
+    "flow_prompt": "Minimalist 2D line art of a folded warm blanket"
+  },
+  {
+    "id": 8,
+    "name_kr": "베개",
+    "name_en": "Pillow",
+    "type": "object",
+    "file_path": "pillow.png",
+    "url": "/images/objects/pillow.png",
+    "flow_prompt": "Minimalist 2D line art of a soft bed pillow"
+  },
+  {
+    "id": 9,
+    "name_kr": "시계",
+    "name_en": "Clock",
+    "type": "object",
+    "file_path": "clock.png",
+    "url": "/images/objects/clock.png",
+    "flow_prompt": "Minimalist 2D line art of a twin-bell alarm clock, yellow colored highlights"
+  },
+  {
+    "id": 10,
+    "name_kr": "책가방",
+    "name_en": "Backpack",
+    "type": "object",
+    "file_path": "backpack.png",
+    "url": "/images/objects/backpack.png",
+    "flow_prompt": "Minimalist 2D line art of a student backpack, blue colored highlights"
+  },
+  {
+    "id": 11,
+    "name_kr": "책",
+    "name_en": "Book",
+    "type": "object",
+    "file_path": "book.png",
+    "url": "/images/objects/book.png",
+    "flow_prompt": "Minimalist 2D line art of a closed thick textbook"
+  },
+  {
+    "id": 12,
+    "name_kr": "공책",
+    "name_en": "Notebook",
+    "type": "object",
+    "file_path": "notebook.png",
+    "url": "/images/objects/notebook.png",
+    "flow_prompt": "Minimalist 2D line art of an open spiral notebook"
+  },
+  {
+    "id": 13,
+    "name_kr": "연필",
+    "name_en": "Pencil",
+    "type": "object",
+    "file_path": "pencil.png",
+    "url": "/images/objects/pencil.png",
+    "flow_prompt": "Minimalist 2D line art of a wooden pencil"
+  },
+  {
+    "id": 14,
+    "name_kr": "거울",
+    "name_en": "Mirror",
+    "type": "object",
+    "file_path": "mirror.png",
+    "url": "/images/objects/mirror.png",
+    "flow_prompt": "Minimalist 2D line art of a simple wall mirror"
+  },
+  {
+    "id": 15,
+    "name_kr": "수건",
+    "name_en": "Towel",
+    "type": "object",
+    "file_path": "towel.png",
+    "url": "/images/objects/towel.png",
+    "flow_prompt": "Minimalist 2D line art of a folded bathroom towel hanging"
+  },
+  {
+    "id": 16,
+    "name_kr": "칫솔",
+    "name_en": "Toothbrush",
+    "type": "object",
+    "file_path": "toothbrush.png",
+    "url": "/images/objects/toothbrush.png",
+    "flow_prompt": "Minimalist 2D line art of a toothbrush, green colored highlights"
+  },
+  {
+    "id": 17,
+    "name_kr": "비누",
+    "name_en": "Soap",
+    "type": "object",
+    "file_path": "soap.png",
+    "url": "/images/objects/soap.png",
+    "flow_prompt": "Minimalist 2D line art of a bar of soap on a dish"
+  },
+  {
+    "id": 18,
+    "name_kr": "식탁",
+    "name_en": "Table",
+    "type": "object",
+    "file_path": "table.png",
+    "url": "/images/objects/table.png",
+    "flow_prompt": "Minimalist 2D line art of a simple dining table"
+  },
+  {
+    "id": 19,
+    "name_kr": "숟가락",
+    "name_en": "Spoon",
+    "type": "object",
+    "file_path": "spoon.png",
+    "url": "/images/objects/spoon.png",
+    "flow_prompt": "Minimalist 2D line art of a spoon, silver highlights"
+  },
+  {
+    "id": 20,
+    "name_kr": "젓가락",
+    "name_en": "Chopsticks",
+    "type": "object",
+    "file_path": "chopsticks.png",
+    "url": "/images/objects/chopsticks.png",
+    "flow_prompt": "Minimalist 2D line art of a pair of metal chopsticks"
+  },
+  {
+    "id": 21,
+    "name_kr": "컵",
+    "name_en": "Cup",
+    "type": "object",
+    "file_path": "cup.png",
+    "url": "/images/objects/cup.png",
+    "flow_prompt": "Minimalist 2D line art of a simple water cup"
+  },
+  {
+    "id": 22,
+    "name_kr": "신발",
+    "name_en": "Shoes",
+    "type": "object",
+    "file_path": "shoes.png",
+    "url": "/images/objects/shoes.png",
+    "flow_prompt": "Minimalist 2D line art of a pair of sneakers"
+  },
+  {
+    "id": 23,
+    "name_kr": "현관문",
+    "name_en": "Door",
+    "type": "object",
+    "file_path": "door.png",
+    "url": "/images/objects/door.png",
+    "flow_prompt": "Minimalist 2D line art of a metal front door"
+  },
+  {
+    "id": 24,
+    "name_kr": "버스정류장",
+    "name_en": "Bus Stop",
+    "type": "object",
+    "file_path": "bus_stop.png",
+    "url": "/images/objects/bus_stop.png",
+    "flow_prompt": "Minimalist 2D line art of a city bus stop"
+  },
+  {
+    "id": 25,
+    "name_kr": "버스",
+    "name_en": "Bus",
+    "type": "object",
+    "file_path": "bus.png",
+    "url": "/images/objects/bus.png",
+    "flow_prompt": "Minimalist 2D line art of a city bus, green colored highlights"
+  },
+  {
     "id": 26,
     "name_kr": "지은_취침",
     "name_en": "Jieun_Sleeping",
@@ -1744,5 +1924,1364 @@
     "file_path": "injun_bird_watching.png",
     "url": "/images/characters/injun_bird_watching.png",
     "flow_prompt": "looking up through binoculars at the sky, full body"
+  },
+  {
+    "id": 813,
+    "name_kr": "ㄱ",
+    "name_en": "Letter_ㄱ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㄱ.png",
+    "url": "/images/letters/letter_ㄱ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㄱ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 814,
+    "name_kr": "ㄲ",
+    "name_en": "Letter_ㄲ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㄲ.png",
+    "url": "/images/letters/letter_ㄲ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㄲ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 815,
+    "name_kr": "ㄴ",
+    "name_en": "Letter_ㄴ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㄴ.png",
+    "url": "/images/letters/letter_ㄴ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㄴ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 816,
+    "name_kr": "ㄷ",
+    "name_en": "Letter_ㄷ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㄷ.png",
+    "url": "/images/letters/letter_ㄷ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㄷ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 817,
+    "name_kr": "ㄸ",
+    "name_en": "Letter_ㄸ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㄸ.png",
+    "url": "/images/letters/letter_ㄸ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㄸ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 818,
+    "name_kr": "ㄹ",
+    "name_en": "Letter_ㄹ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㄹ.png",
+    "url": "/images/letters/letter_ㄹ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㄹ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 819,
+    "name_kr": "ㅁ",
+    "name_en": "Letter_ㅁ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅁ.png",
+    "url": "/images/letters/letter_ㅁ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅁ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 820,
+    "name_kr": "ㅂ",
+    "name_en": "Letter_ㅂ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅂ.png",
+    "url": "/images/letters/letter_ㅂ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅂ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 821,
+    "name_kr": "ㅃ",
+    "name_en": "Letter_ㅃ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅃ.png",
+    "url": "/images/letters/letter_ㅃ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅃ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 822,
+    "name_kr": "ㅅ",
+    "name_en": "Letter_ㅅ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅅ.png",
+    "url": "/images/letters/letter_ㅅ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅅ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 823,
+    "name_kr": "ㅆ",
+    "name_en": "Letter_ㅆ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅆ.png",
+    "url": "/images/letters/letter_ㅆ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅆ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 824,
+    "name_kr": "ㅇ",
+    "name_en": "Letter_ㅇ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅇ.png",
+    "url": "/images/letters/letter_ㅇ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅇ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 825,
+    "name_kr": "ㅈ",
+    "name_en": "Letter_ㅈ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅈ.png",
+    "url": "/images/letters/letter_ㅈ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅈ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 826,
+    "name_kr": "ㅉ",
+    "name_en": "Letter_ㅉ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅉ.png",
+    "url": "/images/letters/letter_ㅉ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅉ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 827,
+    "name_kr": "ㅊ",
+    "name_en": "Letter_ㅊ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅊ.png",
+    "url": "/images/letters/letter_ㅊ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅊ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 828,
+    "name_kr": "ㅋ",
+    "name_en": "Letter_ㅋ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅋ.png",
+    "url": "/images/letters/letter_ㅋ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅋ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 829,
+    "name_kr": "ㅌ",
+    "name_en": "Letter_ㅌ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅌ.png",
+    "url": "/images/letters/letter_ㅌ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅌ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 830,
+    "name_kr": "ㅍ",
+    "name_en": "Letter_ㅍ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅍ.png",
+    "url": "/images/letters/letter_ㅍ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅍ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 831,
+    "name_kr": "ㅎ",
+    "name_en": "Letter_ㅎ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅎ.png",
+    "url": "/images/letters/letter_ㅎ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅎ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 832,
+    "name_kr": "ㅏ",
+    "name_en": "Letter_ㅏ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅏ.png",
+    "url": "/images/letters/letter_ㅏ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅏ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 833,
+    "name_kr": "ㅐ",
+    "name_en": "Letter_ㅐ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅐ.png",
+    "url": "/images/letters/letter_ㅐ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅐ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 834,
+    "name_kr": "ㅑ",
+    "name_en": "Letter_ㅑ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅑ.png",
+    "url": "/images/letters/letter_ㅑ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅑ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 835,
+    "name_kr": "ㅒ",
+    "name_en": "Letter_ㅒ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅒ.png",
+    "url": "/images/letters/letter_ㅒ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅒ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 836,
+    "name_kr": "ㅓ",
+    "name_en": "Letter_ㅓ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅓ.png",
+    "url": "/images/letters/letter_ㅓ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅓ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 837,
+    "name_kr": "ㅔ",
+    "name_en": "Letter_ㅔ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅔ.png",
+    "url": "/images/letters/letter_ㅔ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅔ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 838,
+    "name_kr": "ㅕ",
+    "name_en": "Letter_ㅕ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅕ.png",
+    "url": "/images/letters/letter_ㅕ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅕ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 839,
+    "name_kr": "ㅖ",
+    "name_en": "Letter_ㅖ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅖ.png",
+    "url": "/images/letters/letter_ㅖ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅖ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 840,
+    "name_kr": "ㅗ",
+    "name_en": "Letter_ㅗ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅗ.png",
+    "url": "/images/letters/letter_ㅗ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅗ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 841,
+    "name_kr": "ㅘ",
+    "name_en": "Letter_ㅘ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅘ.png",
+    "url": "/images/letters/letter_ㅘ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅘ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 842,
+    "name_kr": "ㅙ",
+    "name_en": "Letter_ㅙ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅙ.png",
+    "url": "/images/letters/letter_ㅙ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅙ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 843,
+    "name_kr": "ㅚ",
+    "name_en": "Letter_ㅚ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅚ.png",
+    "url": "/images/letters/letter_ㅚ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅚ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 844,
+    "name_kr": "ㅛ",
+    "name_en": "Letter_ㅛ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅛ.png",
+    "url": "/images/letters/letter_ㅛ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅛ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 845,
+    "name_kr": "ㅜ",
+    "name_en": "Letter_ㅜ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅜ.png",
+    "url": "/images/letters/letter_ㅜ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅜ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 846,
+    "name_kr": "ㅝ",
+    "name_en": "Letter_ㅝ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅝ.png",
+    "url": "/images/letters/letter_ㅝ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅝ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 847,
+    "name_kr": "ㅞ",
+    "name_en": "Letter_ㅞ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅞ.png",
+    "url": "/images/letters/letter_ㅞ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅞ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 848,
+    "name_kr": "ㅟ",
+    "name_en": "Letter_ㅟ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅟ.png",
+    "url": "/images/letters/letter_ㅟ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅟ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 849,
+    "name_kr": "ㅠ",
+    "name_en": "Letter_ㅠ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅠ.png",
+    "url": "/images/letters/letter_ㅠ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅠ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 850,
+    "name_kr": "ㅡ",
+    "name_en": "Letter_ㅡ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅡ.png",
+    "url": "/images/letters/letter_ㅡ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅡ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 851,
+    "name_kr": "ㅢ",
+    "name_en": "Letter_ㅢ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅢ.png",
+    "url": "/images/letters/letter_ㅢ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅢ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 852,
+    "name_kr": "ㅣ",
+    "name_en": "Letter_ㅣ",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_ㅣ.png",
+    "url": "/images/letters/letter_ㅣ.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character 'ㅣ', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 853,
+    "name_kr": "글",
+    "name_en": "Letter_글",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_글.png",
+    "url": "/images/letters/letter_글.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character '글', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 854,
+    "name_kr": "아",
+    "name_en": "Letter_아",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_아.png",
+    "url": "/images/letters/letter_아.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character '아', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 855,
+    "name_kr": "야",
+    "name_en": "Letter_야",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_야.png",
+    "url": "/images/letters/letter_야.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character '야', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 856,
+    "name_kr": "어",
+    "name_en": "Letter_어",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_어.png",
+    "url": "/images/letters/letter_어.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character '어', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 857,
+    "name_kr": "여",
+    "name_en": "Letter_여",
+    "type": "letter",
+    "file_path": "graphics/letters/letter_여.png",
+    "url": "/images/letters/letter_여.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul vowel or consonant character '여', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 858,
+    "name_kr": "기역",
+    "name_en": "Word_기역",
+    "type": "letter",
+    "file_path": "graphics/letters/word_기역.png",
+    "url": "/images/letters/word_기역.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '기역', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 859,
+    "name_kr": "니은",
+    "name_en": "Word_니은",
+    "type": "letter",
+    "file_path": "graphics/letters/word_니은.png",
+    "url": "/images/letters/word_니은.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '니은', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 860,
+    "name_kr": "디귿",
+    "name_en": "Word_디귿",
+    "type": "letter",
+    "file_path": "graphics/letters/word_디귿.png",
+    "url": "/images/letters/word_디귿.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '디귿', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 861,
+    "name_kr": "땅",
+    "name_en": "Word_땅",
+    "type": "letter",
+    "file_path": "graphics/letters/word_땅.png",
+    "url": "/images/letters/word_땅.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '땅', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 862,
+    "name_kr": "리을",
+    "name_en": "Word_리을",
+    "type": "letter",
+    "file_path": "graphics/letters/word_리을.png",
+    "url": "/images/letters/word_리을.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '리을', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 863,
+    "name_kr": "미음",
+    "name_en": "Word_미음",
+    "type": "letter",
+    "file_path": "graphics/letters/word_미음.png",
+    "url": "/images/letters/word_미음.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '미음', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 864,
+    "name_kr": "비읍",
+    "name_en": "Word_비읍",
+    "type": "letter",
+    "file_path": "graphics/letters/word_비읍.png",
+    "url": "/images/letters/word_비읍.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '비읍', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 865,
+    "name_kr": "사람",
+    "name_en": "Word_사람",
+    "type": "letter",
+    "file_path": "graphics/letters/word_사람.png",
+    "url": "/images/letters/word_사람.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '사람', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 866,
+    "name_kr": "시옷",
+    "name_en": "Word_시옷",
+    "type": "letter",
+    "file_path": "graphics/letters/word_시옷.png",
+    "url": "/images/letters/word_시옷.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '시옷', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 867,
+    "name_kr": "이응",
+    "name_en": "Word_이응",
+    "type": "letter",
+    "file_path": "graphics/letters/word_이응.png",
+    "url": "/images/letters/word_이응.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '이응', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 868,
+    "name_kr": "지읒",
+    "name_en": "Word_지읒",
+    "type": "letter",
+    "file_path": "graphics/letters/word_지읒.png",
+    "url": "/images/letters/word_지읒.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '지읒', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 869,
+    "name_kr": "치읓",
+    "name_en": "Word_치읓",
+    "type": "letter",
+    "file_path": "graphics/letters/word_치읓.png",
+    "url": "/images/letters/word_치읓.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '치읓', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 870,
+    "name_kr": "키읔",
+    "name_en": "Word_키읔",
+    "type": "letter",
+    "file_path": "graphics/letters/word_키읔.png",
+    "url": "/images/letters/word_키읔.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '키읔', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 871,
+    "name_kr": "티읕",
+    "name_en": "Word_티읕",
+    "type": "letter",
+    "file_path": "graphics/letters/word_티읕.png",
+    "url": "/images/letters/word_티읕.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '티읕', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 872,
+    "name_kr": "피읖",
+    "name_en": "Word_피읖",
+    "type": "letter",
+    "file_path": "graphics/letters/word_피읖.png",
+    "url": "/images/letters/word_피읖.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '피읖', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 873,
+    "name_kr": "하늘",
+    "name_en": "Word_하늘",
+    "type": "letter",
+    "file_path": "graphics/letters/word_하늘.png",
+    "url": "/images/letters/word_하늘.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '하늘', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 874,
+    "name_kr": "한글",
+    "name_en": "Word_한글",
+    "type": "letter",
+    "file_path": "graphics/letters/word_한글.png",
+    "url": "/images/letters/word_한글.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '한글', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 875,
+    "name_kr": "한글공부",
+    "name_en": "Word_한글공부",
+    "type": "letter",
+    "file_path": "graphics/letters/word_한글공부.png",
+    "url": "/images/letters/word_한글공부.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '한글공부', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 876,
+    "name_kr": "히읗",
+    "name_en": "Word_히읗",
+    "type": "letter",
+    "file_path": "graphics/letters/word_히읗.png",
+    "url": "/images/letters/word_히읗.png",
+    "flow_prompt": "Minimalist line-art vector icon of Hangeul word '히읗', clean black outlines on flat light beige background"
+  },
+  {
+    "id": 877,
+    "name_kr": "침대",
+    "name_en": "Bed",
+    "type": "object",
+    "file_path": "graphics/obj_bed.png",
+    "url": "/images/objects/obj_bed.png",
+    "flow_prompt": "Minimalist line-art vector icon of bed, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 878,
+    "name_kr": "칠판",
+    "name_en": "Blackboard",
+    "type": "object",
+    "file_path": "graphics/obj_blackboard.png",
+    "url": "/images/objects/obj_blackboard.png",
+    "flow_prompt": "Minimalist line-art vector icon of blackboard, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 879,
+    "name_kr": "의자",
+    "name_en": "Chair",
+    "type": "object",
+    "file_path": "graphics/obj_chair.png",
+    "url": "/images/objects/obj_chair.png",
+    "flow_prompt": "Minimalist line-art vector icon of chair, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 880,
+    "name_kr": "분필",
+    "name_en": "Chalk",
+    "type": "object",
+    "file_path": "graphics/obj_chalk.png",
+    "url": "/images/objects/obj_chalk.png",
+    "flow_prompt": "Minimalist line-art vector icon of chalk, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 881,
+    "name_kr": "컴퓨터",
+    "name_en": "Computer",
+    "type": "object",
+    "file_path": "graphics/obj_computer.png",
+    "url": "/images/objects/obj_computer.png",
+    "flow_prompt": "Minimalist line-art vector icon of computer, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 882,
+    "name_kr": "책상",
+    "name_en": "Desk",
+    "type": "object",
+    "file_path": "graphics/obj_desk.png",
+    "url": "/images/objects/obj_desk.png",
+    "flow_prompt": "Minimalist line-art vector icon of desk, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 883,
+    "name_kr": "문(닫힘)",
+    "name_en": "Door_closed",
+    "type": "object",
+    "file_path": "graphics/obj_door_closed.png",
+    "url": "/images/objects/obj_door_closed.png",
+    "flow_prompt": "Minimalist line-art vector icon of door_closed, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 884,
+    "name_kr": "문(열림)",
+    "name_en": "Door_open",
+    "type": "object",
+    "file_path": "graphics/obj_door_open.png",
+    "url": "/images/objects/obj_door_open.png",
+    "flow_prompt": "Minimalist line-art vector icon of door_open, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 885,
+    "name_kr": "해례본 스크롤",
+    "name_en": "Haerye_scroll",
+    "type": "object",
+    "file_path": "graphics/obj_haerye_scroll.png",
+    "url": "/images/objects/obj_haerye_scroll.png",
+    "flow_prompt": "Minimalist line-art vector icon of haerye_scroll, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 886,
+    "name_kr": "공책",
+    "name_en": "Notebook",
+    "type": "object",
+    "file_path": "graphics/obj_notebook.png",
+    "url": "/images/objects/obj_notebook.png",
+    "flow_prompt": "Minimalist line-art vector icon of notebook, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 887,
+    "name_kr": "입자",
+    "name_en": "Particle",
+    "type": "object",
+    "file_path": "graphics/obj_particle.png",
+    "url": "/images/objects/obj_particle.png",
+    "flow_prompt": "Minimalist line-art vector icon of particle, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 888,
+    "name_kr": "연필",
+    "name_en": "Pencil",
+    "type": "object",
+    "file_path": "graphics/obj_pencil.png",
+    "url": "/images/objects/obj_pencil.png",
+    "flow_prompt": "Minimalist line-art vector icon of pencil, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 889,
+    "name_kr": "세종대왕 액자",
+    "name_en": "Sejong_frame",
+    "type": "object",
+    "file_path": "graphics/obj_sejong_frame.png",
+    "url": "/images/objects/obj_sejong_frame.png",
+    "flow_prompt": "Minimalist line-art vector icon of sejong_frame, clean black outlines on flat light beige background"
+  },
+  {
+    "id": 890,
+    "name_kr": "닥터제이_베이스_정면",
+    "name_en": "Dr_Jay_Base_Front",
+    "type": "character",
+    "file_path": "dr_jay_base_front.png",
+    "url": "/images/characters/dr_jay_base_front.png",
+    "flow_prompt": "A minimalist 2D black line-art stickman doctor standing straight facing forward in a clear front view. Features: circular head, stick limbs, simple eyes, a nose, a mouth, ears, and exactly two strands of white hair on the top of his head. He wears a modern, stylish short-cropped jacket in sky blue color, paired with short white shorts/pants. The sky blue jacket has a tiny chest pocket on the top-left with a pencil tucked inside and a small red cross logo. His stick hands are tiny, small white mitten-style hands (only the thumb is separated, in a rounded shape, very small), and his stick legs end with very small, tiny, neat, simple white shoes on his feet."
+  },
+  {
+    "id": 891,
+    "name_kr": "닥터제이_베이스_정면_불투명",
+    "name_en": "Dr_Jay_Base_Front_Opaque",
+    "type": "character",
+    "file_path": "dr_jay_base_front_opaque.png",
+    "url": "/images/characters/dr_jay_base_front_opaque.png",
+    "flow_prompt": "A minimalist 2D black line-art stickman doctor standing straight facing forward in a clear front view. Features: circular head, stick limbs, simple eyes, a nose, a mouth, ears, and exactly two strands of white hair on the top of his head. He wears a modern, stylish short-cropped jacket in sky blue color, paired with short white shorts/pants. The sky blue jacket has a tiny chest pocket on the top-left with a pencil tucked inside and a small red cross logo. His stick hands are tiny, small white mitten-style hands (only the thumb is separated, in a rounded shape, very small), and his stick legs end with very small, tiny, neat, simple white shoes on his feet. Flat beige background #F5F5F0"
+  },
+  {
+    "id": 892,
+    "name_kr": "닥터제이_베이스_측면",
+    "name_en": "Dr_Jay_Base_Side",
+    "type": "character",
+    "file_path": "dr_jay_base_side.png",
+    "url": "/images/characters/dr_jay_base_side.png",
+    "flow_prompt": "A minimalist 2D black line-art stickman doctor standing straight in a clear left-facing side profile view. Features: circular head, stick limbs, simple eyes, a nose, a mouth, ears, and exactly two strands of white hair on the top of his head. He wears a modern, stylish short-cropped jacket in sky blue color, paired with short white shorts/pants. The sky blue jacket has a tiny chest pocket on the top-left with a pencil tucked inside and a small red cross logo. His stick hands are tiny, small white mitten-style hands (only the thumb is separated, in a rounded shape, very small), and his stick legs end with very small, tiny, neat, simple white shoes on his feet."
+  },
+  {
+    "id": 893,
+    "name_kr": "닥터제이_베이스_측면_불투명",
+    "name_en": "Dr_Jay_Base_Side_Opaque",
+    "type": "character",
+    "file_path": "dr_jay_base_side_opaque.png",
+    "url": "/images/characters/dr_jay_base_side_opaque.png",
+    "flow_prompt": "A minimalist 2D black line-art stickman doctor standing straight in a clear left-facing side profile view. Features: circular head, stick limbs, simple eyes, a nose, a mouth, ears, and exactly two strands of white hair on the top of his head. He wears a modern, stylish short-cropped jacket in sky blue color, paired with short white shorts/pants. The sky blue jacket has a tiny chest pocket on the top-left with a pencil tucked inside and a small red cross logo. His stick hands are tiny, small white mitten-style hands (only the thumb is separated, in a rounded shape, very small), and his stick legs end with very small, tiny, neat, simple white shoes on his feet. Flat beige background #F5F5F0"
+  },
+  {
+    "id": 894,
+    "name_kr": "제이_베이스_정면",
+    "name_en": "Jay_Base_Front",
+    "type": "character",
+    "file_path": "jay_base_front.png",
+    "url": "/images/characters/jay_base_front.png",
+    "flow_prompt": "A classic minimalist 2D single-line stickman (졸라맨) made of thin solid black lines standing straight facing forward in a clear front view. The character is completely bare, without any clothes, shirts, pants, shoes, or gloves. The head is a simple perfect empty circle outlined in a thin black line. Crucially, his thin stick arms and legs end with extremely simple, small, thin empty oval outlines for his hands and feet (no detailed fingers, no shoes). Features: two small black dots for eyes, a simple line for a smiling mouth, and exactly two strands of thin black hair on top of his head."
+  },
+  {
+    "id": 895,
+    "name_kr": "제이_베이스_정면_불투명",
+    "name_en": "Jay_Base_Front_Opaque",
+    "type": "character",
+    "file_path": "jay_base_front_opaque.png",
+    "url": "/images/characters/jay_base_front_opaque.png",
+    "flow_prompt": "A classic minimalist 2D single-line stickman (졸라맨) made of thin solid black lines standing straight facing forward in a clear front view. The character is completely bare, without any clothes, shirts, pants, shoes, or gloves. The head is a simple perfect empty circle outlined in a thin black line. Crucially, his thin stick arms and legs end with extremely simple, small, thin empty oval outlines for his hands and feet (no detailed fingers, no shoes). Features: two small black dots for eyes, a simple line for a smiling mouth, and exactly two strands of thin black hair on top of his head. Flat beige background #F5F5F0"
+  },
+  {
+    "id": 896,
+    "name_kr": "제이_베이스_측면",
+    "name_en": "Jay_Base_Side",
+    "type": "character",
+    "file_path": "jay_base_side.png",
+    "url": "/images/characters/jay_base_side.png",
+    "flow_prompt": "A classic minimalist 2D single-line stickman (졸라맨) made of thin solid black lines standing straight in a clear left-facing side profile view. The character is completely bare, without any clothes, shirts, pants, shoes, or gloves. The head is a simple perfect empty circle outlined in a thin black line. Crucially, his thin stick arms and legs end with extremely simple, small, thin empty oval outlines for his hands and feet (no detailed fingers, no shoes). Features: two small black dots for eyes, a simple line for a smiling mouth, and exactly two strands of thin black hair on top of his head."
+  },
+  {
+    "id": 897,
+    "name_kr": "제이_베이스_측면_불투명",
+    "name_en": "Jay_Base_Side_Opaque",
+    "type": "character",
+    "file_path": "jay_base_side_opaque.png",
+    "url": "/images/characters/jay_base_side_opaque.png",
+    "flow_prompt": "A classic minimalist 2D single-line stickman (졸라맨) made of thin solid black lines standing straight in a clear left-facing side profile view. The character is completely bare, without any clothes, shirts, pants, shoes, or gloves. The head is a simple perfect empty circle outlined in a thin black line. Crucially, his thin stick arms and legs end with extremely simple, small, thin empty oval outlines for his hands and feet (no detailed fingers, no shoes). Features: two small black dots for eyes, a simple line for a smiling mouth, and exactly two strands of thin black hair on top of his head. Flat beige background #F5F5F0"
+  },
+  {
+    "id": 898,
+    "name_kr": "Jay_글쓰기_정면",
+    "name_en": "Jay_Writing_Book",
+    "type": "character",
+    "file_path": "assets/characters/jay_writing_book.png",
+    "url": "/images/characters/jay_writing_book.png",
+    "flow_prompt": "sitting at a wooden desk, holding a pencil in his hand, and writing in an open book. front view"
+  },
+  {
+    "id": 899,
+    "name_kr": "Jay_글쓰기_정면_불투명",
+    "name_en": "Jay_Writing_Book_Opaque",
+    "type": "character",
+    "file_path": "assets/characters/jay_writing_book_opaque.png",
+    "url": "/images/characters/jay_writing_book_opaque.png",
+    "flow_prompt": "sitting at a wooden desk, holding a pencil in his hand, and writing in an open book. front view. Flat beige background #F5F5F0"
+  },
+  {
+    "id": 900,
+    "name_kr": "Jay_글쓰기_옆모습",
+    "name_en": "Jay_Writing_Book_Side",
+    "type": "character",
+    "file_path": "assets/characters/jay_writing_book_side.png",
+    "url": "/images/characters/jay_writing_book_side.png",
+    "flow_prompt": "sitting at a wooden desk, holding a pencil in his hand, and writing in an open book. LEFT side profile view"
+  },
+  {
+    "id": 901,
+    "name_kr": "Jay_글쓰기_옆모습_불투명",
+    "name_en": "Jay_Writing_Book_Side_Opaque",
+    "type": "character",
+    "file_path": "assets/characters/jay_writing_book_side_opaque.png",
+    "url": "/images/characters/jay_writing_book_side_opaque.png",
+    "flow_prompt": "sitting at a wooden desk, holding a pencil in his hand, and writing in an open book. LEFT side profile view. Flat beige background #F5F5F0"
+  },
+  {
+    "id": 902,
+    "name_kr": "Jay_칠판글쓰기_옆모습",
+    "name_en": "Jay_Writing_Board_Side",
+    "type": "character",
+    "file_path": "assets/characters/jay_writing_board_side.png",
+    "url": "/images/characters/jay_writing_board_side.png",
+    "flow_prompt": "standing in front of a green chalkboard, holding a piece of chalk in his hand, and writing on the chalkboard. LEFT side profile view"
+  },
+  {
+    "id": 903,
+    "name_kr": "Jay_칠판글쓰기_옆모습_불투명",
+    "name_en": "Jay_Writing_Board_Side_Opaque",
+    "type": "character",
+    "file_path": "assets/characters/jay_writing_board_side_opaque.png",
+    "url": "/images/characters/jay_writing_board_side_opaque.png",
+    "flow_prompt": "standing in front of a green chalkboard, holding a piece of chalk in his hand, and writing on the chalkboard. LEFT side profile view. Flat beige background #F5F5F0"
+  },
+  {
+    "id": 904,
+    "name_kr": "Jay_일하는책상_옆모습",
+    "name_en": "Jay_Working_Desk_Side",
+    "type": "character",
+    "file_path": "assets/characters/jay_working_desk_side.png",
+    "url": "/images/characters/jay_working_desk_side.png",
+    "flow_prompt": "sitting at a wooden desk with a laptop on it. The stickman and his desk are relatively small, showing a wider view of the room. On the back wall, there is a clock and a window. On the front wall, there is a door. There is also a bookshelf. LEFT side profile view"
+  },
+  {
+    "id": 905,
+    "name_kr": "Jay_일하는책상_옆모습_불투명",
+    "name_en": "Jay_Working_Desk_Side_Opaque",
+    "type": "character",
+    "file_path": "assets/characters/jay_working_desk_side_opaque.png",
+    "url": "/images/characters/jay_working_desk_side_opaque.png",
+    "flow_prompt": "sitting at a wooden desk with a laptop on it. The stickman and his desk are relatively small, showing a wider view of the room. On the back wall, there is a clock and a window. On the front wall, there is a door. There is also a bookshelf. LEFT side profile view. Flat beige background #F5F5F0"
+  },
+  {
+    "id": 906,
+    "name_kr": "Jay_화이트보드글쓰기_옆모습",
+    "name_en": "Jay_Whiteboard_Writing_Side",
+    "type": "character",
+    "file_path": "assets/characters/jay_whiteboard_writing_side.png",
+    "url": "/images/characters/jay_whiteboard_writing_side.png",
+    "flow_prompt": "standing in front of a large white whiteboard, holding a whiteboard marker in his hand, and writing Hangeul letters on the whiteboard. LEFT side profile view"
+  },
+  {
+    "id": 907,
+    "name_kr": "Jay_화이트보드글쓰기_옆모습_불투명",
+    "name_en": "Jay_Whiteboard_Writing_Side_Opaque",
+    "type": "character",
+    "file_path": "assets/characters/jay_whiteboard_writing_side_opaque.png",
+    "url": "/images/characters/jay_whiteboard_writing_side_opaque.png",
+    "flow_prompt": "standing in front of a large white whiteboard, holding a whiteboard marker in his hand, and writing Hangeul letters on the whiteboard. LEFT side profile view. Flat beige background #F5F5F0"
+  },
+  {
+    "id": 951,
+    "name_kr": "obj_book_chalk",
+    "name_en": "obj_book_chalk",
+    "type": "object",
+    "file_path": "assets/graphics/obj_book_chalk.png",
+    "url": "/images/objects/obj_book_chalk.png",
+    "flow_prompt": "auto-registered by build_scene_objects"
+  },
+  {
+    "id": 952,
+    "name_kr": "obj_crown_chalk",
+    "name_en": "obj_crown_chalk",
+    "type": "object",
+    "file_path": "assets/graphics/obj_crown_chalk.png",
+    "url": "/images/objects/obj_crown_chalk.png",
+    "flow_prompt": "auto-registered by build_scene_objects"
+  },
+  {
+    "id": 984,
+    "name_kr": "컬러 연필로 오른쪽을 가리키며 설명",
+    "name_en": "stickman_pencil_point",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_pencil_point.png",
+    "url": "/images/characters/stickman_pencil_point.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Pointing with a colored pencil"
+  },
+  {
+    "id": 985,
+    "name_kr": "컬러 연필 들고 인사",
+    "name_en": "stickman_pencil_wave",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_pencil_wave.png",
+    "url": "/images/characters/stickman_pencil_wave.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Waving with a colored pencil"
+  },
+  {
+    "id": 986,
+    "name_kr": "컬러 연필 들고 두 팔 벌려 설명",
+    "name_en": "stickman_pencil_present",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_pencil_present.png",
+    "url": "/images/characters/stickman_pencil_present.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Presenting with a colored pencil"
+  },
+  {
+    "id": 987,
+    "name_kr": "컬러 연필로 글씨 쓰는 자세",
+    "name_en": "stickman_pencil_write",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_pencil_write.png",
+    "url": "/images/characters/stickman_pencil_write.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=neutral facing=right | Writing with a colored pencil"
+  },
+  {
+    "id": 988,
+    "name_kr": "가만히 서 있는 기본 자세",
+    "name_en": "stickman_standing",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_standing.png",
+    "url": "/images/characters/stickman_standing.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=neutral facing=front | Standing neutral"
+  },
+  {
+    "id": 989,
+    "name_kr": "웃으며 서 있는 자세",
+    "name_en": "stickman_standing_happy",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_standing_happy.png",
+    "url": "/images/characters/stickman_standing_happy.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Standing, smiling"
+  },
+  {
+    "id": 990,
+    "name_kr": "손 흔들며 인사",
+    "name_en": "stickman_greeting_wave",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_greeting_wave.png",
+    "url": "/images/characters/stickman_greeting_wave.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Waving hello"
+  },
+  {
+    "id": 991,
+    "name_kr": "두 팔 벌려 설명/환영",
+    "name_en": "stickman_arms_open",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_arms_open.png",
+    "url": "/images/characters/stickman_arms_open.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Arms open, explaining"
+  },
+  {
+    "id": 992,
+    "name_kr": "두 팔 들고 환호",
+    "name_en": "stickman_cheer",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_cheer.png",
+    "url": "/images/characters/stickman_cheer.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Cheering, both arms up"
+  },
+  {
+    "id": 993,
+    "name_kr": "박수",
+    "name_en": "stickman_clap",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_clap.png",
+    "url": "/images/characters/stickman_clap.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Clapping"
+  },
+  {
+    "id": 994,
+    "name_kr": "오른쪽을 가리키며 설명",
+    "name_en": "stickman_pointing_right",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_pointing_right.png",
+    "url": "/images/characters/stickman_pointing_right.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Pointing right (presenting)"
+  },
+  {
+    "id": 995,
+    "name_kr": "왼쪽을 가리키며 설명",
+    "name_en": "stickman_pointing_left",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_pointing_left.png",
+    "url": "/images/characters/stickman_pointing_left.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Pointing left (presenting)"
+  },
+  {
+    "id": 996,
+    "name_kr": "위(하늘)를 가리킴",
+    "name_en": "stickman_pointing_up",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_pointing_up.png",
+    "url": "/images/characters/stickman_pointing_up.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=neutral facing=front | Pointing up (heaven)"
+  },
+  {
+    "id": 997,
+    "name_kr": "아래(땅)를 가리킴",
+    "name_en": "stickman_pointing_down",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_pointing_down.png",
+    "url": "/images/characters/stickman_pointing_down.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=neutral facing=front | Pointing down (earth)"
+  },
+  {
+    "id": 998,
+    "name_kr": "턱에 손, 생각하는 자세",
+    "name_en": "stickman_thinking",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_thinking.png",
+    "url": "/images/characters/stickman_thinking.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=neutral facing=right | Thinking, hand on chin"
+  },
+  {
+    "id": 999,
+    "name_kr": "어깨 으쓱, 갸우뚱(모름)",
+    "name_en": "stickman_shrug",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_shrug.png",
+    "url": "/images/characters/stickman_shrug.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=surprised facing=front | Shrug, confused"
+  },
+  {
+    "id": 1000,
+    "name_kr": "엄지 척",
+    "name_en": "stickman_thumbs_up",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_thumbs_up.png",
+    "url": "/images/characters/stickman_thumbs_up.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Thumbs up"
+  },
+  {
+    "id": 1001,
+    "name_kr": "허리에 손, 당당한 자세",
+    "name_en": "stickman_hands_on_hips",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_hands_on_hips.png",
+    "url": "/images/characters/stickman_hands_on_hips.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Hands on hips, confident"
+  },
+  {
+    "id": 1002,
+    "name_kr": "손 번쩍 들기(질문/참여)",
+    "name_en": "stickman_raising_hand",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_raising_hand.png",
+    "url": "/images/characters/stickman_raising_hand.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Raising hand"
+  },
+  {
+    "id": 1003,
+    "name_kr": "걷는 자세",
+    "name_en": "stickman_walking",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_walking.png",
+    "url": "/images/characters/stickman_walking.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=neutral facing=front | Walking"
+  },
+  {
+    "id": 1004,
+    "name_kr": "달리는 자세",
+    "name_en": "stickman_running",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_running.png",
+    "url": "/images/characters/stickman_running.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=right | Running"
+  },
+  {
+    "id": 1005,
+    "name_kr": "점프(신남)",
+    "name_en": "stickman_jumping",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_jumping.png",
+    "url": "/images/characters/stickman_jumping.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Jumping with joy"
+  },
+  {
+    "id": 1006,
+    "name_kr": "의자에 앉은 자세(옆모습)",
+    "name_en": "stickman_sitting",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_sitting.png",
+    "url": "/images/characters/stickman_sitting.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=neutral facing=right | Sitting on a chair (side)"
+  },
+  {
+    "id": 1007,
+    "name_kr": "책상에 엎드린 듯 지친 자세",
+    "name_en": "stickman_tired_slump",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_tired_slump.png",
+    "url": "/images/characters/stickman_tired_slump.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=tired facing=front | Tired, slumped at desk"
+  },
+  {
+    "id": 1008,
+    "name_kr": "휴대폰을 들고 보는 자세",
+    "name_en": "stickman_holding_phone",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_holding_phone.png",
+    "url": "/images/characters/stickman_holding_phone.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Holding/looking at phone"
+  },
+  {
+    "id": 1009,
+    "name_kr": "칠판/화면 앞에서 발표",
+    "name_en": "stickman_presenting",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_presenting.png",
+    "url": "/images/characters/stickman_presenting.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=right | Presenting at a board"
+  },
+  {
+    "id": 1010,
+    "name_kr": "책상에서 글씨 쓰는 자세",
+    "name_en": "stickman_writing",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_writing.png",
+    "url": "/images/characters/stickman_writing.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=neutral facing=right | Writing at a desk"
+  },
+  {
+    "id": 1011,
+    "name_kr": "책을 들고 읽는 자세",
+    "name_en": "stickman_reading",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_reading.png",
+    "url": "/images/characters/stickman_reading.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=neutral facing=front | Reading a book"
+  },
+  {
+    "id": 1012,
+    "name_kr": "고개 숙여 인사(절)",
+    "name_en": "stickman_bowing",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_bowing.png",
+    "url": "/images/characters/stickman_bowing.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=right | Bowing politely"
+  },
+  {
+    "id": 1013,
+    "name_kr": "귀에 손, 듣는 자세(헤드폰)",
+    "name_en": "stickman_listening",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_listening.png",
+    "url": "/images/characters/stickman_listening.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Listening, hand to ear"
+  },
+  {
+    "id": 1014,
+    "name_kr": "세종대왕(두 손 모은 위엄) — 왕관/곤룡포는 소품",
+    "name_en": "stickman_sejong",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_sejong.png",
+    "url": "/images/characters/stickman_sejong.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=neutral facing=front | King Sejong, hands clasped (regal)"
+  },
+  {
+    "id": 1015,
+    "name_kr": "자기 입을 가리키며 발음 시범",
+    "name_en": "stickman_mouth_demo",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_mouth_demo.png",
+    "url": "/images/characters/stickman_mouth_demo.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=talk facing=front | Pointing to own mouth (pronunciation)"
+  },
+  {
+    "id": 1016,
+    "name_kr": "거울을 들고 입모양 점검",
+    "name_en": "stickman_holding_mirror",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_holding_mirror.png",
+    "url": "/images/characters/stickman_holding_mirror.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Holding a mirror to face"
+  },
+  {
+    "id": 1017,
+    "name_kr": "자기 가슴을 가리킴(바로 나!)",
+    "name_en": "stickman_point_self",
+    "type": "character",
+    "file_path": "assets/graphics/poses/stickman_point_self.png",
+    "url": "/images/characters/stickman_point_self.png",
+    "flow_prompt": "stickman_factory.py (parametric 12-joint, hand-drawn ink, cream-bg line art) | expr=happy facing=front | Pointing at self"
+  },
+  {
+    "id": 1018,
+    "name_kr": "발음기관 머리(입·혀·목)",
+    "name_en": "organ_head_profile",
+    "type": "object",
+    "file_path": "assets/graphics/organ_head_profile.png",
+    "url": "/images/objects/organ_head_profile.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Head profile (speech organs)"
+  },
+  {
+    "id": 1019,
+    "name_kr": "모아쓰기 음절 블록",
+    "name_en": "obj_block",
+    "type": "object",
+    "file_path": "assets/graphics/obj_block.png",
+    "url": "/images/objects/obj_block.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Syllable block frame"
+  },
+  {
+    "id": 1020,
+    "name_kr": "플래시카드",
+    "name_en": "obj_card",
+    "type": "object",
+    "file_path": "assets/graphics/obj_card.png",
+    "url": "/images/objects/obj_card.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Flashcard frame"
+  },
+  {
+    "id": 1021,
+    "name_kr": "가획(+) 표시",
+    "name_en": "obj_plus",
+    "type": "object",
+    "file_path": "assets/graphics/obj_plus.png",
+    "url": "/images/objects/obj_plus.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Plus-stroke mark"
+  },
+  {
+    "id": 1022,
+    "name_kr": "발음 위치 강조 점",
+    "name_en": "obj_reddot",
+    "type": "object",
+    "file_path": "assets/graphics/obj_reddot.png",
+    "url": "/images/objects/obj_reddot.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Articulation highlight dot"
+  },
+  {
+    "id": 1023,
+    "name_kr": "입을 세로로 크게 연 입모양(ㅏ/ㅓ)",
+    "name_en": "mouth_open_vertical",
+    "type": "object",
+    "file_path": "assets/graphics/mouth_open_vertical.png",
+    "url": "/images/objects/mouth_open_vertical.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Mouth open vertically (ㅏ/ㅓ)"
+  },
+  {
+    "id": 1024,
+    "name_kr": "중간으로 벌린 입모양(ㅐ/ㅔ)",
+    "name_en": "mouth_mid_open",
+    "type": "object",
+    "file_path": "assets/graphics/mouth_mid_open.png",
+    "url": "/images/objects/mouth_mid_open.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Mouth mid-open (ㅐ/ㅔ)"
+  },
+  {
+    "id": 1025,
+    "name_kr": "동그랗게 모은 입모양(ㅗ/ㅜ)",
+    "name_en": "mouth_rounded",
+    "type": "object",
+    "file_path": "assets/graphics/mouth_rounded.png",
+    "url": "/images/objects/mouth_rounded.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Rounded lips (ㅗ/ㅜ)"
+  },
+  {
+    "id": 1026,
+    "name_kr": "옆으로 납작한 입모양(ㅡ/ㅣ)",
+    "name_en": "mouth_flat_wide",
+    "type": "object",
+    "file_path": "assets/graphics/mouth_flat_wide.png",
+    "url": "/images/objects/mouth_flat_wide.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Flat wide lips (ㅡ/ㅣ)"
+  },
+  {
+    "id": 1027,
+    "name_kr": "세종대왕 왕관",
+    "name_en": "obj_crown",
+    "type": "object",
+    "file_path": "assets/graphics/obj_crown.png",
+    "url": "/images/objects/obj_crown.png",
+    "flow_prompt": "object_factory.py (parametric ink) | King's crown"
+  },
+  {
+    "id": 1028,
+    "name_kr": "두꺼운 옛 한자책",
+    "name_en": "obj_book",
+    "type": "object",
+    "file_path": "assets/graphics/obj_book.png",
+    "url": "/images/objects/obj_book.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Thick old books"
+  },
+  {
+    "id": 1029,
+    "name_kr": "해 (동/서 밝은 모음)",
+    "name_en": "obj_sun",
+    "type": "object",
+    "file_path": "assets/graphics/obj_sun.png",
+    "url": "/images/objects/obj_sun.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Sun"
+  },
+  {
+    "id": 1030,
+    "name_kr": "손거울 (입모양 점검)",
+    "name_en": "obj_mirror",
+    "type": "object",
+    "file_path": "assets/graphics/obj_mirror.png",
+    "url": "/images/objects/obj_mirror.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Hand mirror"
+  },
+  {
+    "id": 1031,
+    "name_kr": "알림 종 (구독)",
+    "name_en": "obj_bell",
+    "type": "object",
+    "file_path": "assets/graphics/obj_bell.png",
+    "url": "/images/objects/obj_bell.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Notification bell"
+  },
+  {
+    "id": 1032,
+    "name_kr": "천(天) 둥근 점 •",
+    "name_en": "sym_heaven_dot",
+    "type": "object",
+    "file_path": "assets/graphics/sym_heaven_dot.png",
+    "url": "/images/objects/sym_heaven_dot.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Heaven dot"
+  },
+  {
+    "id": 1033,
+    "name_kr": "지(地) 가로선 ㅡ",
+    "name_en": "sym_earth_line",
+    "type": "object",
+    "file_path": "assets/graphics/sym_earth_line.png",
+    "url": "/images/objects/sym_earth_line.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Earth horizontal line"
+  },
+  {
+    "id": 1034,
+    "name_kr": "인(人) 세로선 ㅣ",
+    "name_en": "sym_human_line",
+    "type": "object",
+    "file_path": "assets/graphics/sym_human_line.png",
+    "url": "/images/objects/sym_human_line.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Human vertical line"
+  },
+  {
+    "id": 1035,
+    "name_kr": "물음표",
+    "name_en": "obj_qmark",
+    "type": "object",
+    "file_path": "assets/graphics/obj_qmark.png",
+    "url": "/images/objects/obj_qmark.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Question mark"
+  },
+  {
+    "id": 1036,
+    "name_kr": "스물여덟 글자 뱃지",
+    "name_en": "obj_badge_28",
+    "type": "object",
+    "file_path": "assets/graphics/obj_badge_28.png",
+    "url": "/images/objects/obj_badge_28.png",
+    "flow_prompt": "object_factory.py (parametric ink) | 28 letters badge"
+  },
+  {
+    "id": 1037,
+    "name_kr": "반짝임 입자",
+    "name_en": "obj_sparkle",
+    "type": "object",
+    "file_path": "assets/graphics/obj_sparkle.png",
+    "url": "/images/objects/obj_sparkle.png",
+    "flow_prompt": "object_factory.py (parametric ink) | Sparkle particles"
   }
 ]

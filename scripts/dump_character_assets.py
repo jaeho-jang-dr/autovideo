@@ -18,14 +18,15 @@ def main():
         print(f"Error: Database {db_path} not found.")
         return
 
-    # 1) DB에서 character assets 쿼리
+    # 1) Query all required assets (character, letter, object)
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
-    cur.execute("SELECT id, name_kr, name_en, type, file_path, flow_prompt FROM assets WHERE type='character';")
+    cur.execute("SELECT id, name_kr, name_en, type, file_path, flow_prompt FROM assets WHERE type IN ('character', 'letter', 'object');")
     rows = cur.fetchall()
     
-    # 캐릭터 파일들이 저장되어 있을 확률이 높은 로컬 디렉토리들
     search_dirs = [
+        'assets/graphics',
+        'assets/graphics/letters',
         'home_vocab',
         'zolla_dynamite_veo',
         'zolla_hangul',
@@ -38,10 +39,10 @@ def main():
         'scratch/layers'
     ]
     
-    dest_dir = 'web/public/images/characters'
-    os.makedirs(dest_dir, exist_ok=True)
+    # Destination base directory
+    dest_base = 'web/public/images'
     
-    characters = []
+    assets = []
     copied_count = 0
     not_found_files = []
     
@@ -58,19 +59,28 @@ def main():
             
         file_name = os.path.basename(file_path_db)
         
-        # 파일 탐색 및 복사
+        # 2) Setup specific destination subfolder based on asset type
+        subfolder = "characters"
+        if asset_type == "letter":
+            subfolder = "letters"
+        elif asset_type == "object":
+            subfolder = "objects"
+            
+        dest_dir = os.path.join(dest_base, subfolder)
+        os.makedirs(dest_dir, exist_ok=True)
+        
+        # File search & Copy
         source_path = find_file_recursively(file_name, search_dirs)
         
         if source_path:
             shutil.copy2(source_path, os.path.join(dest_dir, file_name))
             copied_count += 1
-            web_url = f"/images/characters/{file_name}"
+            web_url = f"/images/{subfolder}/{file_name}"
         else:
             not_found_files.append(file_name)
-            # 만약 로컬에 파일이 없으면, 나중에 Canva가 호출할 때 실패하므로 우선 placeholder URL이라도 지정
-            web_url = f"/images/characters/{file_name}"
+            web_url = f"/images/{subfolder}/{file_name}"
             
-        characters.append({
+        assets.append({
             "id": asset_id,
             "name_kr": name_kr,
             "name_en": name_en,
@@ -85,9 +95,9 @@ def main():
     out_path = os.path.join(out_dir, 'character_assets.json')
     
     with open(out_path, 'w', encoding='utf-8') as f:
-        json.dump(characters, f, ensure_ascii=False, indent=2)
+        json.dump(assets, f, ensure_ascii=False, indent=2)
         
-    print(f"Successfully processed {len(characters)} character assets.")
+    print(f"Successfully processed {len(assets)} assets.")
     print(f" -> Copied to web/public: {copied_count} files")
     if not_found_files:
         print(f" -> Warning: {len(not_found_files)} files not found locally: {list(set(not_found_files))[:5]}...")
@@ -96,3 +106,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
