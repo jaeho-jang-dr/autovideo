@@ -1,0 +1,170 @@
+[
+ {
+  "week": 1,
+  "no": 1,
+  "name_ko": "경복궁",
+  "name_en": "Gyeongbokgung Palace",
+  "motif": "grand traditional Korean palace gate, tiled roofs, stone courtyard, hanbok colors, guards"
+ },
+ {
+  "week": 2,
+  "no": 2,
+  "name_ko": "한강",
+  "name_en": "Han River",
+  "motif": "wide calm river, city skyline far back, picnic mats, bicycles, a ramen cup, paddle boats, sunset"
+ },
+ {
+  "week": 3,
+  "no": 3,
+  "name_ko": "명동",
+  "name_en": "Myeongdong",
+  "motif": "busy bright shopping street, food carts, cosmetic shop signs, skewers and hotteok, crowds"
+ },
+ {
+  "week": 4,
+  "no": 4,
+  "name_ko": "남산서울타워",
+  "name_en": "Namsan Seoul Tower",
+  "motif": "tall lookout tower on a green hill, cable car, fence of colorful love padlocks, city lights"
+ },
+ {
+  "week": 5,
+  "no": 5,
+  "name_ko": "북촌한옥마을",
+  "name_en": "Bukchon Hanok Village",
+  "motif": "narrow sloping alley of traditional tiled-roof hanok houses, stone steps, potted plants"
+ },
+ {
+  "week": 6,
+  "no": 6,
+  "name_ko": "홍대",
+  "name_en": "Hongdae",
+  "motif": "lively street with buskers and a small crowd, mural walls, neon cafe signs, guitars"
+ },
+ {
+  "week": 7,
+  "no": 7,
+  "name_ko": "인사동",
+  "name_en": "Insadong",
+  "motif": "traditional craft street, hanji lanterns, tea house, pottery and brush shops, ginkgo trees"
+ },
+ {
+  "week": 8,
+  "no": 8,
+  "name_ko": "광장시장",
+  "name_en": "Gwangjang Market",
+  "motif": "covered traditional market alley, food stalls, sizzling pancakes, bowls, red stools, steam"
+ },
+ {
+  "week": 9,
+  "no": 9,
+  "name_ko": "해운대해수욕장",
+  "name_en": "Haeundae Beach",
+  "motif": "long sandy city beach, high-rise hotels behind, parasols, gentle waves, beachgoers"
+ },
+ {
+  "week": 10,
+  "no": 10,
+  "name_ko": "광안리 광안대교",
+  "name_en": "Gwangalli & Diamond Bridge",
+  "motif": "beach at night facing a long lit suspension bridge, drone-light show in sky, cafes glowing"
+ },
+ {
+  "week": 11,
+  "no": 11,
+  "name_ko": "감천문화마을",
+  "name_en": "Gamcheon Culture Village",
+  "motif": "hillside of colorful pastel cube houses stacked like steps, narrow stairs, murals, sea view"
+ },
+ {
+  "week": 12,
+  "no": 12,
+  "name_ko": "성산일출봉",
+  "name_en": "Seongsan Ilchulbong",
+  "motif": "huge green volcanic crater rising from the sea, hiking path, sunrise glow, fields below"
+ },
+ {
+  "week": 13,
+  "no": 13,
+  "name_ko": "협재해수욕장",
+  "name_en": "Hyeopjae Beach",
+  "motif": "white-sand beach with emerald shallow water, a small island offshore, palm trees, clear sky"
+ },
+ {
+  "week": 14,
+  "no": 14,
+  "name_ko": "한라산",
+  "name_en": "Hallasan",
+  "motif": "tall shield volcano above clouds, hiking trail through low brush, crater lake, autumn colors"
+ },
+ {
+  "week": 15,
+  "no": 15,
+  "name_ko": "불국사",
+  "name_en": "Bulguksa Temple",
+  "motif": "grand old wooden temple, stone stairways and pagodas, autumn maples, lotus pond, tiled roofs"
+ },
+ {
+  "week": 16,
+  "no": 16,
+  "name_ko": "전주한옥마을",
+  "name_en": "Jeonju Hanok Village",
+  "motif": "wide hanok village of tiled roofs, hanbok visitors, food stalls, bibimbap bowl, lanterns"
+ },
+ {
+  "week": 17,
+  "no": 17,
+  "name_ko": "남이섬",
+  "name_en": "Nami Island",
+  "motif": "long straight tree-lined lane of tall metasequoia, couple walking, bicycles, autumn or snow"
+ },
+ {
+  "week": 18,
+  "no": 18,
+  "name_ko": "설악산",
+  "name_en": "Seoraksan",
+  "motif": "jagged granite peaks blazing with red-orange autumn foliage, cable car, temple, stream, blue sky"
+ },
+ {
+  "week": 19,
+  "no": 19,
+  "name_ko": "강남",
+  "name_en": "Gangnam",
+  "motif": "wide modern boulevard with glass towers, fashion boutiques, busy crosswalk, city energy"
+ },
+ {
+  "week": 20,
+  "no": 20,
+  "name_ko": "이태원",
+  "name_en": "Itaewon",
+  "motif": "hilly international street, world-cuisine signs, rooftop terrace, string lights, mixed crowd"
+ },
+ {
+  "week": 21,
+  "no": 21,
+  "name_ko": "성수동",
+  "name_en": "Seongsu-dong",
+  "motif": "red-brick converted-warehouse cafe street, big windows, plants, pop-up store, industrial chic"
+ },
+ {
+  "week": 22,
+  "no": 22,
+  "name_ko": "롯데월드타워 서울스카이",
+  "name_en": "Lotte World Tower Seoul Sky",
+  "motif": "very tall glass skyscraper, observation deck view of city grid and river, glass floor, clouds"
+ },
+ {
+  "week": 23,
+  "no": 23,
+  "name_ko": "에버랜드",
+  "name_en": "Everland",
+  "motif": "big theme park with tulip fields, a panda, a tall wooden roller coaster, flower parade"
+ },
+ {
+  "week": 24,
+  "no": 24,
+  "name_ko": "동대문디자인플라자",
+  "name_en": "Dongdaemun DDP",
+  "motif": "sleek silver curved futuristic building at dusk, glowing LED roses, soft purple lights"
+ }
+]
