@@ -41,11 +41,11 @@ const L = {
                data-no={p.no}
                data-search={`${p.name_ko} ${p.name_en} ${p.category} ${p.leisure_ko}`.toLowerCase()}>
         <div class="pl-card-banner">
-          <img src={p.image_url || 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80'} 
+          <img src={p.image_url || 'https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Myeong-dong_Shopping_Street_2016.jpg/800px-Myeong-dong_Shopping_Street_2016.jpg'} 
                alt={isEn ? p.name_en : p.name_ko} 
                loading="lazy"
                data-category={p.category || ''}
-               onerror="const cat=this.getAttribute('data-category')||'';let fb='https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80';if(cat.includes('궁궐')||cat.includes('역사')||cat.includes('한옥')||cat.includes('골목')||cat.includes('전통')||cat.includes('예술')){fb='https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?auto=format&fit=crop&w=800&q=80';}else if(cat.includes('강')||cat.includes('공원')||cat.includes('전망')||cat.includes('야경')||cat.includes('도심')||cat.includes('산책')||cat.includes('타워')){fb='https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80';}this.onerror=null;this.src=fb;" />
+               onerror="const cat=this.getAttribute('data-category')||'';let fb='https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Myeong-dong_Shopping_Street_2016.jpg/800px-Myeong-dong_Shopping_Street_2016.jpg';if(cat.includes('궁궐')||cat.includes('역사')||cat.includes('한옥')||cat.includes('골목')||cat.includes('전통')||cat.includes('예술')){fb='https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Bukchon_Hanok_Village.jpg/800px-Bukchon_Hanok_Village.jpg';}else if(cat.includes('강')||cat.includes('공원')||cat.includes('전망')||cat.includes('야경')||cat.includes('도심')||cat.includes('산책')||cat.includes('타워')||cat.includes('다리')){fb='https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg/800px-Seoul_Tower_by_USAG_Humphreys.jpg';}this.onerror=null;this.src=fb;" />
           <span class="pl-no">{p.no}</span>
         </div>
         <div class="pl-card-body-content">
@@ -174,12 +174,12 @@ const L = {
     modalImg.src = imgUrl;
     modalHeroBg.style.backgroundImage = `url('${imgUrl}')`;
     modalImg.onerror = () => {
-      let fb = 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80';
+      let fb = 'https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Myeong-dong_Shopping_Street_2016.jpg/800px-Myeong-dong_Shopping_Street_2016.jpg';
       const cat = place.category || '';
       if (cat.includes('궁궐') || cat.includes('역사') || cat.includes('한옥') || cat.includes('골목') || cat.includes('전통') || cat.includes('예술')) {
-        fb = 'https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?auto=format&fit=crop&w=800&q=80';
-      } else if (cat.includes('강') || cat.includes('공원') || cat.includes('전망') || cat.includes('야경') || cat.includes('도심') || cat.includes('산책') || cat.includes('타워')) {
-        fb = 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80';
+        fb = 'https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Bukchon_Hanok_Village.jpg/800px-Bukchon_Hanok_Village.jpg';
+      } else if (cat.includes('강') || cat.includes('공원') || cat.includes('전망') || cat.includes('야경') || cat.includes('도심') || cat.includes('산책') || cat.includes('타워') || cat.includes('다리')) {
+        fb = 'https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg/800px-Seoul_Tower_by_USAG_Humphreys.jpg';
       }
       modalImg.onerror = null;
       modalImg.src = fb;
