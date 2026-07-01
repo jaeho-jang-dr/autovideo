@@ -1,0 +1,297 @@
+---
+import type { Lang } from '../lib/content';
+import places from '../data/korea_places.json';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const isEn = lang === 'en';
+const regions = Array.from(new Set((places as any[]).map((p) => isEn ? p.region_en : p.region_ko)));
+const L = {
+  title: isEn ? 'Korea 168 — Places Foreigners Love (by Popularity)' : '한국 명소 168 — 외국인 인기순',
+  sub: isEn
+    ? '168 spots as our pastel video-background library, ranked by popularity. Top 24 → each week’s Monday background.'
+    : '168곳 영상 파스텔 배경 라이브러리(인기순). 상위 24곳 = 각 주 월요일 배경.',
+  all: isEn ? 'All' : '전체',
+  search: isEn ? 'Search a place…' : '장소 검색…',
+  motif: isEn ? 'Background motif' : '배경 모티프',
+  count: isEn ? 'places' : '곳',
+  viewDetails: isEn ? 'View Details →' : '상세 정보 보기 →',
+  about: isEn ? 'About this Place' : '장소 소개',
+  directions: isEn ? 'How to Get There' : '찾아가는 방법',
+  mapBtn: isEn ? '📍 View Google Map' : '📍 구글 지도 보기',
+  siteBtn: isEn ? '🌐 Official / Guide Site' : '🌐 공식 / 추천 가이드 사이트',
+};
+---
+<section class="places">
+  <header class="pl-head">
+    <h1>{L.title}</h1>
+    <p>{L.sub}</p>
+    <div class="pl-controls">
+      <input id="pl-search" type="search" placeholder={L.search} aria-label="search" />
+      <span class="pl-total"><b id="pl-count">{places.length}</b> {L.count}</span>
+    </div>
+    <div class="pl-tabs" id="pl-tabs">
+      <button class="plt active" data-region="" type="button">{L.all}</button>
+      {regions.map((r) => <button class="plt" data-region={r} type="button">{r}</button>)}
+    </div>
+  </header>
+
+  <div class="pl-grid" id="pl-grid">
+    {(places as any[]).map((p) => (
+      <article class="pl-card" data-region={isEn ? p.region_en : p.region_ko}
+               data-no={p.no}
+               data-search={`${p.name_ko} ${p.name_en} ${p.category} ${p.leisure_ko}`.toLowerCase()}>
+        <div class="pl-card-banner">
+          <img src={p.image_url || 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80'} 
+               alt={isEn ? p.name_en : p.name_ko} 
+               loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80';" />
+          <span class="pl-no">{p.no}</span>
+        </div>
+        <div class="pl-card-body-content">
+          <div class="pl-top">
+            {p.lesson_label && <span class="pl-week">{isEn ? `Lesson ${p.lesson_label}` : `${p.lesson_label} 배경`}</span>}
+            <span class="pl-region">{isEn ? p.region_en : p.region_ko}</span>
+          </div>
+          <h3 class="pl-name">{isEn ? p.name_en : p.name_ko}<small>{isEn ? p.name_ko : p.name_en}</small></h3>
+          <p class="pl-leisure">🎈 {p.leisure_ko}</p>
+          <p class="pl-why">{isEn ? p.why_en : p.why_ko}</p>
+          
+          <div class="pl-card-footer">
+            <button class="pl-detail-trigger" type="button">
+              {L.viewDetails}
+            </button>
+            <details class="pl-motif">
+              <summary>{L.motif}</summary>
+              <code>{p.motif}</code>
+            </details>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<!-- Detailed Info Modal -->
+<div id="pl-modal" class="pl-modal" style="display: none;" role="dialog" aria-modal="true">
+  <div class="pl-modal-backdrop" id="pl-modal-close-bg"></div>
+  <div class="pl-modal-content">
+    <button class="pl-modal-close" id="pl-modal-close-btn" aria-label="close" type="button">&times;</button>
+    <div class="pl-modal-hero">
+      <div class="pl-modal-hero-bg" id="pl-modal-hero-bg"></div>
+      <img id="pl-modal-img" src="" alt="Place image" />
+      <div class="pl-modal-hero-overlay">
+        <h2 id="pl-modal-title"></h2>
+        <span id="pl-modal-subtitle"></span>
+      </div>
+    </div>
+    <div class="pl-modal-body">
+      <div class="pl-modal-section">
+        <h3>{L.about}</h3>
+        <p id="pl-modal-desc"></p>
+      </div>
+      <div class="pl-modal-section">
+        <h3>{L.directions}</h3>
+        <p id="pl-modal-dirs"></p>
+      </div>
+      <div class="pl-modal-actions">
+        <a id="pl-modal-map-link" href="" target="_blank" rel="noopener noreferrer" class="pl-modal-btn pl-modal-btn-map">
+          {L.mapBtn}
+        </a>
+        <a id="pl-modal-site-link" href="" target="_blank" rel="noopener noreferrer" class="pl-modal-btn pl-modal-btn-site">
+          {L.siteBtn}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ places, isEn }}>
+  // Modal DOM elements
+  const modal = document.getElementById('pl-modal');
+  const modalBg = document.getElementById('pl-modal-close-bg');
+  const modalCloseBtn = document.getElementById('pl-modal-close-btn');
+  const modalImg = document.getElementById('pl-modal-img');
+  const modalHeroBg = document.getElementById('pl-modal-hero-bg');
+  const modalTitle = document.getElementById('pl-modal-title');
+  const modalSubtitle = document.getElementById('pl-modal-subtitle');
+  const modalDesc = document.getElementById('pl-modal-desc');
+  const modalDirs = document.getElementById('pl-modal-dirs');
+  const modalMapLink = document.getElementById('pl-modal-map-link');
+  const modalSiteLink = document.getElementById('pl-modal-site-link');
+
+  // Search & Filter DOM elements
+  const grid = document.getElementById('pl-grid');
+  const cards = Array.from(document.querySelectorAll('.pl-card'));
+  const countEl = document.getElementById('pl-count');
+  let region = '';
+  let q = '';
+
+  function apply() {
+    let n = 0;
+    cards.forEach((c) => {
+      const el = c;
+      const okR = !region || el.dataset.region === region;
+      const okQ = !q || (el.dataset.search || '').includes(q);
+      const show = okR && okQ;
+      el.style.display = show ? '' : 'none';
+      if (show) n++;
+    });
+    if (countEl) countEl.textContent = String(n);
+  }
+
+  document.querySelectorAll('.plt').forEach((b) => b.addEventListener('click', () => {
+    document.querySelectorAll('.plt').forEach((x) => x.classList.remove('active'));
+    b.classList.add('active');
+    region = b.dataset.region || '';
+    apply();
+  }));
+
+  const s = document.getElementById('pl-search');
+  if (s) s.addEventListener('input', () => { q = s.value.trim().toLowerCase(); apply(); });
+
+  // Open modal handler
+  function openModal(placeNo) {
+    const place = places.find(p => p.no === Number(placeNo));
+    if (!place) return;
+
+    const titleText = isEn ? place.name_en : place.name_ko;
+    const subtitleText = isEn ? place.name_ko : place.name_en;
+    const descText = isEn ? (place.description_en || place.why_en) : (place.description_ko || place.why_ko);
+    const dirsText = isEn ? (place.directions_en || '') : (place.directions_ko || '');
+    const imgUrl = place.image_url || 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80';
+
+    modalTitle.textContent = titleText;
+    modalSubtitle.textContent = subtitleText;
+    modalDesc.textContent = descText;
+    modalDirs.textContent = dirsText || (isEn ? "No specific transit details available." : "상세 대중교통 정보가 등록되어 있지 않습니다.");
+    
+    // Set map & official links
+    modalMapLink.href = place.map_link || '#';
+    modalSiteLink.href = place.official_link || '#';
+    
+    // Handle image rendering gracefully
+    modalImg.src = imgUrl;
+    modalHeroBg.style.backgroundImage = `url('${imgUrl}')`;
+    modalImg.onerror = () => {
+      const fallbackImg = 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80';
+      modalImg.src = fallbackImg;
+      modalHeroBg.style.backgroundImage = `url('${fallbackImg}')`;
+    };
+
+    // Show modal with animation
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Lock scroll
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = ''; // Unlock scroll
+  }
+
+  // Card click redirection (except details or buttons)
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Ignore click if interactive components inside cards were clicked
+      if (e.target.closest('details') || e.target.closest('summary') || e.target.closest('code') || e.target.closest('a')) {
+        return;
+      }
+      const placeNo = card.dataset.no;
+      if (placeNo) openModal(placeNo);
+    });
+  });
+
+  // Attach click listener to detail trigger buttons directly just in case
+  document.querySelectorAll('.pl-detail-trigger').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card = btn.closest('.pl-card');
+      const placeNo = card ? card.dataset.no : null;
+      if (placeNo) openModal(placeNo);
+    });
+  });
+
+  // Modal close listeners
+  if (modalBg) modalBg.addEventListener('click', closeModal);
+  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') {
+      closeModal();
+    }
+  });
+</script>
+
+<style>
+  .places { max-width: 1200px; margin: 0 auto; padding: 28px 18px 60px; }
+  .pl-head h1 { font-size: 1.9rem; margin: 0 0 6px; color: #2b2620; }
+  .pl-head > p { color: #7a7066; margin: 0 0 16px; font-size: 0.94rem; }
+  .pl-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+  #pl-search { flex: 1; min-width: 220px; max-width: 360px; padding: 10px 16px; border: 1.5px solid #e7e1d6; border-radius: 999px; font-size: 0.9rem; background: #fff; color: #2b2620; transition: border-color 0.2s ease; }
+  #pl-search:focus { border-color: #8c8273; outline: none; }
+  .pl-total { color: #7a7066; font-size: 0.9rem; }
+  .pl-total b { color: #1f7a44; font-size: 1.1rem; }
+  .pl-tabs { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 22px; }
+  .plt { border: 1.5px solid #e7e1d6; background: #fff; color: #5a5249; border-radius: 999px; padding: 6px 14px; font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all 0.2s ease; }
+  .plt:hover { border-color: #bfae99; background: #fdfcf9; }
+  .plt.active { background: #2b2620; color: #fff; border-color: #2b2620; }
+  .pl-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .pl-card { border: 1.5px solid #ece6db; border-radius: 16px; background: #fff; display: flex; flex-direction: column; cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); position: relative; overflow: hidden; padding: 0; }
+  .pl-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(60,48,30,0.08); border-color: #d1c7b7; }
+  .pl-card-banner { position: relative; width: 100%; height: 160px; overflow: hidden; background: #f6f3ee; border-bottom: 1.5px solid #ece6db; }
+  .pl-card-banner img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+  .pl-card:hover .pl-card-banner img { transform: scale(1.05); }
+  .pl-card-banner .pl-no { position: absolute; top: 12px; left: 12px; font-size: 0.76rem; font-weight: 800; color: #fff; background: #4cae6e; border-radius: 999px; padding: 3px 9px; box-shadow: 0 2px 6px rgba(0,0,0,0.18); z-index: 2; }
+  .pl-card-body-content { padding: 16px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1; }
+  .pl-top { display: flex; align-items: center; justify-content: space-between; }
+  .pl-week { font-size: 0.68rem; font-weight: 800; color: #fff; background: #e44c4c; border-radius: 999px; padding: 3px 9px; }
+  .pl-region { font-size: 0.74rem; color: #9a9085; font-weight: 700; margin-left: auto; letter-spacing: 0.02em; }
+  .pl-name { font-size: 1.12rem; margin: 2px 0 0; color: #2b2620; line-height: 1.25; font-weight: 700; }
+  .pl-name small { display: block; font-size: 0.78rem; color: #9a9085; font-weight: 500; margin-top: 3px; }
+  .pl-leisure { font-size: 0.82rem; color: #c2780f; margin: 1px 0 0; font-weight: 600; }
+  .pl-why { font-size: 0.88rem; color: #5a5249; margin: 2px 0 0; line-height: 1.5; flex-grow: 1; }
+  
+  .pl-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid #f6f3ee; padding-top: 10px; gap: 8px; }
+  .pl-detail-trigger { border: none; background: transparent; color: #1f7a44; font-size: 0.82rem; font-weight: 700; cursor: pointer; padding: 4px 0; transition: color 0.2s ease; }
+  .pl-detail-trigger:hover { color: #134f2b; text-decoration: underline; }
+  
+  .pl-motif { margin-top: 0; }
+  .pl-motif summary { font-size: 0.78rem; color: #9a9085; cursor: pointer; user-select: none; font-weight: 600; }
+  .pl-motif code { display: block; margin-top: 6px; font-size: 0.74rem; color: #6a6258; background: #f6f3ee; border-radius: 8px; padding: 8px 10px; line-height: 1.4; white-space: pre-wrap; word-break: break-all; }
+
+  /* Premium Modal CSS with Glassmorphism */
+  .pl-modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 20px; }
+  .pl-modal-backdrop { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(22, 18, 14, 0.45); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  .pl-modal-content { position: relative; z-index: 2001; width: 100%; max-width: 580px; background: rgba(255, 255, 255, 0.95); border-radius: 24px; box-shadow: 0 25px 60px -15px rgba(30, 20, 10, 0.35); overflow: hidden; display: flex; flex-direction: column; animation: modalAnim 0.35s cubic-bezier(0.19, 1, 0.22, 1) both; max-height: 85vh; border: 1px solid rgba(255, 255, 255, 0.5); }
+  @keyframes modalAnim {
+    0% { transform: translateY(20px) scale(0.96); opacity: 0; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+  }
+  .pl-modal-close { position: absolute; top: 16px; right: 16px; z-index: 2003; width: 36px; height: 36px; border-radius: 999px; border: none; background: rgba(255, 255, 255, 0.85); box-shadow: 0 4px 12px rgba(0,0,0,0.15); font-size: 1.4rem; color: #2b2620; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; line-height: 1; }
+  .pl-modal-close:hover { background: #fff; transform: scale(1.05); }
+  
+  .pl-modal-hero { position: relative; height: 200px; width: 100%; display: flex; align-items: flex-end; overflow: hidden; }
+  .pl-modal-hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; filter: blur(20px) brightness(0.65); transform: scale(1.1); }
+  .pl-modal-hero img { position: relative; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; }
+  .pl-modal-hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 22px 24px; background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: #fff; display: flex; flex-direction: column; gap: 3px; }
+  .pl-modal-hero-overlay h2 { margin: 0; font-size: 1.45rem; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.4); line-height: 1.25; }
+  .pl-modal-hero-overlay span { font-size: 0.84rem; opacity: 0.85; text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-weight: 500; }
+  
+  .pl-modal-body { padding: 24px; overflow-y: auto; display: flex; flex-direction: column; gap: 20px; }
+  .pl-modal-section h3 { font-size: 0.88rem; color: #9a9085; text-transform: uppercase; margin: 0 0 6px; letter-spacing: 0.08em; font-weight: 700; border-left: 3px solid #1f7a44; padding-left: 8px; }
+  .pl-modal-section p { margin: 0; font-size: 0.94rem; color: #4a4239; line-height: 1.6; }
+  
+  .pl-modal-actions { display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+  .pl-modal-btn { flex: 1; min-width: 180px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 16px; border-radius: 12px; font-weight: 700; font-size: 0.88rem; text-align: center; transition: all 0.2s ease; border: 1.5px solid transparent; cursor: pointer; }
+  .pl-modal-btn-map { background: #2b2620; color: #fff; }
+  .pl-modal-btn-map:hover { background: #1c1814; transform: translateY(-1px); }
+  .pl-modal-btn-site { background: #fff; color: #2b2620; border-color: #ece6db; }
+  .pl-modal-btn-site:hover { background: #fdfcf9; border-color: #bfae99; transform: translateY(-1px); }
+
+  @media (max-width: 480px) {
+    .pl-modal { padding: 10px; }
+    .pl-modal-content { max-height: 90vh; border-radius: 18px; }
+    .pl-modal-hero { height: 160px; }
+    .pl-modal-body { padding: 18px; gap: 16px; }
+    .pl-modal-actions { flex-direction: column; }
+    .pl-modal-btn { min-width: 100%; }
+  }
+</style>
