@@ -41,10 +41,11 @@ const L = {
                data-no={p.no}
                data-search={`${p.name_ko} ${p.name_en} ${p.category} ${p.leisure_ko}`.toLowerCase()}>
         <div class="pl-card-banner">
-          <img src={p.image_url || 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80'} 
+          <img src={p.image_url || 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80'} 
                alt={isEn ? p.name_en : p.name_ko} 
                loading="lazy"
-               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80';" />
+               data-category={p.category || ''}
+               onerror="const cat=this.getAttribute('data-category')||'';let fb='https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80';if(cat.includes('궁궐')||cat.includes('역사')||cat.includes('한옥')||cat.includes('골목')||cat.includes('전통')||cat.includes('예술')){fb='https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?auto=format&fit=crop&w=800&q=80';}else if(cat.includes('강')||cat.includes('공원')||cat.includes('전망')||cat.includes('야경')||cat.includes('도심')||cat.includes('산책')||cat.includes('타워')){fb='https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80';}this.onerror=null;this.src=fb;" />
           <span class="pl-no">{p.no}</span>
         </div>
         <div class="pl-card-body-content">
@@ -158,7 +159,7 @@ const L = {
     const subtitleText = isEn ? place.name_ko : place.name_en;
     const descText = isEn ? (place.description_en || place.why_en) : (place.description_ko || place.why_ko);
     const dirsText = isEn ? (place.directions_en || '') : (place.directions_ko || '');
-    const imgUrl = place.image_url || 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80';
+    const imgUrl = place.image_url || 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80';
 
     modalTitle.textContent = titleText;
     modalSubtitle.textContent = subtitleText;
@@ -173,9 +174,16 @@ const L = {
     modalImg.src = imgUrl;
     modalHeroBg.style.backgroundImage = `url('${imgUrl}')`;
     modalImg.onerror = () => {
-      const fallbackImg = 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80';
-      modalImg.src = fallbackImg;
-      modalHeroBg.style.backgroundImage = `url('${fallbackImg}')`;
+      let fb = 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80';
+      const cat = place.category || '';
+      if (cat.includes('궁궐') || cat.includes('역사') || cat.includes('한옥') || cat.includes('골목') || cat.includes('전통') || cat.includes('예술')) {
+        fb = 'https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?auto=format&fit=crop&w=800&q=80';
+      } else if (cat.includes('강') || cat.includes('공원') || cat.includes('전망') || cat.includes('야경') || cat.includes('도심') || cat.includes('산책') || cat.includes('타워')) {
+        fb = 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80';
+      }
+      modalImg.onerror = null;
+      modalImg.src = fb;
+      modalHeroBg.style.backgroundImage = `url('${fb}')`;
     };
 
     // Show modal with animation
