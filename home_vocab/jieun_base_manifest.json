@@ -1,0 +1,23 @@
+{
+  "character": {
+    "id": "jieun",
+    "name_kr": "지은",
+    "name_en": "Jieun",
+    "gender": "female",
+    "role": "main schoolgirl character (home_vocab / 한글교육 시리즈)",
+    "identity_features": "long brown hair (key identifier), navy-and-white sailor school uniform, red neckerchief, navy pleated skirt, knee socks, brown shoes, friendly smile",
+    "style": "minimalist 2D line art, thick clean black outlines, whiteboard marker style, light beige background (#F5F5F0)"
+  },
+  "base_assets": [
+    {"key": "jieun_base_front",   "file": "home_vocab/jieun_base_front.png",   "pose": "standing", "view": "front", "role": "base_reference", "method": "text2img",            "reference": null,                          "desc_kr": "지은 서있는 정면 전신(기본 레퍼런스)"},
+    {"key": "jieun_base_side",    "file": "home_vocab/jieun_base_side.png",    "pose": "standing", "view": "side",  "role": "base_reference", "method": "text2img",            "reference": null,                          "desc_kr": "지은 서있는 좌측면 전신(기본 레퍼런스)"},
+    {"key": "jieun_base_back",    "file": "home_vocab/jieun_base_back.png",    "pose": "standing", "view": "back",  "role": "base_reference", "method": "text2img",            "reference": null,                          "desc_kr": "지은 서있는 뒷모습 전신(기본 레퍼런스)"},
+    {"key": "jieun_sitting_front","file": "home_vocab/jieun_sitting_front.png","pose": "sitting",  "view": "front", "role": "pose",           "method": "reference2img",       "reference": "home_vocab/jieun_base_front.png", "desc_kr": "지은 의자에 앉은 정면"},
+    {"key": "jieun_sitting_side", "file": "home_vocab/jieun_sitting_side.png", "pose": "sitting",  "view": "side",  "role": "pose",           "method": "reference2img",       "reference": "home_vocab/jieun_base_side.png",  "desc_kr": "지은 의자에 앉은 측면"},
+    {"key": "jieun_sitting_back", "file": "home_vocab/jieun_sitting_back.png", "pose": "sitting",  "view": "back",  "role": "pose",           "method": "reference2img",       "reference": "home_vocab/jieun_base_back.png",  "desc_kr": "지은 의자에 앉은 뒷모습"}
+  ],
+  "tags": ["jieun", "지은", "schoolgirl", "korean", "line-art", "home_vocab", "character-base", "brown-hair", "sailor-uniform"],
+  "method_doc": "CHARACTER_ASSET_METHOD.md",
+  "generator": "gen_assets_flow.py (text2img: --prompts / reference2img: --ref-jobs)",
+  "purpose": "AI가 나중에 이 캐릭터를 일관되게 재생성/배치할 수 있도록 베이스 레퍼런스 + 메타데이터 보관"
+}

@@ -1,0 +1,49 @@
+# [Injun — 활동 + 야외 활동 40종] reference2img
+# 형식:  <out_key>: <영문 동작 구절만>  (flow_pose 가 소년 프리픽스 + 스타일/베이지배경 SUFFIX 자동 부착)
+# ref-key: injun_navy_front (정면) / 측면 동작은 injun_navy_side 사용
+# 전부 건전(G등급) — 구글 Flow 콘텐츠 정책 위반 소지 없음
+#
+# --- 야외 스포츠/놀이 (outdoor sports & play) ---
+injun_soccer: kicking a soccer ball on a green grass field, full body dynamic motion
+injun_basketball: jumping to shoot a basketball at a hoop on an outdoor court, full body
+injun_bicycle: riding a bicycle along a park path, full body side view
+injun_kite: running while flying a colorful kite in an open field, looking up, full body
+injun_badminton: swinging a racket to hit a shuttlecock in a backyard, full body
+injun_baseball: swinging a baseball bat at a playground, full body
+injun_tennis: hitting a tennis ball with a racket on a court, full body
+injun_jump_rope: jumping rope on a sidewalk, full body mid-jump
+injun_skateboard: riding a skateboard down a path, knees bent, full body
+injun_rollerblading: rollerblading along a park lane, arms out for balance, full body
+injun_frisbee: throwing a flying disc in a park, full body
+injun_swing: sitting and swinging high on a playground swing, full body
+injun_slide: sliding down a playground slide with a smile, full body
+injun_jungle_gym: climbing on a playground jungle gym, full body
+# --- 야외 자연 활동 (nature & seasons) ---
+injun_hiking: hiking up a mountain trail with a small backpack and a walking stick, full body
+injun_fishing: standing by a calm lake holding a fishing rod, full body side view
+injun_camping: sitting beside a small tent at a campsite, full body
+injun_picnic: sitting on a picnic mat under a tree eating a sandwich, full body
+injun_planting_tree: planting a young tree with a shovel in a garden, full body
+injun_watering_flowers: watering flowers with a watering can in a garden, full body
+injun_gardening: kneeling to pull weeds in a vegetable garden, full body
+injun_walking_dog: walking a small dog on a leash along a path, full body
+injun_bird_watching: looking up through binoculars at the sky, full body
+injun_blowing_bubbles: blowing soap bubbles outdoors, full body
+injun_holding_balloons: standing and holding a bunch of colorful balloons, full body
+injun_paper_airplane: throwing a paper airplane in a park, arm extended, full body
+# --- 계절 (winter/beach) ---
+injun_snowman: building a snowman in the snow wearing a scarf and mittens, full body
+injun_sledding: sledding down a snowy hill on a sled, full body
+injun_ice_skating: ice skating on a frozen rink, arms out, full body
+injun_sandcastle: crouching to build a sandcastle at the beach, full body
+injun_beach_ball: playing with a big beach ball at the beach, full body
+injun_kicking_leaves: walking and kicking autumn leaves on a path, full body
+# --- 일상 활동 (everyday activity) ---
+injun_jogging: jogging in a park wearing a tracksuit, full body side view
+injun_stretching: doing a simple arm-and-leg stretch outdoors, full body
+injun_taking_photo: taking a photo with a camera outdoors, both hands holding the camera, full body
+injun_reading_bench: sitting on a park bench reading a book, full body
+injun_eating_icecream: standing and eating an ice cream cone, full body
+injun_drinking_water: standing and drinking from a water bottle after exercise, full body
+injun_waving_park: standing in a park waving hello with one hand, full body
+injun_cheering_outdoor: standing outdoors cheering with both arms raised in joy, full body

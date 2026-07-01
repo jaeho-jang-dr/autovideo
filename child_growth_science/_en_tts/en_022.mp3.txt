@@ -1,0 +1,1 @@
+If the bone age is younger than the actual age, it means there is more time left for growth.

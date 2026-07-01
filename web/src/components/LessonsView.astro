@@ -1,0 +1,216 @@
+---
+import type { Lang } from '../lib/content';
+import lessons from '../data/lessons168.json';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const isEn = lang === 'en';
+const R2 = 'https://pub-a8312324e7b445f8a1985f759cddeff7.r2.dev';   // 영상 CDN
+
+// 주차별 그룹 (1~24)
+const weeks = [] as any[];
+for (let w = 1; w <= 24; w++) {
+  const ls = (lessons as any[]).filter((x) => x.week === w);
+  if (ls.length) weeks.push({ week: w, level: ls[0].level, level_ko: ls[0].level_ko,
+    theme_ko: ls[0].theme_ko, theme_en: ls[0].theme_en, lessons: ls });
+}
+const total = (lessons as any[]).length;
+const counts = {
+  beginner: (lessons as any[]).filter((x) => x.level === 'beginner').length,
+  intermediate: (lessons as any[]).filter((x) => x.level === 'intermediate').length,
+  advanced: (lessons as any[]).filter((x) => x.level === 'advanced').length,
+};
+
+const L = {
+  title: isEn ? 'The Full Hangeul Course · 168 Lessons' : '한글 전 과정 · 168강 로드맵',
+  sub: isEn
+    ? '24 themed weeks × 7 daily lessons. One lesson a day for 24 weeks — a spiral, multi-skill course inspired by BBC Learning English & Japanese textbooks.'
+    : '24개 주제 × 하루 한 강, 7일. 매일 한 강씩 24주 — BBC 영어교육·일본어 교재의 나선형·다기능 학습을 참조한 전 과정.',
+  all: isEn ? 'All' : '전체',
+  beginner: isEn ? 'Beginner' : '초급',
+  intermediate: isEn ? 'Intermediate' : '중급',
+  advanced: isEn ? 'Advanced' : '고급',
+  listView: isEn ? 'List' : '리스트',
+  cardView: isEn ? 'Cards' : '카드',
+  week: isEn ? 'Week' : '주차',
+  day: isEn ? 'Day' : '일차',
+  lessons: isEn ? 'lessons' : '강',
+};
+const LV_KO = { beginner: '초급', intermediate: '중급', advanced: '고급' };
+const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' };
+---
+
+<section class="lessons-roadmap">
+  <header class="lr-head">
+    <h1>{L.title}</h1>
+    <p class="lr-sub">{L.sub}</p>
+    <p class="lr-credit">{isEn
+      ? 'Grounded in the NotebookLM Korean-education notebook (126 sources: TTMIK, Sogang Korean, King Sejong Institute, NIKL Standard Curriculum…). Day 1 of each week is the existing core video; Days 2–7 are all-new daily lessons (no overlap).'
+      : 'NotebookLM 한글교육 노트북 126개 소스(TTMIK·서강한국어·세종학당·국립국어원 표준교육과정 등) 기반. 각 주차 1일차는 기존 핵심 영상, 2~7일차는 전부 새 일일 강의(중복 없음).'}</p>
+    <div class="lr-stats">
+      <span class="stat"><b>{total}</b>{L.lessons}</span>
+      <span class="stat"><b>24</b>{L.week}</span>
+      <span class="stat lvb b"><b>{counts.beginner}</b>{L.beginner}</span>
+      <span class="stat lvb i"><b>{counts.intermediate}</b>{L.intermediate}</span>
+      <span class="stat lvb a"><b>{counts.advanced}</b>{L.advanced}</span>
+    </div>
+  </header>
+
+  <div class="lr-controls">
+    <div class="lr-tabs" role="tablist">
+      <button class="lr-tab active" data-level="all" type="button">{L.all}</button>
+      <button class="lr-tab" data-level="beginner" type="button">{L.beginner}</button>
+      <button class="lr-tab" data-level="intermediate" type="button">{L.intermediate}</button>
+      <button class="lr-tab" data-level="advanced" type="button">{L.advanced}</button>
+    </div>
+    <div class="lr-view">
+      <button class="vbtn active" data-view="list" type="button">▤ {L.listView}</button>
+      <button class="vbtn" data-view="cards" type="button">▦ {L.cardView}</button>
+    </div>
+  </div>
+
+  <div class="lr-weeks" data-view="list">
+    {weeks.map((wk) => (
+      <section class="week-block" data-level={wk.level}>
+        <h3 class="week-head">
+          <span class={`lvl-badge ${wk.level}`}>{isEn ? LV_EN[wk.level] : LV_KO[wk.level]}</span>
+          <span class="wk-no">{L.week} {wk.week}</span>
+          <span class="wk-theme">{isEn ? wk.theme_en : wk.theme_ko}</span>
+        </h3>
+
+        <ol class="lesson-list">
+          {wk.lessons.map((x: any) => (
+            <li class={`lesson-row${x.anchor ? ' anchor' : ''}`}>
+              <span class="lr-no">{x.no}</span>
+              <span class="lr-icon">{x.icon}</span>
+              <span class="lr-skill">{isEn ? x.skill_en : x.skill_ko}</span>
+              <span class="lr-main">
+                <b class="lr-title">
+                  {isEn ? x.title_en : x.title_ko}
+                  {x.anchor
+                    ? <a class="tag tag-video" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">▶ {isEn ? 'video' : '영상'}</a>
+                    : <span class="tag tag-new">NEW</span>}
+                </b>
+                <span class="lr-alt">{isEn ? x.title_ko : x.title_en}</span>
+                <span class="lr-desc">{isEn ? x.desc_en : x.desc_ko}</span>
+              </span>
+              <span class="lr-day">D{x.day}</span>
+            </li>
+          ))}
+        </ol>
+
+        <div class="lesson-cards">
+          {wk.lessons.map((x: any) => (
+            <div class={`lcard ${wk.level}${x.anchor ? ' anchor' : ''}`}>
+              <div class="lc-top">
+                <span class="lc-icon">{x.icon}</span>
+                <span class="lc-day">{L.day} {x.day}</span>
+              </div>
+              <div class="lc-skill">
+                {isEn ? x.skill_en : x.skill_ko}
+                {x.anchor ? <span class="tag tag-video">▶</span> : <span class="tag tag-new">NEW</span>}
+              </div>
+              <div class="lc-title">{isEn ? x.title_en : x.title_ko}</div>
+              {x.anchor
+                ? <a class="lc-link" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">{isEn ? '▶ Watch video' : '▶ 영상 보기'}</a>
+                : <div class="lc-no">#{x.no}</div>}
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll('.lr-tab');
+  const vbtns = document.querySelectorAll('.vbtn');
+  const weeksWrap = document.querySelector('.lr-weeks') as HTMLElement;
+  const blocks = document.querySelectorAll('.week-block');
+
+  tabs.forEach((t) => t.addEventListener('click', () => {
+    tabs.forEach((x) => x.classList.remove('active'));
+    t.classList.add('active');
+    const lv = t.getAttribute('data-level');
+    blocks.forEach((b) => {
+      const show = lv === 'all' || b.getAttribute('data-level') === lv;
+      (b as HTMLElement).style.display = show ? '' : 'none';
+    });
+  }));
+
+  vbtns.forEach((v) => v.addEventListener('click', () => {
+    vbtns.forEach((x) => x.classList.remove('active'));
+    v.classList.add('active');
+    weeksWrap.setAttribute('data-view', v.getAttribute('data-view') || 'list');
+  }));
+</script>
+
+<style>
+  .lessons-roadmap {
+    --c-bg: #f4ecdb; --c-card: #fffdf7; --c-ink: #1c1813; --c-ink-2: #5b5142; --c-ink-3: #8c7f6a;
+    --c-line: rgba(28,24,19,0.12); --c-gold: #b5852a; --c-gold-soft: rgba(181,133,42,0.14);
+    --c-b: #2a8a6f; --c-i: #3a6ea5; --c-a: #9a4bbf;
+    max-width: 1160px; margin: 0 auto; padding: 28px 18px 80px; color: var(--c-ink);
+  }
+  .lr-head h1 { font-size: clamp(1.6rem, 4vw, 2.3rem); margin: 0 0 8px; }
+  .lr-sub { color: var(--c-ink-2); font-size: 1rem; line-height: 1.6; max-width: 760px; }
+  .lr-credit { color: var(--c-ink-3); font-size: 0.85rem; line-height: 1.5; max-width: 820px; margin-top: 6px; }
+  .tag { font-size: 0.62rem; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; vertical-align: middle; white-space: nowrap; }
+  .tag-new { background: var(--c-gold); color: #fff; }
+  .tag-video { background: #d6453a; color: #fff; text-decoration: none; }
+  .anchor .lr-title, .lcard.anchor .lc-title { }
+  .lcard.anchor { border-top-style: double; }
+  .lc-link { font-size: 0.78rem; font-weight: 700; color: #d6453a; text-decoration: none; }
+  .lc-link:hover { text-decoration: underline; }
+  .lr-stats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .stat { background: var(--c-card); border: 1px solid var(--c-line); border-radius: 12px; padding: 8px 14px; font-size: 0.9rem; color: var(--c-ink-2); }
+  .stat b { font-size: 1.15rem; color: var(--c-ink); margin-right: 5px; }
+  .stat.lvb.b b { color: var(--c-b); } .stat.lvb.i b { color: var(--c-i); } .stat.lvb.a b { color: var(--c-a); }
+
+  .lr-controls { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin: 24px 0 18px; position: sticky; top: 64px; background: var(--c-bg); padding: 8px 0; z-index: 5; }
+  .lr-tabs, .lr-view { display: flex; gap: 8px; flex-wrap: wrap; }
+  .lr-tab, .vbtn { border: 1px solid var(--c-line); background: var(--c-card); color: var(--c-ink-2); border-radius: 10px; padding: 8px 16px; font-weight: 600; cursor: pointer; font-size: 0.92rem; transition: all .18s; }
+  .lr-tab.active, .vbtn.active { background: var(--c-gold-soft); border-color: var(--c-gold); color: var(--c-gold); }
+  .lr-tab:hover, .vbtn:hover { border-color: var(--c-gold); }
+
+  .week-block { margin-bottom: 26px; }
+  .week-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 1.12rem; margin: 0 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--c-line); }
+  .lvl-badge { font-size: 0.72rem; font-weight: 800; color: #fff; padding: 3px 9px; border-radius: 7px; }
+  .lvl-badge.beginner { background: var(--c-b); } .lvl-badge.intermediate { background: var(--c-i); } .lvl-badge.advanced { background: var(--c-a); }
+  .wk-no { font-weight: 800; color: var(--c-ink); }
+  .wk-theme { color: var(--c-ink-2); font-weight: 600; }
+
+  /* 리스트 뷰 */
+  .lesson-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+  .lesson-row { display: grid; grid-template-columns: 38px 30px 64px 1fr 38px; align-items: center; gap: 10px; background: var(--c-card); border: 1px solid var(--c-line); border-radius: 12px; padding: 10px 14px; }
+  .lr-no { font-weight: 800; color: var(--c-gold); font-size: 0.95rem; text-align: center; }
+  .lr-icon { font-size: 1.2rem; text-align: center; }
+  .lr-skill { font-size: 0.72rem; font-weight: 700; color: var(--c-ink-3); text-align: center; }
+  .lr-main { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .lr-title { font-size: 0.98rem; }
+  .lr-alt { font-size: 0.78rem; color: var(--c-ink-3); }
+  .lr-desc { font-size: 0.82rem; color: var(--c-ink-2); }
+  .lr-day { font-size: 0.78rem; font-weight: 700; color: var(--c-ink-3); text-align: center; }
+
+  /* 카드 뷰 */
+  .lesson-cards { display: none; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+  .lcard { background: var(--c-card); border: 1px solid var(--c-line); border-top: 4px solid var(--c-gold); border-radius: 14px; padding: 14px; min-height: 128px; display: flex; flex-direction: column; gap: 6px; transition: transform .15s, box-shadow .15s; }
+  .lcard:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+  .lcard.beginner { border-top-color: var(--c-b); } .lcard.intermediate { border-top-color: var(--c-i); } .lcard.advanced { border-top-color: var(--c-a); }
+  .lc-top { display: flex; justify-content: space-between; align-items: center; }
+  .lc-icon { font-size: 1.5rem; }
+  .lc-day { font-size: 0.72rem; font-weight: 700; color: var(--c-ink-3); }
+  .lc-skill { font-size: 0.72rem; font-weight: 800; color: var(--c-gold); letter-spacing: .02em; }
+  .lc-title { font-size: 0.95rem; font-weight: 700; line-height: 1.35; flex: 1; }
+  .lc-no { font-size: 0.74rem; color: var(--c-ink-3); text-align: right; }
+
+  /* 뷰 토글 */
+  .lr-weeks[data-view="cards"] .lesson-list { display: none; }
+  .lr-weeks[data-view="cards"] .lesson-cards { display: grid; }
+
+  @media (max-width: 640px) {
+    .lesson-row { grid-template-columns: 30px 26px 1fr 34px; }
+    .lr-skill { display: none; }
+    .lr-alt { display: none; }
+  }
+</style>

@@ -1,0 +1,4 @@
+# [셀피 재생성 — 팔 엉킴 수정] 두 친구가 나란히 서서 셀카, 팔 겹치지 않게 명확히
+# ref-key: injun_jieun_handshake_facing_opaque
+# 핵심: 친구 사이 적당한 간격, 인준이 한 손으로 폰을 들어 셀카, 다른 손/지은 손은 자연스럽게(엉킴 금지)
+injun_jieun_selfie: standing politely side by side with a small gap between them as friends, Injun on the left holding a smartphone up high in his right hand at arm's length to take a selfie, both looking at the phone camera and smiling, each person's arms clearly separate and NOT overlapping or tangled, no hugging, simple clean distinct limbs, both full body

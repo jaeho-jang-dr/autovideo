@@ -1,0 +1,123 @@
+{
+  "title_ko": "이중모음과 반모음 활주",
+  "title_en": "Double Vowels & Semivowel Glides",
+  "scenes": [
+    {
+      "seq": 1,
+      "duration_sec": 18,
+      "cap_ko": "안녕하세요!",
+      "cap_en": "Hello!",
+      "script_kr": "안녕하세요! 오늘은 두 소리가 미끄러지며 만나는 '이중모음'과 '반모음 활주'를 배워볼 거예요. 함께 시작해요!",
+      "script_en": "Hello! Today we'll learn 'double vowels' and 'semivowel glides', where two sounds slide together. Let's begin!",
+      "visual_note": "졸라걸 인사 + '이중모음', '반모음' 글자."
+    },
+    {
+      "seq": 2,
+      "duration_sec": 21,
+      "cap_ko": "이중모음이란?",
+      "cap_en": "What are double vowels?",
+      "script_kr": "단모음 하나로 끝나지 않고, 두 모음이 이어져 한 소리처럼 나는 것을 '이중모음'이라고 해요. 입 모양이 부드럽게 바뀌는 게 특징이에요.",
+      "script_en": "When two vowels join and sound like one, we call it a 'double vowel'. Its key feature is that your mouth shape glides smoothly.",
+      "visual_note": "단모음→이중모음 개념, 야 여 요."
+    },
+    {
+      "seq": 3,
+      "duration_sec": 22,
+      "cap_ko": "반모음 활주란?",
+      "cap_en": "What is a glide?",
+      "script_kr": "이중모음의 앞에는 짧게 스쳐 지나가는 '반모음'이 숨어 있어요. 'ㅣ'에서 미끄러지는 소리와 'ㅗ', 'ㅜ'에서 미끄러지는 소리, 두 종류가 있답니다.",
+      "script_en": "Hidden at the front of a double vowel is a quick 'semivowel'. There are two kinds: a glide from 'ㅣ', and a glide from 'ㅗ' or 'ㅜ'.",
+      "visual_note": "반모음 y활음(ㅣ계), w활음(ㅗ/ㅜ계) 두 갈래."
+    },
+    {
+      "seq": 4,
+      "duration_sec": 20,
+      "cap_ko": "ㅣ에서 미끄러져요",
+      "cap_en": "Glide from ㅣ",
+      "script_kr": "먼저 'ㅣ' 활음이에요. 'ㅣ'에서 'ㅏ'로 빠르게 미끄러지면 'ㅑ'가 돼요. 야! 하고 부르는 그 소리죠.",
+      "script_en": "First, the 'ㅣ' glide. Slide quickly from 'ㅣ' to 'ㅏ' and you get 'ㅑ' — the sound in 야 (ya).",
+      "visual_note": "ㅣ + ㅏ → ㅑ 합성."
+    },
+    {
+      "seq": 5,
+      "duration_sec": 23,
+      "cap_ko": "ㅕ, ㅛ, ㅠ",
+      "cap_en": "ㅕ, ㅛ, ㅠ",
+      "script_kr": "같은 방법으로 'ㅓ'는 'ㅕ', 'ㅗ'는 'ㅛ', 'ㅜ'는 'ㅠ'가 돼요. 모두 'ㅣ'에서 부드럽게 미끄러지는 소리랍니다.",
+      "script_en": "The same way, 'ㅓ' becomes 'ㅕ', 'ㅗ' becomes 'ㅛ', and 'ㅜ' becomes 'ㅠ', all gliding gently from 'ㅣ'.",
+      "visual_note": "ㅓ→ㅕ, ㅗ→ㅛ, ㅜ→ㅠ 세 줄."
+    },
+    {
+      "seq": 6,
+      "duration_sec": 22,
+      "cap_ko": "ㅑㅕㅛㅠ 연습",
+      "cap_en": "Practice ㅑㅕㅛㅠ",
+      "script_kr": "단어로 연습해요. '야구'의 'ㅑ', '여우'의 'ㅕ', '요리'의 'ㅛ', '우유'의 'ㅠ'. 입을 살짝 미끄러뜨려 보세요.",
+      "script_en": "Practice with words: 'ㅑ' in 야구 (baseball), 'ㅕ' in 여우 (fox), 'ㅛ' in 요리 (cooking), 'ㅠ' in 우유 (milk). Let your mouth glide.",
+      "visual_note": "야구 여우 요리 우유."
+    },
+    {
+      "seq": 7,
+      "duration_sec": 21,
+      "cap_ko": "ㅒ, ㅖ",
+      "cap_en": "ㅒ, ㅖ",
+      "script_kr": "'ㅐ'가 'ㅒ', 'ㅔ'가 'ㅖ'로도 미끄러져요. '얘기'의 'ㅒ', '예의'의 'ㅖ'처럼요.",
+      "script_en": "'ㅐ' also glides to 'ㅒ', and 'ㅔ' to 'ㅖ', as in 얘기 (talk, ㅒ) and 예의 (manners, ㅖ).",
+      "visual_note": "ㅐ→ㅒ, ㅔ→ㅖ, 얘기 예의."
+    },
+    {
+      "seq": 8,
+      "duration_sec": 21,
+      "cap_ko": "ㅗ·ㅜ에서 미끄러져요",
+      "cap_en": "Glide from ㅗ·ㅜ",
+      "script_kr": "이번엔 'ㅗ', 'ㅜ' 활음이에요. 'ㅗ'에서 'ㅏ'로 미끄러지면 'ㅘ'가 돼요. '사과'의 '과' 소리죠.",
+      "script_en": "Now the 'ㅗ', 'ㅜ' glide. Slide from 'ㅗ' to 'ㅏ' and you get 'ㅘ' — the 과 sound in 사과 (apple).",
+      "visual_note": "ㅗ + ㅏ → ㅘ 합성."
+    },
+    {
+      "seq": 9,
+      "duration_sec": 23,
+      "cap_ko": "ㅝ, ㅚ, ㅟ",
+      "cap_en": "ㅝ, ㅚ, ㅟ",
+      "script_kr": "'ㅜ'와 'ㅓ'가 만나면 'ㅝ', 'ㅗ'와 'ㅣ'가 만나면 'ㅚ', 'ㅜ'와 'ㅣ'가 만나면 'ㅟ'가 돼요. 입술을 둥글게 모았다 펴 보세요.",
+      "script_en": "'ㅜ' plus 'ㅓ' makes 'ㅝ', 'ㅗ' plus 'ㅣ' makes 'ㅚ', and 'ㅜ' plus 'ㅣ' makes 'ㅟ'. Round your lips, then open.",
+      "visual_note": "ㅜ+ㅓ→ㅝ, ㅗ+ㅣ→ㅚ, ㅜ+ㅣ→ㅟ."
+    },
+    {
+      "seq": 10,
+      "duration_sec": 22,
+      "cap_ko": "ㅘㅝㅚㅟ 연습",
+      "cap_en": "Practice ㅘㅝㅚㅟ",
+      "script_kr": "단어로 연습해요. '사과'의 'ㅘ', '샤워'의 'ㅝ', '외투'의 'ㅚ', '가위'의 'ㅟ'. 소리가 둥글게 미끄러지죠?",
+      "script_en": "Practice: 'ㅘ' in 사과 (apple), 'ㅝ' in 샤워 (shower), 'ㅚ' in 외투 (coat), 'ㅟ' in 가위 (scissors). Feel the round glide.",
+      "visual_note": "사과 샤워 외투 가위."
+    },
+    {
+      "seq": 11,
+      "duration_sec": 20,
+      "cap_ko": "ㅢ",
+      "cap_en": "ㅢ",
+      "script_kr": "마지막은 'ㅢ'예요. 'ㅡ'에서 'ㅣ'로 미끄러지는 특별한 소리죠. '의자'의 '의'처럼 발음해요.",
+      "script_en": "Last is 'ㅢ', a special glide from 'ㅡ' to 'ㅣ'. Pronounce it like the 의 in 의자 (chair).",
+      "visual_note": "ㅡ + ㅣ → ㅢ, 의자."
+    },
+    {
+      "seq": 12,
+      "duration_sec": 22,
+      "cap_ko": "이중모음 정리",
+      "cap_en": "Double vowels recap",
+      "script_kr": "정리하면 'ㅑ', 'ㅕ', 'ㅛ', 'ㅠ', 'ㅘ', 'ㅝ', 'ㅟ', 'ㅚ', 'ㅢ' 모두 반모음이 미끄러지며 만든 이중모음이에요. 입 모양의 흐름을 기억하세요.",
+      "script_en": "In sum, 'ㅑ', 'ㅕ', 'ㅛ', 'ㅠ', 'ㅘ', 'ㅝ', 'ㅟ', 'ㅚ', 'ㅢ' are all double vowels made by a gliding semivowel. Remember the flow of your mouth.",
+      "visual_note": "이중모음 모음표."
+    },
+    {
+      "seq": 13,
+      "duration_sec": 17,
+      "cap_ko": "다음 시간에 만나요!",
+      "cap_en": "See you next time!",
+      "script_kr": "오늘은 이중모음과 반모음 활주를 배웠어요. 주변 단어에서 이중모음을 찾아보세요. 다음 시간에 또 만나요!",
+      "script_en": "Today we learned double vowels and semivowel glides. Look for double vowels in words around you. See you next time!",
+      "visual_note": "졸라걸 손 흔들기 + 요약."
+    }
+  ]
+}

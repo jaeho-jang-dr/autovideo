@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LessonsView from '../components/LessonsView.astro';
+const lang = 'en' as const;
+---
+<BaseLayout
+  lang={lang}
+  altUrl="/ko/lessons-all/"
+  active="alllessons"
+  title="The Full Hangeul Course · 168 Lessons · drjay-ed"
+  description="24 themed weeks × 7 daily lessons = 168 lessons. A spiral, multi-skill Korean course (beginner/intermediate/advanced) in list and card views."
+>
+  <LessonsView lang={lang} />
+</BaseLayout>

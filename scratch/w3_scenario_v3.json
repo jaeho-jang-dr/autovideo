@@ -1,0 +1,141 @@
+{
+  "title_ko": "거센소리와 된소리",
+  "title_en": "Aspirated & Tense Consonants",
+  "scenes": [
+    {
+      "seq": 1,
+      "duration_sec": 18,
+      "cap_ko": "안녕하세요!",
+      "cap_en": "Hello everyone!",
+      "script_kr": "안녕하세요, Jay입니다. 오늘은 '거센소리'와 '된소리'를 배워볼 거예요. 한글을 더 풍성하게 만들어 주는 소리들이죠. 함께 시작해 볼까요?",
+      "script_en": "Hello everyone, this is Jay. Today we'll learn 'aspirated' and 'tense' consonants, the sounds that make Korean richer. Let's begin!",
+      "visual_note": "Jay가 밝게 인사하고 '거센소리', '된소리' 글자가 차분히 나타남."
+    },
+    {
+      "seq": 2,
+      "duration_sec": 22,
+      "cap_ko": "지난 시간 복습",
+      "cap_en": "Review from last time",
+      "script_kr": "지난 시간에는 부드러운 '예사소리' 'ㄱ', 'ㄷ', 'ㅂ', 'ㅈ', 'ㅅ'를 배웠어요. 목과 입에 힘을 빼고 편안하게 내는 소리였죠. 오늘은 이 친구들이 어떻게 변신하는지 볼 거예요.",
+      "script_en": "Last time we learned the soft 'plain consonants' 'ㄱ', 'ㄷ', 'ㅂ', 'ㅈ', 'ㅅ', made comfortably without tension in the throat or mouth. Today we'll see how they transform.",
+      "visual_note": "예사소리 낱자가 순서대로 나타남."
+    },
+    {
+      "seq": 3,
+      "duration_sec": 20,
+      "cap_ko": "거센소리는?",
+      "cap_en": "What are Aspirated?",
+      "script_kr": "첫 번째 친구는 '거센소리'예요. 입에서 공기를 확 세게 내뿜는 힘찬 소리죠. 뜨거운 숨을 후 하고 내쉬듯, 입에서 바람이 시원하게 나오는 걸 느껴 보세요.",
+      "script_en": "Our first friend is the 'aspirated' sound, a powerful sound that bursts a strong puff of air from your mouth. Like exhaling a hot breath, feel the air rush out.",
+      "visual_note": "'거센소리' 글자가 화면 가운데에 또렷이 나타남."
+    },
+    {
+      "seq": 4,
+      "duration_sec": 20,
+      "cap_ko": "획을 더해요!",
+      "cap_en": "Add a stroke!",
+      "script_kr": "'거센소리'는 '예사소리'에 획을 하나 더해 만들어요. 'ㄱ'에 획을 더하면 'ㅋ'! 부드럽던 'ㄱ'가 획 하나로 훨씬 강하고 거센 소리가 되죠.",
+      "script_en": "Aspirated sounds are made by adding a stroke to a plain consonant. Add a stroke to 'ㄱ' and you get 'ㅋ'! One stroke turns the soft 'ㄱ' into a strong, aspirated sound.",
+      "visual_note": "'ㄱ'에 획이 더해져 'ㅋ'으로 쓰여짐."
+    },
+    {
+      "seq": 5,
+      "duration_sec": 22,
+      "cap_ko": "ㄷ→ㅌ, ㅂ→ㅍ, ㅈ→ㅊ",
+      "cap_en": "D→T, B→P, J→CH",
+      "script_kr": "같은 방법으로 'ㄷ'는 'ㅌ', 'ㅂ'는 'ㅍ', 'ㅈ'는 'ㅊ'가 돼요. 획이 더해질수록 공기가 펑 터지듯 발음이 강해진답니다.",
+      "script_en": "The same way, 'ㄷ' becomes 'ㅌ', 'ㅂ' becomes 'ㅍ', and 'ㅈ' becomes 'ㅊ'. With each added stroke, the air bursts out and the sound grows stronger.",
+      "visual_note": "각 예사소리에 획이 더해져 거센소리로 쓰여짐."
+    },
+    {
+      "seq": 6,
+      "duration_sec": 20,
+      "cap_ko": "거센소리 발음 연습",
+      "cap_en": "Aspirated Practice",
+      "script_kr": "'ㅋ' 소리를 연습해 볼까요? 목구멍에서 공기를 힘껏 밀어내세요. '코'의 'ㅋ'이에요. 손바닥을 입 앞에 대면 뜨거운 바람이 느껴질 거예요.",
+      "script_en": "Let's practice 'ㅋ'. Push air hard from your throat. It's the 'ㅋ' in '코' (ko). Hold your palm to your mouth and feel the warm gust.",
+      "visual_note": "'ㅋ'과 '코' 글자가 나타남."
+    },
+    {
+      "seq": 7,
+      "duration_sec": 22,
+      "cap_ko": "ㅌ, ㅍ, ㅊ 발음 연습",
+      "cap_en": "T, P, CH Practice",
+      "script_kr": "다음은 'ㅌ', 'ㅍ', 'ㅊ'예요. '타조', '포도', '치마'처럼 공기를 시원하게 뿜어내며 발음해요. 모두 공기가 강하게 터져 나오는 소리랍니다.",
+      "script_en": "Next: 'ㅌ', 'ㅍ', 'ㅊ'. Pronounce them like '타조' (tajo), '포도' (podo), '치마' (chima), releasing the air freshly. Each one bursts the air out strongly.",
+      "visual_note": "'ㅌㅍㅊ' 위에 작은 '타조 포도 치마' 단어가 띄어져 나타남."
+    },
+    {
+      "seq": 8,
+      "duration_sec": 20,
+      "cap_ko": "된소리는?",
+      "cap_en": "What are Tense?",
+      "script_kr": "두 번째 친구는 '된소리'예요. 목에 힘을 주고 소리를 꽉 조여 내는 단단한 소리죠. 공기가 새어 나가지 않게 목구멍을 닫듯 잡아 보세요.",
+      "script_en": "Our second friend is the 'tense' sound, a firm sound squeezed out by tightening your throat. Hold the air in, as if closing your throat so none escapes.",
+      "visual_note": "'된소리' 글자가 화면 가운데에 또렷이 나타남."
+    },
+    {
+      "seq": 9,
+      "duration_sec": 21,
+      "cap_ko": "쌍자음으로 만들어요!",
+      "cap_en": "Made with double consonants!",
+      "script_kr": "'된소리'는 '예사소리' 두 개를 나란히 붙여 만들어요. 'ㄱ'가 두 개 모이면 'ㄲ'! 두 손을 모아 힘을 주듯, 더 강하고 단단한 소리가 되죠.",
+      "script_en": "Tense sounds are made by placing two plain consonants side by side. Two 'ㄱ's make 'ㄲ'! Like pressing two hands together, the sound becomes stronger and firmer.",
+      "visual_note": "'ㄱ' 두 개가 'ㄲ'으로 합쳐짐."
+    },
+    {
+      "seq": 10,
+      "duration_sec": 22,
+      "cap_ko": "ㄷ→ㄸ, ㅂ→ㅃ, ㅅ→ㅆ, ㅈ→ㅉ",
+      "cap_en": "D→DD, B→BB, S→SS, J→JJ",
+      "script_kr": "마찬가지로 'ㄷ'는 'ㄸ', 'ㅂ'는 'ㅃ', 'ㅅ'는 'ㅆ', 'ㅈ'는 'ㅉ'가 돼요. 글자가 두 개가 되면서 소리에 힘이 꽉 들어간답니다.",
+      "script_en": "Likewise, 'ㄷ' becomes 'ㄸ', 'ㅂ' becomes 'ㅃ', 'ㅅ' becomes 'ㅆ', and 'ㅈ' becomes 'ㅉ'. As the letters double, the sound is squeezed tight.",
+      "visual_note": "각 예사소리 두 개가 된소리로 합쳐짐."
+    },
+    {
+      "seq": 11,
+      "duration_sec": 20,
+      "cap_ko": "된소리 발음 연습",
+      "cap_en": "Tense Practice",
+      "script_kr": "'ㄲ' 소리를 연습해 봐요. 목에 힘을 주고 공기를 막듯이 소리를 내세요. '까치'의 'ㄲ'이에요. 손바닥에 바람이 거의 느껴지지 않을 거예요.",
+      "script_en": "Let's practice 'ㄲ'. Tighten your throat and make the sound while blocking the air. It's the 'ㄲ' in '까치' (kkachi). You'll feel almost no air on your palm.",
+      "visual_note": "'ㄲ'과 '까치' 글자가 나타남."
+    },
+    {
+      "seq": 12,
+      "duration_sec": 22,
+      "cap_ko": "ㄸ, ㅃ, ㅆ, ㅉ 발음 연습",
+      "cap_en": "DD, BB, SS, JJ Practice",
+      "script_kr": "이번엔 'ㄸ', 'ㅃ', 'ㅆ', 'ㅉ'예요. '꼬리', '땅', '빵', '짜'를 발음하며 단단한 소리를 느껴 보세요. 모두 목에 힘을 주어 내는 소리랍니다.",
+      "script_en": "Now 'ㄸ', 'ㅃ', 'ㅆ', 'ㅉ'. Feel the firm sound as you say '꼬리' (kkori), '땅' (ttang), '빵' (ppang), '짜' (jja), each made by tensing your throat.",
+      "visual_note": "'ㄸㅃㅆㅉ'와 함께 '꼬리 땅 빵 짜' 단어가 나타남."
+    },
+    {
+      "seq": 13,
+      "duration_sec": 24,
+      "cap_ko": "휴지 실험",
+      "cap_en": "The Pause Experiment",
+      "script_kr": "재미있는 실험을 해볼까요? 종이 한 장을 입 앞에 대고 발음해 보세요. '거센소리'는 공기가 확 나와 종이가 움직이고, '된소리'는 공기를 꽉 잡아 종이가 거의 움직이지 않아요. 두 소리의 가장 큰 차이랍니다.",
+      "script_en": "Let's try a fun experiment. Hold a sheet of paper in front of your mouth. With an 'aspirated' sound the air rushes out and the paper moves; with a 'tense' sound the air is held in and the paper barely moves. That's the biggest difference between them.",
+      "visual_note": "휴지 한 장과 'ㅋ', 'ㄲ' 글자(정지)."
+    },
+    {
+      "seq": 14,
+      "duration_sec": 24,
+      "cap_ko": "예사/거센/된 소리 비교",
+      "cap_en": "Plain/Aspirated/Tense",
+      "script_kr": "이제 세 소리를 비교해 볼까요? '개', '캐', '깨'는 비슷하게 들리지만 공기의 양이 달라요. '개'는 편안하게, '캐'는 공기를 강하게 터뜨리고, '깨'는 목에 힘을 줘 단단하게 낸답니다. 직접 따라 하며 차이를 느껴 보세요.",
+      "script_en": "Now let's compare three sounds. '개' (gae), '캐' (kae), '깨' (kkae) sound alike, but the amount of air differs. '개' is relaxed, '캐' bursts strong air, and '깨' is firmed by tightening the throat. Try them yourself and feel the difference.",
+      "visual_note": "ㄱ-ㅋ-ㄲ 와 '개 캐 깨' 단어가 나란히 나타남."
+    },
+    {
+      "seq": 15,
+      "duration_sec": 18,
+      "cap_ko": "다음 시간에 만나요!",
+      "cap_en": "See You Next Time!",
+      "script_kr": "오늘은 한글의 '거센소리'와 '된소리'를 배웠어요. 매일 조금씩 발음을 익혀 보세요. 다음 시간에 또 만나요. Jay였습니다, 안녕!",
+      "script_en": "Today we learned Korean's 'aspirated' and 'tense' consonants. Practice the sounds a little each day. See you next time! This was Jay, goodbye!",
+      "visual_note": "Jay가 손을 흔들고 '거센소리', '된소리' 요약이 나타남."
+    }
+  ]
+}

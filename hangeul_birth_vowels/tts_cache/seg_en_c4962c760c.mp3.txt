@@ -1,0 +1,1 @@
+Now a flashcard game! When a word appears, recall the consonant and vowel, and read it clearly.

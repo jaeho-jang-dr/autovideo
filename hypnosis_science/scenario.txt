@@ -1,0 +1,79 @@
+[Scene 1]
+text: 천천히 회전하는 회중시계를 바라봅니다. 최면술사의 부드러운 목소리를 따라가다 보면, 어느새 깊은 몰입 상태에 빠지게 됩니다.
+text_en: Look at the slowly rotating pocket watch. Following the hypnotist's soft voice, you will find yourself in a state of deep absorption.
+motion: rotating slowly
+
+[Scene 2]
+text: 많은 이들이 최면을 단순한 마술쇼나 타인을 마음대로 조종하는 기이한 눈속임으로 생각하곤 합니다.
+text_en: Many people think of hypnosis as simple magic shows or bizarre tricks to control others as they please.
+motion: moves slightly
+
+[Scene 3]
+text: 하지만 과연 이 최면술은 대중의 인식처럼 실제로 우리 뇌와 몸에 효과가 있는 과학적 현상일까요?
+text_en: But is hypnosis really a scientific phenomenon that has actual effects on our brain and body as the public perceives?
+motion: zooming out
+
+[Scene 4]
+text: 최면의 기원은 18세기 오스트리아의 의사 프란츠 안톤 메스머의 황당한 주장으로 거슬러 올라갑니다.
+text_en: The origin of hypnosis traces back to the absurd claims of Franz Anton Mesmer, an 18th-century Austrian physician.
+motion: panning slowly
+
+[Scene 5]
+text: 그는 우주로부터 흐르는 눈에 보이지 않는 힘인 '동물 자기'를 조절해 만병을 고칠 수 있다고 선전했습니다.
+text_en: He advertised that he could cure all diseases by controlling 'animal magnetism', an invisible force flowing from the universe.
+motion: tilting slowly
+
+[Scene 6]
+text: 하지만 그의 화려한 치료실과 신비주의 치료법은 곧 프랑스 왕실의 큰 의심을 사게 되었습니다.
+text_en: However, his flashy clinic and mystical healing methods soon raised great suspicion from the French royal family.
+motion: rotating slowly
+
+[Scene 7]
+text: 이에 따라 프랑스 왕실은 벤자민 프랭클린을 필두로 당대 최고의 과학자들로 구성된 위원회를 소집했습니다.
+text_en: Accordingly, the French royal family convened a committee composed of the greatest scientists of the time, led by Benjamin Franklin.
+motion: moves slightly
+
+[Scene 8]
+text: 그들은 과학사 최초로 환자의 눈을 가리고 진짜 자석인 척 속이는 '맹검 실험'을 최초로 시도했습니다.
+text_en: For the first time in scientific history, they attempted a 'blind test' by covering the patient's eyes and pretending to use real magnets.
+motion: zooming in
+
+[Scene 9]
+text: 실험 결과, 환자가 에너지가 흐른다고 착각했을 때만 몸이 반응했고, 동물 자기는 실체가 없는 사기로 판명났습니다.
+text_en: As a result of the experiment, the body reacted only when the patient falsely believed that energy was flowing, proving animal magnetism to be a groundless scam.
+motion: panning slowly
+
+[Scene 10]
+text: 비록 사기극으로 끝났지만, 이는 인간의 상상력과 기대가 몸에 반응을 일으키는 '플라시보 효과'의 시초가 되었습니다.
+text_en: Although it ended as a scam, this became the starting point of the 'placebo effect', where human imagination and expectation trigger bodily reactions.
+motion: zooming out
+
+[Scene 11]
+text: 그 뒤 19세기 의사 제임스 브레이드가 나타나 최면을 마법이나 종교가 아닌 신경 생리학적 관점으로 재정의했습니다.
+text_en: Later, in the 19th century, physician James Braid appeared and redefined hypnosis from a neurophysiological perspective rather than magic or religion.
+motion: tilting slowly
+
+[Scene 12]
+text: 그는 특정 물체에 고도로 주의를 집중하면, 뇌가 일시적인 신경성 수면과 강한 몰입 상태에 빠진다는 사실을 밝혀냈습니다.
+text_en: He discovered that focusing high attention on a specific object puts the brain into a state of temporary nervous sleep and intense absorption.
+motion: moves slightly
+
+[Scene 13]
+text: 오늘날 현대 과학은 fMRI 장치를 이용해 최면 상태의 뇌를 들여다봄으로써 그 작동 기전을 완벽히 규명했습니다.
+text_en: Today, modern science has fully elucidated its working mechanism by looking inside the brain under hypnosis using fMRI devices.
+motion: rotating slowly
+
+[Scene 14]
+text: 놀랍게도 최면 상태에서는 통증 신호를 인지하는 뇌의 전대상피질 부위 활성도가 극적으로 감소합니다.
+text_en: Surprisingly, in a state of hypnosis, the activity of the anterior cingulate cortex, the brain region that perceives pain signals, decreases dramatically.
+motion: zooming in
+
+[Scene 15]
+text: 덕분에 현대 의학에서는 약물 마취가 어려운 환자들의 무마취 수술이나 극심한 심리 치료에 최면을 직접 활용하고 있습니다.
+text_en: Thanks to this, modern medicine directly utilizes hypnosis for surgery without anesthesia in patients difficult to anesthetize, or for intense psychotherapy.
+motion: panning slowly
+
+[Scene 16]
+text: 최면은 초자연적 마법이 아닌, 인간의 상상력과 뇌 과학이 만들어내는 정교하고 강력한 우리 마음의 도구입니다.
+text_en: Hypnosis is not a supernatural magic, but a precise and powerful tool of our mind created by human imagination and brain science.
+motion: zooming out

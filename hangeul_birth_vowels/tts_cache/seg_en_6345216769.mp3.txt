@@ -1,0 +1,1 @@
+Describe routines in time order: 'wake up in the morning → work during the day → sleep at night'.

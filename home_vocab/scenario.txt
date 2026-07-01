@@ -1,0 +1,29 @@
+[Scene 0]
+text: 한글단어교실 : 집에서 편. 아침부터 등교까지 만나는 물건들의 한글 단어를 함께 공부해 봅시다.
+text_en: Learn Korean Words: At Home. Let's study the Korean words for objects we see from waking up to going to school.
+motion: :: [pulse] bold Korean title text "한글단어교실: 집에서 편" with a minimalist 2D line art sketch of a house on a flat beige background (#F5F5F0), camera zooming in slowly
+
+[Scene 1]
+text: 아침에 침대에서 일어납니다. 따뜻한 이불을 개고, 알람시계를 끕니다.
+text_en: Wake up in bed in the morning. Fold the warm blanket, and turn off the alarm clock.
+motion: :: [pulse] a minimalist 2D line art of a stickman waking up and stretching in bed, thick black outlines, on a solid flat light beige background (#F5F5F0), camera slowly panning right
+
+[Scene 2]
+text: 학교에 갈 준비를 합니다. 책가방에 책과 공책, 그리고 연필을 챙깁니다.
+text_en: Get ready for school. Pack a book, a notebook, and a pencil into the backpack.
+motion: :: [zoom_bounce] a minimalist 2D line art of a stickman placing books into a backpack on a study desk, thick black outlines, on a solid flat light beige background (#F5F5F0), camera slowly zooming in
+
+[Scene 3]
+text: 욕실로 가서 깨끗이 씻습니다. 거울을 보며 세수를 하고, 수건으로 물기를 닦은 뒤, 칫솔로 양치를 합니다.
+text_en: Go to the bathroom and wash up. Wash face looking at the mirror, dry with a towel, and brush teeth with a toothbrush.
+motion: :: [pulse] a minimalist 2D line art of a stickman washing face and brushing teeth in front of a bathroom mirror, thick black outlines, on a solid flat light beige background (#F5F5F0), camera slowly panning left
+
+[Scene 4]
+text: 식탁에 앉아 아침 식사를 합니다. 숟가락과 젓가락으로 밥을 먹고 물컵으로 물을 마십니다.
+text_en: Sit at the dining table and eat breakfast. Eat rice using a spoon and chopsticks, and drink water from a cup.
+motion: :: [pulse] a minimalist 2D line art of a stickman eating breakfast at a dining table, thick black outlines, on a solid flat light beige background (#F5F5F0), camera slowly tilting down
+
+[Scene 5]
+text: 이제 학교로 출발합니다. 신발을 신고 현관문을 열고 나갑니다. 버스정류장에서 버스를 타고 등교합니다.
+text_en: Off to school now. Put on shoes and open the front door. Take a bus at the bus stop to go to school.
+motion: :: [zoom_bounce] a minimalist 2D line art of a stickman walking out of a house door and waiting for a yellow bus at a bus stop, thick black outlines, on a solid flat light beige background (#F5F5F0), camera zooming out slowly

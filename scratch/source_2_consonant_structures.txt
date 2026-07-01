@@ -1,0 +1,29 @@
+# Source 2: Consonant Creation & Anatomical Representation of Vocal Organs
+
+The consonants of Hangeul are featural characters, designed to represent the physical shapes of the vocal organs during articulation. The Hunminjeongeum Haerye (the explanatory commentary of 1446) details how the five basic consonant shapes mimic the tongue, mouth, teeth, and throat.
+
+1.  **ㄱ (Velar / Molar Sound - 아음, 牙音):**
+    *   Anatomical Origin: Mimics the root of the tongue blocking the throat during pronunciation.
+    *   Sound Represented: A soft velar sound (like [k] or [g]). The back of the tongue rises to contact the soft palate.
+2.  **ㄴ (Lingual / Tongue Sound - 설음, 舌音):**
+    *   Anatomical Origin: Mimics the tip of the tongue touching the upper gums (alveolar ridge).
+    *   Sound Represented: The alveolar nasal sound [n].
+3.  **ㅁ (Labial / Mouth Sound - 순음, 脣音):**
+    *   Anatomical Origin: Mimics the square shape of the closed lips.
+    *   Sound Represented: The bilabial nasal sound [m].
+4.  **ㅅ (Dental / Tooth Sound - 치음, 齒音):**
+    *   Anatomical Origin: Mimics the sharp, pointed shape of the teeth.
+    *   Sound Represented: The alveolar sibilant sound [s].
+5.  **ㅇ (Guttural / Throat Sound - 후음, 喉音):**
+    *   Anatomical Origin: Mimics the circular shape of the open throat.
+    *   Sound Represented: A glottal placeholder (silent at the start of a syllable, or a nasal [ŋ] at the end).
+
+By looking at these base shapes, learners can instantly understand where the sound is physically formed inside the mouth. 
+
+From these five base shapes, the principle of **가획 (Ga-hweok - Adding Strokes)** was applied to represent stronger, aspirated sounds. By adding a single stroke, the sound's breathiness is visually marked:
+*   ㄱ ➡️ ㅋ (Adding a horizontal stroke representing the burst of air)
+*   ㄴ ➡️ ㄷ ➡️ ㅌ (Adding horizontal lines to indicate stopping the air, then releasing it with force)
+*   ㅁ ➡️ ㅂ ➡️ ㅍ (Extending the lines to show labial blockage and release)
+*   ㅅ ➡️ ㅈ ➡️ ㅊ (Adding a top hat line representing palatal occlusion, then aspiration)
+*   ㅇ ➡️ ㆆ (glottal stop) ➡️ ㅎ (aspirated glottal)
+This featural design makes the consonant system highly systematic and easy to read.

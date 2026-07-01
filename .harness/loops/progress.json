@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-06-25",
+  "last_updated": "2026-06-28",
   "project": "autovideo",
   "agents": {
     "orchestrator": "Antigravity (Gemini)",
     "executor": "Claude Code (Opus)"
   },
   "current_session": {
-    "status": "completed",
-    "started": "2026-06-25",
-    "goal": "Rebuild Beginner Week-1 'Birth of Hangeul & Simple Vowels' as a DB-centric stickman explainer (ref youtu.be/Nj97sKnitKM) with correct letters and correct stroke order, and enlarge the web lesson player",
-    "phase": "ko_w01_stickman_video"
+    "status": "in_progress",
+    "started": "2026-07-01",
+    "goal": "Generate and compile 'Sejong the Great & Hangeul' 16-minute main hybrid video and short drafts in multi-languages (KO/EN/JA), including 48-scene Veo motion clips and ElevenLabs narration.",
+    "phase": "sejong_main_hybrid_rendering"
   },
   "completed_tasks": [
     "KO-W01: built stickman_factory.py (parametric 12-joint ink stickman) -> 30-pose library registered to content.db (register_poses.py)",
@@ -141,7 +141,15 @@
     "Production Deploy (2026-06-25, Claude=감독): Completed the remaining directive step that Gemini had left undone — deployed main (7cb9880) to BOTH production hosts. Vercel: `vercel deploy --prod` -> https://drjayed.vercel.app (67 pages, READY). Cloudflare Pages: `wrangler pages deploy dist --project-name=drjayed --branch=main` -> https://drjayed.com. Verified live on both: / -> EN (html lang=en), /ko/ -> KO, /curriculum/ + /ko/curriculum/, /groove/ + /ko/groove/ (floating toggle present), /lesson + /ko/lesson, /grammar + /ko/grammar all 200 with correct language + working KO|EN toggles. NOTE: drjayed.com (CF Pages) serves the root index.html as a 200 catch-all for ALL unmatched paths (e.g. old /en/* and random paths) — pre-existing CF Pages fallback, unrelated to the swap; Vercel correctly 404s these. Optional cleanup: add `_redirects` (/en/* -> /:splat 301) + vercel.json redirects.",
     "Hangeul Consonants Evolution Video (2026-06-25, Gemini=조감독): Compiled the Hangeul consonants evolution video (jay_whiteboard_consonants_evolution.mp4, 19s) featuring a scaled-up procedural stickman Jay writing 'ㄱ' dynamically three times on whiteboard, flying to UP, RIGHT, and LEFT destinations, and morphing side-by-side into words (강, 꽃, 콩) and corresponding drawings (river, flower, bean) with 1.1x gTTS narration, standardized variable padding subtitles, and circular channel logo overlay. Registered in content.db SQLite.",
     "Hangeul Vowels YOLO Reverse Compiler (2026-06-26, Gemini=조감독): Created compile_zolla_yolo_reverse.py to track Zolla stickman's right wrist (Keypoint 10) in scene_1.mp4 ~ scene_6.mp4 using YOLOv8-pose.",
-    "Hangeul Vowels YOLO Reverse Compiler (2026-06-26, Gemini=조감독): Successfully compiled 30s Hangeul vowels test video (hangeul_birth_vowels_zolla.mp4) with 1.1x speed female TTS, BGM, SFX, subtitles, and ultra-small channel logo overlay, launching automatically on user screen."
+    "Hangeul Vowels YOLO Reverse Compiler (2026-06-26, Gemini=조감독): Successfully compiled 30s Hangeul vowels test video (hangeul_birth_vowels_zolla.mp4) with 1.1x speed female TTS, BGM, SFX, subtitles, and ultra-small channel logo overlay, launching automatically on user screen.",
+    "LM168: organized all NotebookLM 한글교육 sources via Gemini -> scratch/nlm_korean_digest.md (126 sources by level/week), nlm_all_sources.md, nlm_full_report.md (synthesized curriculum guide)",
+    "LM168: make_lessons168.py -> web/src/data/lessons168.json (168 lessons; Day1=existing anchor video reuse, Day2-7=new daily skills 어휘/문형/듣기/말하기/문화/복습)",
+    "LM168: grounded all 144 new daily lessons in real curriculum (vocab sets, grammar patterns 이에요/예요·-고·-아서/어서, listening/speaking scenarios) -> 144 distinct titles, 0 duplication with the 24 anchors",
+    "LM168: LessonsView.astro (list+card toggle, level tabs 전체/초/중/고, week-block grouping, anchor video links via R2, NEW/video badges, NotebookLM source-credit line)",
+    "LM168: pages /lessons-all (en) + /ko/lessons-all (ko); BaseLayout nav 168강 link (desktop+mobile+footer), active='alllessons'",
+    "LM168: deployed to Cloudflare Pages + Vercel; verified live on drjayed.com/ko/lessons-all (grounded content markers present)",
+    "Sejong-Film (2026-07-01): Compiled multi-language draft videos (sejong_multi_draft_ko.mp4, _en.mp4, _ja.mp4) based on the 5-act scenario to verify multilingual voice sync and sub layout.",
+    "Sejong-Film (2026-07-01): Rendering 48 scene motion clips under sejong_main_kf/ (YOLO keyframe transition & Flow-Veo pipeline) for high-fidelity hybrid video composition (still in progress)."
   ],
   "pending_tasks": [
     "Sori Hangeul Mic: Resolve iOS/iPhone Safari silent microphone startup failure. User reported that clicking the mic button still yields no reaction at all. Perform intensive debugging on WebKit speech recognition click binding and console/error traps.",

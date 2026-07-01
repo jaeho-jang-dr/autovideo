@@ -1,0 +1,200 @@
+{
+ "episode": "KO-W01D3",
+ "title_ko": "'ㅇ'과 모음으로 음절 만들기",
+ "title_en": "Making Syllables with 'ㅇ' and Vowels",
+ "scenes": [
+  {
+   "seq": 1,
+   "dur": 12,
+   "ko": "안녕하세요! 오늘은 한국어의 아주 특별한 친구, 바로 'ㅇ'에 대해 배워볼 거예요. 이 'ㅇ'은 단어의 첫 부분에 오면 소리가 나지 않는답니다. 마치 투명 망토를 입은 것처럼요! 하지만 이 'ㅇ'이 없으면 모음만으로는 글자가 될 수 없어요. 그럼 이제 'ㅇ'과 모음이 만나 어떻게 멋진 글자가 되는지 함께 살펴볼까요?",
+   "en": "Hello everyone! Today, we're going to learn about a very special friend in Korean, the 'ㅇ' (ieung). When this 'ㅇ' comes at the beginning of a word, it makes no sound. It's like wearing an invisible cloak! But without this 'ㅇ', vowels alone cannot form a character. So, shall we look together at how 'ㅇ' and vowels meet to become wonderful characters?",
+   "cap_ko": "소리 없는 'ㅇ', 음절의 시작!",
+   "cap_en": "Silent 'ㅇ', the start of a syllable!",
+   "gestures": [
+    "zm_waving",
+    "zm_thinking",
+    "zm_base"
+   ],
+   "words": [],
+   "bg": "bg_w1d3_s01",
+   "bg_prompt": "soft pastel storybook landscape with a gentle flowing river and green rolling hills, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9",
+   "critter": "dragonfly"
+  },
+  {
+   "seq": 2,
+   "dur": 8,
+   "ko": "첫 번째는 '아'입니다. 'ㅇ'과 'ㅏ'가 만나 '아'가 돼요. '아'는 입을 크게 벌려 '아!' 하고 소리 내는 느낌이에요. 아이가 엄마를 부를 때 '아이!' 하죠? 한국어로 '아이'는 '어린이'라는 뜻이랍니다.",
+   "en": "First is '아' (a). 'ㅇ' and 'ㅏ' meet to form '아'. '아' feels like opening your mouth wide and saying 'Ah!' like a child calling their mom. In Korean, '아이' means 'child'.",
+   "cap_ko": "ㅇ + ㅏ = 아 (아이)",
+   "cap_en": "ㅇ + ㅏ = Ah (child)",
+   "gestures": [
+    "zm_pointing",
+    "zm_reading",
+    "zm_base"
+   ],
+   "words": [
+    "아",
+    "아이"
+   ],
+   "bg": "bg_w1d3_s02",
+   "bg_prompt": "soft pastel storybook landscape with a blooming flower garden and a gentle breeze, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9",
+   "critter": "butterfly"
+  },
+  {
+   "seq": 3,
+   "dur": 8,
+   "ko": "다음은 '어'입니다. 'ㅇ'과 'ㅓ'가 만나 '어'가 돼요. '어'는 '아'보다 입을 조금 덜 벌리고 목 안쪽에서 소리를 내는 느낌이에요. '어'로 시작하는 단어 중에는 '어깨'가 있어요. 영어의 'shoulder'와 같은 뜻이죠.",
+   "en": "Next is '어' (eo). 'ㅇ' and 'ㅓ' meet to form '어'. '어' feels like opening your mouth slightly less than '아' and making a sound from the back of your throat. A word starting with '어' is '어깨' (eokkae), meaning 'shoulder'.",
+   "cap_ko": "ㅇ + ㅓ = 어 (어깨)",
+   "cap_en": "ㅇ + ㅓ = Eo (shoulder)",
+   "gestures": [
+    "zm_point_l",
+    "zm_reading",
+    "zm_base"
+   ],
+   "words": [
+    "어",
+    "어깨"
+   ],
+   "bg": "bg_w1d3_s03",
+   "bg_prompt": "soft pastel storybook landscape with a calm lake and distant mountains, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9",
+   "critter": "bee"
+  },
+  {
+   "seq": 4,
+   "dur": 8,
+   "ko": "'오'는 'ㅇ'과 'ㅗ'가 만난 소리예요. 입술을 동그랗게 모으고 '오~' 하고 소리를 내면 돼요. '오리'라는 단어 아세요? 귀여운 'duck'을 한국어로 '오리'라고 한답니다.",
+   "en": "'오' (o) is the sound formed by 'ㅇ' and 'ㅗ'. You just need to round your lips and make an 'Oh~' sound. Do you know the word '오리' (ori)? A cute 'duck' is called '오리' in Korean.",
+   "cap_ko": "ㅇ + ㅗ = 오 (오리)",
+   "cap_en": "ㅇ + ㅗ = Oh (duck)",
+   "gestures": [
+    "zm_point_r",
+    "zm_studying",
+    "zm_base"
+   ],
+   "words": [
+    "오",
+    "오리"
+   ],
+   "bg": "bg_w1d3_s04",
+   "bg_prompt": "soft pastel storybook landscape with a charming village and a winding road, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9",
+   "critter": "bird"
+  },
+  {
+   "seq": 5,
+   "dur": 8,
+   "ko": "이번엔 '우'입니다. 'ㅇ'과 'ㅜ'가 만나 '우'가 돼요. 입술을 쭉 내밀면서 '우~' 하고 발음해 보세요. 매일 마시는 '우유' (milk)도 '우'로 시작하죠. 정말 쉬워요!",
+   "en": "This time, it's '우' (u). 'ㅇ' and 'ㅜ' meet to form '우'. Try to pronounce it by protruding your lips and saying 'Woo~'. The 'milk' we drink every day, '우유' (uyu), also starts with '우'. It's really easy!",
+   "cap_ko": "ㅇ + ㅜ = 우 (우유)",
+   "cap_en": "ㅇ + ㅜ = Woo (milk)",
+   "gestures": [
+    "zm_pointing",
+    "zm_thinking",
+    "zm_base"
+   ],
+   "words": [
+    "우",
+    "우유"
+   ],
+   "bg": "bg_w1d3_s05",
+   "bg_prompt": "soft pastel storybook landscape with a cozy cottage and a tall tree, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9",
+   "critter": "rabbit"
+  },
+  {
+   "seq": 6,
+   "dur": 8,
+   "ko": "'으'는 'ㅇ'과 'ㅡ'가 만난 소리입니다. 입술을 옆으로 살짝 벌리고 '으~' 하고 힘을 빼고 발음해 보세요. 이 발음은 한국어 학습자들에게 조금 어려울 수 있어요. '은행' (bank)이라는 단어도 '으'로 시작해요.",
+   "en": "'으' (eu) is the sound formed by 'ㅇ' and 'ㅡ'. Slightly open your lips sideways and make an 'Eu~' sound, relaxing your mouth. This pronunciation can be a bit challenging for Korean learners. The word '은행' (eunhaeng), meaning 'bank', also starts with '으'.",
+   "cap_ko": "ㅇ + ㅡ = 으 (은행)",
+   "cap_en": "ㅇ + ㅡ = Eu (bank)",
+   "gestures": [
+    "zm_studying",
+    "zm_thinking",
+    "zm_base"
+   ],
+   "words": [
+    "으",
+    "은행"
+   ],
+   "bg": "bg_w1d3_s06",
+   "bg_prompt": "soft pastel storybook landscape with a quiet forest path and dappled sunlight, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9",
+   "critter": "dragonfly"
+  },
+  {
+   "seq": 7,
+   "dur": 8,
+   "ko": "다음은 '이'입니다. 'ㅇ'과 'ㅣ'가 만나 '이'가 돼요. 입술을 양옆으로 살짝 당기면서 '이~' 하고 발음하면 됩니다. 우리 몸의 '이' (tooth)나 숫자 '이' (two)도 모두 이 글자를 사용하죠.",
+   "en": "Next is '이' (i). 'ㅇ' and 'ㅣ' meet to form '이'. You just need to slightly pull your lips to the sides and say 'Ee~'. '이' (tooth) in our body or the number '이' (two) both use this character.",
+   "cap_ko": "ㅇ + ㅣ = 이 (이)",
+   "cap_en": "ㅇ + ㅣ = Ee (tooth/two)",
+   "gestures": [
+    "zm_reading",
+    "zm_pointing",
+    "zm_base"
+   ],
+   "words": [
+    "이"
+   ],
+   "bg": "bg_w1d3_s07",
+   "bg_prompt": "soft pastel storybook landscape with a small bridge over a stream and playful fish, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9",
+   "critter": "butterfly"
+  },
+  {
+   "seq": 8,
+   "dur": 8,
+   "ko": "'애'는 'ㅇ'과 'ㅐ'가 합쳐진 소리예요. '에'와 비슷하지만 입을 조금 더 크게 벌려 '애~' 하고 발음해 보세요. 영어의 'apple'을 한국어로 '애플'이라고 하는데, 그때 '애'가 사용됩니다.",
+   "en": "'애' (ae) is the sound formed by 'ㅇ' and 'ㅐ'. It's similar to '에', but try opening your mouth a bit wider and saying 'Ae~'. The English word 'apple' is called '애플' (aepeul) in Korean, and that's when '애' is used.",
+   "cap_ko": "ㅇ + ㅐ = 애 (애플)",
+   "cap_en": "ㅇ + ㅐ = Ae (apple)",
+   "gestures": [
+    "zm_point_l",
+    "zm_cheering",
+    "zm_base"
+   ],
+   "words": [
+    "애",
+    "애플"
+   ],
+   "bg": "bg_w1d3_s08",
+   "bg_prompt": "soft pastel storybook landscape with a bustling market square and colorful awnings, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9",
+   "critter": "bee"
+  },
+  {
+   "seq": 9,
+   "dur": 8,
+   "ko": "마지막으로 '에'입니다. 'ㅇ'과 'ㅔ'가 만나 '에'가 돼요. '애'와 비슷하지만 '에'는 입을 덜 벌리고 편안하게 '에~' 하고 소리를 내면 됩니다. 여름에 시원하게 해주는 '에어컨' (air conditioner)도 '에'로 시작하죠.",
+   "en": "Finally, it's '에' (e). 'ㅇ' and 'ㅔ' meet to form '에'. Similar to '애', but for '에', you open your mouth less and comfortably make an 'E~' sound. The 'air conditioner' that keeps us cool in summer, '에어컨' (eeokon), also starts with '에'.",
+   "cap_ko": "ㅇ + ㅔ = 에 (에어컨)",
+   "cap_en": "ㅇ + ㅔ = Ee (air conditioner)",
+   "gestures": [
+    "zm_point_r",
+    "zm_clapping",
+    "zm_base"
+   ],
+   "words": [
+    "에",
+    "에어컨"
+   ],
+   "bg": "bg_w1d3_s09",
+   "bg_prompt": "soft pastel storybook landscape with a cozy cafe and street lamps, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9",
+   "critter": "bird"
+  },
+  {
+   "seq": 10,
+   "dur": 10,
+   "ko": "오늘은 소리 없는 'ㅇ'과 다양한 모음들이 만나 멋진 한국어 음절을 만드는 방법을 배웠어요. 이제 여러분도 '아, 어, 오, 우, 으, 이, 애, 에' 이 모든 글자를 자신 있게 읽고 쓸 수 있을 거예요! 꾸준히 연습하면 한국어 실력이 쑥쑥 늘어날 거예요. 다음 시간에도 즐겁게 한국어를 배워요!",
+   "en": "Today, we learned how the silent 'ㅇ' and various vowels combine to create wonderful Korean syllables. Now you can confidently read and write all these characters: '아, 어, 오, 우, 으, 이, 애, 에'! Consistent practice will greatly improve your Korean skills. Let's enjoy learning Korean again next time!",
+   "cap_ko": "'ㅇ'과 모음, 함께하는 한글 여행!",
+   "cap_en": "'ㅇ' and Vowels, a Korean Journey Together!",
+   "gestures": [
+    "zm_cheering",
+    "zm_clapping",
+    "zm_bowing"
+   ],
+   "words": [],
+   "bg": "bg_w1d3_s10",
+   "bg_prompt": "soft pastel storybook landscape with a hot air balloon floating gently over fields, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9",
+   "critter": "rabbit"
+  }
+ ]
+}

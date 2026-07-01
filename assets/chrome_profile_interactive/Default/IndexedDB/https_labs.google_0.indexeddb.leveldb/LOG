@@ -1,0 +1,6 @@
+2026/06/15-11:31:35.550 2ee4 Creating DB D:\Entertainments\DevEnvironment\autovideo\assets\chrome_profile_interactive\Default\IndexedDB\https_labs.google_0.indexeddb.leveldb since it was missing.
+2026/06/15-11:31:35.693 2ee4 Reusing MANIFEST D:\Entertainments\DevEnvironment\autovideo\assets\chrome_profile_interactive\Default\IndexedDB\https_labs.google_0.indexeddb.leveldb/MANIFEST-000001
+2026/06/15-11:31:36.681 11f50 Level-0 table #5: started
+2026/06/15-11:31:36.821 11f50 Level-0 table #5: 1317 bytes OK
+2026/06/15-11:31:36.926 11f50 Delete type=0 #3
+2026/06/15-11:31:36.927 11f50 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

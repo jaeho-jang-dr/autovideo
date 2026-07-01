@@ -1,0 +1,1 @@
+[FAIL] injun_navy_side 생성 실패

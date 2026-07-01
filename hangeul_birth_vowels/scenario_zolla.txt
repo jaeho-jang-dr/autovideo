@@ -1,0 +1,87 @@
+[Scene 1]
+text: 당신의 뇌는 당신이 생각하는 것보다 훨씬 자주 거짓말을 합니다. 새로운 언어를 배운다는 것이 고통스러운 과정이라거나, 완전히 낯선 문자를 머릿속에 집어넣는 일은 불가능하다고 말하죠. 하지만 여기, 단 10분 만에 완벽히 이해할 수 있는 우주의 질서로 설계된 글자가 있습니다. 바로 세계에서 가장 아름답고 과학적인 문자, 한글입니다.
+image: Blackboard backdrop with Zolla Man standing on the left in thinking pose, thought bubble above head.
+
+[Scene 2]
+text: 당신이 불규칙하고 복잡한 영어 스펠링과 발음 규칙들 사이에서 방황하는 동안, 500년 전의 한 천재 왕은 극도로 단순하면서도 완벽하게 모듈화된 문자 시스템을 기획했습니다. 자음과 모음이 네모난 상자 안에서 딱 들어맞게 조립되는 이 놀라운 규칙은 마치 우주를 담은 레고 블록과 같습니다.
+image: Blackboard backdrop with desk at the center, Zolla Man standing next to the desk in base pose, showing a blank syllable skeleton box.
+
+[Scene 3]
+text: 이 완벽한 모듈식 시스템은 어떻게 만들어졌을까요? 세종대왕은 동양 철학의 정수를 담아 우주를 구성하는 세 가지 기본 요소, 즉 하늘과 땅, 그리고 그 사이를 살아가는 사람을 모음의 뼈대로 삼았습니다. 이것이 바로 천지인 삼재의 조화입니다.
+image: Blackboard backdrop, Zolla Man in pointing pose pointing to a large scroll displaying "천지인 (Cheon-Ji-In)", badge_1 on the right.
+
+[Scene 4]
+text: 첫 번째 요소는 바로 하늘(天)입니다. 세종대왕은 둥글고 광활한 하늘의 모양을 본떠 동그란 점 '•'으로 시각화했습니다. 이 둥근 하늘의 점은 모든 모음의 기운을 밝히는 중심이자 불씨가 됩니다.
+image: Blackboard backdrop, Zolla Man in pointing pose holding a card with the circular dot symbol '•', pointing up towards the top-right.
+
+[Scene 5]
+text: 두 번째 요소는 평평하고 드넓은 대지, 즉 땅(地)입니다. 무한하게 뻗어 나가는 땅의 형상을 그대로 본떠 일자 가로선 'ㅡ'으로 설계했습니다. 이 가로선은 세상의 평온함과 묵직한 지평선을 상징하는 단단한 기초입니다.
+image: Blackboard backdrop, Zolla Man in base pose next to a horizontal flat line 'ㅡ' on the blackboard, desk and chair placed below.
+
+[Scene 6]
+text: 세 번째 요소는 하늘과 땅 사이에 우뚝 서서 우주와 소통하는 위대한 존재, 바로 사람(人)입니다. 똑바로 서 있는 사람의 모습을 직관적으로 본떠 일자 세로선 'ㅣ'으로 조각했습니다.
+image: Blackboard backdrop, Zolla Man in pointing pose standing straight next to a vertical line 'ㅣ' on the blackboard, notebook on the desk.
+
+[Scene 7]
+text: 이 지극히 미니멀한 세 가지 블록, 점(•), 가로선(ㅡ), 세로선(ㅣ)이 서로를 만나기 시작하면서 한글의 모음이라는 거대한 소리의 조작판이 움직입니다. 이 3개의 우주 블록이 어떻게 결합하는지 지금부터 하나씩 직접 눈으로 조립해 보겠습니다.
+image: Blackboard backdrop, Zolla Man in cheering pose smiling and holding two puzzle blocks: dot and horizontal line, desk and notebook in front.
+
+[Scene 8]
+text: 먼저, 꼿꼿이 서 있는 사람을 뜻하는 세로선 'ㅣ'의 오른쪽에 하늘을 뜻하는 점 '•'을 얹어보겠습니다. 대지 위로 솟아오르는 눈부신 아침 해처럼 밝고 바깥으로 퍼져나가는 활기찬 기운의 모음, 바로 'ㅏ'가 결합하여 완성됩니다.
+image: Blackboard backdrop, Zolla Man in pointing pose sliding a dot to the right of a vertical line to construct "ㅣ + • = ㅏ", with a red arrow pointing right.
+
+[Scene 9]
+text: 동쪽에서 해가 밝게 떠오르는 긍정적인 양의 기운을 담은 소리, '아'입니다. 여러분도 뇌의 긴장을 풀고, 입을 자연스럽고 크게 벌린 채 목소리를 흘려보내 보세요. '아!'
+image: Blackboard backdrop, letter 'ㅏ' card glowing on the center of the blackboard, Zolla Man in cheering pose.
+
+[Scene 10]
+text: 이번에는 세로선 'ㅣ'의 왼쪽에 하늘의 점 '•'을 조립해 봅니다. 해가 서산으로 뉘엿뉘엿 저물어가며 안으로 수축하고 갈무리되는 차분한 음의 기운을 가진 모음, 바로 'ㅓ'가 만들어집니다.
+image: Blackboard backdrop, Zolla Man in pointing pose sliding a dot to the left of a vertical line to construct "• + ㅣ = ㅓ", with arrow pointing left.
+
+[Scene 11]
+text: 모든 에너지가 대지 안으로 잦아드는 어두운 모음의 대표적인 소리, '어'입니다. 턱을 가볍게 아래로 떨어뜨리고 입술을 자연스럽게 둔 상태에서 깊게 울려보세요. '어!'
+image: Blackboard backdrop, letter 'ㅓ' card glowing on the board, Zolla Man in thinking pose.
+
+[Scene 12]
+text: 이제 평평한 대지를 뜻하는 가로선 'ㅡ'의 윗부분에 하늘의 점 '•'을 올려 조립해 보겠습니다. 대지 위로 둥실 솟아오르는 태양의 이미지를 시각화한 모음, 바로 'ㅗ'가 탄생합니다.
+image: Blackboard backdrop, Zolla Man in pointing pose raising a dot above a horizontal line to assemble "ㅡ + • = ㅗ", scroll on the left.
+
+[Scene 13]
+text: 대지 위로 둥글게 떠오르는 해처럼 밝고 위로 솟구치는 기운의 소리, '오'입니다. 입술을 동그랗게 오므려 모으고 앞으로 가볍게 내밀며 소리 냅니다. '오!'
+image: Blackboard backdrop, letter 'ㅗ' card glowing on the center, Zolla Man in base pose pointing at the letter.
+
+[Scene 14]
+text: 반대로 대지를 뜻하는 가로선 'ㅡ'의 아랫부분에 하늘의 점 '•'을 결합하면 어떻게 될까요? 해가 지평선 아래 무한한 심연 속으로 가라앉는 깊고 무거운 기운의 모음, 바로 'ㅜ'가 조립됩니다.
+image: Blackboard backdrop, Zolla Man in pointing pose placing a dot below a horizontal line to assemble "ㅡ + • = ㅜ", notebook and pencil on the desk.
+
+[Scene 15]
+text: 물속 깊은 곳으로 가라앉아 에너지가 아래로 침강하는 어두운 음성 소리, '우'입니다. 입술을 둥글게 내밀고 입안의 울림통을 키워 묵직하게 발음합니다. '우!'
+image: Blackboard backdrop, letter 'ㅜ' card glowing on the blackboard, Zolla Man in thinking pose.
+
+[Scene 16]
+text: 하늘, 땅, 사람의 형태에서 빚어진 한글 모음은 단지 글자 모양에만 머물지 않고, 자연의 대칭과 음양의 조화라는 우주의 이치를 그대로 담고 있습니다. 밝은 양성 모음과 어두운 음성 모음의 구분이 바로 그것입니다.
+image: Blackboard backdrop split in half with underline highlights: Left side orange (양성: ㅏ, ㅗ), Right side blue (음성: ㅓ, ㅜ). Zolla Man in base pose standing in the middle.
+
+[Scene 17]
+text: 한국어에서는 이렇게 기운이 비슷한 모음끼리 어울리려는 강한 끌림이 작용합니다. 이를 '모음조화'라고 합니다. 예를 들어, 가벼운 물방울이 맑게 통통 튀는 느낌을 표현할 때는 양성 모음인 'ㅗ'와 'ㅏ'를 짝지어 '퐁당퐁당'이라고 합니다.
+image: Blackboard backdrop, Zolla Man in cheering pose pointing to the word card "퐁당퐁당" on the blackboard, desk below.
+
+[Scene 18]
+text: 반대로, 묵직하고 커다란 돌이 깊은 연못으로 무겁게 가라앉는 음침한 느낌을 묘사할 때는 음성 모음인 'ㅜ'와 'ㅓ'를 사용하여 '풍덩풍덩'이라고 부릅니다. 이렇듯 모음의 조합 하나로 단어의 기운이 180도 달라집니다.
+image: Blackboard backdrop, Zolla Man in studying pose sitting next to the desk, pointing to the word card "풍덩풍덩" on the blackboard.
+
+[Scene 19]
+text: 소리의 순수함을 지키는 이러한 한글 모음들 중에서도 다른 소리와 결코 섞이지 않는 온전한 독립 소리를 '단모음'이라고 칭합니다. 이 소리들을 명확하게 구사할 때 한국어의 온전한 울림이 비로소 살아납니다.
+image: Blackboard backdrop, Zolla Man in base pose showing a list of basic vowels: ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ.
+
+[Scene 20]
+text: 단모음을 발음할 때 우리가 가슴에 새겨야 할 절대적인 황금률이 있습니다. 영어나 다른 언어의 이중 모음 발음과 달리, 한국어의 단모음은 소리가 시작할 때의 혀 위치와 입술 모양을 소리가 끝날 때까지 단 1밀리미터도 바꾸지 않고 굳게 지켜야 합니다.
+image: Blackboard backdrop, Zolla Man in pointing pose pointing to a mouth stability icon on the blackboard, arrow pointing to "keep position".
+
+[Scene 21]
+text: 이제 당신의 뇌는 새로운 언어가 복잡하고 불가능하다는 거짓말을 더는 하지 못할 것입니다. 우리는 오늘 단 10분 만에, 단 세 가지 우주 블록의 아름다운 대칭과 필연적인 조립의 역사를 모두 확인했기 때문입니다.
+image: Blackboard backdrop, Zolla Man in cheering pose, thought bubble with clear sky and shining stars above head.
+
+[Scene 22]
+text: 한글이라는 완벽한 우주를 탐험하는 다음 여정도 기대해 주세요. 영상이 유익하셨다면 구독과 좋아요를 통해 더 많은 이야기를 만나보시기 바랍니다. 오늘 하루도 뇌의 상식을 뛰어넘는 멋진 상상을 즐기세요.
+image: Blackboard backdrop, Zolla Man in base pose smiling and waving, desk and books neatly arranged at the center.

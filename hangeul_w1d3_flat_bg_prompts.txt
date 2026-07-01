@@ -1,0 +1,10 @@
+bg_w1d3_s01: soft pastel storybook landscape with a gentle flowing river and green rolling hills, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9
+bg_w1d3_s02: soft pastel storybook landscape with a blooming flower garden and a gentle breeze, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9
+bg_w1d3_s03: soft pastel storybook landscape with a calm lake and distant mountains, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9
+bg_w1d3_s04: soft pastel storybook landscape with a charming village and a winding road, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9
+bg_w1d3_s05: soft pastel storybook landscape with a cozy cottage and a tall tree, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9
+bg_w1d3_s06: soft pastel storybook landscape with a quiet forest path and dappled sunlight, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9
+bg_w1d3_s07: soft pastel storybook landscape with a small bridge over a stream and playful fish, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9
+bg_w1d3_s08: soft pastel storybook landscape with a bustling market square and colorful awnings, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9
+bg_w1d3_s09: soft pastel storybook landscape with a cozy cafe and street lamps, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9
+bg_w1d3_s10: soft pastel storybook landscape with a hot air balloon floating gently over fields, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9

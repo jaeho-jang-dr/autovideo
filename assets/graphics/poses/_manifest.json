@@ -1,0 +1,386 @@
+[
+  {
+    "name": "z_wave",
+    "file": "assets/graphics/poses/stickman_z_wave.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 손 흔들며 인사",
+    "en": "Zolla waving hello"
+  },
+  {
+    "name": "z_point_r",
+    "file": "assets/graphics/poses/stickman_z_point_r.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 오른쪽 힘차게 가리키며 설명",
+    "en": "Zolla pointing right"
+  },
+  {
+    "name": "z_point_l",
+    "file": "assets/graphics/poses/stickman_z_point_l.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 왼쪽 가리키며 설명",
+    "en": "Zolla pointing left"
+  },
+  {
+    "name": "z_present",
+    "file": "assets/graphics/poses/stickman_z_present.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 두 팔 벌려 발표",
+    "en": "Zolla presenting, arms open"
+  },
+  {
+    "name": "z_explain",
+    "file": "assets/graphics/poses/stickman_z_explain.png",
+    "expr": "talk",
+    "facing": "front",
+    "ko": "졸라맨 한 손 들어 강조하며 말함",
+    "en": "Zolla explaining, hand up"
+  },
+  {
+    "name": "z_tissue",
+    "file": "assets/graphics/poses/stickman_z_tissue.png",
+    "expr": "talk",
+    "facing": "front",
+    "ko": "졸라맨 손을 입 앞에 (휴지 실험)",
+    "en": "Zolla hand at mouth (tissue test)"
+  },
+  {
+    "name": "z_think",
+    "file": "assets/graphics/poses/stickman_z_think.png",
+    "expr": "neutral",
+    "facing": "right",
+    "ko": "졸라맨 턱에 손, 생각/듣기",
+    "en": "Zolla thinking/listening"
+  },
+  {
+    "name": "z_cheer",
+    "file": "assets/graphics/poses/stickman_z_cheer.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 두 팔 들고 환호",
+    "en": "Zolla cheering"
+  },
+  {
+    "name": "z_thumb",
+    "file": "assets/graphics/poses/stickman_z_thumb.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 엄지 척",
+    "en": "Zolla thumbs up"
+  },
+  {
+    "name": "z_strong",
+    "file": "assets/graphics/poses/stickman_z_strong.png",
+    "expr": "talk",
+    "facing": "front",
+    "ko": "졸라맨 주먹 불끈, 힘주기(된소리)",
+    "en": "Zolla tensing fists (tense sound)"
+  },
+  {
+    "name": "z_lean",
+    "file": "assets/graphics/poses/stickman_z_lean.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 몸 기울여 설명",
+    "en": "Zolla leaning to explain"
+  },
+  {
+    "name": "z_clap",
+    "file": "assets/graphics/poses/stickman_z_clap.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 박수",
+    "en": "Zolla clapping"
+  },
+  {
+    "name": "z_sit_think",
+    "file": "assets/graphics/poses/stickman_z_sit_think.png",
+    "expr": "neutral",
+    "facing": "right",
+    "ko": "졸라맨 앉아서 턱 괴고 생각",
+    "en": "Zolla sitting, thinking"
+  },
+  {
+    "name": "z_jump",
+    "file": "assets/graphics/poses/stickman_z_jump.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 번쩍 점프(신남)",
+    "en": "Zolla jumping up"
+  },
+  {
+    "name": "pencil_point",
+    "file": "assets/graphics/poses/stickman_pencil_point.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "컬러 연필로 오른쪽을 가리키며 설명",
+    "en": "Pointing with a colored pencil"
+  },
+  {
+    "name": "pencil_wave",
+    "file": "assets/graphics/poses/stickman_pencil_wave.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "컬러 연필 들고 인사",
+    "en": "Waving with a colored pencil"
+  },
+  {
+    "name": "pencil_present",
+    "file": "assets/graphics/poses/stickman_pencil_present.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "컬러 연필 들고 두 팔 벌려 설명",
+    "en": "Presenting with a colored pencil"
+  },
+  {
+    "name": "pencil_write",
+    "file": "assets/graphics/poses/stickman_pencil_write.png",
+    "expr": "neutral",
+    "facing": "right",
+    "ko": "컬러 연필로 글씨 쓰는 자세",
+    "en": "Writing with a colored pencil"
+  },
+  {
+    "name": "standing",
+    "file": "assets/graphics/poses/stickman_standing.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "가만히 서 있는 기본 자세",
+    "en": "Standing neutral"
+  },
+  {
+    "name": "standing_happy",
+    "file": "assets/graphics/poses/stickman_standing_happy.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "웃으며 서 있는 자세",
+    "en": "Standing, smiling"
+  },
+  {
+    "name": "greeting_wave",
+    "file": "assets/graphics/poses/stickman_greeting_wave.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "손 흔들며 인사",
+    "en": "Waving hello"
+  },
+  {
+    "name": "arms_open",
+    "file": "assets/graphics/poses/stickman_arms_open.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "두 팔 벌려 설명/환영",
+    "en": "Arms open, explaining"
+  },
+  {
+    "name": "cheer",
+    "file": "assets/graphics/poses/stickman_cheer.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "두 팔 들고 환호",
+    "en": "Cheering, both arms up"
+  },
+  {
+    "name": "clap",
+    "file": "assets/graphics/poses/stickman_clap.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "박수",
+    "en": "Clapping"
+  },
+  {
+    "name": "pointing_right",
+    "file": "assets/graphics/poses/stickman_pointing_right.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "오른쪽을 가리키며 설명",
+    "en": "Pointing right (presenting)"
+  },
+  {
+    "name": "pointing_left",
+    "file": "assets/graphics/poses/stickman_pointing_left.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "왼쪽을 가리키며 설명",
+    "en": "Pointing left (presenting)"
+  },
+  {
+    "name": "pointing_up",
+    "file": "assets/graphics/poses/stickman_pointing_up.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "위(하늘)를 가리킴",
+    "en": "Pointing up (heaven)"
+  },
+  {
+    "name": "pointing_down",
+    "file": "assets/graphics/poses/stickman_pointing_down.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "아래(땅)를 가리킴",
+    "en": "Pointing down (earth)"
+  },
+  {
+    "name": "thinking",
+    "file": "assets/graphics/poses/stickman_thinking.png",
+    "expr": "neutral",
+    "facing": "right",
+    "ko": "턱에 손, 생각하는 자세",
+    "en": "Thinking, hand on chin"
+  },
+  {
+    "name": "shrug",
+    "file": "assets/graphics/poses/stickman_shrug.png",
+    "expr": "surprised",
+    "facing": "front",
+    "ko": "어깨 으쓱, 갸우뚱(모름)",
+    "en": "Shrug, confused"
+  },
+  {
+    "name": "thumbs_up",
+    "file": "assets/graphics/poses/stickman_thumbs_up.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "엄지 척",
+    "en": "Thumbs up"
+  },
+  {
+    "name": "hands_on_hips",
+    "file": "assets/graphics/poses/stickman_hands_on_hips.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "허리에 손, 당당한 자세",
+    "en": "Hands on hips, confident"
+  },
+  {
+    "name": "raising_hand",
+    "file": "assets/graphics/poses/stickman_raising_hand.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "손 번쩍 들기(질문/참여)",
+    "en": "Raising hand"
+  },
+  {
+    "name": "walking",
+    "file": "assets/graphics/poses/stickman_walking.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "걷는 자세",
+    "en": "Walking"
+  },
+  {
+    "name": "running",
+    "file": "assets/graphics/poses/stickman_running.png",
+    "expr": "happy",
+    "facing": "right",
+    "ko": "달리는 자세",
+    "en": "Running"
+  },
+  {
+    "name": "jumping",
+    "file": "assets/graphics/poses/stickman_jumping.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "점프(신남)",
+    "en": "Jumping with joy"
+  },
+  {
+    "name": "sitting",
+    "file": "assets/graphics/poses/stickman_sitting.png",
+    "expr": "neutral",
+    "facing": "right",
+    "ko": "의자에 앉은 자세(옆모습)",
+    "en": "Sitting on a chair (side)"
+  },
+  {
+    "name": "tired_slump",
+    "file": "assets/graphics/poses/stickman_tired_slump.png",
+    "expr": "tired",
+    "facing": "front",
+    "ko": "책상에 엎드린 듯 지친 자세",
+    "en": "Tired, slumped at desk"
+  },
+  {
+    "name": "holding_phone",
+    "file": "assets/graphics/poses/stickman_holding_phone.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "휴대폰을 들고 보는 자세",
+    "en": "Holding/looking at phone"
+  },
+  {
+    "name": "presenting",
+    "file": "assets/graphics/poses/stickman_presenting.png",
+    "expr": "happy",
+    "facing": "right",
+    "ko": "칠판/화면 앞에서 발표",
+    "en": "Presenting at a board"
+  },
+  {
+    "name": "writing",
+    "file": "assets/graphics/poses/stickman_writing.png",
+    "expr": "neutral",
+    "facing": "right",
+    "ko": "책상에서 글씨 쓰는 자세",
+    "en": "Writing at a desk"
+  },
+  {
+    "name": "reading",
+    "file": "assets/graphics/poses/stickman_reading.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "책을 들고 읽는 자세",
+    "en": "Reading a book"
+  },
+  {
+    "name": "bowing",
+    "file": "assets/graphics/poses/stickman_bowing.png",
+    "expr": "happy",
+    "facing": "right",
+    "ko": "고개 숙여 인사(절)",
+    "en": "Bowing politely"
+  },
+  {
+    "name": "listening",
+    "file": "assets/graphics/poses/stickman_listening.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "귀에 손, 듣는 자세(헤드폰)",
+    "en": "Listening, hand to ear"
+  },
+  {
+    "name": "sejong",
+    "file": "assets/graphics/poses/stickman_sejong.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "세종대왕(두 손 모은 위엄) — 왕관/곤룡포는 소품",
+    "en": "King Sejong, hands clasped (regal)"
+  },
+  {
+    "name": "mouth_demo",
+    "file": "assets/graphics/poses/stickman_mouth_demo.png",
+    "expr": "talk",
+    "facing": "front",
+    "ko": "자기 입을 가리키며 발음 시범",
+    "en": "Pointing to own mouth (pronunciation)"
+  },
+  {
+    "name": "holding_mirror",
+    "file": "assets/graphics/poses/stickman_holding_mirror.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "거울을 들고 입모양 점검",
+    "en": "Holding a mirror to face"
+  },
+  {
+    "name": "point_self",
+    "file": "assets/graphics/poses/stickman_point_self.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "자기 가슴을 가리킴(바로 나!)",
+    "en": "Pointing at self"
+  }
+]

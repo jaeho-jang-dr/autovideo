@@ -1,0 +1,247 @@
+{
+  "episode": "KO-W01D6",
+  "title_ko": "백성을 사랑한 세종대왕과 한글 이야기",
+  "title_en": "King Sejong's Love for the People and the Story of Hangeul",
+  "character": "injun",
+  "scenes": [
+    {
+      "seq": 1,
+      "dur": 9,
+      "ko": "안녕하세요! 오늘은 한국 사람들이 매일 쓰는 특별한 글자, 한글이 어떻게 태어났는지 이야기를 들려드릴게요.",
+      "en": "Hello! Today I'll tell you the story of how Hangeul, the special writing Koreans use every day, was born.",
+      "cap_ko": "한글이 태어난 이야기, 시작해 볼까요?",
+      "cap_en": "Let's begin the story of how Hangeul was born!",
+      "gestures": [
+        "injun_waving",
+        "injun_presenting"
+      ],
+      "words": [],
+      "bg": "bg_w1d6_s01",
+      "place_en": "Gyeongbokgung Palace",
+      "bg_prompt": "soft pastel storybook korean palace garden in spring, gentle hangeul letters floating in the air like soft balloons, warm morning light, thick friendly outlines, flat colors, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": "bird"
+    },
+    {
+      "seq": 2,
+      "dur": 10,
+      "ko": "한글을 만든 분은 조선의 네 번째 임금, 세종대왕이에요. 세종대왕은 누구보다 백성을 사랑하는 따뜻한 마음을 가진 왕이었답니다.",
+      "en": "Hangeul was created by King Sejong, the fourth king of Joseon. More than anyone, he had a warm heart that loved his people.",
+      "cap_ko": "백성을 사랑한 세종대왕",
+      "cap_en": "King Sejong, who loved his people",
+      "gestures": [
+        "injun_presenting",
+        "injun_holding_book"
+      ],
+      "words": [],
+      "bg": "bg_w1d6_s02",
+      "place_en": "Gyeongbokgung Palace",
+      "bg_prompt": "soft pastel storybook gyeongbokgung palace throne hall, a kind wise joseon king in royal red robe standing warmly in the distance, soft sunlight, thick friendly outlines, flat colors, joseon hanbok, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": null
+    },
+    {
+      "seq": 3,
+      "dur": 10,
+      "ko": "그 시절 백성들은 어려운 한자를 써야 했어요. 글자가 너무 복잡해서 대부분의 백성은 글을 읽지도 쓰지도 못했지요.",
+      "en": "Back then, people had to use difficult Chinese characters. They were so complex that most people could neither read nor write.",
+      "cap_ko": "너무 어려운 한자",
+      "cap_en": "Chinese characters were too hard",
+      "gestures": [
+        "injun_thinking",
+        "injun_presenting"
+      ],
+      "words": [],
+      "bg": "bg_w1d6_s03",
+      "place_en": "",
+      "bg_prompt": "soft pastel storybook a small group of joseon-era commoners in hanbok looking confused and puzzled at a difficult chinese-character scroll, muted warm pastel, thick friendly outlines, flat colors, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": null
+    },
+    {
+      "seq": 4,
+      "dur": 11,
+      "ko": "글을 몰라 억울한 일을 당해도 하소연조차 못 하고, 백성들의 생활은 무척 힘들었어요. 세종대왕은 이런 백성들을 보며 마음 아파했답니다.",
+      "en": "Unable to read, people suffered injustice in silence, and their lives were very hard. King Sejong's heart ached for them.",
+      "cap_ko": "글을 몰라 힘든 백성들",
+      "cap_en": "People struggled without writing",
+      "gestures": [
+        "injun_thinking",
+        "injun_holding_book"
+      ],
+      "words": [],
+      "bg": "bg_w1d6_s04",
+      "place_en": "",
+      "bg_prompt": "soft pastel storybook a humble joseon village, a worried commoner in hanbok unable to read a posted notice, a caring king watching sadly from afar, gentle warm pastel, thick friendly outlines, flat colors, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": null
+    },
+    {
+      "seq": 5,
+      "dur": 10,
+      "ko": "'백성 누구나 쉽게 배울 수 있는, 우리만의 글자가 필요하다!' 세종대왕은 직접 새 글자를 만들기로 결심했어요.",
+      "en": "\"We need our own letters that anyone can learn easily!\" So King Sejong resolved to create them himself.",
+      "cap_ko": "우리만의 글자가 필요하다!",
+      "cap_en": "\"We need our own letters!\"",
+      "gestures": [
+        "injun_presenting",
+        "injun_waving"
+      ],
+      "words": [],
+      "bg": "bg_w1d6_s05",
+      "place_en": "Gyeongbokgung Palace",
+      "bg_prompt": "soft pastel storybook night scene, a joseon king at a low writing desk with a brush and warm candlelight, deep in thought creating new letters, cozy glow, thick friendly outlines, flat colors, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": null
+    },
+    {
+      "seq": 6,
+      "dur": 9,
+      "ko": "세종대왕은 집현전의 젊고 똑똑한 학자들과 함께 밤낮으로 소리와 글자를 연구했어요.",
+      "en": "With the young, brilliant scholars of the Hall of Worthies, he studied sounds and letters day and night.",
+      "cap_ko": "집현전의 밤샘 연구",
+      "cap_en": "Research at the Hall of Worthies",
+      "gestures": [
+        "injun_holding_book",
+        "injun_thinking"
+      ],
+      "words": [],
+      "bg": "bg_w1d6_s06",
+      "place_en": "Jiphyeonjeon (Hall of Worthies)",
+      "bg_prompt": "soft pastel storybook interior of a traditional korean study hall at night, young joseon scholars in hanbok studying books under warm lantern light, thick friendly outlines, flat colors, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": null
+    },
+    {
+      "seq": 7,
+      "dur": 11,
+      "ko": "많은 신하들은 '오래된 한자를 두고 새 글자를 만들면 안 됩니다!'라며 반대했어요. 하지만 세종대왕은 백성을 위해 끝까지 포기하지 않았답니다.",
+      "en": "Many officials objected, \"We must not abandon the old characters!\" But for his people, King Sejong never gave up.",
+      "cap_ko": "반대에도 굽히지 않다",
+      "cap_en": "He never gave up despite opposition",
+      "gestures": [
+        "injun_presenting",
+        "injun_thinking"
+      ],
+      "words": [],
+      "bg": "bg_w1d6_s07",
+      "place_en": "Gyeongbokgung Palace",
+      "bg_prompt": "soft pastel storybook a royal court hall, several joseon officials in hanbok raising hands in objection while a determined king stands firm, gentle but slightly tense pastel, thick friendly outlines, flat colors, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": null
+    },
+    {
+      "seq": 8,
+      "dur": 10,
+      "ko": "마침내 만들어진 한글은 정말 과학적이에요. 모음은 하늘과 땅과 사람, 바로 '천지인'을 본떠 만들었어요.",
+      "en": "The Hangeul they created is wonderfully scientific. Its vowels were modeled on heaven, earth, and human — \"Cheon-Ji-In.\"",
+      "cap_ko": "모음의 비밀, 천 · 지 · 인!",
+      "cap_en": "The secret of vowels: Heaven, Earth, Human!",
+      "gestures": [
+        "injun_presenting",
+        "injun_holding_book"
+      ],
+      "words": [
+        "천",
+        "지",
+        "인"
+      ],
+      "bg": "bg_w1d6_s08",
+      "place_en": "",
+      "bg_prompt": "soft pastel storybook a dreamy sky over green fields with a gentle human silhouette, a glowing round dot for heaven, a horizontal line for earth and a vertical line for human softly shining, cosmic gentle pastel, thick friendly outlines, flat colors, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": "bird"
+    },
+    {
+      "seq": 9,
+      "dur": 11,
+      "ko": "'·'는 하늘을, 'ㅡ'는 땅을, 'ㅣ'는 사람을 뜻해요. 이 세 가지만 합치면 'ㅏ, ㅓ, ㅗ, ㅜ' 같은 모음이 모두 만들어진답니다.",
+      "en": "'·' means sky, 'ㅡ' means earth, 'ㅣ' means person. Combine just these three and you get every vowel, like ㅏ, ㅓ, ㅗ, ㅜ.",
+      "cap_ko": "· 하늘   ㅡ 땅   ㅣ 사람",
+      "cap_en": "· sky   ㅡ earth   ㅣ person",
+      "gestures": [
+        "injun_thinking",
+        "injun_presenting"
+      ],
+      "words": [
+        "·",
+        "ㅡ",
+        "ㅣ"
+      ],
+      "bg": "bg_w1d6_s09",
+      "place_en": "",
+      "bg_prompt": "soft pastel storybook bright airy background with three glowing basic vowel shapes — a dot, a horizontal line and a vertical line — floating softly, calm gradient pastel, thick friendly outlines, flat colors, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": null
+    },
+    {
+      "seq": 10,
+      "dur": 11,
+      "ko": "자음은 더 놀라워요. 입술, 혀, 목구멍 같은 발음 기관의 모양을 본떠 만들었거든요. 'ㄱ'은 혀가 목을 막는 모양에서 나왔지요.",
+      "en": "The consonants are even more amazing — shaped after speech organs like the lips, tongue, and throat. 'ㄱ' came from the tongue blocking the throat.",
+      "cap_ko": "자음 = 발음 기관 모양!",
+      "cap_en": "Consonants = shape of speech organs!",
+      "gestures": [
+        "injun_presenting",
+        "injun_holding_book"
+      ],
+      "words": [
+        "ㄱ",
+        "ㄴ",
+        "ㅁ",
+        "ㅅ",
+        "ㅇ"
+      ],
+      "bg": "bg_w1d6_s10",
+      "place_en": "",
+      "bg_prompt": "soft pastel storybook a friendly cute educational side-view diagram of a mouth with lips, tongue and throat in soft pastel, clean and gentle, thick friendly outlines, flat colors, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": "butterfly"
+    },
+    {
+      "seq": 11,
+      "dur": 11,
+      "ko": "1446년, 세종대왕은 이 글자를 '훈민정음'이라는 이름으로 온 백성에게 펼쳐 주었어요. '백성을 가르치는 바른 소리'라는 뜻이랍니다.",
+      "en": "In 1446, King Sejong shared these letters with all his people under the name \"Hunminjeongeum\" — \"the correct sounds to teach the people.\"",
+      "cap_ko": "1446년, 훈민정음 반포!",
+      "cap_en": "Hunminjeongeum proclaimed, 1446!",
+      "gestures": [
+        "injun_holding_book",
+        "injun_cheering"
+      ],
+      "words": [
+        "훈민정음"
+      ],
+      "bg": "bg_w1d6_s11",
+      "place_en": "Gyeongbokgung Palace",
+      "bg_prompt": "soft pastel storybook gyeongbokgung courtyard, an open old korean book held up and presented to joyful commoners in hanbok celebrating happily, bright warm pastel, thick friendly outlines, flat colors, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": "bird"
+    },
+    {
+      "seq": 12,
+      "dur": 12,
+      "ko": "세종대왕은 글자만 만든 게 아니에요. 비의 양을 재는 측우기, 해시계, 물시계 같은 과학 기구도 만들고, 음악과 농사, 국방까지 백성을 위해 힘썼답니다.",
+      "en": "King Sejong did more than create letters — he made science tools like the rain gauge, sundial, and water clock, and worked for music, farming, and defense, all for his people.",
+      "cap_ko": "측우기 · 해시계 · 물시계… 세종의 업적",
+      "cap_en": "Rain gauge, sundial, water clock — Sejong's works",
+      "gestures": [
+        "injun_presenting",
+        "injun_thinking"
+      ],
+      "words": [],
+      "bg": "bg_w1d6_s12",
+      "place_en": "",
+      "bg_prompt": "soft pastel storybook a sunny science garden of joseon inventions, a tall rain gauge, a hemispherical sundial, a water clock and an armillary sphere globe arranged together, cheerful pastel, thick friendly outlines, flat colors, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": "dragonfly"
+    },
+    {
+      "seq": 13,
+      "dur": 11,
+      "ko": "오늘 우리가 한국어를 이렇게 쉽고 빠르게 배울 수 있는 것도 모두 세종대왕 덕분이에요. 한글이 전 세계에 더 사랑받기를 바라며, 다음에 또 만나요!",
+      "en": "It's all thanks to King Sejong that we can learn Korean so easily today. May Hangeul be loved around the world — see you next time!",
+      "cap_ko": "고마워요, 세종대왕!",
+      "cap_en": "Thank you, King Sejong!",
+      "gestures": [
+        "injun_cheering",
+        "injun_waving"
+      ],
+      "words": [
+        "한글"
+      ],
+      "bg": "bg_w1d6_s13",
+      "place_en": "Gyeongbokgung Palace",
+      "bg_prompt": "soft pastel storybook korean palace rooftops at warm sunset with hangeul letters floating gently in the glowing sky like little hearts, cozy and hopeful, thick friendly outlines, flat colors, no text, no modern people, leave left third and lower area open, 16:9",
+      "critter": "butterfly"
+    }
+  ]
+}

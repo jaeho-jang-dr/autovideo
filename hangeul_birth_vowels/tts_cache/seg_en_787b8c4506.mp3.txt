@@ -1,0 +1,1 @@
+Weather is said as 'today's weather is + state'. Adjectives change endings, like '춥다, 덥다'.

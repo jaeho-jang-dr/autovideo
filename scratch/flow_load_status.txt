@@ -1,0 +1,1 @@
+[OK] DB 사진을 Flow 입력란에 업로드 완료 | ref=_dbref_jieun_base_front.png | screenshot=D:\Entertainments\DevEnvironment\autovideo\scratch\flow_photo_loaded.png

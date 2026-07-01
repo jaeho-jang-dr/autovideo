@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PlacesView from '../components/PlacesView.astro';
+const lang = 'en' as const;
+---
+<BaseLayout
+  lang={lang}
+  altUrl="/ko/places/"
+  active="places"
+  title="Korea 140 — Places Foreigners Love · drjay-ed"
+  description="140 Korean places foreigners love, curated as a pastel video-background library: landmarks, leisure, food, seasons — with background motifs."
+>
+  <PlacesView lang={lang} />
+</BaseLayout>

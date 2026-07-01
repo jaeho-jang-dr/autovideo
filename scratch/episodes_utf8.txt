@@ -1,0 +1,34 @@
+================================================================================
+  drjay-ed 에피소드 목록 및 상태 (UTF-8)
+================================================================================
+Code: MD-000   | Category: MD    | Title(KR): 메스머와 최면술의 탄생                        | Status: published  | Priority: 1
+Code: CA-001   | Category: CA    | Title(KR): 몰아보기는 정말 우리 몸에 나쁠까?                 | Status: scripted   | Priority: 1
+Code: CA-002   | Category: CA    | Title(KR): 진격의 거인이 실존한다면?                      | Status: idea       | Priority: 1
+Code: CA-003   | Category: CA    | Title(KR): 아이언맨 슈트를 입으면 척추는 무사할까?              | Status: idea       | Priority: 1
+Code: CA-004   | Category: CA    | Title(KR): 헐크처럼 근육이 폭발하면 힘줄은 버틸까?              | Status: idea       | Priority: 2
+Code: CA-005   | Category: CA    | Title(KR): 스파이더맨처럼 벽을 오르려면?                    | Status: idea       | Priority: 2
+Code: MD-001   | Category: MD    | Title(KR): 나폴레옹의 손은 왜 늘 옷 속에 있었나               | Status: idea       | Priority: 1
+Code: MD-002   | Category: MD    | Title(KR): 도시도 척추측만증에 걸린다                      | Status: idea       | Priority: 2
+Code: MD-003   | Category: MD    | Title(KR): 스마트폰과 거북목, 인류의 다음 진화?               | Status: scripted   | Priority: 1
+Code: MD-004   | Category: MD    | Title(KR): 명화 속 자세가 말해주는 그 시대의 병               | Status: idea       | Priority: 2
+Code: IMP-001  | Category: IMP   | Title(KR): 공짜 에너지가 불가능한 이유                     | Status: idea       | Priority: 1
+Code: IMP-002  | Category: IMP   | Title(KR): 빛보다 빠를 수 없는 이유                      | Status: idea       | Priority: 1
+Code: IMP-003  | Category: IMP   | Title(KR): 할아버지 역설, 시간여행과 인과율                  | Status: idea       | Priority: 2
+Code: IMP-004  | Category: IMP   | Title(KR): 괴델의 불완전성, AI도 못 푸는 문제               | Status: idea       | Priority: 2
+Code: IMP-005  | Category: IMP   | Title(KR): 튜링 정지문제, 완벽한 백신은 불가능                | Status: idea       | Priority: 3
+Code: IMP-006  | Category: IMP   | Title(KR): 트롤리 딜레마와 자율주행                       | Status: idea       | Priority: 1
+Code: LM-001   | Category: LM    | Title(KR): 바이크의 바람을 뇌는 왜 '치유'로 느낄까             | Status: idea       | Priority: 2
+Code: LM-002   | Category: LM    | Title(KR): 파크골프 18홀과 인생의 사계절                   | Status: idea       | Priority: 3
+Code: LM-003   | Category: LM    | Title(KR): 인간이 두 발로 선 날, 역사가 바뀐 이유             | Status: idea       | Priority: 2
+Code: LM-004   | Category: LM    | Title(KR): 하루 8천보, 무릎은 정말 닳을까?                 | Status: idea       | Priority: 1
+Code: GEN-001  | Category: GEN   | Title(KR): 5살 손주의 뇌와 60대 할아버지의 뇌가 만날 때         | Status: idea       | Priority: 2
+Code: GEN-002  | Category: GEN   | Title(KR): 뼈와 관절을 살리는 밥상                       | Status: idea       | Priority: 2
+Code: GEN-003  | Category: GEN   | Title(KR): 나이 듦은 퇴화가 아니라 완숙기다                  | Status: idea       | Priority: 3
+Code: GEN-004  | Category: GEN   | Title(KR): 잠은 왜 최고의 명약인가                       | Status: idea       | Priority: 2
+
+================================================================================
+  모든 에피소드의 데이터베이스 씬(Scene) 개수 현황
+================================================================================
+에피소드 코드: CA-001     | 등록된 씬 개수: 96개
+에피소드 코드: MD-000     | 등록된 씬 개수: 16개
+에피소드 코드: MD-003     | 등록된 씬 개수: 16개

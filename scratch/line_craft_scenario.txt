@@ -1,0 +1,9 @@
+[Scene 1]
+text: 미래의 자동차가 칠판 위에 한 땀 한 땀 아름다운 선으로 그려지고 있습니다.
+text_en: A futuristic car is being drawn step by step with beautiful lines on a chalkboard.
+motion: A detailed 2D line art drawing of a futuristic flying car concept, clean pencil sketch style, drawing itself onto a clean virtual blackboard, high contrast, minimalist chalkboard animation style, 4k. :: The pencil lines expand and reveal more details of the flying car structure, rotating slowly, 2d animation, fluid line art motion, 8 seconds.
+
+[Scene 2]
+text: 정밀한 기계 부품 and 톱니바퀴들이 유기적으로 맞물려 움직이기 시작합니다.
+text_en: Precise mechanical parts and gears start to move dynamically together.
+motion: A detailed 2D line art drawing of a complex robotic hand gear system, clean blueprint style, white lines on a dark blueprint chalkboard background, high technical detail, 4k. :: The robotic fingers move and flex slightly, gear mechanisms rotate slowly, mechanical draft animation, smooth movement, 8 seconds.

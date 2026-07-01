@@ -1,0 +1,14 @@
+[Scene 0]
+text: 우리 아이 키는 과연 몇 센티미터까지 자랄까요? 오늘 소아 성장의 숨겨진 과학을 만나봅니다.
+text_en: How tall will your child grow? Today, we explore the hidden science behind pediatric growth.
+image: child_growth_science/scene_0_thumbnail.png
+
+[Scene 1]
+text: "엄마, 나도 아빠처럼 크게 자랄 수 있어요?" 아이의 이 한마디는 부모의 마음을 설레게 하죠.
+text_en: "Mom, will I grow as tall as Dad?" This simple question always fills a parent's heart with curiosity.
+image: child_growth_science/scene_1.mp4
+
+[Scene 2]
+text: 아이의 성장판이 열려 있는 시기는 우리 인생에서 단 한 번뿐인 귀중한 시간입니다.
+text_en: The window when a child's growth plates remain open is a unique, precious time in their life.
+image: child_growth_science/scene_2.mp4

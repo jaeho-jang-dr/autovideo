@@ -1,0 +1,28 @@
+{
+  "purpose": "home_vocab 시리즈 메인 캐릭터의 '기본 사진(베이스 레퍼런스)'을 Supabase DB에 저장 — 나중에 AI가 꺼내서 일관된 포즈 변형 생성에 재사용하기 위함",
+  "method_doc": "CHARACTER_ASSET_METHOD.md",
+  "generator": "gen_assets_flow.py (text2img: --prompts ; reference2img: --ref-jobs ; --no-transparent 로 불투명 원본)",
+  "characters": [
+    {
+      "id": "jieun", "name_kr": "지은", "name_en": "Jieun", "gender": "female",
+      "identity": "long brown hair (key feature), navy-white sailor school uniform, red neckerchief, navy pleated skirt, knee socks",
+      "style": "minimalist 2D line art, thick black outlines, light beige background (#F5F5F0)",
+      "base_photos": [
+        {"key": "jieun_base_front", "view": "front", "file": "home_vocab/jieun_base_front.png", "method": "text2img"},
+        {"key": "jieun_base_side",  "view": "side",  "file": "home_vocab/jieun_base_side.png",  "method": "text2img"},
+        {"key": "jieun_base_back",  "view": "back",  "file": "home_vocab/jieun_base_back.png",  "method": "text2img"}
+      ]
+    },
+    {
+      "id": "injun", "name_kr": "인준", "name_en": "Injun", "gender": "male",
+      "identity": "short neat black hair (key feature), casual short-sleeve t-shirt and pants (no school uniform)",
+      "style": "minimalist 2D line art, thick black outlines, light beige background (#F5F5F0)",
+      "base_photos": [
+        {"key": "injun_base_front", "view": "front", "file": "home_vocab/injun_base_front.png", "method": "text2img"},
+        {"key": "injun_base_side",  "view": "side",  "file": "home_vocab/injun_base_side.png",  "method": "text2img"},
+        {"key": "injun_base_back",  "view": "back",  "file": "home_vocab/injun_base_back.png",  "method": "text2img"}
+      ]
+    }
+  ],
+  "tags": ["character-base", "reference", "home_vocab", "line-art", "korean", "jieun", "injun"]
+}

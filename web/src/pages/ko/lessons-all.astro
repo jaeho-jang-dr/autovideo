@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LessonsView from '../../components/LessonsView.astro';
+const lang = 'ko' as const;
+---
+<BaseLayout
+  lang={lang}
+  altUrl="/lessons-all/"
+  active="alllessons"
+  title="한글 전 과정 · 168강 로드맵 · drjay-ed"
+  description="24개 주제 × 하루 한 강 × 7일 = 168강. NotebookLM 한글교육 노트북(TTMIK·서강·세종학당·국립국어원) + BBC·일본어 교육과정 기반의 나선형 다기능 과정. 리스트·카드, 주별·난이도별."
+>
+  <LessonsView lang={lang} />
+</BaseLayout>

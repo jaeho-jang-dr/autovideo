@@ -48,3 +48,24 @@ zolla_dynamite_veo/__pycache__/
 # lessons 렌더/미리보기 산물
 lessons/_*
 lessons/__pycache__/
+
+# Audio format additional
+*.m4a
+
+# Large video assets and scene frames/thumbnails
+sejong_film/*.png
+sejong_film/main/*.png
+sejong_film/thumbnails/*.png
+zolla_waltz/*.png
+zolla_dynamite_veo/*.png
+zolla_hangul/_prev*
+zolla_hangul/_prev2/*.png
+zolla_hangul/_preview/*.png
+workout_injury_science/*.png
+scratch/*.png
+scratch/*.jpg
+scratch/*.jpeg
+scratch/*.mp4
+scratch/*.mp3
+scratch/thumb/*.mp4
+

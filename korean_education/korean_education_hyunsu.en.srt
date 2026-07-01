@@ -1,0 +1,359 @@
+1
+00:00:00,000 --> 00:00:07,291
+Hello! Welcome to the world of Hangul, the easiest and most scientific alphabet in the world.
+
+2
+00:00:07,291 --> 00:00:12,873
+In the early Joseon Dynasty, commoners who could not read faced many social disadvantages.
+
+3
+00:00:12,873 --> 00:00:18,891
+Chinese characters were too complex to learn, making it impossible for ordinary people to gain knowledge.
+
+4
+00:00:18,891 --> 00:00:24,827
+King Sejong, who pitied the suffering of his people, sought to create an easy, native writing system.
+
+5
+00:00:24,827 --> 00:00:30,955
+Despite opposition from the ruling class who defended Chinese characters, Sejong continued his work in secret.
+
+6
+00:00:30,955 --> 00:00:37,982
+Finally, in 1446, Hunminjeongeum, meaning 'the proper sounds for instructing the people', was promulgated.
+
+7
+00:00:37,982 --> 00:00:43,655
+It embodies Sejong's love for the people, believing that writing should be easily used by everyone.
+
+8
+00:00:43,655 --> 00:00:50,218
+Hangul is not just a phonetic alphabet; it is a featural alphabet where letter shapes reflect phonetic properties.
+
+9
+00:00:50,218 --> 00:00:56,282
+A wise man can learn it in a morning, and even a simple man can learn it in ten days.
+
+10
+00:00:56,282 --> 00:01:02,127
+Today, leading linguists worldwide praise Hangul as the most sophisticated writing system.
+
+11
+00:01:02,127 --> 00:01:08,109
+Hangul's consonants mimic the actual shape of the vocal organs when producing sound.
+
+12
+00:01:08,109 --> 00:01:12,864
+The consonant 'G [k/g]' represents the root of the tongue blocking the throat.
+
+13
+00:01:12,864 --> 00:01:18,336
+The consonant 'N' depicts the tip of the tongue touching the upper gums.
+
+14
+00:01:18,336 --> 00:01:24,182
+The consonant 'M' is the outline of the lips meeting to open and close sounds.
+
+15
+00:01:24,182 --> 00:01:29,873
+The consonant 'S' represents the sharp shape of teeth where air friction is created.
+
+16
+00:01:29,873 --> 00:01:35,527
+The consonant 'NG' mimics the circular cross-section of the open throat.
+
+17
+00:01:35,527 --> 00:01:41,027
+Let's look at the structure of the 'G' sound when the tongue pulls back, narrowing the throat.
+
+18
+00:01:41,027 --> 00:01:46,936
+Feel the blockage of air as the tongue tip taps the upper gums when making the 'N' sound.
+
+19
+00:01:46,936 --> 00:01:52,109
+The comfortable bilabial movement of the 'M' sound, where lips close to gather sound and then release.
+
+20
+00:01:52,109 --> 00:01:57,691
+The alveolar fricative 'S' sound, where the tongue tip rests slightly behind the lower teeth as air escapes.
+
+21
+00:01:57,691 --> 00:02:03,236
+This is the 'principle of stroke addition', adding lines to base shapes as sounds become stronger.
+
+22
+00:02:03,236 --> 00:02:09,036
+Adding a stroke to 'ㄱ' makes 'ㅋ', visually representing a stronger burst of air.
+
+23
+00:02:09,036 --> 00:02:14,491
+Adding a stroke to 'ㄴ' makes 'ㄷ', and adding another makes 'ㅌ'.
+
+24
+00:02:14,491 --> 00:02:20,318
+Extending strokes on 'ㅁ' creates 'ㅂ', and adding more horizontal strokes completes 'ㅍ'.
+
+25
+00:02:20,318 --> 00:02:26,209
+Adding a top stroke to 'ㅅ' creates 'ㅈ', and another makes the aspirated 'ㅊ'.
+
+26
+00:02:26,209 --> 00:02:32,055
+Adding strokes to 'ㅇ' forms 'ㅎ', representing strong breath passing through the throat.
+
+27
+00:02:32,055 --> 00:02:38,600
+Writing two identical letters side-by-side forms a tense, double consonant (Tense Sound).
+
+28
+00:02:38,600 --> 00:02:46,255
+ㄲ, ㄸ, ㅃ, ㅆ, and ㅉ are called double consonants, expressing tension in the larynx.
+
+29
+00:02:46,255 --> 00:02:52,191
+Instead of adding regular strokes, the flowing liquid 'ㄹ' is created by curling the tongue.
+
+30
+00:02:52,191 --> 00:02:58,255
+Thus, Hangul establishes a complete system of 19 consonants derived from the 5 base shapes.
+
+31
+00:02:58,255 --> 00:03:04,300
+Vowels are structured differently, combining the three core cosmic elements: Sky, Earth, and Human.
+
+32
+00:03:04,300 --> 00:03:09,118
+First is the round dot representing the sky, called 'Araea' (•).
+
+33
+00:03:09,118 --> 00:03:14,509
+Second is the horizontal line representing the flat earth, 'EU' (ㅡ).
+
+34
+00:03:14,509 --> 00:03:19,464
+Third is the vertical line representing a standing human, 'I' (ㅣ).
+
+35
+00:03:19,464 --> 00:03:25,445
+When Sky, Human, and Earth meet and combine, the basic vowels of Hangul are born.
+
+36
+00:03:25,445 --> 00:03:31,291
+If the sky (•) rises to the right of the human (ㅣ), it is 'A [a]'; to the left, it is 'EO [ʌ]'.
+
+37
+00:03:31,291 --> 00:03:36,436
+If the sky rises above the earth (ㅡ), it is 'O [o]'; below the earth, it is 'U [u]'.
+
+38
+00:03:36,436 --> 00:03:42,636
+The vowels 'ㅏ' and 'ㅗ', stretching outward and upward, are bright 'Yang' vowels.
+
+39
+00:03:42,636 --> 00:03:48,509
+The vowels 'ㅓ' and 'ㅜ', drawing inward and downward, are deep, calm 'Yin' vowels.
+
+40
+00:03:48,509 --> 00:03:54,682
+Sky, Earth, and Human harmonize to complete the four base pillars of Hangul vowels.
+
+41
+00:03:54,682 --> 00:04:01,118
+Adding the sky element twice creates y-glide diphthongs.
+
+42
+00:04:01,118 --> 00:04:07,273
+Adding it twice yields YA, YEO, YO, and YU, enriching the vowel spectrum.
+
+43
+00:04:07,273 --> 00:04:12,555
+The vertical vowel 'I' merges with other vowels to create compound vowels.
+
+44
+00:04:12,555 --> 00:04:18,136
+ㅏ and ㅣ form 'AE', while ㅓ and ㅣ form 'E'.
+
+45
+00:04:18,136 --> 00:04:23,482
+The diphthongs YA and YEO combine with 'I' to form 'YAE' and 'YE'.
+
+46
+00:04:23,482 --> 00:04:29,309
+Horizontal vowels (ㅗ, ㅜ) combine with vertical ones to make rounded diphthongs.
+
+47
+00:04:29,309 --> 00:04:35,109
+O and A make 'WA'; U and EO make 'WO', flowing into double articulation.
+
+48
+00:04:35,109 --> 00:04:40,582
+OE, WI, and even WAE and WE require rounding the lips and shifting the tongue.
+
+49
+00:04:40,582 --> 00:04:46,255
+The seemingly complex combination of ㅡ and ㅣ, 'UI', is a harmonious single flow.
+
+50
+00:04:46,255 --> 00:04:52,536
+Starting from just 3 base shapes, Hangul boasts a rich system of 21 vowels.
+
+51
+00:04:52,536 --> 00:04:58,555
+Let's learn the subtle differences in air pressure and vocal cord tension among plain, aspirated, and tense sounds.
+
+52
+00:04:58,555 --> 00:05:04,245
+'G' is a relaxed plain sound, releasing air very softly and lightly.
+
+53
+00:05:04,245 --> 00:05:09,964
+'K' is an aspirated sound, forcefully expelling air from deep within.
+
+54
+00:05:09,964 --> 00:05:16,227
+'KK' is a tense sound, compressing the vocal cords with almost no escaping air.
+
+55
+00:05:16,227 --> 00:05:22,100
+You can feel the difference between plain 'G' and aspirated 'K' by putting your hand in front of your mouth.
+
+56
+00:05:22,100 --> 00:05:27,618
+The contrast between plain 'G' and tense 'KK' is like the 'K' in 'key' versus 'sky'.
+
+57
+00:05:27,618 --> 00:05:33,164
+Hold a thin sheet of paper; it should bend back dramatically only when you pronounce 'K'.
+
+58
+00:05:33,164 --> 00:05:39,073
+When making the tense 'KK', pitch the following vowel higher and sharper.
+
+59
+00:05:39,073 --> 00:05:44,982
+Tense and aspirated sounds should feel crisp, with a distinct staccato separation.
+
+60
+00:05:44,982 --> 00:05:52,745
+Solidify the 3-step difference of G/K/KK, D/T/TT, and B/P/PP in your mind.
+
+61
+00:05:52,745 --> 00:05:57,564
+Here is the precise articulation mechanism for the vowels that foreigners find hardest.
+
+62
+00:05:57,564 --> 00:06:03,145
+To pronounce 'EU [ɯ]', stretch your lips wide to the sides as if smiling.
+
+63
+00:06:03,145 --> 00:06:08,509
+Keep the lips flat and unrounded, raising only the back of your tongue.
+
+64
+00:06:08,509 --> 00:06:14,555
+To pronounce 'EO [ʌ]', drop your jaw low while keeping your lips relaxed and flat.
+
+65
+00:06:14,555 --> 00:06:20,164
+To pronounce 'O [o]', round your lips into a small, tight circle as if holding a straw.
+
+66
+00:06:20,164 --> 00:06:25,664
+Compare the wide jaw of 'EO' versus the tight circular lips of 'O'.
+
+67
+00:06:25,664 --> 00:06:31,336
+For 'U [u]', purse your lips even tighter than 'O' and project them forward.
+
+68
+00:06:31,336 --> 00:06:36,727
+Spot the difference: the tiny, tense circle of 'U' versus the medium circle of 'O'.
+
+69
+00:06:36,727 --> 00:06:43,427
+Check in a mirror to make sure your lips do not round when saying 'EO' and 'EU'.
+
+70
+00:06:43,427 --> 00:06:50,145
+Fully master the combination of tongue height and lip rounding for EU, EO, O, and U.
+
+71
+00:06:50,145 --> 00:06:55,755
+Instead of aligning letters side-by-side, Hangul groups them into syllable blocks.
+
+72
+00:06:55,755 --> 00:07:01,709
+If the vowel has a vertical stroke (ㅣ), it sits to the right of the consonant.
+
+73
+00:07:01,709 --> 00:07:07,691
+If the vowel has a horizontal stroke (ㅡ), it sits directly under the consonant.
+
+74
+00:07:07,691 --> 00:07:13,455
+Vowels with both horizontal and vertical strokes wrap around the right and bottom of the consonant.
+
+75
+00:07:13,455 --> 00:07:19,764
+The final consonant placed at the very bottom of a syllable is called 'Batchim'.
+
+76
+00:07:19,764 --> 00:07:25,236
+A final consonant joins below, completing a 3-layered syllable like 'GANG'.
+
+77
+00:07:25,236 --> 00:07:31,064
+Though many consonants can be written as Batchim, they are pronounced as only 7 sounds.
+
+78
+00:07:31,064 --> 00:07:39,464
+The final consonants ㅅ, ㅆ, ㅈ, ㅊ, ㄷ, ㅌ, and ㅎ all collapse into the representative 'D [t]' sound.
+
+79
+00:07:39,464 --> 00:07:45,555
+Batchim sounds are unreleased, stopping air flow abruptly inside the mouth.
+
+80
+00:07:45,555 --> 00:07:51,464
+Sometimes double/complex Batchims appear, where only one consonant is voiced.
+
+81
+00:07:51,464 --> 00:07:56,982
+When a Batchim is followed by an empty 'ㅇ', the sound links over to the next syllable.
+
+82
+00:07:56,982 --> 00:08:02,236
+'Babeul' is read as [ba-beul], and 'kkochi' as [kko-chi], flowing naturally.
+
+83
+00:08:02,236 --> 00:08:10,000
+When G, D, B meet N or M, they shift to soft nasal sounds: NG, N, M.
+
+84
+00:08:10,000 --> 00:08:15,364
+In 'Gamsahamnida', 'hap-ni' is pronounced as [ham-ni], making it smoother to say.
+
+85
+00:08:15,364 --> 00:08:21,236
+When a final D or T meets the vowel 'I', it palatalizes into J or CH.
+
+86
+00:08:21,236 --> 00:08:27,191
+Reading 'gudi' as [guji] and 'gati' as [gachi] is similar to 'would you' in English.
+
+87
+00:08:27,191 --> 00:08:32,736
+When N and L meet, both assimilate into a smooth, liquid double 'L' sound.
+
+88
+00:08:32,736 --> 00:08:38,564
+While English moves to stress-based rhythm, Korean flows flatly based on syllable blocks.
+
+89
+00:08:38,564 --> 00:08:44,145
+Rather than chopping words apart, let them glide, riding the natural sound changes.
+
+90
+00:08:44,145 --> 00:08:50,491
+Congratulations on mastering Hangul! Join our new learning journey with a subscribe and like!

@@ -1,0 +1,1 @@
+(10). Sino numbers are used for dates, prices, and phone numbers.

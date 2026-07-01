@@ -1,0 +1,22 @@
+{
+  "resolution": {
+    "width": 1280,
+    "height": 720
+  },
+  "fps": 24.0,
+  "subtitle_style": {
+    "font_size": 24,
+    "color": "white",
+    "stroke_color": "black",
+    "stroke_width": 2,
+    "max_chars_per_line": 60
+  },
+  "dynamic_settings": {
+    "shake_intensity": 5,
+    "pulse_min_alpha": 0.8,
+    "pulse_frequency": 1.0,
+    "rotation_max_angle": 3,
+    "rotation_steps_per_sec": 2,
+    "zoom_bounce_ratio": 0.03
+  }
+}

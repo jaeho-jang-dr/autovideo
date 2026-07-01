@@ -1,0 +1,930 @@
+import os
+import sys
+from playwright.sync_api import sync_playwright
+
+PAGES_HTML = [
+    # Page 1: Cover
+    """
+    <div class="page cover-page">
+        <div class="brand">SORI HANGEUL · 소리 한글</div>
+        <div class="title-wrap">
+            <h1>HANGEUL STUDY GUIDE</h1>
+            <h2>Week 1: Birth of Hangeul & Simple Vowels</h2>
+        </div>
+        <div class="meta">
+            <p><strong>Target:</strong> Adult & Child Non-native Learners</p>
+            <p><strong>Level:</strong> Beginner (Level 1)</p>
+            <p><strong>Publisher:</strong> Sori Hangeul Education Division</p>
+        </div>
+        <div class="decoration">🇰🇷</div>
+    </div>
+    """,
+    # Page 2: Table of Contents
+    """
+    <div class="page toc-page">
+        <h3>Table of Contents</h3>
+        <ul class="toc-list">
+            <li><span>1. The Birth and Uniqueness of Hangeul</span> <span>Page 3</span></li>
+            <li><span>  1.1. Shape Representation of Consonants (ㄱ, ㄴ, ㅁ, ㅅ, ㅇ)</span> <span>Page 4</span></li>
+            <li><span>  1.2. The Heaven-Earth-Human Principle (·, ㅡ, ㅣ)</span> <span>Page 5</span></li>
+            <li><span>  1.3. The Stroke Addition Principle (Phonetic Intensity)</span> <span>Page 6</span></li>
+            <li><span>2. Pronunciation Guide for Non-Native Learners</span> <span>Page 7</span></li>
+            <li><span>  2.1. The 3-way Consonant Split (Plain / Aspirated / Tense)</span> <span>Page 8</span></li>
+            <li><span>  2.2. Vowel Distinctions (으 / 어 / 오 / 우)</span> <span>Page 9</span></li>
+            <li><span>3. Syllable Blocks and Writing Rules</span> <span>Page 10</span></li>
+            <li><span>  3.1. Batchim (Final Consonants) & 7 Representative Sounds</span> <span>Page 11</span></li>
+            <li><span>  3.2. Stroke Order Rules</span> <span>Page 12</span></li>
+            <li><span>4. Short-Answer Practice Quiz</span> <span>Page 13</span></li>
+            <li><span>5. Essay and Discussion Topics</span> <span>Page 14</span></li>
+            <li><span>6. Glossary and Learning Resources</span> <span>Page 15</span></li>
+        </ul>
+    </div>
+    """,
+    # Page 3: Section 1 Intro
+    """
+    <div class="page">
+        <h3>1. The Birth and Uniqueness of Hangeul</h3>
+        <p class="lead">Hangeul holds a unique position in the history of the world's writing systems. Unlike most traditional alphabets that evolved slowly over centuries, Hangeul is the only script where both the creator and the year of creation (1443) are explicitly known.</p>
+        
+        <div class="info-box">
+            <h4>Featural Alphabet</h4>
+            <p>Modern linguists classify Hangeul as a 'Featural Alphabet'. This means the shapes of the letters themselves visually represent the movements of the vocal organs and philosophical elements, rather than just representing arbitrary sounds.</p>
+        </div>
+        
+        <p>King Sejong the Great created this script for commoners who were suffering from unfairness because they could not read complex Chinese characters. Initially named 'Hunminjeongeum' ("The Proper Sounds to Instruct the People"), it was designed so that a wise person could learn it in a single morning, and even a less clever person within ten days.</p>
+    </div>
+    """,
+    # Page 4: Section 1.1 Consonants
+    """
+    <div class="page">
+        <h3>1.1. Shape Representation of Consonants</h3>
+        <p>The five basic Hangeul consonants (ㄱ, ㄴ, ㅁ, ㅅ, ㅇ) were modeled after the shapes of the speech organs (tongue, lips, teeth, and throat) during pronunciation. This scientific approach directly maps the physical point of articulation to the visual shape of the letter.</p>
+        
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Basic Letter</th>
+                    <th>Vocal Organ Category</th>
+                    <th>Visual Modeling Origin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>ㄱ</strong></td>
+                    <td>Velar (아음)</td>
+                    <td>The tongue root blocking the throat (back of tongue touching the soft palate)</td>
+                </tr>
+                <tr>
+                    <td><strong>ㄴ</strong></td>
+                    <td>Alveolar (설음)</td>
+                    <td>The tongue touching the upper gums (tip of tongue touching the roof behind upper teeth)</td>
+                </tr>
+                <tr>
+                    <td><strong>ㅁ</strong></td>
+                    <td>Bilabial (순음)</td>
+                    <td>The shape of the lips (modeled as a square closed mouth)</td>
+                </tr>
+                <tr>
+                    <td><strong>ㅅ</strong></td>
+                    <td>Dental (치음)</td>
+                    <td>The shape of a tooth (modeled as a sharp tooth outline)</td>
+                </tr>
+                <tr>
+                    <td><strong>ㅇ</strong></td>
+                    <td>Glottal (후음)</td>
+                    <td>The shape of the throat (modeled as a round throat opening)</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p>From these five basic shapes, other consonants are developed by adding strokes or doubling letters to represent stronger sounds, creating a highly structured phonetic grid.</p>
+    </div>
+    """,
+    # Page 5: Section 1.2 Vowels
+    """
+    <div class="page">
+        <h3>1.2. The Heaven-Earth-Human (Cheon-Ji-In) Principle</h3>
+        <p>Hangeul vowels were modeled after the three main components of East Asian philosophy: Heaven (天), Earth (地), and Human (人). This reflects King Sejong's desire to incorporate universal harmony and human-centric design directly into the letters.</p>
+        
+        <div class="philosophical-cards">
+            <div class="card">
+                <div class="sym">•</div>
+                <div class="name">Heaven (Cheon)</div>
+                <p>Modeled after the round sky, represented as a single dot. (In modern Hangeul, this is written as a short horizontal or vertical tick)</p>
+            </div>
+            <div class="card">
+                <div class="sym">ㅡ</div>
+                <div class="name">Earth (Ji)</div>
+                <p>Modeled after the flat ground, represented as a horizontal line.</p>
+            </div>
+            <div class="card">
+                <div class="sym">ㅣ</div>
+                <div class="name">Human (In)</div>
+                <p>Modeled after a standing human being, represented as a vertical line.</p>
+            </div>
+        </div>
+        
+        <p>By combining these three elements, secondary vowels (ㅏ, ㅓ, ㅗ, ㅜ) and tertiary double-vowels (ㅑ, ㅕ, ㅛ, ㅠ) are systematically derived, illustrating a beautiful geometric simplicity.</p>
+    </div>
+    """,
+    # Page 6: Section 1.3 Addition of strokes
+    """
+    <div class="page">
+        <h3>1.3. The Stroke Addition Principle</h3>
+        <p>Hangeul consonants expand by adding strokes to represent an increase in phonetic intensity. This 'Stroke Addition Principle' ensures that a reader can immediately tell the voice characteristic of a letter just by looking at its structure.</p>
+        
+        <div class="stroke-tree">
+            <div class="row">
+                <span class="base">ㄱ (Plain)</span> ➡️ <span class="added">ㅋ (Aspirated / 거센소리)</span>
+            </div>
+            <div class="row">
+                <span class="base">ㄴ (Plain)</span> ➡️ <span class="added">ㄷ (Plain / 가획)</span> ➡️ <span class="added">ㅌ (Aspirated / 거센소리)</span>
+            </div>
+            <div class="row">
+                <span class="base">ㅁ (Plain)</span> ➡️ <span class="added">ㅂ (Plain / 가획)</span> ➡️ <span class="added">ㅍ (Aspirated / 거센소리)</span>
+            </div>
+            <div class="row">
+                <span class="base">ㅅ (Plain)</span> ➡️ <span class="added">ㅈ (Plain / 가획)</span> ➡️ <span class="added">ㅊ (Aspirated / 거센소리)</span>
+            </div>
+            <div class="row">
+                <span class="base">ㅇ (Plain)</span> ➡️ <span class="added">ㆆ (Outdated)</span> ➡️ <span class="added">ㅎ (Aspirated / 거센소리)</span>
+            </div>
+        </div>
+        
+        <p class="highlight">This stroke-adding structure highlights that Hangeul is not a set of arbitrary symbols, but a phonetically engineered system with structural symmetry.</p>
+    </div>
+    """,
+    # Page 7: Section 2 Pronunciation
+    """
+    <div class="page">
+        <h3>2. Pronunciation Guide for Non-Native Learners</h3>
+        <p>When learning Hangeul, the primary obstacle for English speakers is the distinction between consonants and vowels. Standard Romanization fails to capture the physical reality of Korean pronunciation, leading to accented or incorrect speech.</p>
+        
+        <div class="info-box accent-box">
+            <h4>Pedagogical Focus</h4>
+            <p>Rather than just repeating after audio recordings, learners should focus on three components: <strong>Mouth Shape</strong>, <strong>Jaw Position</strong>, and <strong>Airflow Intensity</strong>. Providing visual and physical cues makes pronunciation intuitive.</p>
+        </div>
+        
+        <p>Sori Hangeul combines 3D mouth-shape diagrams, physical feedback exercises, and instant audio feedback to build correct pronunciation habits from day one. The next pages explore consonants and vowels in detail.</p>
+    </div>
+    """,
+    # Page 8: Section 2.1 Consonant Distinction
+    """
+    <div class="page">
+        <h3>2.1. The 3-way Consonant Split</h3>
+        <p>While English relies on a 2-way distinction between voiced and voiceless sounds (e.g., /g/ vs /k/), Korean 자음 has a unique 3-way distinction based on aspiration (airflow) and vocal cord tension.</p>
+        
+        <table class="styled-table font-dense">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Phonetic Quality</th>
+                    <th>Letters</th>
+                    <th>Tips for English Speakers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Plain (평음)</strong></td>
+                    <td>Relaxed, soft release of air</td>
+                    <td>ㄱ, ㄷ, ㅂ, ㅅ, ㅈ</td>
+                    <td>Sounds halfway between English 'g/d/b' and 'k/t/p'. Understood as voiceless at the beginning of words but voiced between vowels.</td>
+                </tr>
+                <tr>
+                    <td><strong>Aspirated (격음)</strong></td>
+                    <td>Strong, rapid burst of air</td>
+                    <td>ㅋ, ㅌ, ㅍ, ㅊ, ㅎ</td>
+                    <td>Hold a tissue or palm in front of the mouth. Learners should feel a <strong>"strong puff of air hitting their palm"</strong> upon articulation.</td>
+                </tr>
+                <tr>
+                    <td><strong>Tense (경음)</strong></td>
+                    <td>Tightened vocal cords, no air release</td>
+                    <td>ㄲ, ㄸ, ㅃ, ㅆ, ㅉ</td>
+                    <td>Block all airflow and tighten the throat. Similar to the 'k' sound in 'sky' or 'p' sound in 'spy' (un-aspirated stops).</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p class="exercise-note">Practice: Contrast '방-팡-빵' (room-pop-bread) and '개-캐-깨' (dog-dig-sesame).</p>
+    </div>
+    """,
+    # Page 9: Section 2.2 Vowel Distinction
+    """
+    <div class="page">
+        <h3>2.2. Vowel Distinctions (으 / 어 / 오 / 우)</h3>
+        <p>These four simple vowels are the most challenging for foreigners. Proper mouth shapes and jaw heights are critical.</p>
+        
+        <div class="vowel-guides">
+            <div class="vg-item">
+                <span class="v-letter">으 [ɯ]</span>
+                <p>This sound does not exist in English. To pronounce it, keep your teeth close together and <strong>"make a forced smile shape"</strong> by stretching your lips wide to the sides, then release the sound from the throat.</p>
+            </div>
+            
+            <div class="vg-item">
+                <span class="v-letter">어 [ʌ] vs 오 [o]</span>
+                <p><strong>어:</strong> Drop your jaw wide vertically, keeping your lips flat and unrounded (unrounded vowel).<br>
+                <strong>오:</strong> Round your lips tightly, forming a circle as if whistling or holding a straw (rounded vowel).</p>
+            </div>
+            
+            <div class="vg-item">
+                <span class="v-letter">우 [u] vs 오 [o]</span>
+                <p><strong>우:</strong> Purse your lips tightly and push them forward in a small, tight circle.<br>
+                <strong>오:</strong> Relax the pursing slightly, dropping the jaw a bit more to make a larger circular opening.</p>
+            </div>
+        </div>
+    </div>
+    """,
+    # Page 10: Section 3 Syllable Structure
+    """
+    <div class="page">
+        <h3>3. Syllable Blocks and Writing Rules</h3>
+        <p>Hangeul uses a <strong>"Moasseugi" (Syllable Block Assembly)</strong> layout where letters are grouped into square structures, rather than listed linearly like Western alphabets. This layout aids visual word recognition and speeds up reading.</p>
+        
+        <div class="block-diagrams">
+            <div class="diag">
+                <div class="d-title">Horizontal Vowels (ㅣ-style)</div>
+                <div class="d-grid horizontal">
+                    <div class="box">Initial (C)</div>
+                    <div class="box">Vowel (V)</div>
+                </div>
+                <p>Examples: 가, 나, 다, 라</p>
+            </div>
+            <div class="diag">
+                <div class="d-title">Vertical Vowels (ㅡ-style)</div>
+                <div class="d-grid vertical">
+                    <div class="box">Initial (C)</div>
+                    <div class="box">Vowel (V)</div>
+                </div>
+                <p>Examples: 고, 노, 두, 루</p>
+            </div>
+        </div>
+        
+        <p>When teaching block assembly, visually mapping vowels as vertical walls or horizontal floors helps learners understand where to snap them relative to the initial consonant block.</p>
+    </div>
+    """,
+    # Page 11: Section 3.1 Batchim
+    """
+    <div class="page">
+        <h3>3.1. Batchim (Final Consonants) & 7 Sounds</h3>
+        <p>A consonant placed at the bottom of a syllable block is called **'Batchim' (받침)**. Although almost all consonants can sit in the Batchim slot, they are restricted to only <strong>seven representative sounds</strong> when pronounced.</p>
+        
+        <table class="styled-table font-dense">
+            <thead>
+                <tr>
+                    <th>Representative Sound</th>
+                    <th>Written Consonants</th>
+                    <th>Examples & Realized Sound</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>[ㄱ]</strong></td>
+                    <td>ㄱ, ㅋ, ㄲ, ㄳ, ㄺ</td>
+                    <td>책 [책], 부엌 [부억], 밖 [박], 닭 [닥]</td>
+                </tr>
+                <tr>
+                    <td><strong>[ㄴ]</strong></td>
+                    <td>ㄴ, ㄵ, ㄶ</td>
+                    <td>문 [문], 앉다 [안따], 많다 [만타]</td>
+                </tr>
+                <tr>
+                    <td><strong>[ㄷ]</strong></td>
+                    <td>ㄷ, ㅅ, ㅈ, ㅊ, ㅌ, ㅎ, ㅆ</td>
+                    <td>듣다 [듣따], 옷 [옫], 낮 [낟], 꽃 [꼳], 밑 [믿]</td>
+                </tr>
+                <tr>
+                    <td><strong>[ㄹ]</strong></td>
+                    <td>ㄹ, ㄼ, ㄽ, ㄾ, ㅀ</td>
+                    <td>물 [물], 여덟 [여덜], 넓다 [널따]</td>
+                </tr>
+                <tr>
+                    <td><strong>[ㅁ]</strong></td>
+                    <td>ㅁ, ㄻ</td>
+                    <td>엄마 [엄마], 삶 [삼]</td>
+                </tr>
+                <tr>
+                    <td><strong>[ㅂ]</strong></td>
+                    <td>ㅂ, ㅍ, ㅄ, ㄿ</td>
+                    <td>밥 [밥], 앞 [압], 값 [갑]</td>
+                </tr>
+                <tr>
+                    <td><strong>[ㅇ]</strong></td>
+                    <td>ㅇ</td>
+                    <td>공 [공], 강 [강]</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p class="highlight">Rule: If a Batchim is followed by a syllable starting with a vowel, the sound carries over (Liaison / 연음). E.g., 옷이 is pronounced as [오시].</p>
+    </div>
+    """,
+    # Page 12: Section 3.2 Stroke Order
+    """
+    <div class="page">
+        <h3>3.2. Stroke Order Rules</h3>
+        <p>Writing Hangeul requires following proper stroke order. Drawing letters arbitrarily leads to illegible handwriting, slow writing speeds, and hand fatigue. Proper stroke order optimizes hand flow and ensures aesthetic layout.</p>
+        
+        <div class="info-box">
+            <h4>Two Basic Writing Principles</h4>
+            <p><strong>Rule 1. Left to Right</strong>: Draw all horizontal strokes and arrange components from left to right.<br>
+            <strong>Rule 2. Top to Bottom</strong>: Draw all vertical strokes and stack components from top to bottom.</p>
+        </div>
+        
+        <div class="stroke-example">
+            <p><strong>Example: How to write 'ㅁ' (Mium) in 3 strokes:</strong></p>
+            <ol>
+                <li>Stroke 1: Draw the left vertical line downwards.</li>
+                <li>Stroke 2: Start from top-left, draw rightwards, then hook downwards in a single motion.</li>
+                <li>Stroke 3: Close the block with a horizontal line from left to right.</li>
+            </ol>
+        </div>
+    </div>
+    """,
+    # Page 13: Section 4 Quiz
+    """
+    <div class="page">
+        <h3>4. Short-Answer Practice Quiz</h3>
+        <p>Test your Week 1 learning progress with these questions. Write your answers below.</p>
+        
+        <div class="qa-item">
+            <p class="q"><strong>Question 1.</strong> What are the three universal elements (Cheon-Ji-In) used to create Hangeul vowels, and what geometric shapes represent them?</p>
+            <p class="a"><strong>Answer:</strong> Heaven (represented as a dot), Earth (horizontal line), and Human (vertical line).</p>
+        </div>
+        
+        <div class="qa-item">
+            <p class="q"><strong>Question 2.</strong> Explain the difference in mouth shape and jaw position between '어' [ʌ] and '오' [o].</p>
+            <p class="a"><strong>Answer:</strong> '어' is flat-lipped (unrounded) with a low jaw drop. '오' requires rounding the lips forward with a less dropped jaw.</p>
+        </div>
+        
+        <div class="qa-item">
+            <p class="q"><strong>Question 3.</strong> What is the realized final sound (Batchim) for the word '값' (price)?</p>
+            <p class="a"><strong>Answer:</strong> It is realized as [ㅂ], so the word is pronounced as [갑].</p>
+        </div>
+    </div>
+    """,
+    # Page 14: Section 5 Essay
+    """
+    <div class="page">
+        <h3>5. Essay and Discussion Topics</h3>
+        <p>These topics encourage deeper reflection on the linguistic properties and design logic of Hangeul.</p>
+        
+        <div class="essay-topic">
+            <h4>[Topic 1] Cognitive Ease of Featural Alphabets</h4>
+            <p>Analyze how mapping letter shapes directly to vocal movements provides cognitive benefits for adult learners compared to non-featural writing systems (e.g., Latin alphabet). Cite specific examples like the stroke addition rule.</p>
+        </div>
+        
+        <div class="essay-topic">
+            <h4>[Topic 2] Visualizing Vowel Harmony</h4>
+            <p>East Asian Yin-Yang philosophy underpins Korean vowel harmony. Discuss how mapping these philosophical concepts to visual design elements (like warm red/orange blocks for Yang vowels, cool blue/navy blocks for Yin vowels) can make grammar rules intuitive for children.</p>
+        </div>
+    </div>
+    """,
+    # Page 15: Section 6 Glossary
+    """
+    <div class="page">
+        <h3>6. Glossary and Learning Resources</h3>
+        <ul class="glossary-list">
+            <li><strong>Moasseugi (모아쓰기):</strong> The unique syllable block assembly format of Hangeul.</li>
+            <li><strong>Featural Alphabet (자질문자):</strong> A writing system where letter shapes denote sound traits (like voicing, tension, or aspiration).</li>
+            <li><strong>Batchim (받침):</strong> Final consonants placed at the bottom of a block.</li>
+            <li><strong>Liaison (연음):</strong> The carrying over of a final consonant to the next vowel-initial syllable.</li>
+        </ul>
+        
+        <div class="resources-box">
+            <h4>Linguistic References & Hubs</h4>
+            <ul>
+                <li>King Sejong Institute Foundation (https://www.sejonghakdang.org)</li>
+                <li>National Institute of Korean Language (https://kcenter.korean.go.kr)</li>
+                <li>Sori Hangeul Portal (https://drjayed.com/curriculum)</li>
+            </ul>
+        </div>
+    </div>
+    """
+]
+
+HTML_TEMPLATE = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sori Hangeul Study Guide - Week 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #d3c4a9;
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        /* 15 pages configuration */
+        .page {
+            width: 210mm;
+            height: 297mm;
+            box-sizing: border-box;
+            padding: 22mm 20mm;
+            background-color: #F5F5F0;
+            color: #1C1813;
+            position: relative;
+            page-break-after: always;
+            border-bottom: 1px dashed rgba(28, 24, 19, 0.15); /* preview guide line */
+        }
+        
+        @media print {
+            body {
+                background: none;
+            }
+            .page {
+                border-bottom: none;
+                page-break-after: always;
+                width: 210mm;
+                height: 297mm;
+            }
+        }
+        
+        /* Premium Header and Footer */
+        .page::before {
+            content: "SORI HANGEUL STUDY GUIDE · WEEK 1";
+            position: absolute;
+            top: 10mm;
+            left: 20mm;
+            font-size: 8pt;
+            font-weight: 600;
+            color: #8C7F6A;
+            letter-spacing: 0.1em;
+        }
+        .page::after {
+            content: "Page " counter(page-counter);
+            position: absolute;
+            bottom: 10mm;
+            right: 20mm;
+            font-size: 8pt;
+            font-weight: 600;
+            color: #8C7F6A;
+        }
+        .page {
+            counter-increment: page-counter;
+        }
+        
+        /* Custom elements stylings */
+        h1, h2, h3, h4 {
+            margin-top: 0;
+            color: #1C1813;
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        h3 {
+            font-size: 18pt;
+            font-weight: 800;
+            border-bottom: 2px solid #b5852a;
+            padding-bottom: 6px;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        
+        p {
+            font-size: 10.5pt;
+            line-height: 1.7;
+            color: #3C352D;
+            margin-bottom: 14px;
+            word-break: keep-all;
+        }
+        
+        .lead {
+            font-size: 12pt;
+            font-weight: 500;
+            color: #1C1813;
+            line-height: 1.6;
+        }
+        
+        .info-box {
+            background-color: rgba(181, 133, 42, 0.08);
+            border-left: 4px solid #b5852a;
+            padding: 12px 18px;
+            border-radius: 4px;
+            margin: 18px 0;
+        }
+        .info-box h4 {
+            margin: 0 0 6px 0;
+            font-size: 11pt;
+            font-weight: 700;
+            color: #b5852a;
+        }
+        .info-box p {
+            margin: 0;
+            font-size: 9.5pt;
+            line-height: 1.6;
+        }
+        
+        .accent-box {
+            background-color: rgba(47, 109, 59, 0.08);
+            border-left-color: #2f6d3b;
+        }
+        .accent-box h4 {
+            color: #2f6d3b;
+        }
+        
+        .highlight {
+            font-weight: 700;
+            color: #b5852a;
+        }
+        
+        /* Table */
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 9.5pt;
+            text-align: left;
+        }
+        .styled-table th {
+            background-color: #e9e5d9;
+            color: #1C1813;
+            font-weight: 700;
+            padding: 10px 12px;
+            border-bottom: 2px solid rgba(28, 24, 19, 0.15);
+        }
+        .styled-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(28, 24, 19, 0.10);
+            line-height: 1.5;
+        }
+        .font-dense td, .font-dense th {
+            padding: 8px 10px;
+            font-size: 9pt;
+        }
+        
+        /* Cover design */
+        .cover-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            padding: 40mm 20mm;
+        }
+        .cover-page::before, .cover-page::after {
+            display: none; /* Hide header/footer on cover */
+        }
+        .brand {
+            font-family: 'Outfit', sans-serif;
+            font-size: 14pt;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            color: #b5852a;
+            border: 2px solid #b5852a;
+            padding: 6px 20px;
+            border-radius: 2px;
+        }
+        .title-wrap {
+            margin: 30mm 0;
+        }
+        .cover-page h1 {
+            font-size: 28pt;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+        .cover-page h2 {
+            font-size: 16pt;
+            font-weight: 500;
+            color: #8C7F6A;
+        }
+        .meta {
+            font-size: 10.5pt;
+            color: #5B5142;
+            line-height: 1.8;
+        }
+        .meta p {
+            margin: 4px 0;
+        }
+        .decoration {
+            font-size: 40pt;
+            margin-top: 15mm;
+            opacity: 0.85;
+        }
+        
+        /* TOC */
+        .toc-page {
+            padding-top: 30mm;
+        }
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 20mm 0 0 0;
+        }
+        .toc-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 11pt;
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+        .toc-list li::after {
+            content: " ";
+            flex-grow: 1;
+            border-bottom: 1px dotted rgba(28, 24, 19, 0.3);
+            margin: 0 10px;
+        }
+        .toc-list li span:last-child {
+            font-weight: 700;
+            color: #b5852a;
+            flex-shrink: 0;
+        }
+        
+        /* Section specific styles */
+        .philosophical-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .philosophical-cards .card {
+            background-color: #fffdf7;
+            border: 1px solid rgba(28, 24, 19, 0.1);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(60, 48, 30, 0.04);
+        }
+        .philosophical-cards .sym {
+            font-size: 32pt;
+            color: #b5852a;
+            font-weight: 800;
+            margin-bottom: 8px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .philosophical-cards .name {
+            font-weight: 700;
+            font-size: 10pt;
+            margin-bottom: 10px;
+        }
+        .philosophical-cards p {
+            font-size: 8.5pt;
+            line-height: 1.5;
+            color: #5B5142;
+            margin: 0;
+        }
+        
+        .stroke-tree {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: #fffdf7;
+            border: 1px solid var(--c-line);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+        .stroke-tree .row {
+            font-size: 11pt;
+            font-weight: 600;
+        }
+        .stroke-tree .base {
+            color: #3C352D;
+            background: rgba(28, 24, 19, 0.05);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .stroke-tree .added {
+            color: #b5852a;
+            background: rgba(181, 133, 42, 0.08);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+        
+        .vowel-guides {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 10mm;
+        }
+        .vg-item {
+            background-color: #fffdf7;
+            border: 1px solid rgba(28, 24, 19, 0.08);
+            padding: 16px;
+            border-radius: 8px;
+            position: relative;
+        }
+        .vg-item::before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 15px;
+            bottom: 15px;
+            width: 4px;
+            background-color: #b5852a;
+            border-radius: 0 4px 4px 0;
+        }
+        .v-letter {
+            font-size: 13pt;
+            font-weight: 800;
+            color: #b5852a;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .vg-item p {
+            margin: 0;
+            font-size: 9.5pt;
+        }
+        
+        .block-diagrams {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .diag {
+            background: #fffdf7;
+            border: 1px solid rgba(28,24,19,0.1);
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .d-title {
+            font-size: 10pt;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: #b5852a;
+        }
+        .d-grid {
+            display: grid;
+            gap: 8px;
+            width: 120px;
+            margin: 0 auto 12px;
+        }
+        .d-grid.horizontal {
+            grid-template-columns: 1fr 1fr;
+            height: 60px;
+        }
+        .d-grid.vertical {
+            grid-template-rows: 1fr 1fr;
+            height: 120px;
+            width: 60px;
+        }
+        .d-grid .box {
+            border: 2px solid #1C1813;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9pt;
+            font-weight: 700;
+            border-radius: 4px;
+            background: #F5F5F0;
+        }
+        .diag p {
+            font-size: 9pt;
+            margin: 0;
+            color: #8C7F6A;
+        }
+        
+        .stroke-example ol {
+            padding-left: 20px;
+            margin: 10px 0 0 0;
+        }
+        .stroke-example li {
+            font-size: 10pt;
+            line-height: 1.6;
+            color: #3C352D;
+            margin-bottom: 6px;
+        }
+        
+        .qa-item {
+            background: #fffdf7;
+            border: 1px solid rgba(28,24,19,0.1);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .qa-item .q {
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1C1813;
+        }
+        .qa-item .a {
+            margin: 0;
+            font-size: 9.5pt;
+            color: #2f6d3b;
+        }
+        
+        .essay-topic {
+            background: #fffdf7;
+            border: 1px solid rgba(181, 133, 42, 0.15);
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 18px;
+        }
+        .essay-topic h4 {
+            margin: 0 0 8px 0;
+            color: #b5852a;
+            font-size: 11pt;
+            font-weight: 700;
+        }
+        .essay-topic p {
+            margin: 0;
+            font-size: 9.5pt;
+            line-height: 1.6;
+        }
+        
+        .glossary-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+        }
+        .glossary-list li {
+            font-size: 9.5pt;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            position: relative;
+        }
+        .glossary-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #b5852a;
+            font-weight: 700;
+        }
+        .glossary-list strong {
+            color: #b5852a;
+        }
+        .resources-box {
+            background: rgba(181, 133, 42, 0.06);
+            border: 1px dashed #b5852a;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 15mm;
+        }
+        .resources-box h4 {
+            margin: 0 0 8px 0;
+            font-size: 11pt;
+        }
+        .resources-box ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        .resources-box li {
+            font-size: 9.5pt;
+            line-height: 1.6;
+            margin-bottom: 6px;
+            color: #5B5142;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        {pages}
+    </div>
+</body>
+</html>
+"""
+
+def generate():
+    print("Generating English HTML content for 15 pages...")
+    pages_html_str = "\\n".join(PAGES_HTML)
+    full_html = HTML_TEMPLATE.replace("{pages}", pages_html_str)
+    
+    temp_html_path = "scratch/temp_pdf_layout_en.html"
+    os.makedirs("scratch", exist_ok=True)
+    with open(temp_html_path, "w", encoding="utf-8") as f:
+        f.write(full_html)
+    print(f"Saved temp HTML to {temp_html_path}")
+    
+    pdf_out_dir = "web/public/docs"
+    os.makedirs(pdf_out_dir, exist_ok=True)
+    pdf_out_path = os.path.join(pdf_out_dir, "hangeul_week_1_guide_en.pdf")
+    
+    print("Starting Playwright to compile English PDF...")
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+        abs_html_path = os.path.abspath(temp_html_path)
+        page.goto(f"file:///{abs_html_path}")
+        page.pdf(
+            path=pdf_out_path,
+            format="A4",
+            print_background=True,
+            margin={
+                "top": "0",
+                "bottom": "0",
+                "left": "0",
+                "right": "0"
+            }
+        )
+        browser.close()
+        
+    print(f"Successfully generated English 15-page PDF at: {pdf_out_path}")
+
+if __name__ == "__main__":
+    generate()

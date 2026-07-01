@@ -1,0 +1,30 @@
+# Source 4: Acoustic Articulation of Consonants (Plain, Aspirated, Tense)
+
+Korean stop consonants (plosives) are famously classified into a three-way laryngeal system: Plain (Lax/Lenis), Aspirated, and Tense (Fortis). This contrast is one of the most difficult concepts for foreign learners to grasp because most languages only differentiate sounds based on voicing (voiced vs. unvoiced, like 'g' vs. 'k').
+
+### 1. Acoustic and Physical Properties
+
+1.  **Plain Consonants (ㄱ, ㄷ, ㅂ, ㅅ, ㅈ):**
+    *   **Acoustic Profile:** Intermediate Voice Onset Time (VOT). The fundamental frequency (F0) of the following vowel is lower (Low Pitch).
+    *   **Articulatory Feel:** Pronounced with a relaxed vocal tract and gentle breath flow. 
+    *   **Sound Change:** These sounds are voiceless at the beginning of a word (sounding like a soft [k, t, p]) but automatically become voiced (sounding like [g, d, b, j]) when placed between two vowels.
+2.  **Aspirated Consonants (ㅋ, ㅌ, ㅍ, ㅊ, ㅎ):**
+    *   **Acoustic Profile:** Longest Voice Onset Time (VOT). The F0 pitch of the following vowel is higher (High Pitch).
+    *   **Articulatory Feel:** Pronounced with a strong, conscious burst of air released from the lungs.
+3.  **Tense Consonants (ㄲ, ㄸ, ㅃ, ㅆ, ㅉ):**
+    *   **Acoustic Profile:** Shortest Voice Onset Time (VOT). The F0 pitch of the following vowel is high (High Pitch).
+    *   **Articulatory Feel:** Pronounced with tight glottal constriction. The vocal tract is tensed, and almost no air is released upon articulation.
+
+### 2. Multi-sensory Teaching Methods for Foreigners
+
+*   **The Tissue Test (For Aspiration):**
+    *   Instructors should tell students to hold a single sheet of tissue paper or their hand 2 inches in front of their mouth.
+    *   When pronouncing **Aspirated** sounds (ㅋ, ㅌ, ㅍ), the tissue must blow forward significantly.
+    *   When pronouncing **Tense** (ㄲ, ㄸ, ㅃ) or **Plain** (ㄱ, ㄷ, ㅂ) sounds, the tissue should remain still. This provides immediate visual feedback.
+*   **The Pitch Jump Method (For Tense Consonants):**
+    *   Because tense and aspirated consonants naturally trigger a higher pitch in the following vowel, learners can simulate the correct sound by raising their vocal pitch.
+    *   For example, to say "ㄲ" (Tense) rather than "ㄱ" (Plain), tell the student to pronounce the following vowel in a high, sharp tone (like singing a high note). This constriction of the vocal cords naturally produces the tense consonant quality.
+*   **Articulatory Anchoring:**
+    *   Remind learners that tense consonants are similar to the unaspirated consonants in English words following an "s":
+        *   Plain ㄱ vs Tense ㄲ: Similar to the difference between 'key' (aspirated) and 'sk-y' (unaspirated ㄲ).
+        *   Plain ㅂ vs Tense ㅃ: Similar to the difference between 'pie' (aspirated) and 'sp-y' (unaspirated ㅃ).

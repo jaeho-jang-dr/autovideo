@@ -1,0 +1,3 @@
+# [피아노 시퀀스 2/2] 같은 검정 그랜드피아노에 둘이 앉아 연주 준비, 전 우측 45도 향함
+# ref-key: injun_jieun_grand_piano_standing (scene1 결과 → 같은 피아노 유지)
+injun_jieun_grand_piano_ready: sitting together on the bench of the SAME black grand piano from the reference image, getting ready to play, both of them and the grand piano oriented toward the front-right 45-degree three-quarter direction, both full body

@@ -1,0 +1,107 @@
+{
+  "episode": "KO-W01D3",
+  "title_ko": "ㅇ과 모음으로 음절 만들기 (1주 3강·문형)",
+  "title_en": "Making Syllables with ㅇ + Vowel (W1 D3 · Patterns)",
+  "scenes": [
+    {
+      "seq": 1, "dur": 13,
+      "ko": "안녕하세요! 졸라맨이에요. 한글 모음은 혼자서는 음절이 되지 못해요. 한국어 음절은 꼭 자음으로 시작해야 하거든요. 그래서 오늘은 소리 없는 친구 'ㅇ'을 만나 봅니다.",
+      "en": "Hi, I'm Zollaman! A Korean vowel can't stand alone as a syllable — every syllable must start with a consonant. So today, let's meet a silent friend: 'ㅇ'.",
+      "cap_ko": "ㅇ과 모음으로 음절 만들기", "cap_en": "Syllables with ㅇ + Vowel",
+      "gestures": ["zollaman_waving", "zollaman_pointing", "zollaman_base"],
+      "words": [],
+      "bg": "bg_w1d3_s01", "critter": "dragonfly",
+      "bg_prompt": "soft pastel storybook study nook outdoors, a small wooden desk with an open book and a round chalkboard on the right, gentle green meadow and big open sky, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9"
+    },
+    {
+      "seq": 2, "dur": 13,
+      "ko": "'ㅇ'은 동그란 모양이에요. 음절 맨 앞에 올 때는 아무 소리도 나지 않아요. 모음 앞에 살짝 자리만 잡아 주는, 받침대 같은 고마운 친구죠.",
+      "en": "'ㅇ' is a little circle. When it sits at the front of a syllable, it makes no sound at all — it simply holds the spot in front of the vowel, like a kind little stand.",
+      "cap_ko": "ㅇ — 앞에선 소리가 없어요", "cap_en": "ㅇ — silent at the front",
+      "gestures": ["zollaman_pointing", "zollaman_thinking", "zollaman_base"],
+      "words": ["ㅇ"],
+      "bg": "bg_w1d3_s02", "critter": "butterfly",
+      "bg_prompt": "soft pastel storybook classroom corner, a big round mint chalkboard on the right and a small potted plant, warm cream wall, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9"
+    },
+    {
+      "seq": 3, "dur": 13,
+      "ko": "이제 붙여 볼까요? 'ㅇ'에 'ㅏ'를 더하면, 아! 입을 크게 벌리는 소리, '아'예요. 아기, 아빠 할 때 바로 그 '아'랍니다.",
+      "en": "Let's combine them! Add 'ㅏ' to 'ㅇ' and you get 'a' — a wide-open sound. It's the 'a' in 아기 (baby) and 아빠 (dad).",
+      "cap_ko": "ㅇ + ㅏ → 아", "cap_en": "ㅇ + ㅏ → 아",
+      "gestures": ["zollaman_pointing", "zollaman_cheering", "zollaman_base"],
+      "words": ["아"],
+      "bg": "bg_w1d3_s03", "critter": "bird",
+      "bg_prompt": "soft pastel storybook sunny meadow with a few round bushes and simple flowers, gentle hills, big open cream-blue sky, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9"
+    },
+    {
+      "seq": 4, "dur": 12,
+      "ko": "'ㅇ'에 'ㅓ'를 더하면 '어'. 입을 세로로 열되 'ㅏ'보다 살짝 좁혀요. 어머니, 어디 할 때 그 '어' 소리죠.",
+      "en": "Add 'ㅓ' to 'ㅇ' and you get 'eo'. Open vertically, but a little narrower than 'a'. It's the 'eo' in 어머니 (mother) and 어디 (where).",
+      "cap_ko": "ㅇ + ㅓ → 어", "cap_en": "ㅇ + ㅓ → 어",
+      "gestures": ["zollaman_pointing", "zollaman_base", "zollaman_thinking"],
+      "words": ["어"],
+      "bg": "bg_w1d3_s04", "critter": "bee",
+      "bg_prompt": "soft pastel storybook garden with a low wooden fence and leafy green plants on the right, soft pastel green and brown palette, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9"
+    },
+    {
+      "seq": 5, "dur": 12,
+      "ko": "'ㅇ'에 'ㅗ'를 더하면 '오'. 입술을 동그랗게 모아 앞으로 내밀어요. 오리, 오이의 '오'예요.",
+      "en": "Add 'ㅗ' to 'ㅇ' and you get 'o'. Round your lips and push them forward. It's the 'o' in 오리 (duck) and 오이 (cucumber).",
+      "cap_ko": "ㅇ + ㅗ → 오", "cap_en": "ㅇ + ㅗ → 오",
+      "gestures": ["zollaman_pointing", "zollaman_cheering", "zollaman_base"],
+      "words": ["오"],
+      "bg": "bg_w1d3_s05", "critter": "dragonfly",
+      "bg_prompt": "soft pastel storybook pond scene with calm blue water and round lily pads on the right, gentle reeds, soft pastel palette, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9"
+    },
+    {
+      "seq": 6, "dur": 12,
+      "ko": "'ㅇ'에 'ㅜ'를 더하면 '우'. 'ㅗ'보다 입술을 더 작고 뾰족하게 모아요. 우유, 우산의 '우' 소리예요.",
+      "en": "Add 'ㅜ' to 'ㅇ' and you get 'u'. Round your lips smaller and tighter than for 'o'. It's the 'u' in 우유 (milk) and 우산 (umbrella).",
+      "cap_ko": "ㅇ + ㅜ → 우", "cap_en": "ㅇ + ㅜ → 우",
+      "gestures": ["zollaman_pointing", "zollaman_base", "zollaman_thinking"],
+      "words": ["우"],
+      "bg": "bg_w1d3_s06", "critter": "rabbit",
+      "bg_prompt": "soft pastel storybook farm field with a small red-roof barn far on the right and gentle rolling hills, soft sky-blue and green palette, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9"
+    },
+    {
+      "seq": 7, "dur": 12,
+      "ko": "'ㅇ'에 'ㅡ'를 더하면 '으'. 입술을 양옆으로 납작하게, 억지 미소처럼 당겨요. 짧고 단단한 '으' 소리죠.",
+      "en": "Add 'ㅡ' to 'ㅇ' and you get 'eu'. Stretch your lips flat to the sides, like a forced smile. A short, firm 'eu' sound.",
+      "cap_ko": "ㅇ + ㅡ → 으", "cap_en": "ㅇ + ㅡ → 으",
+      "gestures": ["zollaman_pointing", "zollaman_base", "zollaman_clapping"],
+      "words": ["으"],
+      "bg": "bg_w1d3_s07", "critter": "butterfly",
+      "bg_prompt": "soft pastel storybook autumn meadow with a single round tree on the right and falling soft leaves, warm cream and amber palette, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9"
+    },
+    {
+      "seq": 8, "dur": 12,
+      "ko": "'ㅇ'에 'ㅣ'를 더하면 '이'. 입을 옆으로 활짝 당겨 이가 살짝 보이게 해요. '이'는 우리 몸의 치아를 뜻하기도 해요.",
+      "en": "Add 'ㅣ' to 'ㅇ' and you get 'i'. Pull your lips wide so your teeth almost show. '이' also means a tooth!",
+      "cap_ko": "ㅇ + ㅣ → 이", "cap_en": "ㅇ + ㅣ → 이",
+      "gestures": ["zollaman_pointing", "zollaman_cheering", "zollaman_base"],
+      "words": ["이"],
+      "bg": "bg_w1d3_s08", "critter": "bird",
+      "bg_prompt": "soft pastel storybook cozy room with a round wall mirror on the right and a small shelf, soft peach and cream palette, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9"
+    },
+    {
+      "seq": 9, "dur": 14,
+      "ko": "자, 모아 볼까요? 'ㅇ'만 앞에 붙이면 모음이 그대로 음절이 돼요. 아, 어, 오, 우, 으, 이! 여덟 개 모음 모두 똑같은 방법으로 만들 수 있어요.",
+      "en": "Let's gather them! Just put 'ㅇ' in front, and each vowel becomes a syllable: a, eo, o, u, eu, i! All eight vowels work the very same way.",
+      "cap_ko": "ㅇ + 모음 = 음절", "cap_en": "ㅇ + Vowel = Syllable",
+      "gestures": ["zollaman_cheering", "zollaman_clapping", "zollaman_base"],
+      "words": ["아", "어", "오", "우", "으", "이"],
+      "bg": "bg_w1d3_s09", "critter": "dragonfly",
+      "bg_prompt": "soft pastel storybook bright classroom wall with a soft rounded board and a small potted plant in the corner, warm cream and mint palette, thick friendly outlines, flat colors, no text, no people, leave the center and lower area open, 16:9"
+    },
+    {
+      "seq": 10, "dur": 11,
+      "ko": "오늘은 'ㅇ'과 모음으로 음절 만드는 법을 배웠어요. 다음 시간엔 'ㄱ, ㄴ' 같은 다른 자음을 붙여 더 많은 글자를 만들어 봐요. 잘했어요, 또 만나요!",
+      "en": "Today we learned to build syllables with 'ㅇ' and a vowel. Next time, we'll add other consonants like 'ㄱ' and 'ㄴ' to make even more letters. Great job — see you soon!",
+      "cap_ko": "복습 · 다음 시간 예고", "cap_en": "Review & Next Time",
+      "gestures": ["zollaman_cheering", "zollaman_waving", "zollaman_base"],
+      "words": [],
+      "bg": "bg_w1d3_s10", "critter": "bird",
+      "bg_prompt": "soft pastel storybook cheerful meadow with a soft rainbow arc and two round balloons on the right, warm bright pastel palette, thick friendly outlines, flat colors, no text, no people, leave the left third and lower area open, 16:9"
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+ "episode": "KO-W01D5",
+ "title_ko": "단모음 말하기와 인사해요!",
+ "title_en": "Speaking Single Vowels and Greetings!",
+ "scenes": [
+  {
+   "seq": 1,
+   "dur": 12,
+   "ko": "안녕하세요! 오늘은 한국어 말하기 시간입니다! 지난 시간 배운 단모음들을 함께 소리 내어 말하고, 간단한 인사말도 연습해 볼 거예요.",
+   "en": "Hello everyone! Today is Korean speaking practice time! We'll practice pronouncing the single vowels we learned, and also try out simple greetings.",
+   "cap_ko": "어서 오세요! 오늘은 단모음 말하기 시간이에요!",
+   "cap_en": "Welcome! Today is single vowel speaking practice!",
+   "gestures": [
+    "zollanyeo_waving",
+    "zollanyeo_base"
+   ],
+   "words": [],
+   "bg": "bg_w1d5_s01",
+   "bg_prompt": "soft pastel storybook ornate Buddhist temple entrance, blooming cherry blossoms, stone pathway, sunrise, thick friendly outlines, flat colors, no text, no modern people, leave the left third and lower area open, 16:9",
+   "critter": "bird"
+  },
+  {
+   "seq": 2,
+   "dur": 10,
+   "ko": "자, 첫 번째 단모음 'ㅏ'입니다. 거울을 보면서 입을 크게 벌리고 '아!' 하고 소리 내어 보세요. 입 모양이 중요해요.",
+   "en": "Alright, the first single vowel is 'ㅏ' (A). Look in the mirror, open your mouth wide, and say 'Ah!' Your mouth shape is important.",
+   "cap_ko": "'ㅏ' (아) 발음하기! 입을 크게 벌려요!",
+   "cap_en": "Pronounce 'ㅏ' (A)! Open your mouth wide!",
+   "gestures": [
+    "zollanyeo_pointing",
+    "zollanyeo_studying"
+   ],
+   "words": [
+    "아"
+   ],
+   "bg": "bg_w1d5_s02",
+   "bg_prompt": "soft pastel storybook ornate Buddhist temple overlooking the serene sea, gentle waves crashing on the cliffs, traditional Korean boat docked nearby, thick friendly outlines, flat colors, no text, no modern people, leave the left third and lower area open, 16:9",
+   "critter": "null"
+  },
+  {
+   "seq": 3,
+   "dur": 10,
+   "ko": "다음은 'ㅓ'입니다. 입을 '아'보다 살짝 덜 크게 벌리고, 턱을 살짝 내리면서 '어!' 하고 소리 내어 보세요. 발음이 달라지죠?",
+   "en": "Next is 'ㅓ' (Eo). Open your mouth slightly less wide than for 'A', drop your jaw slightly, and say 'Eo!' The pronunciation changes, right?",
+   "cap_ko": "'ㅓ' (어) 발음하기! 턱을 살짝 내려요!",
+   "cap_en": "Pronounce 'ㅓ' (Eo)! Drop your jaw slightly!",
+   "gestures": [
+    "zollanyeo_pointing",
+    "zollanyeo_reading"
+   ],
+   "words": [
+    "어"
+   ],
+   "bg": "bg_w1d5_s03",
+   "bg_prompt": "soft pastel storybook intricate stone bridge connecting parts of an ornate Buddhist temple, traditional lanterns hanging, flowing river below, thick friendly outlines, flat colors, no text, no modern people, leave the left third and lower area open, 16:9",
+   "critter": "butterfly"
+  },
+  {
+   "seq": 4,
+   "dur": 10,
+   "ko": "이번엔 'ㅗ'입니다. 입술을 동그랗게 앞으로 살짝 내밀면서 '오!' 하고 소리 내어 보세요. 입술을 잘 움직여야 해요.",
+   "en": "This time it's 'ㅗ' (O). Round your lips slightly forward and say 'Oh!' You need to move your lips well.",
+   "cap_ko": "'ㅗ' (오) 발음하기! 입술을 동그랗게!",
+   "cap_en": "Pronounce 'ㅗ' (O)! Round your lips!",
+   "gestures": [
+    "zollanyeo_pointing",
+    "zollanyeo_thinking"
+   ],
+   "words": [
+    "오"
+   ],
+   "bg": "bg_w1d5_s04",
+   "bg_prompt": "soft pastel storybook peaceful interior of an ornate Buddhist temple hall, intricate painted ceilings, golden Buddha statue, sunlight streaming through a window, thick friendly outlines, flat colors, no text, no modern people, leave the left third and lower area open, 16:9",
+   "critter": "null"
+  },
+  {
+   "seq": 5,
+   "dur": 10,
+   "ko": "이어서 'ㅜ'입니다. '오'보다 입술을 더 동그랗게 앞으로 쭉 내밀면서 '우!'라고 해보세요. 입술이 더 길게 나와야 합니다.",
+   "en": "Next is 'ㅜ' (U). Round your lips even more forward than for 'O' and say 'Oo!' Your lips should protrude more.",
+   "cap_ko": "'ㅜ' (우) 발음하기! 입술을 쭉 내밀어요!",
+   "cap_en": "Pronounce 'ㅜ' (U)! Protrude your lips!",
+   "gestures": [
+    "zollanyeo_pointing",
+    "zollanyeo_studying"
+   ],
+   "words": [
+    "우"
+   ],
+   "bg": "bg_w1d5_s05",
+   "bg_prompt": "soft pastel storybook ancient stone stairs leading up to an ornate Buddhist temple, weathered stone carvings, lush green foliage around, thick friendly outlines, flat colors, no text, no modern people, leave the left third and lower area open, 16:9",
+   "critter": "bee"
+  },
+  {
+   "seq": 6,
+   "dur": 10,
+   "ko": "이번엔 'ㅡ'입니다. 입술을 옆으로 살짝 당겨서 벌리지 않고 '으!'라고 소리 내어 보세요. 입술을 너무 움직이지 마세요.",
+   "en": "This time it's 'ㅡ' (Eu). Pull your lips slightly to the sides without opening your mouth wide and say 'Eu!' Don't move your lips too much.",
+   "cap_ko": "'ㅡ' (으) 발음하기! 입술을 옆으로 당겨요!",
+   "cap_en": "Pronounce 'ㅡ' (Eu)! Pull your lips sideways!",
+   "gestures": [
+    "zollanyeo_pointing",
+    "zollanyeo_reading"
+   ],
+   "words": [
+    "으"
+   ],
+   "bg": "bg_w1d5_s06",
+   "bg_prompt": "soft pastel storybook rugged rocky cliffs beside an ornate Buddhist temple, sea spray hitting the rocks, clear blue ocean, traditional fishing boat in the distance, thick friendly outlines, flat colors, no text, no modern people, leave the left third and lower area open, 16:9",
+   "critter": "null"
+  },
+  {
+   "seq": 7,
+   "dur": 10,
+   "ko": "자, 'ㅣ'입니다. 입꼬리를 양옆으로 쭉 당기면서 '이!' 하고 활짝 웃듯이 소리 내어 보세요. 가장 쉬울 수도 있어요.",
+   "en": "Alright, it's 'ㅣ' (I). Pull the corners of your mouth wide to the sides, as if you're smiling broadly, and say 'Ee!' This might be the easiest one.",
+   "cap_ko": "'ㅣ' (이) 발음하기! 활짝 웃어요!",
+   "cap_en": "Pronounce 'ㅣ' (I)! Smile broadly!",
+   "gestures": [
+    "zollanyeo_pointing",
+    "zollanyeo_cheering"
+   ],
+   "words": [
+    "이"
+   ],
+   "bg": "bg_w1d5_s07",
+   "bg_prompt": "soft pastel storybook tranquil garden area within an ornate Buddhist temple, small pond with lotus flowers, stone statues, gentle waterfall, thick friendly outlines, flat colors, no text, no modern people, leave the left third and lower area open, 16:9",
+   "critter": "butterfly"
+  },
+  {
+   "seq": 8,
+   "dur": 10,
+   "ko": "이제 'ㅐ'입니다. '이' 발음보다 입을 살짝 더 벌리고 '애!' 하고 소리 내어 보세요. '에'와 비슷하지만 입이 더 열려요.",
+   "en": "Now for 'ㅐ' (Ae). Open your mouth slightly wider than for 'Ee' and say 'Ae!' It's similar to 'E' but your mouth is more open.",
+   "cap_ko": "'ㅐ' (애) 발음하기! 입을 '이'보다 더 열어요!",
+   "cap_en": "Pronounce 'ㅐ' (Ae)! Open your mouth wider than 'I'!",
+   "gestures": [
+    "zollanyeo_pointing",
+    "zollanyeo_thinking"
+   ],
+   "words": [
+    "애"
+   ],
+   "bg": "bg_w1d5_s08",
+   "bg_prompt": "soft pastel storybook ornate Buddhist temple structure on a cliff edge, panoramic view of the ocean, a small, traditional Korean fishing boat in the distance, thick friendly outlines, flat colors, no text, no modern people, leave the left third and lower area open, 16:9",
+   "critter": "bird"
+  },
+  {
+   "seq": 9,
+   "dur": 10,
+   "ko": "마지막 단모음 'ㅔ'입니다. '애' 발음보다 입을 살짝 덜 벌리고 자연스럽게 '에!' 하고 소리 내어 보세요. 연습하면 금방 익숙해질 거예요.",
+   "en": "The last single vowel is 'ㅔ' (E). Open your mouth slightly less wide than for 'Ae' and naturally say 'Eh!' You'll get used to it quickly with practice.",
+   "cap_ko": "'ㅔ' (에) 발음하기! '애'보다 입을 덜 열어요!",
+   "cap_en": "Pronounce 'ㅔ' (E)! Open your mouth less than 'Ae'!",
+   "gestures": [
+    "zollanyeo_pointing",
+    "zollanyeo_raising_hand"
+   ],
+   "words": [
+    "에"
+   ],
+   "bg": "bg_w1d5_s09",
+   "bg_prompt": "soft pastel storybook wide view of the ornate Buddhist temple complex, rolling green mountains in the background, clear blue sky, thick friendly outlines, flat colors, no text, no modern people, leave the left third and lower area open, 16:9",
+   "critter": "null"
+  },
+  {
+   "seq": 10,
+   "dur": 15,
+   "ko": "이제 단모음을 활용해서 인사말을 연습해 볼까요? '안녕! 나는 [자신의 이름]입니다.' 라고 말해보세요. 자신감을 가지고!",
+   "en": "Shall we practice greetings using the single vowels now? Try saying 'Annyeong! Naneun [Your Name] imnida.' (Hello! I am [Your Name].) With confidence!",
+   "cap_ko": "역할극: 안녕! 나는 [이름]입니다!",
+   "cap_en": "Role-play: Hello! I am [Name]!",
+   "gestures": [
+    "zollanyeo_clapping",
+    "zollanyeo_waving"
+   ],
+   "words": [
+    "안",
+    "녕",
+    "나",
+    "는"
+   ],
+   "bg": "bg_w1d5_s10",
+   "bg_prompt": "soft pastel storybook spacious courtyard of an ornate Buddhist temple, gentle sunlight, a few traditional stone pagodas, thick friendly outlines, flat colors, no text, no modern people, leave the left third and lower area open, 16:9",
+   "critter": "bee"
+  },
+  {
+   "seq": 11,
+   "dur": 12,
+   "ko": "오늘 한국어 말하기 수업은 여기까지입니다. 단모음 발음과 인사말 연습, 어떠셨나요? 꾸준히 연습하는 것이 가장 중요해요! 다음 시간에 또 만나요!",
+   "en": "That's all for today's Korean speaking class. How was practicing single vowel pronunciation and greetings? Consistent practice is the most important! See you next time!",
+   "cap_ko": "오늘 수업 끝! 다음 시간에 만나요!",
+   "cap_en": "Class dismissed! See you next time!",
+   "gestures": [
+    "zollanyeo_cheering",
+    "zollanyeo_base"
+   ],
+   "words": [],
+   "bg": "bg_w1d5_s11",
+   "bg_prompt": "soft pastel storybook panoramic view of the ornate Buddhist temple at sunset, vibrant orange and pink sky, calm sea, thick friendly outlines, flat colors, no text, no modern people, leave the left third and lower area open, 16:9",
+   "critter": "bird"
+  }
+ ]
+}

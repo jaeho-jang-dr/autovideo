@@ -1,0 +1,43 @@
+# [Injun + Jieun — 고등학생 '친구' 25종] reference2img
+# 관계: 같은 반 고등학생 친구 (연인 아님). 나이대(고교생)에 맞는 건전한 활동만.
+# 형식:  <out_key>: <영문 동작 구절만>  (flow_pose 가 "두 캐릭터" 프리픽스 + 스타일/베이지배경 SUFFIX 자동 부착)
+# ref-key: injun_jieun_handshake_facing_opaque  (두 인물 일관성 유지)
+# 전부 G등급 — 신체접촉/로맨스 묘사 배제 → 구글 Flow 콘텐츠 정책 안전
+#
+# --- 학교 생활 (school life) ---
+injun_jieun_studying: studying together at a desk with open textbooks and notebooks, both full body
+injun_jieun_library: reading books together at a library table, both full body
+injun_jieun_homework_help: one explaining homework to the other at a school desk, both full body
+injun_jieun_group_project: making a group project poster together on a table, both full body
+injun_jieun_classroom_clean: cleaning the classroom together with a broom and dustpan, both full body
+injun_jieun_school_lunch: eating school lunch together with trays at a cafeteria table, both full body
+injun_jieun_walking_to_school: walking to school together carrying backpacks, both full body
+injun_jieun_running_late: running to school together in a hurry with backpacks, both full body side view
+injun_jieun_bus: sitting side by side on a city bus to school holding the handrail, both full body
+injun_jieun_sports_day: cheering together at a school sports day waving small flags, both full body
+# --- 간식/방과후 (snacks & after school) ---
+injun_jieun_tteokbokki: eating tteokbokki together at a street snack stall, both full body
+injun_jieun_convenience_store: eating cup noodles at a convenience store counter, both full body
+injun_jieun_ice_cream: standing and eating ice cream cones together, both full body
+injun_jieun_cafe_study: studying together at a cafe table with drinks and laptops, both full body
+injun_jieun_bench_chat: sitting on a park bench chatting together, both full body
+# --- 운동/놀이 (sports & play) ---
+injun_jieun_basketball: playing basketball together on an outdoor court, both full body
+injun_jieun_badminton: playing badminton together in a schoolyard, both full body
+injun_jieun_soccer: kicking a soccer ball back and forth on a field, both full body
+injun_jieun_jump_rope: jumping rope together on a sidewalk, both full body
+injun_jieun_bicycle: riding bicycles side by side on a path, both full body
+# --- 친구다운 제스처/취미 ---
+injun_jieun_high_five: giving each other a happy high-five, both full body
+injun_jieun_fist_bump: doing a friendly fist bump, both full body
+injun_jieun_sharing_earphones: listening to music sharing earphones with one earbud each, both full body
+injun_jieun_selfie: taking a fun selfie together with a phone, both full body
+injun_jieun_board_game: playing a board game together at a table, both full body
+# --- 야외 액티비티 (추가) ---
+injun_jieun_snorkeling: snorkeling together in the blue sea wearing snorkel masks and life vests, both full body
+injun_jieun_hiking: hiking up a mountain trail together with backpacks and walking sticks, both full body
+injun_jieun_swimming_pool: swimming together in a swimming pool wearing swim caps and goggles, both full body
+injun_jieun_roller_coaster: riding a roller coaster together at an amusement park, sitting in the seat with safety bars, both full body
+injun_jieun_skiing: skiing together down a snowy slope wearing ski jackets, helmets and goggles, both full body
+injun_jieun_motorcycle: riding one motorcycle together with Injun in front steering and Jieun behind, both wearing safety helmets, both full body side view
+injun_jieun_piano: sitting together side by side on one piano bench playing an upright piano four-hands, both figures and the piano shown from a front-right 45-degree three-quarter angle, both full body

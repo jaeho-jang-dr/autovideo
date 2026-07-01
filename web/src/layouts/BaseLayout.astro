@@ -8,7 +8,7 @@ interface Props {
   description?: string;
   lang: Lang;
   altUrl: string;       // 같은 페이지의 반대 언어 URL (언어 토글용)
-  active?: 'home' | 'lessons' | 'groove' | 'curriculum';
+  active?: 'home' | 'lessons' | 'groove' | 'curriculum' | 'grammar' | 'alllessons' | 'places';
   heroVideo?: boolean;  // 페이지 전체 배경에 졸라 왈츠 영상을 상영할지 여부
   hideHeaderFooter?: boolean; // 그루브 앱 단독 뷰 여부
 }
@@ -63,7 +63,9 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
             <a href={homeUrl(lang)} class={active === 'home' ? 'active' : ''}>{tr.nav_home}</a>
             <a href={`${homeUrl(lang)}#lessons`} class={active === 'lessons' ? 'active' : ''}>{tr.nav_lessons}</a>
             <a href={lang === 'ko' ? '/ko/curriculum/' : '/curriculum/'} class={active === 'curriculum' ? 'active' : ''}>{tr.nav_curriculum}</a>
+            <a href={lang === 'ko' ? '/ko/lessons-all/' : '/lessons-all/'} class={active === 'alllessons' ? 'active' : ''}>{lang === 'ko' ? '168강' : '168 Lessons'}</a>
             <a href={lang === 'ko' ? '/ko/grammar/' : '/grammar/'} class={active === 'grammar' ? 'active' : ''}>{tr.nav_grammar}</a>
+            <a href={lang === 'ko' ? '/ko/places/' : '/places/'} class={active === 'places' ? 'active' : ''}>{lang === 'ko' ? '명소 168' : 'Korea 168'}</a>
             <a href={lang === 'ko' ? '/ko/groove/' : '/groove/'} class={active === 'groove' && !Astro.url.searchParams.has('play') ? 'active' : ''}>{tr.nav_groove}</a>
             <a href="javascript:void(0)" class="coming-soon-game" data-lang={lang}>🎮 {lang === 'ko' ? '한글 게임 (준비중)' : 'Game (Coming Soon)'}</a>
             <span class="lang-switch" role="group" aria-label="language">
@@ -125,6 +127,8 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
             <a href={homeUrl(lang)}>{tr.nav_home}</a>
             <a href={`${homeUrl(lang)}#lessons`}>{tr.nav_lessons}</a>
             <a href={lang === 'ko' ? '/ko/curriculum/' : '/curriculum/'}>{tr.nav_curriculum}</a>
+            <a href={lang === 'ko' ? '/ko/lessons-all/' : '/lessons-all/'}>{lang === 'ko' ? '168강' : '168 Lessons'}</a>
+            <a href={lang === 'ko' ? '/ko/places/' : '/places/'}>{lang === 'ko' ? '명소 168' : 'Korea 168'}</a>
             <a href={lang === 'ko' ? '/ko/grammar/' : '/grammar/'}>{tr.nav_grammar}</a>
             <a href={lang === 'ko' ? '/ko/groove/' : '/groove/'}>{tr.nav_groove}</a>
           </div>

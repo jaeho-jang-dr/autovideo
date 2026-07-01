@@ -1,0 +1,1 @@
+[OK] 점프 사진 생성·저장 완료 → home_vocab/jieun_jumping.png (809760 bytes, md5=bb2306c1a594fc585675a2b60d8caaad, 기존 중복 아님 ✔)

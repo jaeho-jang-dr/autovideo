@@ -1,0 +1,1 @@
+, vowels alone cannot form a character. So, shall we look together at how

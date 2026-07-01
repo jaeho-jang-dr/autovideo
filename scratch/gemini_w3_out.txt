@@ -1,0 +1,10 @@
+[ERROR] [ImportProcessor] Could not find child token in parent raw content. Aborting parsing for this branch. Child raw: "Antigravity의 고수준 조율 가이드.
+Claude Code에게 작업을 위임할 때의 프로토콜, 판단 기준을 정의합니다."
+YOLO mode is enabled. All tool calls will be automatically approved.
+Loaded cached credentials.
+[ERROR] [ImportProcessor] Could not find child token in parent raw content. Aborting parsing for this branch. Child raw: "Antigravity의 고수준 조율 가이드.
+Claude Code에게 작업을 위임할 때의 프로토콜, 판단 기준을 정의합니다."
+YOLO mode is enabled. All tool calls will be automatically approved.
+Server 'notebooklm-mcp' supports tool updates. Listening for changes...
+W3 SCENARIO DONE
+EXIT=0

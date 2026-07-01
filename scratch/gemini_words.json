@@ -1,0 +1,14 @@
+[
+  {"word":"나","romaja":"na","meaning_en":"I/me","blocks":["ㄴ+ㅏ"]},
+  {"word":"누나","romaja":"nuna","meaning_en":"older sister (male speaker)","blocks":["ㄴ+ㅜ","ㄴ+ㅏ"]},
+  {"word":"나라","romaja":"nara","meaning_en":"country","blocks":["ㄴ+ㅏ","ㄹ+ㅏ"]},
+  {"word":"머리","romaja":"meori","meaning_en":"head/hair","blocks":["ㅁ+ㅓ","ㄹ+ㅣ"]},
+  {"word":"거리","romaja":"geori","meaning_en":"street/distance","blocks":["ㄱ+ㅓ","ㄹ+ㅣ"]},
+  {"word":"바나나","romaja":"banana","meaning_en":"banana","blocks":["ㅂ+ㅏ","ㄴ+ㅏ","ㄴ+ㅏ"]},
+  {"word":"아버지","romaja":"abeoji","meaning_en":"father","blocks":["ㅇ+ㅏ","ㅂ+ㅓ","ㅈ+ㅣ"]},
+  {"word":"어머니","romaja":"eomeoni","meaning_en":"mother","blocks":["ㅇ+ㅓ","ㅁ+ㅓ","ㄴ+ㅣ"]},
+  {"word":"아이","romaja":"ai","meaning_en":"child","blocks":["ㅇ+ㅏ","ㅇ+ㅣ"]},
+  {"word":"오이","romaja":"oi","meaning_en":"cucumber","blocks":["ㅇ+ㅗ","ㅇ+ㅣ"]},
+  {"word":"호수","romaja":"hosu","meaning_en":"lake","blocks":["ㅎ+ㅗ","ㅅ+ㅜ"]},
+  {"word":"지도","romaja":"jido","meaning_en":"map","blocks":["ㅈ+ㅣ","ㄷ+ㅗ"]}
+]

@@ -1,0 +1,105 @@
+{
+  "title_ko": "숫자 표현과 날짜, 시간",
+  "title_en": "Numbers, Dates & Time",
+  "scenes": [
+    {
+      "seq": 1,
+      "duration_sec": 18,
+      "cap_ko": "안녕하세요!",
+      "cap_en": "Hello!",
+      "script_kr": "안녕하세요! 오늘은 한국어의 숫자와 날짜, 시간 말하기를 배워요. 숫자만 알아도 생활이 훨씬 편해진답니다. 시작해요!",
+      "script_en": "Hello! Today we'll learn Korean numbers, dates, and telling time. Just knowing numbers makes daily life much easier. Let's start!",
+      "visual_note": "졸라맨 인사 + '숫자', '날짜', '시간'."
+    },
+    {
+      "seq": 2,
+      "duration_sec": 21,
+      "cap_ko": "숫자가 두 가지!",
+      "cap_en": "Two number systems!",
+      "script_kr": "한국어 숫자는 두 가지예요. 순우리말 '고유어 숫자'와 한자에서 온 '한자어 숫자'. 쓰임이 다르니 둘 다 배워 둬요.",
+      "script_en": "Korean has two number systems: native Korean numbers and Sino-Korean numbers from Chinese characters. They're used differently, so learn both.",
+      "visual_note": "고유어 / 한자어 두 갈래."
+    },
+    {
+      "seq": 3,
+      "duration_sec": 22,
+      "cap_ko": "고유어 1~5",
+      "cap_en": "Native 1-5",
+      "script_kr": "먼저 고유어 숫자예요. '하나', '둘', '셋', '넷', '다섯'. 천천히 따라 해 보세요.",
+      "script_en": "First, native numbers: '하나' (one), '둘' (two), '셋' (three), '넷' (four), '다섯' (five). Repeat slowly.",
+      "visual_note": "하나 둘 셋 넷 다섯."
+    },
+    {
+      "seq": 4,
+      "duration_sec": 22,
+      "cap_ko": "고유어 6~10",
+      "cap_en": "Native 6-10",
+      "script_kr": "이어서 '여섯', '일곱', '여덟', '아홉', '열'. 고유어 숫자는 개수나 나이를 셀 때 써요.",
+      "script_en": "Next: '여섯' (six), '일곱' (seven), '여덟' (eight), '아홉' (nine), '열' (ten). Native numbers count things and age.",
+      "visual_note": "여섯 일곱 여덟 아홉 열."
+    },
+    {
+      "seq": 5,
+      "duration_sec": 22,
+      "cap_ko": "한자어 1~5",
+      "cap_en": "Sino 1-5",
+      "script_kr": "이번엔 한자어 숫자예요. '일', '이', '삼', '사', '오'. 짧고 또렷하게 발음해요.",
+      "script_en": "Now Sino-Korean numbers: '일' (1), '이' (2), '삼' (3), '사' (4), '오' (5). Pronounce them short and clear.",
+      "visual_note": "일 이 삼 사 오."
+    },
+    {
+      "seq": 6,
+      "duration_sec": 22,
+      "cap_ko": "한자어 6~10",
+      "cap_en": "Sino 6-10",
+      "script_kr": "그리고 '육', '칠', '팔', '구', '십'. 한자어 숫자는 날짜, 가격, 전화번호에 써요.",
+      "script_en": "And '육' (6), '칠' (7), '팔' (8), '구' (9), '십' (10). Sino numbers are used for dates, prices, and phone numbers.",
+      "visual_note": "육 칠 팔 구 십."
+    },
+    {
+      "seq": 7,
+      "duration_sec": 22,
+      "cap_ko": "언제 어떤 숫자?",
+      "cap_en": "Which when?",
+      "script_kr": "고유어는 개수와 나이, 한자어는 날짜와 분, 번호에 써요. 사과 세 개, 그리고 삼 월처럼 구분해 보세요.",
+      "script_en": "Use native numbers for counts and age, Sino numbers for dates, minutes, and numbers. Like 사과 세 개 (three apples) versus 삼 월 (March).",
+      "visual_note": "고유어=개수/나이, 한자어=날짜/분."
+    },
+    {
+      "seq": 8,
+      "duration_sec": 22,
+      "cap_ko": "시간 말하기",
+      "cap_en": "Telling time",
+      "script_kr": "시간은 섞어 써요. '시'는 고유어, '분'은 한자어! 세 시 삼십 분처럼 말한답니다. 재미있죠?",
+      "script_en": "Time mixes both! The hour '시' uses native numbers, the minute '분' uses Sino numbers: 세 시 삼십 분 (3:30). Fun, right?",
+      "visual_note": "세 시(고유어) 삼십 분(한자어)."
+    },
+    {
+      "seq": 9,
+      "duration_sec": 22,
+      "cap_ko": "요일",
+      "cap_en": "Days of the week",
+      "script_kr": "요일도 배워요. '월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'. 일곱 개를 노래처럼 외워 보세요.",
+      "script_en": "Let's learn the days: '월요일' (Mon), '화요일' (Tue), '수요일' (Wed), '목요일' (Thu), '금요일' (Fri), '토요일' (Sat), '일요일' (Sun). Memorize all seven like a song.",
+      "visual_note": "월 화 수 목 금 토 일."
+    },
+    {
+      "seq": 10,
+      "duration_sec": 21,
+      "cap_ko": "정리해요",
+      "cap_en": "Recap",
+      "script_kr": "정리하면, 숫자는 고유어와 한자어 두 가지! 개수는 고유어, 날짜와 분은 한자어, 시간은 둘을 섞어요. 매일 숫자로 연습해 보세요.",
+      "script_en": "In sum, two number systems! Native for counts, Sino for dates and minutes, and time mixes both. Practice with numbers every day.",
+      "visual_note": "숫자 두 갈래 요약."
+    },
+    {
+      "seq": 11,
+      "duration_sec": 18,
+      "cap_ko": "다음 시간에 만나요!",
+      "cap_en": "See you next time!",
+      "script_kr": "오늘은 숫자와 날짜, 시간을 배웠어요. 오늘 날짜와 시간을 한국어로 말해 보세요. 다음 시간에 또 만나요!",
+      "script_en": "Today we learned numbers, dates, and time. Try saying today's date and time in Korean. See you next time!",
+      "visual_note": "졸라맨 손 흔들기 + 요약."
+    }
+  ]
+}

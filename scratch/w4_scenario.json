@@ -1,0 +1,123 @@
+{
+  "title_ko": "받침과 대표 7음",
+  "title_en": "Batchim & the 7 Representative Sounds",
+  "scenes": [
+    {
+      "seq": 1,
+      "duration_sec": 18,
+      "cap_ko": "안녕하세요!",
+      "cap_en": "Hello!",
+      "script_kr": "안녕하세요! 오늘은 한글의 '받침'과 '대표 7음'을 배워볼 거예요. 글자 아래를 받쳐 주는 소리, 함께 알아볼까요?",
+      "script_en": "Hello! Today we'll learn Korean 'batchim', the final consonants, and the '7 representative sounds'. Let's explore the sound that supports each syllable.",
+      "visual_note": "졸라걸이 인사하고 '받침', '대표 7음' 글자가 차분히 나타남."
+    },
+    {
+      "seq": 2,
+      "duration_sec": 22,
+      "cap_ko": "받침이란?",
+      "cap_en": "What is Batchim?",
+      "script_kr": "한글 글자는 첫소리, 가운뎃소리, 그리고 '받침'으로 쌓여요. 받침은 글자의 맨 아래에 오는 소리로, 초성과 중성을 든든하게 받쳐 준답니다.",
+      "script_en": "A Korean syllable stacks a first sound, a middle sound, and a 'batchim'. The batchim is the final consonant at the bottom, holding up the syllable.",
+      "visual_note": "초성/중성/받침 3층 구조 다이어그램."
+    },
+    {
+      "seq": 3,
+      "duration_sec": 20,
+      "cap_ko": "받침 예시: 강",
+      "cap_en": "Example: 강",
+      "script_kr": "예를 들어 '강'은 'ㄱ', 'ㅏ', 그리고 받침 'ㅇ'으로 이루어져요. 세 칸이 위아래로 쌓여 한 글자가 되죠.",
+      "script_en": "For example, '강' (gang) is built from 'ㄱ', 'ㅏ', and the batchim 'ㅇ'. Three blocks stack top to bottom into one syllable.",
+      "visual_note": "'강' = ㄱ+ㅏ+ㅇ 3층 조립."
+    },
+    {
+      "seq": 4,
+      "duration_sec": 21,
+      "cap_ko": "대표 7음",
+      "cap_en": "The 7 Sounds",
+      "script_kr": "그런데 받침으로 나는 소리는 단 일곱 개뿐이에요. 바로 'ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅇ'. 이것을 '대표 7음'이라고 불러요.",
+      "script_en": "But final sounds come in only seven: 'ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅇ'. We call these the '7 representative sounds'.",
+      "visual_note": "ㄱㄴㄷㄹㅁㅂㅇ 일곱 글자가 한 줄로 나타남."
+    },
+    {
+      "seq": 5,
+      "duration_sec": 18,
+      "cap_ko": "ㄱ 받침",
+      "cap_en": "ㄱ batchim",
+      "script_kr": "첫 번째는 'ㄱ' 받침이에요. '책'처럼 입 안쪽을 막아 소리를 닫아 줍니다.",
+      "script_en": "First is the 'ㄱ' batchim. As in '책' (chaek, book), close the back of your mouth to stop the sound.",
+      "visual_note": "'ㄱ'과 '책'."
+    },
+    {
+      "seq": 6,
+      "duration_sec": 22,
+      "cap_ko": "ㄴ · ㄷ 받침",
+      "cap_en": "ㄴ · ㄷ batchim",
+      "script_kr": "'ㄴ' 받침은 '산'처럼 혀끝을 윗잇몸에 대요. 'ㄷ' 받침은 '옷'처럼 혀끝으로 소리를 탁 막죠.",
+      "script_en": "The 'ㄴ' batchim, as in '산' (san, mountain), touches the tongue to the gum ridge. The 'ㄷ' batchim, as in '옷' (ot, clothes), stops the sound with the tongue tip.",
+      "visual_note": "'ㄴ'-'산', 'ㄷ'-'옷'."
+    },
+    {
+      "seq": 7,
+      "duration_sec": 22,
+      "cap_ko": "ㄹ · ㅁ 받침",
+      "cap_en": "ㄹ · ㅁ batchim",
+      "script_kr": "'ㄹ' 받침은 '물'처럼 혀를 살짝 말아 올려요. 'ㅁ' 받침은 '곰'처럼 두 입술을 가만히 다물어요.",
+      "script_en": "The 'ㄹ' batchim, as in '물' (mul, water), curls the tongue up slightly. The 'ㅁ' batchim, as in '곰' (gom, bear), gently closes both lips.",
+      "visual_note": "'ㄹ'-'물', 'ㅁ'-'곰'."
+    },
+    {
+      "seq": 8,
+      "duration_sec": 22,
+      "cap_ko": "ㅂ · ㅇ 받침",
+      "cap_en": "ㅂ · ㅇ batchim",
+      "script_kr": "'ㅂ' 받침은 '밥'처럼 입술을 꼭 다물어 멈춰요. 'ㅇ' 받침은 '강'처럼 콧속을 울리는 소리예요.",
+      "script_en": "The 'ㅂ' batchim, as in '밥' (bap, rice), presses the lips shut. The 'ㅇ' batchim, as in '강' (gang, river), hums through the nose.",
+      "visual_note": "'ㅂ'-'밥', 'ㅇ'-'강'."
+    },
+    {
+      "seq": 9,
+      "duration_sec": 23,
+      "cap_ko": "받침이 변해요: ㄱ 소리",
+      "cap_en": "Batchim shifts: ㄱ",
+      "script_kr": "재미있게도 다른 받침들도 이 일곱 소리로 바뀌어요. 'ㅋ'이나 'ㄲ' 받침은 'ㄱ' 소리가 돼요. 그래서 '부엌'은 부억으로 발음하죠.",
+      "script_en": "Interestingly, other batchim change into these seven too. A 'ㅋ' or 'ㄲ' batchim becomes a 'ㄱ' sound, so '부엌' (kitchen) is pronounced like 부억.",
+      "visual_note": "ㅋ, ㄲ → ㄱ, '부엌'→[부억]."
+    },
+    {
+      "seq": 10,
+      "duration_sec": 24,
+      "cap_ko": "받침이 변해요: ㄷ 소리",
+      "cap_en": "Batchim shifts: ㄷ",
+      "script_kr": "'ㅅ', 'ㅈ', 'ㅊ', 'ㅌ', 'ㅎ' 받침은 모두 'ㄷ' 소리로 바뀌어요. 그래서 '꽃'은 꼳, '옷'은 옫으로 들린답니다.",
+      "script_en": "The 'ㅅ', 'ㅈ', 'ㅊ', 'ㅌ', 'ㅎ' batchim all turn into a 'ㄷ' sound, so '꽃' (flower) sounds like 꼳, and '옷' sounds like 옫.",
+      "visual_note": "ㅅㅈㅊㅌㅎ → ㄷ, '꽃'→[꼳]."
+    },
+    {
+      "seq": 11,
+      "duration_sec": 18,
+      "cap_ko": "받침이 변해요: ㅂ 소리",
+      "cap_en": "Batchim shifts: ㅂ",
+      "script_kr": "'ㅍ' 받침은 'ㅂ' 소리로 바뀌어요. 그래서 '앞'은 압으로 발음한답니다.",
+      "script_en": "The 'ㅍ' batchim becomes a 'ㅂ' sound, so '앞' (front) is pronounced like 압.",
+      "visual_note": "ㅍ → ㅂ, '앞'→[압]."
+    },
+    {
+      "seq": 12,
+      "duration_sec": 22,
+      "cap_ko": "대표 7음 정리",
+      "cap_en": "The 7 Sounds, recap",
+      "script_kr": "정리하면, 모든 받침은 'ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅇ' 일곱 소리 중 하나로 발음돼요. 이 일곱 개만 기억하면 된답니다.",
+      "script_en": "In short, every batchim is pronounced as one of seven sounds: 'ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅇ'. Just remember these seven.",
+      "visual_note": "ㄱㄴㄷㄹㅁㅂㅇ 7음 정리판."
+    },
+    {
+      "seq": 13,
+      "duration_sec": 17,
+      "cap_ko": "다음 시간에 만나요!",
+      "cap_en": "See you next time!",
+      "script_kr": "오늘은 받침과 대표 7음을 배웠어요. 매일 한 단어씩 받침 소리를 연습해 보세요. 다음 시간에 또 만나요!",
+      "script_en": "Today we learned batchim and the 7 representative sounds. Practice one word's final sound each day. See you next time!",
+      "visual_note": "졸라걸이 손 흔들고 7음 요약."
+    }
+  ]
+}

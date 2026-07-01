@@ -1,0 +1,26 @@
+{
+  "video_path": "scratch/Learn How to Think In English ( Stop Translating in Your Head ).mp4",
+  "resolution": {
+    "width": 1280,
+    "height": 720
+  },
+  "fps": 30.0,
+  "total_duration": 390.07,
+  "scene_count": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "start": 0.0,
+      "end": 390.07,
+      "duration": 390.07
+    }
+  ],
+  "subtitle_style": {
+    "font_size": 26,
+    "color": "white",
+    "stroke_color": "black",
+    "stroke_width": 2,
+    "margin_bottom": 230,
+    "max_chars_per_line": 35
+  }
+}

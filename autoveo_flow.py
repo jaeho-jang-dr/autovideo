@@ -871,10 +871,21 @@ def make_video(page, out_path, motion_prompt, n, budget_s=80):
             page.wait_for_timeout(3000)
             continue
             
-        # 1. 80초 동안 무조건 완성 대기 (디스크 낭비 방지)
-        log("동영상 생성 중... (80초 완성 대기)")
+        # 1. 80초 기본 대기 후, 완성(VIDEO_DONE_JS)될 때까지 폴링(최대 220초).
+        #    영상이 90초+ 걸리는 경우 대응. 완성 감지 전엔 클릭하지 않음(조기 클릭 방지).
+        log("동영상 생성 중... (80초 기본 대기 → 완성까지 폴링, 최대 220초)")
         page.wait_for_timeout(80000)
-        
+        waited = 80000
+        while waited < 220000:
+            try:
+                if page.evaluate(VIDEO_DONE_JS):
+                    log(f"  완성 비디오 감지 ({waited//1000}s)")
+                    break
+            except Exception:
+                pass
+            page.wait_for_timeout(10000)
+            waited += 10000
+
         # 2. 가장 왼쪽 타일(비디오) 클릭하여 라이트박스 띄우기
         posters = page.evaluate(POSTERS_JS)
         if not posters or len(posters) < 1:
@@ -1237,8 +1248,7 @@ def main():
                     PROFILE, channel="chrome", headless=False, locale="ko-KR", no_viewport=True,
                     accept_downloads=True, downloads_path=DL_DIR,
                     ignore_default_args=["--enable-automation"],
-                    args=["--start-maximized", "--disable-blink-features=AutomationControlled",
-                          "--no-first-run", "--disable-session-crashed-bubble", "--lang=ko-KR"])
+                    args=["--start-maximized", "--no-first-run", "--disable-session-crashed-bubble", "--lang=ko-KR", "--disable-gpu"])
                 pg = c.pages[0] if c.pages else c.new_page()
                 return BrowserWrapper(c, False), pg
 

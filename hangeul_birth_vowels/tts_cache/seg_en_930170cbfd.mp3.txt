@@ -1,0 +1,1 @@
+Time mixes both! The hour '시' uses native numbers, the minute

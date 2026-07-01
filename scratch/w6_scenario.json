@@ -1,0 +1,105 @@
+{
+  "title_ko": "자연스러운 연음과 음운 변동",
+  "title_en": "Liaison & Sound Rules",
+  "scenes": [
+    {
+      "seq": 1,
+      "duration_sec": 18,
+      "cap_ko": "안녕하세요!",
+      "cap_en": "Hello!",
+      "script_kr": "안녕하세요! 오늘은 글자가 자연스럽게 이어지는 '연음'과 소리가 바뀌는 '음운 변동'을 배워요. 함께 시작해요!",
+      "script_en": "Hello! Today we'll learn 'liaison', where sounds link smoothly, and the sound changes behind it. Let's begin!",
+      "visual_note": "졸라맨 인사 + '연음', '음운 변동' 글자."
+    },
+    {
+      "seq": 2,
+      "duration_sec": 23,
+      "cap_ko": "연음이란?",
+      "cap_en": "What is liaison?",
+      "script_kr": "받침 뒤에 'ㅇ'으로 시작하는 글자가 오면, 받침이 그 'ㅇ' 자리로 넘어가 소리 나요. 이렇게 자연스럽게 이어지는 것을 '연음'이라고 해요.",
+      "script_en": "When a syllable with a batchim is followed by one starting with 'ㅇ', the batchim slides over into that spot. This smooth linking is called liaison.",
+      "visual_note": "받침이 다음 ㅇ 자리로 넘어가는 개념."
+    },
+    {
+      "seq": 3,
+      "duration_sec": 21,
+      "cap_ko": "음악 → 으막",
+      "cap_en": "음악 → 으막",
+      "script_kr": "예를 들어 '음악'은 받침 'ㄱ'이 뒤로 넘어가 '으막'처럼 소리 나요. 쓸 때는 '음악', 읽을 때는 '으막'이죠.",
+      "script_en": "For example, '음악' (music) links its 'ㄱ' batchim over and sounds like '으막'. You write 음악, but you read 으막.",
+      "visual_note": "음악 → 으막 화살표."
+    },
+    {
+      "seq": 4,
+      "duration_sec": 21,
+      "cap_ko": "옷이 → 오시",
+      "cap_en": "옷이 → 오시",
+      "script_kr": "'옷이'도 받침 'ㅅ'이 넘어가 '오시'가 돼요. 받침이 다음 칸으로 미끄러지듯 넘어가는 거예요.",
+      "script_en": "'옷이' (the clothes) links its 'ㅅ' batchim over to become '오시'. The batchim glides into the next slot.",
+      "visual_note": "옷이 → 오시 화살표."
+    },
+    {
+      "seq": 5,
+      "duration_sec": 20,
+      "cap_ko": "꽃이 → 꼬치",
+      "cap_en": "꽃이 → 꼬치",
+      "script_kr": "'꽃이'는 받침 'ㅊ'이 넘어가 '꼬치'가 돼요. 받침 소리가 그대로 다음 글자로 이어지죠.",
+      "script_en": "'꽃이' (the flower) links its 'ㅊ' batchim over to become '꼬치'. The batchim sound carries into the next syllable.",
+      "visual_note": "꽃이 → 꼬치 화살표."
+    },
+    {
+      "seq": 6,
+      "duration_sec": 22,
+      "cap_ko": "연습: 책을, 한국어",
+      "cap_en": "Practice: 책을, 한국어",
+      "script_kr": "단어로 연습해요. '책을'은 '채글', '한국어'는 '한구거'로 읽어요. 받침이 자연스럽게 넘어가죠?",
+      "script_en": "Practice with words: '책을' reads as '채글', and '한국어' reads as '한구거'. Hear the batchim glide over?",
+      "visual_note": "책을→채글, 한국어→한구거."
+    },
+    {
+      "seq": 7,
+      "duration_sec": 21,
+      "cap_ko": "ㅎ은 약해져요",
+      "cap_en": "ㅎ weakens",
+      "script_kr": "받침 'ㅎ'은 모음 앞에서 약해져 거의 사라져요. 그래서 '좋아요'는 '조아요'처럼 부드럽게 소리 나요.",
+      "script_en": "A 'ㅎ' batchim weakens and almost disappears before a vowel. So '좋아요' sounds soft, like '조아요'.",
+      "visual_note": "좋아요 → 조아요."
+    },
+    {
+      "seq": 8,
+      "duration_sec": 22,
+      "cap_ko": "연습: 웃어요, 있어요",
+      "cap_en": "Practice: 웃어요, 있어요",
+      "script_kr": "'웃어요'는 '우서요', '있어요'는 '이써요'로 소리 나요. 받침이 뒤로 넘어가 이어지는 연음이에요.",
+      "script_en": "'웃어요' reads as '우서요', and '있어요' reads as '이써요'. The batchim links over — that's liaison.",
+      "visual_note": "웃어요→우서요, 있어요→이써요."
+    },
+    {
+      "seq": 9,
+      "duration_sec": 23,
+      "cap_ko": "표기형 vs 발음형",
+      "cap_en": "Spelling vs Sound",
+      "script_kr": "쓸 때는 받침을 그대로 적지만, 읽을 때는 자연스럽게 넘겨 읽어요. 표기형과 발음형이 다른 거죠. 이것만 알면 한국어가 훨씬 자연스러워져요.",
+      "script_en": "You write the batchim as it is, but you read it by gliding it over. Spelling and pronunciation differ — knowing this makes your Korean much more natural.",
+      "visual_note": "표기형/발음형 대비."
+    },
+    {
+      "seq": 10,
+      "duration_sec": 21,
+      "cap_ko": "정리해요",
+      "cap_en": "Recap",
+      "script_kr": "정리하면, 받침이 'ㅇ'을 만나면 그 자리로 넘어가 연음이 돼요. '음악'은 '으막', '옷이'는 '오시'처럼요. 흐르듯 이어 읽어 보세요.",
+      "script_en": "In sum, when a batchim meets 'ㅇ', it slides over into liaison. '음악' to '으막', '옷이' to '오시'. Read it flowing smoothly.",
+      "visual_note": "연음 규칙 요약."
+    },
+    {
+      "seq": 11,
+      "duration_sec": 17,
+      "cap_ko": "다음 시간에 만나요!",
+      "cap_en": "See you next time!",
+      "script_kr": "오늘은 연음과 음운 변동을 배웠어요. 좋아하는 노래 가사에서 연음을 찾아보세요. 다음 시간에 또 만나요!",
+      "script_en": "Today we learned liaison and sound rules. Look for liaison in your favorite song lyrics. See you next time!",
+      "visual_note": "졸라맨 손 흔들기 + 요약."
+    }
+  ]
+}

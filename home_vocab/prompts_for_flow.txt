@@ -1,0 +1,56 @@
+# [Character Poses - Jieun (25 Poses)]
+character_waking_up: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform waking up and stretching in bed, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text, no signatures
+character_packing: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform placing books into a backpack on a study desk, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_washing: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair washing face at a bathroom sink, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_eating: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform eating breakfast at a dining table, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_walking: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform walking out of a door towards a street, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_sleeping: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair lying in bed sleeping, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_brushing_teeth: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair brushing teeth with a toothbrush, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_studying: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform sitting at a desk studying and writing, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_reading: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair holding and reading a book, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_sitting: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform sitting on a chair resting, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_running: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform running in a hurry, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_pointing: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair pointing forward with her hand, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_cheering: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform cheering with arms raised in joy, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_bowing: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform bowing politely, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_thinking: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair thinking with a hand on her chin, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_raising_hand: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform raising her hand to speak, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_drawing: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair drawing on a sketchbook, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_drinking: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair holding a cup and drinking water, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_cleaning: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair holding a broom sweeping the floor, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_opening_door: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair holding a door handle to open it, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_shoes: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair bending down to put on sneakers, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_waiting: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform waiting at a bus stop, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_waving: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform waving her hand to say goodbye, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_clapping: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair clapping hands happily, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+character_jumping: Minimalist 2D line art of a simple Korean schoolgirl stickman character named Jieun with long hair and a school uniform jumping in the air in excitement, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+
+# [Scene 1 - Bedroom Objects]
+bed: Minimalist 2D line art of a simple bed with a mattress and legs, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+blanket: Minimalist 2D line art of a folded warm blanket, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+pillow: Minimalist 2D line art of a soft bed pillow, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+clock: Minimalist 2D line art of a classic twin-bell alarm clock, vibrant yellow colored highlights on bells, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+
+# [Scene 2 - Room/Desk Objects]
+backpack: Minimalist 2D line art of a simple Korean student backpack, vibrant blue colored highlights on pockets, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+book: Minimalist 2D line art of a closed thick textbook, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+notebook: Minimalist 2D line art of a simple open spiral notebook, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+pencil: Minimalist 2D line art of a wooden pencil, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+
+# [Scene 3 - Bathroom Objects]
+mirror: Minimalist 2D line art of a simple bathroom wall mirror, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+toothbrush: Minimalist 2D line art of a plastic toothbrush with bristles, vibrant green colored highlights on handle, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+towel: Minimalist 2D line art of a folded bathroom towel hanging, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+soap: Minimalist 2D line art of a simple bar of soap on a dish, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+
+# [Scene 4 - Dining/Kitchen Objects]
+table: Minimalist 2D line art of a simple four-legged wooden dining table, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+spoon: Minimalist 2D line art of a South Korean stainless steel spoon, vibrant metallic silver gray colored highlights, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+chopsticks: Minimalist 2D line art of a pair of flat Korean metal chopsticks, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+cup: Minimalist 2D line art of a simple water cup, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+
+# [Scene 5 - School Road Objects]
+shoes: Minimalist 2D line art of a pair of simple school sneakers, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+door: Minimalist 2D line art of a typical South Korean apartment metal front door with a digital keypad lock, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+bus_stop: Minimalist 2D line art of a South Korean city bus stop with a digital bus arrival screen, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text
+bus: Minimalist 2D line art of a South Korean green city bus, vibrant green colored highlights, thick black outlines, clean whiteboard marker drawing style, on a solid flat light beige background (#F5F5F0), no text

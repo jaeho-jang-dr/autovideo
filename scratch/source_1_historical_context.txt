@@ -1,0 +1,14 @@
+# Source 1: Historical Context & King Sejong's Philosophy of Hunminjeongeum
+
+Prior to the creation of the native Korean script, Hangeul, the Korean language was written using Classical Chinese characters (known as Hanja) adapted to the Korean phonetic structure. Because Hanja consisted of tens of thousands of complex characters, mastering it required years of dedicated study. As a result, literacy was restricted exclusively to the ruling class (yangban), leaving the vast majority of the population illiterate. Commoners were unable to read laws, sign contracts, record agricultural data, or express grievances in writing, leading to widespread administrative and social injustice.
+
+Recognizing this critical social divide, King Sejong the Great (reigned 1418–1450) initiated the creation of an indigenous script, Hunminjeongeum ("The Correct Sounds for the Instruction of the People"), completed in 1443 and promulgated in 1446. 
+
+Sejong's motivation was deeply rooted in humanism, neo-Confucian benevolence, and populist governance. He stated in the preface of the Hunminjeongeum:
+"Because the speech of this country is different from that of China, it does not match Chinese characters. Therefore, even if the ignorant people want to say something, many of them cannot express their feelings in writing. Feeling pity for this, I have newly created twenty-eight letters, wishing that everyone can learn them easily and use them conveniently every day."
+
+King Sejong's design criteria were simple yet profound:
+1. The script must represent the actual phonetics of the Korean language.
+2. The alphabet must be easy to learn; a wise person should be able to master it in a single morning, and even a less clever person within ten days.
+3. The letters must possess absolute regularity, reflecting the natural laws of the universe.
+This humanistic design successfully democratized literacy in Korea, creating the foundation for a highly literate modern society.

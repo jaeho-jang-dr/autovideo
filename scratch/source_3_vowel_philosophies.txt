@@ -1,0 +1,22 @@
+# Source 3: The Philosophy of Vowel Creation (Cheon-Ji-In & Vowel Harmony)
+
+The vowel system of Hangeul is structurally separate from the consonants and is designed around Neo-Confucian cosmology, representing the three prime components of the universe: Heaven, Earth, and Human. This system is known as **천지인 (Cheon-Ji-In)**.
+
+1.  **ㆍ (Cheon - Heaven / Sky):**
+    *   Visual Shape: A round dot (historically written as a dot, now represented in modern spelling as a short stroke).
+    *   Philosophical Meaning: Represents the roundness of Heaven and the active force of the Sun. It is the active, Yang energy.
+2.  **ㅡ (Ji - Earth / Land):**
+    *   Visual Shape: A flat, horizontal line.
+    *   Philosophical Meaning: Represents the flatness of the Earth. It is the passive, Yin energy.
+3.  **ㅣ (In - Human):**
+    *   Visual Shape: An upright, vertical line.
+    *   Philosophical Meaning: Represents a human standing upright between Heaven and Earth, acting as the mediator. It is the neutral force.
+
+### The Combination Principle (Synthesis)
+By combining these three base letters, King Sejong created the basic vowels:
+*   **ㅏ (a):** The vertical line (Human) combined with the dot (Heaven) placed on the **outside** (right). It represents the sun rising in the east (Yang/Bright vowel).
+*   **ㅓ (eo):** The vertical line (Human) combined with the dot (Heaven) placed on the **inside** (left). It represents the sun setting in the west (Yin/Dark vowel).
+*   **ㅗ (o):** The horizontal line (Earth) combined with the dot (Heaven) placed **above** it. It represents the sun rising above the ground (Yang/Bright vowel).
+*   **ㅜ (u):** The horizontal line (Earth) combined with the dot (Heaven) placed **below** it. It represents the sun sinking below the ground (Yin/Dark vowel).
+
+This visual coding establishes **Vowel Harmony (모음조화)**. Vowels are categorized as "bright" (ㅏ, ㅗ) or "dark" (ㅓ, ㅜ), which directly affects how suffix particles attach in Korean grammar. This philosophical alignment makes Hangeul unique, as its vowels reflect a systematic representation of natural harmony and cosmic order.

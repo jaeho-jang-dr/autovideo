@@ -1,0 +1,581 @@
+[Scene 0]
+text: 오늘 정주행으로 몰아보기 어때요?
+text_en: Today, how about binge-watching?
+image: Whiteboard marker doodle of a cozy couch and TV with bold whiteboard hand-written text "Binge-watching Effects!" and "정주행 몰아보기" written on the board, thick black outlines, clean white background, vibrant blue and yellow coloring. No watermark, no signatures.
+motion: :: slow motion yellow highlights trace the title letters slowly, camera rotating slowly
+
+[Scene 1]
+text: 침대에 누워 드라마를 몰아보는 일은 이제 흔한 일상이 되었습니다.
+text_en: Lying in bed and binge-watching TV dramas has become a common daily habit for many of us.
+image: Whiteboard marker doodle of a person lying in bed holding a smartphone, thick black ink outlines, clean white background, vibrant red and blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the black marker lines draw the outline of the person and bed, camera zooming in slowly
+
+[Scene 2]
+text: "한 화만 더 봐야지" 하다가 결국 밤을 새워본 적이 있으신가요?
+text_en: Have you ever said just one more episode and then ended up staying awake all night?
+image: Whiteboard marker doodle of a yawning face looking at a shining screen, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow marker color fills the glowing screen light, camera panning slowly right
+
+[Scene 3]
+text: 넷플릭스의 자동 재생 버튼은 우리의 뇌를 강력하게 유혹합니다.
+text_en: The auto-play button on streaming platforms acts as a powerful temptation for our human brain.
+image: Whiteboard marker doodle of a finger pressing a circular red play button, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red play button glows with circular shockwave lines, camera zooming out
+
+[Scene 4]
+text: 전 세계 성인의 약 70퍼센트 이상이 몰아보기를 즐긴다고 답했습니다.
+text_en: Studies show that over seventy percent of adults worldwide regularly enjoy binge-watching their favorite shows.
+image: Whiteboard marker doodle of a global map with many tiny screen symbols, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion green marker highlights spread across the continent outlines, camera tilting up
+
+[Scene 5]
+text: 의학적인 관점에서 몰아보기는 우리 몸에 어떤 영향을 미칠까요?
+text_en: From a medical perspective, how does this habit physically impact our entire body?
+image: Whiteboard marker doodle of Dr. Jay in a white coat holding a pointer stick, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the friendly doctor points his pointer stick to a skeletal poster, camera rotating slowly
+
+[Scene 6]
+text: 오늘 우리는 몰아보기가 몸과 마음에 미치는 영향을 파헤쳐 보겠습니다.
+text_en: Today, we will dissect the scientific effects of binge-watching on both your body and mind.
+image: Whiteboard marker doodle of a human silhouette showing a brain and spine, thick black ink outlines, clean white background, vibrant red and blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red brain and blue spine icons light up sequentially, camera zooming in
+
+[Scene 7]
+text: 편안해 보이는 소파는 사실 우리 뼈와 근육의 적이 될 수 있습니다.
+text_en: That comfortable-looking sofa can actually turn out to be a hidden enemy for your spine.
+image: Whiteboard marker doodle of an old armchair with sharp teeth-like patterns, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the chair outline is sketched quickly by a marker, camera rotating slowly
+
+[Scene 8]
+text: 어두운 방에서 번쩍이는 화면은 눈의 피로를 극대화하는 주범입니다.
+text_en: Watching flashing screens in a dark room is the main culprit for extreme eye fatigue.
+image: Whiteboard marker doodle of a giant glowing eyeball looking at screen rays, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow light rays emit from the screen to the eyeball, camera zooming out
+
+[Scene 9]
+text: 우리의 뇌 속에서는 엄청난 화학물질이 쉴 새 없이 쏟아지고 있죠.
+text_en: Inside our brain, an enormous cascade of chemicals is being released without a single pause.
+image: Whiteboard marker doodle of a brain profile releasing tiny round bubbles, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion blue bubbles drift downwards from the brain region, camera panning down
+
+[Scene 10]
+text: 몰아보기는 정말 우리 건강을 심각하게 망치는 주범일까요?
+text_en: Is binge-watching truly a serious danger that ruins our overall physical and mental health?
+image: Whiteboard marker doodle of a skull mark overlaying a television screen, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red skull mark expands and fades on the screen, camera zooming in
+
+[Scene 11]
+text: 의학적 팩트와 친근한 일러스트로 이 현상을 낱낱이 해부해 봅니다.
+text_en: Let us dissect this modern habit with medical facts and clear illustrations.
+image: Whiteboard marker doodle of a cartoon drawing hand holding a fountain pen, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the drawing hand sketches a quick spiral line, camera rotating slowly
+
+[Scene 12]
+text: 지금부터 몰아보기가 만드는 신체 변화의 지도를 함께 따라가 보시죠.
+text_en: Now, let us follow the map of biological changes caused by continuous screen viewing.
+image: Whiteboard marker doodle of a road winding through biological organ icons, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion a red pointer moves along the winding marker road, camera panning up
+
+[Scene 13]
+text: 몰아보기를 시작하면 뇌의 보상 회로가 활발하게 작동하기 시작합니다.
+text_en: When you start binge-watching, the reward pathways in your brain immediately light up with activity.
+image: Whiteboard marker doodle of a brain profile with a glowing pathway inside, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow lines trace the neural pathway inside the brain, camera zooming in
+
+[Scene 14]
+text: 쾌락의 호르몬인 '도파민'이 뇌 속에서 홍수처럼 분비되는 것입니다.
+text_en: A pleasure-inducing chemical called dopamine begins to flood your brain like a sudden rushing wave.
+image: Whiteboard marker doodle of water waves rushing out from a brain stem, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion blue waves splash across the white whiteboard surface, camera panning left
+
+[Scene 15]
+text: 다음 이야기에 대한 호기심이 도파민 분비를 끊임없이 촉진하죠.
+text_en: Curiosity about the next episode continuously stimulates this ongoing release of rewarding dopamine signals.
+image: Whiteboard marker doodle of a giant question mark turning into key, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red question mark morphs smoothly into a key shape, camera zooming out
+
+[Scene 16]
+text: 손가락 하나 움직이지 않아도 다음 화면이 나오니 멈출 수 없습니다.
+text_en: Since the next episode plays automatically, your brain experiences instant gratification without any effort.
+image: Whiteboard marker doodle of a hand resting on a table near remote, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion green marker highlights the remote control outline, camera panning right
+
+[Scene 17]
+text: 이러한 신경학적 자극은 가벼운 약물 중독과 매우 유사한 패턴입니다.
+text_en: This neurological cycle is highly similar to the behavioral patterns seen in mild substance addictions.
+image: Whiteboard marker doodle of a molecular structure next to television screen, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red molecule lines light up and pulse slowly, camera rotating slowly
+
+[Scene 18]
+text: 화려한 화면과 입체 음향은 시각과 청각을 강력하게 사로잡습니다.
+text_en: Vibrant visual displays and stereo sound systems strongly capture your sensory attention for hours.
+image: Whiteboard marker doodle of a head surrounded by audio wave curves, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion blue audio waves pulse outward from left and right, camera zooming in
+
+[Scene 19]
+text: 도파민의 홍수 속에서 우리는 시간 감각을 완전히 잃어버리게 됩니다.
+text_en: Under this heavy flood of dopamine, we completely lose track of time and environment.
+image: Whiteboard marker doodle of an hourglass with sand melting into liquid, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow sand flows down and spreads at the bottom, camera panning down
+
+[Scene 20]
+text: 뇌는 더 자극적인 반전을 원하며 계속해서 도파민을 요구합니다.
+text_en: The brain craves more shocking twists and continuously demands higher levels of chemical stimulation.
+image: Whiteboard marker doodle of a brain shape with open mouth eating stars, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the brain outline tilts up to swallow red stars, camera zooming out
+
+[Scene 21]
+text: 하지만 마침내 드라마가 모두 끝나면 도파민 분비는 급격히 멈춥니다.
+text_en: However, when the series finally ends, this dopamine production comes to a sudden halt.
+image: Whiteboard marker doodle of a dripping tap suddenly dry and closed, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion a final blue droplet falls from the tap and disappears, camera panning right
+
+[Scene 22]
+text: 이 순간 밀려오는 깊은 공허함을 '포스트 몰아보기 우울증'이라 부릅니다.
+text_en: The sudden emptiness felt at this point is called post-binge watching depression by psychologists.
+image: Whiteboard marker doodle of a sad face silhouette with a hollow chest, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion a blue cloud pattern fills the hollow chest area, camera zooming in
+
+[Scene 23]
+text: 과도하게 자극받았던 도파민 수용체들이 무뎌진 결과입니다.
+text_en: This down-depression occurs because your overstimulated dopamine receptors become temporarily numbed and unresponsive.
+image: Whiteboard marker doodle of keyhole shapes with flat plug heads, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the flat plug heads slide slowly away from keyholes, camera rotating slowly
+
+[Scene 24]
+text: 즐거웠던 기분은 순식간에 가라앉고 심한 짜증과 피로가 몰려옵니다.
+text_en: The previous excitement quickly vanishes, replaced by sudden irritability, exhaustion, and mental fatigue.
+image: Whiteboard marker doodle of a face with zig-zag stress lines, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion red zig-zag lines flash around the face silhouette, camera zooming out
+
+[Scene 25]
+text: 우리는 이 우울함을 달래려 또 다른 새로운 영상을 찾아 헤맵니다.
+text_en: To escape this negative mood, we immediately start searching for another series to watch.
+image: Whiteboard marker doodle of a hand searching through a list of posters, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion green highlight box shifts from one item to another, camera panning down
+
+[Scene 26]
+text: 뇌를 피로하게 만드는 악순환의 고리가 이렇게 완성되는 것입니다.
+text_en: This creates a vicious cycle that leaves your brain chronically exhausted and chemically unbalanced.
+image: Whiteboard marker doodle of an infinite loop chain with gear teeth, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red loop chain rotates clockwise continuously, camera panning left
+
+[Scene 27]
+text: 과도한 정보 입력은 뇌의 기억과 집중 능력을 떨어뜨리게 됩니다.
+text_en: This constant input of excessive information degrades your brain's capacity for memory and concentration.
+image: Whiteboard marker doodle of a filing cabinet overflowing with loose papers, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion loose papers flutter and fall from the cabinet, camera tilting down
+
+[Scene 28]
+text: 결국 즐거움을 위해 시작한 시청이 정신적 탈진을 부르는 셈이죠.
+text_en: Ultimately, what began as relaxing entertainment turns into a state of severe mental exhaustion.
+image: Whiteboard marker doodle of a battery indicator flashing a red empty bar, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red empty bar flashes slowly inside the battery, camera zooming in
+
+[Scene 29]
+text: 이제 몰아보기 동안 우리 신체 움직임에 어떤 일이 일어나는지 알아보겠습니다.
+text_en: Now, let us examine how our body's physical movements are affected during these sessions.
+image: Whiteboard marker doodle of a skeleton standing next to bone drawings, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the skeleton moves its arm joint up and down, camera panning right
+
+[Scene 30]
+text: 우리가 자리에 앉는 순간, 다리 근육의 전기적 활동은 완전히 멈춥니다.
+text_en: The moment you sit down, the electrical activity in your leg muscles completely shuts off.
+image: Whiteboard marker doodle of leg muscles showing flat signal lines, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the flat red signal lines extend straight across, camera zooming in
+
+[Scene 31]
+text: 근육이 일을 하지 않으니 칼로리 소모량은 분당 1칼로리로 떨어지죠.
+text_en: Because your muscles are completely inactive, calorie burning drops to just one calorie per minute.
+image: Whiteboard marker doodle of a scale balance tipping to the heavier side, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the scale tilts slowly as a yellow weight drops, camera panning down
+
+[Scene 32]
+text: 지방을 분해하는 효소인 '지단백 리파아제'가 급격히 줄어들게 됩니다.
+text_en: The production of lipoprotein lipase, an essential enzyme that breaks down fat, drops dramatically.
+image: Whiteboard marker doodle of scissors breaking apart near fat molecules, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the green scissors freeze and crack in half, camera rotating slowly
+
+[Scene 33]
+text: 이로 인해 혈액 속의 유해한 지방 수치와 체중이 증가하게 됩니다.
+text_en: Consequently, levels of harmful fats in your blood rise, causing rapid weight gain.
+image: Whiteboard marker doodle of a blood vessel containing yellow fat blobs, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow fat blobs float slowly along the vessel channel, camera zooming out
+
+[Scene 34]
+text: 엉덩이와 허벅지 뒷부분의 혈관들이 몸무게에 짓눌려 수축합니다.
+text_en: The blood vessels in your buttocks and back thighs are compressed under your weight.
+image: Whiteboard marker doodle of a seated figure with arrows pressing thighs down, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion red arrows press down onto the seat surface, camera panning left
+
+[Scene 35]
+text: 혈액 순환이 느려지면서 심장으로 돌아가는 혈액의 힘이 약해집니다.
+text_en: As blood circulation slows down, the returning pressure of blood to your heart weakens.
+image: Whiteboard marker doodle of a pump trying to push thick blue fluid, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the pump handle moves up and down weakly, camera zooming in
+
+[Scene 36]
+text: 다리에 피가 고이면서 발과 발목이 붓는 현상이 발생하게 되죠.
+text_en: Blood pools in your lower limbs, which often causes your feet and ankles to swell.
+image: Whiteboard marker doodle of swollen feet with dotted outline expansion, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the blue shaded feet expand outwards beyond outlines, camera panning down
+
+[Scene 37]
+text: 장시간 움직이지 않으면 다리 정맥에 피떡인 '혈전'이 생길 수 있습니다.
+text_en: Sitting motionless for hours can cause dangerous blood clots to form in your veins.
+image: Whiteboard marker doodle of a vein tube blocked by red cluster, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion red blood cells pile up against the cluster blockade, camera zooming in
+
+[Scene 38]
+text: 이 혈전이 떨어져 나가 폐혈관을 막으면 생명이 위태로워집니다.
+text_en: If these blood clots travel to your lungs, they can cause fatal pulmonary embolism.
+image: Whiteboard marker doodle of a lung profile with a glowing block point, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red block point pulses with warning light rings, camera zooming out
+
+[Scene 39]
+text: 앉은 자세는 서 있을 때보다 척추에 두 배 이상의 압박을 줍니다.
+text_en: A sitting posture places twice as much pressure on your spinal discs as standing.
+image: Whiteboard marker doodle of a spine with red weight indicators between discs, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion red arrows squeeze the spinal disc shapes tightly, camera panning up
+
+[Scene 40]
+text: 특히 화면에 몰입하여 몸을 앞으로 굽히면 압박은 훨씬 심해집니다.
+text_en: If you hunch forward to look at the screen, that pressure increases even more.
+image: Whiteboard marker doodle of a hunched silhouette showing a curved red spine, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red spine curve bends forward even further, camera tilting down
+
+[Scene 41]
+text: 머리가 앞으로 숙여지면 목뼈는 무려 15킬로그램의 하중을 견뎌야 합니다.
+text_en: When your head tilts forward, your neck bones must bear a heavy extra load.
+image: Whiteboard marker doodle of a neck joint supporting a giant heavy dumbbell, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the yellow dumbbell presses down on the joint, camera zooming in
+
+[Scene 42]
+text: 이 하중이 누적되면 목 디스크가 튀어나오는 심각한 손상을 유발하죠.
+text_en: This cumulative pressure from bad posture can eventually cause painful cervical disc herniation.
+image: Whiteboard marker doodle of a cervical spine section showing a spinal disc slipping out between vertebrae, thick black ink outlines, clean white background, vibrant red marker coloring highlighting the herniated disc. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red herniated disc slides outward from the vertebrae, camera tilting down slowly
+
+[Scene 43]
+text: 허리 주변의 근육들은 척추를 지탱하려다 결국 지쳐서 굳어집니다.
+text_en: The muscles supporting your spine exhaust themselves and eventually become painfully tight and stiff.
+image: Whiteboard marker doodle of lower back muscles locked by ropes, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion green ropes tighten around the back muscle outlines, camera panning right
+
+[Scene 44]
+text: 굳어진 근육들은 골반을 뒤틀리게 만들어 체형을 망가뜨립니다.
+text_en: These chronically stiff muscles can pull your pelvis completely out of its natural alignment.
+image: Whiteboard marker doodle of a tilted pelvic bone model with balance scale, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the yellow pelvis tilts to one side slowly, camera zooming out
+
+[Scene 45]
+text: 움직임이 없는 관절은 윤활액이 마르면서 뻣뻣하고 아프게 변하죠.
+text_en: Joints that remain motionless lose their natural lubricating fluid, leading to early degeneration.
+image: Whiteboard marker doodle of a dry bone joint with friction spark lines, thick black ink outlines, clean white background, vibrant orange marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion orange spark lines fly off from the rubbing bones, camera panning left
+
+[Scene 46]
+text: 전신의 대사 기능이 가라앉아 당뇨병과 고혈압 위험이 올라갑니다.
+text_en: Your body's overall metabolic rate drops, significantly rising the long-term risk of diabetes.
+image: Whiteboard marker doodle of a sluggish metabolism line dropping below normal, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red trend line plunges downward off the grid, camera zooming in
+
+[Scene 47]
+text: 쓰지 않는 엉덩이와 허벅지 근육은 시간이 갈수록 녹아내립니다.
+text_en: Without regular physical use, your large gluteal and thigh muscles slowly waste away over time.
+image: Whiteboard marker doodle of leg outlines with shrinking inner muscle shading, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion blue shading shrinks away from the black outlines, camera tilting up
+
+[Scene 48]
+text: 뼈에 자극이 전달되지 않아 골밀도가 낮아지고 골다공증이 생깁니다.
+text_en: Lacking physical impact, your bones lose density and become increasingly weak and brittle over time.
+image: Whiteboard marker doodle of a bone with porous, sponge-like internal texture, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion internal yellow spots expand inside the bone silhouette, camera zooming out
+
+[Scene 49]
+text: 이상한 자세로 오래 누워있으면 좌골신경이 눌려 다리가 저립니다.
+text_en: Lying in awkward positions presses your sciatic nerve, causing severe numbness in legs.
+image: Whiteboard marker doodle of a long leg nerve pulsing with lightning bolt patterns, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow lightning pulses travel down the leg line, camera panning down
+
+[Scene 50]
+text: 무릎을 굽힌 채 앉아 있으면 다리 뒷부분의 인대가 짧아집니다.
+text_en: Keeping your knees bent for long hours shortens the critical tendons behind your legs.
+image: Whiteboard marker doodle of a bent knee showing a short red band, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red band contracts and pulls the joint tight, camera zooming in
+
+[Scene 51]
+text: 드라마를 다 보고 일어설 때 온몸이 찌푸둥하고 아픈 이유입니다.
+text_en: This muscle tightness is why your whole body feels stiff and painful after watching.
+image: Whiteboard marker doodle of a person standing up with pop-up pain stars, thick black ink outlines, clean white background, vibrant orange marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion orange pain stars flash around the joints, camera panning right
+
+[Scene 52]
+text: 앉아만 있는 습관은 우리 뼈를 갉아먹는 조용한 살인자입니다.
+text_en: A sedentary lifestyle is a silent killer that slowly destroys your entire skeletal system.
+image: Whiteboard marker doodle of a skeleton sitting in a chair fading out, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the blue chair outline fades into white space, camera zooming out
+
+[Scene 53]
+text: 다음으로 몰아보기가 우리의 눈과 뇌에 주는 타격을 알아봅시다.
+text_en: Next, let us examine the damage that binge-watching causes to your eyes and brain.
+image: Whiteboard marker doodle of an eye linked to brain by wires, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion green electric currents travel along the connecting wires, camera rotating slowly
+
+[Scene 54]
+text: 디지털 화면에서는 파장이 짧고 에너지가 강한 청색광이 방출됩니다.
+text_en: Digital screens emit high-energy blue light which easily penetrates deep into your visual organs.
+image: Whiteboard marker doodle of a screen emitting blue wave patterns to eye, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion blue wave patterns stream from the left screen, camera panning left
+
+[Scene 55]
+text: 이 청색광은 눈의 망막 세포를 직접 공격해 시력을 저하시킵니다.
+text_en: This intense blue light directly damages key light-sensitive cells in your retina over time.
+image: Whiteboard marker doodle of light rays striking cell layers in retina, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow light spears pierce the target cell layers, camera zooming in
+
+[Scene 56]
+text: 가까운 화면만 쳐다보면 모양체 근육이 굳어져 초점 조절이 힘듭니다.
+text_en: Staring closely at screens freezes your focusing muscles, causing temporary blurry vision problems later.
+image: Whiteboard marker doodle of a camera lens with stuck gear teeth, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion red gear teeth lock and stop rotating, camera zooming out
+
+[Scene 57]
+text: 화면에 집중할 때 우리의 눈 깜빡임 횟수는 절반 이하로 줄어듭니다.
+text_en: When focusing on a show, your normal blink rate drops by more than half.
+image: Whiteboard marker doodle of an eye with a bar chart showing drop, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the green chart bar drops down to the bottom, camera panning right
+
+[Scene 58]
+text: 눈물이 빠르게 마르면서 심한 안구건조증과 각막 염증이 생기죠.
+text_en: The protective tear film evaporates quickly, leading to dry eyes and corneal inflammation.
+image: Whiteboard marker doodle of a dry eye with cracked desert earth textures, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion dry yellow cracks expand over the eye surface, camera rotating slowly
+
+[Scene 59]
+text: 화면의 강한 불빛은 뇌신경을 자극하여 심한 두통을 유발합니다.
+text_en: Strong glare from the screen overstimulates sensory nerves, causing severe chronic tension headaches.
+image: Whiteboard marker doodle of a head with lightning bolts on temples, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion red lightning bolts flash on the temples, camera zooming in
+
+[Scene 60]
+text: 청색광은 수면을 돕는 호르몬인 '멜라토닌'의 생성을 방해합니다.
+text_en: Blue light exposure actively suppresses melatonin, the hormone that tells your body to sleep.
+image: Whiteboard marker doodle of a moon symbol with a slash mark overlay, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion a blue slash mark is drawn over the moon, camera zooming out
+
+[Scene 61]
+text: 뇌는 화면 불빛을 햇빛으로 착각하여 계속 낮이라고 인식합니다.
+text_en: The brain mistakes artificial screen light for sunshine and remains in a daytime state.
+image: Whiteboard marker doodle of a brain holding a shining sun symbol, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow sunbeams grow outward from the sun center, camera panning left
+
+[Scene 62]
+text: 몸의 천연 생체시계인 '생체 리듬'이 엉망으로 꼬이게 되죠.
+text_en: Your body's internal biological clock, the circadian rhythm, becomes completely disrupted and misaligned.
+image: Whiteboard marker doodle of a clock face with tangled, messy wires, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion green wires tangle further around the clock hands, camera tilting down
+
+[Scene 63]
+text: 침대에 누워도 잠이 오지 않고 머릿속이 맑아지는 이유입니다.
+text_en: This is why you feel wide awake when trying to sleep after watching.
+image: Whiteboard marker doodle of a person lying awake with wide open eyes, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion a blue sleep mask drifts slowly past the face, camera panning up
+
+[Scene 64]
+text: 텔레비전을 볼 때 뇌는 매우 수동적인 상태인 알파파를 방출합니다.
+text_en: While watching television, your brain emits alpha waves, indicating a highly passive state.
+image: Whiteboard marker doodle of a brain emitting long slow wavy lines, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow wavy lines ripple slowly across the screen, camera zooming in
+
+[Scene 65]
+text: 생각하는 회로는 쉬고 오직 시각 정보를 받는 뇌 부위만 일하죠.
+text_en: Critical thinking pathways go dark, while only visual processing regions remain active.
+image: Whiteboard marker doodle of a brain profile with dark frontal lobe area, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion red light flashes only in the back visual area, camera rotating slowly
+
+[Scene 66]
+text: 이 상태가 계속되면 뇌의 논리적 사고 능력이 서서히 약화됩니다.
+text_en: If this state continues for long hours, your capacity for logical reasoning gradually weakens.
+image: Whiteboard marker doodle of a maze puzzle dissolving at the borders, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion green walls of the maze slowly break down, camera zooming out
+
+[Scene 67]
+text: 긴장감 넘치는 스릴러물은 스트레스 호르몬인 코르티솔을 높입니다.
+text_en: Watching intense thrillers triggers the release of cortisol, your body's primary stress hormone.
+image: Whiteboard marker doodle of a warning sign next to chemical molecule, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion red warning outline expands around the molecule shape, camera panning right
+
+[Scene 68]
+text: 심장 박동이 빨라지고 혈압이 상승하여 몸이 비상 상태에 놓입니다.
+text_en: Your heart rate accelerates and blood pressure rises, putting your body in constant danger.
+image: Whiteboard marker doodle of a heart with rapid pulse wave graphics, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion red pulse peaks spike rapidly across the grid, camera zooming in
+
+[Scene 69]
+text: 몸은 가만히 있어도 뇌와 심장은 전쟁터에 있는 것처럼 지치게 되죠.
+text_en: Even though you are sitting still, your brain and heart remain completely exhausted.
+image: Whiteboard marker doodle of a heart wearing army helmet holding flag, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the blue helmet tilts slightly as the flag waves, camera zooming out
+
+[Scene 70]
+text: 자는 동안 진행되어야 할 기억 정리 과정이 방해를 받습니다.
+text_en: The crucial process of memory consolidation that occurs during deep sleep is severely disrupted.
+image: Whiteboard marker doodle of a book with pages being torn and scattered, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow pages drift away from the book binding, camera panning down
+
+[Scene 71]
+text: 아침에 일어났을 때 개운하지 않고 뇌가 뿌옇게 느껴집니다.
+text_en: You wake up feeling unrefreshed, experiencing what doctors call brain fog next morning.
+image: Whiteboard marker doodle of a head surrounded by dense marker clouds, thick black ink outlines, clean white background, vibrant grey and yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow mist details form slowly around the head, camera zooming in
+
+[Scene 72]
+text: 뇌의 휴식 시간을 빼앗는 몰아보기는 뇌를 서서히 병들게 합니다.
+text_en: Binge-watching deprives your brain of essential rest, causing gradual cognitive decline over time.
+image: Whiteboard marker doodle of a brain shape locked inside a cage, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion red bars of the cage draw from top to bottom, camera zooming out
+
+[Scene 73]
+text: 부족한 잠은 우리 몸의 면역 체계를 송두리째 무너뜨립니다.
+text_en: Sleep deprivation caused by late-night viewing completely breaks down your body's immune defenses.
+image: Whiteboard marker doodle of a shield falling and cracking in half, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the blue shield halves fall apart on the floor, camera panning left
+
+[Scene 74]
+text: 병원균과 싸우는 면역 세포인 '림프구'의 활성도가 급격히 떨어집니다.
+text_en: The activity of lymphocytes, the cells that fight off invading pathogens, drops significantly.
+image: Whiteboard marker doodle of round white cells shrinking under red germs, thick black ink outlines, clean white background, vibrant red and green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion green germs move closer to the shrinking white cells, camera zooming in
+
+[Scene 75]
+text: 잠이 부족해지면 식욕을 자극하는 호르몬인 '그렐린'이 증가합니다.
+text_en: When sleep is restricted, your body produces more ghrelin, the hunger-stimulating hormone.
+image: Whiteboard marker doodle of a stomach with ascending green arrow indicator, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the green arrow grows longer up the stomach chart, camera tilting up
+
+[Scene 76]
+text: 반면 배부름을 느끼게 하는 '렙틴' 호르몬은 크게 줄어들게 되죠.
+text_en: Meanwhile, levels of leptin, the hormone that signals fullness, drop sharply in blood.
+image: Whiteboard marker doodle of a descending scale indicator inside blood channel, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the blue indicator slides down to the bottom level, camera panning right
+
+[Scene 77]
+text: 이로 인해 늦은 밤 피자나 치킨 같은 고열량 음식을 갈망합니다.
+text_en: This food craving makes you choose high-calorie junk food late at night.
+image: Whiteboard marker doodle of a giant pizza slice with red pepperoni, thick black ink outlines, clean white background, vibrant red and yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red pepperonis pop up on the yellow slice, camera zooming out
+
+[Scene 78]
+text: 밤늦게 음식을 먹고 바로 누우면 역류성 식도염이 생기기 쉽습니다.
+text_en: Eating late and lying down immediately leads to painful acid reflux in esophagus.
+image: Whiteboard marker doodle of acid droplets rising from stomach to neck, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion green acid droplets bubble up from stomach reservoir, camera panning up
+
+[Scene 79]
+text: 밤에는 신진대사가 느려져 섭취한 칼로리가 대부분 지방으로 쌓입니다.
+text_en: Since metabolism slows down at night, most consumed calories are stored as fat.
+image: Whiteboard marker doodle of fat droplets stacking up inside body grid, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow fat spheres accumulate and pile up at base, camera zooming in
+
+[Scene 80]
+text: 이는 복부 비만을 유발하고 장기를 압박하는 내장지방이 됩니다.
+text_en: This pattern leads to abdominal obesity and builds dangerous visceral fat around organs.
+image: Whiteboard marker doodle of a large belly silhouette with internal yellow shading, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow shading fills the stomach area of silhouette, camera zooming out
+
+[Scene 81]
+text: 호르몬 교란과 지방 축적은 인슐린 저항성을 높여 당뇨를 부릅니다.
+text_en: Hormonal disruption and fat accumulation raise insulin resistance, eventually causing type-two diabetes.
+image: Whiteboard marker doodle of a key trying to open a locked cell, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the red key bends and fails to turn lock, camera rotating slowly
+
+[Scene 82]
+text: 몰아보기 시간만큼 우리는 운동하고 움직일 시간을 잃어버립니다.
+text_en: Every hour spent watching a screen is an hour lost for healthy exercise.
+image: Whiteboard marker doodle of running shoes covered by thick spider webs, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion blue cobwebs draw over the black shoe outlines, camera panning left
+
+[Scene 83]
+text: 방 안에 홀로 갇혀 있으면 사람들과의 교류가 차단되어 고립되죠.
+text_en: Staying isolated in your room reduces real-life social interactions and real human connection.
+image: Whiteboard marker doodle of a figure sitting inside a transparent glass box, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the yellow figure sits quietly while reflection lines appear, camera zooming in
+
+[Scene 84]
+text: 사회적 고립은 외로움을 키우고 우울증 증상을 더욱 심화시킵니다.
+text_en: This social isolation increases feelings of loneliness and worsens overall symptoms of depression.
+image: Whiteboard marker doodle of a rainy cloud raining blue droplets on head, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion blue rain droplets fall slowly onto the head outline, camera zooming out
+
+[Scene 85]
+text: 그렇다면 우리는 좋아하는 드라마를 평생 보지 말아야 할까요?
+text_en: Does this mean we should never watch our favorite dramas again for life?
+image: Whiteboard marker doodle of a television screen crossed out by red marker, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion a red X mark is drawn quickly over television, camera zooming in
+
+[Scene 86]
+text: 당연히 아닙니다! 핵심은 신체의 균형을 지키는 건강한 습관입니다.
+text_en: Absolutely not! The key is establishing healthy habits to maintain your body's balance.
+image: Whiteboard marker doodle of a balance scale level with heart and television, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the green scale swings gently and reaches perfect balance, camera panning up
+
+[Scene 87]
+text: 매 편이 끝날 때마다 자리를 털고 일어나 기지개를 켜십시오.
+text_en: Every time an episode ends, stand up and stretch your entire body thoroughly.
+image: Whiteboard marker doodle of a figure standing tall stretching arms upwards, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow energy curves radiate outward from the figure arms, camera zooming out
+
+[Scene 88]
+text: 눈 건강을 위해 이십 분마다 이십 피트 먼 곳을 이십 초간 보세요.
+text_en: For eye health, follow the twenty-twenty-twenty rule and look at distant objects regularly.
+image: Whiteboard marker doodle of eyes looking through binoculars to distant peak, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the blue mountain peak outline is drawn on horizon, camera panning right
+
+[Scene 89]
+text: 시청 시작 전에 미리 시간을 정해두고 타이머를 맞추는 게 좋습니다.
+text_en: Decide on a viewing limit beforehand and set a loud timer to stop.
+image: Whiteboard marker doodle of a ringing stopwatch with sound waves, thick black ink outlines, clean white background, vibrant red marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion red sound wave lines flash around the stopwatch bell, camera zooming in
+
+[Scene 90]
+text: 저녁 시간 이후에는 화면의 청색광 차단 필터를 꼭 활성화하세요.
+text_en: Always activate the blue light filter on your devices during evening viewing sessions.
+image: Whiteboard marker doodle of a screen shifting from blue to warm yellow, thick black ink outlines, clean white background, vibrant orange marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion warm orange color fills the screen frame from left, camera rotating slowly
+
+[Scene 91]
+text: 화면을 보면서 실내 자전거를 타거나 가벼운 스쿼트를 해보세요.
+text_en: Try riding an indoor bicycle or doing light squats while watching your show.
+image: Whiteboard marker doodle of a figure pedaling on stationary indoor bicycle, thick black ink outlines, clean white background, vibrant green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the green wheel of the bicycle spins smoothly around, camera zooming out
+
+[Scene 92]
+text: 늦은 밤 간식은 탄산음료 대신 따뜻한 차나 물을 선택하세요.
+text_en: Choose warm herbal tea or water instead of sugary sodas for night snacks.
+image: Whiteboard marker doodle of a steaming mug next to water droplets, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion blue steam waves rise slowly from the mug brim, camera panning down
+
+[Scene 93]
+text: 잠들기 최소 한 시간 전에는 전자기기를 침대에서 멀리 치우세요.
+text_en: Keep all electronic devices away from your bed at least one hour before sleeping.
+image: Whiteboard marker doodle of a smartphone placed far away on drawer, thick black ink outlines, clean white background, vibrant yellow marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion yellow light pulses on the phone screen and stops, camera panning left
+
+[Scene 94]
+text: 주말에는 야외로 나가 햇빛을 받으며 가볍게 뼈를 자극해야 합니다.
+text_en: Go outside on weekends to soak up sunlight and gently stimulate your bones.
+image: Whiteboard marker doodle of a figure walking under a smiling cartoon sun, thick black ink outlines, clean white background, vibrant yellow and green marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the yellow sun beams expand slowly over green landscape, camera zooming out
+
+[Scene 95]
+text: 우리 몸의 뼈와 신경은 정직하게 우리가 움직이는 만큼 건강해집니다.
+text_en: Our bones and nerves stay healthy in direct proportion to how much we move.
+image: Whiteboard marker doodle of a strong skeletal arm flexing its biceps muscle, thick black ink outlines, clean white background, vibrant blue marker coloring. No watermark, no text, no letters, no signatures.
+motion: :: slow motion the arm moves slightly, camera zooming in
+
+[Scene 96]
+text: 현명한 시청 습관으로 소중한 뼈와 눈의 건강을 꼭 지켜내세요.
+text_en: Protect your precious bones and eyes by practicing smart and balanced viewing habits.
+image: Whiteboard marker doodle of Dr. Jay waving beside a healthy heart and spine, with clean hand-drawn text "Dr Jay Edu" written on the board, thick black ink outlines, clean white background, vibrant red and blue marker coloring. No watermark, no other letters, no signatures.
+motion: :: slow motion the friendly doctor waves his hand slowly while red heart pulses, camera zooming out

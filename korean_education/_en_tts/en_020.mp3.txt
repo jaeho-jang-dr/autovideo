@@ -1,0 +1,1 @@
+This is the 'principle of stroke addition', adding lines to base shapes as sounds become stronger.

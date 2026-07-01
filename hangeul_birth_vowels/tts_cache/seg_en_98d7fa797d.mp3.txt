@@ -1,0 +1,1 @@
+Use native numbers for counts and age, Sino numbers for dates, minutes, and numbers. Like 사과 세 개 (three apples) versus 삼 월 (March).

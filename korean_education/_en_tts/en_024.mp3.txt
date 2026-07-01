@@ -1,0 +1,1 @@
+Adding a top stroke to 'ㅅ' creates 'ㅈ', and another makes the aspirated 'ㅊ'.

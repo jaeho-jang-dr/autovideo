@@ -1,0 +1,1 @@
+Instead of aligning letters side-by-side, Hangul groups them into syllable blocks.

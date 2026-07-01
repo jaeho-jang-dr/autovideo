@@ -1,0 +1,1 @@
+When a Batchim is followed by an empty 'ㅇ', the sound links over to the next syllable.

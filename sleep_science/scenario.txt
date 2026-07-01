@@ -1,0 +1,29 @@
+[Scene 0]
+text: 잠에서 깨는 것이 왜 이렇게 힘들까요? 오늘 우리 몸의 24시간 수면 시계인 서카디언 리듬과 수면의 과학을 만나봅니다.
+text_en: Why is waking up so hard? Today, we explore our body's 24-hour sleep clock, the Circadian Rhythm.
+image: sleep_science/scene_0.png
+motion: [zoom_bounce]
+
+[Scene 1]
+text: 지독하게 울리는 알람 소리, 타는 듯한 눈, 그리고 몸의 세포 하나하나가 5분만 더 달라고 애원합니다.
+text_en: We've all been there. The alarm screams, your eyes burn, and every cell in your body begs for five more minutes.
+image: sleep_science/scene_1.png
+motion: [shake]
+
+[Scene 2]
+text: 하지만 잠에서 깨어나는 것은 왜 이렇게 힘들까요? 우리 뇌 속에는 에너지를 조절하는 24시간 메트로놈, 즉 서카디언 리듬이 존재합니다.
+text_en: But why is waking up so hard? Meet your Circadian Rhythm—a 24-hour internal metronome that dictates your energy.
+image: sleep_science/scene_2.png
+motion: [pulse]
+
+[Scene 3]
+text: 우리 뇌 한가운데에 있는 SCN, 즉 상교차핵은 오케스트라 지휘자처럼 빛이 꺼질 때 멜라토닌 분비를 신호합니다.
+text_en: In the center of your brain, the SCN acts like an orchestra conductor, signaling the release of melatonin when the lights go out.
+image: sleep_science/scene_3.png
+motion: [rotation]
+
+[Scene 4]
+text: 당신의 리듬을 존중해 주세요. 어둠은 지휘자가 이 수면이라는 대작을 연주하게 만드는 신호입니다.
+text_en: Respect your rhythm. Darkness is the cue your conductor needs to start the masterpiece of sleep.
+image: sleep_science/scene_4.png
+motion: [zoom_bounce]
