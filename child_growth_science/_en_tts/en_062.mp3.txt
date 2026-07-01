@@ -1,0 +1,1 @@
+This creates spatial room for bones to expand during sleep, maximizing overall growth velocity.

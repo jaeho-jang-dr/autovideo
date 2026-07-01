@@ -1,0 +1,83 @@
+[Scene 0]
+text: 안녕하세요! 오늘 우리는 세계에서 가장 과학적인 문자, 한글의 탄생 비밀과 모음의 원리를 알아봅니다. 한글은 어떻게 생겨났을까요?
+text_en: Hello everyone! Today, we will explore the birth secrets of Hangeul, the most scientific script in the world, and the principles of its vowels. How was Hangeul created?
+image: Flat 2D illustration in minimalist line art style showing clean Korean characters floating in space, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: the Korean characters drift and rotate slowly in mid-air, camera zooming in slowly
+
+[Scene 1]
+text: 아주 먼 옛날, 한국인들은 한글이 없어서 중국의 한자를 빌려 글을 썼습니다. 하지만 한자는 너무 복잡해서 양반들만 쓸 수 있었고, 일반 백성들은 글을 읽지도 쓰지도 못했습니다.
+text_en: Long ago, Koreans did not have their own script, so they wrote using borrowed Chinese characters. However, Hanja was so complex that only the noble class could use it, leaving commoners unable to read or write.
+image: Flat 2D illustration in minimalist line art style showing ancient thick books with complex Chinese characters, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: slow motion camera zooming in slowly on the ancient books, paper texture texture shifting slightly
+
+[Scene 2]
+text: 법을 읽지 못해 억울한 일을 당하는 백성들을 보고, 세종대왕은 깊은 슬픔과 안타까움을 느꼈습니다. '내 이를 가엾게 여겨 새로 스물여덟 글자를 만드노니...'
+text_en: Seeing his people suffer from unfairness due to their inability to read the laws, King Sejong the Great felt deep sorrow. 'Pitying this, I newly create twenty-eight letters...'
+image: Flat 2D illustration in minimalist line art style showing a benevolent King Sejong sitting in a quiet palace library deep in thought, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: slow motion camera panning slowly around King Sejong as he holds a scroll, soft candle light flickering
+
+[Scene 3]
+text: 드디어 1443년, 누구나 쉽게 배울 수 있는 혁신적인 문자 '훈민정음'이 창제되었습니다. 지혜로운 사람은 아침에, 어리석은 사람도 열흘이면 배울 수 있는 글자였습니다.
+text_en: Finally, in 1443, Hunminjeongeum, an innovative script that anyone could easily learn, was created. A wise person could learn it in a single morning, and even a less clever person within ten days.
+image: Flat 2D illustration in minimalist line art style showing a clean white scroll unfurling to reveal Hangeul letters, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: the scroll opens smoothly in slow motion, showing glowing Korean letters, camera zooming out slowly
+
+[Scene 4]
+text: 한글의 모음은 우주의 3대 요소인 하늘, 땅, 사람을 모델로 만들었습니다. 이를 '천지인'이라고 부릅니다.
+text_en: Hangeul vowels were modeled after the three prime elements of the universe: Heaven, Earth, and Human. This system is known as 'Cheon-Ji-In'.
+image: Flat 2D illustration in minimalist line art style showing three panels representing Sky (a round dot), Earth (a horizontal line), and Human (a vertical line) side by side, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: the three shapes glow with soft golden outlines, camera zooming in slowly
+
+[Scene 5]
+text: 하늘의 점이 사람의 오른쪽에 붙으면 해가 뜨는 동쪽을 뜻하는 밝은 모음 'ㅏ'가 되고, 왼쪽에 붙으면 해가 지는 서쪽을 뜻하는 어두운 모음 'ㅓ'가 됩니다.
+text_en: When the Heaven dot is attached to the right of the Human line, it becomes the bright vowel 'ㅏ', representing the rising sun in the east. If attached to the left, it becomes the dark vowel 'ㅓ', representing the setting sun in the west.
+image: Flat 2D illustration in minimalist line art style showing a red sun rising on the right side and setting on the left side of a vertical line, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: the red sun rises in the east and sets in the west in slow motion, camera panning slowly
+
+[Scene 6]
+text: 마찬가지로 하늘의 점이 땅의 위에 붙으면 땅 위로 솟아오르는 밝은 모음 'ㅗ'가 되며, 아래에 붙으면 땅 아래로 가라앉는 어두운 모음 'ㅜ'가 됩니다.
+text_en: Similarly, if the Heaven dot is placed above the Earth line, it becomes the bright vowel 'ㅗ', representing the sun rising above the ground. If placed below, it becomes the dark vowel 'ㅜ', representing the sun sinking below the earth.
+image: Flat 2D illustration in minimalist line art style showing a red dot rising above a horizontal line and sinking below it, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: the dot shifts slowly above and below the horizontal ground line, camera tilting down slowly
+
+[Scene 7]
+text: 이렇게 밝은 모음(ㅏ, ㅗ)은 밝은 모음끼리, 어두운 모음(ㅓ, ㅜ)은 어두운 모음끼리 어울리는 '모음조화'가 한글 문법의 아름다운 질서를 이룹니다.
+text_en: This systematic grouping where bright vowels (ㅏ, ㅗ) cluster together and dark vowels (ㅓ, ㅜ) cluster together creates Vowel Harmony, establishing a beautiful order in Korean grammar.
+image: Flat 2D illustration in minimalist line art style showing orange circles and blue circles floating and sorting into separate groups, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: the orange and blue circles float and align in two separate columns, camera zooming out slowly
+
+[Scene 8]
+text: 자, 이제 외국인들이 가장 발음하기 어려워하는 단모음의 발음법을 배워볼까요? 영어 모음과 달리, 한국어 단모음은 발음하는 동안 입 모양이 절대 흔들리지 않는 것이 핵심입니다.
+text_en: Now, let's learn how to pronounce simple vowels, which are often the trickiest for foreigners. Unlike English vowels, Korean monophthongs require keeping your mouth shape perfectly stable during pronunciation.
+image: Flat 2D illustration in minimalist line art style showing a side profile vector outline of a human head and vocal organs in static position, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: the outline glows slowly, highlight path tracing the vocal tract, camera zooming in slowly
+
+[Scene 9]
+text: 가장 헷갈리는 'ㅓ'와 'ㅗ'입니다. 'ㅓ'는 턱을 아래로 크게 떨어뜨려 입을 세로로 벌리고 입술은 평평하게 유지합니다. 반면 'ㅗ'는 빨대를 문 것처럼 입술을 동그랗게 모아야 합니다.
+text_en: Here are the most confusing pair: 'ㅓ' and 'ㅗ'. For 'ㅓ', drop your jaw vertically to open wide while keeping your lips flat. In contrast, for 'ㅗ', you must round your lips tightly, as if holding a straw.
+image: Flat 2D illustration in minimalist line art style showing side-by-side mouth shapes of vertical open lips and rounded circular lips, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: the mouth outlines animate from flat open shape to tightly closed circle shape, camera panning slowly
+
+[Scene 10]
+text: 다음은 'ㅜ'와 'ㅡ'입니다. 'ㅜ'는 입술을 동그랗게 모아 앞으로 쭉 내밀고, 'ㅡ'는 억지 미소를 지으며 입술을 양옆으로 납작하게 펼친 채 소리를 냅니다.
+text_en: Next are 'ㅜ' and 'ㅡ'. For 'ㅜ', purse your lips tightly and push them forward. For 'ㅡ', stretch your lips flat horizontally into a forced smile, keeping your teeth close together.
+image: Flat 2D illustration in minimalist line art style showing side-by-side mouth diagrams of kissy lips and flat wide smile lips, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: the smile lips stretch wider horizontally in slow motion, camera zooming in slowly
+
+[Scene 11]
+text: 거울을 보며 체크해 보세요! 'ㅗ'와 'ㅜ'를 발음할 때만 입술이 동그랗게 둥글려지고, 'ㅓ'와 'ㅡ'를 발음할 때는 입술이 절대 동그랗게 변하면 안 됩니다.
+text_en: Check yourself in the mirror! Your lips should round only when pronouncing 'ㅗ' and 'ㅜ'. When pronouncing 'ㅓ' and 'ㅡ', your lips must remain completely flat.
+image: Flat 2D illustration in minimalist line art style showing a hand holding a cute hand mirror, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: the hand mirror tilts slightly, reflection showing simple unrounded lip drawings, camera panning slowly
+
+[Scene 12]
+text: 오늘 배운 단모음들을 거울을 보며 매일 연습해 보세요. 구독과 좋아요를 누르면 더 재미있는 한국어 공부가 계속됩니다! 다음에 만나요!
+text_en: Practice these simple vowels in the mirror every day. Hit subscribe and like for more fun Korean learning! See you next time!
+image: Flat 2D illustration in minimalist line art style showing a cute ringing bell with golden sparkle particles, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: the bell swings gently side to side in slow motion, camera zooming out slowly
+
+[Scene 13]
+text: 
+text_en: 
+image: Flat 2D illustration in minimalist line art style showing an empty template screen for recommended video playlist frames, solid flat light beige background (#F5F5F0), whiteboard marker sketch texture, no watermark, no signatures.
+motion: :: static screen with no motion, solid beige backdrop

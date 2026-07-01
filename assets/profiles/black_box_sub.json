@@ -1,0 +1,16 @@
+{
+  "resolution": {
+    "width": 1280,
+    "height": 720
+  },
+  "fps": 24.0,
+  "subtitle_style": {
+    "font_size": 24,
+    "color": "white",
+    "bg_color": "rgba(0, 0, 0, 180)",
+    "stroke_color": "none",
+    "stroke_width": 0,
+    "margin_bottom": 230,
+    "max_chars_per_line": 35
+  }
+}

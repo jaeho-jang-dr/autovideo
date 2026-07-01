@@ -1,0 +1,67 @@
+# pianoduo — 인준·지은 피아노 연탄(four-hands) 연주 영상 / 2분 30초 / 25씬  (v2 재작업: 피드백 반영)
+# 형식: [Scene N | ref=<앵커>] <영문 모션·카메라 프롬프트>
+#   ref 앵커(=청크 시작 = 새 기본이미지 = '빠른 화면전환' 경계): piano_stand / piano_back / piano_front / piano_side
+#   ref=PREV : 직전 씬의 마지막 프레임(scene_{N-1}_last.png) → 청크 내부 무이음(last-frame transition) 연결
+#
+# 청크 구조 (↔ = 빠른 화면전환 경계 / 내부는 last-frame 무이음):
+#   [1] stand ↔ [2-6] back ↔ [7-11] side ↔ [12-15] front ↔ [16-18] back ↔ [19-20] side ↔ [21-24] back ↔ [25] stand
+#   청크 크기 2~24 구간: 5,5,4,3,2,4  → 매 청크 첫 씬만 새 기본이미지, 나머지는 last-frame 연장.
+#
+# ★ 절대 규칙 (사용자 피드백):
+#   1) 두 사람은 항상 같은 벤치에 '나란히' 앉는다. 절대 서로 마주 보지 않는다(물리적으로 불가).
+#   2) 연주 구간(2~24)에서 두 사람(특히 지은)의 손은 '항상 건반 위'에 있고 실제로 계속 누르며 친다 — 소리=손동작 일치.
+#   3) 표정은 진지하고 집중. 연주 중 과한 웃음 금지. (환한 웃음은 인사 1씬 · 작별 25씬에서만.)
+#   4) 첫 음: 손가락이 건반에 닿는 순간과 첫 소리가 '정확히 동시에' 시작.
+#   5) 끝 음: 마지막 화음 소리와 동시에 손이 건반에 닿고, 그대로 건반 위에서 '멈춤'을 보여준다.
+#   6) 인준은 적당한(controlled) 퍼포먼스 — 가끔 일어서되 손은 항상 건반 위. 연탄곡이라 두 사람 동작이 같을 필요는 없다.
+#   7) 카메라: 지미집처럼 부드럽고 역동적인 시점 이동(상승/하강/푸시인/궤도/탑다운/손 줌인). ※장비 자체는 화면에 절대 안 보임.
+
+[Scene 1 | ref=piano_stand] The boy Injun and girl Jieun stand side by side beside the grand piano, smile warmly and bow politely together to greet the audience, then turn and walk together to the bench and sit down next to each other. A smooth jimmy-jib glide inward from a wide shot to a medium two-shot.
+
+[Scene 2 | ref=piano_back] Seen from behind, the two sit side by side and place both hands on the keys; at the exact instant their fingers touch the keys the very first soft note begins, perfectly in sync. Hands stay on the keys, they play a few slow gentle test notes, serious and focused, eyes down. The view rises smoothly to a high angle over their shoulders onto the keyboard.
+
+[Scene 3 | ref=PREV] Side by side on the bench (Injun on the left, Jieun on the right), both facing straight forward toward the keyboard and never turning toward each other, hands always pressing the keys, they begin the simple cheerful "Chopsticks" march with light easy notes, calm focused faces looking down at the keys. The view slides smoothly sideways along the piano.
+
+[Scene 4 | ref=PREV] They continue the easy tune, hands never leaving the keys; Jieun sways her shoulders softly while still pressing every key, Injun taps lightly, both looking down at the keyboard with concentration. The view pushes in slowly toward their four hands on the keys.
+
+[Scene 5 | ref=PREV] Their hands keep playing the light melody; the camera lifts to reveal their focused faces from a three-quarter side, eyes down on the keys (never turning to face each other), bodies square to the keyboard. A gentle upward reveal.
+
+[Scene 6 | ref=PREV] Extreme close-up of only the keyboard and their four hands actively tapping the simple notes in turn, fingers clearly pressing each key, side by side. A tight macro view on hands and keys.
+
+[Scene 7 | ref=piano_side] Side three-quarter view, both seated side by side facing the keyboard, hands pressing the keys; the tempo picks up a little, the melody grows livelier, both lean into the rhythm with serious concentration. The view slowly arcs around the side of the piano.
+
+[Scene 8 | ref=PREV] Faster now, more notes, hands staying on the keys the whole time; Jieun sways with the beat while Injun's hands move quicker across the keys. The view glides inward with a slight downward tilt onto the hands.
+
+[Scene 9 | ref=PREV] Energy rising, both focused and intense (not laughing), bodies rocking slightly but hands locked to the keyboard, playing every note. The view swoops down from a high angle to eye level at their hands.
+
+[Scene 10 | ref=PREV] A high overhead bird's-eye view looks straight down at the piano and their four hands flying faster across the keys, side by side. The top-down view slowly rotates.
+
+[Scene 11 | ref=PREV] The music turns brisk and showy; Jieun rolls her shoulders to the rhythm, Injun leans forward intently, both hands still pressing the keys, serious expressions. The view tracks quickly along the keyboard.
+
+[Scene 12 | ref=piano_front] Front view, the grand piano in the foreground, their concentrated faces visible above it as their hands keep racing over the keys; rapid passage, focused and intense, eyes on the keys, never facing each other. The view holds on both faces then tips down to the hands.
+
+[Scene 13 | ref=PREV] Injun rises to play standing, leaning over the keyboard with controlled flair, his hands never leaving the keys; Jieun keeps playing seated beside him, both serious. The view rises from a low angle up past Injun and back down to the keys.
+
+[Scene 14 | ref=PREV] The piece becomes fast and virtuosic, faces full of focused passion, Jieun moves her head with the rhythm, Injun's fingers race — all four hands pressing the keys continuously, side by side. A wide arc sweep around the front.
+
+[Scene 15 | ref=PREV] The view orbits a smooth quarter-turn around the duo while they hammer out a rapid brilliant passage, hands glued to the keyboard, side by side, intense concentration. A smooth orbiting move.
+
+[Scene 16 | ref=piano_back] From behind, furious tempo, Injun seated again beside Jieun, both leaning into the keys, hands flying but always pressing the keyboard, rocking but precise. An energetic push-in over their shoulders.
+
+[Scene 17 | ref=PREV] Overhead view looks down as four hands fly across the full keyboard at blazing speed, Liszt-level cascades, hands never leaving the keys. The view spirals down from top-down to just behind them.
+
+[Scene 18 | ref=PREV] Climactic intensity, both seated side by side, faces fierce with focused concentration, hands hammering the keys without lifting off, Jieun swaying hard with the rhythm. The view pushes in dramatically onto the keyboard and their hands.
+
+[Scene 19 | ref=piano_side] Injun rises to stand beside the bench and plays standing with big but controlled arm movements, his hands always returning to and pressing the keys; Jieun pounds the keys seated, head moving to the beat, both serious. A fast low tracking move along the keyboard.
+
+[Scene 20 | ref=PREV] Injun keeps playing standing with theatrical but moderate flair, hands on the keys, Jieun swept up in the rhythm beside him, side by side, focused. The view sweeps up and around in a wide motion, always keeping their hands on the keyboard in frame.
+
+[Scene 21 | ref=piano_back] The grand finale cascade seen from behind, hands a blur across the full keyboard yet clearly pressing every key, both at maximum focused energy, Injun seated again beside Jieun. A rapid push-in toward the hands.
+
+[Scene 22 | ref=PREV] The fastest most furious passage, dramatic and wild but hands locked to the keys, both rocking precisely side by side, serious intense faces. The view swoops from high down to low onto the keyboard.
+
+[Scene 23 | ref=PREV] The final thunderous chords approach; both stay seated side by side (Injun left, Jieun right), facing straight forward toward the keyboard, never turning their heads toward each other, hands poised just above the keys for a single beat. A slow dramatic push-in on their hands over the keyboard.
+
+[Scene 24 | ref=PREV] Seated side by side facing forward (Injun left, Jieun right), they slam the final triumphant chord in perfect unison — the last sound lands at the exact instant their hands hit the keys, then their hands stop and rest motionless on the keys as the music ends. They hold the pose still for a moment, hands resting on the keys. A slow pull-back from their resting hands.
+
+[Scene 25 | ref=piano_stand] Injun and Jieun stand up from the bench, step forward together side by side, smile brightly and bow to the audience, then wave goodbye warmly to end the show. The view pushes in gently then settles on a wide farewell two-shot.

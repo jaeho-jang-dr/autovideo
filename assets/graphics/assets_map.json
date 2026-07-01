@@ -1,0 +1,175 @@
+{
+  "characters": {
+    "stickman_standing": {
+      "file": "assets/graphics/stickman_standing.png",
+      "default_scale": 1.0,
+      "description": "Standing still posture"
+    },
+    "stickman_walking_1": {
+      "file": "assets/graphics/stickman_walking_1.png",
+      "default_scale": 1.0,
+      "description": "Walking step 1"
+    },
+    "stickman_walking_2": {
+      "file": "assets/graphics/stickman_walking_2.png",
+      "default_scale": 1.0,
+      "description": "Walking step 2"
+    },
+    "stickman_pointing": {
+      "file": "assets/graphics/stickman_pointing.png",
+      "default_scale": 1.0,
+      "description": "Pointing at blackboard or text"
+    },
+    "stickman_thinking": {
+      "file": "assets/graphics/stickman_thinking.png",
+      "default_scale": 1.0,
+      "description": "Thinking posture with head tilted"
+    },
+    "stickman_sitting": {
+      "file": "assets/graphics/stickman_sitting.png",
+      "default_scale": 0.85,
+      "description": "Sitting on a chair posture"
+    },
+    "stickman_listening": {
+      "file": "assets/graphics/stickman_listening.png",
+      "default_scale": 1.0,
+      "description": "Listening with headphones"
+    },
+    "stickman_greeting": {
+      "file": "assets/graphics/stickman_greeting.png",
+      "default_scale": 1.0,
+      "description": "Waving hand greeting posture"
+    },
+    "stickman_listener": {
+      "file": "assets/graphics/stickman_listener.png",
+      "default_scale": 0.9,
+      "description": "Student listening from back"
+    }
+  },
+  "objects": {
+    "obj_bed": {
+      "file": "assets/graphics/obj_bed.png",
+      "default_scale": 1.2,
+      "description": "Minimal bedroom bed"
+    },
+    "obj_desk": {
+      "file": "assets/graphics/obj_desk.png",
+      "default_scale": 1.0,
+      "description": "Minimal workspace desk"
+    },
+    "obj_chair": {
+      "file": "assets/graphics/obj_chair.png",
+      "default_scale": 0.75,
+      "description": "Desk chair matching stickman sitting position"
+    },
+    "obj_mirror": {
+      "file": "assets/graphics/obj_mirror.png",
+      "default_scale": 0.7,
+      "description": "Bathroom/bedroom mirror"
+    },
+    "obj_window": {
+      "file": "assets/graphics/obj_window.png",
+      "default_scale": 0.8,
+      "description": "Simple grid window"
+    },
+    "obj_blackboard": {
+      "file": "assets/graphics/obj_blackboard.png",
+      "default_scale": 1.5,
+      "description": "Classroom blackboard to draw text"
+    },
+    "obj_pencil": {
+      "file": "assets/graphics/obj_pencil.png",
+      "default_scale": 0.5,
+      "description": "Drawing pencil tool graphic"
+    },
+    "obj_eraser": {
+      "file": "assets/graphics/obj_eraser.png",
+      "default_scale": 0.5,
+      "description": "Eraser tool graphic"
+    },
+    "obj_door_closed": {
+      "file": "assets/graphics/obj_door_closed.png",
+      "default_scale": 1.1,
+      "description": "Closed door outline"
+    },
+    "obj_door_open": {
+      "file": "assets/graphics/obj_door_open.png",
+      "default_scale": 1.1,
+      "description": "Opened door outline"
+    },
+    "obj_chalk": {
+      "file": "assets/graphics/obj_chalk.png",
+      "default_scale": 0.5,
+      "description": "Chalk drawing tool graphic"
+    },
+    "obj_particle": {
+      "file": "assets/graphics/obj_particle.png",
+      "default_scale": 0.3,
+      "description": "Chalk dust or graphite powder particle"
+    },
+    "obj_notebook": {
+      "file": "assets/graphics/obj_notebook.png",
+      "default_scale": 1.0,
+      "description": "Open notebook page for pencil writing"
+    },
+    "obj_computer": {
+      "file": "assets/graphics/obj_computer.png",
+      "default_scale": 0.8,
+      "description": "Desktop computer monitor outline"
+    },
+    "obj_sejong_frame": {
+      "file": "assets/graphics/obj_sejong_frame.png",
+      "default_scale": 0.6,
+      "description": "King Sejong the Great framed portrait"
+    },
+    "obj_haerye_scroll": {
+      "file": "assets/graphics/obj_haerye_scroll.png",
+      "default_scale": 0.5,
+      "description": "Hunminjeongeum Haeryebon hanging scroll"
+    }
+  },
+  "animals": {
+    "animal_dog": {
+      "file": "assets/graphics/animal_dog.png",
+      "default_scale": 0.6,
+      "description": "Line art standing dog"
+    },
+    "animal_cat": {
+      "file": "assets/graphics/animal_cat.png",
+      "default_scale": 0.45,
+      "description": "Line art sitting cat"
+    }
+  },
+  "effects": {
+    "effect_checkmark": {
+      "file": "assets/graphics/effect_checkmark.png",
+      "default_scale": 1.0,
+      "description": "Red checkmark visual highlight"
+    },
+    "effect_underline": {
+      "file": "assets/graphics/effect_underline.png",
+      "default_scale": 1.0,
+      "description": "Gold yellow underline highlights"
+    },
+    "effect_arrow": {
+      "file": "assets/graphics/effect_arrow.png",
+      "default_scale": 0.8,
+      "description": "Sky blue annotation arrow"
+    },
+    "badge_1": {
+      "file": "assets/graphics/badge_1.png",
+      "default_scale": 0.9,
+      "description": "Elastic pop-in number badge 1"
+    },
+    "badge_2": {
+      "file": "assets/graphics/badge_2.png",
+      "default_scale": 0.9,
+      "description": "Elastic pop-in number badge 2"
+    },
+    "badge_3": {
+      "file": "assets/graphics/badge_3.png",
+      "default_scale": 0.9,
+      "description": "Elastic pop-in number badge 3"
+    }
+  }
+}

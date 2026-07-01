@@ -1,0 +1,1514 @@
+[
+ {
+  "week": 1,
+  "day": 1,
+  "place_no": 1,
+  "name_ko": "경복궁",
+  "name_en": "Gyeongbokgung Palace",
+  "region_ko": "서울",
+  "motif": "grand traditional Korean palace gate, tiled roofs, stone courtyard, hanbok colors, guards"
+ },
+ {
+  "week": 1,
+  "day": 2,
+  "place_no": 25,
+  "name_ko": "광화문광장",
+  "name_en": "Gwanghwamun Square",
+  "region_ko": "서울",
+  "motif": "open city plaza, large bronze seated King statue, palace gate behind, fountains, flags"
+ },
+ {
+  "week": 1,
+  "day": 3,
+  "place_no": 26,
+  "name_ko": "청계천",
+  "name_en": "Cheonggyecheon Stream",
+  "region_ko": "서울",
+  "motif": "narrow restored stream below street level, stepping stones, willow, city buildings above"
+ },
+ {
+  "week": 1,
+  "day": 4,
+  "place_no": 27,
+  "name_ko": "자갈치시장",
+  "name_en": "Jagalchi Market",
+  "region_ko": "부산",
+  "motif": "bustling seaside fish market, tanks and ice, grilling eel, harbor boats, ajummas selling"
+ },
+ {
+  "week": 1,
+  "day": 5,
+  "place_no": 28,
+  "name_ko": "해동용궁사",
+  "name_en": "Haedong Yonggungsa",
+  "region_ko": "부산",
+  "motif": "ornate Buddhist temple on sea cliffs, stone bridge, lanterns, waves crashing, sunrise"
+ },
+ {
+  "week": 1,
+  "day": 6,
+  "place_no": 29,
+  "name_ko": "첨성대",
+  "name_en": "Cheomseongdae",
+  "region_ko": "경주",
+  "motif": "ancient curved stone-bottle observatory tower on a lawn, flower field, night lighting, stars"
+ },
+ {
+  "week": 1,
+  "day": 7,
+  "place_no": 30,
+  "name_ko": "동궁과 월지",
+  "name_en": "Donggung & Wolji Pond",
+  "region_ko": "경주",
+  "motif": "lit wooden palace pavilions reflected in a calm pond at night, soft golden glow, reeds"
+ },
+ {
+  "week": 2,
+  "day": 1,
+  "place_no": 2,
+  "name_ko": "한강",
+  "name_en": "Han River",
+  "region_ko": "서울",
+  "motif": "wide calm river, city skyline far back, picnic mats, bicycles, a ramen cup, paddle boats, sunset"
+ },
+ {
+  "week": 2,
+  "day": 2,
+  "place_no": 31,
+  "name_ko": "수원화성",
+  "name_en": "Suwon Hwaseong Fortress",
+  "region_ko": "경기",
+  "motif": "long stone fortress wall with arched gates and watchtowers over a city, archery, night lights"
+ },
+ {
+  "week": 2,
+  "day": 3,
+  "place_no": 32,
+  "name_ko": "한국민속촌",
+  "name_en": "Korean Folk Village",
+  "region_ko": "경기",
+  "motif": "recreated folk village of hanok and thatch houses, clay jars, traditional performers, ox cart"
+ },
+ {
+  "week": 2,
+  "day": 4,
+  "place_no": 33,
+  "name_ko": "인천 차이나타운",
+  "name_en": "Incheon Chinatown",
+  "region_ko": "인천",
+  "motif": "red-and-gold Chinatown gate and street, lanterns, jjajangmyeon, nearby pastel fairy-tale walls"
+ },
+ {
+  "week": 2,
+  "day": 5,
+  "place_no": 34,
+  "name_ko": "가로수길",
+  "name_en": "Garosu-gil",
+  "region_ko": "서울",
+  "motif": "tree-lined street with ginkgo trees, stylish boutiques and cafes, yellow autumn leaves"
+ },
+ {
+  "week": 2,
+  "day": 6,
+  "place_no": 35,
+  "name_ko": "익선동",
+  "name_en": "Ikseon-dong",
+  "region_ko": "서울",
+  "motif": "very narrow hanok alley with cozy cafe entrances, hanging plants, warm lanterns, tiled roofs"
+ },
+ {
+  "week": 2,
+  "day": 7,
+  "place_no": 36,
+  "name_ko": "롯데월드 어드벤처",
+  "name_en": "Lotte World",
+  "region_ko": "서울",
+  "motif": "fairy-tale theme park castle, roller coaster, hot-air-balloon ride, colorful parade"
+ },
+ {
+  "week": 3,
+  "day": 1,
+  "place_no": 3,
+  "name_ko": "명동",
+  "name_en": "Myeongdong",
+  "region_ko": "서울",
+  "motif": "busy bright shopping street, food carts, cosmetic shop signs, skewers and hotteok, crowds"
+ },
+ {
+  "week": 3,
+  "day": 2,
+  "place_no": 37,
+  "name_ko": "우도",
+  "name_en": "Udo Island",
+  "region_ko": "제주",
+  "motif": "small green island coastline, rental scooters, lighthouse, white-and-emerald beach, stone walls"
+ },
+ {
+  "week": 3,
+  "day": 3,
+  "place_no": 38,
+  "name_ko": "섭지코지",
+  "name_en": "Seopjikoji",
+  "region_ko": "제주",
+  "motif": "grassy coastal cape, yellow canola flowers, white lighthouse, sea cliffs, Seongsan in distance"
+ },
+ {
+  "week": 3,
+  "day": 4,
+  "place_no": 39,
+  "name_ko": "여수 밤바다",
+  "name_en": "Yeosu Night Sea",
+  "region_ko": "전남",
+  "motif": "harbor at night, lit bridge over dark water, waterfront cafes and lights reflected, boats"
+ },
+ {
+  "week": 3,
+  "day": 5,
+  "place_no": 40,
+  "name_ko": "대릉원 천마총",
+  "name_en": "Daereungwon Tombs",
+  "region_ko": "경주",
+  "motif": "rows of large grassy royal tomb mounds, walking path, a single tree, soft morning light"
+ },
+ {
+  "week": 3,
+  "day": 6,
+  "place_no": 41,
+  "name_ko": "황리단길",
+  "name_en": "Hwangnidan-gil",
+  "region_ko": "경주",
+  "motif": "low hanok cafe street near grassy tomb mounds, hanbok renters, dessert cafes, lanterns"
+ },
+ {
+  "week": 3,
+  "day": 7,
+  "place_no": 42,
+  "name_ko": "안동하회마을",
+  "name_en": "Andong Hahoe Village",
+  "region_ko": "안동",
+  "motif": "river-bend traditional village of thatched and tiled houses, mask dancers, old pine, river"
+ },
+ {
+  "week": 4,
+  "day": 1,
+  "place_no": 4,
+  "name_ko": "남산서울타워",
+  "name_en": "Namsan Seoul Tower",
+  "region_ko": "서울",
+  "motif": "tall lookout tower on a green hill, cable car, fence of colorful love padlocks, city lights"
+ },
+ {
+  "week": 4,
+  "day": 2,
+  "place_no": 43,
+  "name_ko": "을지로 힙지로",
+  "name_en": "Euljiro (Hipjiro)",
+  "region_ko": "서울",
+  "motif": "retro back-alley at night, hidden bar signs, old printing shops, warm neon, dried-snack pub"
+ },
+ {
+  "week": 4,
+  "day": 3,
+  "place_no": 44,
+  "name_ko": "연남동",
+  "name_en": "Yeonnam-dong",
+  "region_ko": "서울",
+  "motif": "leafy neighborhood of brunch cafes, outdoor tables, plants, low brick houses, sunny"
+ },
+ {
+  "week": 4,
+  "day": 4,
+  "place_no": 45,
+  "name_ko": "통영 케이블카 미륵산",
+  "name_en": "Tongyeong Cable Car",
+  "region_ko": "경남",
+  "motif": "cable car rising to a peak overlooking a sea scattered with many small green islands"
+ },
+ {
+  "week": 4,
+  "day": 5,
+  "place_no": 46,
+  "name_ko": "담양 죽녹원",
+  "name_en": "Juknokwon Bamboo Forest",
+  "region_ko": "전남",
+  "motif": "tall dense green bamboo forest, sunlit path, wooden walkway, soft green shade, lantern"
+ },
+ {
+  "week": 4,
+  "day": 6,
+  "place_no": 47,
+  "name_ko": "보성 녹차밭",
+  "name_en": "Boseong Green Tea Fields",
+  "region_ko": "전남",
+  "motif": "steep hillside of curved green tea-plant terraces, tall cedar trees lining a path, misty green"
+ },
+ {
+  "week": 4,
+  "day": 7,
+  "place_no": 48,
+  "name_ko": "양산 통도사",
+  "name_en": "Tongdosa Temple",
+  "region_ko": "경남",
+  "motif": "grand sprawling temple complex among pines, pink plum blossoms, stone bridge, lanterns, hall"
+ },
+ {
+  "week": 5,
+  "day": 1,
+  "place_no": 5,
+  "name_ko": "북촌한옥마을",
+  "name_en": "Bukchon Hanok Village",
+  "region_ko": "서울",
+  "motif": "narrow sloping alley of traditional tiled-roof hanok houses, stone steps, potted plants"
+ },
+ {
+  "week": 5,
+  "day": 2,
+  "place_no": 49,
+  "name_ko": "반포한강공원 무지개분수",
+  "name_en": "Banpo Rainbow Fountain",
+  "region_ko": "서울",
+  "motif": "long bridge with arcs of rainbow-colored water fountains spraying into a river at dusk"
+ },
+ {
+  "week": 5,
+  "day": 3,
+  "place_no": 50,
+  "name_ko": "여의도한강공원",
+  "name_en": "Yeouido Hangang Park",
+  "region_ko": "서울",
+  "motif": "riverside park lined with cherry-blossom trees, picnic crowds, city towers, soft pink petals"
+ },
+ {
+  "week": 5,
+  "day": 4,
+  "place_no": 51,
+  "name_ko": "뚝섬한강공원",
+  "name_en": "Ttukseom Hangang Park",
+  "region_ko": "서울",
+  "motif": "river park with windsurfers and small boats, bike path, green lawn, picnic tents"
+ },
+ {
+  "week": 5,
+  "day": 5,
+  "place_no": 52,
+  "name_ko": "망원한강공원",
+  "name_en": "Mangwon Hangang Park",
+  "region_ko": "서울",
+  "motif": "grassy riverbank with picnic mats, a steaming ramen cup, friends sitting, bridge in distance"
+ },
+ {
+  "week": 5,
+  "day": 6,
+  "place_no": 53,
+  "name_ko": "올림픽공원",
+  "name_en": "Olympic Park",
+  "region_ko": "서울",
+  "motif": "huge green rolling lawn with a single iconic tree on a hill, blue sky, wildflowers"
+ },
+ {
+  "week": 5,
+  "day": 7,
+  "place_no": 54,
+  "name_ko": "서울숲",
+  "name_en": "Seoul Forest",
+  "region_ko": "서울",
+  "motif": "leafy urban forest park, deer in a glade, wooden path, picnic families, tall trees"
+ },
+ {
+  "week": 6,
+  "day": 1,
+  "place_no": 6,
+  "name_ko": "홍대",
+  "name_en": "Hongdae",
+  "region_ko": "서울",
+  "motif": "lively street with buskers and a small crowd, mural walls, neon cafe signs, guitars"
+ },
+ {
+  "week": 6,
+  "day": 2,
+  "place_no": 55,
+  "name_ko": "남산골한옥마을",
+  "name_en": "Namsangol Hanok Village",
+  "region_ko": "서울",
+  "motif": "cluster of hanok houses around a pond and garden, pavilion, traditional games, autumn trees"
+ },
+ {
+  "week": 6,
+  "day": 3,
+  "place_no": 56,
+  "name_ko": "북한산",
+  "name_en": "Bukhansan",
+  "region_ko": "서울",
+  "motif": "rugged granite peaks above a green forest, hikers on a ridge, city skyline far below"
+ },
+ {
+  "week": 6,
+  "day": 4,
+  "place_no": 57,
+  "name_ko": "낙산공원 성곽길",
+  "name_en": "Naksan Park City Wall",
+  "region_ko": "서울",
+  "motif": "old stone fortress wall along a hill, lamp-lit path, city lights below, evening sky"
+ },
+ {
+  "week": 6,
+  "day": 5,
+  "place_no": 58,
+  "name_ko": "연트럴파크 경의선숲길",
+  "name_en": "Gyeongui Line Forest Park",
+  "region_ko": "서울",
+  "motif": "long narrow green park on a former rail line, benches, cafes alongside, trees, couples walking"
+ },
+ {
+  "week": 6,
+  "day": 6,
+  "place_no": 59,
+  "name_ko": "코엑스 별마당도서관",
+  "name_en": "Starfield Library COEX",
+  "region_ko": "서울",
+  "motif": "huge two-story open library hall with towering bookshelves, soft lighting, people reading"
+ },
+ {
+  "week": 6,
+  "day": 7,
+  "place_no": 60,
+  "name_ko": "삼청동",
+  "name_en": "Samcheong-dong",
+  "region_ko": "서울",
+  "motif": "calm uphill alley beside palace walls, small galleries, cozy cafes, stone wall, trees"
+ },
+ {
+  "week": 7,
+  "day": 1,
+  "place_no": 7,
+  "name_ko": "인사동",
+  "name_en": "Insadong",
+  "region_ko": "서울",
+  "motif": "traditional craft street, hanji lanterns, tea house, pottery and brush shops, ginkgo trees"
+ },
+ {
+  "week": 7,
+  "day": 2,
+  "place_no": 61,
+  "name_ko": "대학로",
+  "name_en": "Daehangno",
+  "region_ko": "서울",
+  "motif": "street of small theaters with show posters, marquee lights, young crowd, plaza"
+ },
+ {
+  "week": 7,
+  "day": 3,
+  "place_no": 62,
+  "name_ko": "노량진수산시장",
+  "name_en": "Noryangjin Fish Market",
+  "region_ko": "서울",
+  "motif": "huge indoor fish market, tanks of live seafood, ice stalls, vendors, bright lights"
+ },
+ {
+  "week": 7,
+  "day": 4,
+  "place_no": 63,
+  "name_ko": "통인시장",
+  "name_en": "Tongin Market",
+  "region_ko": "서울",
+  "motif": "cozy covered market alley, side-dish stalls, a lunchbox tray, brass coins, friendly vendors"
+ },
+ {
+  "week": 7,
+  "day": 5,
+  "place_no": 64,
+  "name_ko": "한남동",
+  "name_en": "Hannam-dong",
+  "region_ko": "서울",
+  "motif": "stylish hillside street, minimalist boutiques and gallery, clean facades, design cafe"
+ },
+ {
+  "week": 7,
+  "day": 6,
+  "place_no": 65,
+  "name_ko": "석촌호수",
+  "name_en": "Seokchon Lake",
+  "region_ko": "서울",
+  "motif": "round city lake ringed with cherry blossoms, tower reflection, walking path, pink petals"
+ },
+ {
+  "week": 7,
+  "day": 7,
+  "place_no": 66,
+  "name_ko": "임진각 DMZ",
+  "name_en": "Imjingak DMZ",
+  "region_ko": "경기",
+  "motif": "peace park near the border, ribbons on a fence, old steam train, observation deck, wind pinwheels"
+ },
+ {
+  "week": 8,
+  "day": 1,
+  "place_no": 8,
+  "name_ko": "광장시장",
+  "name_en": "Gwangjang Market",
+  "region_ko": "서울",
+  "motif": "covered traditional market alley, food stalls, sizzling pancakes, bowls, red stools, steam"
+ },
+ {
+  "week": 8,
+  "day": 2,
+  "place_no": 67,
+  "name_ko": "DDP 동대문 야시장",
+  "name_en": "Dongdaemun Night Market",
+  "region_ko": "서울",
+  "motif": "bright night market, fashion stalls, food carts, busy late crowd, neon, paper cups of food"
+ },
+ {
+  "week": 8,
+  "day": 3,
+  "place_no": 68,
+  "name_ko": "태종대",
+  "name_en": "Taejongdae",
+  "region_ko": "부산",
+  "motif": "steep sea cliffs, white lighthouse, pine trees, blue ocean, a small train, viewpoint"
+ },
+ {
+  "week": 8,
+  "day": 4,
+  "place_no": 69,
+  "name_ko": "송도해상케이블카",
+  "name_en": "Songdo Marine Cable Car",
+  "region_ko": "부산",
+  "motif": "cable-car cabins crossing over blue sea between two headlands, beach and skywalk below"
+ },
+ {
+  "week": 8,
+  "day": 5,
+  "place_no": 70,
+  "name_ko": "흰여울문화마을",
+  "name_en": "Huinnyeoul Culture Village",
+  "region_ko": "부산",
+  "motif": "white houses on a cliff edge above the sea, narrow path, blue water, boats, laundry lines"
+ },
+ {
+  "week": 8,
+  "day": 6,
+  "place_no": 71,
+  "name_ko": "국제시장 BIFF광장",
+  "name_en": "Gukje Market & BIFF Square",
+  "region_ko": "부산",
+  "motif": "lively market street, handprint plaques, hotteok griddle, food stalls, movie posters"
+ },
+ {
+  "week": 8,
+  "day": 7,
+  "place_no": 72,
+  "name_ko": "다대포해수욕장",
+  "name_en": "Dadaepo Beach",
+  "region_ko": "부산",
+  "motif": "wide flat beach at sunset, shallow tide pools reflecting orange sky, fountain jets, silhouettes"
+ },
+ {
+  "week": 9,
+  "day": 1,
+  "place_no": 9,
+  "name_ko": "해운대해수욕장",
+  "name_en": "Haeundae Beach",
+  "region_ko": "부산",
+  "motif": "long sandy city beach, high-rise hotels behind, parasols, gentle waves, beachgoers"
+ },
+ {
+  "week": 9,
+  "day": 2,
+  "place_no": 73,
+  "name_ko": "송정해수욕장",
+  "name_en": "Songjeong Beach",
+  "region_ko": "부산",
+  "motif": "mellow beach with surfers and longboards, surf shops, gentle waves, palm-lined road"
+ },
+ {
+  "week": 9,
+  "day": 3,
+  "place_no": 74,
+  "name_ko": "용두산공원 부산타워",
+  "name_en": "Busan Tower Yongdusan",
+  "region_ko": "부산",
+  "motif": "park on a hill with a tall tower, pigeons, old downtown and harbor view, pine trees"
+ },
+ {
+  "week": 9,
+  "day": 4,
+  "place_no": 75,
+  "name_ko": "오륙도 스카이워크",
+  "name_en": "Oryukdo Skywalk",
+  "region_ko": "부산",
+  "motif": "U-shaped glass skywalk off a cliff, blue sea below, rocky islets on the horizon"
+ },
+ {
+  "week": 9,
+  "day": 5,
+  "place_no": 76,
+  "name_ko": "블루라인파크 해변열차",
+  "name_en": "Blueline Park Beach Train",
+  "region_ko": "부산",
+  "motif": "colorful sky-capsule pods and a small train on a coastal rail beside turquoise sea, cafes"
+ },
+ {
+  "week": 9,
+  "day": 6,
+  "place_no": 77,
+  "name_ko": "만장굴",
+  "name_en": "Manjanggul Cave",
+  "region_ko": "제주",
+  "motif": "dark basalt lava tube cave, lit walkway, towering lava column, dripping rock textures"
+ },
+ {
+  "week": 9,
+  "day": 7,
+  "place_no": 78,
+  "name_ko": "천지연폭포",
+  "name_en": "Cheonjiyeon Falls",
+  "region_ko": "제주",
+  "motif": "wide waterfall into a green pool, lush subtropical plants, wooden viewing deck, mist"
+ },
+ {
+  "week": 10,
+  "day": 1,
+  "place_no": 10,
+  "name_ko": "광안리 광안대교",
+  "name_en": "Gwangalli & Diamond Bridge",
+  "region_ko": "부산",
+  "motif": "beach at night facing a long lit suspension bridge, drone-light show in sky, cafes glowing"
+ },
+ {
+  "week": 10,
+  "day": 2,
+  "place_no": 79,
+  "name_ko": "주상절리대",
+  "name_en": "Jusangjeolli Cliffs",
+  "region_ko": "제주",
+  "motif": "dark hexagonal basalt columns by the sea, white waves crashing, viewpoint railing, blue water"
+ },
+ {
+  "week": 10,
+  "day": 3,
+  "place_no": 80,
+  "name_ko": "애월 카페거리",
+  "name_en": "Aewol Cafe Street",
+  "region_ko": "제주",
+  "motif": "seaside cafes with big windows and terraces facing turquoise sea, palms, parked scooters"
+ },
+ {
+  "week": 10,
+  "day": 4,
+  "place_no": 81,
+  "name_ko": "오설록 티뮤지엄",
+  "name_en": "Osulloc Tea Museum",
+  "region_ko": "제주",
+  "motif": "rolling green tea-plant rows in neat curves, modern cafe, green-tea desserts, blue sky"
+ },
+ {
+  "week": 10,
+  "day": 5,
+  "place_no": 82,
+  "name_ko": "비자림",
+  "name_en": "Bijarim Forest",
+  "region_ko": "제주",
+  "motif": "dense ancient forest, red volcanic-soil path, mossy thick trees, dappled green light"
+ },
+ {
+  "week": 10,
+  "day": 6,
+  "place_no": 83,
+  "name_ko": "새별오름",
+  "name_en": "Saebyeol Oreum",
+  "region_ko": "제주",
+  "motif": "smooth grassy volcanic cone covered in silver pampas grass, sunset sky, trail to top"
+ },
+ {
+  "week": 10,
+  "day": 7,
+  "place_no": 84,
+  "name_ko": "함덕해수욕장",
+  "name_en": "Hamdeok Beach",
+  "region_ko": "제주",
+  "motif": "shallow emerald beach beside a small green hill, white sand, palm cafes, paddleboards"
+ },
+ {
+  "week": 11,
+  "day": 1,
+  "place_no": 11,
+  "name_ko": "감천문화마을",
+  "name_en": "Gamcheon Culture Village",
+  "region_ko": "부산",
+  "motif": "hillside of colorful pastel cube houses stacked like steps, narrow stairs, murals, sea view"
+ },
+ {
+  "week": 11,
+  "day": 2,
+  "place_no": 85,
+  "name_ko": "석굴암",
+  "name_en": "Seokguram Grotto",
+  "region_ko": "경주",
+  "motif": "domed stone grotto with a serene seated Buddha statue, soft light, mountain morning, pines"
+ },
+ {
+  "week": 11,
+  "day": 3,
+  "place_no": 86,
+  "name_ko": "월영교",
+  "name_en": "Woryeonggyo Bridge",
+  "region_ko": "안동",
+  "motif": "long arched wooden footbridge over a calm river at night, lantern lights, pavilion, reflection"
+ },
+ {
+  "week": 11,
+  "day": 4,
+  "place_no": 87,
+  "name_ko": "부석사",
+  "name_en": "Buseoksa Temple",
+  "region_ko": "경북",
+  "motif": "old mountainside temple, wooden hall, rows of ridgelines fading into sunset haze, stone steps"
+ },
+ {
+  "week": 11,
+  "day": 5,
+  "place_no": 88,
+  "name_ko": "양동마을",
+  "name_en": "Yangdong Village",
+  "region_ko": "경주",
+  "motif": "hillside traditional village, tiled and straw-roof houses among fields, stone walls, trees"
+ },
+ {
+  "week": 11,
+  "day": 6,
+  "place_no": 89,
+  "name_ko": "문경새재",
+  "name_en": "Mungyeong Saejae",
+  "region_ko": "경북",
+  "motif": "old stone-and-wood fortress gate on a mountain trail, autumn foliage, dirt path, stream"
+ },
+ {
+  "week": 11,
+  "day": 7,
+  "place_no": 90,
+  "name_ko": "경기전",
+  "name_en": "Gyeonggijeon Shrine",
+  "region_ko": "전주",
+  "motif": "old shrine courtyard with tiled gate, bamboo grove path, stone lanterns, hanbok visitors"
+ },
+ {
+  "week": 12,
+  "day": 1,
+  "place_no": 12,
+  "name_ko": "성산일출봉",
+  "name_en": "Seongsan Ilchulbong",
+  "region_ko": "제주",
+  "motif": "huge green volcanic crater rising from the sea, hiking path, sunrise glow, fields below"
+ },
+ {
+  "week": 12,
+  "day": 2,
+  "place_no": 91,
+  "name_ko": "자만벽화마을",
+  "name_en": "Jaman Mural Village",
+  "region_ko": "전주",
+  "motif": "steep alley with cheerful wall murals, small steps, cafes, potted flowers, hanok rooftops below"
+ },
+ {
+  "week": 12,
+  "day": 3,
+  "place_no": 92,
+  "name_ko": "공산성",
+  "name_en": "Gongsanseong Fortress",
+  "region_ko": "충청",
+  "motif": "earthen-and-stone fortress wall along a green hill, river bend below, pavilion, flags, pines"
+ },
+ {
+  "week": 12,
+  "day": 4,
+  "place_no": 93,
+  "name_ko": "궁남지",
+  "name_en": "Gungnamji Pond",
+  "region_ko": "충청",
+  "motif": "large lotus-filled pond with a wooden pavilion on an island, arched bridge, pink lotus, dusk"
+ },
+ {
+  "week": 12,
+  "day": 5,
+  "place_no": 94,
+  "name_ko": "대전 성심당",
+  "name_en": "Daejeon Sungsimdang",
+  "region_ko": "충청",
+  "motif": "warm bustling bakery, trays of golden pastries, long happy queue, bread baskets, cozy lights"
+ },
+ {
+  "week": 12,
+  "day": 6,
+  "place_no": 95,
+  "name_ko": "도담삼봉",
+  "name_en": "Dodamsambong",
+  "region_ko": "충청",
+  "motif": "three pointed rock peaks in a wide river, small pavilion on the central peak, mountains, boat"
+ },
+ {
+  "week": 12,
+  "day": 7,
+  "place_no": 96,
+  "name_ko": "만천하스카이워크",
+  "name_en": "Mancheonha Skywalk",
+  "region_ko": "충청",
+  "motif": "spiral glass skywalk tower over a green river valley, vertigo view, forested hills, zip-line"
+ },
+ {
+  "week": 13,
+  "day": 1,
+  "place_no": 13,
+  "name_ko": "협재해수욕장",
+  "name_en": "Hyeopjae Beach",
+  "region_ko": "제주",
+  "motif": "white-sand beach with emerald shallow water, a small island offshore, palm trees, clear sky"
+ },
+ {
+  "week": 13,
+  "day": 2,
+  "place_no": 97,
+  "name_ko": "경포대 경포해변",
+  "name_en": "Gyeongpodae & Gyeongpo Beach",
+  "region_ko": "강원",
+  "motif": "long sandy east-sea beach beside a calm lagoon, pine forest, pavilion, sunrise over water"
+ },
+ {
+  "week": 13,
+  "day": 3,
+  "place_no": 98,
+  "name_ko": "안목해변 커피거리",
+  "name_en": "Anmok Coffee Street",
+  "region_ko": "강원",
+  "motif": "row of cafes facing the sea, big windows, coffee cups, beach and breakwater, gulls"
+ },
+ {
+  "week": 13,
+  "day": 4,
+  "place_no": 99,
+  "name_ko": "정동진",
+  "name_en": "Jeongdongjin",
+  "region_ko": "강원",
+  "motif": "small train station meters from the sea, tracks along the shore, sunrise over water, train"
+ },
+ {
+  "week": 13,
+  "day": 5,
+  "place_no": 100,
+  "name_ko": "속초중앙시장",
+  "name_en": "Sokcho Jungang Market",
+  "region_ko": "강원",
+  "motif": "lively market arcade, glossy sweet-chicken stalls, seafood, paper cups, steam, vendors"
+ },
+ {
+  "week": 13,
+  "day": 6,
+  "place_no": 101,
+  "name_ko": "대관령 양떼목장",
+  "name_en": "Daegwallyeong Sheep Farm",
+  "region_ko": "강원",
+  "motif": "rolling green highland meadow with white sheep, wooden fences, wind turbines on ridge, blue sky"
+ },
+ {
+  "week": 13,
+  "day": 7,
+  "place_no": 102,
+  "name_ko": "월정사 전나무숲길",
+  "name_en": "Woljeongsa Fir Forest",
+  "region_ko": "강원",
+  "motif": "tall straight fir-tree forest path, soft earth trail, temple gate, mist, green light"
+ },
+ {
+  "week": 14,
+  "day": 1,
+  "place_no": 14,
+  "name_ko": "한라산",
+  "name_en": "Hallasan",
+  "region_ko": "제주",
+  "motif": "tall shield volcano above clouds, hiking trail through low brush, crater lake, autumn colors"
+ },
+ {
+  "week": 14,
+  "day": 2,
+  "place_no": 103,
+  "name_ko": "정선 레일바이크",
+  "name_en": "Jeongseon Rail Bike",
+  "region_ko": "강원",
+  "motif": "rail bikes on old train tracks through a green valley, river beside, tunnels, autumn hills"
+ },
+ {
+  "week": 14,
+  "day": 3,
+  "place_no": 104,
+  "name_ko": "춘천 닭갈비골목",
+  "name_en": "Chuncheon Dakgalbi Alley",
+  "region_ko": "강원",
+  "motif": "sizzling chicken-galbi griddle alley, cabbage and rice cake, steam, lake and bridge nearby"
+ },
+ {
+  "week": 14,
+  "day": 4,
+  "place_no": 105,
+  "name_ko": "양양 서피비치",
+  "name_en": "Yangyang Surfyy Beach",
+  "region_ko": "강원",
+  "motif": "wide surf beach with surfboards, beach bar with parasols and bean bags, sunset, surfers"
+ },
+ {
+  "week": 14,
+  "day": 5,
+  "place_no": 106,
+  "name_ko": "인제 자작나무숲",
+  "name_en": "Inje Birch Forest",
+  "region_ko": "강원",
+  "motif": "dense forest of slender white birch trunks, snow or green floor, soft light, winding trail"
+ },
+ {
+  "week": 14,
+  "day": 6,
+  "place_no": 107,
+  "name_ko": "여수 해상케이블카",
+  "name_en": "Yeosu Cable Car",
+  "region_ko": "전남",
+  "motif": "cable car with clear-floor cabins over a blue strait between two hills, harbor and bridge below"
+ },
+ {
+  "week": 14,
+  "day": 7,
+  "place_no": 108,
+  "name_ko": "순천만습지",
+  "name_en": "Suncheonman Wetland",
+  "region_ko": "전남",
+  "motif": "endless golden reed wetland with an S-shaped water channel, sunset, boardwalk, flying cranes"
+ },
+ {
+  "week": 15,
+  "day": 1,
+  "place_no": 15,
+  "name_ko": "불국사",
+  "name_en": "Bulguksa Temple",
+  "region_ko": "경주",
+  "motif": "grand old wooden temple, stone stairways and pagodas, autumn maples, lotus pond, tiled roofs"
+ },
+ {
+  "week": 15,
+  "day": 2,
+  "place_no": 109,
+  "name_ko": "메타세쿼이아길",
+  "name_en": "Metasequoia Road",
+  "region_ko": "전남",
+  "motif": "long straight road lined with tall symmetrical metasequoia trees, cyclists, autumn russet"
+ },
+ {
+  "week": 15,
+  "day": 3,
+  "place_no": 110,
+  "name_ko": "동피랑벽화마을",
+  "name_en": "Dongpirang Mural Village",
+  "region_ko": "경남",
+  "motif": "steep alley of murals on a hill above a fishing harbor, colorful walls, boats and sea below"
+ },
+ {
+  "week": 15,
+  "day": 4,
+  "place_no": 111,
+  "name_ko": "외도 보타니아",
+  "name_en": "Oedo Botania",
+  "region_ko": "경남",
+  "motif": "lush garden island with topiary, white statues, cypress, flower beds, blue sea all around"
+ },
+ {
+  "week": 15,
+  "day": 5,
+  "place_no": 112,
+  "name_ko": "바람의언덕",
+  "name_en": "Windy Hill Geoje",
+  "region_ko": "경남",
+  "motif": "grassy seaside hill with a white windmill, wooden path, blue sea and islets, wind, couples"
+ },
+ {
+  "week": 15,
+  "day": 6,
+  "place_no": 113,
+  "name_ko": "남해 다랑이마을",
+  "name_en": "Namhae Darangyi Village",
+  "region_ko": "경남",
+  "motif": "terraced rice paddies stepping down a steep coast to the sea, stone walls, village houses"
+ },
+ {
+  "week": 15,
+  "day": 7,
+  "place_no": 114,
+  "name_ko": "광주 양림동",
+  "name_en": "Gwangju Yangnim-dong",
+  "region_ko": "광주",
+  "motif": "quiet old-modern neighborhood, brick missionary houses, mural alleys, cafes, big trees"
+ },
+ {
+  "week": 16,
+  "day": 1,
+  "place_no": 16,
+  "name_ko": "전주한옥마을",
+  "name_en": "Jeonju Hanok Village",
+  "region_ko": "전주",
+  "motif": "wide hanok village of tiled roofs, hanbok visitors, food stalls, bibimbap bowl, lanterns"
+ },
+ {
+  "week": 16,
+  "day": 2,
+  "place_no": 115,
+  "name_ko": "월미도",
+  "name_en": "Wolmido",
+  "region_ko": "인천",
+  "motif": "seaside boardwalk with amusement rides, a spinning disco ride, grilled-clam stalls, ferry, gulls"
+ },
+ {
+  "week": 16,
+  "day": 3,
+  "place_no": 116,
+  "name_ko": "송도 센트럴파크",
+  "name_en": "Songdo Central Park",
+  "region_ko": "인천",
+  "motif": "modern park with a seawater canal, water taxi, sleek glass towers around, lawns, kayaks"
+ },
+ {
+  "week": 16,
+  "day": 4,
+  "place_no": 117,
+  "name_ko": "강화도 전등사",
+  "name_en": "Ganghwa Jeondeungsa",
+  "region_ko": "인천",
+  "motif": "old wooden temple within forested hills, fortress wall, dolmen stone, lotus lanterns"
+ },
+ {
+  "week": 16,
+  "day": 5,
+  "place_no": 118,
+  "name_ko": "헤이리예술마을",
+  "name_en": "Heyri Art Village",
+  "region_ko": "경기",
+  "motif": "village of artistic modern buildings, sculpture gardens, design cafes, galleries, trees"
+ },
+ {
+  "week": 16,
+  "day": 6,
+  "place_no": 119,
+  "name_ko": "쁘띠프랑스",
+  "name_en": "Petite France",
+  "region_ko": "경기",
+  "motif": "cluster of colorful European-style houses on a hill, Little Prince statue, lake view, flowers"
+ },
+ {
+  "week": 16,
+  "day": 7,
+  "place_no": 120,
+  "name_ko": "아침고요수목원",
+  "name_en": "Garden of Morning Calm",
+  "region_ko": "경기",
+  "motif": "landscaped flower gardens on hills, winding paths, in winter draped with colorful fairy lights"
+ },
+ {
+  "week": 17,
+  "day": 1,
+  "place_no": 17,
+  "name_ko": "남이섬",
+  "name_en": "Nami Island",
+  "region_ko": "강원",
+  "motif": "long straight tree-lined lane of tall metasequoia, couple walking, bicycles, autumn or snow"
+ },
+ {
+  "week": 17,
+  "day": 2,
+  "place_no": 121,
+  "name_ko": "허브아일랜드",
+  "name_en": "Herb Island",
+  "region_ko": "경기",
+  "motif": "herb-garden village with greenhouses, lavender, evening lantern lights, fountains, photo arches"
+ },
+ {
+  "week": 17,
+  "day": 3,
+  "place_no": 122,
+  "name_ko": "양평 두물머리",
+  "name_en": "Yangpyeong Dumulmeori",
+  "region_ko": "경기",
+  "motif": "calm wide river confluence at dawn, morning mist, a huge old zelkova tree, small wooden boat"
+ },
+ {
+  "week": 17,
+  "day": 4,
+  "place_no": 123,
+  "name_ko": "찜질방",
+  "name_en": "Jjimjilbang",
+  "region_ko": "전국",
+  "motif": "warm spa lounge, people in matching pajamas with towel 'sheep' hats, heated floor, sikhye drink"
+ },
+ {
+  "week": 17,
+  "day": 5,
+  "place_no": 124,
+  "name_ko": "한강 라면 편의점",
+  "name_en": "Hangang Ramen & CU",
+  "region_ko": "서울",
+  "motif": "riverside convenience store at night, ramen-cooking machine, picnic mat, beer, city lights"
+ },
+ {
+  "week": 17,
+  "day": 6,
+  "place_no": 125,
+  "name_ko": "노래방",
+  "name_en": "Noraebang",
+  "region_ko": "전국",
+  "motif": "small song room glowing with neon and a disco ball, big screen lyrics, microphones, tambourine"
+ },
+ {
+  "week": 17,
+  "day": 7,
+  "place_no": 126,
+  "name_ko": "PC방",
+  "name_en": "PC Bang",
+  "region_ko": "전국",
+  "motif": "rows of gaming PCs with glowing keyboards, gamers in chairs, a bowl of ramen, dim neon lighting"
+ },
+ {
+  "week": 18,
+  "day": 1,
+  "place_no": 18,
+  "name_ko": "설악산",
+  "name_en": "Seoraksan",
+  "region_ko": "강원",
+  "motif": "jagged granite peaks blazing with red-orange autumn foliage, cable car, temple, stream, blue sky"
+ },
+ {
+  "week": 18,
+  "day": 2,
+  "place_no": 127,
+  "name_ko": "치맥",
+  "name_en": "Chimaek (Chicken & Beer)",
+  "region_ko": "전국",
+  "motif": "table with golden fried chicken, frothy beer mugs, pickled radish, friends toasting, warm pub"
+ },
+ {
+  "week": 18,
+  "day": 3,
+  "place_no": 128,
+  "name_ko": "포장마차",
+  "name_en": "Pojangmacha",
+  "region_ko": "전국",
+  "motif": "orange-tent street food stall at night, steaming fish cakes and tteokbokki, soju, stools, lantern"
+ },
+ {
+  "week": 18,
+  "day": 4,
+  "place_no": 129,
+  "name_ko": "전통시장",
+  "name_en": "Traditional Market",
+  "region_ko": "전국",
+  "motif": "covered traditional market alley, produce and food stalls, hanging signs, busy shoppers, steam"
+ },
+ {
+  "week": 18,
+  "day": 5,
+  "place_no": 130,
+  "name_ko": "템플스테이",
+  "name_en": "Templestay",
+  "region_ko": "전국",
+  "motif": "mountain temple courtyard at dawn, monk and visitors in grey robes, lotus lanterns, misty pines"
+ },
+ {
+  "week": 18,
+  "day": 6,
+  "place_no": 131,
+  "name_ko": "진해 군항제",
+  "name_en": "Jinhae Cherry Blossom Festival",
+  "region_ko": "경남",
+  "motif": "tunnel of cherry-blossom trees over old train tracks, falling pink petals, crowds, stream bridge"
+ },
+ {
+  "week": 18,
+  "day": 7,
+  "place_no": 132,
+  "name_ko": "화천 산천어축제",
+  "name_en": "Hwacheon Sancheoneo Ice Festival",
+  "region_ko": "강원",
+  "motif": "frozen river dotted with ice-fishing holes, people bundled up, ice sculptures, snow, sledding"
+ },
+ {
+  "week": 19,
+  "day": 1,
+  "place_no": 19,
+  "name_ko": "강남",
+  "name_en": "Gangnam",
+  "region_ko": "서울",
+  "motif": "wide modern boulevard with glass towers, fashion boutiques, busy crosswalk, city energy"
+ },
+ {
+  "week": 19,
+  "day": 2,
+  "place_no": 133,
+  "name_ko": "부산 더베이101",
+  "name_en": "The Bay 101 Busan",
+  "region_ko": "부산",
+  "motif": "marina at night, yachts, glowing high-rise towers reflected on calm water, waterfront cafe"
+ },
+ {
+  "week": 19,
+  "day": 3,
+  "place_no": 134,
+  "name_ko": "카멜리아힐",
+  "name_en": "Camellia Hill",
+  "region_ko": "제주",
+  "motif": "garden hill of blooming red camellia trees, fallen red petals on a path, ponds, pampas grass"
+ },
+ {
+  "week": 19,
+  "day": 4,
+  "place_no": 135,
+  "name_ko": "군산 근대역사거리",
+  "name_en": "Gunsan Modern History Street",
+  "region_ko": "전남",
+  "motif": "old early-1900s street, brick bank and warehouses, vintage signs, rail crossing, retro mood"
+ },
+ {
+  "week": 19,
+  "day": 5,
+  "place_no": 136,
+  "name_ko": "포항 호미곶",
+  "name_en": "Homigot Cape",
+  "region_ko": "경북",
+  "motif": "rocky cape at sunrise, a large bronze hand sculpture rising from the sea, orange sky, lighthouse"
+ },
+ {
+  "week": 19,
+  "day": 6,
+  "place_no": 137,
+  "name_ko": "울산 간절곶",
+  "name_en": "Ganjeolgot Cape",
+  "region_ko": "경남",
+  "motif": "grassy coastal cape with a tall white lighthouse, sunrise over the sea, mailbox sculpture, path"
+ },
+ {
+  "week": 19,
+  "day": 7,
+  "place_no": 138,
+  "name_ko": "대구 김광석거리",
+  "name_en": "Daegu Kim Kwang-seok Street",
+  "region_ko": "경북",
+  "motif": "narrow alley of music-themed murals, a guitar statue, busking corner, warm string lights"
+ },
+ {
+  "week": 20,
+  "day": 1,
+  "place_no": 20,
+  "name_ko": "이태원",
+  "name_en": "Itaewon",
+  "region_ko": "서울",
+  "motif": "hilly international street, world-cuisine signs, rooftop terrace, string lights, mixed crowd"
+ },
+ {
+  "week": 20,
+  "day": 2,
+  "place_no": 139,
+  "name_ko": "거제 매미성",
+  "name_en": "Geoje Maemiseong",
+  "region_ko": "경남",
+  "motif": "rustic curved stone castle wall on a rocky coast, blue sea, small turret, climbing path"
+ },
+ {
+  "week": 20,
+  "day": 3,
+  "place_no": 140,
+  "name_ko": "영월 한반도지형",
+  "name_en": "Yeongwol Korea-Shape Land",
+  "region_ko": "강원",
+  "motif": "forested river peninsula shaped like the Korea map, viewpoint deck, raft, green water, hills"
+ },
+ {
+  "week": 20,
+  "day": 4,
+  "place_no": 141,
+  "name_ko": "태안 꽃지해변",
+  "name_en": "Taean Kkotji Beach",
+  "region_ko": "충청",
+  "motif": "wide tidal beach at sunset, two rock islets silhouetted, orange-pink sky reflected on wet sand"
+ },
+ {
+  "week": 20,
+  "day": 5,
+  "place_no": 142,
+  "name_ko": "영남루",
+  "name_en": "Yeongnamnu Pavilion",
+  "region_ko": "경남",
+  "motif": "elegant wooden riverside pavilion with sweeping tiled roof above a calm river, night lights, reflection"
+ },
+ {
+  "week": 20,
+  "day": 6,
+  "place_no": 143,
+  "name_ko": "밀양 표충사",
+  "name_en": "Pyochungsa Temple Miryang",
+  "region_ko": "경남",
+  "motif": "old temple courtyard at the foot of a mountain, red-orange autumn maples, stone pagoda, stream"
+ },
+ {
+  "week": 20,
+  "day": 7,
+  "place_no": 144,
+  "name_ko": "밀양 얼음골",
+  "name_en": "Eoreumgol Ice Valley",
+  "region_ko": "경남",
+  "motif": "rocky shaded mountain valley with ice patches among boulders, cold stream, green cliffs, mist"
+ },
+ {
+  "week": 21,
+  "day": 1,
+  "place_no": 21,
+  "name_ko": "성수동",
+  "name_en": "Seongsu-dong",
+  "region_ko": "서울",
+  "motif": "red-brick converted-warehouse cafe street, big windows, plants, pop-up store, industrial chic"
+ },
+ {
+  "week": 21,
+  "day": 2,
+  "place_no": 145,
+  "name_ko": "밀양 호박소",
+  "name_en": "Hobakso Pool",
+  "region_ko": "경남",
+  "motif": "deep emerald pool in a smooth granite gorge, small waterfall, green forest, clear water"
+ },
+ {
+  "week": 21,
+  "day": 3,
+  "place_no": 146,
+  "name_ko": "밀양 위양지",
+  "name_en": "Wiyangji Pond",
+  "region_ko": "경남",
+  "motif": "calm pond with a tiny island pavilion, white snowbell trees in bloom reflected on still water"
+ },
+ {
+  "week": 21,
+  "day": 4,
+  "place_no": 147,
+  "name_ko": "밀양 만어사",
+  "name_en": "Maneosa Temple",
+  "region_ko": "경남",
+  "motif": "mountain temple above a vast slope of grey boulders, valley view, pagoda, morning light"
+ },
+ {
+  "week": 21,
+  "day": 5,
+  "place_no": 148,
+  "name_ko": "밀양 월연정",
+  "name_en": "Wolyeonjeong Pavilion",
+  "region_ko": "경남",
+  "motif": "wooden pavilion on a wooded riverside cliff, old stone rail tunnel, pine trees, calm river"
+ },
+ {
+  "week": 21,
+  "day": 6,
+  "place_no": 149,
+  "name_ko": "밀양 종남산 진달래",
+  "name_en": "Jongnamsan Azaleas",
+  "region_ko": "경남",
+  "motif": "mountain ridge covered in pink azalea blossoms, winding trail, valley and river view below"
+ },
+ {
+  "week": 21,
+  "day": 7,
+  "place_no": 150,
+  "name_ko": "밀양 재약산 사자평",
+  "name_en": "Sajapyeong Highland",
+  "region_ko": "경남",
+  "motif": "wide highland plateau of silvery pampas grass, rolling ridges, hikers, blue autumn sky"
+ },
+ {
+  "week": 22,
+  "day": 1,
+  "place_no": 22,
+  "name_ko": "롯데월드타워 서울스카이",
+  "name_en": "Lotte World Tower Seoul Sky",
+  "region_ko": "서울",
+  "motif": "very tall glass skyscraper, observation deck view of city grid and river, glass floor, clouds"
+ },
+ {
+  "week": 22,
+  "day": 2,
+  "place_no": 151,
+  "name_ko": "밀양댐",
+  "name_en": "Miryang Dam Lake",
+  "region_ko": "경남",
+  "motif": "calm reservoir lake among green mountains, winding lakeside road, viewpoint, reflection"
+ },
+ {
+  "week": 22,
+  "day": 3,
+  "place_no": 152,
+  "name_ko": "양산 내원사 계곡",
+  "name_en": "Naewonsa Valley",
+  "region_ko": "경남",
+  "motif": "clear rocky mountain stream with pools, red-yellow autumn trees, wooden bridge, temple gate"
+ },
+ {
+  "week": 22,
+  "day": 4,
+  "place_no": 153,
+  "name_ko": "양산 천성산",
+  "name_en": "Cheonseongsan",
+  "region_ko": "경남",
+  "motif": "broad mountaintop meadow of silver grass and small wetland ponds, distant ridges, blue sky"
+ },
+ {
+  "week": 22,
+  "day": 5,
+  "place_no": 154,
+  "name_ko": "양산 영축산",
+  "name_en": "Yeongchuksan",
+  "region_ko": "경남",
+  "motif": "long grassy-and-rock mountain ridge under big sky, hikers on the crest, sea of distant peaks"
+ },
+ {
+  "week": 22,
+  "day": 6,
+  "place_no": 155,
+  "name_ko": "양산 홍룡폭포",
+  "name_en": "Hongnyong Falls",
+  "region_ko": "경남",
+  "motif": "tall three-tier waterfall with rainbow in the spray, small shrine behind the water, green cliffs"
+ },
+ {
+  "week": 22,
+  "day": 7,
+  "place_no": 156,
+  "name_ko": "양산 배내골",
+  "name_en": "Baenaegol Valley",
+  "region_ko": "경남",
+  "motif": "clear cool valley stream among forested mountains, smooth rocks, swimming pools, camp tents"
+ },
+ {
+  "week": 23,
+  "day": 1,
+  "place_no": 23,
+  "name_ko": "에버랜드",
+  "name_en": "Everland",
+  "region_ko": "경기",
+  "motif": "big theme park with tulip fields, a panda, a tall wooden roller coaster, flower parade"
+ },
+ {
+  "week": 23,
+  "day": 2,
+  "place_no": 157,
+  "name_ko": "양산 황산공원",
+  "name_en": "Hwangsan Park",
+  "region_ko": "경남",
+  "motif": "vast riverside park with colorful flower fields, bike path, river and bridge, picnic lawn"
+ },
+ {
+  "week": 23,
+  "day": 3,
+  "place_no": 158,
+  "name_ko": "양산 신불산 억새",
+  "name_en": "Sinbulsan Silver Grass",
+  "region_ko": "경남",
+  "motif": "endless golden silver-grass field on a high ridge at sunset, trail, glowing seed heads, peaks"
+ },
+ {
+  "week": 23,
+  "day": 4,
+  "place_no": 159,
+  "name_ko": "부산 이기대 해안산책로",
+  "name_en": "Igidae Coastal Trail",
+  "region_ko": "부산",
+  "motif": "rugged coastal cliff trail with wooden walkways, blue sea, distant bridge and skyline, pine"
+ },
+ {
+  "week": 23,
+  "day": 5,
+  "place_no": 160,
+  "name_ko": "부산 동백섬 누리마루",
+  "name_en": "Dongbaekseom Nurimaru",
+  "region_ko": "부산",
+  "motif": "wooded seaside island path with camellia trees, a domed pavilion on rocks, sea and skyline"
+ },
+ {
+  "week": 23,
+  "day": 6,
+  "place_no": 161,
+  "name_ko": "부산시민공원",
+  "name_en": "Busan Citizens Park",
+  "region_ko": "부산",
+  "motif": "spacious city park with green lawns, a long fountain canal, tree-lined paths, families"
+ },
+ {
+  "week": 23,
+  "day": 7,
+  "place_no": 162,
+  "name_ko": "부산 보수동 책방골목",
+  "name_en": "Bosu-dong Book Alley",
+  "region_ko": "부산",
+  "motif": "narrow alley with secondhand bookshops, books stacked floor to ceiling, hand-painted signs"
+ },
+ {
+  "week": 24,
+  "day": 1,
+  "place_no": 24,
+  "name_ko": "동대문디자인플라자",
+  "name_en": "Dongdaemun DDP",
+  "region_ko": "서울",
+  "motif": "sleek silver curved futuristic building at dusk, glowing LED roses, soft purple lights"
+ },
+ {
+  "week": 24,
+  "day": 2,
+  "place_no": 163,
+  "name_ko": "부산 황령산 야경",
+  "name_en": "Hwangnyeongsan Night View",
+  "region_ko": "부산",
+  "motif": "hilltop view of a glittering night city wrapping around a dark bay, lit bridge, observation deck"
+ },
+ {
+  "week": 24,
+  "day": 3,
+  "place_no": 164,
+  "name_ko": "부산 송도해수욕장",
+  "name_en": "Songdo Beach Busan",
+  "region_ko": "부산",
+  "motif": "curved sandy bay beach, a curving over-water cloud walkway, cable car overhead, blue sea"
+ },
+ {
+  "week": 24,
+  "day": 4,
+  "place_no": 165,
+  "name_ko": "부산 깡깡이예술마을",
+  "name_en": "Kkangkkangi Art Village",
+  "region_ko": "부산",
+  "motif": "harbor-side old shipyard alley with murals and art, rusty boats, cranes, narrow streets, sea"
+ },
+ {
+  "week": 24,
+  "day": 5,
+  "place_no": 166,
+  "name_ko": "부산 절영해안산책로",
+  "name_en": "Jeoryeong Coastal Walk",
+  "region_ko": "부산",
+  "motif": "wooden deck path hugging rocky sea cliffs, crashing waves, fishing platforms, pine, open sea"
+ },
+ {
+  "week": 24,
+  "day": 6,
+  "place_no": 167,
+  "name_ko": "부산 북항",
+  "name_en": "Busan North Port",
+  "region_ko": "부산",
+  "motif": "modern harbor waterfront at night, cruise ship, lit cranes and towers reflected on water"
+ },
+ {
+  "week": 24,
+  "day": 7,
+  "place_no": 168,
+  "name_ko": "기장 죽성성당",
+  "name_en": "Jukseong Church Gijang",
+  "region_ko": "부산",
+  "motif": "small white-and-red European-style chapel on a grassy seaside bluff, blue sea, rocks, flowers"
+ }
+]

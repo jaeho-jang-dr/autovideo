@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PlacesView from '../../components/PlacesView.astro';
+const lang = 'ko' as const;
+---
+<BaseLayout
+  lang={lang}
+  altUrl="/places/"
+  active="places"
+  title="한국 명소 140 — 외국인이 사랑하는 곳 · drjay-ed"
+  description="외국인이 사랑하는 한국 명소 140곳. 랜드마크·레저·먹거리·계절을 파스텔 영상 배경 라이브러리로 정리(배경 모티프 포함)."
+>
+  <PlacesView lang={lang} />
+</BaseLayout>

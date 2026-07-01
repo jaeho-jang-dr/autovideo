@@ -1,0 +1,1 @@
+Extending strokes on 'ㅁ' creates 'ㅂ', and adding more horizontal strokes completes 'ㅍ'.

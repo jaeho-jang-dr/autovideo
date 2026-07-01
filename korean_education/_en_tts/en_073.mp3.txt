@@ -1,0 +1,1 @@
+Vowels with both horizontal and vertical strokes wrap around the right and bottom of the consonant.

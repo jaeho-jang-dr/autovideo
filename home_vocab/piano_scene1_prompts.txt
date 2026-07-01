@@ -1,0 +1,3 @@
+# [피아노 시퀀스 1/2] 지은·인준 정면 + 왼편 검정 그랜드피아노(앞-우측 45도)
+# ref-key: injun_jieun_handshake_facing_opaque (두 캐릭터 일관성)
+injun_jieun_grand_piano_standing: standing together and facing straight to the front, with a large black grand piano placed on their left side, the grand piano angled toward the front-right at a 45-degree three-quarter view, both full body

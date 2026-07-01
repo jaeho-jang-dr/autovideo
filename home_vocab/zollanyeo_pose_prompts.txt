@@ -1,0 +1,28 @@
+# 졸라녀(zollanyeo) 25종 동작 영문 프롬프트 구절 명세서
+# 형식: key | prompt
+
+zollanyeo_waking_up | waking up and stretching in bed, winking and yawning
+zollanyeo_packing | placing books into a backpack on a study desk, preparing to go out
+zollanyeo_washing | washing her face at a bathroom sink with water splashing
+zollanyeo_eating | eating breakfast at a dining table with a bowl and spoon
+zollanyeo_walking | walking briskly on a sidewalk, mid-stride, smiling
+zollanyeo_sleeping | lying in bed sleeping peacefully on a soft pillow
+zollanyeo_brushing_teeth | brushing teeth with a toothbrush, white foam around her mouth
+zollanyeo_studying | sitting at a desk studying and writing diligently in a notebook
+zollanyeo_reading | holding and reading an open book, looking focused
+zollanyeo_sitting | sitting on a simple wooden chair resting in a relaxed posture
+zollanyeo_running | running fast in a hurry, legs wide apart, look of urgency
+zollanyeo_pointing | pointing forward with her hand, directing attention
+zollanyeo_cheering | cheering with arms raised high in joy, celebrating a victory
+zollanyeo_bowing | bowing politely with a slight bend at the waist, showing respect
+zollanyeo_thinking | thinking with a hand on her chin, looking contemplative
+zollanyeo_raising_hand | raising her hand high to speak or answer a question
+zollanyeo_drawing | holding a pencil and drawing on a sketchbook on a table
+zollanyeo_drinking | holding a mug and drinking water or tea, looking refreshed
+zollanyeo_cleaning | holding a broom and sweeping the floor, cleaning up
+zollanyeo_opening_door | holding a door handle and opening a wooden door to step inside
+zollanyeo_shoes | bending down to put on sneakers, tying shoelaces
+zollanyeo_waiting | standing and waiting patiently at a bus stop sign
+zollanyeo_waving | waving her hand to say goodbye, smiling warmly
+zollanyeo_clapping | clapping hands happily with a cheerful expression
+zollanyeo_jumping | jumping high in the air with excitement, legs bent in joy

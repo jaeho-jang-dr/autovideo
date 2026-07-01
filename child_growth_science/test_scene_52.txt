@@ -1,0 +1,3 @@
+[Scene 52]
+text: 영양 자재가 채워졌다면, 뼈에 성장을 지시할 신호가 필요합니다. 바로 운동의 압력입니다.
+text_en: Once nutritional materials are supplied, we need a signal to guide bone growth: the pressure of exercise.

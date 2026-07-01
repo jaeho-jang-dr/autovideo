@@ -1,0 +1,28 @@
+# 졸라맨(zollaman) 25종 동작 영문 프롬프트 구절 명세서
+# 형식: key | prompt
+
+zollaman_waking_up | waking up and stretching in bed, winking and yawning
+zollaman_packing | placing books into a backpack on a study desk, preparing to go out
+zollaman_washing | washing his face at a bathroom sink with water splashing
+zollaman_eating | eating breakfast at a dining table with a bowl and spoon
+zollaman_walking | walking briskly on a sidewalk, mid-stride, smiling
+zollaman_sleeping | lying in bed sleeping peacefully on a soft pillow
+zollaman_brushing_teeth | brushing teeth with a toothbrush, white foam around his mouth
+zollaman_studying | sitting at a desk studying and writing diligently in a notebook
+zollaman_reading | holding and reading an open book, looking focused
+zollaman_sitting | sitting on a simple wooden chair resting in a relaxed posture
+zollaman_running | running fast in a hurry, legs wide apart, look of urgency
+zollaman_pointing | pointing forward with his hand, directing attention
+zollaman_cheering | cheering with arms raised high in joy, celebrating a victory
+zollaman_bowing | bowing politely with a slight bend at the waist, showing respect
+zollaman_thinking | thinking with a hand on his chin, looking contemplative
+zollaman_raising_hand | raising his hand high to speak or answer a question
+zollaman_drawing | holding a pencil and drawing on a sketchbook on a table
+zollaman_drinking | holding a mug and drinking water or tea, looking refreshed
+zollaman_cleaning | holding a broom and sweeping the floor, cleaning up
+zollaman_opening_door | holding a door handle and opening a wooden door to step inside
+zollaman_shoes | bending down to put on sneakers, tying shoelaces
+zollaman_waiting | standing and waiting patiently at a bus stop sign
+zollaman_waving | waving his hand to say goodbye, smiling warmly
+zollaman_clapping | clapping hands happily with a cheerful expression
+zollaman_jumping | jumping high in the air with excitement, legs bent in joy

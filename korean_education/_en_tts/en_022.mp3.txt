@@ -1,0 +1,1 @@
+Adding a stroke to 'ㄴ' makes 'ㄷ', and adding another makes 'ㅌ'.

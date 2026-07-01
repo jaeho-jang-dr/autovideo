@@ -1,0 +1,168 @@
+[Scene 0]
+text: 혹시 지금 이 영상을 보면서 고개를 푹 숙이고 계신가요? 스마트폰이 만든 현대인의 고질병, 거북목 증후군의 충격적인 진실과 완벽한 치료법을 파헤쳐 봅니다.
+text_en: Are you looking down while watching this video? Let's dig into the shocking truth and perfect cure for text neck syndrome, a modern disease caused by smartphones.
+image: Whiteboard marker doodle of a person bending their neck deeply to look at a glowing smartphone screen, with a flashing red warning light on the neck, clean white background, vibrant blue and yellow coloring. No watermark, no signatures.
+motion: :: slow motion yellow rays project from the screen onto the face, camera panning right slowly
+
+[Scene 1]
+text: 해부학적으로 정상적인 성인의 목뼈는 완만한 C자 곡선, 즉 경추 전만을 유지하도록 설계되어 있습니다. 이 중립 상태(0도)에서 경추가 지탱하는 머리의 고유 무게는 약 5kg에 불과하죠.
+text_en: Anatomically, a normal adult's cervical spine is designed to maintain a gentle C-curve, or cervical lordosis. In this neutral 0-degree state, the neck supports a head weight of only about 5kg.
+image: Whiteboard marker doodle of a healthy C-shaped cervical spine model with a 5kg weight balanced on top, clean white background, vibrant blue marker coloring. No watermark, no signatures.
+motion: :: slow motion the C-shaped spring compresses rhythmically, camera rotating quickly
+
+[Scene 2]
+text: 하지만 스마트폰을 보며 고개를 전방으로 숙이면 힘점까지의 '모멘트 암' 레버 효과가 길어지며 하중이 지수함수적으로 증가합니다. 고개를 15도만 숙여도 목에는 약 12kg의 하중이 실립니다.
+text_en: However, as you tilt your head forward to look at your smartphone, the 'moment arm' lever effect lengthens, increasing the load exponentially. Even a 15-degree tilt places a 12kg load on the neck.
+image: Whiteboard marker doodle of a neck angle protractor showing a 15-degree tilt with a 12kg weight icon, clean white background, vibrant red highlights. No watermark, no signatures.
+motion: :: slow motion the protractor pointer swings to 15 degrees, low-angle shot looking up
+
+[Scene 3]
+text: 각도가 커져 60도로 푹 숙이게 되면 하중은 약 27kg까지 치솟습니다. 이는 7살 어린이를 하루 종일 목덜미에 얹고 버티는 것과 같은 엄청난 물리적 충격입니다.
+text_en: If the angle increases to a 60-degree steep tilt, the load skyrockets to about 27kg. This is an immense physical shock, equivalent to carrying a 7-year-old child on the back of your neck all day.
+image: Whiteboard marker doodle of a person with a 60-degree bent neck carrying a heavy 7-year-old child character on their shoulders, clean white background, vibrant red and yellow marker highlights. No watermark, no signatures.
+motion: :: slow motion the child character waves while the person shakes slightly, camera tilting down
+
+[Scene 4]
+text: 이 엄청난 하중을 견디기 위해 목 뒤쪽의 상부 승모근, 견갑거근, 판상근은 머리가 떨어지지 않도록 끌어당기는 등척성 수축 상태로 극도로 긴장하게 됩니다.
+text_en: To withstand this immense load, the posterior neck muscles—upper trapezius, levator scapulae, and splenius—become extremely tense through constant isometric contraction to keep the head from falling.
+image: Whiteboard marker doodle of neck back muscles stretched tightly like thick ropes under tension, clean white background, vibrant red highlights. No watermark, no signatures.
+motion: :: slow motion red highlights flash along the tensed muscle ropes, camera zooming out rapidly like a rising drone shot
+
+[Scene 5]
+text: 반면 앞쪽의 깊은 목 굽힘근, 즉 심부경추굴곡근은 점차 약화됩니다. 이로 인해 근육의 '길이-장력 관계'가 무너지는 심각한 생체역학적 불균형이 초래되는 것이죠.
+text_en: Conversely, the deep anterior neck flexors gradually weaken. This causes a severe biomechanical imbalance where the muscle's 'length-tension relationship' completely collapses.
+image: Whiteboard marker doodle of an asymmetrical balance scale, one side showing strong tight cords and the other showing weak loose cords, clean white background, vibrant blue coloring. No watermark, no signatures.
+motion: :: slow motion the scale tips heavily to one side, camera rotating quickly
+
+[Scene 6]
+text: 뼈를 지지하는 인대 역시 지속적인 기계적 스트레스를 받으면 탄성을 잃고 반영구적으로 늘어나는 이른바 '크리프 현상(Creep Deformation)'을 겪게 됩니다.
+text_en: Ligaments supporting the bones also suffer from 'Creep Deformation,' a phenomenon where they lose elasticity and permanently stretch under constant mechanical stress.
+image: Whiteboard marker doodle of a rubber band stretched tightly for a long time and becoming loose and floppy, clean white background, vibrant green coloring. No watermark, no signatures.
+motion: :: slow motion the rubber band loses its tension and sags, camera tilting down and panning right fast
+
+[Scene 7]
+text: 인대가 늘어나면 충격 흡수 장치인 C자 곡선이 상실되어 일자목이나 거북목이 됩니다. 이는 하중을 뼈와 디스크로 직접 전달해 척추의 관절염과 퇴행성 병변을 가속화합니다.
+text_en: Stretched ligaments lead to the loss of the C-curve shock absorber, causing straight or text neck. This transfers the load directly to bones and discs, accelerating arthritis and degenerative lesions.
+image: Whiteboard marker doodle of a curved spring straightening and rubbing hard between bone blocks, clean white background, vibrant red highlights. No watermark, no signatures.
+motion: :: slow motion sparks fly from the rubbing bones, low-angle shot looking up
+
+[Scene 8]
+text: 특히 움직임이 가장 많은 경추 5-6번 및 6-7번 디스크가 후방으로 탈출하기 쉽습니다. 빠져나온 디스크가 신경을 압박하면 팔과 손가락의 저림, 근력 저하 현상이 나타납니다.
+text_en: The highly mobile C5-C6 and C6-C7 discs are especially prone to posterior herniation. The herniated disc compresses nerves, causing arm and finger numbness and muscle weakness.
+image: Whiteboard marker doodle of a spine joint showing a red disc core protruding and pressing a yellow nerve root under load, clean white background, vibrant red and yellow coloring. No watermark, no signatures.
+motion: :: slow motion the red disc bulge expands and squeezes the yellow nerve, camera zooming out rapidly like a rising drone shot
+
+[Scene 9]
+text: 연쇄 반응은 전신으로 이어집니다. 짧아진 가슴 근육(흉근)이 어깨를 안으로 말리게 하는 '라운드 숄더'와 등이 둥글게 굽는 흉추 후만, 일명 '거북등'을 유발하죠.
+text_en: A chain reaction spreads throughout the body. Shortened pectoral muscles pull the shoulders inward, causing 'round shoulders,' and the thoracic spine curves backward into 'turtle back' kyphosis.
+image: Whiteboard marker doodle of falling dominoes morphing into a hunched posture with a turtle shell outline, clean white background, vibrant green marker coloring. No watermark, no signatures.
+motion: :: slow motion dominoes collapse sequentially, camera rotating quickly
+
+[Scene 10]
+text: 또한 고개가 앞으로 빠지면 턱 밑의 설골 근육 장력에 불균형이 생겨 하악골을 잡아당기게 됩니다. 이는 결국 입을 벌릴 때 통증을 유발하는 턱관절 장애(TMD)의 숨은 원인이 됩니다.
+text_en: Furthermore, the forward head posture disrupts the tension balance of the hyoid muscles under the jaw, pulling the mandible and becoming a hidden cause of Temporomandibular Joint Disorder (TMD).
+image: Whiteboard marker doodle of a jaw skull profile with tight tension lines under the chin and gears misaligning at the joint, clean white background, vibrant red highlights. No watermark, no signatures.
+motion: :: slow motion jaw opens slightly and the joint gear slips, low-angle shot looking up
+
+[Scene 11]
+text: 굽은 상체는 흉곽을 압박하여 폐가 온전히 팽창하지 못하게 막습니다. 이로 인해 폐활량이 최대 30%까지 떨어지면서 몸은 만성적인 산소 부족과 극심한 피로에 시달리게 됩니다.
+text_en: The hunched upper body compresses the rib cage, preventing full lung expansion. Lung capacity drops by up to 30%, plunging the body into chronic oxygen deficiency and extreme fatigue.
+image: Whiteboard marker doodle of a rib cage squeezed by arrows with a battery icon showing 1% level, clean white background, vibrant red and blue marker coloring. No watermark, no signatures.
+motion: :: slow motion the battery level indicators flash red, camera zooming out rapidly like a rising drone shot
+
+[Scene 12]
+text: 나아가 2018년 '네이처 사이언티픽 리포트'에는 충격적인 뼈의 구조적 변형 연구가 실렸습니다. 지속적으로 뒤통수 뼈를 당기는 인대 때문에 후두골에 'EOP'라는 뼈 뿔이 자라나고 있다는 겁니다.
+text_en: Furthermore, a 2018 study in 'Nature Scientific Reports' revealed shocking structural bone changes. A bone horn called 'EOP' is growing on the occipital bone due to ligaments constantly pulling the skull.
+image: Whiteboard marker doodle of a skull profile showing a tiny bone bump highlighted in orange, clean white background, vibrant orange and green coloring. No watermark, no signatures.
+motion: :: slow motion the orange highlighted bone spur glows and sparkles, camera rotating quickly
+
+[Scene 13]
+text: 신종 환경 자극에 뼈가 적응하는 이 현상을 두고, 학계에서는 우리가 혹시 스마트폰을 쥐고 뿔이 달린 '스마트폰 뿔 사피엔스'로 진화하는 게 아니냐는 뼈있는 농담까지 나옵니다.
+text_en: Regarding this bone adaptation to new environmental stimuli, scholars jokingly warn that we might be evolving into 'Smartphone Horn Sapiens,' holding phones with horns on our heads.
+image: Whiteboard marker doodle of a futuristic human silhouette with a curved neck and a tiny playful horn on the head looking at a smartphone, clean white background, vibrant purple marker coloring. No watermark, no signatures.
+motion: :: slow motion the tiny horn glows and flashes humorously, low-angle shot looking up
+
+[Scene 14]
+text: 내 목이 어느 단계인지 진단하기 위해 방사선 촬영을 통한 '콥스 각도(Cobb's Angle)' 기법을 씁니다. 제2경추와 제7경추가 이루는 각도가 12.5도 미만이라면 거북목으로 명확히 진단됩니다.
+text_en: To diagnose your stage, the 'Cobb's Angle' X-ray method is used. If the angle between the C2 and C7 vertebrae is less than 12.5 degrees, it is clearly diagnosed as a text neck.
+image: Whiteboard marker doodle of a neck X-ray outline with geometric lines measuring a narrow angle, clean white background, vibrant blue marker highlights. No watermark, no signatures.
+motion: :: slow motion the measurement lines align to show a narrow angle, camera zooming out rapidly like a rising drone shot
+
+[Scene 15]
+text: 증상이 심화된 경우 의학적 치료가 필수입니다. 비정상적으로 잠긴 관절과 경직된 연부 조직은 물리치료나 도수치료 등으로 직접 풀어 가동성을 회복시키는 방법을 사용할 수도 있습니다.
+text_en: If symptoms worsen, medical treatment is essential. Abnormally locked joints and stiff soft tissues can also be released directly through physical therapy or manual therapy to restore mobility.
+image: Whiteboard marker doodle of therapist's hands gently mobilizing a simplified cervical spine model, clean white background, vibrant blue marker coloring. No watermark, no signatures.
+motion: :: slow motion the hands move the spine segments into smooth alignment, camera rotating quickly
+
+[Scene 16]
+text: 이와 함께 굳은 근육의 긴장을 완화하고 깊은 조직의 혈액 순환을 촉진하여 회복을 돕는 온열 치료와 초음파 기기를 활용한 전문 물리치료를 병행합니다.
+text_en: Along with this, professional physical therapy using heat or ultrasound equipment is applied to relieve muscle tension and promote deep tissue blood circulation for recovery.
+image: Whiteboard marker doodle of warming heating pads and ultrasound probe emitting waves to a neck, clean white background, vibrant blue and yellow coloring. No watermark, no signatures.
+motion: :: slow motion wave lines expand from the probe onto the neck, low-angle shot looking up
+
+[Scene 17]
+text: 만약 근막 조직에 만성 병변이 생겼다면 체외충격파(ESWT)가 효과적입니다. 고에너지 충격파를 환부에 쏘아 미세혈관 신생과 세포의 자생적 조직 재생 원리를 유도하죠.
+text_en: For chronic myofascial lesions, Extracorporeal Shock Wave Therapy (ESWT) is highly effective. It shoots high-energy shock waves into the lesion, inducing micro-vessel formation and tissue regeneration.
+image: Whiteboard marker doodle of shockwaves hitting damaged fascia and new tiny vessels sprouting like branches, clean white background, vibrant red and blue coloring. No watermark, no signatures.
+motion: :: slow motion new blood vessel branches grow rapidly, camera zooming out rapidly like a rising drone shot
+
+[Scene 18]
+text: 근육 섬유가 단단한 띠처럼 뭉친 결절, 즉 타우트 밴드(Taut Band)가 발생했다면 통증유발점 주사(TPI)를 시행합니다. 주삿바늘로 결절을 직접 파쇄해 뭉침을 해소합니다.
+text_en: If muscle fibers form hard nodular bands (Taut Bands), a Trigger Point Injection (TPI) is administered. The needle physically breaks down the nodule to instantly relieve the muscle knot.
+image: Whiteboard marker doodle of a syringe needle entering a tight muscle knot and breaking it apart, clean white background, vibrant red highlights. No watermark, no signatures.
+motion: :: slow motion the syringe tip triggers a burst of fragments from the knot, camera rotating quickly
+
+[Scene 19]
+text: 늘어나고 약화된 후방 관절 지지 인대에는 고농도 포도당 등을 주입하는 프롤로테라피를 적용합니다. 이는 국소 염증 반응을 일으켜 인대 세포가 스스로 증식하고 튼튼해지도록 만듭니다.
+text_en: Prolotherapy, injecting high-concentration dextrose, is applied to stretched and weakened posterior ligaments. It induces local inflammation, causing ligament cells to proliferate and strengthen.
+image: Whiteboard marker doodle of a ligament fiber thickening and rebuilding under localized spark points, clean white background, vibrant blue and green coloring. No watermark, no signatures.
+motion: :: slow motion the ligament fibers grow thicker and align, low-angle shot looking up
+
+[Scene 20]
+text: 심한 통증은 신경차단술 주사로 예민해진 신경 역치를 안정화시킵니다. 이후 무중력 상태를 이용한 슬링 운동(뉴렉)을 병행하여 약화된 심부 근육을 안전하게 재활 활성화해야 합니다.
+text_en: Severe pain is stabilized through nerve block injections to lower nerve thresholds. Afterward, sling exercises (Neurac) utilizing zero gravity safely rehabilitate and activate weakened deep muscles.
+image: Whiteboard marker doodle of a syringe block setup and a person exercising in a red rehabilitation sling, clean white background, vibrant red and blue coloring. No watermark, no signatures.
+motion: :: slow motion the sling sways gently as the character exercises, camera zooming out rapidly like a rising drone shot
+
+[Scene 21]
+text: 하지만 생활 습관 교정이 병행되지 않으면 치료는 헛수고입니다! 하지 말아야 할 행동, Don'ts! 엎드려 스마트폰을 보거나 모니터를 시선 아래에 두고 목을 거북이처럼 빼는 행동은 절대 금물입니다.
+text_en: However, without lifestyle correction, treatment is in vain! The Don'ts! Lying face down using your phone, or placing the monitor low and sticking your neck out like a turtle are absolute strict no-nos.
+image: Whiteboard marker doodle of a computer desk with a giant red cross over a hunched posture, clean white background, vibrant red and black coloring. No watermark, no signatures.
+motion: :: slow motion a large red X mark blinks over the drawing, camera rotating quickly
+
+[Scene 22]
+text: 컴퓨터 주변 기기인 키보드와 마우스를 몸에서 멀리 두는 것도 위험합니다. 멀리 있는 마우스를 잡으려고 팔을 뻗는 순간, 상체와 목이 자연스럽게 앞으로 굽어지기 때문입니다.
+text_en: Placing computer peripherals like a keyboard and mouse far away is also dangerous. The moment you stretch your arm to grab a distant mouse, your upper body and neck naturally hunch forward.
+image: Whiteboard marker doodle of a desk setup displaying a long distance between mouse and keyboard, causing a curved back, clean white background, vibrant red highlights. No watermark, no signatures.
+motion: :: slow motion an arrow expands indicating the incorrect distance, low-angle shot looking up
+
+[Scene 23]
+text: 이제 꼭 실천해야 할 Dos! 모니터 상단을 내 눈높이에 정확히 맞추고, 스마트폰을 볼 때는 팔꿈치를 반대 손으로 지지해 기기를 눈높이까지 번쩍 들어 올려야 합니다.
+text_en: Now the Dos you must practice! Align the top of your monitor exactly to your eye level, and when using a smartphone, support your elbow with the other hand and raise the device to your eye level.
+image: Whiteboard marker doodle of a person sitting upright looking at a monitor set at eye level with a green checkmark, clean white background, vibrant green marker coloring. No watermark, no signatures.
+motion: :: slow motion a bright green checkmark pulses next to the upright posture, camera zooming out rapidly like a rising drone shot
+
+[Scene 24]
+text: 50분간 업무나 작업을 했다면, 반드시 5분의 '자세 리셋' 시간이 필요합니다. 양 발뒤꿈치, 엉덩이, 등, 뒤통수를 평평한 벽에 밀착시키고 서 있는 '벽 서기'가 어긋난 정렬을 리셋해 줍니다.
+text_en: After 50 minutes of work, a 5-minute 'posture reset' is mandatory. 'Wall standing,' where you press your heels, hips, back, and back of the head flat against a wall, resets your misaligned posture.
+image: Whiteboard marker doodle of a character doing wall standing alignment against a blue wall line, clean white background, vibrant blue and green coloring. No watermark, no signatures.
+motion: :: slow motion green highlight lines trace the straight alignment, camera rotating quickly
+
+[Scene 25]
+text: 언제 어디서나 할 수 있는 자가 재활 운동의 핵심은 '친턱(Chin-Tuck) 운동'입니다. 시선을 정면에 두고 정수리를 위로 뽑아 올리듯 턱을 몸쪽 수평 방향으로 당겨 심부경추굴곡근을 강화합니다.
+text_en: The core self-rehabilitation exercise you can do anywhere is the 'Chin-Tuck'. Look straight, pull your chin horizontally towards your body as if pulling the crown of your head up, strengthening the deep neck flexors.
+image: Whiteboard marker doodle of a character doing neck retractions with golden energy circles, clean white background, vibrant gold marker highlights. No watermark, no signatures.
+motion: :: slow motion golden circular waves expand from the neck, low-angle shot looking up
+
+[Scene 26]
+text: 다음은 '맥켄지 신전 운동'입니다. 가슴을 크게 열면서 등 뒤의 양 날개뼈(견갑골)를 중앙으로 꽉 조이고, 허리 전만을 유지한 채 고개를 뒤로 지그시 젖혀 줍니다.
+text_en: Next is the 'McKenzie Extension'. Open your chest wide, firmly squeeze both shoulder blades (scapulae) together in the back, and gently tilt your head backward while maintaining lumbar lordosis.
+image: Whiteboard marker doodle of a character performing McKenzie chest opening with wing scapula lines squeezing, clean white background, vibrant blue and orange coloring. No watermark, no signatures.
+motion: :: slow motion blue lines squeeze together, camera zooming out rapidly like a rising drone shot
+
+[Scene 27]
+text: 여기까지 따라오셨다면 절반은 성공입니다. 거북목은 잘못된 습관이 만든 병이라, 오늘부터의 작은 습관으로 충분히 되돌릴 수 있습니다. 다만 팔이 저리거나 심한 통증이 계속된다면 혼자 참지 말고 꼭 전문의를 찾으세요. 화면은 눈높이로, 오십 분마다 한 번씩 목 펴 주기. 이 두 가지만 기억하셔도 당신의 목은 다시 펴집니다. 자, 지금 바로 고개를 들고 어깨를 활짝 펴 볼까요?
+text_en: If you've made it this far, you're already halfway there. Text neck is a condition made by bad habits, so small habits starting today can fully reverse it. But if you have arm numbness or persistent severe pain, don't endure it alone—be sure to see a specialist. Keep your screen at eye level, and stretch your neck once every fifty minutes. Remember just these two, and your neck will straighten again. Now, lift your head up and open your shoulders wide!
+image: Whiteboard marker doodle of a circular logo badge reading "Dr Jay Edu" surrounded by green leaves, clean white background, vibrant blue and green coloring. No watermark, no signatures.
+motion: :: slow motion the circular badge spins slowly as green leaves drift in the background, camera rotating quickly
+

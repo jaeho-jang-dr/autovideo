@@ -1,0 +1,231 @@
+{
+  "characters": {
+    "character_waking_up": {
+      "file": "home_vocab/character_waking_up.png",
+      "default_scale": 1.0,
+      "description": "지은이 침대에서 일어나 기지개 켜는 모습"
+    },
+    "character_packing": {
+      "file": "home_vocab/character_packing.png",
+      "default_scale": 1.0,
+      "description": "지은이 공부 책상에서 책가방을 싸는 모습"
+    },
+    "character_washing": {
+      "file": "home_vocab/character_washing.png",
+      "default_scale": 1.0,
+      "description": "지은이 화장실 세면대에서 세수하는 모습"
+    },
+    "character_eating": {
+      "file": "home_vocab/character_eating.png",
+      "default_scale": 1.0,
+      "description": "지은이 식탁에서 아침 식사를 하는 모습"
+    },
+    "character_walking": {
+      "file": "home_vocab/character_walking.png",
+      "default_scale": 1.0,
+      "description": "지은이 문밖으로 나와 길을 걷는 모습"
+    },
+    "character_sleeping": {
+      "file": "home_vocab/character_sleeping.png",
+      "default_scale": 1.0,
+      "description": "지은이 침대에 누워 잠자는 모습"
+    },
+    "character_brushing_teeth": {
+      "file": "home_vocab/character_brushing_teeth.png",
+      "default_scale": 1.0,
+      "description": "지은이 칫솔로 양치질을 하는 모습"
+    },
+    "character_studying": {
+      "file": "home_vocab/character_studying.png",
+      "default_scale": 1.0,
+      "description": "지은이 책상에 앉아 공부하며 글을 쓰는 모습"
+    },
+    "character_reading": {
+      "file": "home_vocab/character_reading.png",
+      "default_scale": 1.0,
+      "description": "지은이 책을 손에 들고 읽는 모습"
+    },
+    "character_sitting": {
+      "file": "home_vocab/character_sitting.png",
+      "default_scale": 1.0,
+      "description": "지은이 의자에 앉아 휴식을 취하는 모습"
+    },
+    "character_running": {
+      "file": "home_vocab/character_running.png",
+      "default_scale": 1.0,
+      "description": "지은이 바쁘게 뛰어가는 모습"
+    },
+    "character_pointing": {
+      "file": "home_vocab/character_pointing.png",
+      "default_scale": 1.0,
+      "description": "지은이 손으로 앞을 가리키는 모습"
+    },
+    "character_cheering": {
+      "file": "home_vocab/character_cheering.png",
+      "default_scale": 1.0,
+      "description": "지은이 두 팔을 들고 기뻐하며 환호하는 모습"
+    },
+    "character_bowing": {
+      "file": "home_vocab/character_bowing.png",
+      "default_scale": 1.0,
+      "description": "지은이 공손하게 인사하는 모습"
+    },
+    "character_thinking": {
+      "file": "home_vocab/character_thinking.png",
+      "default_scale": 1.0,
+      "description": "지은이 턱에 손을 얹고 생각에 잠긴 모습"
+    },
+    "character_raising_hand": {
+      "file": "home_vocab/character_raising_hand.png",
+      "default_scale": 1.0,
+      "description": "지은이 발표하기 위해 손을 드는 모습"
+    },
+    "character_drawing": {
+      "file": "home_vocab/character_drawing.png",
+      "default_scale": 1.0,
+      "description": "지은이 스케치북에 그림을 그리는 모습"
+    },
+    "character_drinking": {
+      "file": "home_vocab/character_drinking.png",
+      "default_scale": 1.0,
+      "description": "지은이 컵을 들고 물을 마시는 모습"
+    },
+    "character_cleaning": {
+      "file": "home_vocab/character_cleaning.png",
+      "default_scale": 1.0,
+      "description": "지은이 빗자루를 들고 바닥을 쓰는 모습"
+    },
+    "character_opening_door": {
+      "file": "home_vocab/character_opening_door.png",
+      "default_scale": 1.0,
+      "description": "지은이 문손잡이를 잡고 문을 여는 모습"
+    },
+    "character_shoes": {
+      "file": "home_vocab/character_shoes.png",
+      "default_scale": 1.0,
+      "description": "지은이 허리를 숙여 운동화를 신는 모습"
+    },
+    "character_waiting": {
+      "file": "home_vocab/character_waiting.png",
+      "default_scale": 1.0,
+      "description": "지은이 버스 정류장에서 버스를 기다리는 모습"
+    },
+    "character_waving": {
+      "file": "home_vocab/character_waving.png",
+      "default_scale": 1.0,
+      "description": "지은이 작별 인사를 하며 손을 흔드는 모습"
+    },
+    "character_clapping": {
+      "file": "home_vocab/character_clapping.png",
+      "default_scale": 1.0,
+      "description": "지은이 기쁘게 박수를 치는 모습"
+    },
+    "character_jumping": {
+      "file": "home_vocab/character_jumping.png",
+      "default_scale": 1.0,
+      "description": "지은이 신나서 공중으로 점프하는 모습"
+    }
+  },
+  "objects": {
+    "bed": {
+      "file": "home_vocab/bed.png",
+      "default_scale": 1.0,
+      "description": "다리가 달린 심플한 침대"
+    },
+    "blanket": {
+      "file": "home_vocab/blanket.png",
+      "default_scale": 0.8,
+      "description": "접혀 있는 따뜻한 이불"
+    },
+    "pillow": {
+      "file": "home_vocab/pillow.png",
+      "default_scale": 0.6,
+      "description": "부드러운 침대 베개"
+    },
+    "clock": {
+      "file": "home_vocab/clock.png",
+      "default_scale": 0.6,
+      "description": "노란색 포인트 컬러가 들어간 클래식 트윈벨 알람 시계"
+    },
+    "backpack": {
+      "file": "home_vocab/backpack.png",
+      "default_scale": 0.8,
+      "description": "파란색 포인트 컬러가 한국 학생 책가방"
+    },
+    "book": {
+      "file": "home_vocab/book.png",
+      "default_scale": 0.6,
+      "description": "닫혀 있는 두꺼운 교과서"
+    },
+    "notebook": {
+      "file": "home_vocab/notebook.png",
+      "default_scale": 0.7,
+      "description": "펼쳐진 스프링 공책"
+    },
+    "pencil": {
+      "file": "home_vocab/pencil.png",
+      "default_scale": 0.5,
+      "description": "나무 연필"
+    },
+    "mirror": {
+      "file": "home_vocab/mirror.png",
+      "default_scale": 0.7,
+      "description": "심플한 욕실 벽 거울"
+    },
+    "toothbrush": {
+      "file": "home_vocab/toothbrush.png",
+      "default_scale": 0.5,
+      "description": "초록색 손잡이의 플라스틱 칫솔"
+    },
+    "towel": {
+      "file": "home_vocab/towel.png",
+      "default_scale": 0.7,
+      "description": "걸려 있는 접힌 욕실 수건"
+    },
+    "soap": {
+      "file": "home_vocab/soap.png",
+      "default_scale": 0.5,
+      "description": "비누받침 위의 심플한 비누"
+    },
+    "table": {
+      "file": "home_vocab/table.png",
+      "default_scale": 0.9,
+      "description": "네 다리가 달린 심플한 나무 식탁"
+    },
+    "spoon": {
+      "file": "home_vocab/spoon.png",
+      "default_scale": 0.5,
+      "description": "스테인리스 숟가락"
+    },
+    "chopsticks": {
+      "file": "home_vocab/chopsticks.png",
+      "default_scale": 0.5,
+      "description": "평평한 한국식 쇠젓가락"
+    },
+    "cup": {
+      "file": "home_vocab/cup.png",
+      "default_scale": 0.5,
+      "description": "심플한 물컵"
+    },
+    "shoes": {
+      "file": "home_vocab/shoes.png",
+      "default_scale": 0.6,
+      "description": "심플한 학교 운동화"
+    },
+    "door": {
+      "file": "home_vocab/door.png",
+      "default_scale": 1.0,
+      "description": "디지털 도어락이 달린 아파트 철제 현관문"
+    },
+    "bus_stop": {
+      "file": "home_vocab/bus_stop.png",
+      "default_scale": 1.0,
+      "description": "도착 안내 화면이 있는 시내 버스 정류장"
+    },
+    "bus": {
+      "file": "home_vocab/bus.png",
+      "default_scale": 1.0,
+      "description": "초록색 한국 시내버스"
+    }
+  }
+}

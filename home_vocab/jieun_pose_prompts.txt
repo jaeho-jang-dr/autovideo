@@ -1,0 +1,27 @@
+# 지은 동작 포즈 세트 (reference2img) — 형식: key: 동작구절(영문)
+# 레퍼런스는 DB의 jieun_base_front(정면). 스크립트가 공통 프리픽스/서픽스로 감싼다.
+# 점프(jieun_jumping)는 이미 완료되어 제외.
+jieun_waking_up: waking up and stretching both arms wide while sitting up in a bed, sleepy happy face, front view
+jieun_packing: standing and packing school books into a school backpack on a desk, front view
+jieun_washing_face: leaning over a bathroom sink washing her face with both hands, front view
+jieun_eating: sitting at a dining table eating a meal, holding chopsticks, front view
+jieun_walking: walking briskly, mid-stride with one foot forward, full-body side profile view
+jieun_sleeping: lying down on a bed sleeping peacefully with eyes closed, side view
+jieun_brushing_teeth: standing and brushing her teeth, holding a toothbrush near her mouth, front view
+jieun_studying: sitting at a desk studying, writing in a notebook with a pencil, front view
+jieun_reading: standing and reading an open book held in both hands, front view
+jieun_sitting: sitting calmly on a simple wooden chair, hands on her lap, front view
+jieun_running: running fast, both legs in a dynamic mid-stride leap, full-body side profile view
+jieun_pointing: standing and pointing forward with one arm fully extended, front view
+jieun_cheering: cheering joyfully with both fists raised high above her head, front view
+jieun_bowing: bowing politely at the waist with both hands together in front, side-front view
+jieun_thinking: standing thinking with one hand resting on her chin, head slightly tilted, front view
+jieun_raising_hand: standing and raising one hand high to answer a question, front view
+jieun_drawing: standing and drawing a picture on a sketchbook with a pencil, front view
+jieun_drinking: standing and drinking water from a cup held in one hand, front view
+jieun_cleaning: sweeping the floor with a broom held in both hands, front view
+jieun_opening_door: opening a door with one hand on the door handle, side-front view
+jieun_putting_on_shoes: bending down to put on her shoes, front view
+jieun_waiting: standing and waiting patiently with both hands clasped in front, front view
+jieun_waving: standing and waving goodbye with one hand raised, big smile, front view
+jieun_clapping: standing and clapping both hands together happily, front view

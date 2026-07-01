@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-Lingo Journey - Hangeul through K-POP & Science</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%87%B0%F0%9F%87%B7%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </noscript>
+  <style>
+    :root {
+      --hangeul-bg: #F5F5F0;         /* Off-white Warm Beige */
+      --hangeul-dark: #111111;       /* Clean Ink Black */
+      --hangeul-accent: #FFD700;     /* Pastel Gold Yellow */
+      --hangeul-sky: #87CEEB;        /* Sky Blue */
+      --hangeul-card: rgba(255, 255, 255, 0.95);
+      --hangeul-muted: #666666;
+      --hangeul-border: #E5E5E0;
+      --hangeul-success: #2E7D32;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, 'Malgun Gothic', sans-serif;
+      background-color: var(--hangeul-bg);
+      color: var(--hangeul-dark);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── Sticky Navigation Bar ── */
+    .hangeul-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245, 245, 240, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--hangeul-dark);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .hangeul-nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hangeul-logo {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--hangeul-dark);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo-dot {
+      width: 10px;
+      height: 10px;
+      background-color: var(--hangeul-accent);
+      border-radius: 50%;
+      border: 1px solid var(--hangeul-dark);
+      display: inline-block;
+    }
+    .nav-social-links {
+      display: flex;
+      gap: 0.8rem;
+    }
+    .nav-badge {
+      background: var(--hangeul-accent);
+      border: 2px solid var(--hangeul-dark);
+      color: var(--hangeul-dark);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      box-shadow: 2px 2px 0 var(--hangeul-dark);
+    }
+
+    /* ── Hero Banner ── */
+    .hangeul-hero {
+      background: var(--hangeul-accent);
+      border-bottom: 3px solid var(--hangeul-dark);
+      padding: 3rem 1.2rem;
+      text-align: center;
+      position: relative;
+    }
+    .hangeul-hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+    }
+    .hangeul-hero p {
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 0 auto;
+      font-weight: 500;
+    }
+    .hero-badges-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .hero-badge {
+      background: white;
+      border: 2px solid var(--hangeul-dark);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 2px 2px 0 var(--hangeul-dark);
+    }
+
+    /* ── Tab Bar Navigation ── */
+    .hangeul-tabs {
+      display: flex;
+      background: white;
+      border-bottom: 2px solid var(--hangeul-dark);
+      position: sticky;
+      top: 60px;
+      z-index: 90;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .tab-item {
+      flex: 1;
+      min-width: 140px;
+      padding: 1rem 0.5rem;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--hangeul-muted);
+      border-bottom: 4px solid transparent;
+      text-align: center;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .tab-item:hover, .tab-item.active {
+      color: var(--hangeul-dark);
+      border-bottom-color: var(--hangeul-dark);
+      background-color: rgba(245, 245, 240, 0.5);
+    }
+    .tab-item-icon {
+      font-size: 1.2rem;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+
+    /* ── Main Container ── */
+    .hangeul-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.2rem 4rem;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+      animation: tabFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes tabFadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Cards & Visual UI Elements ── */
+    .outline-card {
+      background: var(--hangeul-card);
+      border: 3px solid var(--hangeul-dark);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 6px 6px 0 var(--hangeul-dark);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .outline-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 8px 8px 0 var(--hangeul-dark);
+    }
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .title-marker {
+      width: 8px;
+      height: 24px;
+      background: var(--hangeul-sky);
+      border: 1.5px solid var(--hangeul-dark);
+      display: inline-block;
+    }
+
+    /* ── Two Column Layout ── */
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .two-col-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── History Section Stylings ── */
+    .history-quote {
+      border-left: 5px solid var(--hangeul-dark);
+      padding-left: 1.2rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: #333;
+    }
+
+    /* ── Audio / Podcast Custom Controller ── */
+    .audio-player-box {
+      background: #F9F9F5;
+      border: 2px dashed var(--hangeul-dark);
+      border-radius: 8px;
+      padding: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .player-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 0.8rem;
+    }
+    .play-btn {
+      background: var(--hangeul-sky);
+      border: 2px solid var(--hangeul-dark);
+      border-radius: 6px;
+      padding: 8px 18px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 2px 2px 0 var(--hangeul-dark);
+    }
+    .play-btn:active {
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0 var(--hangeul-dark);
+    }
+    .play-progress-bar {
+      flex: 1;
+      height: 12px;
+      background: #E0E0DB;
+      border: 2px solid var(--hangeul-dark);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background: var(--hangeul-accent);
+      transition: width 0.1s linear;
+    }
+
+    /* ── K-Pop Dance Room Stylings ── */
+    .dance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .dance-card {
+      border: 3px solid var(--hangeul-dark);
+      border-radius: 10px;
+      background: white;
+      padding: 1.2rem;
+      box-shadow: 4px 4px 0 var(--hangeul-dark);
+    }
+    .dance-letter-badge {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 44px;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      border: 3px solid var(--hangeul-dark);
+      border-radius: 8px;
+      background: var(--hangeul-accent);
+      margin-bottom: 0.8rem;
+    }
+
+    /* ── Interactive Sound Game ── */
+    .game-board {
+      background: white;
+      border: 3px solid var(--hangeul-dark);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .anatomy-diagram {
+      width: 280px;
+      height: 280px;
+      border: 3px solid var(--hangeul-dark);
+      background-color: var(--hangeul-bg);
+      margin: 1.5rem auto;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+    .hotspot {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 3px solid var(--hangeul-dark);
+      background: rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+    .hotspot:hover {
+      transform: scale(1.15);
+      background: var(--hangeul-sky);
+    }
+    .hotspot.correct {
+      background: var(--hangeul-success);
+      color: white;
+    }
+    /* 구강 모형 조음 위치 좌표 */
+    #hs-throat { bottom: 60px; right: 90px; }       /* 목구멍 ㅇ */
+    #hs-backtongue { bottom: 120px; right: 110px; } /* 혀뿌리 ㄱ */
+    #hs-fronttongue { top: 120px; left: 80px; }    /* 혀끝 ㄴ */
+    #hs-lips { top: 110px; left: 40px; }            /* 입술 ㅁ */
+    #hs-teeth { top: 90px; left: 60px; }            /* 이 ㅅ */
+
+    .game-question {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 1rem;
+      color: var(--hangeul-dark);
+    }
+    .game-options {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .option-btn {
+      background: white;
+      border: 2px solid var(--hangeul-dark);
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 2px 2px 0 var(--hangeul-dark);
+    }
+    .option-btn:hover {
+      background: var(--hangeul-bg);
+    }
+    .option-btn.active-target {
+      background: var(--hangeul-accent);
+    }
+
+    /* ── Reward Wallet ── */
+    .reward-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+    .reward-card {
+      border: 3px solid var(--hangeul-dark);
+      border-radius: 8px;
+      background: white;
+      padding: 1.2rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 4px 4px 0 var(--hangeul-dark);
+    }
+    .reward-card.locked {
+      background: #EBEBEB;
+      color: var(--hangeul-muted);
+      border-color: #888888;
+      box-shadow: 4px 4px 0 #888888;
+    }
+    .reward-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .reward-lock-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: var(--hangeul-dark);
+      color: white;
+      border: 2px solid white;
+      font-size: 0.75rem;
+      padding: 2px 6px;
+      border-radius: 20px;
+    }
+
+    /* ── Footer ── */
+    .hangeul-footer {
+      border-top: 3px solid var(--hangeul-dark);
+      padding: 3rem 1.2rem;
+      background: white;
+      text-align: center;
+    }
+    .hangeul-footer p {
+      font-size: 0.9rem;
+      color: var(--hangeul-muted);
+    }
+
+    /* ── Audio Elements ── */
+    #podcast-audio {
+      display: none;
+    }
+
+    /* ── Synth Cassette Rotation ── */
+    @keyframes spinWheel {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .wheel-spinning {
+      animation: spinWheel 2s linear infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="hangeul-nav">
+    <div class="hangeul-nav-inner">
+      <a href="#" class="hangeul-logo">
+        <span class="logo-dot"></span> K-Lingo Journey
+      </a>
+      <div class="nav-social-links">
+        <span class="nav-badge">Sejong Hangeul</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero Banner ── -->
+  <header class="hangeul-hero">
+    <h1>Hangeul, the Science and Art</h1>
+    <p>한글은 과학이자 아름다운 그림입니다. 단 24개의 자모음과 소리내는 방법만 알면 즉시 온 세상을 읽고 쓸 수 있는 세종대왕님의 가장 위대한 혜택을 노래와 춤으로 만나보세요.</p>
+    <div class="hero-badges-wrap">
+      <span class="hero-badge">🧠 featurals alphabet</span>
+      <span class="hero-badge">💃 K-POP integration</span>
+      <span class="hero-badge">🎮 Interactive lab</span>
+    </div>
+  </header>
+
+  <!-- ── Tab Navigation ── -->
+  <section class="hangeul-tabs">
+    <button class="tab-item active" onclick="switchTab('history')">
+      <span class="tab-item-icon">📜</span> History
+    </button>
+    <button class="tab-item" onclick="switchTab('sound')">
+      <span class="tab-item-icon">🔊</span> Sound Lab
+    </button>
+    <button class="tab-item" onclick="switchTab('dance')">
+      <span class="tab-item-icon">💃</span> K-Dance
+    </button>
+    <button class="tab-item" onclick="switchTab('game')">
+      <span class="tab-item-icon">🎮</span> Lab Game
+    </button>
+  </section>
+
+  <!-- ── Main Container ── -->
+  <main class="hangeul-container">
+
+    <!-- ── Tab 1: History ── -->
+    <div id="tab-history" class="tab-content active">
+      <div class="outline-card">
+        <h2 class="card-title"><span class="title-marker"></span>훈민정음: 세종대왕의 사랑이 담긴 과학</h2>
+        <p>1443년 창제되어 1446년 반포된 한글의 본명은 <strong>'훈민정음(백성을 가르치는 올바른 소리)'</strong>입니다. 당대 권력층의 한자 독점으로 백성들이 법률을 몰라 억울하게 처벌받고 편지 한 통 쓰지 못하는 현실을 가여이 여겨, 전 세계 유일하게 '누구나 하루아침에 읽고 쓸 수 있는 문자'를 과학적으로 설계하셨습니다.</p>
+        
+        <div class="history-quote">
+          "나라의 말이 중국과 달라 문자와 서로 통하지 아니하므로, 어리석은 백성이 이르고자 하는 바가 있어도 마침내 제 뜻을 싣고 펴지 못하는 사람이 많으니라. 내가 이를 가엾게 여겨 새로 스물여덟 자를 만드노니, 사람마다 쉽게 익혀 날마다 쓰는 데 편안하게 하고자 할 따름이니라." <br>
+          <strong style="display: block; margin-top: 6px; font-size: 0.85rem; color: #666;">— 훈민정음 어제 서문 (세종대왕)</strong>
+        </div>
+
+        <p>한글은 단순한 문자가 아니라, 소리를 내는 인체 발음기관(혀, 입술, 목구멍, 치아)과 하늘(•), 땅(ㅡ), 사람(ㅣ)의 철학을 본떠 그린 세상에서 가장 직관적인 소리 문자(Featural Alphabet)입니다.</p>
+      </div>
+
+      <div class="two-col-grid">
+        <div class="outline-card">
+          <h3 class="card-title"><span class="title-marker"></span>자음의 상형 원리</h3>
+          <p>자음은 입술, 혀뿌리, 목구멍 등의 소리 나는 모양을 그림으로 본떴습니다.</p>
+          <ul style="margin-left: 1.5rem; margin-top: 0.8rem;">
+            <li><strong>ㄱ</strong>: 혀뿌리가 목구멍을 막는 형상</li>
+            <li><strong>ㄴ</strong>: 혀끝이 윗잇몸에 닿는 형상</li>
+            <li><strong>ㅁ</strong>: 입술의 네모난 모양</li>
+            <li><strong>ㅅ</strong>: 뾰족한 이(치아)의 모양</li>
+            <li><strong>ㅇ</strong>: 둥근 목구멍 모양</li>
+          </ul>
+        </div>
+        <div class="outline-card">
+          <h3 class="card-title"><span class="title-marker"></span>모음의 천지인(天地人)</h3>
+          <p>모음은 동양 철학의 3대 요소인 우주의 법칙을 그대로 형상화했습니다.</p>
+          <ul style="margin-left: 1.5rem; margin-top: 0.8rem;">
+            <li><strong>• (하늘)</strong>: 우주의 중심인 둥근 하늘</li>
+            <li><strong>ㅡ (땅)</strong>: 평평하게 펼쳐진 대지</li>
+            <li><strong>ㅣ (사람)</strong>: 하늘과 땅 사이 우뚝 서 있는 인간</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hangeul Curriculum Architecture Card (60-30-10 Rule) -->
+      <div class="outline-card" style="margin-top: 2rem; border-color: var(--hangeul-dark); background: #FAF9F2;">
+        <h3 class="card-title"><span class="title-marker" style="background:var(--hangeul-accent);"></span>한국어 난이도의 진실 & 60-30-10 커리큘럼 아키텍처</h3>
+        <p style="margin-bottom: 1rem;">미국 외교관연수원(FSI) 조사 결과, 한국어는 영어 원어민이 습득하기에 가장 오랜 시간(최소 2,200시간)이 걸리는 <strong>최고 난이도 등급 'Category IV (Super-hard)'</strong> 언어로 지정되어 있습니다. 한글 자모음은 과학적이어서 <strong>처음에는 매우 쉬우나, 나중에는 문법과 존댓말 등으로 인해 극도로 어려워지는 특성</strong>을 지닙니다.</p>
+        <p style="margin-bottom: 1.5rem;">이에 따라 K-Lingo Journey는 학습 효과를 극대화하기 위해 난이도와 교육 진도를 균등 분배하지 않고, <strong>초급 60% ➡️ 중급 30% ➡️ 고급 10%</strong> 진도 비중 분배를 적용하여 학습자의 가장 영리한 습득 곡선에 맞추어 설계되었습니다.</p>
+        
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <!-- 초급 진도 바 -->
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:700; margin-bottom:4px;">
+              <span>🟢 초급 과정 (Elementary Level - 84강) - 자모 발음 과학 & 기본 뼈대 문법 완전 독파</span>
+              <span>진도율 60% 완성</span>
+            </div>
+            <div style="height:16px; background:#E5E5E0; border:2px solid var(--hangeul-dark); border-radius:8px; overflow:hidden;">
+              <div style="width:60%; height:100%; background:var(--hangeul-accent);"></div>
+            </div>
+          </div>
+          
+          <!-- 중급 진도 바 -->
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:700; margin-bottom:4px;">
+              <span>🟡 중급 과정 (Intermediate Level - 84강) - 평/격/경음 조음 훈련 & 실전 상황 회화 연마</span>
+              <span>진도율 30% 누적</span>
+            </div>
+            <div style="height:16px; background:#E5E5E0; border:2px solid var(--hangeul-dark); border-radius:8px; overflow:hidden;">
+              <div style="width:30%; height:100%; background:var(--hangeul-sky);"></div>
+            </div>
+          </div>
+          
+          <!-- 고급 진도 바 -->
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:700; margin-bottom:4px;">
+              <span>🔴 고급 과정 (Advanced Level - 84강) - 음운 변이, 뉘앙스 정수, 시사 및 원어민 프리토킹</span>
+              <span>최종 10%의 화룡점정</span>
+            </div>
+            <div style="height:16px; background:#E5E5E0; border:2px solid var(--hangeul-dark); border-radius:8px; overflow:hidden;">
+              <div style="width:10%; height:100%; background:#FF8A8A;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Tab 2: Sound Lab ── -->
+    <div id="tab-sound" class="tab-content">
+      <div class="outline-card">
+        <h2 class="card-title"><span class="title-marker"></span>자모 발음 & 팟캐스트 라디오</h2>
+        <p>한글의 24개 기본 자모음을 귀로 듣고 입으로 연습해보세요. NotebookLM을 통해 제작된 전문적인 20분 팟캐스트 라디오 해설과 4K 가이드 동영상이 제공됩니다.</p>
+        
+        <!-- Podcast Player -->
+        <div class="audio-player-box">
+          <h4 style="font-weight: 700; display:flex; justify-content:space-between; align-items:center;">
+            <span>🔊 1강 팟캐스트: 훈민정음 자음의 발음 과학 (20 Mins)</span>
+            <span style="font-size:0.8rem; background:#E5E5E0; padding:2px 6px; border-radius:4px;">NotebookLM Generated</span>
+          </h4>
+          <p style="font-size: 0.85rem; color: var(--hangeul-muted); margin-top: 4px;">원어민 호스트 2인이 들려주는 재미있고 정교한 한국어 발음 비밀 대담</p>
+          
+          <audio id="podcast-audio" src="assets/audio/scene_0.mp3" controls></audio>
+          <div class="player-controls">
+            <button class="play-btn" id="btn-audio-play" onclick="toggleAudio()">Play</button>
+            <div class="play-progress-bar" id="audio-progress" onclick="seekAudio(event)">
+              <div class="progress-fill" id="progress-fill-bar"></div>
+            </div>
+            <span id="audio-timer" style="font-size: 0.85rem; font-weight: 600;">00:00 / 20:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="outline-card">
+        <h3 class="card-title"><span class="title-marker"></span>동영상 연계 학습</h3>
+        <p>구글 Veo로 자동 생성된 모션 그래픽 비디오입니다. 한글의 소리와 이미지가 1.1배속의 빠른 템포와 튕기는 자막으로 믹싱되어 머릿속에 각인됩니다.</p>
+        <div style="border: 3px solid var(--hangeul-dark); border-radius: 12px; overflow: hidden; margin-top: 1.5rem; position: relative; background: #000; box-shadow: 4px 4px 0 var(--hangeul-dark);">
+          <video id="klingo-guide-video" controls poster="assets/images/scene_0.png" preload="none" style="width: 100%; display: block; aspect-ratio: 16/9; background: #111;">
+            <source src="korean_education/korean_education.mp4" type="video/mp4">
+            <p style="padding: 3rem 1.5rem; text-align: center; color: white; font-weight: 700; font-size: 1.05rem;">
+              🎥 Hangeul Articulatory Motion Guide Video<br>
+              <span style="font-size: 0.85rem; color: #aaa; font-weight: 400;">브라우저가 동영상 재생을 지원하지 않습니다.</span>
+            </p>
+          </video>
+        </div>
+      </div>
+
+      <div class="outline-card">
+        <h3 class="card-title"><span class="title-marker" style="background: var(--hangeul-sky);"></span>한글스케치(HangeulSketch) 판서 & 필기 학습</h3>
+        <p>2D 라인아트 드로잉 엔진을 통한 자모 조립 및 공책/칠판 필기 연출입니다. 세종대왕 액자와 훈민정음 해례본이 나란히 걸려 있는 교실에서 컴퓨터 모니터로부터 날아오르는 한글 날림 효과, 말하는 입에서 방출되는 한글 파동 효과, 그리고 획순에 맞춘 3단계 정밀 필기 모션과 연필/분필 판서(ASMR) 소리의 입체적인 조화로 한글의 창제 원리와 쓰기 방법을 직관적으로 시각화합니다.</p>
+        <div style="border: 3px solid var(--hangeul-dark); border-radius: 12px; overflow: hidden; margin-top: 1.5rem; position: relative; background: #000; box-shadow: 4px 4px 0 var(--hangeul-dark);">
+          <video id="hangeul-sketch-video" controls poster="assets/graphics/obj_notebook.png" preload="none" style="width: 100%; display: block; aspect-ratio: 16/9; background: #111;">
+            <source src="assets/video/hangeul_sketch.mp4" type="video/mp4">
+            <p style="padding: 3rem 1.5rem; text-align: center; color: white; font-weight: 700; font-size: 1.05rem;">
+              🎥 HangeulSketch Notebook & Blackboard Animation Video<br>
+              <span style="font-size: 0.85rem; color: #aaa; font-weight: 400;">브라우저가 동영상 재생을 지원하지 않습니다.</span>
+            </p>
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Tab 3: K-Dance ── -->
+    <div id="tab-dance" class="tab-content">
+      <div class="outline-card">
+        <h2 class="card-title"><span class="title-marker"></span>K-Pop 융합: "Hangeul Groove" 댄스</h2>
+        <p>전 세계 K-POP 매니아들이 한글의 독창적인 형상을 몸과 춤으로 표현하며 배우는 안무 가이드입니다. 24개 자모의 기하학적 형태를 시그니처 댄스 무브로 외워보세요.</p>
+      </div>
+
+      <!-- ── Hangeul Groove Synth Station ── -->
+      <div class="outline-card" style="background: linear-gradient(135deg, #FAF9F6 0%, #F1F0E8 100%); border-color: var(--hangeul-dark); border-width: 3px; position: relative; overflow: hidden; box-shadow: 6px 6px 0 var(--hangeul-dark);">
+        <div style="background: var(--hangeul-accent); position: absolute; top: 0; left: 20px; width: 40px; height: 10px; border-bottom: 2px solid var(--hangeul-dark); border-left: 2px solid var(--hangeul-dark); border-right: 2px solid var(--hangeul-dark);"></div>
+        <h3 class="card-title" style="margin-top: 10px;"><span class="title-marker" style="background: var(--hangeul-accent);"></span>Month 1 Hangeul Groove Synth Station</h3>
+        <p style="margin-bottom: 1.5rem;">웹 오디오 합성기로 연주되는 90년대 복고풍 K-Pop 신스 웨이브 비트에 맞춰 한글 모음의 창제 원리와 기본 자음을 귀로 듣고 춤선과 가사로 배워보세요!</p>
+
+        <div class="synth-station-deck" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 1.5rem; background: #1a1a1a; border: 3px solid var(--hangeul-dark); border-radius: 12px; padding: 1.5rem; color: #fff; box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 4px 4px 0 var(--hangeul-dark);">
+          <!-- Left Panel: Cassette Player Graphic & Controls -->
+          <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; border-right: 2px dashed #444; padding-right: 1.5rem; min-height: 250px;">
+            <!-- Cassette Tape Graphic -->
+            <div id="cassette-deck" style="width: 100%; max-width: 220px; height: 130px; background: #2c2c2c; border: 3px solid #444; border-radius: 8px; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.5); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 10px; margin: 0 auto;">
+              <!-- Cassette label -->
+              <div style="background: var(--hangeul-accent); color: var(--hangeul-dark); font-family: 'Outfit', sans-serif; font-size: 0.72rem; font-weight: 700; text-align: center; border-radius: 4px; padding: 4px; border: 1.5px solid #111;">
+                SKY, LAND, HUMAN (Vol.1)
+              </div>
+              <!-- Cassette wheels -->
+              <div style="display: flex; justify-content: space-around; width: 100%; margin: 10px 0;">
+                <div class="cassette-wheel" style="width: 40px; height: 40px; border-radius: 50%; border: 3px dashed #666; background: #111; position: relative; transition: transform 0.1s linear;">
+                  <div style="position: absolute; width: 10px; height: 10px; background: #fff; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+                </div>
+                <div class="cassette-wheel" style="width: 40px; height: 40px; border-radius: 50%; border: 3px dashed #666; background: #111; position: relative; transition: transform 0.1s linear;">
+                  <div style="position: absolute; width: 10px; height: 10px; background: #fff; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+                </div>
+              </div>
+              <!-- Cassette bottom window -->
+              <div style="height: 15px; background: rgba(255,255,255,0.1); border-radius: 4px; border: 1px solid #444; text-align: center; font-size: 0.6rem; color: #888; line-height: 13px;">
+                TDK D90
+              </div>
+            </div>
+
+            <!-- Playback Controls -->
+            <div style="width: 100%; display: flex; flex-direction: column; gap: 8px; margin-top: 12px;">
+              <div style="display: flex; gap: 8px; width: 100%;">
+                <button id="btn-synth-play" onclick="toggleSynthSong()" style="flex: 1.5; background: var(--hangeul-accent); color: var(--hangeul-dark); border: 2.5px solid var(--hangeul-dark); border-radius: 6px; padding: 8px 12px; font-weight: 800; font-size: 0.85rem; cursor: pointer; box-shadow: 2px 2px 0 var(--hangeul-dark); transition: transform 0.1s ease;">
+                  ▶ PLAY SONG
+                </button>
+                <button id="btn-synth-stop" onclick="stopSynthSong()" style="flex: 1; background: #ef4444; color: #fff; border: 2.5px solid var(--hangeul-dark); border-radius: 6px; padding: 8px 12px; font-weight: 800; font-size: 0.85rem; cursor: pointer; box-shadow: 2px 2px 0 var(--hangeul-dark); transition: transform 0.1s ease;">
+                  ■ STOP
+                </button>
+              </div>
+              
+              <!-- Custom MP3 File Input -->
+              <input type="file" id="mp3-file-input" accept="audio/*" style="display:none;" onchange="loadCustomMP3(event)">
+              <button onclick="document.getElementById('mp3-file-input').click()" style="width: 100%; background: #4b5563; color: #fff; border: 2.5px solid var(--hangeul-dark); border-radius: 6px; padding: 6px; font-weight: 700; font-size: 0.78rem; cursor: pointer; box-shadow: 2px 2px 0 var(--hangeul-dark); transition: all 0.1s ease;">
+                💿 LOAD AI SONG (MP3)
+              </button>
+              <div style="display:flex; justify-content:space-between; font-size:0.72rem; color:#ccc; padding:2px;">
+                <span id="player-mode-badge" style="color:var(--hangeul-accent); font-weight:bold;">Mode: Web Synth</span>
+                <span id="loaded-filename" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap; max-width:110px;">No file loaded</span>
+              </div>
+              
+              <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; background: #262626; padding: 6px 10px; border-radius: 6px; border: 1px solid #333;">
+                <span>Vocal Guide (TTS)</span>
+                <input type="checkbox" id="vocal-toggle" checked style="width: 16px; height: 16px; accent-color: var(--hangeul-accent); cursor: pointer;">
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Panel: LED Screen with Lyrics & Tempo -->
+          <div style="display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
+            <!-- LED Matrix Screen -->
+            <div style="flex: 1; background: #000; border: 2.5px solid #444; border-radius: 8px; padding: 12px; font-family: monospace; display: flex; flex-direction: column; justify-content: space-between; box-shadow: inset 0 0 10px rgba(0,255,0,0.15); border-color: #ffd700;">
+              <!-- LED header info -->
+              <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--hangeul-accent); border-bottom: 1px dashed #333; padding-bottom: 4px;">
+                <span id="led-tempo-display">BPM: 120</span>
+                <span id="led-bar-display">BAR: 00 / BEAT: 1</span>
+              </div>
+              <!-- Karaoke Scrolling Lyrics -->
+              <div id="led-lyrics-screen" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #00ff00; font-size: 0.9rem; line-height: 1.4; padding: 8px 0; overflow: hidden;">
+                <div id="lyrics-prev" style="color: #005500; font-size: 0.75rem; transition: all 0.2s;">(Press Play to Start Hangeul Groove)</div>
+                <div id="lyrics-current" style="font-weight: bold; color: var(--hangeul-accent); font-size: 1rem; margin: 4px 0; text-shadow: 0 0 5px rgba(255,215,0,0.5); transition: all 0.2s;">"Sky, Land, Human" - Month 1 Theme Song</div>
+                <div id="lyrics-next" style="color: #005500; font-size: 0.75rem; transition: all 0.2s;">Let's learn Hangeul through K-Pop!</div>
+              </div>
+            </div>
+
+            <!-- Tempo Slider -->
+            <div style="margin-top: 12px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+                <span>Groove Speed (Tempo)</span>
+                <span id="synth-tempo-val" style="color: var(--hangeul-accent); font-weight: bold;">120 BPM</span>
+              </div>
+              <input type="range" id="synth-tempo-slider" min="110" max="130" value="120" oninput="changeSynthTempo(this.value)" style="width: 100%; accent-color: var(--hangeul-accent); cursor: pointer;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dance-grid">
+        <div class="dance-card">
+          <div class="dance-letter-badge">ㄱ</div>
+          <h4 style="font-weight:700; margin-bottom:6px;">'Velar Snap' 안무</h4>
+          <p style="font-size:0.85rem; color:var(--hangeul-muted); margin-bottom:10px;">혀뿌리가 목을 막는 'Locking' 현상을 형상화</p>
+          <p><strong>동작 가이드:</strong> 오른쪽 팔꿈치를 정확히 90도로 꺾어 머리 위로 기역(ㄱ) 형태를 고정하면서 골반을 튕기는 강렬한 락킹 힙합 댄스.</p>
+        </div>
+
+        <div class="dance-card">
+          <div class="dance-letter-badge">ㄴ</div>
+          <h4 style="font-weight:700; margin-bottom:6px;">'Alveolar Wave' 안무</h4>
+          <p style="font-size:0.85rem; color:var(--hangeul-muted); margin-bottom:10px;">혀끝이 부드럽게 닿아 미끄러지는 소리</p>
+          <p><strong>동작 가이드:</strong> 한쪽 손끝을 바닥으로 향하게 꺾어 대칭 니은(ㄴ) 자를 그리며, 몸통을 타고 흐르는 부드러운 상체 웨이브.</p>
+        </div>
+
+        <div class="dance-card">
+          <div class="dance-letter-badge">ㅁ</div>
+          <h4 style="font-weight:700; margin-bottom:6px;">'Bilabial Square' 안무</h4>
+          <p style="font-size:0.85rem; color:var(--hangeul-muted); margin-bottom:10px;">입술이 만났다 벌어지는 네모 모양</p>
+          <p><strong>동작 가이드:</strong> 양손 검지 손가락을 모아 얼굴 앞 공중에 커다란 사각형(ㅁ)을 그리고 양손을 입술에 댔다가 밖으로 털어내는 댄스 훅.</p>
+        </div>
+
+        <div class="dance-card">
+          <div class="dance-letter-badge">ㅅ</div>
+          <h4 style="font-weight:700; margin-bottom:6px;">'Dental Bridge' 안무</h4>
+          <p style="font-size:0.85rem; color:var(--hangeul-muted); margin-bottom:10px;">이(치아)의 날카로운 뾰족함</p>
+          <p><strong>동작 가이드:</strong> 다리를 가볍게 벌리고 선 상태에서 양팔을 머리 위로 삼각형 형태로 모아 합장(ㅅ)하며 스쿼트 스텝을 밟는 일렉트로닉 댄스.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Tab 4: Lab Game ── -->
+    <div id="tab-game" class="tab-content">
+      <div class="outline-card">
+        <h2 class="card-title"><span class="title-marker"></span>Interactive Lab: 조음 위치 맞추기</h2>
+        <p>자음은 소리가 나는 조음 기관의 접촉 모양을 기초로 만들어졌습니다. 아래 제시되는 자음이 소리 나는 구강 내 올바른 타겟 지점을 원그림에서 찾아 터치해보세요!</p>
+
+        <div class="game-board">
+          <div class="game-question" id="game-quest-text">질문: 자음 'ㄱ' 소리는 혀뿌리가 어디에 닿아 날까요?</div>
+          
+          <div class="anatomy-diagram">
+            <!-- 임시 구강 단면 그래픽 배경을 모방하는 박스 -->
+            <div style="width:100%; height:100%; background: radial-gradient(circle, #ffe3e3 30%, #fcdcd7 80%); display:flex; align-items:center; justify-content:center;">
+              <span style="font-size:0.85rem; color:#8c6964; opacity:0.8; font-weight:600;">[구강 조음 단면도]</span>
+            </div>
+            
+            <!-- 조음 타겟 핫스팟 노드들 -->
+            <div class="hotspot" id="hs-lips" onclick="checkAnswer('ㅁ')">ㅁ</div>
+            <div class="hotspot" id="hs-teeth" onclick="checkAnswer('ㅅ')">ㅅ</div>
+            <div class="hotspot" id="hs-fronttongue" onclick="checkAnswer('ㄴ')">ㄴ</div>
+            <div class="hotspot" id="hs-backtongue" onclick="checkAnswer('ㄱ')">ㄱ</div>
+            <div class="hotspot" id="hs-throat" onclick="checkAnswer('ㅇ')">ㅇ</div>
+          </div>
+
+          <div id="game-feedback" style="font-weight:700; font-size:1.1rem; margin-top:10px; min-height:26px;"></div>
+
+          <div class="game-options">
+            <button class="option-btn active-target" id="opt-ㄱ" onclick="selectTarget('ㄱ')">자음 ㄱ 찾기</button>
+            <button class="option-btn" id="opt-ㄴ" onclick="selectTarget('ㄴ')">자음 ㄴ 찾기</button>
+            <button class="option-btn" id="opt-ㅁ" onclick="selectTarget('ㅁ')">자음 ㅁ 찾기</button>
+            <button class="option-btn" id="opt-ㅅ" onclick="selectTarget('ㅅ')">자음 ㅅ 찾기</button>
+            <button class="option-btn" id="opt-ㅇ" onclick="selectTarget('ㅇ')">자음 ㅇ 찾기</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Daily Learner Journey (오감 통합 루프) -->
+      <div class="outline-card" style="background: #F9F9F5;">
+        <h3 class="card-title"><span class="title-marker" style="background:var(--hangeul-accent);"></span>오감 통합 학습 여정 (Daily Learner Journey)</h3>
+        <p style="margin-bottom: 1.2rem;">K-Lingo Journey는 하루 1시간, 눈/귀/손/동작을 골고루 활용해 자연스럽게 뇌에 각인되는 4단계 오감 순환 학습 여정을 제안합니다.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; text-align: center; margin-top: 1rem;">
+          <div style="border: 2px solid var(--hangeul-dark); padding: 1rem; border-radius: 8px; background: white;">
+            <div style="font-size: 1.8rem; margin-bottom: 4px;">🎬</div>
+            <div style="font-weight: 700; font-size: 0.9rem;">1단계: 아침 동영상</div>
+            <p style="font-size: 0.75rem; color: var(--hangeul-muted); margin-top: 4px;">Veo 모션 그래픽 개념 시각 습득 (5분)</p>
+          </div>
+          <div style="border: 2px solid var(--hangeul-dark); padding: 1rem; border-radius: 8px; background: white;">
+            <div style="font-size: 1.8rem; margin-bottom: 4px;">🎧</div>
+            <div style="font-weight: 700; font-size: 0.9rem;">2단계: 이동 중 팟캐스트</div>
+            <p style="font-size: 0.75rem; color: var(--hangeul-muted); margin-top: 4px;">이어폰으로 반복 귀 청취 훈련 (20분)</p>
+          </div>
+          <div style="border: 2px solid var(--hangeul-dark); padding: 1rem; border-radius: 8px; background: white;">
+            <div style="font-size: 1.8rem; margin-bottom: 4px;">📖</div>
+            <div style="font-weight: 700; font-size: 0.9rem;">3단계: 밤 강의노트</div>
+            <p style="font-size: 0.75rem; color: var(--hangeul-muted); margin-top: 4px;">책상에서 PDF 워크북으로 쓰기 복습 (30분)</p>
+          </div>
+          <div style="border: 2px solid var(--hangeul-dark); padding: 1rem; border-radius: 8px; background: white;">
+            <div style="font-size: 1.8rem; margin-bottom: 4px;">🎮</div>
+            <div style="font-weight: 700; font-size: 0.9rem;">4단계: 자기전 게임</div>
+            <p style="font-size: 0.75rem; color: var(--hangeul-muted); margin-top: 4px;">주차별 미니게임으로 체득 및 리워드</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 36주 게임 대시보드 (게이미피케이션 해금 시스템) -->
+      <div class="outline-card">
+        <h3 class="card-title"><span class="title-marker" style="background:var(--hangeul-sky);"></span>36주차 주간 미니게임 대시보드 (Weekly Games)</h3>
+        <p style="margin-bottom: 0.8rem;">1주차부터 36주차까지의 전체 미니게임 라인업입니다. 각 주차별 게임을 클리어하여 기억을 회복하고 훈련 상태를 유지하세요!</p>
+        <p style="font-size:0.85rem; color:var(--hangeul-muted); margin-bottom:1.5rem;">※ Week 1~2는 Unlocked 상태이며, 3주차부터는 이전 주차 패스 조건을 충족해야 순차적으로 해금됩니다.</p>
+        
+        <!-- 36주 격자 리스트 (Compact Grid) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.6rem; max-height: 250px; overflow-y: auto; border: 2px solid var(--hangeul-dark); border-radius: 8px; padding: 0.8rem; background: #FAF9F5; margin-bottom: 1.5rem;">
+          <!-- 1주 ~ 36주 격자 동적 렌더링 목업 -->
+          <div style="border: 2px solid var(--hangeul-dark); border-radius: 6px; padding: 6px; text-align: center; background: #E6FFFA; cursor: pointer;" onclick="alert('Week 1: 천지인 머징 퍼즐 (완료: 980점)')">
+            <div style="font-weight:700; font-size:0.75rem;">W1 🟢</div>
+            <div style="font-size:1rem;">🧩</div>
+            <div style="font-size:0.65rem; font-weight:700; color:var(--hangeul-success);">980 pts</div>
+          </div>
+          <div style="border: 2px solid var(--hangeul-dark); border-radius: 6px; padding: 6px; text-align: center; background: #E6FFFA; cursor: pointer;" onclick="alert('Week 2: 구강 단면 스나이퍼 (완료: 850점)')">
+            <div style="font-weight:700; font-size:0.75rem;">W2 🟢</div>
+            <div style="font-size:1rem;">🎯</div>
+            <div style="font-size:0.65rem; font-weight:700; color:var(--hangeul-success);">850 pts</div>
+          </div>
+          <!-- 3주~36주는 잠금 상태로 렌더링 -->
+          <script>
+            // 3주부터 36주까지의 기획된 게임 이름과 이모지 리스트
+            const gameTitles = [
+              "이중모음 매치", "가획 테트리스", "사각 조립기", "비트 쓰기", "조사 마그넷", "시제 빌더", "부정의 미로", "단위 마켓",
+              "시간의 방", "일기 대작전", "기압 게이지", "평격음 윈드", "경음 텐션", "복합모음 기어", "문장 접착제", "논리 체인",
+              "구어체 슬래시", "메트로 러너", "식당 타이쿤", "웨더 다이어리", "격식의 계단", "서울 익스프레스", "음운 보석팡",
+              "두음법칙 타겟", "높임 타워", "심리 텐션", "완곡 디펜스", "한자 연금술", "사자성어 카드", "한국 밈 매칭",
+              "뉴스 팩트체크", "이메일 런처", "서정 퍼즐", "코리아 투어 RPG"
+            ];
+            const gameEmojis = [
+              "🫧", "🧱", "📦", "✍️", "🧲", "🏠", "🛣️", "🛒", "⏰", "📝", "🎈", "🎈", "⚡", "⚙️", "🚂", "🔗",
+              "🔪", "🏃", "🍲", "🌤️", "🪜", "🚕", "💎", "🎯", "🗼", "📊", "🛡️", "🧪", "🎴", "🃏", "🔍", "🚀", "🌸", "👑"
+            ];
+            
+            for (let i = 3; i <= 36; i++) {
+              document.write(`
+                <div style="border: 2px dashed #bbb; border-radius: 6px; padding: 6px; text-align: center; background: #F1F1F1; color:#999; cursor: not-allowed;" onclick="alert('Week ${i}: ${gameTitles[i-3]} (${gameEmojis[i-3]})\\n이전 주차 점수를 획득해야 열립니다!')">
+                  <div style="font-weight:700; font-size:0.75rem;">W${i} 🔒</div>
+                  <div style="font-size:1rem;">${gameEmojis[i-3]}</div>
+                  <div style="font-size:0.65rem; font-weight:600;">Locked</div>
+                </div>
+              `);
+            }
+          </script>
+        </div>
+
+        <!-- 해금 합산 시뮬레이터 (Pass/Fail Calculator) -->
+        <div style="border: 2px dashed var(--hangeul-dark); border-radius: 8px; padding: 1rem; background: #FDFDF7;">
+          <h4 style="font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 6px;">
+            <span>🧮</span> 주차 해금 점수 계산기 (Pass/Fail Calculator)
+          </h4>
+          <p style="font-size: 0.8rem; color: var(--hangeul-muted); margin-bottom: 1rem;">
+            [학습 참여율 50%] + [게임 점수 50%] = 총합 70% 통과 규칙 혹은 [게임 점수 90% 이상] 즉시 프리패스 규칙을 아래 슬라이더로 직접 테스트해보세요!
+          </p>
+
+          <!-- 연속 프리패스 횟수 설정 셀렉트 폼 -->
+          <div style="display:flex; justify-content:space-between; align-items:center; background:#FFFBEB; border:1.5px solid var(--hangeul-dark); border-radius:6px; padding:8px; margin-bottom:1rem; font-size:0.82rem;">
+            <span style="font-weight:700;">🔄 연속 프리패스 사용 횟수 시뮬레이션:</span>
+            <select id="consecutive-pass-select" onchange="calcPass()" style="padding:4px; font-weight:700; border:2px solid var(--hangeul-dark); border-radius:4px; cursor:pointer;">
+              <option value="0">0회 (일반 상태)</option>
+              <option value="1">1회 연속 사용</option>
+              <option value="2">2회 연속 사용</option>
+              <option value="3">3회 연속 사용</option>
+              <option value="4">4회 연속 (한도 도달/잠금!)</option>
+            </select>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+            <!-- 학습 참여율 슬라이더 -->
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:0.8rem; font-weight:600;">
+                <span>📚 온라인 강의 학습/조회 투자율 (50% 반영)</span>
+                <span id="study-val">100% (50.0점)</span>
+              </div>
+              <input type="range" id="study-slider" min="0" max="100" value="100" oninput="calcPass()" style="width:100%; accent-color:var(--hangeul-sky); cursor:pointer;">
+            </div>
+
+            <!-- 게임 점수 슬라이더 -->
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:0.8rem; font-weight:600;">
+                <span>🎮 주간 미니게임 점수 (50% 반영)</span>
+                <span id="game-val">50% (25.0점)</span>
+              </div>
+              <input type="range" id="game-slider" min="0" max="100" value="50" oninput="calcPass()" style="width:100%; accent-color:var(--hangeul-accent); cursor:pointer;">
+            </div>
+
+            <!-- 결과 노출 판넬 -->
+            <div id="calc-result-box" style="border: 2px solid var(--hangeul-dark); border-radius: 6px; padding: 10px; text-align: center; margin-top: 0.5rem; font-weight: 700; background: var(--hangeul-accent);">
+              총합 점수: 75.0점 ➡️ [통과] 다음 주차 강의가 해금됩니다! 🎉
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real-Life Survival Shadowing Player (Web Speech API 연동 리얼 쉐도잉) -->
+      <div class="outline-card" style="background: #F0FDF4; border-color: var(--hangeul-dark);">
+        <h3 class="card-title"><span class="title-marker" style="background:var(--hangeul-success);"></span>실용 100% 생존 필수 암기 & 쉐도잉 훈련</h3>
+        <p style="margin-bottom: 1.2rem;">외국인 학습자에게 오감 중 가장 중요한 것은 **원어민 소리를 듣고 그대로 따라 말해 외우는 것**입니다. 아래 버튼을 눌러 실제 발음을 듣고 소리 내어 따라 읽어보세요 (Listen 클릭 시 원어민 오디오 합성음 작동).</p>
+        
+        <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem;">
+          <!-- 1번 문장 -->
+          <div style="background:white; border:2px solid var(--hangeul-dark); border-radius:8px; padding:12px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+            <div>
+              <div style="font-weight:700; font-size:1.1rem; color:var(--hangeul-dark);">"배가 고파요."</div>
+              <div style="font-size:0.8rem; color:var(--hangeul-muted);">[Phonics] Bae-ga go-pa-yo. / [Meaning] I am hungry.</div>
+            </div>
+            <div style="display:flex; gap:6px;">
+              <button onclick="speakKo('배가 고파요.')" style="background:var(--hangeul-accent); border:1.5px solid var(--hangeul-dark); border-radius:4px; padding:4px 10px; font-size:0.8rem; font-weight:700; cursor:pointer;">🔊 Listen</button>
+              <button onclick="shadowKo('배가 고파요.')" style="background:white; border:1.5px solid var(--hangeul-dark); border-radius:4px; padding:4px 10px; font-size:0.8rem; font-weight:700; cursor:pointer;">🎤 Shadow</button>
+            </div>
+          </div>
+
+          <!-- 2번 문장 -->
+          <div style="background:white; border:2px solid var(--hangeul-dark); border-radius:8px; padding:12px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+            <div>
+              <div style="font-weight:700; font-size:1.1rem; color:var(--hangeul-dark);">"여기 주문 받으세요!"</div>
+              <div style="font-size:0.8rem; color:var(--hangeul-muted);">[Phonics] Yeo-gi ju-mun bat-au-se-yo! / [Meaning] Order here, please!</div>
+            </div>
+            <div style="display:flex; gap:6px;">
+              <button onclick="speakKo('여기 주문 받으세요!')" style="background:var(--hangeul-accent); border:1.5px solid var(--hangeul-dark); border-radius:4px; padding:4px 10px; font-size:0.8rem; font-weight:700; cursor:pointer;">🔊 Listen</button>
+              <button onclick="shadowKo('여기 주문 받으세요!')" style="background:white; border:1.5px solid var(--hangeul-dark); border-radius:4px; padding:4px 10px; font-size:0.8rem; font-weight:700; cursor:pointer;">🎤 Shadow</button>
+            </div>
+          </div>
+
+          <!-- 3번 문장 -->
+          <div style="background:white; border:2px solid var(--hangeul-dark); border-radius:8px; padding:12px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+            <div>
+              <div style="font-weight:700; font-size:1.1rem; color:var(--hangeul-dark);">"된장찌개 주세요, 김치 많이 주세요."</div>
+              <div style="font-size:0.8rem; color:var(--hangeul-muted);">[Phonics] Doen-jang-jji-gae ju-se-yo, gim-chi ma-ni ju-se-yo. / [Meaning] Stew and lots of Kimchi please.</div>
+            </div>
+            <div style="display:flex; gap:6px;">
+              <button onclick="speakKo('된장찌개 주세요, 김치 많이 주세요.')" style="background:var(--hangeul-accent); border:1.5px solid var(--hangeul-dark); border-radius:4px; padding:4px 10px; font-size:0.8rem; font-weight:700; cursor:pointer;">🔊 Listen</button>
+              <button onclick="shadowKo('된장찌개 주세요, 김치 많이 주세요.')" style="background:white; border:1.5px solid var(--hangeul-dark); border-radius:4px; padding:4px 10px; font-size:0.8rem; font-weight:700; cursor:pointer;">🎤 Shadow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 리워드 섹션 -->
+      <div class="outline-card">
+        <h3 class="card-title"><span class="title-marker"></span>마이 트래블 리워드 지갑 (My Travel Wallet)</h3>
+        <p>강의를 완강하거나 랩 게임 미션을 성공하면 한국 실전 여행/교통 정보 및 실제 할인 쿠폰 혜택이 해금됩니다.</p>
+        
+        <div class="reward-grid">
+          <div class="reward-card">
+            <div class="reward-icon">🚇</div>
+            <h4 style="font-weight:700;">서울 지하철 마스터</h4>
+            <p style="font-size:0.8rem; color:var(--hangeul-muted); margin-top:4px;">교통카드 충전 및 보증금 환급기 팁</p>
+            <span class="nav-badge" style="display:inline-block; margin-top:10px; font-size:0.7rem;">해금됨</span>
+          </div>
+
+          <div class="reward-card locked" id="reward-palace">
+            <div class="reward-lock-badge">🔒 Locked</div>
+            <div class="reward-icon" style="opacity: 0.4;">🏯</div>
+            <h4 style="font-weight:700; opacity: 0.6;">경복궁 한복 프리패스</h4>
+            <p style="font-size:0.8rem; color:var(--hangeul-muted); margin-top:4px; opacity:0.6;">무료입장 팁 & 야간개장 예매법</p>
+          </div>
+
+          <div class="reward-card locked" id="reward-coupon">
+            <div class="reward-lock-badge">🔒 Locked</div>
+            <div class="reward-icon" style="opacity: 0.4;">🎫</div>
+            <h4 style="font-weight:700; opacity: 0.6;">전통찻집 10% 쿠폰</h4>
+            <p style="font-size:0.8rem; color:var(--hangeul-muted); margin-top:4px; opacity: 0.6;">인사동 전통찻집 바코드 쿠폰</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="hangeul-footer">
+    <p>© 2026 K-Lingo Journey. Designed with love and respect for King Sejong the Great.</p>
+    <p style="font-size:0.8rem; margin-top:6px; color:#999;">세종대왕님의 한글 창제 정신에 헌정된 반응형 모바일-PC 통합 웹사이트</p>
+  </footer>
+
+  <script>
+    // ── Tab Navigation Switching ──
+    function switchTab(tabId) {
+      // 모든 탭 컨텐츠 숨기기
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      // 모든 탭 버튼 비활성화
+      const items = document.querySelectorAll('.tab-item');
+      items.forEach(item => item.classList.remove('active'));
+
+      // 선택한 탭 활성화
+      document.getElementById('tab-' + tabId).classList.add('active');
+      
+      // 현재 누른 버튼 활성화
+      const activeBtn = Array.from(document.querySelectorAll('.tab-item')).find(btn => 
+        btn.getAttribute('onclick').includes(tabId)
+      );
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    // ── Audio Controller Javascript ──
+    const audio = document.getElementById('podcast-audio');
+    const playBtn = document.getElementById('btn-audio-play');
+    const progressFill = document.getElementById('progress-fill-bar');
+    const timer = document.getElementById('audio-timer');
+
+    let audioDuration = 1200; // 가상 팟캐스트 길이 20분 (1200초)
+
+    function formatTime(secs) {
+      const mins = Math.floor(secs / 60);
+      const remainingSecs = Math.floor(secs % 60);
+      return (mins < 10 ? '0' : '') + mins + ':' + (remainingSecs < 10 ? '0' : '') + remainingSecs;
+    }
+
+    function toggleAudio() {
+      if (audio.paused) {
+        // 실제 오디오 파일 재생 대신 가상 타이머 흉내(목업 재생용)
+        playBtn.textContent = 'Pause';
+        playBtn.style.background = '#FFD700';
+        simulatePlayback();
+      } else {
+        playBtn.textContent = 'Play';
+        playBtn.style.background = '#87CEEB';
+        audio.pause();
+        clearInterval(playInterval);
+      }
+    }
+
+    let currentSecs = 0;
+    let playInterval;
+
+    function simulatePlayback() {
+      audio.play().catch(() => {}); // 미디어 파일이 없는 로컬 오작동 방지
+      clearInterval(playInterval);
+      playInterval = setInterval(() => {
+        if (currentSecs >= audioDuration) {
+          clearInterval(playInterval);
+          playBtn.textContent = 'Play';
+          playBtn.style.background = '#87CEEB';
+          currentSecs = 0;
+          return;
+        }
+        currentSecs += 1;
+        const percent = (currentSecs / audioDuration) * 100;
+        progressFill.style.width = percent + '%';
+        timer.textContent = formatTime(currentSecs) + ' / 20:00';
+      }, 1000);
+    }
+
+    function seekAudio(event) {
+      const rect = event.currentTarget.getBoundingClientRect();
+      const clickX = event.clientX - rect.left;
+      const width = rect.width;
+      const clickPercent = clickX / width;
+      currentSecs = clickPercent * audioDuration;
+      progressFill.style.width = (clickPercent * 100) + '%';
+      timer.textContent = formatTime(currentSecs) + ' / 20:00';
+    }
+
+    // ── Interactive Game Logic ──
+    let currentTargetLetter = 'ㄱ';
+
+    function selectTarget(letter) {
+      currentTargetLetter = letter;
+      
+      // 모든 옵션 버튼 비활성화
+      const buttons = document.querySelectorAll('.option-btn');
+      buttons.forEach(btn => btn.classList.remove('active-target'));
+
+      // 타겟 옵션 활성화
+      document.getElementById('opt-' + letter).classList.add('active-target');
+      document.getElementById('game-quest-text').textContent = "질문: 자음 '" + letter + "' 소리는 혀/입안의 어디에 닿아 날까요?";
+      document.getElementById('game-feedback').textContent = "";
+      document.getElementById('game-feedback').style.color = "var(--hangeul-dark)";
+
+      // 조음 핫스팟 리셋
+      const hotspots = document.querySelectorAll('.hotspot');
+      hotspots.forEach(hs => hs.classList.remove('correct'));
+    }
+
+    function checkAnswer(clickedLetter) {
+      const feedback = document.getElementById('game-feedback');
+      if (clickedLetter === currentTargetLetter) {
+        feedback.textContent = "정답입니다! 🎉 자음 '" + clickedLetter + "'의 조음 위치를 정확히 짚으셨습니다.";
+        feedback.style.color = "var(--hangeul-success)";
+        
+        // 정답 핫스팟 하이라이트
+        const activeHs = Array.from(document.querySelectorAll('.hotspot')).find(hs => 
+          hs.textContent === clickedLetter
+        );
+        if (activeHs) activeHs.classList.add('correct');
+
+        // 리워드 일부 해금 시뮬레이션
+        if (clickedLetter === 'ㄱ') {
+          const palace = document.getElementById('reward-palace');
+          palace.classList.remove('locked');
+          palace.innerHTML = `<div class="reward-icon">🏯</div><h4 style="font-weight:700;">경복궁 한복 프리패스</h4><p style="font-size:0.8rem; color:var(--hangeul-muted); margin-top:4px;">해금됨! 한복 입고 무료 입장 꿀팁</p>`;
+        } else if (clickedLetter === 'ㄴ') {
+          const coupon = document.getElementById('reward-coupon');
+          coupon.classList.remove('locked');
+          coupon.innerHTML = `<div class="reward-icon">🎫</div><h4 style="font-weight:700;">전통찻집 10% 쿠폰</h4><p style="font-size:0.8rem; color:var(--hangeul-muted); margin-top:4px;">해금됨! 바코드 다운로드</p>`;
+        }
+
+      } else {
+        feedback.textContent = "아쉽습니다. 😢 다른 위치를 짚어보세요!";
+        feedback.style.color = "red";
+      }
+    }
+
+    // ── Real-Life Survival Shadowing Speech Engine ──
+    function speakKo(text) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel(); // 이전 소리 재생 중단
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ko-KR';
+        utterance.rate = 0.95;           // 미세 템포 조절
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert("이 브라우저는 네이티브 음성 합성(TTS)을 지원하지 않습니다.");
+      }
+    }
+
+    function shadowKo(text) {
+      alert(`[Shadowing Mode Active]\n"${text}" 문장을 듣고 소리내어 따라 말해보세요!\n\n(실제 플랫폼에서는 마이크를 통해 사용자의 발음 주파수 정확도를 분석하여 피드백을 제공합니다.)`);
+    }
+
+    // ── Gamification Pass/Fail Calculator Logic ──
+    function calcPass() {
+      const studySlider = document.getElementById('study-slider');
+      const gameSlider = document.getElementById('game-slider');
+      const studyVal = document.getElementById('study-val');
+      const gameVal = document.getElementById('game-val');
+      const resultBox = document.getElementById('calc-result-box');
+      const consecutiveSelect = document.getElementById('consecutive-pass-select');
+
+      const studyScore = parseFloat(studySlider.value);
+      const gameScore = parseFloat(gameSlider.value);
+      const consecutiveCount = parseInt(consecutiveSelect.value);
+
+      const weightedStudy = studyScore * 0.5;
+      const weightedGame = gameScore * 0.5;
+      const totalScore = weightedStudy + weightedGame;
+
+      studyVal.textContent = studyScore + "% (" + weightedStudy.toFixed(1) + "점)";
+      gameVal.textContent = gameScore + "% (" + weightedGame.toFixed(1) + "점)";
+
+      // 4회 연속 초과 여부 확인 (Anti-Abuse 락)
+      if (consecutiveCount >= 4) {
+        if (totalScore >= 70) {
+          resultBox.textContent = "⚠️ [일반 패스 성공] 프리패스는 잠겨있지만(48시간 쿨다운), 학습 및 게임 점수 합산 " + totalScore.toFixed(1) + "점(70점 이상) 조건으로 다음 주차를 해금했습니다! 🎉";
+          resultBox.style.background = "#E6FFFA";
+          resultBox.style.color = "var(--hangeul-success)";
+          resultBox.style.borderColor = "var(--hangeul-success)";
+        } else {
+          resultBox.textContent = "🚫 [프리패스 잠금] 4회 연속 스킵 도달! 48시간 쿨다운 락이 작동 중입니다. 일반 합산 70점 미만이므로 잠금이 유지됩니다. (남은 쿨다운: 47시간 59분)";
+          resultBox.style.background = "#FEE2E2";
+          resultBox.style.color = "#991B1B";
+          resultBox.style.borderColor = "#991B1B";
+        }
+        return;
+      }
+
+      // 프리패스 일반 작동 분기
+      if (gameScore === 100) {
+        resultBox.textContent = "🏆 [PERFECT MASTER] 게임 100점 만점 달성! 즉시 다음 주차가 무조건 해금됩니다! 🥇";
+        resultBox.style.background = "#FEF3C7"; // 골드 컬러 톤
+        resultBox.style.color = "#D97706";
+        resultBox.style.borderColor = "#D97706";
+      } else if (gameScore >= 90) {
+        resultBox.textContent = "★ [유경험자 프리패스] 게임 점수 " + gameScore + "점 (90% 이상) 단독 패스! 즉시 다음 주차가 해금됩니다! ★";
+        resultBox.style.background = "#E6FFFA";
+        resultBox.style.color = "var(--hangeul-success)";
+        resultBox.style.borderColor = "var(--hangeul-success)";
+      } else if (totalScore >= 70) {
+        resultBox.textContent = "총합 점수: " + totalScore.toFixed(1) + "점 ➡️ [통과] 다음 주차 강의가 해금됩니다! 🎉";
+        resultBox.style.background = "var(--hangeul-accent)";
+        resultBox.style.color = "var(--hangeul-dark)";
+        resultBox.style.borderColor = "var(--hangeul-dark)";
+      } else {
+        resultBox.textContent = "총합 점수: " + totalScore.toFixed(1) + "점 ➡️ [보류] 70점 미만입니다. 추가 학습이나 게임 고득점이 필요합니다. 😢";
+        resultBox.style.background = "#FFD1D1";
+        resultBox.style.color = "red";
+        resultBox.style.borderColor = "red";
+      }
+    }
+
+    // ── K-Pop Synth Player Engine (Web Audio API) ──
+    let synthAudioCtx = null;
+    let synthInterval = null;
+    let isSynthPlaying = false;
+    let current16thNote = 0;
+    let nextNoteTime = 0.0;
+    let synthBPM = 120;
+    let scheduleAheadTime = 0.1; // How far ahead to schedule audio (sec)
+    let lookahead = 25.0; // How frequently to call scheduling function (ms)
+    let synthMasterGain = null;
+    let noiseBufferCache = null;
+    
+    // Lyrics list in order of beats/bars
+    const songLyrics = [
+      { bar: 0, text: "🎵 (K-Pop Intro Synth Beat Playing...) 🎵", lang: "en" },
+      { bar: 2, text: "Welcome to K-Lingo Journey! Let's Groove!", lang: "en" },
+      { bar: 4, text: "Hangeul is Science! Hangeul is Art!", lang: "en" },
+      { bar: 6, text: "ㄱ, ㄴ, ㅁ, ㅅ, ㅇ! Let's make some noise!", lang: "ko" },
+      { bar: 8, text: "Here comes ㄱ (Geok)! Tongue blocks the throat!", lang: "en" },
+      { bar: 10, text: "혀뿌리가 목구멍을 막으며 꽉! G! G! G!", lang: "ko" },
+      { bar: 12, text: "Next is ㄴ (Neon)! Tongue taps the ridge!", lang: "en" },
+      { bar: 14, text: "혀끝이 윗잇몸을 치면서 톡! N! N! N!", lang: "ko" },
+      { bar: 16, text: "Square is ㅁ (Mium)! Lips meet and smile!", lang: "en" },
+      { bar: 18, text: "두 입술이 만나서 웃음 지으며 믐! M! M! M!", lang: "ko" },
+      { bar: 20, text: "Pointy ㅅ (Sio) makes the dental breeze!", lang: "en" },
+      { bar: 22, text: "아랫니 뒤에서 바람이 슉! ㅅ! S! S!", lang: "ko" },
+      { bar: 24, text: "Round throat ㅇ (Iung) lets the vowels flow!", lang: "en" },
+      { bar: 26, text: "목구멍에서 편안하게 울리는 ㅇ! Ng! Ng!", lang: "ko" },
+      { bar: 28, text: "Add a line, make it strong! ㄱ to ㅋ!", lang: "en" },
+      { bar: 30, text: "ㄴ to ㄷ to ㅌ, let's sing along!", lang: "en" },
+      { bar: 32, text: "• (Ah-rae-a) is the round sky! (High!)", lang: "en" },
+      { bar: 34, text: "ㅡ (Eu) is the flat land! (Low!)", lang: "en" },
+      { bar: 36, text: "ㅣ (I) is the standing human! (Grow!)", lang: "en" },
+      { bar: 38, text: "Put them together, and let Hangeul flow!", lang: "en" },
+      { bar: 40, text: "하늘, 땅, 사람! Hangeul Groove!", lang: "ko" },
+      { bar: 42, text: "하늘, 땅, 사람! Make your body move!", lang: "ko" },
+      { bar: 44, text: "배가 고파요 (Bae-ga go-pa-yo) = I'm hungry!", lang: "ko" },
+      { bar: 46, text: "여기 주문 받으세요 (Order here, please!)", lang: "ko" },
+      { bar: 48, text: "된장찌개 주세요! Kimchi 많이 주세요!", lang: "ko" },
+      { bar: 50, text: "King Sejong the Great, we thank you today!", lang: "en" },
+      { bar: 52, text: "We can read, we can write, we can play!", lang: "en" },
+      { bar: 54, text: "Hangeul is Science! Hangeul is Groove!", lang: "en" },
+      { bar: 56, text: "One, two, three, let's move! Bye!", lang: "en" }
+    ];
+
+    const melodyNotes = {
+      Am: [329.63, 0, 440.00, 0, 493.88, 0, 523.25, 0, 493.88, 0, 440.00, 0, 329.63, 0, 392.00, 0], 
+      F:  [349.23, 0, 440.00, 0, 523.25, 0, 698.46, 0, 659.25, 0, 523.25, 0, 440.00, 0, 493.88, 0],
+      C:  [392.00, 0, 523.25, 0, 587.33, 0, 659.25, 0, 587.33, 0, 523.25, 0, 392.00, 0, 440.00, 0],
+      G:  [293.66, 0, 392.00, 0, 493.88, 0, 587.33, 0, 523.25, 0, 493.88, 0, 392.00, 0, 329.63, 349.23]
+    };
+
+    const bassLineNotes = {
+      Am: [55.00, 55.00, 82.41, 82.41, 55.00, 55.00, 61.74, 65.41], 
+      F:  [43.65, 43.65, 65.41, 65.41, 43.65, 43.65, 49.00, 55.00],
+      C:  [65.41, 65.41, 49.00, 49.00, 65.41, 65.41, 73.42, 82.41],
+      G:  [49.00, 49.00, 73.42, 73.42, 49.00, 49.00, 55.00, 61.74]
+    };
+
+    const chordProgression = ["Am", "F", "C", "G"];
+
+    function initSynth() {
+      synthAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      synthMasterGain = synthAudioCtx.createGain();
+      synthMasterGain.gain.setValueAtTime(0.5, synthAudioCtx.currentTime);
+      synthMasterGain.connect(synthAudioCtx.destination);
+      
+      const bufferSize = synthAudioCtx.sampleRate * 0.15;
+      noiseBufferCache = synthAudioCtx.createBuffer(1, bufferSize, synthAudioCtx.sampleRate);
+      const output = noiseBufferCache.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        output[i] = Math.random() * 2 - 1;
+      }
+    }
+
+    function playKick(time) {
+      if (!synthAudioCtx) return;
+      const osc = synthAudioCtx.createOscillator();
+      const gain = synthAudioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(synthMasterGain);
+      
+      osc.frequency.setValueAtTime(140, time);
+      osc.frequency.exponentialRampToValueAtTime(45, time + 0.12);
+      
+      gain.gain.setValueAtTime(1.0, time);
+      gain.gain.exponentialRampToValueAtTime(0.01, time + 0.12);
+      
+      osc.start(time);
+      osc.stop(time + 0.12);
+    }
+
+    function playSnare(time) {
+      if (!synthAudioCtx || !noiseBufferCache) return;
+      
+      const noiseSource = synthAudioCtx.createBufferSource();
+      noiseSource.buffer = noiseBufferCache;
+      const noiseFilter = synthAudioCtx.createBiquadFilter();
+      noiseFilter.type = "bandpass";
+      noiseFilter.frequency.value = 1000;
+      const noiseGain = synthAudioCtx.createGain();
+      
+      noiseSource.connect(noiseFilter);
+      noiseFilter.connect(noiseGain);
+      noiseGain.connect(synthMasterGain);
+      
+      noiseGain.gain.setValueAtTime(0.4, time);
+      noiseGain.gain.exponentialRampToValueAtTime(0.01, time + 0.16);
+      
+      noiseSource.start(time);
+      noiseSource.stop(time + 0.16);
+      
+      const osc = synthAudioCtx.createOscillator();
+      const oscGain = synthAudioCtx.createGain();
+      osc.type = "triangle";
+      osc.connect(oscGain);
+      oscGain.connect(synthMasterGain);
+      
+      osc.frequency.setValueAtTime(180, time);
+      osc.frequency.exponentialRampToValueAtTime(100, time + 0.08);
+      
+      oscGain.gain.setValueAtTime(0.6, time);
+      oscGain.gain.exponentialRampToValueAtTime(0.01, time + 0.08);
+      
+      osc.start(time);
+      osc.stop(time + 0.08);
+    }
+
+    function playHiHat(time) {
+      if (!synthAudioCtx || !noiseBufferCache) return;
+      const source = synthAudioCtx.createBufferSource();
+      source.buffer = noiseBufferCache;
+      
+      const filter = synthAudioCtx.createBiquadFilter();
+      filter.type = "highpass";
+      filter.frequency.value = 8000;
+      
+      const gain = synthAudioCtx.createGain();
+      source.connect(filter);
+      filter.connect(gain);
+      gain.connect(synthMasterGain);
+      
+      gain.gain.setValueAtTime(0.18, time);
+      gain.gain.exponentialRampToValueAtTime(0.01, time + 0.04);
+      
+      source.start(time);
+      source.stop(time + 0.04);
+    }
+
+    function playBassNote(freq, time) {
+      if (!synthAudioCtx) return;
+      const osc = synthAudioCtx.createOscillator();
+      const gain = synthAudioCtx.createGain();
+      osc.type = "triangle";
+      
+      const filter = synthAudioCtx.createBiquadFilter();
+      filter.type = "lowpass";
+      filter.frequency.value = 280;
+      
+      osc.connect(filter);
+      filter.connect(gain);
+      gain.connect(synthMasterGain);
+      
+      osc.frequency.setValueAtTime(freq, time);
+      
+      gain.gain.setValueAtTime(0.6, time);
+      gain.gain.exponentialRampToValueAtTime(0.01, time + 0.22);
+      
+      osc.start(time);
+      osc.stop(time + 0.22);
+    }
+
+    function playMelodyNote(freq, time) {
+      if (!synthAudioCtx || freq === 0) return;
+      const osc = synthAudioCtx.createOscillator();
+      const gain = synthAudioCtx.createGain();
+      osc.type = "sawtooth";
+      
+      const filter = synthAudioCtx.createBiquadFilter();
+      filter.type = "lowpass";
+      filter.frequency.setValueAtTime(1000, time);
+      filter.frequency.exponentialRampToValueAtTime(400, time + 0.15);
+      
+      osc.connect(filter);
+      filter.connect(gain);
+      gain.connect(synthMasterGain);
+      
+      osc.frequency.setValueAtTime(freq, time);
+      
+      gain.gain.setValueAtTime(0.12, time);
+      gain.gain.exponentialRampToValueAtTime(0.005, time + 0.15);
+      
+      osc.start(time);
+      osc.stop(time + 0.15);
+    }
+
+    function scheduleNote(step, time) {
+      const stepInBar = step % 16;
+      const beatInBar = Math.floor(stepInBar / 4);
+      const bar = Math.floor(step / 16);
+      const chordIndex = bar % 4;
+      const chord = chordProgression[chordIndex];
+      
+      if (stepInBar % 4 === 0) {
+        playKick(time);
+      }
+      
+      if (stepInBar === 4 || stepInBar === 12) {
+        playSnare(time);
+      }
+      
+      if (stepInBar % 2 === 0) {
+        playHiHat(time);
+      }
+      
+      if (stepInBar % 2 === 0) {
+        const bassIndex = Math.floor(stepInBar / 2);
+        const bassFreq = bassLineNotes[chord][bassIndex];
+        playBassNote(bassFreq, time);
+      }
+      
+      const melodyFreq = melodyNotes[chord][stepInBar];
+      playMelodyNote(melodyFreq, time);
+      
+      if (stepInBar === 0) {
+        setTimeout(() => {
+          updateLyricsForBar(bar, beatInBar + 1);
+        }, (time - synthAudioCtx.currentTime) * 1000);
+      } else if (stepInBar % 4 === 0) {
+        setTimeout(() => {
+          document.getElementById('led-bar-display').textContent = `BAR: ${String(bar + 1).padStart(2, '0')} / BEAT: ${beatInBar + 1}`;
+        }, (time - synthAudioCtx.currentTime) * 1000);
+      }
+    }
+
+    function updateLyricsForBar(bar, beat) {
+      document.getElementById('led-bar-display').textContent = `BAR: ${String(bar + 1).padStart(2, '0')} / BEAT: ${beat}`;
+      
+      let currentLyricIndex = -1;
+      for (let i = 0; i < songLyrics.length; i++) {
+        if (songLyrics[i].bar <= bar) {
+          currentLyricIndex = i;
+        }
+      }
+      
+      if (currentLyricIndex !== -1) {
+        const currentItem = songLyrics[currentLyricIndex];
+        const prevText = currentLyricIndex > 0 ? songLyrics[currentLyricIndex - 1].text : "";
+        const nextText = currentLyricIndex < songLyrics.length - 1 ? songLyrics[currentLyricIndex + 1].text : "";
+        
+        document.getElementById('lyrics-prev').textContent = prevText;
+        document.getElementById('lyrics-current').textContent = currentItem.text;
+        document.getElementById('lyrics-next').textContent = nextText;
+        
+        if (currentItem.bar === bar && document.getElementById('vocal-toggle').checked) {
+          triggerVoice(currentItem.text, currentItem.lang);
+        }
+      }
+      
+      if (bar >= 58) {
+        stopSynthSong();
+      }
+    }
+
+    function triggerVoice(text, lang) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = lang === "ko" ? "ko-KR" : "en-US";
+      utterance.rate = 1.15;
+      
+      const voices = window.speechSynthesis.getVoices();
+      let selectedVoice = null;
+      if (lang === "ko") {
+        selectedVoice = voices.find(v => v.lang.includes("ko") && v.name.toLowerCase().includes("female")) || voices.find(v => v.lang.includes("ko"));
+      } else {
+        selectedVoice = voices.find(v => v.lang.includes("en") && v.name.toLowerCase().includes("female")) || voices.find(v => v.lang.includes("en"));
+      }
+      if (selectedVoice) utterance.voice = selectedVoice;
+      
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function scheduler() {
+      while (nextNoteTime < synthAudioCtx.currentTime + scheduleAheadTime) {
+        scheduleNote(current16thNote, nextNoteTime);
+        const secondsPerBeat = 60.0 / synthBPM;
+        nextNoteTime += 0.25 * secondsPerBeat;
+        current16thNote++;
+      }
+    }
+
+    // Custom audio state variables
+    let customAudio = null;
+    let customAudioLoaded = false;
+
+    function loadCustomMP3(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      
+      const fileURL = URL.createObjectURL(file);
+      if (customAudio) {
+        customAudio.pause();
+      }
+      
+      customAudio = new Audio();
+      customAudio.src = fileURL;
+      customAudioLoaded = true;
+      
+      document.getElementById('loaded-filename').textContent = file.name;
+      document.getElementById('player-mode-badge').textContent = "Mode: Custom MP3";
+      document.getElementById('player-mode-badge').style.color = "var(--hangeul-sky)";
+      
+      // Stop synthetic playing if any
+      stopSynthSong();
+      
+      // Hook audio playback events
+      customAudio.ontimeupdate = function() {
+        if (customAudioLoaded && isSynthPlaying) {
+          updateLyricsByTime(customAudio.currentTime);
+        }
+      };
+      
+      customAudio.onplay = function() {
+        isSynthPlaying = true;
+        const wheels = document.querySelectorAll('.cassette-wheel');
+        wheels.forEach(w => w.classList.add('wheel-spinning'));
+        
+        const playBtn = document.getElementById('btn-synth-play');
+        playBtn.textContent = "⚙ PLAYING";
+        playBtn.style.background = "#FFD700";
+      };
+      
+      customAudio.onpause = function() {
+        isSynthPlaying = false;
+        const wheels = document.querySelectorAll('.cassette-wheel');
+        wheels.forEach(w => w.classList.remove('wheel-spinning'));
+        
+        const playBtn = document.getElementById('btn-synth-play');
+        playBtn.textContent = "▶ PLAY SONG";
+        playBtn.style.background = "var(--hangeul-accent)";
+      };
+      
+      customAudio.onended = function() {
+        stopSynthSong();
+      };
+    }
+
+    function updateLyricsByTime(time) {
+      const bar = Math.floor(time / 2.0);
+      const beat = Math.floor((time % 2.0) * 2) + 1;
+      
+      document.getElementById('led-bar-display').textContent = `BAR: ${String(bar + 1).padStart(2, '0')} / BEAT: ${beat}`;
+      
+      let currentLyricIndex = -1;
+      for (let i = 0; i < songLyrics.length; i++) {
+        if (songLyrics[i].bar * 2 <= time) {
+          currentLyricIndex = i;
+        }
+      }
+      
+      if (currentLyricIndex !== -1) {
+        const currentItem = songLyrics[currentLyricIndex];
+        const prevText = currentLyricIndex > 0 ? songLyrics[currentLyricIndex - 1].text : "";
+        const nextText = currentLyricIndex < songLyrics.length - 1 ? songLyrics[currentLyricIndex + 1].text : "";
+        
+        document.getElementById('lyrics-prev').textContent = prevText;
+        
+        const curDisplay = document.getElementById('lyrics-current');
+        if (curDisplay.textContent !== currentItem.text) {
+          curDisplay.textContent = currentItem.text;
+          document.getElementById('lyrics-next').textContent = nextText;
+          
+          if (document.getElementById('vocal-toggle').checked) {
+            triggerVoice(currentItem.text, currentItem.lang);
+          }
+        }
+      }
+    }
+
+    function toggleSynthSong() {
+      if (isSynthPlaying) return;
+      
+      if (customAudioLoaded && customAudio) {
+        customAudio.play();
+        return;
+      }
+      
+      if (!synthAudioCtx) {
+        initSynth();
+      }
+      
+      if (synthAudioCtx.state === 'suspended') {
+        synthAudioCtx.resume();
+      }
+      
+      isSynthPlaying = true;
+      current16thNote = 0;
+      nextNoteTime = synthAudioCtx.currentTime + 0.05;
+      
+      const wheels = document.querySelectorAll('.cassette-wheel');
+      wheels.forEach(w => w.classList.add('wheel-spinning'));
+      
+      const playBtn = document.getElementById('btn-synth-play');
+      playBtn.textContent = "⚙ PLAYING";
+      playBtn.style.background = "#FFD700";
+      
+      synthInterval = setInterval(scheduler, lookahead);
+    }
+
+    function stopSynthSong() {
+      const isCustomPlaying = customAudioLoaded && customAudio && !customAudio.paused;
+      if (!isSynthPlaying && !isCustomPlaying) return;
+      
+      isSynthPlaying = false;
+      clearInterval(synthInterval);
+      
+      if (customAudioLoaded && customAudio) {
+        customAudio.pause();
+        customAudio.currentTime = 0;
+      }
+      
+      if (window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+      }
+      
+      const wheels = document.querySelectorAll('.cassette-wheel');
+      wheels.forEach(w => w.classList.remove('wheel-spinning'));
+      
+      const playBtn = document.getElementById('btn-synth-play');
+      playBtn.textContent = "▶ PLAY SONG";
+      playBtn.style.background = "var(--hangeul-accent)";
+      
+      document.getElementById('lyrics-prev').textContent = "(Cassette Idle)";
+      document.getElementById('lyrics-current').textContent = "Hangeul Groove Synth Station";
+      document.getElementById('lyrics-next').textContent = "Click Play to resume.";
+      document.getElementById('led-bar-display').textContent = "BAR: 00 / BEAT: 1";
+    }
+
+    function changeSynthTempo(val) {
+      synthBPM = parseInt(val);
+      document.getElementById('synth-tempo-val').textContent = val + " BPM";
+      document.getElementById('led-tempo-display').textContent = "BPM: " + val;
+    }
+
+    // 자동 음원 로딩 감지
+    function checkAutoLoadSong() {
+      fetch('assets/audio/song_status.json')
+        .then(response => {
+          if (!response.ok) throw new Error("No status file");
+          return response.json();
+        })
+        .then(data => {
+          if (data.status === 'loaded') {
+            const audioPath = 'assets/audio/' + data.filename;
+            customAudio = new Audio();
+            customAudio.src = audioPath;
+            customAudioLoaded = true;
+            
+            document.getElementById('loaded-filename').textContent = data.filename;
+            document.getElementById('player-mode-badge').textContent = "Mode: Custom AI Song";
+            document.getElementById('player-mode-badge').style.color = "var(--hangeul-sky)";
+            
+            customAudio.ontimeupdate = function() {
+              if (customAudioLoaded && isSynthPlaying) {
+                updateLyricsByTime(customAudio.currentTime);
+              }
+            };
+            
+            customAudio.onplay = function() {
+              isSynthPlaying = true;
+              const wheels = document.querySelectorAll('.cassette-wheel');
+              wheels.forEach(w => w.classList.add('wheel-spinning'));
+              const playBtn = document.getElementById('btn-synth-play');
+              playBtn.textContent = "⚙ PLAYING";
+              playBtn.style.background = "#FFD700";
+            };
+            
+            customAudio.onpause = function() {
+              isSynthPlaying = false;
+              const wheels = document.querySelectorAll('.cassette-wheel');
+              wheels.forEach(w => w.classList.remove('wheel-spinning'));
+              const playBtn = document.getElementById('btn-synth-play');
+              playBtn.textContent = "▶ PLAY SONG";
+              playBtn.style.background = "var(--hangeul-accent)";
+            };
+            
+            customAudio.onended = function() {
+              stopSynthSong();
+            };
+            
+            console.log("Automatically loaded generated song: " + data.filename);
+          }
+        })
+        .catch(err => {
+          console.log("No custom pre-loaded song found, defaulting to web synth mode.");
+        });
+    }
+
+    // 초기 로딩 시 점수 자동 동기화 계산 실행 및 음원 자동 감지
+    window.onload = function() {
+      if (document.getElementById('study-slider')) {
+        calcPass();
+      }
+      checkAutoLoadSong();
+    };
+  </script>
+</body>
+</html>
