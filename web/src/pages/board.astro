@@ -66,40 +66,11 @@ const mockPosts = [
     </header>
 
     <div class="board-main">
-      <!-- Write trigger & Form -->
+      <!-- Write trigger & Form (Locked) -->
       <section class="write-section">
-        <button id="toggle-write-btn" class="write-trigger-btn">
-          <span>✍️ Write New Question / Post</span>
+        <button id="toggle-write-btn" class="write-trigger-btn locked" style="cursor: not-allowed; border-style: solid; background: rgba(0,0,0,0.03); color: var(--text-2);">
+          <span>🔒 Writing requires login (Coming soon)</span>
         </button>
-
-        <form id="post-form" class="post-form">
-          <div class="form-row split">
-            <div class="form-group">
-              <label for="post-author">Your Nickname</label>
-              <input type="text" id="post-author" required placeholder="e.g., King Sejong" maxlength="15" />
-            </div>
-            <div class="form-group">
-              <label for="post-category">Category</label>
-              <select id="post-category">
-                <option value="Question">❓ Question</option>
-                <option value="Tip / Info">💡 Tip / Info</option>
-                <option value="Free Talk">💬 Free Talk</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="post-title">Title</label>
-            <input type="text" id="post-title" required placeholder="Summarize your question or idea." maxlength="80" />
-          </div>
-          <div class="form-group">
-            <label for="post-content">Content</label>
-            <textarea id="post-content" required placeholder="Write details about your question, tip, or thought here." maxlength="1000"></textarea>
-          </div>
-          <div class="form-actions">
-            <button type="button" id="cancel-post-btn" class="btn-secondary">Cancel</button>
-            <button type="submit" class="btn-primary">Submit Post</button>
-          </div>
-        </form>
       </section>
 
       <!-- Post List Feed -->
@@ -220,50 +191,11 @@ const mockPosts = [
     }).join('');
   }
 
-  // Toggle writing panel
-  if (toggleWriteBtn && postForm) {
-    toggleWriteBtn.addEventListener('click', () => {
-      postForm.classList.add('open');
-      toggleWriteBtn.style.display = 'none';
-      document.getElementById('post-author').focus();
-    });
-
-    if (cancelPostBtn) {
-      cancelPostBtn.addEventListener('click', () => {
-        postForm.classList.remove('open');
-        postForm.reset();
-        toggleWriteBtn.style.display = 'inline-flex';
-      });
-    }
-  }
-
-  // Form submit handler
-  if (postForm) {
-    postForm.addEventListener('submit', (e) => {
+  // Disable writing and show alert warning
+  if (toggleWriteBtn) {
+    toggleWriteBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const author = document.getElementById('post-author').value.trim();
-      const category = document.getElementById('post-category').value;
-      const title = document.getElementById('post-title').value.trim();
-      const content = document.getElementById('post-content').value.trim();
-
-      if (!author || !title || !content) return;
-
-      const newPost = {
-        id: 'local-en-' + Date.now() + '-' + Math.random().toString(36).substr(2, 5),
-        title,
-        content,
-        author,
-        category,
-        created_at: new Date().toISOString(),
-        reply: null
-      };
-
-      saveLocalPost(newPost);
-
-      postForm.classList.remove('open');
-      postForm.reset();
-      toggleWriteBtn.style.display = 'inline-flex';
-      renderFeed();
+      alert("Post creation is currently under preparation. It will be available after login integration.");
     });
   }
 

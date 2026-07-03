@@ -66,40 +66,11 @@ const mockPosts = [
     </header>
 
     <div class="board-main">
-      <!-- 글쓰기 트리거 및 작성 폼 -->
+      <!-- 글쓰기 트리거 및 작성 폼 (로그인 차단) -->
       <section class="write-section">
-        <button id="toggle-write-btn" class="write-trigger-btn">
-          <span>✍️ 새 질문/피드 남기기</span>
+        <button id="toggle-write-btn" class="write-trigger-btn locked" style="cursor: not-allowed; border-style: solid; background: rgba(0,0,0,0.03); color: var(--text-2);">
+          <span>🔒 글쓰기는 로그인 후 가능합니다 (준비중)</span>
         </button>
-
-        <form id="post-form" class="post-form">
-          <div class="form-row split">
-            <div class="form-group">
-              <label for="post-author">작성자 닉네임</label>
-              <input type="text" id="post-author" required placeholder="예: 세종대왕" maxlength="15" />
-            </div>
-            <div class="form-group">
-              <label for="post-category">카테고리</label>
-              <select id="post-category">
-                <option value="질문">❓ 질문</option>
-                <option value="정보">💡 정보/꿀팁</option>
-                <option value="자유">💬 자유 이야기</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="post-title">제목</label>
-            <input type="text" id="post-title" required placeholder="핵심 궁금증이나 요약을 적어주세요." maxlength="80" />
-          </div>
-          <div class="form-group">
-            <label for="post-content">내용</label>
-            <textarea id="post-content" required placeholder="질문이나 팁을 구체적으로 자유롭게 남겨주세요." maxlength="1000"></textarea>
-          </div>
-          <div class="form-actions">
-            <button type="button" id="cancel-post-btn" class="btn-secondary">취소</button>
-            <button type="submit" class="btn-primary">게시물 등록</button>
-          </div>
-        </form>
       </section>
 
       <!-- 게시글 목록 피드 -->
@@ -224,52 +195,11 @@ const mockPosts = [
     }).join('');
   }
 
-  // 작성창 토글 토폴로지
-  if (toggleWriteBtn && postForm) {
-    toggleWriteBtn.addEventListener('click', () => {
-      postForm.classList.add('open');
-      toggleWriteBtn.style.display = 'none';
-      document.getElementById('post-author').focus();
-    });
-
-    if (cancelPostBtn) {
-      cancelPostBtn.addEventListener('click', () => {
-        postForm.classList.remove('open');
-        postForm.reset();
-        toggleWriteBtn.style.display = 'inline-flex';
-      });
-    }
-  }
-
-  // 새 글 등록 제출
-  if (postForm) {
-    postForm.addEventListener('submit', (e) => {
+  // 작성창 비활성화 및 로그인 제한 안내 팝업
+  if (toggleWriteBtn) {
+    toggleWriteBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const author = document.getElementById('post-author').value.trim();
-      const category = document.getElementById('post-category').value;
-      const title = document.getElementById('post-title').value.trim();
-      const content = document.getElementById('post-content').value.trim();
-
-      if (!author || !title || !content) return;
-
-      const newPost = {
-        id: 'local-' + Date.now() + '-' + Math.random().toString(36).substr(2, 5),
-        title,
-        content,
-        author,
-        category,
-        created_at: new Date().toISOString(),
-        reply: null
-      };
-
-      // 1. 로컬 스토리지에 글 세이브
-      saveLocalPost(newPost);
-
-      // 폼 닫기 및 렌더링 리프레시
-      postForm.classList.remove('open');
-      postForm.reset();
-      toggleWriteBtn.style.display = 'inline-flex';
-      renderFeed();
+      alert("현재 글쓰기 기능은 준비 중입니다. 로그인 시스템 연동 후 이용하실 수 있습니다.");
     });
   }
 

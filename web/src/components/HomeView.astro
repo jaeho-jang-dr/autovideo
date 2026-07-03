@@ -15,6 +15,38 @@ const sorted = [...episodes].sort((a, b) => {
   return pa - pb || a.priority - b.priority || a.code.localeCompare(b.code);
 });
 const concept = channel.concept ?? '';
+
+// 추천 동영상 강의 데이터 정의 (세종대왕, 아이키성장, 정주행, 최면술 순)
+const featuredVideos = [
+  {
+    id: '6lGedBJ5xx4',
+    titleKo: '세종대왕과 한글 창제 이야기',
+    titleEn: 'King Sejong & Hangeul Story',
+    shortsKo: '5YXdG4OIiMQ',
+    shortsEn: 'FtBFZGTojfY'
+  },
+  {
+    id: 'Mo1AIPoLjhU',
+    titleKo: '우리 아이 키성장의 과학',
+    titleEn: 'Science of Child Growth',
+    shortsKo: 'OAnDgIm3M_g',
+    shortsEn: 'y2kJBfPV1AY'
+  },
+  {
+    id: 'wJUAiZW5fW0',
+    titleKo: '밤샘 정주행, 내 몸의 경고',
+    titleEn: 'The Danger of Binge-Watching',
+    shortsKo: '9IlmG239m1M',
+    shortsEn: '0xDd3tpR7R8'
+  },
+  {
+    id: 'JohmMBxizkg',
+    titleKo: '최면술, 과학일까 사기일까?',
+    titleEn: 'Hypnosis: Science or Scam?',
+    shortsKo: 'qQscFq0nnAA',
+    shortsEn: 'EiB8eNb1l7A'
+  }
+];
 ---
 <section class="hero container">
   <span class="eyebrow">{lang === 'en' ? 'Learn deeply' : '깊이 있는 학습'}</span>
@@ -31,6 +63,43 @@ const concept = channel.concept ?? '';
     <a class="btn btn-primary" href="#lessons">{tr.explore}</a>
     <a class="btn btn-secondary glass" href={lang === 'en' ? '/curriculum/' : '/ko/curriculum/'}>{tr.nav_curriculum}</a>
   </div>
+
+  <!-- 추천 동영상 카드 그리드 영역 -->
+  <div class="featured-videos-area">
+    <h2 class="featured-title">
+      🎬 {lang === 'en' ? 'Featured Lectures' : '추천 동영상 강의'}
+    </h2>
+    <div class="featured-grid">
+      {featuredVideos.map((video) => (
+        <div class="video-featured-card">
+          <!-- 썸네일 영역 (클릭 시 재생 모달) -->
+          <div class="video-thumb-container play-trigger" data-video-id={video.id} style={`background-image: url('https://img.youtube.com/vi/${video.id}/maxresdefault.jpg');`}>
+            <div class="play-overlay">
+              <span class="icon">▶</span>
+            </div>
+            
+            <!-- 호버 시 한/영 쇼츠 분기 링크 -->
+            <div class="shorts-overlay">
+              <span class="shorts-label">🔥 {lang === 'en' ? 'Shorts' : '쇼츠'}</span>
+              <div class="shorts-buttons">
+                <a href={`https://youtube.com/shorts/${video.shortsKo}`} target="_blank" class="shorts-btn ko-btn">
+                  🇰🇷 {lang === 'en' ? 'KR' : '국문'}
+                </a>
+                <a href={`https://youtube.com/shorts/${video.shortsEn}`} target="_blank" class="shorts-btn en-btn">
+                  🇺🇸 {lang === 'en' ? 'EN' : '영문'}
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 카드 하단 제목 (클릭 시 재생 모달) -->
+          <button class="video-card-title-btn play-trigger" data-video-id={video.id}>
+            {lang === 'en' ? video.titleEn : video.titleKo}
+          </button>
+        </div>
+      ))}
+    </div>
+  </div>
 </section>
 
 <section class="section container" id="lessons">
@@ -43,3 +112,61 @@ const concept = channel.concept ?? '';
     {sorted.map((e) => <EpisodeCard episode={e} lang={lang} />)}
   </div>
 </section>
+
+<!-- 비디오 상영 모달 (유튜브 플레이어) -->
+<div id="video-modal" class="video-modal" aria-hidden="true">
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close" aria-label="Close video">&times;</button>
+    <div class="iframe-container">
+      <iframe id="modal-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  // 유튜브 비디오 모달 제어
+  const modal = document.getElementById('video-modal');
+  const modalClose = document.getElementById('modal-close');
+  const modalBackdrop = document.getElementById('modal-backdrop');
+  const iframe = document.getElementById('modal-iframe') as HTMLIFrameElement;
+
+  if (modal && iframe) {
+    const triggers = document.querySelectorAll('.play-trigger');
+    
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        // 쇼츠 링크 버튼을 눌렀을 때는 본편 모달이 뜨지 않도록 예외 처리
+        if ((e.target as HTMLElement).closest('.shorts-btn')) {
+          return;
+        }
+        
+        const videoId = trigger.getAttribute('data-video-id');
+        if (videoId) {
+          e.preventDefault();
+          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+          modal.classList.add('open');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden'; // 스크롤 잠금
+        }
+      });
+    });
+
+    const closeModal = () => {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      iframe.src = ''; // 영상 정지
+      document.body.style.overflow = ''; // 스크롤 복원
+    };
+
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+
+    // ESC 키로 닫기
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) {
+        closeModal();
+      }
+    });
+  }
+</script>
