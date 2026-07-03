@@ -120,7 +120,18 @@ const payload = {
   <div class="container">
     <header class="cur-head">
       <span class="cur-eyebrow">{isEn ? 'Sori Hangeul · Learn Korean' : '소리 한글 · 한국어 배우기'}</span>
-      <h1>{L.title}</h1>
+      <h1 class="title-with-link">
+        <span>{L.title}</span>
+        <a href="https://www.youtube.com/watch?v=6lGedBJ5xx4"
+           target="_blank"
+           class="yt-link"
+           id="sejong-yt-link"
+           data-video-id="6lGedBJ5xx4">
+          <span class="yt-play-icon">▶</span>
+          {isEn ? 'King Sejong & Hangeul Video' : '세종대왕과 한글 동영상'}
+          <span class="yt-thumb-tooltip" style="background-image: url('https://img.youtube.com/vi/6lGedBJ5xx4/maxresdefault.jpg');"></span>
+        </a>
+      </h1>
       <p class="cur-lead">{L.subtitle}</p>
     </header>
 
@@ -1490,4 +1501,59 @@ const payload = {
   @media (max-width: 560px) {
     .week-accordion .day-lectures[data-view="list"] .dl-open { grid-template-columns: 110px 1fr; }
   }
+  
+  /* 비디오 상영 모달 (유튜브 플레이어) */
+  .video-modal {
+    /* global.css에서 정의했으나, scoped 스타일 우선순위 지원용 */
+  }
 </style>
+
+<!-- 비디오 상영 모달 (유튜브 플레이어) -->
+<div id="video-modal" class="video-modal" aria-hidden="true">
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close" aria-label="Close video">&times;</button>
+    <div class="iframe-container">
+      <iframe id="modal-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  // 유튜브 비디오 모달 제어
+  const ytLink = document.getElementById('sejong-yt-link');
+  const modal = document.getElementById('video-modal');
+  const modalClose = document.getElementById('modal-close');
+  const modalBackdrop = document.getElementById('modal-backdrop');
+  const iframe = document.getElementById('modal-iframe') as HTMLIFrameElement;
+
+  if (ytLink && modal && iframe) {
+    const videoId = ytLink.getAttribute('data-video-id');
+    
+    const openModal = (e: Event) => {
+      e.preventDefault();
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden'; // 스크롤 잠금
+    };
+
+    const closeModal = () => {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      iframe.src = ''; // 영상 정지
+      document.body.style.overflow = ''; // 스크롤 복원
+    };
+
+    ytLink.addEventListener('click', openModal);
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+
+    // ESC 키로 닫기
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) {
+        closeModal();
+      }
+    });
+  }
+</script>

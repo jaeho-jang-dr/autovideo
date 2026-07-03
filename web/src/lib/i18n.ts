@@ -35,6 +35,7 @@ export const ui = {
     groove_play: '테마송 재생',
     grammar_title: '한글 문법 연구소',
     grammar_sub: '조음 기관의 원리부터 받침 규칙까지 쉽고 재미있게 배우는 한글 가이드',
+    nav_board: '게시판',
   },
   en: {
     nav_home: 'Home',
@@ -69,6 +70,7 @@ export const ui = {
     groove_play: 'Play theme',
     grammar_title: 'Hangeul Grammar Lab',
     grammar_sub: 'Learn Hangeul pronunciation mechanics, sound rules, and stroke orders easily.',
+    nav_board: 'Board',
   },
 } as const;
 

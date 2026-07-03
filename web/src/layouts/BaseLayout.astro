@@ -8,7 +8,7 @@ interface Props {
   description?: string;
   lang: Lang;
   altUrl: string;       // 같은 페이지의 반대 언어 URL (언어 토글용)
-  active?: 'home' | 'lessons' | 'groove' | 'curriculum' | 'grammar' | 'alllessons' | 'places';
+  active?: 'home' | 'lessons' | 'groove' | 'curriculum' | 'grammar' | 'alllessons' | 'places' | 'board';
   heroVideo?: boolean;  // 페이지 전체 배경에 졸라 왈츠 영상을 상영할지 여부
   hideHeaderFooter?: boolean; // 그루브 앱 단독 뷰 여부
 }
@@ -62,12 +62,23 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
           <nav class="nav">
             <a href={homeUrl(lang)} class={active === 'home' ? 'active' : ''}>{tr.nav_home}</a>
             <a href={`${homeUrl(lang)}#lessons`} class={active === 'lessons' ? 'active' : ''}>{tr.nav_lessons}</a>
-            <a href={lang === 'ko' ? '/ko/curriculum/' : '/curriculum/'} class={active === 'curriculum' ? 'active' : ''}>{tr.nav_curriculum}</a>
-            <a href={lang === 'ko' ? '/ko/lessons-all/' : '/lessons-all/'} class={active === 'alllessons' ? 'active' : ''}>{lang === 'ko' ? '168강' : '168 Lessons'}</a>
-            <a href={lang === 'ko' ? '/ko/grammar/' : '/grammar/'} class={active === 'grammar' ? 'active' : ''}>{tr.nav_grammar}</a>
+            
+            <!-- 훈민정음 서브메뉴 드롭다운 컨테이너 -->
+            <div class={`nav-item dropdown ${['curriculum', 'alllessons', 'grammar', 'groove'].includes(active || '') ? 'active' : ''}`}>
+              <a href={lang === 'ko' ? '/ko/curriculum/' : '/curriculum/'} class="dropdown-toggle">
+                {tr.nav_curriculum} <span class="dropdown-arrow">▼</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href={lang === 'ko' ? '/ko/lessons-all/' : '/lessons-all/'} class={active === 'alllessons' ? 'active' : ''}>{lang === 'ko' ? '168강' : '168 Lessons'}</a>
+                <a href={lang === 'ko' ? '/ko/grammar/' : '/grammar/'} class={active === 'grammar' ? 'active' : ''}>{tr.nav_grammar}</a>
+                <a href={lang === 'ko' ? '/ko/groove/' : '/groove/'} class={active === 'groove' && !Astro.url.searchParams.has('play') ? 'active' : ''}>{tr.nav_groove}</a>
+                <a href="javascript:void(0)" class="coming-soon-game" data-lang={lang}>🎮 {lang === 'ko' ? '한글 게임 (준비중)' : 'Game (Coming Soon)'}</a>
+              </div>
+            </div>
+            
             <a href={lang === 'ko' ? '/ko/places/' : '/places/'} class={active === 'places' ? 'active' : ''}>{lang === 'ko' ? '명소 168' : 'Korea 168'}</a>
-            <a href={lang === 'ko' ? '/ko/groove/' : '/groove/'} class={active === 'groove' && !Astro.url.searchParams.has('play') ? 'active' : ''}>{tr.nav_groove}</a>
-            <a href="javascript:void(0)" class="coming-soon-game" data-lang={lang}>🎮 {lang === 'ko' ? '한글 게임 (준비중)' : 'Game (Coming Soon)'}</a>
+            <a href={lang === 'ko' ? '/ko/board/' : '/board/'} class={active === 'board' ? 'active' : ''}>{tr.nav_board}</a>
+            
             <span class="lang-switch" role="group" aria-label="language">
               <a href={koUrl} class={lang === 'ko' ? 'active' : ''} hreflang="ko">KO</a>
               <a href={enUrl} class={lang === 'en' ? 'active' : ''} hreflang="en">EN</a>
@@ -146,6 +157,20 @@ const handle = channel.youtube_handle ?? '@drjay-ed';
           menuToggle.classList.toggle('open');
         });
       }
+
+      // 모바일 화면 드롭다운 아코디언 토글
+      const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+      dropdowns.forEach(dd => {
+        const toggle = dd.querySelector('.dropdown-toggle');
+        if (toggle) {
+          toggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 720) {
+              e.preventDefault();
+              dd.classList.toggle('open');
+            }
+          });
+        }
+      });
 
       // 한글 게임 준비 중 팝업 알림 처리
       document.querySelectorAll('.coming-soon-game').forEach(el => {

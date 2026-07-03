@@ -1,0 +1,576 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { supabase } from '../lib/supabase';
+
+const lang = 'en' as const;
+
+// Try loading posts from Supabase on the server side
+let serverPosts = [];
+try {
+  const { data, error } = await supabase
+    .from('board_posts')
+    .select('*')
+    .order('created_at', { ascending: false })
+    .limit(30);
+  if (!error && data) {
+    serverPosts = data;
+  }
+} catch (e) {
+  console.warn("Supabase fetch failed, falling back to mock/local data:", e);
+}
+
+// Default English mock data (used when database is empty or unavailable)
+const mockPosts = [
+  {
+    id: 'mock-1',
+    title: 'Having trouble getting high scores on the Pronunciation Coach...',
+    content: 'Im testing using my laptop microphone, but I keep getting scores below 50. Are there any articulation tips or specific mic settings I should adjust?',
+    author: 'HangeulLearner',
+    category: 'Question',
+    created_at: new Date(Date.now() - 3600000 * 2).toISOString(),
+    reply: 'Hello! For better pronunciation accuracy, try keeping a distance of about 15-20cm from your microphone. Also, click the lock icon next to the browser address bar to ensure mic permission is fully allowed. Visualizing the tongue position shown in the anatomical graphic while speaking will help you get much higher scores!'
+  },
+  {
+    id: 'mock-2',
+    title: 'The Week 3 study guide PDF is amazing!',
+    content: 'The 15-page PDF is extremely well-made. Printing out the visual charts and putting them on the wall helps my kids learn the vowel combinations so fast.',
+    author: 'SejongFan',
+    category: 'Tip / Info',
+    created_at: new Date(Date.now() - 3600000 * 12).toISOString(),
+    reply: 'Thank you for your warm feedback! The study guides are designed to make core concepts highly intuitive. We will continue to improve and add more resources.'
+  },
+  {
+    id: 'mock-3',
+    title: 'Can we download the 168 lecture videos offline?',
+    content: 'Besides the PDFs, I would love to save the lecture videos locally. Is there a download link available?',
+    author: 'StudyHard',
+    category: 'Question',
+    created_at: new Date(Date.now() - 3600000 * 24).toISOString(),
+    reply: 'The 168 lectures are fully open on our YouTube channel for streaming anytime. Official offline download packages are planned to be provided as part of our premium packages in the future.'
+  }
+];
+---
+
+<BaseLayout
+  lang={lang}
+  altUrl="/ko/board/"
+  active="board"
+  title="Hangeul Learning Board · drjay-ed"
+  description="Ask questions about learning Hangeul or share your own study tips and useful resources."
+>
+  <div class="board-container">
+    <header class="board-header">
+      <span class="board-eyebrow">COMMUNITY</span>
+      <h1 class="grad-title">Q&A & Study Feed</h1>
+      <p class="board-lead">Ask your Hangeul questions or share useful tips with other learners.</p>
+    </header>
+
+    <div class="board-main">
+      <!-- Write trigger & Form -->
+      <section class="write-section">
+        <button id="toggle-write-btn" class="write-trigger-btn">
+          <span>✍️ Write New Question / Post</span>
+        </button>
+
+        <form id="post-form" class="post-form">
+          <div class="form-row split">
+            <div class="form-group">
+              <label for="post-author">Your Nickname</label>
+              <input type="text" id="post-author" required placeholder="e.g., King Sejong" maxlength="15" />
+            </div>
+            <div class="form-group">
+              <label for="post-category">Category</label>
+              <select id="post-category">
+                <option value="Question">❓ Question</option>
+                <option value="Tip / Info">💡 Tip / Info</option>
+                <option value="Free Talk">💬 Free Talk</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="post-title">Title</label>
+            <input type="text" id="post-title" required placeholder="Summarize your question or idea." maxlength="80" />
+          </div>
+          <div class="form-group">
+            <label for="post-content">Content</label>
+            <textarea id="post-content" required placeholder="Write details about your question, tip, or thought here." maxlength="1000"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" id="cancel-post-btn" class="btn-secondary">Cancel</button>
+            <button type="submit" class="btn-primary">Submit Post</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Post List Feed -->
+      <section class="feed-section">
+        <div class="feed-header">
+          <h2>All Posts (<span id="post-count">0</span>)</h2>
+        </div>
+        <div id="posts-feed" class="posts-feed">
+          <!-- JS dynamic binding -->
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ serverPosts, mockPosts }}>
+  // DOM element mapping
+  const toggleWriteBtn = document.getElementById('toggle-write-btn');
+  const cancelPostBtn = document.getElementById('cancel-post-btn');
+  const postForm = document.getElementById('post-form');
+  const postsFeed = document.getElementById('posts-feed');
+  const postCountEl = document.getElementById('post-count');
+
+  // LocalStorage Key
+  const LOCAL_STORAGE_KEY = 'drjay_board_posts_en';
+
+  // Load posts
+  function getPosts() {
+    const local = localStorage.getItem(LOCAL_STORAGE_KEY);
+    const localList = local ? JSON.parse(local) : [];
+    
+    // Merge local and server posts
+    const combined = [...localList];
+    const idMap = new Set(combined.map(p => p.id));
+    
+    serverPosts.forEach(sp => {
+      if (!idMap.has(sp.id)) {
+        combined.push(sp);
+        idMap.add(sp.id);
+      }
+    });
+
+    if (combined.length === 0) {
+      mockPosts.forEach(mp => {
+        combined.push(mp);
+      });
+    }
+
+    return combined.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+  }
+
+  // Save post locally
+  function saveLocalPost(post) {
+    const local = localStorage.getItem(LOCAL_STORAGE_KEY);
+    const list = local ? JSON.parse(local) : [];
+    list.unshift(post);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(list));
+  }
+
+  // Timeago formatter
+  function timeAgo(dateString) {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffSec = Math.floor(diffMs / 1000);
+    const diffMin = Math.floor(diffSec / 60);
+    const diffHr = Math.floor(diffMin / 60);
+    const diffDay = Math.floor(diffHr / 24);
+
+    if (diffSec < 60) return 'Just now';
+    if (diffMin < 60) return `${diffMin}m ago`;
+    if (diffHr < 24) return `${diffHr}h ago`;
+    if (diffDay < 30) return `${diffDay}d ago`;
+    
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  }
+
+  // Render Feed
+  function renderFeed() {
+    const posts = getPosts();
+    postCountEl.textContent = posts.length.toString();
+
+    if (posts.length === 0) {
+      postsFeed.innerHTML = `
+        <div class="empty-feed">
+          <p>No posts found. Be the first to share your thoughts!</p>
+        </div>
+      `;
+      return;
+    }
+
+    postsFeed.innerHTML = posts.map(post => {
+      const badgeClass = (post.category === 'Question' || post.category === '질문') ? 'badge-q' 
+                       : (post.category === 'Tip / Info' || post.category === '정보') ? 'badge-i' 
+                       : 'badge-f';
+      const label = post.category || 'Free Talk';
+
+      return `
+        <article class="post-card" id="post-${post.id}">
+          <div class="post-card-head">
+            <span class="post-badge ${badgeClass}">${label}</span>
+            <span class="post-meta-item author">👤 ${post.author}</span>
+            <span class="post-meta-item time" title="${new Date(post.created_at).toLocaleString('en-US')}">⏱ ${timeAgo(post.created_at)}</span>
+          </div>
+          <h3 class="post-card-title">${post.title}</h3>
+          <p class="post-card-content">${post.content.replace(/\n/g, '<br>')}</p>
+          ${post.reply ? `
+            <div class="post-reply">
+              <div class="reply-head">
+                <span class="reply-badge">💡 Reply</span>
+                <span class="reply-author">drjay-ed Coach</span>
+              </div>
+              <p class="reply-content">${post.reply.replace(/\n/g, '<br>')}</p>
+            </div>
+          ` : ''}
+        </article>
+      `;
+    }).join('');
+  }
+
+  // Toggle writing panel
+  if (toggleWriteBtn && postForm) {
+    toggleWriteBtn.addEventListener('click', () => {
+      postForm.classList.add('open');
+      toggleWriteBtn.style.display = 'none';
+      document.getElementById('post-author').focus();
+    });
+
+    if (cancelPostBtn) {
+      cancelPostBtn.addEventListener('click', () => {
+        postForm.classList.remove('open');
+        postForm.reset();
+        toggleWriteBtn.style.display = 'inline-flex';
+      });
+    }
+  }
+
+  // Form submit handler
+  if (postForm) {
+    postForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const author = document.getElementById('post-author').value.trim();
+      const category = document.getElementById('post-category').value;
+      const title = document.getElementById('post-title').value.trim();
+      const content = document.getElementById('post-content').value.trim();
+
+      if (!author || !title || !content) return;
+
+      const newPost = {
+        id: 'local-en-' + Date.now() + '-' + Math.random().toString(36).substr(2, 5),
+        title,
+        content,
+        author,
+        category,
+        created_at: new Date().toISOString(),
+        reply: null
+      };
+
+      saveLocalPost(newPost);
+
+      postForm.classList.remove('open');
+      postForm.reset();
+      toggleWriteBtn.style.display = 'inline-flex';
+      renderFeed();
+    });
+  }
+
+  renderFeed();
+</script>
+
+<style>
+  .board-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: clamp(24px, 6vw, 48px) 16px;
+  }
+
+  .board-header {
+    text-align: center;
+    margin-bottom: clamp(32px, 8vw, 48px);
+  }
+
+  .board-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #8b2bf9;
+    background: rgba(139, 43, 249, 0.06);
+    padding: 4px 10px;
+    border-radius: 99px;
+  }
+
+  .grad-title {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 800;
+    margin-top: 12px;
+    color: var(--text-0);
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #1e90ff, #8b2bf9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .board-lead {
+    color: var(--text-1);
+    font-size: 1.05rem;
+    margin-top: 8px;
+    font-weight: 450;
+  }
+
+  /* Form Section */
+  .write-section {
+    margin-bottom: 32px;
+  }
+
+  .write-trigger-btn {
+    width: 100%;
+    border: 2px dashed rgba(139, 43, 249, 0.3);
+    background: rgba(139, 43, 249, 0.02);
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #8b2bf9;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .write-trigger-btn:hover {
+    background: rgba(139, 43, 249, 0.06);
+    border-color: #8b2bf9;
+    transform: translateY(-2px);
+  }
+
+  .post-form {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(139, 43, 249, 0.15);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(139, 43, 249, 0.05);
+    animation: slideDownForm 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .post-form.open {
+    display: flex;
+  }
+
+  @keyframes slideDownForm {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .form-row.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 560px) {
+    .form-row.split {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-group label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .form-group input, .form-group textarea, .form-group select {
+    border: 1.5px solid rgba(139, 43, 249, 0.18);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.94rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s;
+    font-family: inherit;
+    color: var(--text-0);
+  }
+
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: #8b2bf9;
+    box-shadow: 0 0 0 3px rgba(139, 43, 249, 0.12);
+    outline: none;
+  }
+
+  .form-group textarea {
+    height: 120px;
+    resize: vertical;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #1e90ff, #8b2bf9);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(139, 43, 249, 0.2);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(139, 43, 249, 0.35);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border: 1.5px solid rgba(0, 0, 0, 0.12);
+    color: var(--text-1);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 750;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  /* Feed Styling */
+  .feed-header {
+    margin-bottom: 16px;
+    border-bottom: 1.5px solid rgba(139, 43, 249, 0.1);
+    padding-bottom: 8px;
+  }
+
+  .feed-header h2 {
+    font-size: 1.25rem;
+    font-weight: 750;
+    color: var(--text-0);
+  }
+
+  .posts-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .post-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 10px 28px rgba(30, 60, 120, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    border-radius: 18px;
+    padding: 22px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px rgba(30, 60, 120, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border-color: rgba(139, 43, 249, 0.12);
+  }
+
+  .post-card-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .post-badge {
+    font-size: 0.68rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 99px;
+    color: #fff;
+  }
+
+  .badge-q { background: #e0603a; }
+  .badge-i { background: #10b981; }
+  .badge-f { background: #8b2bf9; }
+
+  .post-meta-item {
+    font-size: 0.78rem;
+    color: var(--text-2);
+  }
+
+  .post-meta-item.author {
+    font-weight: 600;
+    color: var(--text-1);
+  }
+
+  .post-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-0);
+    margin-bottom: 8px;
+  }
+
+  .post-card-content {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    color: var(--text-1);
+    word-break: break-all;
+  }
+
+  /* Coach Reply Section */
+  .post-reply {
+    margin-top: 16px;
+    background: rgba(139, 43, 249, 0.04);
+    border-left: 3px solid #8b2bf9;
+    border-radius: 4px 12px 12px 4px;
+    padding: 14px 16px;
+  }
+
+  .reply-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .reply-badge {
+    font-size: 0.66rem;
+    font-weight: 800;
+    color: #8b2bf9;
+    background: rgba(139, 43, 249, 0.1);
+    padding: 2px 7px;
+    border-radius: 4px;
+  }
+
+  .reply-author {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #8b2bf9;
+  }
+
+  .reply-content {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--text-1);
+  }
+
+  .empty-feed {
+    text-align: center;
+    padding: 48px;
+    color: var(--text-2);
+    border: 1.5px dashed rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.005);
+  }
+</style>

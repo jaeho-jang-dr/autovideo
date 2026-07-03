@@ -1,0 +1,584 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { supabase } from '../../lib/supabase';
+
+const lang = 'ko' as const;
+
+// Supabase 서버 사이드 글 로딩 시도 (실패 시 예외 처리하여 크래시 방지)
+let serverPosts = [];
+try {
+  const { data, error } = await supabase
+    .from('board_posts')
+    .select('*')
+    .order('created_at', { ascending: false })
+    .limit(30);
+  if (!error && data) {
+    serverPosts = data;
+  }
+} catch (e) {
+  console.warn("Supabase fetch failed, falling back to mock/local data:", e);
+}
+
+// 기본 Mock 데이터 목록 (테이블 비었거나 오류 시 노출)
+const mockPosts = [
+  {
+    id: 'mock-1',
+    title: '소리한글 발음 코치 점수가 잘 안 나와요 ㅠㅠ',
+    content: '노트북 마이크로 테스트 중인데 계속 50점 밑으로만 나옵니다. 혹시 조음 기관 발음 꿀팁이나 마이크 설정 방법이 따로 있을까요?',
+    author: '한글꿈나무',
+    category: '질문',
+    created_at: new Date(Date.now() - 3600000 * 2).toISOString(),
+    reply: '안녕하세요! 발음 측정 시 마이크와의 거리를 15~20cm 정도로 띄워주시고, 크롬 주소창 왼쪽의 자물쇠 아이콘을 눌러 마이크 권한이 허용되어 있는지 재확인 해보세요. 또한 조음 기관 그래픽을 보고 혀의 위치를 의식하면 점수가 훨씬 잘 나옵니다!'
+  },
+  {
+    id: 'mock-2',
+    title: '훈민정음 3주차 학습 가이드 강추합니다!',
+    content: 'PDF 가이드 파일 15페이지 분량이 진짜 알차네요. 특히 자모음 조합 시각화 부분 출력해서 아이방에 붙여두니 금방 깨우쳐요.',
+    author: '세종러버',
+    category: '정보',
+    created_at: new Date(Date.now() - 3600000 * 12).toISOString(),
+    reply: '후기 감사드립니다! 가이드북은 매주 핵심 개념을 직관적으로 연출하도록 설계되었습니다. 앞으로도 유용한 자료를 더 보강하겠습니다.'
+  },
+  {
+    id: 'mock-3',
+    title: '168강 영상은 어디서 다운로드 받나요?',
+    content: '교재 PDF 외에 동영상 강의를 오프라인으로 보관하고 싶어서 다운로드 경로가 있는지 여쭤봅니다.',
+    author: '열공맨',
+    category: '질문',
+    created_at: new Date(Date.now() - 3600000 * 24).toISOString(),
+    reply: '168강은 유튜브 채널에 전편 공개되어 상시 스트리밍 가능하며, 개별 오프라인 보관용 공식 파일은 추후 패키지 서비스 형태로 지원될 예정입니다.'
+  }
+];
+---
+
+<BaseLayout
+  lang={lang}
+  altUrl="/board/"
+  active="board"
+  title="한글 배움 게시판 · drjay-ed"
+  description="한글 학습 중 궁금한 점을 질문하거나 꿀팁과 유용한 정보를 함께 공유하는 커뮤니티 공간입니다."
+>
+  <div class="board-container">
+    <header class="board-header">
+      <span class="board-eyebrow">COMMUNITY</span>
+      <h1 class="grad-title">배움 & 질문 게시판</h1>
+      <p class="board-lead">학습 중 생긴 궁금증을 풀거나, 자신만의 한글 공부 꿀팁을 나누어보세요.</p>
+    </header>
+
+    <div class="board-main">
+      <!-- 글쓰기 트리거 및 작성 폼 -->
+      <section class="write-section">
+        <button id="toggle-write-btn" class="write-trigger-btn">
+          <span>✍️ 새 질문/피드 남기기</span>
+        </button>
+
+        <form id="post-form" class="post-form">
+          <div class="form-row split">
+            <div class="form-group">
+              <label for="post-author">작성자 닉네임</label>
+              <input type="text" id="post-author" required placeholder="예: 세종대왕" maxlength="15" />
+            </div>
+            <div class="form-group">
+              <label for="post-category">카테고리</label>
+              <select id="post-category">
+                <option value="질문">❓ 질문</option>
+                <option value="정보">💡 정보/꿀팁</option>
+                <option value="자유">💬 자유 이야기</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="post-title">제목</label>
+            <input type="text" id="post-title" required placeholder="핵심 궁금증이나 요약을 적어주세요." maxlength="80" />
+          </div>
+          <div class="form-group">
+            <label for="post-content">내용</label>
+            <textarea id="post-content" required placeholder="질문이나 팁을 구체적으로 자유롭게 남겨주세요." maxlength="1000"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" id="cancel-post-btn" class="btn-secondary">취소</button>
+            <button type="submit" class="btn-primary">게시물 등록</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- 게시글 목록 피드 -->
+      <section class="feed-section">
+        <div class="feed-header">
+          <h2>전체 글 목록 (<span id="post-count">0</span>)</h2>
+        </div>
+        <div id="posts-feed" class="posts-feed">
+          <!-- JS로 바인딩 -->
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ serverPosts, mockPosts }}>
+  // DOM 요소 로드
+  const toggleWriteBtn = document.getElementById('toggle-write-btn');
+  const cancelPostBtn = document.getElementById('cancel-post-btn');
+  const postForm = document.getElementById('post-form');
+  const postsFeed = document.getElementById('posts-feed');
+  const postCountEl = document.getElementById('post-count');
+
+  // 로컬스토리지 키 정의
+  const LOCAL_STORAGE_KEY = 'drjay_board_posts';
+
+  // 글 로컬 로드 함수
+  function getPosts() {
+    const local = localStorage.getItem(LOCAL_STORAGE_KEY);
+    const localList = local ? JSON.parse(local) : [];
+    
+    // 서버에서 가져온 글과 로컬 작성 글 병합 (서버 글을 기저에 두고 로컬 글을 위에 배치)
+    const combined = [...localList];
+    
+    // 중복 제거용 ID 맵
+    const idMap = new Set(combined.map(p => p.id));
+    
+    // 서버 포스트 병합
+    serverPosts.forEach(sp => {
+      if (!idMap.has(sp.id)) {
+        combined.push(sp);
+        idMap.add(sp.id);
+      }
+    });
+
+    // 모두 없으면 mock 포스트 병합
+    if (combined.length === 0) {
+      mockPosts.forEach(mp => {
+        combined.push(mp);
+      });
+    }
+
+    // 작성일 기준 역순 정렬
+    return combined.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+  }
+
+  // 글 저장 함수
+  function saveLocalPost(post) {
+    const local = localStorage.getItem(LOCAL_STORAGE_KEY);
+    const list = local ? JSON.parse(local) : [];
+    list.unshift(post);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(list));
+  }
+
+  // 상대 시간 계산 포맷터
+  function timeAgo(dateString) {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffSec = Math.floor(diffMs / 1000);
+    const diffMin = Math.floor(diffSec / 60);
+    const diffHr = Math.floor(diffMin / 60);
+    const diffDay = Math.floor(diffHr / 24);
+
+    if (diffSec < 60) return '방금 전';
+    if (diffMin < 60) return `${diffMin}분 전`;
+    if (diffHr < 24) return `${diffHr}시간 전`;
+    if (diffDay < 30) return `${diffDay}일 전`;
+    
+    return date.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
+  // 렌더링 실행
+  function renderFeed() {
+    const posts = getPosts();
+    postCountEl.textContent = posts.length.toString();
+
+    if (posts.length === 0) {
+      postsFeed.innerHTML = `
+        <div class="empty-feed">
+          <p>등록된 게시물이 없습니다. 첫 번째 글을 작성해 보세요!</p>
+        </div>
+      `;
+      return;
+    }
+
+    postsFeed.innerHTML = posts.map(post => {
+      const isMock = post.id.startsWith('mock-');
+      const badgeClass = post.category === '질문' ? 'badge-q' : post.category === '정보' ? 'badge-i' : 'badge-f';
+      const label = post.category || '이야기';
+
+      return `
+        <article class="post-card" id="post-${post.id}">
+          <div class="post-card-head">
+            <span class="post-badge ${badgeClass}">${label}</span>
+            <span class="post-meta-item author">👤 ${post.author}</span>
+            <span class="post-meta-item time" title="${new Date(post.created_at).toLocaleString('ko-KR')}">⏱ ${timeAgo(post.created_at)}</span>
+          </div>
+          <h3 class="post-card-title">${post.title}</h3>
+          <p class="post-card-content">${post.content.replace(/\n/g, '<br>')}</p>
+          ${post.reply ? `
+            <div class="post-reply">
+              <div class="reply-head">
+                <span class="reply-badge">💡 답변</span>
+                <span class="reply-author">drjay-ed 코치</span>
+              </div>
+              <p class="reply-content">${post.reply.replace(/\n/g, '<br>')}</p>
+            </div>
+          ` : ''}
+        </article>
+      `;
+    }).join('');
+  }
+
+  // 작성창 토글 토폴로지
+  if (toggleWriteBtn && postForm) {
+    toggleWriteBtn.addEventListener('click', () => {
+      postForm.classList.add('open');
+      toggleWriteBtn.style.display = 'none';
+      document.getElementById('post-author').focus();
+    });
+
+    if (cancelPostBtn) {
+      cancelPostBtn.addEventListener('click', () => {
+        postForm.classList.remove('open');
+        postForm.reset();
+        toggleWriteBtn.style.display = 'inline-flex';
+      });
+    }
+  }
+
+  // 새 글 등록 제출
+  if (postForm) {
+    postForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const author = document.getElementById('post-author').value.trim();
+      const category = document.getElementById('post-category').value;
+      const title = document.getElementById('post-title').value.trim();
+      const content = document.getElementById('post-content').value.trim();
+
+      if (!author || !title || !content) return;
+
+      const newPost = {
+        id: 'local-' + Date.now() + '-' + Math.random().toString(36).substr(2, 5),
+        title,
+        content,
+        author,
+        category,
+        created_at: new Date().toISOString(),
+        reply: null
+      };
+
+      // 1. 로컬 스토리지에 글 세이브
+      saveLocalPost(newPost);
+
+      // 폼 닫기 및 렌더링 리프레시
+      postForm.classList.remove('open');
+      postForm.reset();
+      toggleWriteBtn.style.display = 'inline-flex';
+      renderFeed();
+    });
+  }
+
+  // 초기 렌더링 호출
+  renderFeed();
+</script>
+
+<style>
+  .board-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: clamp(24px, 6vw, 48px) 16px;
+  }
+
+  .board-header {
+    text-align: center;
+    margin-bottom: clamp(32px, 8vw, 48px);
+  }
+
+  .board-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #8b2bf9;
+    background: rgba(139, 43, 249, 0.06);
+    padding: 4px 10px;
+    border-radius: 99px;
+  }
+
+  .grad-title {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 800;
+    margin-top: 12px;
+    color: var(--text-0);
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #1e90ff, #8b2bf9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .board-lead {
+    color: var(--text-1);
+    font-size: 1.05rem;
+    margin-top: 8px;
+    font-weight: 450;
+  }
+
+  /* 글쓰기 영역 */
+  .write-section {
+    margin-bottom: 32px;
+  }
+
+  .write-trigger-btn {
+    width: 100%;
+    border: 2px dashed rgba(139, 43, 249, 0.3);
+    background: rgba(139, 43, 249, 0.02);
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #8b2bf9;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .write-trigger-btn:hover {
+    background: rgba(139, 43, 249, 0.06);
+    border-color: #8b2bf9;
+    transform: translateY(-2px);
+  }
+
+  /* 입력 폼 */
+  .post-form {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(139, 43, 249, 0.15);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(139, 43, 249, 0.05);
+    animation: slideDownForm 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .post-form.open {
+    display: flex;
+  }
+
+  @keyframes slideDownForm {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .form-row.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 560px) {
+    .form-row.split {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-group label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .form-group input, .form-group textarea, .form-group select {
+    border: 1.5px solid rgba(139, 43, 249, 0.18);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.94rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s;
+    font-family: inherit;
+    color: var(--text-0);
+  }
+
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: #8b2bf9;
+    box-shadow: 0 0 0 3px rgba(139, 43, 249, 0.12);
+    outline: none;
+  }
+
+  .form-group textarea {
+    height: 120px;
+    resize: vertical;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #1e90ff, #8b2bf9);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(139, 43, 249, 0.2);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(139, 43, 249, 0.35);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border: 1.5px solid rgba(0, 0, 0, 0.12);
+    color: var(--text-1);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 750;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  /* 게시글 카드 목록 */
+  .feed-header {
+    margin-bottom: 16px;
+    border-bottom: 1.5px solid rgba(139, 43, 249, 0.1);
+    padding-bottom: 8px;
+  }
+
+  .feed-header h2 {
+    font-size: 1.25rem;
+    font-weight: 750;
+    color: var(--text-0);
+  }
+
+  .posts-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .post-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 10px 28px rgba(30, 60, 120, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    border-radius: 18px;
+    padding: 22px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px rgba(30, 60, 120, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border-color: rgba(139, 43, 249, 0.12);
+  }
+
+  .post-card-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .post-badge {
+    font-size: 0.68rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 99px;
+    color: #fff;
+  }
+
+  .badge-q { background: #e0603a; }
+  .badge-i { background: #10b981; }
+  .badge-f { background: #8b2bf9; }
+
+  .post-meta-item {
+    font-size: 0.78rem;
+    color: var(--text-2);
+  }
+
+  .post-meta-item.author {
+    font-weight: 600;
+    color: var(--text-1);
+  }
+
+  .post-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-0);
+    margin-bottom: 8px;
+  }
+
+  .post-card-content {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    color: var(--text-1);
+    word-break: break-all;
+  }
+
+  /* 답변 스타일 */
+  .post-reply {
+    margin-top: 16px;
+    background: rgba(139, 43, 249, 0.04);
+    border-left: 3px solid #8b2bf9;
+    border-radius: 4px 12px 12px 4px;
+    padding: 14px 16px;
+  }
+
+  .reply-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .reply-badge {
+    font-size: 0.66rem;
+    font-weight: 800;
+    color: #8b2bf9;
+    background: rgba(139, 43, 249, 0.1);
+    padding: 2px 7px;
+    border-radius: 4px;
+  }
+
+  .reply-author {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #8b2bf9;
+  }
+
+  .reply-content {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--text-1);
+  }
+
+  .empty-feed {
+    text-align: center;
+    padding: 48px;
+    color: var(--text-2);
+    border: 1.5px dashed rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.005);
+  }
+</style>
