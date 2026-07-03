@@ -1,6 +1,6 @@
 ---
 import {
-  epTitle, getCategory, catName, lessonUrl,
+  epTitle, getCategory, catName, lessonUrl, epYoutube, youtubeId,
   type Episode, type Lang,
 } from '../lib/content';
 import { t, fmtRuntime } from '../lib/i18n';
@@ -11,18 +11,76 @@ const tr = t(lang);
 const cat = getCategory(episode.category);
 const published = episode.status === 'published';
 const sub = lang === 'en' ? (episode.logline_kr ? episode.title_en : '') : (episode.hook_kr ?? '');
+
+// 유튜브 ID 획득
+const rawVid = epYoutube(episode, lang);
+const vidId = youtubeId(rawVid);
+
+// 쇼츠 ID 획득
+const shortsKo = episode.shorts_kr || '';
+const shortsEn = episode.shorts_en || '';
 ---
-<a class="card glass neon" href={lessonUrl(episode.code, lang)}>
-  <div class="badge-row">
-    <span class="cat-badge">{cat ? catName(cat, lang) : episode.category}</span>
-    <span class={`status-badge ${published ? 'published' : 'upcoming'}`}>
-      {published ? tr.published_badge : tr.upcoming_badge}
-    </span>
+
+{vidId ? (
+  <div class="card glass neon video-card">
+    <div class="badge-row video-badge-row">
+      <span class="cat-badge">{cat ? catName(cat, lang) : episode.category}</span>
+      <span class="status-badge published">
+        🎬 {lang === 'en' ? 'Video' : '동영상'}
+      </span>
+    </div>
+    
+    <!-- 썸네일 영역 (호버 시 쇼츠 분기 오버레이) -->
+    <div class="video-thumb-container play-trigger" data-video-id={vidId} style={`background-image: url('https://img.youtube.com/vi/${vidId}/maxresdefault.jpg');`}>
+      <div class="play-overlay">
+        <span class="icon">▶</span>
+      </div>
+      
+      {(shortsKo || shortsEn) && (
+        <div class="shorts-overlay">
+          <span class="shorts-label">🔥 {lang === 'en' ? 'Shorts' : '쇼츠'}</span>
+          <div class="shorts-buttons">
+            {shortsKo && (
+              <a href={`https://youtube.com/shorts/${shortsKo}`} target="_blank" class="shorts-btn ko-btn">
+                🇰🇷 {lang === 'en' ? 'KR' : '국문'}
+              </a>
+            )}
+            {shortsEn && (
+              <a href={`https://youtube.com/shorts/${shortsEn}`} target="_blank" class="shorts-btn en-btn">
+                🇺🇸 {lang === 'en' ? 'EN' : '영문'}
+              </a>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+
+    <!-- 카드 하단 제목 및 메타 정보 -->
+    <div class="card-info-area">
+      <button class="video-card-title-btn play-trigger" data-video-id={vidId}>
+        <h3>{epTitle(episode, lang)}</h3>
+      </button>
+      {sub && <p class="hook">{sub}</p>}
+      <div class="meta">
+        <span>{episode.code}</span>
+        {episode.runtime_sec ? <span>· {fmtRuntime(episode.runtime_sec, lang)}</span> : null}
+      </div>
+    </div>
   </div>
-  <h3>{epTitle(episode, lang)}</h3>
-  {sub && <p class="hook">{sub}</p>}
-  <div class="meta">
-    <span>{episode.code}</span>
-    {episode.runtime_sec ? <span>· {fmtRuntime(episode.runtime_sec, lang)}</span> : null}
-  </div>
-</a>
+) : (
+  <a class="card glass neon" href={lessonUrl(episode.code, lang)}>
+    <div class="badge-row">
+      <span class="cat-badge">{cat ? catName(cat, lang) : episode.category}</span>
+      <span class={`status-badge ${published ? 'published' : 'upcoming'}`}>
+        {published ? tr.published_badge : tr.upcoming_badge}
+      </span>
+    </div>
+    <h3>{epTitle(episode, lang)}</h3>
+    {sub && <p class="hook">{sub}</p>}
+    <div class="meta">
+      <span>{episode.code}</span>
+      {episode.runtime_sec ? <span>· {fmtRuntime(episode.runtime_sec, lang)}</span> : null}
+    </div>
+  </a>
+)}
+

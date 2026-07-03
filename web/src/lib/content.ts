@@ -23,6 +23,8 @@ export interface Episode {
   runtime_sec: number | null;
   youtube_kr: string | null;
   youtube_en: string | null;
+  shorts_kr?: string | null;
+  shorts_en?: string | null;
   publish_date: string | null;
   scenes: Scene[];
 }
