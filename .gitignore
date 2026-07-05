@@ -75,3 +75,4 @@ scratch/*.json
 scratch/mocap/
 scratch/mx/
 *.fbx
+assets/chrome_profile_tmp/
