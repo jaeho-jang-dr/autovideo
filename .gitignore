@@ -69,3 +69,9 @@ scratch/*.mp4
 scratch/*.mp3
 scratch/thumb/*.mp4
 
+
+# Mixamo 토큰·모캡 다운로드(비밀·대용량)
+scratch/*.json
+scratch/mocap/
+scratch/mx/
+*.fbx

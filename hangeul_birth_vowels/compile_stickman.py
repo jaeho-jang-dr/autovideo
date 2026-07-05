@@ -27,6 +27,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # project root on path
 from hangeul_strokes import render_vowel, STROKES
+import hangeul_write as hw   # 자음+음절 정획순 드로잉(획순 교육)
+import font_write as _fontw   # 글씨랑: 전용 폰트 글자꼴 파라메트릭 드로잉(안 비틀림)
 
 try:
     sys.stdout.reconfigure(encoding="utf-8")
@@ -86,11 +88,20 @@ CLIP_QUOTED = {"'그'": "그", "'느'": "느", "'므'": "므", "'스'": "스", "
                "'누나'": "누나", "'오빠'": "오빠"}
 # W3 거센/된소리: 따옴표 친 낱자(소리)·단어 → DB 발음 클립(web/public/audio/jamo/<inner>.mp3).
 # 낱자는 글자(jamo) 파일명에 '소리'(그/크/끄…)가 담겨 있어, letter_<jamo> 맥동과도 동기화됨.
+# ★ 원칙: 두겹따옴표 "ㄱ" = 이름(기역), 홑따옴표 'ㄱ' = 소리(그). 상황따라 골라 읽음.
+JAMO_SOUND = {"ㄱ":"그","ㄴ":"느","ㄷ":"드","ㄹ":"르","ㅁ":"므","ㅂ":"브","ㅅ":"스","ㅇ":"응",
+              "ㅈ":"즈","ㅊ":"츠","ㅋ":"크","ㅌ":"트","ㅍ":"프","ㅎ":"흐",
+              "ㄲ":"끄","ㄸ":"뜨","ㅃ":"쁘","ㅆ":"쓰","ㅉ":"쯔"}   # 자음 소리(자음+ㅡ)
 for _j in "ㄱㄴㄷㄹㅁㅂㅇㅈㅅㅋㅌㅍㅊㅎㄲㄸㅃㅆㅉ":
-    CLIP_QUOTED[f"'{_j}'"] = _j
-# W5 이중모음 낱자(소리) — jamo 클립 존재. 따옴표로 감싸 DB 클립 삽입(+부스트)
+    CLIP_QUOTED[f'"{_j}"'] = JAMO_SPEAK.get(_j, _j)          # 두겹 → 이름(기역)
+    CLIP_QUOTED[f"'{_j}'"] = JAMO_SOUND.get(_j, _j)          # 홑 → 소리(그)
 for _j in "ㅏㅓㅗㅜㅣㅐㅔㅡㅑㅕㅛㅠㅘㅝㅟㅚㅢㅒㅖ":
-    CLIP_QUOTED[f"'{_j}'"] = _j
+    CLIP_QUOTED[f'"{_j}"'] = JAMO_SPEAK.get(_j, _j)          # 모음: 이름=소리(아)
+    CLIP_QUOTED[f"'{_j}'"] = JAMO_SPEAK.get(_j, _j)
+# ★ 아래아(ㆍ): 대본엔 점(. · ㆍ)으로 표기. 두겹 "."=이름 "아래아", 홑 '.'=소리 "아"
+for _dot in (".", "·", "ㆍ"):
+    CLIP_QUOTED[f'"{_dot}"'] = "아래아"
+    CLIP_QUOTED[f"'{_dot}'"] = "아"
 for _w in ["코", "타조", "포도", "치마", "까치", "꼬리", "땅", "빵", "개", "캐", "깨", "자", "차", "짜",
            "강", "책", "산", "옷", "물", "곰", "밥", "부엌", "꽃", "앞",                  # W4 받침 예시
            "야구", "여우", "요리", "우유", "얘기", "예의", "사과", "샤워", "외투", "가위", "의자",  # W5 이중모음 예시
@@ -209,6 +220,8 @@ def load_scenes(lang="ko"):
             cap=spec["cap_ko"] if lang == "ko" else spec["cap_en"],
             scene_motion=spec.get("motion", "static"), gestures=gpaths, bg=spec.get("bg"),
             place_en=spec.get("place_en", ""),
+            draw_font=spec.get("draw_font"), draw_dur=spec.get("draw_dur"),
+            char_mode=spec.get("char_mode"),
             cam=spec.get("cam") or CAM_MODES[(s["seq"] - 1) % len(CAM_MODES)], objs=objs))
     con.close()
     return scenes
@@ -355,6 +368,95 @@ def paste(base, im, cx, cy, scale, rot=0.0, alpha=1.0):
     base.alpha_composite(t, (int(cx - t.width / 2), int(cy - t.height / 2)))
 
 
+# ---------- 캐릭터 이동/매직펜(글씨랑 W5+) ----------
+def pose_img(name):
+    """졸라걸 포즈 PNG 로드(stickman_<name>.png)."""
+    p = resolve_path(f"assets/graphics/poses/stickman_{name}.png")
+    return load_img(p) if p else None
+
+
+_FLIP = {}
+def pose_flip(name):
+    """좌우반전 포즈(오른쪽을 가리키게) — 캐시."""
+    if name not in _FLIP:
+        im = pose_img(name)
+        _FLIP[name] = im.transpose(Image.FLIP_LEFT_RIGHT) if im else None
+    return _FLIP[name]
+
+
+def draw_pen(base, hx, hy, scale, ang=28):
+    """캐릭터 손에 매직펜(마커) 하나 그림. hx,hy=펜 잡은 손 좌표."""
+    import math as _m
+    d = ImageDraw.Draw(base)
+    L = int(120 * scale)                      # 펜 길이
+    w = max(3, int(15 * scale))               # 펜 두께
+    a = _m.radians(ang)
+    dx, dy = _m.cos(a), _m.sin(a)
+    x0, y0 = hx, hy                            # 손(펜 뒤끝)
+    x1, y1 = hx + L * dx, hy + L * dy          # 펜촉
+    # 몸통(파란 마커)
+    d.line([(x0, y0), (x1 - w * dx, y1 - w * dy)], fill=(60, 110, 210, 255), width=w)
+    # 캡(뒤끝)
+    d.line([(x0, y0), (x0 + w * dx, y0 + w * dy)], fill=(40, 70, 150, 255), width=w + 2)
+    # 펜촉(진한 팁)
+    d.ellipse([x1 - w, y1 - w, x1 + w, y1 + w], fill=(30, 40, 60, 255))
+    return (x1, y1)                            # 펜촉 좌표
+
+
+# ---------- 동작선 플레이어(DB anim_sequences) — 동작=DB, 캐릭터만 교체 ----------
+_SEQ = {}
+def load_sequence(name="teacher_board"):
+    if name not in _SEQ:
+        con = sqlite3.connect(DB)
+        r = con.execute("SELECT beats_json FROM anim_sequences WHERE seq_name=?", (name,)).fetchone()
+        con.close()
+        _SEQ[name] = json.loads(r[0]) if r else []
+    return _SEQ[name]
+
+
+_CHARPOSE = {}
+def char_pose_info(char_key, pose_name, sig="sig_jump"):
+    """캐릭터×포즈 → (경로, flip, pen). 저장된 원본 컷아웃 그대로 사용(일관성)."""
+    if char_key not in _CHARPOSE:
+        con = sqlite3.connect(DB)
+        _CHARPOSE[char_key] = {r[0]: (r[1], r[2] or 0, r[3] or 0) for r in
+            con.execute("SELECT pose_name,file_path,flip,pen FROM anim_char_poses WHERE char_key=?", (char_key,))}
+        con.close()
+    if pose_name == "__SIGNATURE__":
+        pose_name = sig
+    rec = _CHARPOSE[char_key].get(pose_name)
+    if not rec:
+        return None, 0, 0
+    return resolve_path(rec[0]), rec[1], rec[2]
+
+
+_FLIPIM = {}
+def load_img_flip(path):
+    if path not in _FLIPIM:
+        _FLIPIM[path] = load_img(path).transpose(Image.FLIP_LEFT_RIGHT)
+    return _FLIPIM[path]
+
+
+def seq_state(tt, dur, seq="teacher_board"):
+    """동작선 재생 → (x_abs, pose_name). 이동 구간 x 보간, 포즈는 구간 내 순환."""
+    beats = load_sequence(seq)
+    if not beats:
+        return None
+    total = sum(b["dur"] for b in beats) or 1.0
+    p = min(1.0, max(0.0, tt / dur)) * total
+    acc = 0.0
+    for b in beats:
+        d = b["dur"]
+        if p <= acc + d or b is beats[-1]:
+            local = min(1.0, max(0.0, (p - acc) / max(1e-6, d)))
+            x = b["x_from"] + (b["x_to"] - b["x_from"]) * _smooth(local)
+            cyc = b["cycle"]
+            ci = int(local * len(cyc) * 3) % len(cyc) if len(cyc) > 1 else 0
+            return x, cyc[ci]
+        acc += d
+    return beats[-1]["x_to"], beats[-1]["cycle"][0]
+
+
 def wrap(draw, text, font, maxw):
     words, lines, cur = text.split(" "), [], ""
     for wd in words:
@@ -495,20 +597,23 @@ def compose(scene, t=None, lang="ko", overlay=True):
                     break
         # 정획순 쓰기: 모음 글자를 한 획씩 (한글교육 — 획순 정확)
         if o["motion"] == "write":
-            vch = jamo
-            if vch in STROKES:
-                prog = 1.0 if final else max(0.0, min(1.0, (tt - 0.3) / 1.3))
+            # 대상 글자: letter_X → X(자모), word_XXX → XXX(음절/단어). 빠른 매직펜 필기로 획순 드로잉.
+            wtext = base_name[7:] if base_name.startswith("letter_") else (base_name[5:] if base_name.startswith("word_") else None)
+            if wtext:
+                style = scene.get("draw_font") or "nanum_pen"   # 글씨랑 폰트(기본 나눔손글씨 펜) — 안 비틀림
+                WDUR = scene.get("draw_dur") or 0.7        # 필기 속도(초). 붓글씨=느리게(2.0 등)
+                prog = 1.0 if final else max(0.0, min(1.0, (tt - 0.12) / WDUR))
                 if prog > 0.0:
-                    size_px = max(8, int(234 * o["scale"] * pulse))
-                    if prog >= 1.0:                       # cache completed glyph
-                        ck = (vch, size_px, o["cx"])
-                        vim = _VDONE.get(ck)
-                        if vim is None:
-                            vim = render_vowel(vch, size_px, progress=1.0, seed=o["cx"])
-                            _VDONE[ck] = vim
+                    size_px = max(8, int(200 * o["scale"] * pulse))
+                    if prog >= 1.0:                       # 완성 글리프 캐시
+                        ck = (wtext, style, size_px, round(o["cx"]))
+                        wim = _VDONE.get(ck)
+                        if wim is None:
+                            wim = _fontw.render_text_writing(wtext, style, size_px, progress=1.0)
+                            _VDONE[ck] = wim
                     else:
-                        vim = render_vowel(vch, size_px, progress=prog, seed=o["cx"])
-                    base.alpha_composite(vim, (int(o["cx"] - vim.width / 2), int(o["cy"] - vim.height / 2)))
+                        wim = _fontw.render_text_writing(wtext, style, size_px, progress=prog)
+                    base.alpha_composite(wim, (int(o["cx"] - wim.width / 2), int(o["cy"] - wim.height / 2)))
                 continue
         is_pose = "/poses/" in o["path"].replace("\\", "/")
         im = load_img(o["path"])
@@ -516,7 +621,47 @@ def compose(scene, t=None, lang="ko", overlay=True):
         if a <= 0.01:
             continue
         glayers = None
-        if is_pose and not final:                     # 캐릭터: 살아있는 idle + (gesture) 제스처 전환
+        pen_hand = None                                # 매직펜 그릴 손 좌표(있으면 글쓰기 중)
+        cmode = scene.get("char_mode") if is_pose else None
+        if is_pose and cmode == "teacher":             # 동작선(칠판 앞 선생님): 저장된 원본 컷아웃 + 좌우이동
+            ck = scene.get("char_key") or "zolla_girl"
+            st = (400, "__SIGNATURE__") if final else seq_state(tt, dur)
+            if st:
+                tx, pose_name = st
+                pp, flip, pen = char_pose_info(ck, pose_name)
+                if pp is not None:
+                    im = load_img_flip(pp) if flip else load_img(pp)
+                dx += (tx - o["cx"])               # 절대 위치 tx로 이동(그림자 함께)
+                # 앉기(zw_sitting/zw_reading) 컷아웃엔 의자가 이미 포함됨 — 별도 의자 안 그림
+        elif is_pose and cmode == "sit":                 # 진지한 설명 = 의자에 앉아 설명
+            si = pose_img("zw_sitting")
+            if si is not None:
+                im = si
+            if not final:
+                bob, sway, breathe = idle_motion(o["cx"], tt); dy += bob; rot += sway; sm *= breathe
+        elif is_pose and cmode == "penwrite":          # 중앙까지 이동 → 매직펜으로 글쓰기 → 복귀
+            home_x = o["cx"]; write_x = 600; WLK = 0.16
+            p = 1.0 if final else min(1.0, max(0.0, tt / dur))
+            if final:
+                frac = 1.0
+            elif p < WLK:
+                frac = _smooth(p / WLK)
+            elif p > 1 - WLK:
+                frac = _smooth((1 - p) / WLK)
+            else:
+                frac = 1.0
+            dx += (write_x - home_x) * frac            # 그림자·캐릭터 함께 이동
+            if frac > 0.97:                            # 글쓰기 위치 도달 → 매직펜 포즈(오른쪽 가리킴)
+                fim = pose_flip("zw_point_l")
+                if fim is not None:
+                    im = fim
+                ecx = o["cx"] + dx; ecy = o["cy"] + dy; s = o["scale"]
+                pen_hand = (ecx + int(150 * s), ecy - int(30 * s))   # 뻗은 오른손 근처
+            else:                                      # 걸어가는 중 = 기본 포즈
+                bi = pose_img("zw_base")
+                if bi is not None:
+                    im = bi
+        elif is_pose and not final:                    # 기본: 제스처 전환
             bob, sway, breathe = idle_motion(o["cx"], tt)
             dy += bob; rot += sway; sm *= breathe
             if o["motion"] == "gesture" and gestures:
@@ -541,6 +686,8 @@ def compose(scene, t=None, lang="ko", overlay=True):
                 paste(base, load_img(gp), o["cx"] + dx, o["cy"] + dy, o["scale"] * sm * pulse, rot, a * ga)
         else:
             paste(base, im, o["cx"] + dx, o["cy"] + dy, o["scale"] * sm * pulse, rot, a)
+        if pen_hand is not None:                       # 매직펜(글쓰기 중)
+            draw_pen(base, pen_hand[0], pen_hand[1], o["scale"])
     if overlay:
         draw_caption(base, scene["cap"])
         draw_subtitle(base, subtitle_text(scene, tt, final))
@@ -601,7 +748,7 @@ def _seg_tts(text, lang):
         try:
             if not ok:
                 raise RuntimeError("empty tts segment")
-            subprocess.run([_ff(), "-y", "-i", raw, "-filter:a", "atempo=1.1", "-vn", fast],
+            subprocess.run([_ff(), "-y", "-i", raw, "-filter:a", "atempo=1.1", "-vn", fast],   # KO/EN 둘 다 1.1배속(공통 타임라인 유지)
                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
         except Exception:                            # 빈/깨진 세그먼트 → 폴백(원본 또는 짧은 무음)
             import shutil
@@ -653,12 +800,13 @@ def ensure_scene_audio(seq, script, lang):
         return final, AudioFileClip(final).duration, _json.load(open(schedf, encoding="utf-8"))
 
     quoted = sorted(CLIP_QUOTED, key=len, reverse=True)
-    pat = "(" + "|".join([_re.escape(q) for q in quoted] + [_re.escape(k) for k in JAMO_SPEAK]) + ")"
+    # ★ 따옴표 친 것만 DB 클립. 따옴표 없는 낱자·단어·문장은 전부 나레이터가 읽음(JAMO_SPEAK 바자모 제외).
+    pat = "(" + "|".join([_re.escape(q) for q in quoted]) + ")"
     parts = [p for p in _re.split(pat, script) if p != ""]
     files, sched, t = [], [], 0.0
     loud = set()                                  # DB 발음 클립 세그먼트 인덱스(나레이션보다 약간 크게)
     # 발음 클립을 나레이션에 '거의 말하듯' 이어붙임 — 주변 무음 최소화(클립 자체 길이는 보존).
-    PAD = 0.04
+    PAD = 0.0     # ★ DB 발음클립 ↔ 나레이터 간격 0 (0.1도 없이 바로 이어서, 사용자 확정 2026-07-05)
     PUNCT_SIL = 0.18
     for part in parts:
         clip, label = None, None
@@ -666,8 +814,8 @@ def ensure_scene_audio(seq, script, lang):
             cand = os.path.join(JAMO_DIR, f"{CLIP_QUOTED[part]}.mp3")
             if os.path.exists(cand):
                 clip, label = cand, CLIP_QUOTED[part]
-        elif part in JAMO_SPEAK:                      # 낱자 → DB 발음 클립(SunHi)
-            cand = os.path.join(JAMO_DIR, f"{part}.mp3")
+        elif part in JAMO_SPEAK:                      # 낱자 → DB 발음 클립(★이름: 기역/니은/디귿…, 소리 아님)
+            cand = os.path.join(JAMO_DIR, f"{JAMO_SPEAK[part]}.mp3")   # 예: ㄱ→기역.mp3 (자음은 이름으로 읽음)
             if os.path.exists(cand):
                 clip, label = cand, part
             else:                                    # 클립 없으면 한국어 음성으로 이름 발음(영어 성우 금지)
@@ -675,12 +823,13 @@ def ensure_scene_audio(seq, script, lang):
                 files.append(seg); t += AudioFileClip(seg).duration
                 continue
         if clip:
-            sp = _silence(PAD)
-            files.append(sp); t += PAD
+            if PAD > 0:
+                files.append(_silence(PAD)); t += PAD
             d = AudioFileClip(clip).duration
             loud.add(len(files))                  # 이 세그먼트(DB 발음 클립)는 나레이션보다 약간 크게
             files.append(clip); sched.append([label, round(t, 3), round(t + d, 3)]); t += d
-            files.append(sp); t += PAD
+            if PAD > 0:
+                files.append(_silence(PAD)); t += PAD
         elif _PUNCT.match(part):                      # 구두점/공백 → 짧은 무음
             files.append(_silence(PUNCT_SIL)); t += PUNCT_SIL
         else:                                         # 일반 텍스트 → 한글런은 ko 음성, 그 외는 해당 언어

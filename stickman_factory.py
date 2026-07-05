@@ -181,9 +181,21 @@ def render_pose(pose, seed=7):
     neck_top = (head_c[0], head_c[1] + hr)
     stamp_stroke(draw, [P["chest"], neck_top], lw, rng, wobble=0.3)
 
-    if zolla:                                           # 꽉 찬 검은 머리
+    if pose.get("bun"):                                 # 머리묶음 먼저(머리 뒤에) — 졸라'걸' 정체성
+        facing = pose.get("facing", "front")
+        off = {"front": 0.0, "right": -0.5, "left": 0.5}.get(facing, 0.0)
+        br = hr * 0.62
+        bx = head_c[0] + off * hr * 1.05
+        by = head_c[1] - hr * 0.72
+        bcol = pose.get("bun_color", INK)
+        draw.ellipse([bx - br, by - br, bx + br, by + br], fill=bcol)
+        draw.ellipse([bx - br, by - br, bx + br, by + br], outline=INK, width=int(lw * 0.7))
+    if zolla:                                           # 꽉 찬 검은 머리(졸라맨)
         draw.ellipse([head_c[0] - hr, head_c[1] - hr, head_c[0] + hr, head_c[1] + hr], fill=INK)
-    else:
+    else:                                               # 외곽선 머리 + (옵션) 흰 얼굴 채우기(졸라걸)
+        hf = pose.get("head_fill")
+        if hf:
+            draw.ellipse([head_c[0] - hr, head_c[1] - hr, head_c[0] + hr, head_c[1] + hr], fill=hf)
         stamp_ring(draw, head_c, hr, lw, rng)
     # feet ticks
     for foot, knee in [(P["feetLeft"], P["kneeLeft"]), (P["feetRight"], P["kneeRight"])]:
@@ -198,6 +210,65 @@ def render_pose(pose, seed=7):
 
     img = img.resize((CANVAS, CANVAS), Image.LANCZOS)
     return img
+
+
+# ---- 졸라걸(주황머리) 통통 손그림 렌더 — 외곽선 튜브 팔다리 + 손·발 ----------
+GIRL_SKIN = (252, 250, 247, 255)   # 흰 얼굴/몸통 속
+GIRL_HAIR = (232, 126, 58, 255)    # 주황 머리
+
+def render_girl(pose, seed=7):
+    """render_pose와 같은 관절 좌표를 쓰되, 원본 졸라걸 룩(외곽선 튜브 팔다리+손발+주황머리묶음)."""
+    rng = random.Random(seed)
+    img = Image.new("RGBA", (CANVAS * SS, CANVAS * SS), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    P = {k: to_px(v, SS) for k, v in pose["pts"].items()}
+    facing = pose.get("facing", "front")
+    LWO = 2.15 * S * SS            # 튜브 외곽 두께(검은 외곽선)
+    LWI = 1.05 * S * SS            # 튜브 속(흰)
+    hr = pose.get("hr", 7.2) * S * SS
+
+    body = cubic(P["chest"], P["chest"], P["body"], P["pelvis"])
+    legL = cubic(P["pelvis"], P["pelvis"], P["kneeLeft"], P["feetLeft"])
+    legR = cubic(P["pelvis"], P["pelvis"], P["kneeRight"], P["feetRight"])
+    armL = cubic(P["chest"], P["chest"], P["elbowLeft"], P["handLeft"])
+    armR = cubic(P["chest"], P["chest"], P["elbowRight"], P["handRight"])
+    limbs = [body, legL, legR, armL, armR]
+
+    def poly(path, w, col):
+        xy = [(p[0], p[1]) for p in path]
+        draw.line(xy, fill=col, width=int(w), joint="curve")
+        r = w / 2
+        for p in (xy[0], xy[-1]):
+            draw.ellipse([p[0]-r, p[1]-r, p[0]+r, p[1]+r], fill=col)
+
+    for path in limbs:                       # 1) 검은 외곽선 전부
+        poly(path, LWO, INK)
+    for path in limbs:                       # 2) 흰 속 전부(튜브 완성)
+        poly(path, LWI, GIRL_SKIN)
+
+    # 손(벙어리장갑) / 발(신발)
+    for hand in (P["handLeft"], P["handRight"]):
+        hrd = 2.3 * S * SS
+        draw.ellipse([hand[0]-hrd, hand[1]-hrd, hand[0]+hrd, hand[1]+hrd], fill=GIRL_SKIN, outline=INK, width=int(LWO*0.35))
+    for foot, knee in [(P["feetLeft"], P["kneeLeft"]), (P["feetRight"], P["kneeRight"])]:
+        d = 1 if foot[0] >= P["pelvis"][0] else -1
+        fw, fh = 3.6 * S * SS, 2.0 * S * SS
+        cx = foot[0] + d * fw * 0.4
+        draw.ellipse([cx-fw, foot[1]-fh*0.4, cx+fw, foot[1]+fh], fill=GIRL_SKIN, outline=INK, width=int(LWO*0.35))
+
+    # 머리묶음(주황) → 머리(흰+외곽선) → 얼굴
+    head_c = P["head"]
+    off = {"front": 0.0, "right": -0.5, "left": 0.5}.get(facing, 0.0)
+    br = hr * 0.66
+    bx = head_c[0] + off * hr * 1.05
+    by = head_c[1] - hr * 0.70
+    draw.ellipse([bx-br, by-br, bx+br, by+br], fill=GIRL_HAIR, outline=INK, width=int(LWO*0.4))
+    draw.ellipse([head_c[0]-hr, head_c[1]-hr, head_c[0]+hr, head_c[1]+hr], fill=GIRL_SKIN, outline=INK, width=int(LWO*0.55))
+    draw_face(draw, head_c, hr, pose.get("expr", "neutral"), facing, rng, col=INK)
+    if pose.get("pencil"):
+        draw_pencil(draw, P, LWI, rng, pose["pencil"])
+
+    return img.resize((CANVAS, CANVAS), Image.LANCZOS)
 
 
 # ---- pose library -----------------------------------------------------------
@@ -312,8 +383,8 @@ POSES = {
                           ko="위(하늘)를 가리킴", en="Pointing up (heaven)"),
     "pointing_down": dict(pts=P(elbowRight=(35, 33), handRight=(38, 45)), expr="neutral",
                           ko="아래(땅)를 가리킴", en="Pointing down (earth)"),
-    "thinking":      dict(pts=P(head=(31, 11), elbowRight=(34, 28), handRight=(31.5, 18.5)),
-                          expr="neutral", facing="right", ko="턱에 손, 생각하는 자세", en="Thinking, hand on chin"),
+    "thinking":      dict(pts=P(head=(31, 11), elbowRight=(38, 27), handRight=(33, 18)),
+                          expr="neutral", facing="right", ko="턱에 손(팔꿈치 바깥), 양팔 보이는 생각 자세", en="Thinking, hand on chin (both arms visible)"),
     "shrug":         dict(pts=P(elbowLeft=(24, 25), handLeft=(20, 26.5), elbowRight=(36, 25), handRight=(40, 26.5)),
                           expr="surprised", ko="어깨 으쓱, 갸우뚱(모름)", en="Shrug, confused"),
     "thumbs_up":     dict(pts=P(elbowRight=(35, 24), handRight=(38, 17.5)), expr="happy",
