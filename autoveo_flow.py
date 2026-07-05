@@ -117,8 +117,8 @@ POSTERS_JS = r"""
     if (!/media\.getMediaUrlRedirect|googleusercontent/.test(s)) continue;
     
     const r = im.getBoundingClientRect();
-    if (r.width<200 || r.height<120) continue;
-    if (r.width>1200 || r.height>900) continue;
+    if (r.width<120 || r.height<120) continue;
+    if (r.width>1200 || r.height>1600) continue;
     
     const parent = im.closest('div');
     if (parent && (parent.querySelector('svg') || parent.querySelector('[class*="spinner"]') || parent.querySelector('[class*="loading"]'))) {
@@ -146,11 +146,11 @@ VIDEO_DONE_JS = r"""
     for (const im of el.querySelectorAll('img')) {
       const s=im.getAttribute('src')||'';
       const r=im.getBoundingClientRect();
-      if (/media\.getMediaUrlRedirect|googleusercontent/.test(s) && r.width>200){poster=true;break;}
+      if (/media\.getMediaUrlRedirect|googleusercontent/.test(s) && r.width>120){poster=true;break;}
     }
     if (!poster) continue;
     const r = el.getBoundingClientRect();
-    if (r.width<250 || r.height<150) continue;
+    if (r.width<150 || r.height<150) continue;
     const a=r.width*r.height;
     if (a<area){area=a; best={x:Math.round(r.x+r.width/2), y:Math.round(r.y+r.height/2)};}
   }
@@ -1085,7 +1085,7 @@ def make_scene_upload(page, n, image_path, motion_prompt):
     return False
 
 
-def make_scene(page, n, image_prompt, motion_prompt, force=False):
+def make_scene(page, n, image_prompt, motion_prompt, force=False, aspect="16:9"):
     global OUT_DIR
     out_path = os.path.join(OUT_DIR, f"scene_{n}.mp4")
     if (not force) and os.path.exists(out_path) and os.path.getsize(out_path) > 0:
@@ -1109,7 +1109,7 @@ def make_scene(page, n, image_prompt, motion_prompt, force=False):
             continue
         shot(page, f"s{n}_00_editor")
 
-        set_image_mode(page)
+        set_image_mode(page, aspect=aspect)
         fill_prompt(page, image_prompt)
         if not generate(page):
             shot(page, f"s{n}_generate_fail")
@@ -1179,6 +1179,7 @@ def main():
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--upload", default="", help="이 이미지를 업로드해 첫 프레임으로 사용(텍스트→이미지 생성 대신). --scene N 과 함께 사용.")
     ap.add_argument("--motion", default="", help="업로드 씬의 모션 프롬프트 직접 지정(미지정 시 프롬프트 파일의 모션 사용).")
+    ap.add_argument("--aspect", default="16:9", help="영상 가로세로 비율 (16:9, 9:16 등)")
     args = ap.parse_args()
 
     scenes = parse_prompts(args.prompts)
@@ -1246,7 +1247,7 @@ def main():
                 log("  [CDP] localhost:9222 감지 실패. 새 브라우저 컨텍스트를 기동합니다.")
                 c = p.chromium.launch_persistent_context(
                     PROFILE, channel="chrome", headless=False, locale="ko-KR", no_viewport=True,
-                    accept_downloads=True, downloads_path=DL_DIR,
+                    accept_downloads=True, downloads_path=DL_DIR, slow_mo=150,
                     ignore_default_args=["--enable-automation"],
                     args=["--start-maximized", "--no-first-run", "--disable-session-crashed-bubble", "--lang=ko-KR", "--disable-gpu"])
                 pg = c.pages[0] if c.pages else c.new_page()
@@ -1272,7 +1273,7 @@ def main():
                 if args.upload:
                     success = make_scene_upload(page, n, args.upload, args.motion or scenes[n][1])
                 else:
-                    success = make_scene(page, n, *scenes[n], force=args.force)
+                    success = make_scene(page, n, *scenes[n], force=args.force, aspect=args.aspect)
                 
                 # 성공 및 실패 여부를 진행도 파일에 기록
                 import json

@@ -1,0 +1,1 @@
+The myonuclei gained during prior training are not destroyed during rest; they remain preserved inside the muscle.

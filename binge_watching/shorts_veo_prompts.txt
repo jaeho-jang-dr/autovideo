@@ -1,0 +1,51 @@
+================================================================
+정주행 쇼츠 — Google Flow(Veo) 세로 9:16 모션 클립 제작 스크립트
+================================================================
+목표: 글자 없는 깨끗한 두들 3장을 업로드→애니메이션(9:16) → 한/영 공통 사용.
+      제목·자막·로고는 컴파일러(make_binge_short_motion.py)가 나중에 얹음.
+
+입력 이미지(글자 없음, 768×1376, 이미 존재):
+  씬0  shorts_src/scene_0.png    소파+TV (인트로)
+  씬2  shorts_src/scene_2.png    하품하는 얼굴 + 빛나는 TV
+  씬20 shorts_src/scene_20.png   별을 먹는 뇌 (도파민)
+
+Flow 설정: [동영상] 모드 · 업로드 이미지=첫 프레임 · 비율 9:16(crop_9_16)
+          · Veo Fast 권장(크레딧 절약) · 8초 · 1x
+저장 파일명(덮어쓰기): shorts_src/scene_0.mp4 · scene_2.mp4 · scene_20.mp4
+※ 단순 줌 금지(황금원칙 #4) — 아래처럼 실제 물리 동작/상호작용을 넣을 것.
+
+──────────────────────────────────────────────
+[씬 0] 소파+TV 인트로   (자막: "오늘 정주행으로 몰아보기 어때요?")
+──────────────────────────────────────────────
+▶ 업로드: shorts_src/scene_0.png
+▶ 모션 프롬프트:
+Hand-drawn whiteboard marker doodle comes alive: the TV screen fills with swirling blue and yellow abstract patterns that morph and pulse, the couple on the couch settle deeper into the cushions and pull a blanket up over themselves, warm flickering light from the screen washes across the couch, gentle slow push-in. Thick black ink outlines, clean white background, no text, no letters, no watermark.
+
+──────────────────────────────────────────────
+[씬 2] 하품+빛나는 TV   (자막: "'한 화만 더 봐야지' 하다가 결국 밤을 새워본 적이 있으신가요?")
+──────────────────────────────────────────────
+▶ 업로드: shorts_src/scene_2.png
+▶ 모션 프롬프트:
+The tired face yawns wide as the eyelids droop heavier and heavier, the glowing screen pulses brighter with radiating yellow rays expanding and contracting outward, small sparkle marks pop and flicker around the screen edges, the head slowly tilts sideways with drowsiness. Whiteboard marker doodle style, thick black ink outlines, clean white background, no text, no letters, no watermark.
+
+──────────────────────────────────────────────
+[씬 20] 별 먹는 뇌   (자막: "뇌는 더 자극적인 반전을 원하며 계속해서 도파민을 요구합니다.")
+──────────────────────────────────────────────
+▶ 업로드: shorts_src/scene_20.png
+▶ 모션 프롬프트:
+The cartoon brain's wide mouth chomps open and shut repeatedly as a stream of shining golden stars flies in from the left and gets gobbled down, the brain flushes brighter red and pulses with each bite, bursts of sparkles scatter around energetically. Whiteboard marker doodle style, thick black ink outlines, clean white background, no text, no letters, no watermark.
+
+================================================================
+[자동 생성 명령 — autoveo_flow.py (단일 세션, 수동 감독)]
+※ Flow가 "비정상 활동"으로 막힐 수 있으니 헤비 자동화 금지. 한 개씩 확인하며.
+python autoveo_flow.py --prompts binge_watching/shorts_veo_prompts.txt --scene 0  --upload shorts_src/scene_0.png  --aspect 9:16 --force --motion "Hand-drawn whiteboard marker doodle comes alive: the TV screen fills with swirling blue and yellow abstract patterns that morph and pulse, the couple on the couch settle deeper and pull a blanket up, warm flickering screen light washes across the couch, gentle slow push-in. Thick black ink outlines, clean white background, no text, no watermark."
+python autoveo_flow.py --prompts binge_watching/shorts_veo_prompts.txt --scene 2  --upload shorts_src/scene_2.png  --aspect 9:16 --force --motion "The tired face yawns wide as eyelids droop heavier, the glowing screen pulses brighter with radiating yellow rays expanding and contracting, sparkle marks pop around the screen edges, the head slowly tilts with drowsiness. Whiteboard marker doodle, thick black ink, clean white background, no text, no watermark."
+python autoveo_flow.py --prompts binge_watching/shorts_veo_prompts.txt --scene 20 --upload shorts_src/scene_20.png --aspect 9:16 --force --motion "The cartoon brain's wide mouth chomps open and shut as a stream of shining golden stars flies in from the left and gets gobbled, the brain flushes brighter red and pulses with each bite, sparkles scatter energetically. Whiteboard marker doodle, thick black ink, clean white background, no text, no watermark."
+
+================================================================
+[클립 생성 후 → 쇼츠 합성]
+저장된 shorts_src/scene_{0,2,20}.mp4 를 쓰도록 컴파일러 SRC만 바꾸면
+한글·영어 쇼츠가 그 9:16 모션으로 나옴:
+  python binge_watching/make_binge_short_motion.py ko   # (SRC=shorts_src/scene_X.mp4)
+  python binge_watching/make_binge_short_motion.py en
+================================================================

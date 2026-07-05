@@ -28,6 +28,7 @@
 | 조감독 협업 및 소통 프로토콜 | `GEMINI.md` |
 | 최종 출력 및 씬 비디오 인덱스 | `autovideo_outputs.md` |
 | AI 역할 구성 및 이력 | `.harness/context/roles_config.md` |
+| 조감독 자막/번역 인계 리포트 | [gemini_report.md](file:///C:/Users/antigravity/.gemini/antigravity/brain/9d04d3ee-b6ba-4806-9102-fa4a6243dcd0/scratch/gemini_report.md) |
 
 
 

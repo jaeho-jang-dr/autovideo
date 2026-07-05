@@ -1,0 +1,37 @@
+================================================================
+정주행 쇼츠 — 수동 이미지 생성용 프롬프트 3장 (Google Flow)
+설정: 이미지 모드 · 비율 9:16 (crop_9_16) · Nano Banana 2 · 1x
+저장 후 파일명: shorts_prompts/scene_0.png, scene_2.png, scene_20.png
+================================================================
+
+──────────────────────────────────────────────
+[씬 0] 인트로 — 소파+TV "정주행"
+──────────────────────────────────────────────
+▶ 이미지 프롬프트 (복사):
+Vertical 9:16 whiteboard marker doodle: a cozy couch and a big TV, bold hand-written whiteboard text "Binge-watching Effects!" and Korean "정주행 몰아보기" on the board, thick black ink outlines, clean white background, vibrant blue and yellow marker coloring, centered composition filling the tall frame. No watermark, no signature.
+
+▶ (참고) 비디오 모션 프롬프트:
+slow motion yellow highlights trace the title letters, subtle camera push-in, hand-drawn look
+
+──────────────────────────────────────────────
+[씬 2] 하품하는 얼굴 + 빛나는 화면
+──────────────────────────────────────────────
+▶ 이미지 프롬프트 (복사):
+Vertical 9:16 whiteboard marker doodle: a tired yawning face staring at a glowing screen at night, thick black ink outlines, clean white background, vibrant yellow marker glow, centered vertical composition. No watermark, no text, no letters, no signature.
+
+▶ (참고) 비디오 모션 프롬프트:
+slow motion yellow marker glow fills the screen light, gentle camera pan, hand-drawn look
+
+──────────────────────────────────────────────
+[씬 20] 별을 먹는 뇌 (도파민)
+──────────────────────────────────────────────
+▶ 이미지 프롬프트 (복사):
+Vertical 9:16 whiteboard marker doodle: a brain with an open mouth eating shining stars, thick black ink outlines, clean white background, vibrant red marker coloring, dynamic vertical composition filling the tall frame. No watermark, no text, no letters, no signature.
+
+▶ (참고) 비디오 모션 프롬프트:
+slow motion the brain tilts up to swallow red stars, slow camera zoom-out, hand-drawn look
+
+================================================================
+※ 다운로드한 이미지는 shorts_prompts/ 폴더에 scene_0.png / scene_2.png / scene_20.png 로 저장.
+※ 3장 다 되면 알려주세요 → 그 이미지로 Veo 세로 비디오 클립 생성(업로드 방식)으로 이어갑니다.
+================================================================

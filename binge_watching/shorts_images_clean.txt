@@ -1,0 +1,28 @@
+================================================================
+정주행 쇼츠 — 이미지 생성용 프롬프트 3장 (텍스트 완전 제거 버전)
+왜 글자를 뺐나: 글자가 든 프레임은 Veo 동영상 생성이 필터링/왜곡됨.
+  → 그림만 깨끗이 뽑고, 제목·자막은 나중에 컴파일러에서 박스 없이 텍스트만 얹음.
+------------------------------------------------------------
+Google Flow 설정: [이미지] 모드 · 비율 9:16 (crop_9_16) · 1x
+저장 파일명(덮어쓰기): shorts_src/scene_0.png · scene_2.png · scene_20.png
+================================================================
+
+──────────────────────────────────────────────
+[씬 0] 인트로 — 소파 + TV (글자 없음)
+──────────────────────────────────────────────
+Vertical 9:16 whiteboard marker doodle: a cozy couch seen from behind facing a big TV that glows with colorful abstract shapes on its screen, thick black ink outlines, clean white background, vibrant blue and yellow marker coloring, centered vertical composition filling the tall frame. Absolutely no text, no letters, no words, no captions, no watermark, no signature.
+
+──────────────────────────────────────────────
+[씬 2] 하품하는 얼굴 + 빛나는 화면 (글자 없음)
+──────────────────────────────────────────────
+Vertical 9:16 whiteboard marker doodle: a tired person yawning wide while staring at a glowing phone screen in a dark room at night, thick black ink outlines, clean white background, vibrant yellow marker glow radiating from the screen, centered vertical composition. Absolutely no text, no letters, no words, no captions, no watermark, no signature.
+
+──────────────────────────────────────────────
+[씬 20] 별을 먹는 뇌 (도파민, 글자 없음)
+──────────────────────────────────────────────
+Vertical 9:16 whiteboard marker doodle: a cartoon brain with a wide open mouth gobbling shining stars that fall from above, thick black ink outlines, clean white background, vibrant red and yellow marker coloring, dynamic vertical composition filling the tall frame. Absolutely no text, no letters, no words, no captions, no watermark, no signature.
+
+================================================================
+※ 3장 다 저장하면 알려주세요 → 그 깨끗한 이미지로 Veo 세로 동영상 생성(업로드 방식)으로 이어갑니다.
+※ 동영상용 모션 프롬프트는 shorts_src_prompts.txt 에 씬별로 이미 매칭해 두었습니다.
+================================================================

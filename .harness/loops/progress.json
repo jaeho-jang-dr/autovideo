@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-06-28",
+  "last_updated": "2026-07-05",
   "project": "autovideo",
   "agents": {
     "orchestrator": "Antigravity (Gemini)",
@@ -149,9 +149,18 @@
     "LM168: pages /lessons-all (en) + /ko/lessons-all (ko); BaseLayout nav 168강 link (desktop+mobile+footer), active='alllessons'",
     "LM168: deployed to Cloudflare Pages + Vercel; verified live on drjayed.com/ko/lessons-all (grounded content markers present)",
     "Sejong-Film (2026-07-01): Compiled multi-language draft videos (sejong_multi_draft_ko.mp4, _en.mp4, _ja.mp4) based on the 5-act scenario to verify multilingual voice sync and sub layout.",
-    "Sejong-Film (2026-07-01): Rendering 48 scene motion clips under sejong_main_kf/ (YOLO keyframe transition & Flow-Veo pipeline) for high-fidelity hybrid video composition (still in progress)."
+    "Sejong-Film (2026-07-01): Rendering 48 scene motion clips under sejong_main_kf/ (YOLO keyframe transition & Flow-Veo pipeline) for high-fidelity hybrid video composition (still in progress).",
+    "Binge-Watching (2026-07-02, Gemini=조감독): Compiled the main 4K video, uploaded to YouTube (ID: wJUAiZW5fW0), set custom thumbnail, and updated visibility to Unlisted.",
+    "Binge-Watching (2026-07-02, Gemini=조감독): Patched autoveo_flow.py (loosened tile width filters to 120px/150px, slow_mo=1200) to support 9:16 portrait video tile generation and download.",
+    "Binge-Watching (2026-07-02, Gemini=조감독): Created make_binge_short_916.py supporting 9:16 portrait video compilation, vertical 4K (2160x3840) upscaling, and proportional layout scaling.",
+    "Sejong-Film (2026-07-02, Gemini=조감독): Prepared 5 localized subtitles (.srt) and translated titles/descriptions, and logged uploader automation failures to scratch/gemini_report.md for Claude Code handover, updating CLAUDE.md links.",
+    "KO-W04 교정(2026-07-05): 리뷰앱 feedback JSON의 사용자 11개 노트 반영 — 받침 설명을 이름+대표음 문구(\"기역\" 받침으로 '윽' 소리가 나요…)로 seq5·6·7·8·9·12 대본 재작성(위딛몸→윗잇몸 수정), 삽입 클립 35개(이름/소리/단어) edge-tts SunHi 여성 통일 재생성(이전 남성/저음 일소), 받침7음 hangeul_audio_assets DB 등록, DB↔나레이터 gap0(PAD=0), tts_cache 전삭제 후 KO/EN 4K 재렌더 + 번인 리뷰본. review_lesson.py KO(8916)/EN(8918) 재기동(노트 보존).",
+    "W3 유튜브 마무리(2026-07-05): 본편 KO=gHYAXDo0MYs(일부공개, 제목·설명·챕터·AI고지·썸네일·4K·EN링크 완비 저장), EN=C8NQM0GaWrc 신규 업로드(일부공개, AI고지, KO 상호링크). youtube_uploads DB 기록. 웹=W3 4K 마스터 ko/en을 R2(docs/hangeul_w3_stickman_{lang}.mp4) 업로드해 커리큘럼 즉시 반영(WEEK_MEDIA[3].video=1).",
+    "KO-Web (2026-07-05): 메인 페이지의 레슨 그리드 카드 내에 4개 유튜브 동영상(세종대왕, 키성장, 정주행, 최면술)을 16:9 썸네일 구조로 병합하고 호버 시 한/영 쇼츠 분기 오버레이 노출 및 클릭 시 모달 재생 연동 완료. 질문/피드 게시판의 글쓰기 폼을 잠그고 로그인 제한(준비중) 안내 경고 팝업 차단 처리 완료."
   ],
   "pending_tasks": [
+    "Binge-Watching: Run autoveo_flow.py with binge_watching/shorts_prompts.txt to generate 9:16 portrait video clips (scene_0, 2, 20).",
+    "Binge-Watching: Render final KO/EN vertical 4K shorts via make_binge_short_916.py and upload them to YouTube (Unlisted).",
     "Sori Hangeul Mic: Resolve iOS/iPhone Safari silent microphone startup failure. User reported that clicking the mic button still yields no reaction at all. Perform intensive debugging on WebKit speech recognition click binding and console/error traps.",
     "Web Admin: provide a Google OAuth Client ID (Google Cloud Console -> Credentials -> OAuth client ID, type Web, authorized JS origins = https://drjayed.com, https://www.drjayed.com, https://drjayed.pages.dev, http://localhost:4321) and set PUBLIC_GOOGLE_CLIENT_ID (web/.env + Vercel/CF env) so the /admin Google sign-in button actually renders. Allowlist already = drjang00@ + drjang000@gmail.com.",
     "Web Auth (optional, real security): if the WHOLE site (not just /admin) must be blocked from external visitors, set up Cloudflare Access (Zero Trust) on drjayed.com + drjayed.pages.dev with Google IdP + email allowlist. Needs an API token with Access:Apps&Policies:Edit + Access:Orgs/IdP/Groups:Edit (current combined token only has Pages/Zone/DNS). Vercel mirror (drjayed.vercel.app) would also need protection or removal to avoid a public bypass.",

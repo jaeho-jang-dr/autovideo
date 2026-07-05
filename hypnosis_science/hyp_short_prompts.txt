@@ -1,0 +1,14 @@
+================================================================
+최면 쇼츠 — Google Flow(Veo) 세로 9:16 클립 (역공학: 최면 영상과 같은 카툰 스타일)
+================================================================
+스타일 역공학: 다정한 카툰/웹툰 일러스트, 셀셰이딩, 따뜻한 소프트 컬러, 굵고 깔끔한 외곽선.
+방식: autoveo 텍스트→이미지(Nano Banana 0크레딧)→애니메이션(Veo), 비율 9:16. 제목·자막은 컴파일러가 얹음.
+비트(훅→전환→결론): 씬2 마술쇼 → 씬13 fMRI 뇌 → 씬15 무마취 의료.
+저장: hyp_short/scene_2.mp4 · scene_13.mp4 · scene_15.mp4
+※ 단순 줌 금지 — 실제 동작/상호작용 포함.
+
+[Scene 2] Vertical 9:16 friendly cartoon illustration in a warm cel-shaded webtoon style with thick clean outlines and soft colors: a shiny black magician's top hat on a wooden stage with a cute cartoon rabbit popping out of it, surrounded by swirling golden sparkles and magic swirls, rich red theater curtains framing the background, whimsical and playful, centered vertical composition filling the tall frame. No text, no letters, no words, no watermark, no signature. :: slow motion the cartoon rabbit pops up cheerfully and the golden sparkles swirl around it, the red curtains sway gently, subtle camera push-in, warm cartoon look
+
+[Scene 13] Vertical 9:16 friendly cartoon illustration in a warm cel-shaded webtoon style with thick clean outlines and soft colors: a rounded fMRI brain-scan machine with a calm person lying inside, a large glowing monitor beside it displaying a colorful rainbow brain scan, a friendly doctor in a white coat gesturing toward the screen, a cozy night city window with a crescent moon in the background, centered vertical composition. No text, no letters, no words, no watermark, no signature. :: slow motion the colorful rainbow brain scan pulses and glows with activity on the monitor, the doctor gestures toward it, distant city lights twinkle, warm cartoon look
+
+[Scene 15] Vertical 9:16 friendly cartoon illustration in a warm cel-shaded webtoon style with thick clean outlines and soft colors: a calm patient lying peacefully in a hospital bed wearing a blue surgical cap, with a serene relaxed smile and gently closed eyes, a soft clean hospital room with gentle green plants and warm light, centered vertical composition. No text, no letters, no words, no watermark, no signature. :: slow motion the patient breathes slowly and peacefully with a faint smile, soft warm light shifts gently across the room, subtle camera push-in, warm cartoon look

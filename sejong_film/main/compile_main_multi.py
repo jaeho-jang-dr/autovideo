@@ -131,33 +131,56 @@ def jamo_overlay(n,d):
         out.append(pil_clip(ji,max(0.2,d-st)).with_start(st).with_position((x,y)).with_effects([CrossFadeIn(0.25)]))
     return out
 
+PKG=os.environ.get("PKG_MODE","")   # ""=드래프트(자막burn) / video=마스터(자막off) / audio=오디오트랙 / srt=자막
+CAPON=(PKG=="")                     # 자막 burn-in은 드래프트에서만
+WANT_V=PKG in ("","video")
+WANT_A=PKG in ("","video","audio")
+
 def build_shot(n):
     d=SLOT[n]; a=None if MUSIC[n] else fitted_audio(n)
-    layers=[shot_visual(n,d)]; layers+=jamo_overlay(n,d)
-    layers.append(pil_clip(logo,d).with_position(LOGO_POS))
-    if n==1:
-        t1,t2=TITLE[LANG]
-        layers.append(pil_clip(text_img(t1,120,GOLD,glow=(255,210,90),shadow=True,maxw=W-300),d).with_position(("center",120)).with_effects([CrossFadeIn(0.6)]))
-        layers.append(pil_clip(text_img(t2,52,WHITE,sw=4,shadow=True,maxw=W-360),d).with_position(("center",300)).with_effects([CrossFadeIn(0.8)]))
-    if not MUSIC[n] and cap_text(n):
-        cap=text_img(cap_text(n),46,WHITE,sw=5,shadow=True,maxw=W-300)
-        layers.append(pil_clip(cap,d).with_position(("center",H-cap.height-64)).with_effects([CrossFadeIn(0.3)]))
-    comp=CompositeVideoClip(layers,size=(W,H)).with_duration(d)
+    comp=None
+    if WANT_V:
+        layers=[shot_visual(n,d)]; layers+=jamo_overlay(n,d)
+        layers.append(pil_clip(logo,d).with_position(LOGO_POS))
+        if n==1:
+            t1,t2=TITLE[LANG]
+            layers.append(pil_clip(text_img(t1,120,GOLD,glow=(255,210,90),shadow=True,maxw=W-300),d).with_position(("center",120)).with_effects([CrossFadeIn(0.6)]))
+            layers.append(pil_clip(text_img(t2,52,WHITE,sw=4,shadow=True,maxw=W-360),d).with_position(("center",300)).with_effects([CrossFadeIn(0.8)]))
+        if CAPON and not MUSIC[n] and cap_text(n):
+            cap=text_img(cap_text(n),46,WHITE,sw=5,shadow=True,maxw=W-300)
+            layers.append(pil_clip(cap,d).with_position(("center",H-cap.height-64)).with_effects([CrossFadeIn(0.3)]))
+        comp=CompositeVideoClip(layers,size=(W,H)).with_duration(d)
     return comp,a,d
 
-placed=[]; auds=[]; narr_intervals=[]; t=0.0; prev="컷"
+placed=[]; auds=[]; narr_intervals=[]; srt_items=[]; t=0.0; prev="컷"
 for n in order:
     comp,a,d=build_shot(n); inxf=XF if prev in DISSOLVE else 0.0; start=max(0.0,t-inxf)
-    if inxf>0: comp=comp.with_effects([CrossFadeIn(inxf)])
-    comp=comp.with_start(start); placed.append(comp)
+    if comp is not None:
+        if inxf>0: comp=comp.with_effects([CrossFadeIn(inxf)])
+        placed.append(comp.with_start(start))
+    astart=start+(inxf*0.5)
     if a is not None:
-        astart=start+(inxf*0.5); auds.append(a.with_start(astart))
-        narr_intervals.append((astart, astart+a.duration))   # 덕킹용 나레이션 구간
+        if WANT_A: auds.append(a.with_start(astart))
+        narr_intervals.append((astart, astart+a.duration))   # 덕킹/자막용 나레이션 구간
+    if (not MUSIC[n]) and cap_text(n):
+        srt_items.append((astart, start+d, cap_text(n)))
     t=start+d; prev=TRANS[n]
 TOTAL=t
 
+# ---- 자막(.srt) 모드 ----
+if PKG=="srt":
+    def _fmt(x):
+        h=int(x//3600); m=int((x%3600)//60); s=x%60
+        return f"{h:02d}:{m:02d}:{s:06.3f}".replace('.',',')
+    os.makedirs(os.path.join(MAIN,"pkg"),exist_ok=True)
+    op=os.path.join(MAIN,"pkg",f"sub_{LANG}.srt")
+    with open(op,"w",encoding="utf-8") as f:
+        for i,(s0,s1,txt) in enumerate(srt_items,1):
+            f.write(f"{i}\n{_fmt(s0)} --> {_fmt(s1)}\n{txt}\n\n")
+    print("SRT DONE:",op,len(srt_items),"자막"); sys.exit()
+
 # ---- 배경음악(여민락) + 덕킹: 나레이션 중 절반 볼륨, 빈곳 full ----
-if os.path.exists(BGM):
+if WANT_A and os.path.exists(BGM):
     m=AudioFileClip(BGM); md=m.duration
     loops=[]; acc=0.0
     while acc<TOTAL: loops.append(m.with_start(acc)); acc+=md
@@ -173,8 +196,15 @@ if os.path.exists(BGM):
     ducked=CompositeAudioClip(pieces).with_duration(TOTAL).with_effects([AudioFadeIn(1.5),AudioFadeOut(2.5)])
     auds=[ducked]+auds
 
+# ---- 오디오 트랙 모드 ----
+if PKG=="audio":
+    os.makedirs(os.path.join(MAIN,"pkg"),exist_ok=True)
+    op=os.path.join(MAIN,"pkg",f"audio_{LANG}.m4a")
+    CompositeAudioClip(auds).with_duration(TOTAL).write_audiofile(op,fps=44100,codec="aac")
+    print("AUDIO DONE:",op,f"{TOTAL:.1f}s ({TOTAL/60:.2f}분)"); sys.exit()
+
 final=CompositeVideoClip(placed,size=(W,H)).with_duration(TOTAL)
 if auds: final=final.with_audio(CompositeAudioClip(auds))
-out=os.path.join(MAIN,f"sejong_multi_draft_{LANG}.mp4")
+out=os.path.join(MAIN, "sejong_master_video.mp4" if PKG=="video" else f"sejong_multi_draft_{LANG}.mp4")
 final.write_videofile(out,fps=30,codec="libx264",audio_codec="aac",preset="medium",threads=4)
 print("DONE:",out,f"{final.duration:.1f}s ({final.duration/60:.2f}분)")

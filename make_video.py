@@ -415,6 +415,8 @@ def main():
     parser.add_argument("--srt-ko", default="", help="Path to write a Korean .srt subtitle (timed from the narration text)")
     parser.add_argument("--embed-subs", action="store_true", help="After rendering, mux en/ko SRT into the mp4 as soft (toggleable) CC tracks; auto-writes <out>.en.srt / <out>.ko.srt if --srt paths are not given")
     parser.add_argument("--lang", choices=["ko", "en"], default="ko", help="Narration + burned-subtitle language. ko: scene text / Korean TTS. en: scene text_en / English TTS. Default ko (backward compatible).")
+    parser.add_argument("--durations", default="", help="JSON path {scene_id: seconds}. If set, skip TTS and time each scene to the given length (silent narration; mux real audio later). Used for narration-length-priority re-timing.")
+    parser.add_argument("--no-test-fx", action="store_true", help="Disable the hardcoded '2D Line Craft integration test' effects (Scene 1 red arrow, Scene 2 circle/ACTIVE).")
     args = parser.parse_args()
 
     # Load profile if provided
@@ -464,6 +466,17 @@ def main():
             print(f"Loaded {len(annotations)} annotations for visual overlay.")
         except Exception as e:
             print(f"Error loading annotations from {args.annotations}: {e}")
+
+    # Load custom per-scene durations (narration-length priority). If set, TTS is skipped.
+    CUSTOM_DUR = {}
+    if args.durations and os.path.exists(args.durations):
+        import json
+        try:
+            with open(args.durations, "r", encoding="utf-8") as f:
+                CUSTOM_DUR = {str(k): float(v) for k, v in json.load(f).items()}
+            print(f"Loaded custom durations for {len(CUSTOM_DUR)} scenes (TTS skipped, silent narration).")
+        except Exception as e:
+            print(f"Error loading durations from {args.durations}: {e}")
 
     # Clean audio cache to prevent narration mismatch
     print("Clearing gTTS audio cache to force regeneration...")
@@ -521,13 +534,18 @@ def main():
         narration_text = scene['text_en'] if args.lang == 'en' else scene['text']
         if not narration_text.strip():
             narration_text = scene['text']  # fall back to Korean if English is missing
-        print(f"Generating TTS for Scene {scene['id']} ({args.lang})...")
-        save_tts(narration_text, audio_path, lang=args.lang)
-        
-        # Load audio and apply 1.1x speed MultiplySpeed
-        raw_audio = AudioFileClip(audio_path)
-        audio_clip = raw_audio.with_effects([fx.MultiplySpeed(1.1)])
-        duration = audio_clip.duration
+        if CUSTOM_DUR and str(scene['id']) in CUSTOM_DUR:
+            # 나레이션 길이 우선 재타이밍: 외부 지정 길이 사용, TTS 생략(무음 나레이션, 실제 오디오는 나중에 먹싱)
+            duration = CUSTOM_DUR[str(scene['id'])]
+            audio_clip = None
+            print(f"Scene {scene['id']}: custom duration {duration:.2f}s (TTS skipped)")
+        else:
+            print(f"Generating TTS for Scene {scene['id']} ({args.lang})...")
+            save_tts(narration_text, audio_path, lang=args.lang)
+            # Load audio and apply 1.1x speed MultiplySpeed
+            raw_audio = AudioFileClip(audio_path)
+            audio_clip = raw_audio.with_effects([fx.MultiplySpeed(1.1)])
+            duration = audio_clip.duration
         
         # Clips are stored in the same folder as the output video (e.g., chiropractic_science/scene_X.mp4)
         video_path = os.path.join(output_dir, f"scene_{scene['id']}.mp4")
@@ -679,7 +697,7 @@ def main():
             composite_elements.append(txt_clip)
 
         # Custom layer effects for 2D Line Craft integration test (Scene 1 and Scene 2)
-        if scene['id'] == 1:
+        if scene['id'] == 1 and not args.no_test_fx:
             # Create a red arrow image using PIL
             arrow_w, arrow_h = 60, 60
             arrow_img = Image.new("RGBA", (arrow_w, arrow_h), (0, 0, 0, 0))
@@ -709,7 +727,7 @@ def main():
             composite_elements.append(arrow_layer)
             print("Injected [Red Arrow Fly-in] effect layer to Scene 1")
 
-        elif scene['id'] == 2:
+        elif scene['id'] == 2 and not args.no_test_fx:
             # Create a target highlight circle with dashed lines and 'ACTIVE' text using PIL
             circle_size = 150
             circle_img = Image.new("RGBA", (circle_size, circle_size), (0, 0, 0, 0))
