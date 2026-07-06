@@ -13,7 +13,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (EN)**: Specific transit or driving directions to Gyeongbokgung Palace are not provided in your sources.
 - **How to Get There (KO)**: 경복궁으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gyeongbokgung%20Palace%2C%20Seoul%2C%20South%20Korea)
-- **Official Website / Reference**: [Travel Guide / Info](https://royal.cha.go.kr/GJB/html/HtmlPage.do?pg=/gjb/01/gjb01_01_01.jsp&mn=GD_01_01)
+- **Official Website / Reference**: [Travel Guide / Info](https://royal.khs.go.kr)
 - **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg/960px-%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg)
 - **Visual Motif (Veo prompt)**: `grand traditional Korean palace gate, tiled roofs, stone courtyard, hanbok colors, guards`
 
@@ -31,7 +31,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 한강공원 및 야시장으로 가는 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Han%20River%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://hangang.seoul.go.kr/)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/f/f2/Seoul_satellite_map.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/d/de/Seoul_best_attractions_%28Seoul_best_attractions%29_%EB%8B%AC%EB%B9%9B%EB%AC%B4%EC%A7%80%EA%B0%9C%EB%B6%84%EC%88%981.jpg)
 - **Visual Motif (Veo prompt)**: `wide calm river, city skyline far back, picnic mats, bicycles, a ramen cup, paddle boats, sunset`
 
 ————————————————————————————————————————

@@ -159,7 +159,8 @@
     "KO-Web (2026-07-05): 메인 페이지의 레슨 그리드 카드 내에 4개 유튜브 동영상(세종대왕, 키성장, 정주행, 최면술)을 16:9 썸네일 구조로 병합하고 호버 시 한/영 쇼츠 분기 오버레이 노출 및 클릭 시 모달 재생 연동 완료. 질문/피드 게시판의 글쓰기 폼을 잠그고 로그인 제한(준비중) 안내 경고 팝업 차단 처리 완료.",
     "Places-LM (2026-07-06): NotebookLM의 2개 명소 노트북(1-90, 91-168) 자료들을 nlm CLI 및 query 자동화로 100% 온전하게 추출 완료. 기존 korea_places.json과 korea_places_details.json의 오프셋 뒤섞임 및 데이터 누락을 전수 교정 병합하고, 마크다운 가이드(korea_168_scenic_places_details.md) 갱신 후 Vercel 및 Cloudflare Pages(drjayed.com) 프로덕션 실서버 배포 동기화 완료.",
     "Video-Integration (2026-07-06): 거북목(KI_LvmiTWtE) 및 운동손상(qytcAZOiEsQ) 롱폼 유튜브 비디오 ID를 확보하여 web/src/data/content.json 및 SQLite db 에피소드 데이터에 published 상태로 바인딩하고, 5번째와 6번째 그리드 카드로 노출 완료. 쇼츠는 빈자리 형태로 마크해두어 향후 업로드 시 바인딩될 수 있도록 준비 후 빌드 및 배포 완료.",
-    "Places-Fix (2026-07-06): 168경 페이지 엑박 이미지 현상을 해결하기 위해 Wikipedia/Wikimedia API 스크래핑으로 실시간 168개 명소의 유효한 commons 이미지 URL을 획득해 image_url 교체 완료. 또한, 이전 커밋 대조를 통해 오리지널 길찾기(지하철 호선 및 출구 번호) 정보를 전수 복원해 엉뚱한 directions 텍스트를 전면 복구 및 실서버 배포 동기화 완료."
+    "Places-Fix (2026-07-06): 168경 페이지 엑박 이미지 현상을 해결하기 위해 Wikipedia/Wikimedia API 스크래핑으로 실시간 168개 명소의 유효한 commons 이미지 URL을 획득해 image_url 교체 완료. 또한, 이전 커밋 대조를 통해 오리지널 길찾기(지하철 호선 및 출구 번호) 정보를 전수 복원해 엉뚱한 directions 텍스트를 전면 복구 및 실서버 배포 동기화 완료.",
+    "Places-Refinement (2026-07-06): 168경 페이지의 모든 명소(특히 경복궁의 빈약한 설명 보강 및 깨진 오피셜 링크 https://royal.khs.go.kr 수정, 2번 한강 위성 지도를 달빛무지개분수 야경 랜드마크 뷰로 정정)에 대해 오염된 설명 템플릿(not mentioned...) 89개 필드를 고품질 가이드 정보로 일괄 정제 완료. 실서버 배포 동기화 완료."
   ],
   "pending_tasks": [
     "Binge-Watching: Run autoveo_flow.py with binge_watching/shorts_prompts.txt to generate 9:16 portrait video clips (scene_0, 2, 20).",
