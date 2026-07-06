@@ -14,7 +14,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 경복궁으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gyeongbokgung%20Palace%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://royal.cha.go.kr/GJB/html/HtmlPage.do?pg=/gjb/01/gjb01_01_01.jsp&mn=GD_01_01)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/c/c5/Gyeongbokgung-palace-Seoul-Korea.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg/960px-%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg)
 - **Visual Motif (Veo prompt)**: `grand traditional Korean palace gate, tiled roofs, stone courtyard, hanbok colors, guards`
 
 ————————————————————————————————————————
@@ -31,7 +31,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 한강공원 및 야시장으로 가는 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Han%20River%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://hangang.seoul.go.kr/)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/77/Seongsu_Bridge_at_Night_2020.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/f/f2/Seoul_satellite_map.jpg)
 - **Visual Motif (Veo prompt)**: `wide calm river, city skyline far back, picnic mats, bicycles, a ramen cup, paddle boats, sunset`
 
 ————————————————————————————————————————
@@ -48,7 +48,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 명동으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Myeongdong%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://www.seoultower.co.kr/)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Myeongdong_Cathedral_01_%28cropped%29.jpg/960px-Myeongdong_Cathedral_01_%28cropped%29.jpg)
 - **Visual Motif (Veo prompt)**: `busy bright shopping street, food carts, cosmetic shop signs, skewers and hotteok, crowds`
 
 ————————————————————————————————————————
@@ -65,7 +65,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 남산서울타워로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Namsan%20Seoul%20Tower%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://hanok.seoul.go.kr/)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/a/a6/NamsanTower_%28Cropped%29.jpeg)
 - **Visual Motif (Veo prompt)**: `tall lookout tower on a green hill, cable car, fence of colorful love padlocks, city lights`
 
 ————————————————————————————————————————
@@ -82,7 +82,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 관광객 방문 시간이 제한되는 '레드존'은 서울 종로구 북촌로11길 일대에 위치하고 있으며, 스마트서울맵(map.seoul.go.kr)을 통해 정확한 구역 정보와 안내를 확인할 수 있습니다 [11, 12].
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Bukchon%20Hanok%20Village%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://www.myeongdong.org/)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bukchon_Hanok_Village_01.jpg/960px-Bukchon_Hanok_Village_01.jpg)
 - **Visual Motif (Veo prompt)**: `narrow sloping alley of traditional tiled-roof hanok houses, stone steps, potted plants`
 
 ————————————————————————————————————————
@@ -99,7 +99,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 홍대로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hongdae%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Street_hongdae_Seoul.jpg/960px-Street_hongdae_Seoul.jpg)
 - **Visual Motif (Veo prompt)**: `lively street with buskers and a small crowd, mural walls, neon cafe signs, guitars`
 
 ————————————————————————————————————————
@@ -116,7 +116,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 인사동으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Insadong%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Insa-dong_%EC%9D%B8%EC%82%AC%EB%8F%99_October_1_2020_20.jpg/960px-Insa-dong_%EC%9D%B8%EC%82%AC%EB%8F%99_October_1_2020_20.jpg)
 - **Visual Motif (Veo prompt)**: `traditional craft street, hanji lanterns, tea house, pottery and brush shops, ginkgo trees`
 
 ————————————————————————————————————————
@@ -133,7 +133,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 광장시장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gwangjang%20Market%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](http://www.kwangjangmarket.co.kr/)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Gwangjang_Market_Street_Food_2017.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Gwangjang_Market%2C_Seoul_01.jpg/960px-Gwangjang_Market%2C_Seoul_01.jpg)
 - **Visual Motif (Veo prompt)**: `covered traditional market alley, food stalls, sizzling pancakes, bowls, red stools, steam`
 
 ————————————————————————————————————————
@@ -150,7 +150,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 해운대해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Haeundae%20Beach%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://www.haeundae.go.kr/tour/index.do)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Haeundae_Beach_May_2024.jpg/960px-Haeundae_Beach_May_2024.jpg)
 - **Visual Motif (Veo prompt)**: `long sandy city beach, high-rise hotels behind, parasols, gentle waves, beachgoers`
 
 ————————————————————————————————————————
@@ -184,7 +184,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 감천문화마을로 가는 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gamcheon%20Culture%20Village%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Gamcheon_Houses%2C_2024.jpg/960px-Gamcheon_Houses%2C_2024.jpg)
 - **Visual Motif (Veo prompt)**: `hillside of colorful pastel cube houses stacked like steps, narrow stairs, murals, sea view`
 
 ————————————————————————————————————————
@@ -201,7 +201,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 성산일출봉으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Seongsan%20Ilchulbong%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://www.jeju.go.kr/jeju/cultural/heritage/natural.htm)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/c/c5/Seongsan_Ilchulbong_Jeju.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Seongsan_Ilchulbong_from_the_air.jpg/960px-Seongsan_Ilchulbong_from_the_air.jpg)
 - **Visual Motif (Veo prompt)**: `huge green volcanic crater rising from the sea, hiking path, sunrise glow, fields below`
 
 ————————————————————————————————————————
@@ -218,7 +218,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 협재해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hyeopjae%20Beach%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Eulwangri_Beach%2C_near_Incheon_Airport.jpg/960px-Eulwangri_Beach%2C_near_Incheon_Airport.jpg)
 - **Visual Motif (Veo prompt)**: `white-sand beach with emerald shallow water, a small island offshore, palm trees, clear sky`
 
 ————————————————————————————————————————
@@ -235,7 +235,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 한라산으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hallasan%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Hallasan_Above.jpg/960px-Hallasan_Above.jpg)
 - **Visual Motif (Veo prompt)**: `tall shield volcano above clouds, hiking trail through low brush, crater lake, autumn colors`
 
 ————————————————————————————————————————
@@ -252,7 +252,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 불국사로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Bulguksa%20Temple%2C%20Gyeongju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Lotus_Flower_Bridge_and_Seven_Treasure_Bridge_at_Bulguksa_in_Gyeongju%2C_Korea.jpg/960px-Lotus_Flower_Bridge_and_Seven_Treasure_Bridge_at_Bulguksa_in_Gyeongju%2C_Korea.jpg)
 - **Visual Motif (Veo prompt)**: `grand old wooden temple, stone stairways and pagodas, autumn maples, lotus pond, tiled roofs`
 
 ————————————————————————————————————————
@@ -286,7 +286,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 남이섬으로 가는 대중교통 안내는 제공된 소스에 안내되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Nami%20Island%2C%20Gangwon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/79/Nami_Island.JPG)
 - **Visual Motif (Veo prompt)**: `long straight tree-lined lane of tall metasequoia, couple walking, bicycles, autumn or snow`
 
 ————————————————————————————————————————
@@ -303,7 +303,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 설악산으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Seoraksan%2C%20Gangwon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Dinosaur_Ridge_of_Seoraksan.jpg/960px-Dinosaur_Ridge_of_Seoraksan.jpg)
 - **Visual Motif (Veo prompt)**: `jagged granite peaks blazing with red-orange autumn foliage, cable car, temple, stream, blue sky`
 
 ————————————————————————————————————————
@@ -320,7 +320,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 강남역 부근으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gangnam%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Teheran-ro_Yeongdong-daero_crossing_7.jpg/960px-Teheran-ro_Yeongdong-daero_crossing_7.jpg)
 - **Visual Motif (Veo prompt)**: `wide modern boulevard with glass towers, fashion boutiques, busy crosswalk, city energy`
 
 ————————————————————————————————————————
@@ -337,7 +337,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 이태원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Itaewon%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Itaewon_2.jpg/960px-Itaewon_2.jpg)
 - **Visual Motif (Veo prompt)**: `hilly international street, world-cuisine signs, rooftop terrace, string lights, mixed crowd`
 
 ————————————————————————————————————————
@@ -354,7 +354,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 성수동으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Seongsu-dong%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Evening_street_in_Seongsu-dong.jpg/960px-Evening_street_in_Seongsu-dong.jpg)
 - **Visual Motif (Veo prompt)**: `red-brick converted-warehouse cafe street, big windows, plants, pop-up store, industrial chic`
 
 ————————————————————————————————————————
@@ -371,7 +371,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 롯데월드타워 서울스카이로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Lotte%20World%20Tower%20Seoul%20Sky%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Lotte_World_Tower_day_view_10.jpg/960px-Lotte_World_Tower_day_view_10.jpg)
 - **Visual Motif (Veo prompt)**: `very tall glass skyscraper, observation deck view of city grid and river, glass floor, clouds`
 
 ————————————————————————————————————————
@@ -388,7 +388,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 에버랜드로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Everland%2C%20Gyeonggi%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/T_Express_Everland_Resort.jpg/960px-T_Express_Everland_Resort.jpg)
 - **Visual Motif (Veo prompt)**: `big theme park with tulip fields, a panda, a tall wooden roller coaster, flower parade`
 
 ————————————————————————————————————————
@@ -405,7 +405,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: DDP의 주요 광장과 내부 연결 통로는 지하철 동대문역사문화공원역과 직접 연결되는 진입 썬큰 광장을 통해 편리하게 출입할 수 있습니다 [10].
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Dongdaemun%20DDP%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Dongdaemun_Design_Plaza_at_night%2C_Seoul%2C_Korea.jpg/960px-Dongdaemun_Design_Plaza_at_night%2C_Seoul%2C_Korea.jpg)
 - **Visual Motif (Veo prompt)**: `sleek silver curved futuristic building at dusk, glowing LED roses, soft purple lights`
 
 ————————————————————————————————————————
@@ -422,7 +422,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 광화문광장으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gwanghwamun%20Square%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Nightview_of_the_Gwanghwamun_Square_2024.jpg/960px-Nightview_of_the_Gwanghwamun_Square_2024.jpg)
 - **Visual Motif (Veo prompt)**: `open city plaza, large bronze seated King statue, palace gate behind, fountains, flags`
 
 ————————————————————————————————————————
@@ -439,7 +439,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 청계천으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Cheonggyecheon%20Stream%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Cheonggyecheon_stream_at_sunrise_with_trees_in_Seoul.jpg/960px-Cheonggyecheon_stream_at_sunrise_with_trees_in_Seoul.jpg)
 - **Visual Motif (Veo prompt)**: `narrow restored stream below street level, stepping stones, willow, city buildings above`
 
 ————————————————————————————————————————
@@ -456,7 +456,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 자갈치시장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Jagalchi%20Market%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jagalchi_Market_20200523_019.jpg/960px-Jagalchi_Market_20200523_019.jpg)
 - **Visual Motif (Veo prompt)**: `bustling seaside fish market, tanks and ice, grilling eel, harbor boats, ajummas selling`
 
 ————————————————————————————————————————
@@ -473,7 +473,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 해동용궁사로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Haedong%20Yonggungsa%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/%ED%95%B4%EB%8F%99%EC%9A%A9%EA%B6%81%EC%82%AC_%EC%82%AC%EC%B0%B0_%EC%A0%84%EA%B2%BD.jpg/960px-%ED%95%B4%EB%8F%99%EC%9A%A9%EA%B6%81%EC%82%AC_%EC%82%AC%EC%B0%B0_%EC%A0%84%EA%B2%BD.jpg)
 - **Visual Motif (Veo prompt)**: `ornate Buddhist temple on sea cliffs, stone bridge, lanterns, waves crashing, sunrise`
 
 ————————————————————————————————————————
@@ -490,7 +490,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 첨성대로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Cheomseongdae%2C%20Gyeongju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Cheomseongdae_Observatory_under_blue_sky_in_Gyeongju_South_Korea.jpg/960px-Cheomseongdae_Observatory_under_blue_sky_in_Gyeongju_South_Korea.jpg)
 - **Visual Motif (Veo prompt)**: `ancient curved stone-bottle observatory tower on a lawn, flower field, night lighting, stars`
 
 ————————————————————————————————————————
@@ -507,7 +507,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 동궁과 월지로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Donggung%20%26%20Wolji%20Pond%2C%20Gyeongju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Water_reflection_of_Donggung_Palace_in_Wolji_Pond_at_blue_hour_in_Gyeongju_South_Korea.jpg/960px-Water_reflection_of_Donggung_Palace_in_Wolji_Pond_at_blue_hour_in_Gyeongju_South_Korea.jpg)
 - **Visual Motif (Veo prompt)**: `lit wooden palace pavilions reflected in a calm pond at night, soft golden glow, reeds`
 
 ————————————————————————————————————————
@@ -524,7 +524,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 수원화성으로 가려면 지하철 1호선 및 수인분당선 수원역에서 하차한 뒤 4번 출구 인근에 있는 수원 종합 관광안내소에서 상세한 교통편 안내를 받을 수 있습니다 [5, 6]. 차량을 이용하는 경우 연무대 매표소 주차장(경기 수원시 팔달구 창룡대로 105)이나 화성행궁 전용 주차장으로 경로를 설정하면 편리하게 접근할 수 있습니다 [7, 8].
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Suwon%20Hwaseong%20Fortress%2C%20Gyeonggi%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Hwaseong_Fortress%2C_Suwon%2C_Gyeonggi-do%2C_Republic_of_Korea_%282%29.jpg/960px-Hwaseong_Fortress%2C_Suwon%2C_Gyeonggi-do%2C_Republic_of_Korea_%282%29.jpg)
 - **Visual Motif (Veo prompt)**: `long stone fortress wall with arched gates and watchtowers over a city, archery, night lights`
 
 ————————————————————————————————————————
@@ -541,7 +541,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 한국민속촌으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Korean%20Folk%20Village%2C%20Gyeonggi%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/b/b8/Farmer_dance.jpg)
 - **Visual Motif (Veo prompt)**: `recreated folk village of hanok and thatch houses, clay jars, traditional performers, ox cart`
 
 ————————————————————————————————————————
@@ -558,7 +558,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 인천 차이나타운으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Incheon%20Chinatown%2C%20Incheon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Chinatown%2C_incheon_20230430_002.jpg/960px-Chinatown%2C_incheon_20230430_002.jpg)
 - **Visual Motif (Veo prompt)**: `red-and-gold Chinatown gate and street, lanterns, jjajangmyeon, nearby pastel fairy-tale walls`
 
 ————————————————————————————————————————
@@ -575,7 +575,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 가로수길로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Garosu-gil%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Garosu-gil_at_night.jpg/960px-Garosu-gil_at_night.jpg)
 - **Visual Motif (Veo prompt)**: `tree-lined street with ginkgo trees, stylish boutiques and cafes, yellow autumn leaves`
 
 ————————————————————————————————————————
@@ -592,7 +592,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 익선동으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Ikseon-dong%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://www.jeju.go.kr/jeju/cultural/heritage/natural.htm)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/c/c5/Seongsan_Ilchulbong_Jeju.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/View_of_Ikseon-dong_from_National_Tax_Service_Jongno_District_Office.jpg/960px-View_of_Ikseon-dong_from_National_Tax_Service_Jongno_District_Office.jpg)
 - **Visual Motif (Veo prompt)**: `very narrow hanok alley with cozy cafe entrances, hanging plants, warm lanterns, tiled roofs`
 
 ————————————————————————————————————————
@@ -609,7 +609,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 롯데월드로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Lotte%20World%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Lotte_World_day_view_2.jpg/960px-Lotte_World_day_view_2.jpg)
 - **Visual Motif (Veo prompt)**: `fairy-tale theme park castle, roller coaster, hot-air-balloon ride, colorful parade`
 
 ————————————————————————————————————————
@@ -626,7 +626,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 우도로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Udo%20Island%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Udo_%28satellite_image%29_%28cropped%29.jpg/960px-Udo_%28satellite_image%29_%28cropped%29.jpg)
 - **Visual Motif (Veo prompt)**: `small green island coastline, rental scooters, lighthouse, white-and-emerald beach, stone walls`
 
 ————————————————————————————————————————
@@ -643,7 +643,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 섭지코지로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Seopjikoji%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/8/83/Tadao_Ando_2004_%284x5_cropped%29.jpg)
 - **Visual Motif (Veo prompt)**: `grassy coastal cape, yellow canola flowers, white lighthouse, sea cliffs, Seongsan in distance`
 
 ————————————————————————————————————————
@@ -660,7 +660,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 여수 밤바다로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yeosu%20Night%20Sea%2C%20Jeolla%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Dolsan_Bridge1.JPG/960px-Dolsan_Bridge1.JPG)
 - **Visual Motif (Veo prompt)**: `harbor at night, lit bridge over dark water, waterfront cafes and lights reflected, boats`
 
 ————————————————————————————————————————
@@ -677,7 +677,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 대중교통을 이용해 방문할 경우, 내남사거리, 천마총후문, 또는 황남시장 버스 정류장에서 하차하면 도보로 1~4분 내에 입구에 닿을 수 있습니다 [11]. 차량을 이용하는 경우 대릉원 정문 앞 공영주차장을 편리하게 이용할 수 있으며, 주차 요금은 소형차 기준 2시간 이내 2,000원(2시간 초과 시 1시간마다 1,000원 추가)이고 경차 및 장애인 차량은 50% 할인 혜택을 받을 수 있습니다 [11, 14].
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Daereungwon%20Tombs%2C%20Gyeongju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Gyeongju_-_King_Tomb_Park_-_panoramio.jpg/960px-Gyeongju_-_King_Tomb_Park_-_panoramio.jpg)
 - **Visual Motif (Veo prompt)**: `rows of large grassy royal tomb mounds, walking path, a single tree, soft morning light`
 
 ————————————————————————————————————————
@@ -694,7 +694,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 황리단길로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hwangnidan-gil%2C%20Gyeongju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Hwangnidan-gil_02.jpg/960px-Hwangnidan-gil_02.jpg)
 - **Visual Motif (Veo prompt)**: `low hanok cafe street near grassy tomb mounds, hanbok renters, dessert cafes, lanterns`
 
 ————————————————————————————————————————
@@ -711,7 +711,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 안동하회마을로 가는 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Andong%20Hahoe%20Village%2C%20Andong%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Hahoe_Folk_Village_02.jpg/960px-Hahoe_Folk_Village_02.jpg)
 - **Visual Motif (Veo prompt)**: `river-bend traditional village of thatched and tiled houses, mask dancers, old pine, river`
 
 ————————————————————————————————————————
@@ -745,7 +745,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 연남동으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yeonnam-dong%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/ee/%EC%97%B0%EB%82%A8%EC%98%A5%ED%83%91%EC%97%90%EC%84%9C_%EB%B3%B4%EC%9D%B4%EB%8A%94_%EC%A0%84%EB%A7%9D_1.jpg)
 - **Visual Motif (Veo prompt)**: `leafy neighborhood of brunch cafes, outdoor tables, plants, low brick houses, sunny`
 
 ————————————————————————————————————————
@@ -762,7 +762,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 통영 케이블카로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Tongyeong%20Cable%20Car%2C%20Gyeongnam%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Korea-Tongyeong-Collage-01.jpg/960px-Korea-Tongyeong-Collage-01.jpg)
 - **Visual Motif (Veo prompt)**: `cable car rising to a peak overlooking a sea scattered with many small green islands`
 
 ————————————————————————————————————————
@@ -779,7 +779,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 담양 죽녹원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Juknokwon%20Bamboo%20Forest%2C%20Jeolla%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Korea-Damyang-Hanok_in_the_Bamboo_Forest-01.jpg/960px-Korea-Damyang-Hanok_in_the_Bamboo_Forest-01.jpg)
 - **Visual Motif (Veo prompt)**: `tall dense green bamboo forest, sunlit path, wooden walkway, soft green shade, lantern`
 
 ————————————————————————————————————————
@@ -796,7 +796,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 보성 녹차밭으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Boseong%20Green%20Tea%20Fields%2C%20Jeolla%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Korea-Boseong-Green.tea-02.jpg/960px-Korea-Boseong-Green.tea-02.jpg)
 - **Visual Motif (Veo prompt)**: `steep hillside of curved green tea-plant terraces, tall cedar trees lining a path, misty green`
 
 ————————————————————————————————————————
@@ -813,7 +813,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 통도사로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Tongdosa%20Temple%2C%20Gyeongnam%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Korea-Tongdosa-01.jpg/960px-Korea-Tongdosa-01.jpg)
 - **Visual Motif (Veo prompt)**: `grand sprawling temple complex among pines, pink plum blossoms, stone bridge, lanterns, hall`
 
 ————————————————————————————————————————
@@ -830,7 +830,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 반포한강공원으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Banpo%20Rainbow%20Fountain%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2011%EB%85%84_11%EC%9B%94_%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EB%AA%85%EC%86%8C_%28Seoul_best_attractions%29_%EB%8B%AC%EB%B9%9B%EB%AC%B4%EC%A7%80%EA%B0%9C%EB%B6%84%EC%88%981.jpg/960px-2011%EB%85%84_11%EC%9B%94_%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EB%AA%85%EC%86%8C_%28Seoul_best_attractions%29_%EB%8B%AC%EB%B9%9B%EB%AC%B4%EC%A7%80%EA%B0%9C%EB%B6%84%EC%88%981.jpg)
 - **Visual Motif (Veo prompt)**: `long bridge with arcs of rainbow-colored water fountains spraying into a river at dusk`
 
 ————————————————————————————————————————
@@ -847,7 +847,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 여의도한강공원으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yeouido%20Hangang%20Park%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Yeouido2025.jpg/960px-Yeouido2025.jpg)
 - **Visual Motif (Veo prompt)**: `riverside park lined with cherry-blossom trees, picnic crowds, city towers, soft pink petals`
 
 ————————————————————————————————————————
@@ -864,7 +864,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 뚝섬한강공원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Ttukseom%20Hangang%20Park%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Hangang_Park_Overview_201604.jpg/960px-Hangang_Park_Overview_201604.jpg)
 - **Visual Motif (Veo prompt)**: `river park with windsurfers and small boats, bike path, green lawn, picnic tents`
 
 ————————————————————————————————————————
@@ -881,7 +881,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 망원한강공원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Mangwon%20Hangang%20Park%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Hangang_Park_Overview_201604.jpg/960px-Hangang_Park_Overview_201604.jpg)
 - **Visual Motif (Veo prompt)**: `grassy riverbank with picnic mats, a steaming ramen cup, friends sitting, bridge in distance`
 
 ————————————————————————————————————————
@@ -898,7 +898,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 올림픽공원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Olympic%20Park%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/960px-Flag_of_South_Korea.svg.png)
 - **Visual Motif (Veo prompt)**: `huge green rolling lawn with a single iconic tree on a hill, blue sky, wildflowers`
 
 ————————————————————————————————————————
@@ -915,7 +915,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 서울숲으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Seoul%20Forest%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/f/f5/SeoulForest.jpg)
 - **Visual Motif (Veo prompt)**: `leafy urban forest park, deer in a glade, wooden path, picnic families, tall trees`
 
 ————————————————————————————————————————
@@ -932,7 +932,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 남산골한옥마을로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Namsangol%20Hanok%20Village%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/b/b8/Korea-Seoul-Namsangol-01.jpg)
 - **Visual Motif (Veo prompt)**: `cluster of hanok houses around a pond and garden, pavilion, traditional games, autumn trees`
 
 ————————————————————————————————————————
@@ -949,7 +949,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 북한산으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Bukhansan%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Bukhansan_%28%EB%B6%81%ED%95%9C%EC%82%B0%29.jpg/960px-Bukhansan_%28%EB%B6%81%ED%95%9C%EC%82%B0%29.jpg)
 - **Visual Motif (Veo prompt)**: `rugged granite peaks above a green forest, hikers on a ridge, city skyline far below`
 
 ————————————————————————————————————————
@@ -966,7 +966,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 낙산공원 성곽길로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Naksan%20Park%20City%20Wall%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/%ED%95%9C%EC%96%91%EB%8F%84%EC%84%B1%EB%82%99%EC%82%B0%EA%B5%AC%EA%B0%84.jpg/960px-%ED%95%9C%EC%96%91%EB%8F%84%EC%84%B1%EB%82%99%EC%82%B0%EA%B5%AC%EA%B0%84.jpg)
 - **Visual Motif (Veo prompt)**: `old stone fortress wall along a hill, lamp-lit path, city lights below, evening sky`
 
 ————————————————————————————————————————
@@ -983,7 +983,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 경의선숲길로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gyeongui%20Line%20Forest%20Park%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Gyeonguiseon_Forest_Trail_Park_and_Ttaeng-ttaeng_Street_in_Seoul_%28near_Hongdae%2C_1%29.jpg/960px-Gyeonguiseon_Forest_Trail_Park_and_Ttaeng-ttaeng_Street_in_Seoul_%28near_Hongdae%2C_1%29.jpg)
 - **Visual Motif (Veo prompt)**: `long narrow green park on a former rail line, benches, cafes alongside, trees, couples walking`
 
 ————————————————————————————————————————
@@ -1000,7 +1000,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 코엑스 별마당도서관으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Starfield%20Library%20COEX%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/%EB%B3%84%EB%A7%88%EB%8B%B9.jpg/960px-%EB%B3%84%EB%A7%88%EB%8B%B9.jpg)
 - **Visual Motif (Veo prompt)**: `huge two-story open library hall with towering bookshelves, soft lighting, people reading`
 
 ————————————————————————————————————————
@@ -1017,7 +1017,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 삼청동으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Samcheong-dong%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Seoul-Samcheong.dong-01.jpg/960px-Seoul-Samcheong.dong-01.jpg)
 - **Visual Motif (Veo prompt)**: `calm uphill alley beside palace walls, small galleries, cozy cafes, stone wall, trees`
 
 ————————————————————————————————————————
@@ -1034,7 +1034,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 대학로로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Daehangno%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Seoul_daehangno.JPG/960px-Seoul_daehangno.JPG)
 - **Visual Motif (Veo prompt)**: `street of small theaters with show posters, marquee lights, young crowd, plaza`
 
 ————————————————————————————————————————
@@ -1051,7 +1051,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 노량진수산시장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Noryangjin%20Fish%20Market%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Korea-Seoul-Noryangjin_Fish_Market-03.jpg/960px-Korea-Seoul-Noryangjin_Fish_Market-03.jpg)
 - **Visual Motif (Veo prompt)**: `huge indoor fish market, tanks of live seafood, ice stalls, vendors, bright lights`
 
 ————————————————————————————————————————
@@ -1068,7 +1068,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 통인시장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Tongin%20Market%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/4/40/Tongin_Market_2018-06-17-18-28-59.jpg)
 - **Visual Motif (Veo prompt)**: `cozy covered market alley, side-dish stalls, a lunchbox tray, brass coins, friendly vendors`
 
 ————————————————————————————————————————
@@ -1085,7 +1085,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 한남동으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hannam-dong%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Hannamdong-yongsangu.png/960px-Hannamdong-yongsangu.png)
 - **Visual Motif (Veo prompt)**: `stylish hillside street, minimalist boutiques and gallery, clean facades, design cafe`
 
 ————————————————————————————————————————
@@ -1102,7 +1102,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 석촌호수로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Seokchon%20Lake%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Lotte_World_day_view_10.jpg/960px-Lotte_World_day_view_10.jpg)
 - **Visual Motif (Veo prompt)**: `round city lake ringed with cherry blossoms, tower reflection, walking path, pink petals`
 
 ————————————————————————————————————————
@@ -1119,7 +1119,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 임진각 DMZ로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Imjingak%20DMZ%2C%20Gyeonggi%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Imjingak_001.jpg/960px-Imjingak_001.jpg)
 - **Visual Motif (Veo prompt)**: `peace park near the border, ribbons on a fence, old steam train, observation deck, wind pinwheels`
 
 ————————————————————————————————————————
@@ -1136,7 +1136,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 지하철 2호선, 4호선, 5호선 동대문역사문화공원역 2번 및 3번 출구로 나오면 노란 천막들이 바로 시작되며, DDP 뒤편 통로를 따라 길게 이어집니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Dongdaemun%20Night%20Market%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Korea-Seoul-Dongdaemun_Market-01.jpg/960px-Korea-Seoul-Dongdaemun_Market-01.jpg)
 - **Visual Motif (Veo prompt)**: `bright night market, fashion stalls, food carts, busy late crowd, neon, paper cups of food`
 
 ————————————————————————————————————————
@@ -1153,7 +1153,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 태종대로 가는 대중교통 및 주행 경로는 소스에 나와 있지 않지만, 공원 내부에 들어서면 어른 왕복 4,000원의 다누비 열차 탑승장을 이용하여 관람을 시작할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Taejongdae%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Korea-Busan-Taejongdae-03.jpg/960px-Korea-Busan-Taejongdae-03.jpg)
 - **Visual Motif (Veo prompt)**: `steep sea cliffs, white lighthouse, pine trees, blue ocean, a small train, viewpoint`
 
 ————————————————————————————————————————
@@ -1187,7 +1187,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 흰여울문화마을로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Huinnyeoul%20Culture%20Village%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Huinnyeoul_information_bureau.jpg/960px-Huinnyeoul_information_bureau.jpg)
 - **Visual Motif (Veo prompt)**: `white houses on a cliff edge above the sea, narrow path, blue water, boats, laundry lines`
 
 ————————————————————————————————————————
@@ -1221,7 +1221,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 다대포해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Dadaepo%20Beach%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Dadaepo_beach_station_sign_20180420_191939.jpg/960px-Dadaepo_beach_station_sign_20180420_191939.jpg)
 - **Visual Motif (Veo prompt)**: `wide flat beach at sunset, shallow tide pools reflecting orange sky, fountain jets, silhouettes`
 
 ————————————————————————————————————————
@@ -1238,7 +1238,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 송정해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Songjeong%20Beach%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Busan_City_Haeundae_District_%2801%29.jpg/960px-Busan_City_Haeundae_District_%2801%29.jpg)
 - **Visual Motif (Veo prompt)**: `mellow beach with surfers and longboards, surf shops, gentle waves, palm-lined road`
 
 ————————————————————————————————————————
@@ -1255,7 +1255,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 부산타워 및 용두산공원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Busan%20Tower%20Yongdusan%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Busan_Tower_and_Yongdusan_Park_20200522_003.jpg/960px-Busan_Tower_and_Yongdusan_Park_20200522_003.jpg)
 - **Visual Motif (Veo prompt)**: `park on a hill with a tall tower, pigeons, old downtown and harbor view, pine trees`
 
 ————————————————————————————————————————
@@ -1272,7 +1272,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 오륙도 스카이워크로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Oryukdo%20Skywalk%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Oryukdo_in_2018.jpg/960px-Oryukdo_in_2018.jpg)
 - **Visual Motif (Veo prompt)**: `U-shaped glass skywalk off a cliff, blue sea below, rocky islets on the horizon`
 
 ————————————————————————————————————————
@@ -1289,7 +1289,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 블루라인파크 해변열차로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Blueline%20Park%20Beach%20Train%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/16/Deaths_of_law_enforcement_officers_in_Canada_by_cause.png)
 - **Visual Motif (Veo prompt)**: `colorful sky-capsule pods and a small train on a coastal rail beside turquoise sea, cafes`
 
 ————————————————————————————————————————
@@ -1306,7 +1306,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 개인 차량이나 택시를 이용할 경우 제주국제공항에서 동쪽으로 약 40분 정도 주행하면 도착할 수 있습니다. 대중교통으로 가려면 제주시외버스터미널에서 출발하는 810번 버스를 타면 만장굴 입구 정류장까지 편리하게 한 번에 이동하실 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Manjanggul%20Cave%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Manjanggul_lava_column%2C_largest_in_the_world.jpg/960px-Manjanggul_lava_column%2C_largest_in_the_world.jpg)
 - **Visual Motif (Veo prompt)**: `dark basalt lava tube cave, lit walkway, towering lava column, dripping rock textures`
 
 ————————————————————————————————————————
@@ -1323,7 +1323,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 천지연폭포로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Cheonjiyeon%20Falls%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Korea-Jeju-Cheonjiyeon_Waterfall-01.jpg/960px-Korea-Jeju-Cheonjiyeon_Waterfall-01.jpg)
 - **Visual Motif (Veo prompt)**: `wide waterfall into a green pool, lush subtropical plants, wooden viewing deck, mist`
 
 ————————————————————————————————————————
@@ -1340,7 +1340,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 주상절리대로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Jusangjeolli%20Cliffs%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Daepo_Jusangjeolli_Cliff_01.jpg/960px-Daepo_Jusangjeolli_Cliff_01.jpg)
 - **Visual Motif (Veo prompt)**: `dark hexagonal basalt columns by the sea, white waves crashing, viewpoint railing, blue water`
 
 ————————————————————————————————————————
@@ -1357,7 +1357,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 애월 카페거리로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Aewol%20Cafe%20Street%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/G-Dragon_in_October_2025.jpg/960px-G-Dragon_in_October_2025.jpg)
 - **Visual Motif (Veo prompt)**: `seaside cafes with big windows and terraces facing turquoise sea, palms, parked scooters`
 
 ————————————————————————————————————————
@@ -1391,7 +1391,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 비자림으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Bijarim%20Forest%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Gotjawal_Forest.jpg/960px-Gotjawal_Forest.jpg)
 - **Visual Motif (Veo prompt)**: `dense ancient forest, red volcanic-soil path, mossy thick trees, dappled green light`
 
 ————————————————————————————————————————
@@ -1408,7 +1408,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 새별오름으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Saebyeol%20Oreum%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/%EC%83%88%EB%B3%84%EC%98%A4%EB%A6%84.jpg/960px-%EC%83%88%EB%B3%84%EC%98%A4%EB%A6%84.jpg)
 - **Visual Motif (Veo prompt)**: `smooth grassy volcanic cone covered in silver pampas grass, sunset sky, trail to top`
 
 ————————————————————————————————————————
@@ -1425,7 +1425,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 함덕해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hamdeok%20Beach%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Hamdeok_Beach_May_2026_04.jpg/960px-Hamdeok_Beach_May_2026_04.jpg)
 - **Visual Motif (Veo prompt)**: `shallow emerald beach beside a small green hill, white sand, palm cafes, paddleboards`
 
 ————————————————————————————————————————
@@ -1442,7 +1442,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 석굴암으로 가는 구체적인 대중교통이나 주행 경로는 소스에 상세히 나와 있지 않으나, 신분증을 소지한 경주시민의 경우 인근 석굴암 주차장을 무료로 이용할 수 있는 혜택이 주어집니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Seokguram%20Grotto%2C%20Gyeongju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Front_view_of_Seokguram_from_front_chamber.jpg/960px-Front_view_of_Seokguram_from_front_chamber.jpg)
 - **Visual Motif (Veo prompt)**: `domed stone grotto with a serene seated Buddha statue, soft light, mountain morning, pines`
 
 ————————————————————————————————————————
@@ -1476,7 +1476,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 부석사로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Buseoksa%20Temple%2C%20Gyeongbuk%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/%EB%B6%80%EC%84%9D%EC%82%AC_%EB%AC%B4%EB%9F%89%EC%88%98%EC%A0%84.jpg/960px-%EB%B6%80%EC%84%9D%EC%82%AC_%EB%AC%B4%EB%9F%89%EC%88%98%EC%A0%84.jpg)
 - **Visual Motif (Veo prompt)**: `old mountainside temple, wooden hall, rows of ridgelines fading into sunset haze, stone steps`
 
 ————————————————————————————————————————
@@ -1493,7 +1493,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 양동마을로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yangdong%20Village%2C%20Gyeongju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Yangdong_Village_02.jpg/960px-Yangdong_Village_02.jpg)
 - **Visual Motif (Veo prompt)**: `hillside traditional village, tiled and straw-roof houses among fields, stone walls, trees`
 
 ————————————————————————————————————————
@@ -1510,7 +1510,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 문경새재로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Mungyeong%20Saejae%2C%20Gyeongbuk%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Saejae_third_gate_backside.jpg/960px-Saejae_third_gate_backside.jpg)
 - **Visual Motif (Veo prompt)**: `old stone-and-wood fortress gate on a mountain trail, autumn foliage, dirt path, stream`
 
 ————————————————————————————————————————
@@ -1544,7 +1544,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: KTX 전주역에서 출발할 경우, 역사 앞 정류장에서 119번 또는 535번 버스를 타고 기린대로 병무청 정류장에서 하차하십시오. 정류장에서 한옥마을 방면 육교를 건넌 뒤 가파른 언덕길 안내판을 따라 도보로 약 5분 정도 올라가면 벽화마을 입구에 도달할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Jaman%20Mural%20Village%2C%20Jeonju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Naina_Devi%2C_Himachal_Pardesh_%2817%29.jpg/960px-Naina_Devi%2C_Himachal_Pardesh_%2817%29.jpg)
 - **Visual Motif (Veo prompt)**: `steep alley with cheerful wall murals, small steps, cafes, potted flowers, hanok rooftops below`
 
 ————————————————————————————————————————
@@ -1561,7 +1561,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 서울 센트럴시티 터미널에서 공주종합버스터미널행 고속버스를 이용하십시오. 터미널 하차 후 101번, 108번 또는 125번 시내버스를 타고 금강철교를 건너 공산성 정류장에서 내리면 성벽 매표소 입구에 바로 도달할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gongsanseong%20Fortress%2C%20Chungcheong%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/%EA%B3%B5%EC%82%B0%EC%84%B1%EC%9D%98_%EA%B0%80%EC%9D%84_%ED%95%98%EB%8A%98.jpg/960px-%EA%B3%B5%EC%82%B0%EC%84%B1%EC%9D%98_%EA%B0%80%EC%9D%84_%ED%95%98%EB%8A%98.jpg)
 - **Visual Motif (Veo prompt)**: `earthen-and-stone fortress wall along a green hill, river bend below, pavilion, flags, pines`
 
 ————————————————————————————————————————
@@ -1578,7 +1578,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 부여시외버스터미널에서 하차한 후, 남쪽 방향의 서동공원(궁남지) 이정표를 따라 도보로 약 15분 정도 걸어가거나, 시내 택시를 이용하면 기본요금으로 약 5분 안에 편안하게 도착할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gungnamji%20Pond%2C%20Chungcheong%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/%EA%B0%80%EC%9D%84%EC%98%B7%EC%9D%84_%EC%9E%85%EC%9D%80_%ED%96%A5%EC%9B%90%EC%A0%95.jpg/960px-%EA%B0%80%EC%9D%84%EC%98%B7%EC%9D%84_%EC%9E%85%EC%9D%80_%ED%96%A5%EC%9B%90%EC%A0%95.jpg)
 - **Visual Motif (Veo prompt)**: `large lotus-filled pond with a wooden pavilion on an island, arched bridge, pink lotus, dusk`
 
 ————————————————————————————————————————
@@ -1595,7 +1595,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: KTX 대전역에서 하차하여 1번 출구로 나온 뒤 은행동 으능정이 문화의 거리 방향으로 도보로 약 10~15분 정도 걷거나, 대전 도시철도 1호선으로 환승하여 중앙로역 2번 출구로 나와 도보로 약 100미터 이동하면 쉽게 만날 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Daejeon%20Sungsimdang%2C%20Chungcheong%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sungsimdang_2019.jpg/960px-Sungsimdang_2019.jpg)
 - **Visual Motif (Veo prompt)**: `warm bustling bakery, trays of golden pastries, long happy queue, bread baskets, cozy lights`
 
 ————————————————————————————————————————
@@ -1612,7 +1612,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: KTX 단양역에서 하차한 후 역 앞 버스 정류장에서 401번, 402번 또는 403번 시내버스를 탑승하십시오. 약 15~20분 정도 이동하여 도담삼봉 주차장 정류장에서 하차하면 바로 명소에 도착할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Dodamsambong%2C%20Chungcheong%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/%EA%B0%80%EC%9D%84%EC%98%B7%EC%9D%84_%EC%9E%85%EC%9D%80_%ED%96%A5%EC%9B%90%EC%A0%95.jpg/960px-%EA%B0%80%EC%9D%84%EC%98%B7%EC%9D%84_%EC%9E%85%EC%9D%80_%ED%96%A5%EC%9B%90%EC%A0%95.jpg)
 - **Visual Motif (Veo prompt)**: `three pointed rock peaks in a wide river, small pavilion on the central peak, mountains, boat`
 
 ————————————————————————————————————————
@@ -1646,7 +1646,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: KTX 강릉역에서 하차한 후 역 광장 앞 정류장에서 202번 시내버스를 탑승하십시오. 약 20분간 이동하여 경포대 정류장 또는 경포해변 종점 정류장에서 하차하면 탁 트인 호수와 넓은 해변에 바로 도착할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gyeongpodae%20%26%20Gyeongpo%20Beach%2C%20Gangwon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Gyeongpo_Lake_20220502_001.jpg/960px-Gyeongpo_Lake_20220502_001.jpg)
 - **Visual Motif (Veo prompt)**: `long sandy east-sea beach beside a calm lagoon, pine forest, pavilion, sunrise over water`
 
 ————————————————————————————————————————
@@ -1663,7 +1663,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: KTX 강릉역 버스 정류장에서 302-1번, 223번 또는 503번 시내버스를 탑승하십시오. 약 25분 정도 이동하여 안목해변 종점 정류장에서 하차하면, 내리자마자 백사장과 길게 이어진 카페거리를 마주할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Anmok%20Coffee%20Street%2C%20Gangwon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Jumunjin_Lighthouse_20220501_026.jpg/960px-Jumunjin_Lighthouse_20220501_026.jpg)
 - **Visual Motif (Veo prompt)**: `row of cafes facing the sea, big windows, coffee cups, beach and breakwater, gulls`
 
 ————————————————————————————————————————
@@ -1731,7 +1731,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 서울역에서 KTX를 타고 진부역에서 하차하십시오. 진부역 앞 버스 정류장에서 오대산(월정사) 방면으로 운행하는 34번 또는 34-1번 시내버스를 탑승하여 월정사 정류장에서 내리면 전나무숲길 입구에 바로 도착할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Woljeongsa%20Fir%20Forest%2C%20Gangwon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/c/c5/%EC%9B%94%EC%A0%95%EC%82%AC1.jpg)
 - **Visual Motif (Veo prompt)**: `tall straight fir-tree forest path, soft earth trail, temple gate, mist, green light`
 
 ————————————————————————————————————————
@@ -1765,7 +1765,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: ITX-청춘 열차나 경춘선 전철을 탑승하여 춘천역에서 하차하십시오. 1번 출구로 나와 도보로 약 10~15분 정도 직진하거나 택시로 5분 정도 이동하면 입구에 황금 닭 동상이 세워져 있는 춘천 명동 닭갈비골목 초입에 쉽게 도착할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Chuncheon%20Dakgalbi%20Alley%2C%20Gangwon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chuncheon-01.jpg/960px-Chuncheon-01.jpg)
 - **Visual Motif (Veo prompt)**: `sizzling chicken-galbi griddle alley, cabbage and rice cake, steam, lake and bridge nearby`
 
 ————————————————————————————————————————
@@ -1782,7 +1782,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 서울고속버스터미널 또는 동서울터미널에서 양양시외종합터미널행 우등버스를 탑승하십시오. 터미널 하차 후 하조대 방면 12번 시내버스를 타거나, 택시로 약 10분 정도 이동하여 하조대 해변 옆에 위치한 서피비치 입구에서 내리면 됩니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yangyang%20Surfyy%20Beach%2C%20Gangwon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Naksan_Temple.jpg/960px-Naksan_Temple.jpg)
 - **Visual Motif (Veo prompt)**: `wide surf beach with surfboards, beach bar with parasols and bean bags, sunset, surfers`
 
 ————————————————————————————————————————
@@ -1816,7 +1816,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: KTX 여수엑스포역에서 하차하여 역 앞 정류장에서 2번, 111번 또는 999번 시내버스를 탑승하십시오. 약 10~15분 정도 이동하여 돌산대교(돌산공원) 정류장에서 하차한 뒤 언덕 위 돌산공원 주차장에 위치한 케이블카 탑승장 방향으로 도보로 걸어 올라가면 됩니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yeosu%20Cable%20Car%2C%20Jeolla%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yeosu_Maritime_Cable_Car_View.jpg/960px-Yeosu_Maritime_Cable_Car_View.jpg)
 - **Visual Motif (Veo prompt)**: `cable car with clear-floor cabins over a blue strait between two hills, harbor and bridge below`
 
 ————————————————————————————————————————
@@ -1833,7 +1833,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: KTX 순천역에서 하차하여 역 광장 앞 버스 정류장에서 66번 시내버스를 이용하십시오. 약 20~25분 정도 이동하면 순천만습지(구 순천만자연생태공원) 전용 주차장 종점에 직통으로 편리하게 도착할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Suncheonman%20Wetland%2C%20Jeolla%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/View_of_Suncheon.jpg/960px-View_of_Suncheon.jpg)
 - **Visual Motif (Veo prompt)**: `endless golden reed wetland with an S-shaped water channel, sunset, boardwalk, flying cranes`
 
 ————————————————————————————————————————
@@ -1850,7 +1850,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 광주종합버스터미널(유스퀘어)에서 담양행 311번 또는 311-1번 시내버스를 이용하십시오. 약 40분 정도 탑승한 후 담양 메타세쿼이아길 정류장에서 하차하면, 아름다운 가로수길 매표소 입구에 바로 도달할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Metasequoia%20Road%2C%20Jeolla%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Korea-Damyang-Hanok_in_the_Bamboo_Forest-01.jpg/960px-Korea-Damyang-Hanok_in_the_Bamboo_Forest-01.jpg)
 - **Visual Motif (Veo prompt)**: `long straight road lined with tall symmetrical metasequoia trees, cyclists, autumn russet`
 
 ————————————————————————————————————————
@@ -1935,7 +1935,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 광주 양림동으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gwangju%20Yangnim-dong%2C%20Gwangju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/4/4d/Zheng_L%C3%BCcheng.png)
 - **Visual Motif (Veo prompt)**: `quiet old-modern neighborhood, brick missionary houses, mural alleys, cafes, big trees`
 
 ————————————————————————————————————————
@@ -1952,7 +1952,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 월미도로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Wolmido%2C%20Incheon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Walmido_promenade.jpg/960px-Walmido_promenade.jpg)
 - **Visual Motif (Veo prompt)**: `seaside boardwalk with amusement rides, a spinning disco ride, grilled-clam stalls, ferry, gulls`
 
 ————————————————————————————————————————
@@ -1969,7 +1969,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 송도 센트럴파크로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Songdo%20Central%20Park%2C%20Incheon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/South_Korea%2C_Incheon%2C_Songdo%2C_the_Sharp_Central_Park_Towers.jpg/960px-South_Korea%2C_Incheon%2C_Songdo%2C_the_Sharp_Central_Park_Towers.jpg)
 - **Visual Motif (Veo prompt)**: `modern park with a seawater canal, water taxi, sleek glass towers around, lawns, kayaks`
 
 ————————————————————————————————————————
@@ -1986,7 +1986,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 강화도 전등사로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Ganghwa%20Jeondeungsa%2C%20Incheon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ganghwado_Jeondeungsa_Temple_20200718_039.jpg/960px-Ganghwado_Jeondeungsa_Temple_20200718_039.jpg)
 - **Visual Motif (Veo prompt)**: `old wooden temple within forested hills, fortress wall, dolmen stone, lotus lanterns`
 
 ————————————————————————————————————————
@@ -2003,7 +2003,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 헤이리예술마을로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Heyri%20Art%20Village%2C%20Gyeonggi%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Art-Service_Studio%2C_Heyri.jpg/960px-Art-Service_Studio%2C_Heyri.jpg)
 - **Visual Motif (Veo prompt)**: `village of artistic modern buildings, sculpture gardens, design cafes, galleries, trees`
 
 ————————————————————————————————————————
@@ -2020,7 +2020,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 쁘띠프랑스로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Petite%20France%2C%20Gyeonggi%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Petite_France_Gapyeong_2016-11-15_19_27_58_30883764212.jpg/960px-Petite_France_Gapyeong_2016-11-15_19_27_58_30883764212.jpg)
 - **Visual Motif (Veo prompt)**: `cluster of colorful European-style houses on a hill, Little Prince statue, lake view, flowers`
 
 ————————————————————————————————————————
@@ -2037,7 +2037,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 아침고요수목원으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Garden%20of%20Morning%20Calm%2C%20Gyeonggi%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Lake_in_the_Garden_of_Morning_Calm.jpg/960px-Lake_in_the_Garden_of_Morning_Calm.jpg)
 - **Visual Motif (Veo prompt)**: `landscaped flower gardens on hills, winding paths, in winter draped with colorful fairy lights`
 
 ————————————————————————————————————————
@@ -2054,7 +2054,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 허브아일랜드로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Herb%20Island%2C%20Gyeonggi%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Flag_of_North_Korea_%2820-33%29.svg/960px-Flag_of_North_Korea_%2820-33%29.svg.png)
 - **Visual Motif (Veo prompt)**: `herb-garden village with greenhouses, lavender, evening lantern lights, fountains, photo arches`
 
 ————————————————————————————————————————
@@ -2071,7 +2071,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 양평 두물머리로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yangpyeong%20Dumulmeori%2C%20Gyeonggi%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Namhan_River_03.jpg/960px-Namhan_River_03.jpg)
 - **Visual Motif (Veo prompt)**: `calm wide river confluence at dawn, morning mist, a huge old zelkova tree, small wooden boat`
 
 ————————————————————————————————————————
@@ -2088,7 +2088,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 찜질방으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Jjimjilbang%2C%20Nationwide%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/1f/Jjimjilbang.JPG)
 - **Visual Motif (Veo prompt)**: `warm spa lounge, people in matching pajamas with towel 'sheep' hats, heated floor, sikhye drink`
 
 ————————————————————————————————————————
@@ -2122,7 +2122,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 일반 노래방으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Noraebang%2C%20Nationwide%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/a/a0/%E5%8D%A1%E6%8B%89OK.jpg)
 - **Visual Motif (Veo prompt)**: `small song room glowing with neon and a disco ball, big screen lyrics, microphones, tambourine`
 
 ————————————————————————————————————————
@@ -2139,7 +2139,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 PC방으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=PC%20Bang%2C%20Nationwide%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/70/Korean.culture-PC.bang-01.jpg)
 - **Visual Motif (Veo prompt)**: `rows of gaming PCs with glowing keyboards, gamers in chairs, a bowl of ramen, dim neon lighting`
 
 ————————————————————————————————————————
@@ -2156,7 +2156,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 치맥 명소로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Chimaek%20%28Chicken%20%26%20Beer%29%2C%20Nationwide%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Iksan_City_48_Korean_Style_Fried_chicken.jpg/960px-Iksan_City_48_Korean_Style_Fried_chicken.jpg)
 - **Visual Motif (Veo prompt)**: `table with golden fried chicken, frothy beer mugs, pickled radish, friends toasting, warm pub`
 
 ————————————————————————————————————————
@@ -2173,7 +2173,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 포장마차로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Pojangmacha%2C%20Nationwide%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/2d/Korea-Pojangmacha-01.jpg)
 - **Visual Motif (Veo prompt)**: `orange-tent street food stall at night, steaming fish cakes and tteokbokki, soju, stools, lantern`
 
 ————————————————————————————————————————
@@ -2190,7 +2190,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 전통시장으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Traditional%20Market%2C%20Nationwide%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/f/fa/WetmarketHK.jpg)
 - **Visual Motif (Veo prompt)**: `covered traditional market alley, produce and food stalls, hanging signs, busy shoppers, steam`
 
 ————————————————————————————————————————
@@ -2207,7 +2207,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 템플스테이 사찰로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Templestay%2C%20Nationwide%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/%EB%AF%B8%ED%99%A9%EC%82%AC.jpg/960px-%EB%AF%B8%ED%99%A9%EC%82%AC.jpg)
 - **Visual Motif (Veo prompt)**: `mountain temple courtyard at dawn, monk and visitors in grey robes, lotus lanterns, misty pines`
 
 ————————————————————————————————————————
@@ -2224,7 +2224,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 진해 군항제로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Jinhae%20Cherry%20Blossom%20Festival%2C%20Gyeongnam%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/2016_Jinhae_Naval_Port_Festival_040.JPG/960px-2016_Jinhae_Naval_Port_Festival_040.JPG)
 - **Visual Motif (Veo prompt)**: `tunnel of cherry-blossom trees over old train tracks, falling pink petals, crowds, stream bridge`
 
 ————————————————————————————————————————
@@ -2241,7 +2241,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 화천 산천어축제로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hwacheon%20Sancheoneo%20Ice%20Festival%2C%20Gangwon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Korea_National_Route_5_at_Hwacheon%2C_Gangwon-do_2.jpg/960px-Korea_National_Route_5_at_Hwacheon%2C_Gangwon-do_2.jpg)
 - **Visual Motif (Veo prompt)**: `frozen river dotted with ice-fishing holes, people bundled up, ice sculptures, snow, sledding`
 
 ————————————————————————————————————————
@@ -2275,7 +2275,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 카멜리아힐로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Camellia%20Hill%2C%20Jeju%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Maryang-ri_Camellia_Forest.jpg/960px-Maryang-ri_Camellia_Forest.jpg)
 - **Visual Motif (Veo prompt)**: `garden hill of blooming red camellia trees, fallen red petals on a path, ponds, pampas grass`
 
 ————————————————————————————————————————
@@ -2292,7 +2292,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 군산 근대역사거리로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gunsan%20Modern%20History%20Street%2C%20Jeolla%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/USFK_Prostitution_Warning.jpg/960px-USFK_Prostitution_Warning.jpg)
 - **Visual Motif (Veo prompt)**: `old early-1900s street, brick bank and warehouses, vintage signs, rail crossing, retro mood`
 
 ————————————————————————————————————————
@@ -2309,7 +2309,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 포항 호미곶으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Homigot%20Cape%2C%20Gyeongbuk%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Homigot_Lighthouse_from_New_Millennium_Memorial_Hall.jpg/960px-Homigot_Lighthouse_from_New_Millennium_Memorial_Hall.jpg)
 - **Visual Motif (Veo prompt)**: `rocky cape at sunrise, a large bronze hand sculpture rising from the sea, orange sky, lighthouse`
 
 ————————————————————————————————————————
@@ -2326,7 +2326,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 울산 간절곶으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Ganjeolgot%20Cape%2C%20Gyeongnam%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ganjeolgot%2C_Ulsan_on_August_16th%2C_2018.jpg/960px-Ganjeolgot%2C_Ulsan_on_August_16th%2C_2018.jpg)
 - **Visual Motif (Veo prompt)**: `grassy coastal cape with a tall white lighthouse, sunrise over the sea, mailbox sculpture, path`
 
 ————————————————————————————————————————
@@ -2343,7 +2343,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 대구 김광석거리로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Daegu%20Kim%20Kwang-seok%20Street%2C%20Gyeongbuk%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/5/59/President_Lee_Jae_Myung_20260306.jpg)
 - **Visual Motif (Veo prompt)**: `narrow alley of music-themed murals, a guitar statue, busking corner, warm string lights`
 
 ————————————————————————————————————————
@@ -2377,7 +2377,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 영월 한반도지형으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yeongwol%20Korea-Shape%20Land%2C%20Gangwon%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/a/a8/Liancourt_walleye_view.jpg)
 - **Visual Motif (Veo prompt)**: `forested river peninsula shaped like the Korea map, viewpoint deck, raft, green water, hills`
 
 ————————————————————————————————————————
@@ -2411,7 +2411,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 서울역에서 KTX를 타고 밀양역에 하차하십시오(약 2시간 15분 소요). 밀양역 광장에서 1번, 2번, 또는 6번 시내버스를 타고 영남루 정류장에서 하차하거나, 택시를 이용하면 약 10분 만에 도착할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yeongnamnu%20Pavilion%2C%20Gyeongnam%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Yeongnamru_Miryang_Gyeongsangnamdo.JPG/960px-Yeongnamru_Miryang_Gyeongsangnamdo.JPG)
 - **Visual Motif (Veo prompt)**: `elegant wooden riverside pavilion with sweeping tiled roof above a calm river, night lights, reflection`
 
 ————————————————————————————————————————
@@ -2428,7 +2428,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: KTX 밀양역이나 밀양시외버스터미널 앞 정류장에서 표충사행 시내버스(4번 노선 등)를 탑승하십시오. 약 40~50분 정도 이동하여 표충사 종점 주차장에서 하차한 뒤 사찰 방향으로 약 5분간 걸어가면 매표소에 도달할 수 있습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Pyochungsa%20Temple%20Miryang%2C%20Gyeongnam%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Miryang_from_west4.jpg/960px-Miryang_from_west4.jpg)
 - **Visual Motif (Veo prompt)**: `old temple courtyard at the foot of a mountain, red-orange autumn maples, stone pagoda, stream`
 
 ————————————————————————————————————————
@@ -2564,7 +2564,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 밀양댐으로 가는 대중교통 노선이나 자차 이용 정보가 존재하지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Miryang%20Dam%20Lake%2C%20Gyeongnam%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/d/df/Southkoreamap.png)
 - **Visual Motif (Veo prompt)**: `calm reservoir lake among green mountains, winding lakeside road, viewpoint, reflection`
 
 ————————————————————————————————————————
@@ -2581,7 +2581,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 내원사 계곡으로 이동하는 상세한 대중교통 및 자가용 경로 정보가 기록되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Naewonsa%20Valley%2C%20Gyeongnam%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Nearoidostation-jan2006.jpg/960px-Nearoidostation-jan2006.jpg)
 - **Visual Motif (Veo prompt)**: `clear rocky mountain stream with pools, red-yellow autumn trees, wooden bridge, temple gate`
 
 ————————————————————————————————————————
@@ -2598,7 +2598,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 천성산으로 가기 위한 대중교통 노선이나 차량 운행 안내가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Cheonseongsan%2C%20Gyeongnam%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Cheonsung.JPG/960px-Cheonsung.JPG)
 - **Visual Motif (Veo prompt)**: `broad mountaintop meadow of silver grass and small wetland ponds, distant ridges, blue sky`
 
 ————————————————————————————————————————
@@ -2666,7 +2666,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 황산공원으로 가는 교통수단이나 주행 안내 경로 정보가 존재하지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hwangsan%20Park%2C%20Gyeongnam%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Korea-Daejeon-Uam_Historic_Park-01.jpg/960px-Korea-Daejeon-Uam_Historic_Park-01.jpg)
 - **Visual Motif (Veo prompt)**: `vast riverside park with colorful flower fields, bike path, river and bridge, picnic lawn`
 
 ————————————————————————————————————————
@@ -2683,7 +2683,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 신불산으로 가기 위한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Sinbulsan%20Silver%20Grass%2C%20Gyeongnam%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Taehwa_River_from_Hotel_Riverside_Ulsan.jpg/960px-Taehwa_River_from_Hotel_Riverside_Ulsan.jpg)
 - **Visual Motif (Veo prompt)**: `endless golden silver-grass field on a high ridge at sunset, trail, glowing seed heads, peaks`
 
 ————————————————————————————————————————
@@ -2717,7 +2717,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 동백섬 누리마루로 가는 구체적인 대중교통 노선이나 자차 이용 정보가 기록되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Dongbaekseom%20Nurimaru%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Dongbaek_island_Busan.jpg/960px-Dongbaek_island_Busan.jpg)
 - **Visual Motif (Veo prompt)**: `wooded seaside island path with camellia trees, a domed pavilion on rocks, sea and skyline`
 
 ————————————————————————————————————————
@@ -2734,7 +2734,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 부산시민공원으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Busan%20Citizens%20Park%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Busan_Citizens_Park_%22mirror_pond%22.jpg/960px-Busan_Citizens_Park_%22mirror_pond%22.jpg)
 - **Visual Motif (Veo prompt)**: `spacious city park with green lawns, a long fountain canal, tree-lined paths, families`
 
 ————————————————————————————————————————
@@ -2785,7 +2785,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 송도해수욕장으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Songdo%20Beach%20Busan%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Busan_-_Songdo_beach.jpg/960px-Busan_-_Songdo_beach.jpg)
 - **Visual Motif (Veo prompt)**: `curved sandy bay beach, a curving over-water cloud walkway, cable car overhead, blue sea`
 
 ————————————————————————————————————————
@@ -2836,7 +2836,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 제공된 소스에는 부산 북항으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Busan%20North%20Port%2C%20Busan%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Busan-port-from-Busan-tower-2.jpg/960px-Busan-port-from-Busan-tower-2.jpg)
 - **Visual Motif (Veo prompt)**: `modern harbor waterfront at night, cruise ship, lit cranes and towers reflected on water`
 
 ————————————————————————————————————————
