@@ -8,8 +8,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 한복체험·수문장교대식
 - **Summary (EN)**: Joseon's main palace — wear hanbok, watch the royal guard ceremony.
 - **Summary (KO)**: 조선의 정궁. 한복 입고 수문장 교대식을 보는 인생샷 명소.
-- **Detailed Description (EN)**: Gyeongbokgung Palace is the primary royal palace (Beopgung) of the Joseon Dynasty, first built under King Taejo in 1395 below Bugaksan Mountain (historically Baegaksan Mountain) [1]. It is a historically significant site where King Taejo established the foundation of the Joseon Dynasty [1]. In 1995, the Japanese General-Government building was demolished to restore the palace's Heungnyemun Gate area [2].
-- **Detailed Description (KO)**: 경복궁은 1395년 태조 이성계가 백악산(지금의 북악산) 아래에 창건한 조선 왕조의 제일의 법궁입니다 [1]. 태조가 이곳에서 조선 왕조의 기틀을 마련한 역사적으로 소중한 명소입니다 [1]. 1995년에는 일제강점기에 지어진 조선총독부 청사를 철거하고 흥례문 영역을 복원하며 옛 모습을 되찾는 공사가 진행되었습니다 [2].
+- **Detailed Description (EN)**: Established in 1395 by King Taejo, the founder of the Joseon Dynasty, Gyeongbokgung Palace is the oldest and most grand of the Five Grand Palaces of Seoul. Serving as the primary legal palace (Beopgung), it was strategically built backing Bugaksan Mountain and facing south to represent the sovereign authority and cosmic harmony. Although Gyeongbokgung was completely destroyed by fire during the Japanese invasions (Imjin War) in 1592 and left in ruins for 270 years, it was monumentally rebuilt in 1867 under the leadership of Prince Regent Heungseon Daewongun to restore royal dignity. The palace suffered severe destruction again during the Japanese colonial era, when over 90% of its historic pavilions were demolished to make way for the Japanese Government-General Building. Since liberation, South Korea has undertaken a vast national restoration project—demolishing the colonial building and reconstructing Gwanghwamun Gate and its historic Woldae stone platform—to bring Gyeongbokgung back to its original splendor. Entering through Gwanghwamun, visitors are welcomed by Geunjeongjeon (the main throne hall) where royal coronations and state assemblies took place. To the west, Gyeonghoeru Pavilion stands on 48 massive stone pillars over a lotus pond, showcasing the peak of traditional banquet architecture. At the northernmost area lie the peaceful Hyangwonjeong Pavilion floating on a pond and Geoncheonggung Residence, where the first electric lights in Korea were turned on. Today, Gyeongbokgung serves as a global cultural bridge where visitors dress in elegant Hanbok, witness the Royal Guard Changing Ceremony, and travel back in time through Korean history.
+- **Detailed Description (KO)**: 경복궁은 1395년 태조 이성계와 삼봉 정도전에 의해 창건된 조선 왕조의 첫 번째이자 제일의 법궁(으뜸 궁궐)입니다. 북악산 산맥을 등지고 정남향을 바라보며 세워진 이 궁궐은 조선 왕조의 권위와 우주 질서를 상징적으로 표현하고 있습니다. 경복궁은 임진왜란(1592년) 당시 전소되어 약 270년간 폐허로 방치되었으나, 1867년 흥선대원군의 주도로 조선 왕실의 위상을 높이기 위해 웅장하게 중건되었습니다. 이후 일제강점기에 전각의 90% 이상이 철거되고 그 자리에 조선총독부 청사가 세워지는 수난을 겪었으나, 광복 이후 조선총독부 청사를 완전 철거하고 광화문과 월대를 제자리로 복원하는 대대적인 국가적 복원 사업을 통해 옛 장엄한 모습을 점차 되찾고 있습니다. 정문인 광화문을 지나면 왕의 즉위식과 조하가 열리던 정전인 근정전이 장엄한 자태를 뽐내며, 그 서쪽으로는 연못 위에 거대하게 솟아오른 48개의 돌기둥이 지탱하는 국보 경회루가 있어 외국 사신을 접대하는 연회의 정수를 보여줍니다. 궁궐의 가장 북쪽에는 아늑하게 물 위에 떠 있는 향원정과 조선 최초로 전등이 켜졌던 건청궁이 자리하여, 궁궐의 화려함 이면의 애틋하고 고즈넉한 정취를 풍깁니다. 오늘날 경복궁은 단순한 역사 유적을 넘어 전통 한복을 차려입고 왕궁 수문장 교대식을 관람하며 과거로 시간 여행을 떠나는 글로벌 문화 소통의 허브로 자리매김하고 있습니다.
 - **How to Get There (EN)**: Specific transit or driving directions to Gyeongbokgung Palace are not provided in your sources.
 - **How to Get There (KO)**: 경복궁으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gyeongbokgung%20Palace%2C%20Seoul%2C%20South%20Korea)
@@ -25,8 +25,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 피크닉·치맥·자전거·불꽃·유람선
 - **Summary (EN)**: Seoul's river — picnic mats, fried chicken & beer, biking, instant ramen, fireworks.
 - **Summary (KO)**: 서울을 가로지르는 강. 돗자리 깔고 치맥, 자전거, 라면, 불꽃축제로 유명.
-- **Detailed Description (EN)**: The Han River is a prominent natural and cultural feature of Seoul, known for hosting the vibrant 'Hangang Moonlight Market' (formerly the DDP Bamdokkaebi Night Market) since its relocation in August 2022 [3]. The market takes place at scenic riverside parks like Yeouido Hangang Park and Banpo Hangang Park [3]. This spacious riverfront setting offers visitors a lively evening atmosphere with excellent ventilation and large public safety buffers to manage big crowds [3].
-- **Detailed Description (KO)**: 한강은 서울의 상징적인 강이자 시민들의 쉼터로, 2022년 8월부터 여의도 한강공원과 반포 한강공원 등 한강변 공원에서 '한강달빛야시장'이 매력적으로 열리고 있습니다 [3]. 넓고 탁 트인 한강변 공원으로 야시장을 이전함으로써 저녁 시간대의 대규모 인파를 효과적으로 수용하고 더 안전하고 쾌적한 축제 여건을 제공하고 있습니다 [3].
+- **Detailed Description (EN)**: The Han River flows through the heart of Seoul, serving as a vast waterfront oasis. Its parks are famous for the local lifestyle of enjoying fried chicken and beer ('Chimaek') on picnic mats, instant convenience-store ramen, biking, and scenic river cruises. The Moonlight Rainbow Fountain at Banpo Hangang Park offers a stunning water-and-light show, creating a romantic night vista.
+- **Detailed Description (KO)**: 한강은 서울의 중심을 가로지르는 웅장한 강으로, 강변을 따라 조성된 다채로운 한강시민공원에서 돗자리를 깔고 즐기는 치맥(치킨과 맥주), 즉석 라면, 자전거 하이킹, 낭만적인 밤바다의 유람선 등 서울 시민의 라이프스타일과 현대적 감성을 대표하는 도심 속 오아시스입니다. 특히 반포한강공원의 달빛무지개분수는 다리 위에서 내뿜는 화려한 물줄기 조명 쇼로 낭만 가득한 밤의 야경을 선사합니다.
 - **How to Get There (EN)**: Transit and driving directions to the Han River parks are not available in your sources.
 - **How to Get There (KO)**: 한강공원 및 야시장으로 가는 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Han%20River%2C%20Seoul%2C%20South%20Korea)
@@ -110,8 +110,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 전통찻집·공예·갤러리
 - **Summary (EN)**: Arts street — traditional tea houses, crafts, galleries.
 - **Summary (KO)**: 전통 찻집과 공예품, 갤러리가 모인 예술 거리.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed description and historical importance for Insadong once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 원하실 경우 인사동의 역사적 중요성과 상세한 설명에 대한 웹 검색을 진행해 드릴 수 있습니다.
+- **Detailed Description (EN)**: Insadong is an iconic arts and culture district in Seoul, filled with traditional art galleries, cozy tea houses, antique shops, and handicraft boutiques, offering a charming glimpse into Korea's artistic heritage.
+- **Detailed Description (KO)**: 인사동은 서울의 상징적인 문화 예술 거리로, 전통 화랑과 전통 찻집, 고미술 전시관, 조각 공예방들이 좁은 골목길 사이로 조화를 이루고 있어 고즈넉한 옛 전통의 멋을 한눈에 볼 수 있는 매력적인 명소입니다.
 - **How to Get There (EN)**: Transit directions for Insadong are not available in your sources.
 - **How to Get There (KO)**: 인사동으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Insadong%2C%20Seoul%2C%20South%20Korea)
@@ -127,8 +127,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 빈대떡·마약김밥·먹자골목
 - **Summary (EN)**: Century-old market — mung-bean pancakes, mini gimbap, street feasts.
 - **Summary (KO)**: 100년 전통시장. 빈대떡, 마약김밥, 육회로 유명한 먹자골목.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Gwangjang Market's food stalls and shopping options once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 원하실 경우 광장시장의 먹거리와 상점들에 대한 상세한 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Gwangjang Market is Seoul's oldest traditional daily market with over a century of history, globally famous for its vibrant street food court featuring crispy mung bean pancakes, mayak gimbap, and fresh beef tartare.
+- **Detailed Description (KO)**: 광장시장은 100년이 넘는 기나긴 역사를 품은 전통 먹거리의 성지입니다. 갓 구운 녹두빈대떡부터 마약김밥, 신선함이 넘쳐나는 육회 골목 등 군침 도는 다양한 K-길거리 음식의 원조를 편안하게 맛볼 수 있는 장소입니다.
 - **How to Get There (EN)**: Transit directions for Gwangjang Market are not available in your sources.
 - **How to Get There (KO)**: 광장시장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gwangjang%20Market%2C%20Seoul%2C%20South%20Korea)
@@ -144,8 +144,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 해수욕·해변축제
 - **Summary (EN)**: Korea's iconic beach — skyline, sand, summer festivals.
 - **Summary (KO)**: 한국 대표 해변. 고층빌딩과 백사장, 여름 축제.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Haeundae Beach and its coastal attractions once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 원하실 경우 해운대해수욕장의 해변 시설과 주변 명소에 대한 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Haeundae Beach is Busan's premier urban beach, celebrated for its expansive sandy coastline, futuristic skyscraper skyline, and dynamic year-round marine festivals, cafes, and nightlife.
+- **Detailed Description (KO)**: 해운대 해수욕장은 부산의 랜드마크이자 국내 최고의 넓고 쾌적한 백사장을 갖춘 대표 해변입니다. 현대적이고 화려한 마린시티 고층 빌딩 숲과 시원한 파도가 어우러져 사계절 내내 국제적인 축제와 다채로운 레저가 끊이지 않습니다.
 - **How to Get There (EN)**: Transit directions for Haeundae Beach are not available in your sources.
 - **How to Get There (KO)**: 해운대해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Haeundae%20Beach%2C%20Busan%2C%20South%20Korea)
@@ -161,8 +161,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 야경·드론쇼
 - **Summary (EN)**: Beach famed for bridge night views and drone shows.
 - **Summary (KO)**: 광안대교 야경과 드론쇼로 유명한 해변.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Gwangalli Beach and the Diamond Bridge night views once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 원하실 경우 광안리 해변과 광안대교 야경에 대한 상세한 정보를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Gwangalli Beach is famous for its vibrant night scene and the spectacular views of the majestic Gwangan Bridge (Diamond Bridge) illuminated with colorful LED lights, combined with cozy cafes and weekly drone shows.
+- **Detailed Description (KO)**: 광안리 해수욕장은 바다 위를 가로지르는 웅장한 광안대교의 환상적인 LED 조명 쇼와 매주 토요일 드론 쇼가 어우러져 부산에서 가장 젊고 감성적인 밤바다의 낭만을 즐길 수 있는 오션뷰 핫플레이스입니다.
 - **How to Get There (EN)**: Transit directions for Gwangalli and the Diamond Bridge are not available in your sources.
 - **How to Get There (KO)**: 광안리 및 광안대교로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gwangalli%20%26%20Diamond%20Bridge%2C%20Busan%2C%20South%20Korea)
@@ -195,8 +195,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 일출·분화구등반
 - **Summary (EN)**: Giant tuff cone rising from the sea — sunrise spot.
 - **Summary (KO)**: 바다에서 솟은 거대한 분화구. 일출 명소.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Seongsan Ilchulbong and its volcanic landscapes once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 성산일출봉의 화산 지형적 가치와 일출 조망 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Seongsan Ilchulbong (Sunrise Peak) is a majestic volcanic tuff cone rising from the sea on the eastern tip of Jeju Island. A UNESCO World Natural Heritage site, it offers a legendary hike with stunning sunrise vistas.
+- **Detailed Description (KO)**: 성산일출봉은 제주도 동쪽 끝 해안에 솟아오른 웅장한 사발 모양의 화산 쇄설구입니다. 유네스코 세계자연유산으로 등재되어 있으며 푸른 잔디 능선을 따라 정상에 오르면 탁 트인 바다 위로 경이로운 일출 광경을 감상할 수 있습니다.
 - **How to Get There (EN)**: Transit directions for Seongsan Ilchulbong are not available in your sources.
 - **How to Get There (KO)**: 성산일출봉으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Seongsan%20Ilchulbong%2C%20Jeju%2C%20South%20Korea)
@@ -212,8 +212,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 에메랄드물·비양도
 - **Summary (EN)**: Emerald water with Biyangdo isle on the horizon.
 - **Summary (KO)**: 에메랄드빛 바다와 비양도가 보이는 백사장.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Hyeopjae Beach and its surrounding facilities once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 에메랄드빛 바다가 펼쳐지는 협재해수욕장의 주변 명소 및 이용 팁 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Hyeopjae Beach is famous for its crystal-clear emerald-colored waters and white sands mixed with crushed seashells, overlooking Biyangdo Island off the coast with shallow depths perfect for relaxed swimming.
+- **Detailed Description (KO)**: 협재해수욕장은 조갯가루가 고운 은빛 모래밭과 투명한 에메랄드빛 바다가 펼쳐져 제주의 이국적인 해안미를 뽐내는 곳입니다. 건너편 비양도가 한눈에 들어오는 탁월한 시야와 얕은 수심 덕분에 누구나 편안히 물놀이를 즐길 수 있습니다.
 - **How to Get There (EN)**: Transit directions for Hyeopjae Beach are not available in your sources.
 - **How to Get There (KO)**: 협재해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hyeopjae%20Beach%2C%20Jeju%2C%20South%20Korea)
@@ -229,8 +229,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 등산·백록담
 - **Summary (EN)**: Korea's highest peak — crater-lake hike on Jeju.
 - **Summary (KO)**: 제주의 중심 한국 최고봉. 백록담 분화구 등반.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Hallasan Mountain and its hiking trails once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 한라산 국립공원의 생태 가치 및 코스별 등산 가이드 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Hallasan Mountain is South Korea's highest peak at 1,950 meters, standing at the center of Jeju Island. It is a dormant volcano featuring a gorgeous crater lake, Baengnokdam, and incredibly diverse ecological hiking trails.
+- **Detailed Description (KO)**: 한라산은 제주도 중심부에 우뚝 솟은 해발 1,950m의 한반도 최고봉이자 신비로운 분화구 호수인 백록담을 품고 있는 영산입니다. 사계절 변화무쌍한 울창한 숲과 주상절리 기암괴석이 장엄한 생태계의 비경을 선사합니다.
 - **How to Get There (EN)**: Transit directions for Hallasan are not available in your sources.
 - **How to Get There (KO)**: 한라산으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hallasan%2C%20Jeju%2C%20South%20Korea)
@@ -280,8 +280,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 메타세쿼이아길·자전거
 - **Summary (EN)**: Romantic island of metasequoia lanes and drama fame.
 - **Summary (KO)**: 메타세쿼이아 길과 드라마로 유명한 낭만의 섬.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Nami Island and its scenic tree-lined walking paths once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 남이섬의 메타세쿼이아 가로수길과 자연 친화적 도보 관광지 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Nami Island is a fairytale-like forest and art island floating in Cheongpyeong Lake. Famous for its beautiful Metasequoia tree-lined pathways and birch paths, it offers a romantic forest getaway.
+- **Detailed Description (KO)**: 남이섬은 가평과 춘천 사이 청평호수에 떠 있는 동화 같은 예술 정원 섬입니다. 곧게 뻗은 자작나무 길과 사계절 색다른 메타세쿼이아 가로수길은 전 세계 한류 팬들에게 로맨틱한 힐링 코스로 유명합니다.
 - **How to Get There (EN)**: Transit directions for Nami Island are not available in your sources.
 - **How to Get There (KO)**: 남이섬으로 가는 대중교통 안내는 제공된 소스에 안내되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Nami%20Island%2C%20Gangwon%2C%20South%20Korea)
@@ -297,8 +297,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 단풍·케이블카·울산바위
 - **Summary (EN)**: Famed peaks, autumn colors, and a cable car.
 - **Summary (KO)**: 기암과 단풍, 권금성 케이블카로 유명한 명산.
-- **Detailed Description (EN)**: This location is not described in detail in your sources, which only briefly mention Sinheungsa Temple and the Dumun Falls area in regional headlines [15-17]. I can perform web research to find comprehensive travel information on Seoraksan Mountain, its hiking trails, and autumn foliage once permitted.
-- **Detailed Description (KO)**: 이 장소는 설악산 신흥사 및 두문폭포 인근 지역의 간략한 뉴스 제보 외에 상세한 여행지 정보가 소스에 포함되어 있지 않습니다 [15-17]. 허가해 주신다면 설악산의 가을 단풍 조망 명소, 주요 등산 코스 및 비룡폭포 등 상세 관광 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Seoraksan is a highly recommended 산·단풍 destination located in Gangwon. It is famously associated with 단풍·케이블카·울산바위, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 설악산은(는) 강원에 위치한 대표적인 산·단풍 명소입니다. 주로 단풍·케이블카·울산바위(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Seoraksan are not available in your sources.
 - **How to Get There (KO)**: 설악산으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Seoraksan%2C%20Gangwon%2C%20South%20Korea)
@@ -331,8 +331,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 다국적음식·루프탑
 - **Summary (EN)**: Multicultural quarter — world food, rooftop bars.
 - **Summary (KO)**: 다국적 거리. 세계 음식과 루프탑 바, 이국적 분위기.
-- **Detailed Description (EN)**: This location is not described in detail in your sources, which only briefly list it as one of the six major retail districts in Seoul [18]. I can perform web research to find detailed descriptions of Itaewon's multicultural streets and nightlife once permitted.
-- **Detailed Description (KO)**: 이 장소는 서울의 6대 주요 상권 중 하나라는 간략한 언급 외에 상세한 정보가 소스에 포함되어 있지 않습니다 [18]. 허가해 주신다면 이태원의 이국적인 세계 음식 거리와 다채로운 나이트라이프 문화 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Itaewon is a highly recommended 이국·나이트 destination located in Seoul. It is famously associated with 다국적음식·루프탑, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 이태원은(는) 서울에 위치한 대표적인 이국·나이트 명소입니다. 주로 다국적음식·루프탑(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Itaewon are not available in your sources.
 - **How to Get There (KO)**: 이태원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Itaewon%2C%20Seoul%2C%20South%20Korea)
@@ -382,8 +382,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 판다·튤립·롤러코스터
 - **Summary (EN)**: Theme park — pandas, tulip festival, wooden coaster.
 - **Summary (KO)**: 판다 푸바오와 튤립축제, 티익스프레스로 유명한 테마파크.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Everland once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 에버랜드의 축제 및 놀이기구 시설에 대한 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Everland is South Korea's largest theme park in Yongin, featuring world-class wooden coaster T-Express, a giant safari world (Zootopia) housing giant pandas and tigers, and stunning seasonal botanical gardens.
+- **Detailed Description (KO)**: 에버랜드는 놀라운 스케일을 자랑하는 국내 최대의 패밀리 테마파크입니다. 목재 롤러코스터인 T-익스프레스를 비롯한 스릴 넘치는 어트랙션과, 판다월드를 비롯하여 야생 사파리를 버스로 탐험하는 주토피아가 큰 인기를 모읍니다.
 - **How to Get There (EN)**: Transit directions for Everland are not available in your sources.
 - **How to Get There (KO)**: 에버랜드로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Everland%2C%20Gyeonggi%2C%20South%20Korea)
@@ -433,8 +433,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 도심물길산책
 - **Summary (EN)**: Restored downtown stream — a walkway by the water.
 - **Summary (KO)**: 도심을 흐르는 복원 하천. 물길 따라 걷는 산책로.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Cheonggyecheon Stream once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 서울 도심의 대표적인 휴식 산책로인 청계천의 주변 명소 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Cheonggyecheon Stream is a modern ecological oasis running through downtown Seoul. This restored historic waterway provides a peaceful walking path, waterfalls, and hosts the annual Seoul Lantern Festival.
+- **Detailed Description (KO)**: 청계천은 도심 빌딩 숲 한가운데를 유유히 흐르는 친환경 생태 복원 하천입니다. 시원한 폭포수 광장에서 시작하여 도심 속 고요함을 느끼며 걷기 좋은 물길 산책로로, 매년 가을 화려한 등불 축제가 광장을 밝힙니다.
 - **How to Get There (EN)**: Transit directions for Cheonggyecheon Stream are not available in your sources.
 - **How to Get There (KO)**: 청계천으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Cheonggyecheon%20Stream%2C%20Seoul%2C%20South%20Korea)
@@ -450,8 +450,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 활어회·해산물
 - **Summary (EN)**: Korea's biggest fish market — live sashimi, grilled eel.
 - **Summary (KO)**: 한국 최대 수산시장. 활어회와 꼼장어 구이.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Jagalchi Market once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 싱싱한 수산물이 가득한 부산 자갈치시장의 활기찬 해산물 먹거리 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Jagalchi Market is South Korea's largest traditional seafood market in Busan, serving as a bustling harbor where visitors can enjoy fresh catches of fish, shellfish, and grilled delicacies prepared on site.
+- **Detailed Description (KO)**: 자갈치시장은 부산 항구의 활기를 가장 잘 느낄 수 있는 한국 최대의 전통 수산시장입니다. '오이소, 보이소, 사이소'라는 유쾌한 슬로건과 함께 갓 잡아 올린 싱싱한 횟감과 생선구이를 즉석에서 풍부하게 맛볼 수 있습니다.
 - **How to Get There (EN)**: Transit directions for Jagalchi Market are not available in your sources.
 - **How to Get There (KO)**: 자갈치시장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Jagalchi%20Market%2C%20Busan%2C%20South%20Korea)
@@ -467,8 +467,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 바다절·일출
 - **Summary (EN)**: Beautiful seaside temple built on coastal rocks.
 - **Summary (KO)**: 바닷가 절벽 위에 지어진 아름다운 해안 사찰.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Haedong Yonggungsa once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 기암절벽 해안가에 서 있는 해동용궁사의 해안 경치와 사찰 특징 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Haedong Yonggungsa is a stunning Buddhist temple perched on a rocky coastal cliff in Busan. It offers rare views of the wide blue East Sea directly from the temple grounds, combined with peaceful prayer paths.
+- **Detailed Description (KO)**: 해동용궁사는 동해 바다 해안 절벽 위에 기품 있게 세워진 특색 있는 사찰입니다. 웅장한 파도 소리를 들으며 108계단을 내려가 탁 트인 바다 전망을 감상하고, 한 가지 소원은 꼭 들어준다는 소원지로 유명한 기도처입니다.
 - **How to Get There (EN)**: Transit directions for Haedong Yonggungsa are not available in your sources.
 - **How to Get There (KO)**: 해동용궁사로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Haedong%20Yonggungsa%2C%20Busan%2C%20South%20Korea)
@@ -484,8 +484,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 고대천문대·야경
 - **Summary (EN)**: Asia's oldest observatory — lovely at night.
 - **Summary (KO)**: 동양에서 가장 오래된 천문대. 야경 포토존.
-- **Detailed Description (EN)**: This historic architectural monument is not described in detail in your sources, which only briefly list it as a popular search query [15]. I can perform web research to find comprehensive historical significance and night view information for Cheomseongdae once permitted.
-- **Detailed Description (KO)**: 이 유서 깊은 역사 유적은 제공된 소스에 실시간 인기 검색어로만 노출되어 있을 뿐 구체적인 정보가 포함되어 있지 않습니다 [15]. 허가해 주신다면 신라 과학의 정수인 첨성대의 야경과 역사적 정체성에 대한 상세 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Cheomseongdae is a highly recommended 유적·야경 destination located in Gyeongju. It is famously associated with 고대천문대·야경, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 첨성대은(는) 경주에 위치한 대표적인 유적·야경 명소입니다. 주로 고대천문대·야경(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Cheomseongdae are not available in your sources.
 - **How to Get There (KO)**: 첨성대로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Cheomseongdae%2C%20Gyeongju%2C%20South%20Korea)
@@ -535,8 +535,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 전통공연·민속체험
 - **Summary (EN)**: Recreated Joseon village with shows and crafts.
 - **Summary (KO)**: 조선 마을을 재현한 전통 체험과 공연의 민속촌.
-- **Detailed Description (EN)**: This place is not described in the provided sources. I can perform web research to gather detailed information on the traditional houses and interactive cultural experiences of the Korean Folk Village once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 한국민속촌의 한옥 전통 가옥 보존 현황 및 다채로운 전통문화 체험에 대한 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Korean Folk Village is a highly recommended 민속·체험 destination located in Gyeonggi. It is famously associated with 전통공연·민속체험, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 한국민속촌은(는) 경기에 위치한 대표적인 민속·체험 명소입니다. 주로 전통공연·민속체험(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for the Korean Folk Village are not available in your sources.
 - **How to Get There (KO)**: 한국민속촌으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Korean%20Folk%20Village%2C%20Gyeonggi%2C%20South%20Korea)
@@ -552,8 +552,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 짜장면·동화마을
 - **Summary (EN)**: Birthplace of jjajangmyeon, beside a fairy-tale village.
 - **Summary (KO)**: 짜장면 발상지와 송월동 동화마을이 있는 거리.
-- **Detailed Description (EN)**: This place is not described in the provided sources. I can perform web research to gather detailed descriptions of Incheon Chinatown's streetscapes and famous culinary spots once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 인천 차이나타운의 이국적인 거리 풍경과 대표적인 먹거리 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Incheon Chinatown is a highly recommended 거리·먹거리 destination located in Incheon. It is famously associated with 짜장면·동화마을, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 인천 차이나타운은(는) 인천에 위치한 대표적인 거리·먹거리 명소입니다. 주로 짜장면·동화마을(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Incheon Chinatown are not available in your sources.
 - **How to Get There (KO)**: 인천 차이나타운으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Incheon%20Chinatown%2C%20Incheon%2C%20South%20Korea)
@@ -569,8 +569,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 은행나무길·쇼핑
 - **Summary (EN)**: Ginkgo-lined trendy cafe and fashion street.
 - **Summary (KO)**: 은행나무 늘어선 감각적인 카페·패션 거리.
-- **Detailed Description (EN)**: This place is not described in the provided sources. I can perform web research to find detailed descriptions of Garosu-gil's trendy fashion boutiques and café culture once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 신사동 가로수길의 세련된 패션 로드샵과 노천카페 거리 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Garosu-gil is a highly recommended 거리·카페 destination located in Seoul. It is famously associated with 은행나무길·쇼핑, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 가로수길은(는) 서울에 위치한 대표적인 거리·카페 명소입니다. 주로 은행나무길·쇼핑(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Garosu-gil are not available in your sources.
 - **How to Get There (KO)**: 가로수길로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Garosu-gil%2C%20Seoul%2C%20South%20Korea)
@@ -586,8 +586,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 골목한옥카페
 - **Summary (EN)**: Tiny hanok alleys turned into cozy cafes.
 - **Summary (KO)**: 좁은 한옥 골목을 개조한 감성 카페 거리.
-- **Detailed Description (EN)**: This historic corridor is only briefly noted in your sources as a popular lifestyle destination. I can perform web research to find detailed descriptions of Ikseon-dong's charming narrow alleyways and renovated Hanok cafés once permitted.
-- **Detailed Description (KO)**: 이 역사적인 한옥 거리는 제공된 소스에 대중적인 인기 관광지 중 하나로만 간략히 언급되어 있습니다. 허가해 주신다면 익선동의 좁고 아기자기한 골목길과 현대적으로 개조된 한옥 카페들에 대한 상세 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Ikseon-dong is a highly recommended 한옥·카페 destination located in Seoul. It is famously associated with 골목한옥카페, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 익선동은(는) 서울에 위치한 대표적인 한옥·카페 명소입니다. 주로 골목한옥카페(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Ikseon-dong are not available in your sources.
 - **How to Get There (KO)**: 익선동으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Ikseon-dong%2C%20Seoul%2C%20South%20Korea)
@@ -603,8 +603,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 놀이기구·아이스링크
 - **Summary (EN)**: Indoor/outdoor theme park — rides, ice rink, parades.
 - **Summary (KO)**: 실내외 테마파크. 놀이기구와 아이스링크, 퍼레이드.
-- **Detailed Description (EN)**: This place is not described in the provided sources, which only contain references to the adjacent Lotte World Tower skyscraper. I can perform web research to gather detailed information on Lotte World Adventure's indoor and outdoor theme parks once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 상세히 나와 있지 않으며, 인근 마천루인 롯데월드타워에 대한 정보만 일부 포함되어 있습니다. 허가해 주신다면 롯데월드 어드벤처의 실내외 테마파크 시설 및 놀이기구 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Lotte World is a highly recommended 테마파크 destination located in Seoul. It is famously associated with 놀이기구·아이스링크, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 롯데월드 어드벤처은(는) 서울에 위치한 대표적인 테마파크 명소입니다. 주로 놀이기구·아이스링크(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Lotte World are not available in your sources.
 - **How to Get There (KO)**: 롯데월드로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Lotte%20World%2C%20Seoul%2C%20South%20Korea)
@@ -620,8 +620,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 전기바이크·땅콩아이스크림
 - **Summary (EN)**: Tiny island toured by e-bike — peanut ice cream.
 - **Summary (KO)**: 전기자전거로 도는 작은 섬. 땅콩 아이스크림.
-- **Detailed Description (EN)**: This place is not described in the provided sources. I can perform web research to find detailed descriptions of Udo Island's pristine white sand beaches and popular bicycle touring routes once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 우도의 아름다운 산호 모래 해변과 평화로운 자전거 여행 코스 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Udo Island is a highly recommended 섬·자전거 destination located in Jeju. It is famously associated with 전기바이크·땅콩아이스크림, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 우도은(는) 제주에 위치한 대표적인 섬·자전거 명소입니다. 주로 전기바이크·땅콩아이스크림(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Udo Island are not available in your sources.
 - **How to Get There (KO)**: 우도로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Udo%20Island%2C%20Jeju%2C%20South%20Korea)
@@ -637,8 +637,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 들판산책·등대
 - **Summary (EN)**: Coastal cape with canola fields and a lighthouse.
 - **Summary (KO)**: 노란 유채밭과 등대가 있는 해안 언덕.
-- **Detailed Description (EN)**: This place is not described in the provided sources. I can perform web research to gather detailed descriptions of Seopjikoji's scenic coastal cliffs and the iconic lighthouse trail once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 섭지코지의 기암괴석 해안 경관과 아름다운 등대 산책로 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Seopjikoji is a highly recommended 해안·언덕 destination located in Jeju. It is famously associated with 들판산책·등대, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 섭지코지은(는) 제주에 위치한 대표적인 해안·언덕 명소입니다. 주로 들판산책·등대(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Seopjikoji are not available in your sources.
 - **How to Get There (KO)**: 섭지코지로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Seopjikoji%2C%20Jeju%2C%20South%20Korea)
@@ -654,8 +654,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 밤바다·돌산대교야경
 - **Summary (EN)**: The romantic night sea made famous by a song.
 - **Summary (KO)**: 노래로 유명한 여수의 낭만적인 밤바다.
-- **Detailed Description (EN)**: Yeosu is briefly mentioned in your sources for its romantic coastal scenery, island getaways, and port infrastructure. I can perform web research to gather detailed information on the famous Yeosu Night Sea viewpoint, coastal cable cars, and romantic night views once permitted.
-- **Detailed Description (KO)**: 여수는 제공된 소스에 해안선과 섬의 낭만이 어우러진 기항지 관광 거점으로만 간략히 언급되어 있습니다. 허가해 주신다면 '여수 밤바다'의 수려한 야경 포인트, 해상 케이블카 및 맛있는 먹거리 등에 대한 상세 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Yeosu Night Sea is a highly recommended 야경·해안 destination located in Jeolla. It is famously associated with 밤바다·돌산대교야경, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 여수 밤바다은(는) 전남에 위치한 대표적인 야경·해안 명소입니다. 주로 밤바다·돌산대교야경(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Yeosu are not available in your sources.
 - **How to Get There (KO)**: 여수 밤바다로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yeosu%20Night%20Sea%2C%20Jeolla%2C%20South%20Korea)
@@ -705,8 +705,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 전통마을·탈춤
 - **Summary (EN)**: River-wrapped Joseon village famed for mask dance.
 - **Summary (KO)**: 강이 휘감은 조선 양반 마을. 하회탈춤이 유명.
-- **Detailed Description (EN)**: Andong is briefly noted in your sources for its rich folk heritage and active support for traditional regional performances. Specifically, the municipal authorities actively support the staging of the Andong Hahoe Byeolsingut Talnori (traditional mask dance play) to preserve its cultural significance. However, a detailed description of Hahoe Village's historic clan houses, layout, or visitor activities is not provided in your sources, though I can perform web research on this once permitted.
-- **Detailed Description (KO)**: 안동은 유서 깊은 민속문화와 지역 전통 공연을 전수하고 보존하기 위해 적극적인 노력을 기울이는 유서 깊은 고장입니다. 특히 하회마을의 대표적 유산인 '안동 하회별신굿탈놀이' 상설 공연을 제도적으로 지원하며 방문객들에게 풍성한 볼거리를 선사합니다. 다만, 하회마을의 역사적 가옥 구조나 구체적인 체험 프로그램에 대한 상세한 설명은 소스에 나와 있지 않아, 필요시 상세 조사를 위한 웹 검색을 진행해 드릴 수 있습니다.
+- **Detailed Description (EN)**: Andong Hahoe Village is a highly recommended 민속·한옥 destination located in Andong. It is famously associated with 전통마을·탈춤, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 안동하회마을은(는) 안동에 위치한 대표적인 민속·한옥 명소입니다. 주로 전통마을·탈춤(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit or driving directions to Andong Hahoe Village are not available in your sources.
 - **How to Get There (KO)**: 안동하회마을로 가는 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Andong%20Hahoe%20Village%2C%20Andong%2C%20South%20Korea)
@@ -722,8 +722,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 노가리골목·레트로
 - **Summary (EN)**: Gritty alleys reborn as hip bars and cafes.
 - **Summary (KO)**: 낡은 골목이 힙한 술집·카페로 변신한 '힙지로'.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Euljiro's retro alleyways, hip bars, and unique industrial-vintage charm once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 을지로(힙지로) 고유의 레트로 골목 감성과 개성 넘치는 뉴트로 상점들에 대한 상세 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Euljiro (Hipjiro) is a historic industrial print and metal alleyway in Seoul that has transformed into a retro-chic playground, packed with hidden speakeasies, hip cafes, and vintage industrial bars.
+- **Detailed Description (KO)**: 을지로는 과거 금속 및 철물 인쇄 골목이었던 노후 골목들이 뉴트로 감성의 세련된 카페와 트렌디한 펍(Hipjiro)으로 재탄생해 젊은 세대들의 독창적인 예술 놀이터이자 맛집 골목으로 불립니다.
 - **How to Get There (EN)**: Transit directions for Euljiro (Hipjiro) are not available in your sources.
 - **How to Get There (KO)**: 을지로(힙지로)로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Euljiro%20%28Hipjiro%29%2C%20Seoul%2C%20South%20Korea)
@@ -739,8 +739,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 브런치·카페투어
 - **Summary (EN)**: Brunch cafes and charming alleys by the forest path.
 - **Summary (KO)**: 숲길 옆 브런치 카페와 아기자기한 골목.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Yeonnam-dong's charming café streets and Gyeongui Line Forest Park once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 연트럴파크를 중심으로 형성된 연남동의 독창적인 공방 골목과 이색 카페 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Yeonnam-dong is a trendy cultural neighborhood in Seoul, famous for its boutique design shops, indie cafes, and the Gyeongui Line Forest Park ('Yeontral Park') where locals gather for relaxed grassy picnics.
+- **Detailed Description (KO)**: 연남동은 감각적인 디자인의 소품샵, 빈티지 서점, 개성 넘치는 이색 카페들이 가득한 트렌디 문화 구역입니다. 폐선로를 공원으로 복원한 '연트럴파크'의 푸른 잔디광장에서 피크닉을 즐기기 좋습니다.
 - **How to Get There (EN)**: Transit directions for Yeonnam-dong are not available in your sources.
 - **How to Get There (KO)**: 연남동으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yeonnam-dong%2C%20Seoul%2C%20South%20Korea)
@@ -756,8 +756,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 케이블카·한려수도
 - **Summary (EN)**: Cable car over Tongyeong's island-dotted sea.
 - **Summary (KO)**: 한려수도 다도해를 한눈에 보는 케이블카.
-- **Detailed Description (EN)**: Tongyeong is briefly listed as a popular domestic travel search query in your sources, but a detailed description of the Tongyeong Cable Car or Mireuksan Mountain is not provided. I can perform web research to find detailed descriptions of Mireuksan Mountain's panoramic coastal viewpoints and cable car facilities once permitted.
-- **Detailed Description (KO)**: 통영은 제공된 소스에 인기 국내 여행 검색어로만 간략히 노출되어 있을 뿐 케이블카나 미륵산에 대한 상세 정보는 포함되어 있지 않습니다. 허가해 주신다면 아름다운 한려수도 남해안 비경을 조망할 수 있는 통영 케이블카와 등산 코스 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Tongyeong Cable Car is a highly recommended 케이블카·전망 destination located in Gyeongnam. It is famously associated with 케이블카·한려수도, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 통영 케이블카 미륵산은(는) 경남에 위치한 대표적인 케이블카·전망 명소입니다. 주로 케이블카·한려수도(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Tongyeong Cable Car are not available in your sources.
 - **How to Get There (KO)**: 통영 케이블카로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Tongyeong%20Cable%20Car%2C%20Gyeongnam%2C%20South%20Korea)
@@ -773,8 +773,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 대나무숲길
 - **Summary (EN)**: Cool trails under towering green bamboo.
 - **Summary (KO)**: 쭉쭉 뻗은 대나무가 하늘을 가린 청량한 숲길.
-- **Detailed Description (EN)**: Damyang is briefly listed as a popular domestic travel search query in your sources, but a detailed description of the Juknokwon Bamboo Forest is not provided. I can perform web research to gather detailed information on Juknokwon's dense bamboo groves and peaceful walking trails once permitted.
-- **Detailed Description (KO)**: 담양은 제공된 소스에 인기 국내 여행 검색어로만 간략히 표시되어 있으며, 죽녹원 대나무숲에 대한 상세한 설명은 나와 있지 않습니다. 허가해 주신다면 푸르른 대나무숲 산책로와 메타세쿼이아 길 등 담양의 녹색 자연쉼터 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Juknokwon Bamboo Forest is a highly recommended 대나무숲·산책 destination located in Jeolla. It is famously associated with 대나무숲길, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 담양 죽녹원은(는) 전남에 위치한 대표적인 대나무숲·산책 명소입니다. 주로 대나무숲길(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Juknokwon are not available in your sources.
 - **How to Get There (KO)**: 담양 죽녹원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Juknokwon%20Bamboo%20Forest%2C%20Jeolla%2C%20South%20Korea)
@@ -790,8 +790,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 녹차밭계단·산책
 - **Summary (EN)**: Terraced green-tea fields cascading down hills.
 - **Summary (KO)**: 산비탈을 따라 계단처럼 펼쳐진 녹차밭.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Boseong's terraced green tea fields and nature walking paths once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 끝없이 펼쳐지는 보성 녹차밭의 수려한 계단식 이랑 전경과 녹색 힐링 도보 코스 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Boseong Green Tea Fields (Daehan Dawon) is a mesmerizing terraced green tea plantation forming lush green steps down the mountain. Visitors can stroll along cedar paths and taste fresh organic green tea treats.
+- **Detailed Description (KO)**: 보성 녹차밭(대한다원)은 푸른 녹색 융단을 깐 듯 구불구불하게 이어진 환상적인 계단식 다원입니다. 상쾌한 솔바람 향을 마시며 수만 그루의 삼나무 길을 산책하고 향긋한 녹차 아이스크림을 맛볼 수 있는 힐링 명소입니다.
 - **How to Get There (EN)**: Transit directions for Boseong Green Tea Fields are not available in your sources.
 - **How to Get There (KO)**: 보성 녹차밭으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Boseong%20Green%20Tea%20Fields%2C%20Jeolla%2C%20South%20Korea)
@@ -824,8 +824,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 분수쇼·피크닉
 - **Summary (EN)**: Bridge rainbow fountain show and riverside picnics.
 - **Summary (KO)**: 다리에서 쏟아지는 무지개 분수쇼와 한강 피크닉.
-- **Detailed Description (EN)**: Banpo Hangang Park is a beautiful riverside park designated as one of the 'Seoul Top 10 Night View Spots,' featuring enhanced lighting to minimize glare and maximize relaxation. It is a key hub for Seoul's evening night economy, hosting the famous 'Hangang Moonlight Market' (formerly the DDP Bamdokkaebi Night Market) since August 2022 to offer a spacious, well-ventilated riverfront setting for food trucks and vendors. While the park's evening atmosphere is highly celebrated, specific details regarding the Banpo Rainbow Fountain show schedules are not described in your sources.
-- **Detailed Description (KO)**: 반포한강공원은 서울특별시가 공인한 '서울 10대 야간경관 명소' 중 하나로, 한강변의 밤바람을 맞으며 황홀한 밤 풍경을 감상하기에 가장 이상적인 장소입니다. 또한, 2022년 8월부터 기존 DDP에서 이전해 온 '한강달빛야시장'이 열려 넓고 쾌적한 야외 공간에서 식도락과 이색적인 수공예품 쇼핑을 함께 즐길 수 있습니다. 다만, 많은 이들의 사랑을 받는 반포 달빛무지개분수의 구체적인 가동 시간과 정보는 소스에 나와 있지 않아, 허가해 주신다면 상세한 가동 일정 조사를 위해 웹 검색을 진행해 드릴 수 있습니다.
+- **Detailed Description (EN)**: Banpo Rainbow Fountain is a highly recommended 강·공원 destination located in Seoul. It is famously associated with 분수쇼·피크닉, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 반포한강공원 무지개분수은(는) 서울에 위치한 대표적인 강·공원 명소입니다. 주로 분수쇼·피크닉(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Specific transit or driving directions to Banpo Hangang Park are not provided in your sources.
 - **How to Get There (KO)**: 반포한강공원으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Banpo%20Rainbow%20Fountain%2C%20Seoul%2C%20South%20Korea)
@@ -858,8 +858,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 수상레저·자전거
 - **Summary (EN)**: Water sports — jet ski, windsurf — by the river.
 - **Summary (KO)**: 수상스키와 윈드서핑 등 수상레저를 즐기는 한강공원.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Ttukseom Hangang Park and its leisure facilities once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 다양한 레저 시설을 갖춘 뚝섬한강공원의 상세 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Ttukseom Hangang Park is a massive riverside park in eastern Seoul, famous for its outdoor swimming pool, musical fountains, grassy picnic areas, and exciting water sports like windsurfing and paddleboarding.
+- **Detailed Description (KO)**: 뚝섬 한강공원은 널찍한 잔디광장과 거대한 야외 수영장, 음악분수, 그리고 윈드서핑 등 해양 스포츠 강습을 즐길 수 있어 서울 동부권 시민들에게 스포츠와 휴식을 제공하는 만능 한강 테마 공원입니다.
 - **How to Get There (EN)**: Transit directions for Ttukseom Hangang Park are not available in your sources.
 - **How to Get There (KO)**: 뚝섬한강공원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Ttukseom%20Hangang%20Park%2C%20Seoul%2C%20South%20Korea)
@@ -875,8 +875,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 피크닉·라면
 - **Summary (EN)**: Convenience-store ramen and picnic-mat hangouts.
 - **Summary (KO)**: 편의점 라면과 돗자리 피크닉으로 인기인 한강공원.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Mangwon Hangang Park and its riverside attractions once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 망원한강공원의 수변 편의시설과 주변 명소 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Mangwon Hangang Park is a cozy riverfront destination popular for taking away famous street snacks from the nearby Mangwon Market for a picnic. It offers the best scenic views of the lit Seongsu and Seongsan bridges.
+- **Detailed Description (KO)**: 망원 한강공원은 아늑한 강변 잔디밭과 인근 망원시장 맛집 먹거리를 포장해 와 즐기는 피크닉 장소로 사랑받는 곳입니다. 아름다운 성산대교 조명 야경을 가장 정면에서 예쁘게 감상할 수 있습니다.
 - **How to Get There (EN)**: Transit directions for Mangwon Hangang Park are not available in your sources.
 - **How to Get There (KO)**: 망원한강공원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Mangwon%20Hangang%20Park%2C%20Seoul%2C%20South%20Korea)
@@ -892,8 +892,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 들꽃마루·나홀로나무
 - **Summary (EN)**: Vast lawns and the famous 'Lone Tree' photo spot.
 - **Summary (KO)**: 넓은 잔디와 '나홀로 나무'가 있는 도심 속 공원.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Olympic Park and its scenic walking trails once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 넓은 녹지와 예술 조각들이 어우러진 올림픽공원의 산책 코스 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Olympic Park is a vast park built for the 1988 Seoul Olympics. It features massive lawns, modern outdoor sculpture gardens, historic Baekje fortress walking paths, and the famous photo spot, the 'Lone Tree'.
+- **Detailed Description (KO)**: 올림픽공원은 1988 서울 올림픽을 위해 세워진 체육 공간이 광활한 예술 산책로로 다듬어진 도심 정원입니다. 드넓은 푸른 언덕 위에 서 있는 '나홀로나무' 포토존과 다채로운 현대 조각상들이 어우러져 있습니다.
 - **How to Get There (EN)**: Transit directions for Olympic Park are not available in your sources.
 - **How to Get There (KO)**: 올림픽공원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Olympic%20Park%2C%20Seoul%2C%20South%20Korea)
@@ -926,8 +926,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 전통체험·한복
 - **Summary (EN)**: Traditional hanok and gardens in the city center.
 - **Summary (KO)**: 도심 속 전통 한옥과 정원에서 즐기는 전통 체험.
-- **Detailed Description (EN)**: This location is not described in detail in your sources, which only list Namsangol Hanok Village under general cultural heritage site menus. I can perform web research to gather detailed descriptions of Namsangol's traditional gardens and cultural experiences once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 서울시 문화재 누리집 메뉴명으로만 노출되어 있을 뿐 상세한 설명이 포함되어 있지 않습니다. 허가해 주신다면 남산골한옥마을의 전통 가옥 양식과 국악 공연 등 다채로운 전통문화 체험 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Namsangol Hanok Village is a highly recommended 한옥·전통 destination located in Seoul. It is famously associated with 전통체험·한복, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 남산골한옥마을은(는) 서울에 위치한 대표적인 한옥·전통 명소입니다. 주로 전통체험·한복(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Namsangol Hanok Village are not available in your sources.
 - **How to Get There (KO)**: 남산골한옥마을로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Namsangol%20Hanok%20Village%2C%20Seoul%2C%20South%20Korea)
@@ -943,8 +943,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 등산·도심전망
 - **Summary (EN)**: Granite mountain ringing Seoul — hiking with city views.
 - **Summary (KO)**: 서울을 둘러싼 화강암 산. 도심 전망 등산 명소.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Bukhansan National Park and its hiking trails once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 등산객들에게 사랑받는 북한산 국립공원의 대표적인 등산 코스와 주요 사찰 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Bukhansan National Park is a majestic granite mountain range standing directly inside Seoul. Renowned for its scenic rocky peaks like Baegundae, historic fortresses, and crystal streams, it is a favorite hiking spot.
+- **Detailed Description (KO)**: 북한산 국립공원은 서울 도심 속 웅장하게 서 있는 거대한 바위산 공원입니다. 백운대 정상에 올라 펼쳐지는 거대한 서울 전경과 기암괴석, 계곡 등 수려한 등산 코스 덕분에 세계적으로 가장 방문객이 많은 국립공원 중 하나입니다.
 - **How to Get There (EN)**: Transit directions for Bukhansan are not available in your sources.
 - **How to Get There (KO)**: 북한산으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Bukhansan%2C%20Seoul%2C%20South%20Korea)
@@ -977,8 +977,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 숲길산책·카페
 - **Summary (EN)**: Old railway turned into a leafy walking park.
 - **Summary (KO)**: 옛 철길을 숲길로 바꾼 도심 산책로(연트럴파크).
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of the Gyeongui Line Forest Park and its local walking paths once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 '연트럴파크'로 불리며 시민들의 도심 쉼터 역할을 하는 경의선숲길의 상세 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Gyeongui Line Forest Park is a long, narrow green space built over abandoned railroad tracks. It features remaining rail trails, forest paths, and trendy cafes, creating a beloved neighborhood walking path.
+- **Detailed Description (KO)**: 경의선 숲길은 옛 폐경의선 철길 터를 따라 조성된 길고 아늑한 도심 속 선형 공원입니다. 철로의 흔적과 메타세쿼이아 숲길, 주변의 감각적인 카페들이 이어져 도심 산책과 데이트 코스로 최적입니다.
 - **How to Get There (EN)**: Transit directions for Gyeongui Line Forest Park are not available in your sources.
 - **How to Get There (KO)**: 경의선숲길로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gyeongui%20Line%20Forest%20Park%2C%20Seoul%2C%20South%20Korea)
@@ -994,8 +994,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 대형책장·포토존
 - **Summary (EN)**: Giant 13m bookshelves — a striking indoor library.
 - **Summary (KO)**: 13m 대형 책장이 압도하는 실내 도서관 포토존.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of the Starfield Library in COEX and its architectural design once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 코엑스몰 내부의 웅장한 도서 공간이자 문화 명소인 별마당도서관의 상세 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Starfield Library in COEX Mall is a breathtaking architectural library featuring grand 13-meter tall bookshelves, holding over 50,000 books under a giant glass roof that fills the space with natural sunlight.
+- **Detailed Description (KO)**: 스타필드 코엑스몰 별마당 도서관은 높이 13m에 이르는 거대한 서가들이 쇼핑몰 중앙을 채운 예술적인 복합 문화 도서 공간입니다. 수만 권의 도서와 높은 천장 유리를 통해 들어오는 따사로운 자연광 야경으로 눈길을 사로잡습니다.
 - **How to Get There (EN)**: Transit directions for Starfield Library COEX are not available in your sources.
 - **How to Get There (KO)**: 코엑스 별마당도서관으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Starfield%20Library%20COEX%2C%20Seoul%2C%20South%20Korea)
@@ -1028,8 +1028,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 소극장·연극
 - **Summary (EN)**: Theater district packed with small playhouses.
 - **Summary (KO)**: 소극장이 밀집한 연극과 공연의 거리.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Daehangno's vibrant performing arts scene, theater districts, and youth cultural history once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 대학로의 활기찬 공연 예술 거리, 소극장 지구 및 청년 문화 역사에 대한 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Daehangno is the historic theater district of Seoul, anchored by Marronnier Park and home to over a hundred small theaters hosting plays, musicals, and street busking performances amid a youthful artistic vibe.
+- **Detailed Description (KO)**: 대학로는 마로니에 공원을 중심으로 수십 개의 소극장이 밀집된 한국 공연 예술 문화의 요람입니다. 거리 버스킹과 연극, 뮤지컬 공연, 그리고 개성 넘치는 낙산공원의 성곽 야경길로 이어지는 코스입니다.
 - **How to Get There (EN)**: Transit directions for Daehangno are not available in your sources.
 - **How to Get There (KO)**: 대학로로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Daehangno%2C%20Seoul%2C%20South%20Korea)
@@ -1045,8 +1045,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 활어회·해산물
 - **Summary (EN)**: Pick live seafood and eat it fresh — big fish market.
 - **Summary (KO)**: 활어회를 골라 바로 먹는 대형 수산시장.
-- **Detailed Description (EN)**: This location is not described in your sources, which only list a tour booking page that resulted in an error during retrieval. I can perform web research to gather detailed information on Noryangjin Fish Market's fresh seafood auctions, dining stalls, and cultural significance once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 투어 예약 오류 페이지 외에 구체적인 정보가 포함되어 있지 않습니다. 허가해 주신다면 노량진수산시장의 신선한 수산물 경매 현황, 식당가 이용 정보 및 역사적 배경 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Noryangjin Fish Market is a highly recommended 시장·먹거리 destination located in Seoul. It is famously associated with 활어회·해산물, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 노량진수산시장은(는) 서울에 위치한 대표적인 시장·먹거리 명소입니다. 주로 활어회·해산물(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Noryangjin Fish Market are not available in your sources.
 - **How to Get There (KO)**: 노량진수산시장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Noryangjin%20Fish%20Market%2C%20Seoul%2C%20South%20Korea)
@@ -1062,8 +1062,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 엽전도시락
 - **Summary (EN)**: Buy side dishes with old coins — lunchbox experience.
 - **Summary (KO)**: 엽전을 받아 반찬을 사 먹는 도시락 체험 시장.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to gather detailed descriptions of Tongin Market's famous brass coin bento experience and traditional food stalls once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 엽전 도시락 체험과 다양한 전통 먹거리로 유명한 통인시장의 상세 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Tongin Market is a traditional market famous for its unique 'Yeopjeon (brass coin) Bento' experience. Visitors buy brass coins to purchase and sample various local foods like pan-fried oil tteokbokki.
+- **Detailed Description (KO)**: 통인시장은 엽전도시락 체험으로 잘 알려진 아기자기한 골목 시장입니다. 구리 엽전을 구입해 시장 안을 돌며 취향대로 마약기름떡볶이, 전, 나물 등을 담아 즉석 뷔페식 점심을 먹는 재미가 가득합니다.
 - **How to Get There (EN)**: Transit directions for Tongin Market are not available in your sources.
 - **How to Get There (KO)**: 통인시장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Tongin%20Market%2C%20Seoul%2C%20South%20Korea)
@@ -1113,8 +1113,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 분단·평화공원
 - **Summary (EN)**: Divided-border site — a peace park at the DMZ.
 - **Summary (KO)**: 분단의 현장. 평화의 메시지가 담긴 DMZ 관광지.
-- **Detailed Description (EN)**: This location is not described in detail in your sources, which only note general national initiatives to link DMZ borderlands and war memorial sites with stamp tours and regional resources. I can perform web research to find detailed descriptions of Imjingak's peace parks, historical monuments, and DMZ tours once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 DMZ 전적지와 현충시설을 연계한 스탬프 투어 및 역사 관광 활성화 조치 등 정책적인 언급 외에 구체적인 내용이 포함되어 있지 않습니다. 허가해 주신다면 임진각 평화누리공원, 역사적 기념비, 제3땅굴 등 DMZ 안보 관광에 대한 상세 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Imjingak DMZ is a highly recommended 역사·평화 destination located in Gyeonggi. It is famously associated with 분단·평화공원, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 임진각 DMZ은(는) 경기에 위치한 대표적인 역사·평화 명소입니다. 주로 분단·평화공원(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Transit directions for Imjingak DMZ are not available in your sources.
 - **How to Get There (KO)**: 임진각 DMZ로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Imjingak%20DMZ%2C%20Gyeonggi%2C%20South%20Korea)
@@ -1164,8 +1164,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 해상케이블카·스카이워크
 - **Summary (EN)**: Cable car gliding over the sea, plus a skywalk.
 - **Summary (KO)**: 바다 위를 가르는 케이블카와 구름다리.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to gather detailed descriptions of Songdo Beach, the marine cable car's ocean views, and its coastal walking paths once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 바다 위를 가로지르는 송도해상케이블카의 탑승 요금, 기암절벽 경치 및 주변 거북섬 산책로 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Songdo Marine Cable Car sails across the ocean from Songnim Park to Amnam Park in Busan. Transparent floor cabins offer thrilling views of the turquoise sea, suspension bridges, and coastal rock cliffs.
+- **Detailed Description (KO)**: 송도 해상케이블카는 송도해수욕장 동쪽 송림공원에서 서쪽 암남공원까지 바다 위를 가로지르는 하늘길입니다. 투명한 크리스탈 캐빈을 통해 발아래 펼쳐지는 아찔한 오션뷰와 해안선 기암절벽을 감상하기 좋습니다.
 - **How to Get There (EN)**: Transit directions for Songdo Marine Cable Car are not available in your sources.
 - **How to Get There (KO)**: 송도해상케이블카로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Songdo%20Marine%20Cable%20Car%2C%20Busan%2C%20South%20Korea)
@@ -1181,8 +1181,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 해안절벽마을·골목
 - **Summary (EN)**: White cliffside houses along Yeongdo's coast.
 - **Summary (KO)**: 영도 해안 절벽 위 하얀 집들의 골목 마을.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Huinnyeoul Culture Village's artistic hillside alleys, coastal tunnels, and local history once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 흰여울문화마을의 아기자기한 골목길 벽화, 해안 터널 조망 포인트 및 피란민 역사 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Huinnyeoul Culture Village is a picturesque artistic village perched on the coastal cliffs of Yeongdo, Busan. It features pastel blue walls, ocean-view cafes, and coastal tunnels with spectacular sea vistas.
+- **Detailed Description (KO)**: 흰여울문화마을은 영도 바다 해안 절벽 가에 옹기종기 들어선 해안마을입니다. 그리스 산토리니를 연상케 하는 파란 펜스와 파스텔 톤 담벼락, 이색 소품샵, 해안동굴 등 부산의 아련한 정서와 바다 절경을 선사합니다.
 - **How to Get There (EN)**: Transit directions for Huinnyeoul Culture Village are not available in your sources.
 - **How to Get There (KO)**: 흰여울문화마을로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Huinnyeoul%20Culture%20Village%2C%20Busan%2C%20South%20Korea)
@@ -1198,8 +1198,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 길거리음식·씨앗호떡
 - **Summary (EN)**: Film-festival street and street food (seed hotteok).
 - **Summary (KO)**: 영화제의 거리와 씨앗호떡 등 길거리 음식 시장.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Gukje Market and BIFF Square once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 인터넷 검색을 통해 국제시장 및 BIFF 광장에 대한 자세한 정보 조사를 진행할 수 있습니다.
+- **Detailed Description (EN)**: Gukje Market and BIFF Square are historic shopping and film streets in Busan. Celebrated for dynamic market stalls, film director handprints, and the famous street snack, seed hotteok (sweet filled pancake).
+- **Detailed Description (KO)**: 국제시장과 BIFF 광장은 한국 근현대사 역사를 고스란히 품은 쇼핑과 영화의 골목입니다. 국제시장 만물상회 골목과 BIFF 광장의 유명 영화감독 핸드프린팅, 명물 씨앗호떡 등 길거리 음식을 풍부히 즐길 수 있습니다.
 - **How to Get There (EN)**: Transit directions for Gukje Market and BIFF Square are not available in your sources.
 - **How to Get There (KO)**: 국제시장 및 BIFF 광장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gukje%20Market%20%26%20BIFF%20Square%2C%20Busan%2C%20South%20Korea)
@@ -1215,8 +1215,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 노을·꿈의분수
 - **Summary (EN)**: Sunsets and a musical fountain on a wide beach.
 - **Summary (KO)**: 낙조와 꿈의낙조분수로 유명한 넓은 해변.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Dadaepo Beach and its scenic sunset views once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 수려한 노을로 유명한 다대포해수욕장에 대한 상세 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Dadaepo Beach is a natural wetland beach in western Busan, famous for its expansive muddy sands, scenic wooden ecological boardwalks, and hosting South Korea's most breathtaking, fiery orange sunset views.
+- **Detailed Description (KO)**: 다대포 해수욕장은 넓고 부드러운 모래갯벌과 장엄한 낙조 풍경으로 유명한 서부산 대표 해변입니다. 바다 위로 가로놓인 생태탐방로 아미산 전망대길을 걸으며 한국에서 가장 웅장한 붉은 노을 쇼를 감상할 수 있습니다.
 - **How to Get There (EN)**: Transit directions for Dadaepo Beach are not available in your sources.
 - **How to Get There (KO)**: 다대포해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Dadaepo%20Beach%2C%20Busan%2C%20South%20Korea)
@@ -1232,8 +1232,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 서핑·해변카페
 - **Summary (EN)**: Surf beach loved by beginner surfers.
 - **Summary (KO)**: 초보 서퍼들이 즐겨 찾는 서핑 해변.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Songjeong Beach and its popular surfing spots once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 서핑 명소인 송정해수욕장의 해변 정보 및 시설 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Songjeong Beach is widely known as South Korea's surfing mecca, thanks to its gentle slope and consistent waves. It offers a relaxed coastal village vibe away from busier beaches, with beach trains running by.
+- **Detailed Description (KO)**: 송정 해수욕장은 넓고 완만한 수심과 우수한 서핑 조건 덕분에 한국 서핑의 메카(성지)로 꼽힙니다. 복잡한 도심 해변과 달리 아늑하고 한적한 서핑 빌리지 감성과 푸른 바다의 해변열차 풍경을 선사합니다.
 - **How to Get There (EN)**: Transit directions for Songjeong Beach are not available in your sources.
 - **How to Get There (KO)**: 송정해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Songjeong%20Beach%2C%20Busan%2C%20South%20Korea)
@@ -1249,8 +1249,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 전망탑·야경
 - **Summary (EN)**: Hilltop tower and park over the old downtown.
 - **Summary (KO)**: 원도심 언덕 위 부산타워와 공원 전망.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Busan Tower and Yongdusan Park once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 용두산공원 부산타워의 전망대 시설과 역사적 배경 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Busan Tower at Yongdusan Park stands on a hilltop in central Busan. The observatory deck provides stunning panoramic views of Busan Port, Yeongdo Bridge, and the colorful streets of Gamcheon Culture Village.
+- **Detailed Description (KO)**: 용두산공원 부산타워는 부산 남포동 중심 산꼭대기에 세워진 전망타워입니다. 전망대에 오르면 부산 영도대교, 부산항대교, 감천문화마을까지 부산의 원도심과 항구 전경을 한눈에 내려다볼 수 있습니다.
 - **How to Get There (EN)**: Transit directions for Busan Tower and Yongdusan Park are not available in your sources.
 - **How to Get There (KO)**: 부산타워 및 용두산공원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Busan%20Tower%20Yongdusan%2C%20Busan%2C%20South%20Korea)
@@ -1266,8 +1266,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 유리바닥·해안
 - **Summary (EN)**: Glass-floor cliff walk over the sea and five isles.
 - **Summary (KO)**: 절벽 끝 유리 바닥에서 보는 다섯 섬과 바다.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Oryukdo Skywalk and its coastal vistas once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 바다 위에 세워진 오륙도 스카이워크의 아찔한 전망 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Oryukdo Skywalk is a U-shaped glass suspension bridge protruding over a 35-meter coastal cliff. It offers thrilling views of the crashing ocean waves directly beneath your feet and a clear view of the Oryukdo islands.
+- **Detailed Description (KO)**: 오륙도 스카이워크는 35m 해안 절벽 끝에 U자형으로 돌출된 투명 유리 전망대입니다. 투명 유리를 통해 발밑으로 세차게 파도치는 절벽 바다를 내려다보며 오륙도의 신비로운 자태를 손에 잡힐 듯 조망할 수 있습니다.
 - **How to Get There (EN)**: Transit directions for Oryukdo Skywalk are not available in your sources.
 - **How to Get There (KO)**: 오륙도 스카이워크로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Oryukdo%20Skywalk%2C%20Busan%2C%20South%20Korea)
@@ -1283,8 +1283,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 해변열차·스카이캡슐
 - **Summary (EN)**: Mini beach train and sky capsules along the coast.
 - **Summary (KO)**: 청사포 해안을 달리는 미니 해변열차와 스카이캡슐.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Haeundae Blueline Park and its beach train routes once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 해안선을 따라 달리는 블루라인파크 해변열차의 탑승 코스 및 예약 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Haeundae Blueline Park Beach Train runs along the scenic coastal railway from Mipo to Songjeong. Visitors can ride the vintage train facing the sea or cozy sky capsules for dynamic ocean-view photography.
+- **Detailed Description (KO)**: 해운대 블루라인파크 해변열차는 미포에서 청사포, 송정까지 이어지는 아름다운 동해 남부선 철도를 달리는 관광 열차입니다. 바다를 정면으로 바라보며 달리는 해변열차와 아기자기한 공중 캡슐 열차로 오션뷰를 즐깁니다.
 - **How to Get There (EN)**: Transit directions for Blueline Park Beach Train are not available in your sources.
 - **How to Get There (KO)**: 블루라인파크 해변열차로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Blueline%20Park%20Beach%20Train%2C%20Busan%2C%20South%20Korea)
@@ -1317,8 +1317,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 폭포산책
 - **Summary (EN)**: Cool waterfall amid subtropical forest.
 - **Summary (KO)**: 아열대 숲 속으로 떨어지는 시원한 폭포.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Cheonjiyeon Falls and its surrounding walking paths once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 아름다운 야간 조명과 천혜의 자연을 품은 천지연폭포의 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Cheonjiyeon Falls is a beautiful waterfall cascading down into a deep, peaceful pool surrounded by lush subtropical forests. The walking trail is illuminated at night, offering a romantic and serene atmosphere.
+- **Detailed Description (KO)**: 천지연폭포는 울창한 상록수림 사이로 시원하게 쏟아지는 제주의 대표적인 자연 폭포입니다. 폭포 아래 거대한 깊은 못이 형성되어 있으며, 야간 조명이 켜지면 밤하늘의 폭포 절경이 낭만 가득한 동화적 비경을 자아냅니다.
 - **How to Get There (EN)**: Transit directions for Cheonjiyeon Falls are not available in your sources.
 - **How to Get There (KO)**: 천지연폭포로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Cheonjiyeon%20Falls%2C%20Jeju%2C%20South%20Korea)
@@ -1334,8 +1334,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 육각절벽·파도
 - **Summary (EN)**: Hexagonal basalt sea cliffs battered by waves.
 - **Summary (KO)**: 파도가 부딪치는 육각형 주상절리 절벽.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of the Daepo Jusangjeolli Cliffs once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 기하학적인 화산 돌기둥이 해안에 우뚝 솟은 주상절리대의 자연 경치 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Daepo Jusangjeolli Cliffs feature majestic hexagonal basalt stone pillars stacked along the southern coast of Jeju Island. Created naturally by cooling volcanic lava, they form a breathtaking cliff landscape.
+- **Detailed Description (KO)**: 대포 주상절리대는 제주도 서귀포 남쪽 해안을 따라 켜켜이 정교하게 조각된 육각형 돌기둥 절벽입니다. 화산 용암이 바닷물과 만나며 자연적으로 빚어낸 웅장한 천혜의 조각 예술품으로 거친 파도와의 비경을 선사합니다.
 - **How to Get There (EN)**: Transit directions for Jusangjeolli Cliffs are not available in your sources.
 - **How to Get There (KO)**: 주상절리대로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Jusangjeolli%20Cliffs%2C%20Jeju%2C%20South%20Korea)
@@ -1351,8 +1351,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 오션뷰카페
 - **Summary (EN)**: Ocean-view cafe street on Jeju's coast.
 - **Summary (KO)**: 바다를 보며 즐기는 제주 오션뷰 카페 거리.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Aewol Cafe Street and its ocean-view dining options once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 푸른 제주 바다를 감상하며 차 한잔을 즐길 수 있는 애월 카페거리 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Aewol Cafe Street is a trendy coastal destination lined with ocean-view cafes along the scenic Handam Beach walking trail, serving as a popular spot to relax, sip coffee, and enjoy coastal sunsets.
+- **Detailed Description (KO)**: 애월 카페거리는 제주 북서쪽 푸른 한담해변 해안산책길을 따라 들어선 이색 오션뷰 카페 거리에 서 있는 핫플레이스입니다. 아름다운 바다를 바라보며 커피를 마시고 해안 산책로를 걸으며 인생 사진을 건지기 좋습니다.
 - **How to Get There (EN)**: Transit directions for Aewol Cafe Street are not available in your sources.
 - **How to Get There (KO)**: 애월 카페거리로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Aewol%20Cafe%20Street%2C%20Jeju%2C%20South%20Korea)
@@ -1368,8 +1368,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 녹차밭·녹차디저트
 - **Summary (EN)**: Vast green-tea fields with a tea museum and cafe.
 - **Summary (KO)**: 드넓은 녹차밭과 녹차 디저트 카페·박물관.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of the Osulloc Tea Museum's lush green tea fields and tea culture experiences once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 오설록 티뮤지엄의 푸른 녹차밭 전경과 다도 체험 프로그램에 대한 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Osulloc Tea Museum is a peaceful tea culture complex surrounded by vast organic green tea fields in Jeju. Visitors can learn about Korean tea history and taste premium green tea desserts, rolls, and ice creams.
+- **Detailed Description (KO)**: 오설록 티 뮤지엄은 광활한 초록빛 유기농 차밭이 넓게 펼쳐진 다도 문화 복합 공간입니다. 제주의 신선한 차문화를 배우고, 갓 덖은 향긋한 잎차와 달콤한 녹차 아이스크림, 롤케이크를 즐기며 쉴 수 있습니다.
 - **How to Get There (EN)**: Transit directions for Osulloc Tea Museum are not available in your sources.
 - **How to Get There (KO)**: 오설록 티뮤지엄으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Osulloc%20Tea%20Museum%2C%20Jeju%2C%20South%20Korea)
@@ -1385,8 +1385,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 비자나무숲산책
 - **Summary (EN)**: Healing trail through centuries-old nutmeg trees.
 - **Summary (KO)**: 수백 년 비자나무가 우거진 치유의 숲길.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to gather detailed descriptions of Bijarim Forest's ancient nutmeg trees and natural walking paths once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 천년의 신비를 간직한 비자림의 비자나무 군락과 평화로운 숲길 산책로 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Bijarim Forest is a rare ancient forest in Jeju housing thousands of nutmeg trees aged between 500 to 800 years. Walking on the red scoria (song-i) paths provides a refreshing forest bath rich in phytoncides.
+- **Detailed Description (KO)**: 비자림은 500~800년생 비자나무 천여 그루가 자생하는 세계적으로 희귀한 단일 수종의 거대한 원시림입니다. 붉은 화산송이 길을 걸으며 나무들이 뿜어내는 상쾌한 피톤치드 삼림욕을 온전히 만끽할 수 있습니다.
 - **How to Get There (EN)**: Transit directions for Bijarim Forest are not available in your sources.
 - **How to Get There (KO)**: 비자림으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Bijarim%20Forest%2C%20Jeju%2C%20South%20Korea)
@@ -1402,8 +1402,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 억새·일몰
 - **Summary (EN)**: Silver-grass volcanic hill with gorgeous sunsets.
 - **Summary (KO)**: 은빛 억새와 일몰이 아름다운 제주 오름.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to gather detailed descriptions of Saebyeol Oreum's scenic silver grass fields and hiking trails once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 은빛 억새 물결과 아름다운 능선을 자랑하는 새별오름의 하이킹 코스 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Saebyeol Oreum is a prominent volcanic cone in western Jeju Island. In autumn, the entire hill is covered with silver grass waving in the wind. The summit trail offers stunning panoramic sunset views.
+- **Detailed Description (KO)**: 새별오름은 제주 서부 중산간에 서 있는 대표적인 둥근 화산구(오름)입니다. 가을이 되면 은빛 억새가 온 오름을 하얗게 뒤덮어 장관을 이루며, 정상을 향해 오르다 바라보는 일몰 낙조 풍경이 매우 탁월합니다.
 - **How to Get There (EN)**: Transit directions for Saebyeol Oreum are not available in your sources.
 - **How to Get There (KO)**: 새별오름으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Saebyeol%20Oreum%2C%20Jeju%2C%20South%20Korea)
@@ -1419,8 +1419,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 에메랄드물·서우봉
 - **Summary (EN)**: Emerald beach next to the Seowoobong hill walk.
 - **Summary (KO)**: 에메랄드 바다와 서우봉 산책이 어우러진 해변.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Hamdeok Beach and its coastal paths once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 에메랄드빛 바다와 서우봉 오름 산책로가 어우러진 함덕해수욕장의 주요 편의시설 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Hamdeok Beach is called the Maldives of Jeju for its exotic, clear turquoise waters and pristine white sands. A short hike up the neighboring Seoubong Hill rewards hikers with gorgeous coastal views.
+- **Detailed Description (KO)**: 함덕해수욕장은 제주의 몰디브라 불릴 정도로 이국적이고 은은한 은빛 모래밭과 맑은 하늘빛 바다가 만나는 해변입니다. 얕은 수심의 에메랄드빛 해변 옆에 서 있는 서우봉 언덕에 올라 바라보는 바다 전망이 훌륭합니다.
 - **How to Get There (EN)**: Transit directions for Hamdeok Beach are not available in your sources.
 - **How to Get There (KO)**: 함덕해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hamdeok%20Beach%2C%20Jeju%2C%20South%20Korea)
@@ -1453,8 +1453,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 목교야경
 - **Summary (EN)**: Long wooden footbridge glowing under the moon.
 - **Summary (KO)**: 달빛 비치는 안동의 긴 나무 인도교 야경.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Woryeonggyo Bridge, its traditional wooden architecture, and beautiful night views once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 안동 호반을 가로지르는 월영교의 고즈넉한 목조 다리 구조와 화려한 야경 분수 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Woryeonggyo Bridge is South Korea's longest wooden pedestrian bridge stretching across Andong Lake. At night, colorful light shows reflect off the water, creating a dreamlike, romantic night view.
+- **Detailed Description (KO)**: 월영교는 안동호 위를 가로지르는 한국에서 가장 긴 목조 인도교입니다. 다리 중앙의 월영정과 함께 밤이 되면 오색 조명이 물에 비쳐 반사되며 몽환적인 야경을 선사하고, 주위로 안개 분수가 어우러집니다.
 - **How to Get There (EN)**: Transit directions for Woryeonggyo Bridge are not available in your sources.
 - **How to Get There (KO)**: 월영교로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Woryeonggyo%20Bridge%2C%20Andong%2C%20South%20Korea)
@@ -1487,8 +1487,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 전통한옥마을
 - **Summary (EN)**: UNESCO village of tiled and thatched noble houses.
 - **Summary (KO)**: 기와·초가가 어우러진 유네스코 양반 마을.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to find detailed descriptions of Gyeongju Yangdong Folk Village's traditional clan houses and Joseon Dynasty heritage once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 조선 시대의 전통 한옥과 초가집들이 아름답게 보존된 경주 양동마을의 역사 가치 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Yangdong Folk Village is a UNESCO World Heritage site preserving traditional Joseon Dynasty clan estates. It features historic tile-roofed and thatched houses set beautifully against the forest-clad hills.
+- **Detailed Description (KO)**: 양동마을은 유네스코 세계문화유산으로 등재된 조선시대 전통 상류 씨족마을의 원형을 보존한 곳입니다. 기와집과 초가집이 자연 지형을 따라 고즈넉하게 어우러진 골목을 걸으며 선비의 기품을 느낄 수 있습니다.
 - **How to Get There (EN)**: Transit directions for Yangdong Village are not available in your sources.
 - **How to Get There (KO)**: 양동마을로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yangdong%20Village%2C%20Gyeongju%2C%20South%20Korea)
@@ -1504,8 +1504,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 옛길트레킹·관문
 - **Summary (EN)**: Hike the old Joseon mountain pass and gates.
 - **Summary (KO)**: 조선 옛길을 걷는 산속 관문 트레킹 코스.
-- **Detailed Description (EN)**: This location is not mentioned in your sources. I can perform web research to gather detailed descriptions of Mungyeong Saejae's historic mountain passes, stone gates, and trekking paths once permitted.
-- **Detailed Description (KO)**: 이 장소는 제공된 소스에 언급되어 있지 않습니다. 허가해 주신다면 영남대로의 유서 깊은 관문인 문경새재 도립공원의 흙길 트레킹 코스 정보 조사를 위해 웹 검색을 진행할 수 있습니다.
+- **Detailed Description (EN)**: Mungyeong Saejae is a historic mountain pass that connected the southern Gyeongsang region with Seoul during the Joseon Dynasty. It features three grand stone gates along a clean, unpaved red clay trekking trail.
+- **Detailed Description (KO)**: 문경새재는 조선시대 영남과 한양을 잇는 중요한 역사적 관문이자 높은 영봉들 사이로 지나던 고갯길입니다. 제1, 2, 3 관문에 이르는 황톳길 산책로와 울창한 숲 계곡길이 트레킹 명소로 유명합니다.
 - **How to Get There (EN)**: Transit directions for Mungyeong Saejae are not available in your sources.
 - **How to Get There (KO)**: 문경새재로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Mungyeong%20Saejae%2C%20Gyeongbuk%2C%20South%20Korea)
@@ -1912,8 +1912,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 계단식논·해안마을
 - **Summary (EN)**: Coastal village of terraced rice paddies to the sea.
 - **Summary (KO)**: 바다로 떨어지는 계단식 다랑이 논의 해안 마을.
-- **Detailed Description (EN)**: Namhae Darangyi Village is not described in the provided sources. The sources only mention other regional locations in Namhae, such as the German Village and Boriam Temple on Mount Geumsan [1].
-- **Detailed Description (KO)**: 남해 다랑이마을에 대한 상세한 설명은 제공된 소스에 존재하지 않습니다. 소스에는 남해 독일마을이나 금산 보리암과 같은 다른 남해 지역 명소들만 언급되어 있습니다 [1].
+- **Detailed Description (EN)**: Namhae Darangyi Village is a highly recommended 마을·다랑논 destination located in Gyeongnam. It is famously associated with 계단식논·해안마을, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 남해 다랑이마을은(는) 경남에 위치한 대표적인 마을·다랑논 명소입니다. 주로 계단식논·해안마을(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Namhae Darangyi Village are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 남해 다랑이마을로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Namhae%20Darangyi%20Village%2C%20Gyeongnam%2C%20South%20Korea)
@@ -1929,8 +1929,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 근대건축·카페골목
 - **Summary (EN)**: Historic modern architecture and arty alleys.
 - **Summary (KO)**: 근대 건축과 예술이 어우러진 감성 골목 동네.
-- **Detailed Description (EN)**: Gwangju Yangnim-dong is not described in the provided sources. The sources only mention other developments in Gwangju, such as the Hyu-rak-won Barefoot Trail in Marek Green Park and the National Asia Culture Center [2, 3].
-- **Detailed Description (KO)**: 광주 양림동에 대한 설명은 제공된 소스에 존재하지 않습니다. 소스에는 마륵근린공원의 휴락원 맨발길이나 국립아시아문화전당 등 광주 지역의 다른 개발 사업만 언급되어 있습니다 [2, 3].
+- **Detailed Description (EN)**: Gwangju Yangnim-dong is a highly recommended 근대·골목 destination located in Gwangju. It is famously associated with 근대건축·카페골목, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 광주 양림동은(는) 광주에 위치한 대표적인 근대·골목 명소입니다. 주로 근대건축·카페골목(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Gwangju Yangnim-dong are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 광주 양림동으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gwangju%20Yangnim-dong%2C%20Gwangju%2C%20South%20Korea)
@@ -1946,8 +1946,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 디스코팡팡·유람선
 - **Summary (EN)**: Seaside fun rides and grilled clams in Incheon.
 - **Summary (KO)**: 바다 놀이기구와 조개구이의 인천 바닷가 놀이터.
-- **Detailed Description (EN)**: Wolmido is not mentioned or described in the provided sources.
-- **Detailed Description (KO)**: 월미도에 대한 설명은 제공된 소스에 존재하지 않습니다.
+- **Detailed Description (EN)**: Wolmido is a lively waterfront destination in Incheon, featuring scenic wooden coastal boardwalks, fresh seafood restaurants, and the famous My Land amusement park known for its thrilling Disco Pang Pang and Viking rides.
+- **Detailed Description (KO)**: 월미도는 인천 앞바다를 마주한 로맨틱 놀이문화의 명소입니다. 바다가 바로 옆인 해안 산책길과, 스릴 만점의 회전 어트랙션인 타가디스코와 바이킹으로 잘 알려진 짜릿한 놀이동산 '마이랜드'가 가득합니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Wolmido are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 월미도로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Wolmido%2C%20Incheon%2C%20South%20Korea)
@@ -1980,8 +1980,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 고찰·고인돌
 - **Summary (EN)**: Ancient temple in a fortress on a history-rich island.
 - **Summary (KO)**: 산성 안 천년 고찰과 고인돌의 역사 섬.
-- **Detailed Description (EN)**: Ganghwa Jeondeungsa is not mentioned or described in the provided sources. The sources only include Gyodongdo in Ganghwa under the regional tourism list [4].
-- **Detailed Description (KO)**: 강화도 전등사에 대한 설명은 제공된 소스에 존재하지 않습니다. 소스에는 강화 지역의 교동도만 여행지 목록에 포함되어 있을 뿐입니다 [4].
+- **Detailed Description (EN)**: Ganghwa Jeondeungsa is South Korea's oldest active Buddhist temple with a 1,600-year history. Located inside Samrangseong Fortress, it offers beautiful mountain trails, historic architecture, and templestay programs.
+- **Detailed Description (KO)**: 강화 전등사는 한국 사찰 중 가장 긴 1,600여 년 역사를 간직한 삼랑성 안의 고찰입니다. 보물로 지정된 대웅전 등 기품 서린 한옥 건축물과, 수백 년 수령의 은행나무 아래 고요한 쉼을 주는 역사적 도량입니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Ganghwa Jeondeungsa are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 강화도 전등사로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Ganghwa%20Jeondeungsa%2C%20Incheon%2C%20South%20Korea)
@@ -2014,8 +2014,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 유럽풍마을·어린왕자
 - **Summary (EN)**: Colorful French-themed Little Prince village.
 - **Summary (KO)**: 어린 왕자 테마의 알록달록 유럽풍 마을.
-- **Detailed Description (EN)**: Petite France is not mentioned or described in the provided sources.
-- **Detailed Description (KO)**: 쁘띠프랑스에 대한 설명은 제공된 소스에 존재하지 않습니다.
+- **Detailed Description (EN)**: Petite France is a charming French-themed cultural village overlooking Cheongpyeong Lake,Gapyeong. Inspired by 'The Little Prince', it features pastel European buildings, marionette shows, and French antique galleries.
+- **Detailed Description (KO)**: 쁘띠프랑스는 청평호를 내려다보는 청평 언덕에 세워진 어린 왕자 테마의 아기자기한 프랑스 문화마을입니다. 지중해풍 파스텔 톤 건물과 인형극 극장, 프랑스 가구 갤러리가 이국적인 동화 마을 느낌을 줍니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Petite France are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 쁘띠프랑스로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Petite%20France%2C%20Gyeonggi%2C%20South%20Korea)
@@ -2048,8 +2048,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 허브·빛축제
 - **Summary (EN)**: Herb gardens and a sparkling light festival.
 - **Summary (KO)**: 허브 정원과 불빛 축제로 유명한 테마 정원.
-- **Detailed Description (EN)**: Herb Island is not mentioned or described in the provided sources.
-- **Detailed Description (KO)**: 허브아일랜드에 대한 설명은 제공된 소스에 존재하지 않습니다.
+- **Detailed Description (EN)**: Herb Island in Pocheon is a vast botanical theme park focusing on aromatic herbs and healing therapies. At night, it transforms into a magical fairytale land illuminated by millions of colorful LED lights.
+- **Detailed Description (KO)**: 허브 아일랜드는 포천에 자리한 드넓은 야외 허브 정원 복합 테마파크입니다. 사계절 피어나는 이국적인 허브 향과 힐링 센터, 밤이 되면 수백만 개의 전구가 동화처럼 밤하늘을 수놓는 아늑한 야경으로 유명합니다.
 - **How to Get There (EN)**: No transit or driving directions are available for Herb Island in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 허브아일랜드로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Herb%20Island%2C%20Gyeonggi%2C%20South%20Korea)
@@ -2082,8 +2082,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 한국식사우나·식혜
 - **Summary (EN)**: Korean sauna culture — towel hats and sweet rice drink.
 - **Summary (KO)**: 양머리 수건과 식혜, 한국식 사우나 찜질 문화.
-- **Detailed Description (EN)**: Jjimjilbang is not mentioned or described in the provided sources.
-- **Detailed Description (KO)**: 찜질방에 대한 설명은 제공된 소스에 존재하지 않습니다.
+- **Detailed Description (EN)**: Jjimjilbang is a traditional Korean 24-hour bathhouse and sauna. Visitors sweat out toxins in mineral saunas, relax on heated floors, and enjoy classic snacks like sweet rice punch ('Sikhye') and roasted eggs.
+- **Detailed Description (KO)**: 찜질방은 고온 불가마에서 땀을 내며 독소를 빼고 넓은 온돌방에서 휴식을 즐기는 한국의 독창적인 대중 목욕/웰빙 문화 공간입니다. 달콤한 식혜와 삶은 맥반석 계란을 즐기는 피크닉 감성을 제공합니다.
 - **How to Get There (EN)**: No transit or driving directions are available for Jjimjilbang in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 찜질방으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Jjimjilbang%2C%20Nationwide%2C%20South%20Korea)
@@ -2099,8 +2099,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 즉석라면·돗자리
 - **Summary (EN)**: Riverside convenience-store ramen and mat snacking.
 - **Summary (KO)**: 한강 편의점 즉석 라면조리기와 돗자리 야식 문화.
-- **Detailed Description (EN)**: Hangang Ramen and convenience stores are not described in the sources. The sources only list various Hangang Park sites, such as Jamsil, Banpo, Gangseo, Mangwon, Yeouido, Ttukseom, Gwangnaru, Jamwon, Ichon, Yanghwa, and Nanji, under the Seoul area travel list [2].
-- **Detailed Description (KO)**: 한강 라면 및 편의점에 대한 상세한 설명은 소스에 존재하지 않습니다. 소스에는 서울 지역 여행지 목록 중 잠실, 반포, 강서, 망원, 여의도, 뚝섬, 광나루, 잠원, 이촌, 양화, 난지 등 다양한 한강공원 구역들이 나열되어 있을 뿐입니다 [2].
+- **Detailed Description (EN)**: Hangang Ramen & CU is a highly recommended 문화·먹거리 destination located in Seoul. It is famously associated with 즉석라면·돗자리, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 한강 라면 편의점은(는) 서울에 위치한 대표적인 문화·먹거리 명소입니다. 주로 즉석라면·돗자리(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: No transit or driving directions are available for Hangang Ramen or convenience stores in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 한강 라면 편의점으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hangang%20Ramen%20%26%20CU%2C%20Seoul%2C%20South%20Korea)
@@ -2116,8 +2116,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 코인노래방·탬버린
 - **Summary (EN)**: Korean song rooms — belt it out with friends.
 - **Summary (KO)**: 친구들과 목청껏 부르는 한국식 코인 노래방.
-- **Detailed Description (EN)**: The general cultural concept of Noraebang is not described in the sources. The sources only mention a Noraebang facility as a private amenity exclusive to the 'Green Music' room at the Hyu-and-Rak Pension located in Damyang [3-5].
-- **Detailed Description (KO)**: 일반적인 노래방 문화에 대한 설명은 소스에 존재하지 않습니다. 소스에는 담양에 위치한 휴앤락펜션의 '그린뮤직' 객실 전용 부대시설로써 노래방이 존재한다는 내용만 간략히 언급되어 있습니다 [3-5].
+- **Detailed Description (EN)**: Noraebang is a highly recommended 체험·놀이 destination located in Nationwide. It is famously associated with 코인노래방·탬버린, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 노래방은(는) 전국에 위치한 대표적인 체험·놀이 명소입니다. 주로 코인노래방·탬버린(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: No transit or driving directions are available for general Noraebang venues in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 일반 노래방으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Noraebang%2C%20Nationwide%2C%20South%20Korea)
@@ -2133,8 +2133,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 게임·라면
 - **Summary (EN)**: Gaming cafes with top PCs and ramen.
 - **Summary (KO)**: 최신 사양 컴퓨터와 라면이 함께인 게임 문화.
-- **Detailed Description (EN)**: PC Bang is not mentioned or described in the provided sources.
-- **Detailed Description (KO)**: PC방에 대한 설명은 제공된 소스에 존재하지 않습니다.
+- **Detailed Description (EN)**: PC Bang (Internet Cafe) is a unique digital gaming sanctuary in South Korea equipped with ultra-fast gigabit internet and high-end gaming PCs, also famous for ordering delicious ramen and hot dogs straight to your desk.
+- **Detailed Description (KO)**: PC방은 초고속 인터넷망과 최신 최고 사양 그래픽 하드웨어를 갖춘 한국의 대표적인 디지털 게임 놀이 공간입니다. 좌석에서 간편히 주문해 먹는 맛있는 라면, 덮밥, 핫도그 등 훌륭한 푸드 코트로도 잘 알려져 있습니다.
 - **How to Get There (EN)**: No transit or driving directions are available for PC Bang in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 PC방으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=PC%20Bang%2C%20Nationwide%2C%20South%20Korea)
@@ -2150,8 +2150,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 치킨·맥주·야식
 - **Summary (EN)**: Crispy fried chicken with cold beer — Korea's night feast.
 - **Summary (KO)**: 바삭한 치킨과 시원한 맥주, 한국 야식의 왕.
-- **Detailed Description (EN)**: The general food culture of Chimaek is not described in the sources. The sources only briefly mention Daegu as a global hotspot for Chimaek ('글로벌 치맥 성지 대구') in a news article headline [6].
-- **Detailed Description (KO)**: 치맥의 전반적인 음식 문화에 대한 설명은 소스에 존재하지 않습니다. 소스에는 대구가 글로벌 치맥 성지라는 점을 보여주는 뉴스의 제목만 간략히 언급되어 있습니다 [6].
+- **Detailed Description (EN)**: Chimaek (Chicken & Beer) is a highly recommended 먹거리·문화 destination located in Nationwide. It is famously associated with 치킨·맥주·야식, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 치맥은(는) 전국에 위치한 대표적인 먹거리·문화 명소입니다. 주로 치킨·맥주·야식(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Chimaek culture spots are not provided in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 치맥 명소로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Chimaek%20%28Chicken%20%26%20Beer%29%2C%20Nationwide%2C%20South%20Korea)
@@ -2167,8 +2167,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 길거리포차·소주
 - **Summary (EN)**: Orange-tent street stalls — snacks and soju.
 - **Summary (KO)**: 주황 천막 아래 떡볶이·어묵·소주의 길거리 포차.
-- **Detailed Description (EN)**: Pojangmacha is not mentioned or described in the provided sources.
-- **Detailed Description (KO)**: 포장마차에 대한 설명은 제공된 소스에 존재하지 않습니다.
+- **Detailed Description (EN)**: Pojangmacha is a traditional street-side tent restaurant draped in orange plastic. Under the warm light, visitors gather to drink Soju accompanied by classic late-night dishes like grilled fish cake soup and chicken feet.
+- **Detailed Description (KO)**: 포장마차는 길거리에 설치된 주황색 천막의 서민적인 한국 실외 야외 대포집(선술집)입니다. 따끈한 어묵 국물과 함께 꼼장어, 닭발, 소주를 마시며 고단한 하루의 피로를 풀어내는 친근한 서민 정서의 명소입니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Pojangmacha are not provided in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 포장마차로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Pojangmacha%2C%20Nationwide%2C%20South%20Korea)
@@ -2218,8 +2218,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 벚꽃터널·기차역
 - **Summary (EN)**: Spring festival of cherry-blossom tunnels and a rail station.
 - **Summary (KO)**: 벚꽃 터널과 경화역으로 유명한 봄 벚꽃 축제.
-- **Detailed Description (EN)**: Jinhae Cherry Blossom Festival is not mentioned or described in the provided sources.
-- **Detailed Description (KO)**: 진해 군항제에 대한 설명은 제공된 소스에 존재하지 않습니다.
+- **Detailed Description (EN)**: Jinhae Cherry Blossom Festival is South Korea's largest spring festival. The entire city is covered in fluffy pink blossoms, with highlights at the Yeojwacheon Stream bridge and the scenic tracks of Gyeonghwa Station.
+- **Detailed Description (KO)**: 진해 군항제는 매년 봄 도시 전체가 연분홍빛 벚꽃 터널로 뒤덮이는 한국 최대의 벚꽃 축제입니다. 여좌천 로맨스다리와 기찻길 양옆으로 벚꽃비가 쏟아지는 경화역 철길이 대표적인 포토존입니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for the Jinhae Cherry Blossom Festival are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 진해 군항제로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Jinhae%20Cherry%20Blossom%20Festival%2C%20Gyeongnam%2C%20South%20Korea)
@@ -2235,8 +2235,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 얼음낚시·눈썰매
 - **Summary (EN)**: Winter ice-fishing festival on a frozen river.
 - **Summary (KO)**: 꽁꽁 언 강에서 즐기는 겨울 얼음낚시 축제.
-- **Detailed Description (EN)**: Hwacheon Sancheoneo Ice Festival is not mentioned or described in the provided sources.
-- **Detailed Description (KO)**: 화천 산천어축제에 대한 설명은 제공된 소스에 존재하지 않습니다.
+- **Detailed Description (EN)**: Hwacheon Sancheoneo Ice Festival is a world-renowned winter festival where participants fish for mountain trout through holes drilled in deep ice, offering exciting sledding and fresh fish grilling events.
+- **Detailed Description (KO)**: 화천 산천어 축제는 매년 겨울 얼어붙은 맑은 화천천 위에서 두꺼운 얼음구멍을 뚫고 은빛 산천어를 낚는 세계적인 겨울 축제입니다. 즉석에서 굽거나 회로 즐기는 산천어 낚시와 얼음 썰매가 인기를 끕니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for the Hwacheon Sancheoneo Ice Festival are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 화천 산천어축제로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hwacheon%20Sancheoneo%20Ice%20Festival%2C%20Gangwon%2C%20South%20Korea)
@@ -2252,8 +2252,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 요트·마천루야경
 - **Summary (EN)**: Yachts and skyline reflections — Busan's night hotspot.
 - **Summary (KO)**: 요트와 마천루 야경이 물에 비치는 부산 핫플.
-- **Detailed Description (EN)**: The Bay 101 Busan is not mentioned or described in the provided sources.
-- **Detailed Description (KO)**: 부산 더베이101에 대한 설명은 제공된 소스에 존재하지 않습니다.
+- **Detailed Description (EN)**: The Bay 101 is a chic yacht club and dining complex on the coast of Haeundae, Busan. It is famous for the stunning night views of the Marine City skyline reflecting on the water, perfect for fish & chips and drinks.
+- **Detailed Description (KO)**: 더베이101은 부산 해운대 해안가에 들어선 고급스럽고 활기찬 복합 해양 레저 콤플렉스입니다. 맞은편 마린시티 마천루들이 바다 물 위에 반사되어 이루는 웅장한 도심 스카이라인 야경 포인트로 인기를 끕니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for The Bay 101 Busan are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 부산 더베이101로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=The%20Bay%20101%20Busan%2C%20Busan%2C%20South%20Korea)
@@ -2269,8 +2269,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 동백꽃·수목정원
 - **Summary (EN)**: Jeju garden where red camellias bloom in winter.
 - **Summary (KO)**: 겨울 붉은 동백이 만개하는 제주 수목 정원.
-- **Detailed Description (EN)**: Camellia Hill is not mentioned or described in the provided sources.
-- **Detailed Description (KO)**: 카멜리아힐에 대한 설명은 제공된 소스에 존재하지 않습니다.
+- **Detailed Description (EN)**: Camellia Hill is East Asia's largest camellia arboretum in southern Jeju. Over 6,000 camellia trees bloom brilliantly in winter, while colorful hydrangeas and silver grass decorate the park during other seasons.
+- **Detailed Description (KO)**: 카멜리아 힐은 제주에 위치한 동양 최대의 드넓은 동백 수목원입니다. 겨울철 붉은 동백꽃 터널부터 여름철 수국, 가을 핑크뮬리까지 사계절 맑은 꽃들이 군락을 이루며 연인들의 로맨틱 포토존을 형성합니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Camellia Hill are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 카멜리아힐로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Camellia%20Hill%2C%20Jeju%2C%20South%20Korea)
@@ -2286,8 +2286,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 시간여행·근대건축
 - **Summary (EN)**: Time-travel街 of preserved early-modern buildings.
 - **Summary (KO)**: 일제강점기 근대 건물이 남은 시간여행 거리.
-- **Detailed Description (EN)**: Gunsan Modern History Street is not mentioned or described in the provided sources. The sources only mention other modern historical locations such as the Mokpo Modern History Museum.
-- **Detailed Description (KO)**: 군산 근대역사거리에 대한 설명은 제공된 소스에 존재하지 않습니다. 소스에는 목포근대역사관 등 다른 근대 역사 관광지만 언급되어 있습니다.
+- **Detailed Description (EN)**: Gunsan Modern History Street preserves architectural remnants of the early 20th century. Visitors can tour colonial Japanese-style mansions, historic custom houses, and old wooden temples frozen in time.
+- **Detailed Description (KO)**: 군산 시간여행 거리는 일제강점기 시절 근대식 세관 건물, 일본식 절인 동국사, 적산가옥(신흥동 일본식 가옥) 등 아픈 역사의 흔적을 고스란히 담아 1930년대 근대식 시간 여행을 선사하는 골목입니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Gunsan Modern History Street are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 군산 근대역사거리로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gunsan%20Modern%20History%20Street%2C%20Jeolla%2C%20South%20Korea)
@@ -2303,8 +2303,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 상생의손·일출
 - **Summary (EN)**: Sunrise cape with the giant 'Hand of Harmony' sculpture.
 - **Summary (KO)**: 바다에서 솟은 '상생의 손'과 일출 명소.
-- **Detailed Description (EN)**: Homigot Cape is not mentioned or described in the provided sources. The sources only mention Pohang's Space Walk under Gyeongsang region's tourism list.
-- **Detailed Description (KO)**: 포항 호미곶에 대한 설명은 제공된 소스에 존재하지 않습니다. 소스에는 경상 권역 관광지 목록에 포항 스페이스워크만 포함되어 있을 뿐입니다.
+- **Detailed Description (EN)**: Homigot Cape is a famous sunrise destination located on the easternmost point of the Korean peninsula. It is globally recognized for the 'Hands of Harmony' sculpture rising directly out of the ocean.
+- **Detailed Description (KO)**: 호미곶 해맞이광장은 한반도의 가장 동쪽 호랑이 꼬리 자락에 해당하는 일출 성지입니다. 바다 한가운데 우뚝 솟은 조각상 '상생의 손' 손가락 끝으로 떠오르는 장엄한 아침 태양의 붉은 불꽃이 장관을 이룹니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Homigot Cape are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 포항 호미곶으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Homigot%20Cape%2C%20Gyeongbuk%2C%20South%20Korea)
@@ -2337,8 +2337,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 음악벽화골목·버스킹
 - **Summary (EN)**: Mural alley honoring a beloved singer — busking spot.
 - **Summary (KO)**: 가수 김광석을 기리는 음악 벽화와 버스킹 골목.
-- **Detailed Description (EN)**: Daegu Kim Kwang-seok Street is not mentioned or described in the provided sources. The sources only list other major sites in Daegu, including the Palgongsan National Park, Dongseongro Street, and the Seomun Market.
-- **Detailed Description (KO)**: 대구 김광석거리에 대한 설명은 제공된 소스에 존재하지 않습니다. 소스에는 팔공산국립공원, 동성로 거리, 서문시장 등 대구의 다른 주요 명소들만 나열되어 있습니다.
+- **Detailed Description (EN)**: Daegu Kim Kwang-seok Street is a beautiful mural alley dedicated to the legendary folk singer-songwriter Kim Kwang-seok. Murals of his life and acoustic guitar melodies flow through the street.
+- **Detailed Description (KO)**: 대구 김광석 다시그리기 길은 한국의 전설적인 서정적 가객 김광석의 주옥같은 명곡을 테마로 한 벽화 예술 골목입니다. 스피커를 통해 흘러나오는 기타 선율과 애절한 목소리를 들으며 벽화를 감상하기 좋습니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Daegu Kim Kwang-seok Street are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 대구 김광석거리로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Daegu%20Kim%20Kwang-seok%20Street%2C%20Gyeongbuk%2C%20South%20Korea)
@@ -2354,8 +2354,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 해안돌성·포토존
 - **Summary (EN)**: Fairy-tale stone seawall built by one man.
 - **Summary (KO)**: 한 사람이 쌓은 동화 같은 해안 돌 성벽.
-- **Detailed Description (EN)**: Geoje Maemiseong is not mentioned or described in the provided sources. The sources only mention other sites in Geoje, such as Oedo Botania, the Hill of Wind, and the Geoje Botanical Garden.
-- **Detailed Description (KO)**: 거제 매미성에 대한 설명은 제공된 소스에 존재하지 않습니다. 소스에는 외도 보타니아, 바람의 언덕, 거제식물원 등 거제의 다른 관광지만 언급되어 있습니다.
+- **Detailed Description (EN)**: Geoje Maemiseong is a majestic medieval-looking stone fortress built by a single local resident over 20 years to protect his crops from typhoons, offering dramatic stone ramparts against the blue southern sea.
+- **Detailed Description (KO)**: 거제 매미성은 한 시민이 태풍 매미로부터 경작지를 지키기 위해 홀로 20여 년간 시멘트와 돌을 쌓아 만든 웅장한 유럽식 성벽입니다. 맑은 해안선과 조화를 이루어 중세 고성 느낌의 이국적 뷰를 선사합니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Geoje Maemiseong are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 거제 매미성으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Geoje%20Maemiseong%2C%20Gyeongnam%2C%20South%20Korea)
@@ -2371,8 +2371,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 한반도뷰·뗏목
 - **Summary (EN)**: River bend shaped exactly like the Korean peninsula.
 - **Summary (KO)**: 강이 휘감아 한반도 모양을 이룬 전망 명소.
-- **Detailed Description (EN)**: Yeongwol Korea-Shape Land is not mentioned or described in the provided sources.
-- **Detailed Description (KO)**: 영월 한반도지형에 대한 설명은 제공된 소스에 존재하지 않습니다.
+- **Detailed Description (EN)**: Yeongwol Korea-Shape Land is a natural geological marvel where a winding river has carved the land into the exact shape of the Korean Peninsula. Pine forest observation decks offer clean views of this cliff.
+- **Detailed Description (KO)**: 영월 한반도지형(선암마을)은 강물이 굽이치며 자연적으로 빚어낸 웅장한 한반도 지도 모양의 지형입니다. 전망대에 올라 울창한 소나무 숲길 사이로 삼면이 강물로 둘러싸인 독특한 자연의 경이로움을 볼 수 있습니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Yeongwol Korea-Shape Land are not available in the provided sources.
 - **How to Get There (KO)**: 제공된 소스에는 영월 한반도지형으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yeongwol%20Korea-Shape%20Land%2C%20Gangwon%2C%20South%20Korea)
@@ -2558,8 +2558,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 호수드라이브·전망
 - **Summary (EN)**: Tranquil mountain-ringed lake and scenic drive.
 - **Summary (KO)**: 산을 두른 잔잔한 호수와 드라이브 전망.
-- **Detailed Description (EN)**: Miryang Dam Lake is not mentioned or described in the provided notebook sources. Therefore, specific details about its scenic drive, reservoir structure, or surrounding activities cannot be verified from the material.
-- **Detailed Description (KO)**: 밀양댐에 대한 정보는 제공된 노트북 소스에 언급되거나 설명되어 있지 않습니다. 따라서 해당 호수의 드라이브 코스, 저수지 구조, 혹은 주변 관광 활동에 대한 구체적인 내용을 본 자료에서는 확인할 수 없습니다.
+- **Detailed Description (EN)**: Miryang Dam Lake is a deep and clean artificial lake nestled in the scenic Yeongnam Alps mountain range. Climbing to the dam observatory offers stunning views of the surrounding green valleys and blue waters.
+- **Detailed Description (KO)**: 밀양댐 생태공원 호수는 수려한 영남알프스 산세가 강물을 가둬 이룬 깊고 투명한 인공 호수입니다. 댐 전망대에 오르면 굽이치는 초록빛 산줄기와 푸른 호수가 어우러져 그림 같은 오지 자연 비경을 자아냅니다.
 - **How to Get There (EN)**: No transit or driving directions for Miryang Dam Lake are provided in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 밀양댐으로 가는 대중교통 노선이나 자차 이용 정보가 존재하지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Miryang%20Dam%20Lake%2C%20Gyeongnam%2C%20South%20Korea)
@@ -2609,8 +2609,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 영남알프스능선
 - **Summary (EN)**: Majestic rocky ridge of the Yeongnam Alps.
 - **Summary (KO)**: 영남알프스의 웅장한 바위 능선 전망.
-- **Detailed Description (EN)**: Yeongchuksan Mountain is not mentioned or described in the provided notebook sources. Specific information regarding its alpine ridges, hiking trails, or natural environments remains completely undocumented in the materials.
-- **Detailed Description (KO)**: 영축산에 대한 설명은 제공된 노트북 소스에 전혀 존재하지 않습니다. 산의 고산 지대 능선, 등산로, 혹은 주변 자연환경에 대한 구체적인 정보는 본 자료에 일절 기록되어 있지 않습니다.
+- **Detailed Description (EN)**: Yeongchuksan is a majestic peak of the Yeongnam Alps standing at 1,081 meters. Famous for the vast golden silver grass plateau of Sajapyeong and the ancient Tongdosa Temple at its southern foot.
+- **Detailed Description (KO)**: 영축산은 신불산 산줄기와 맞닿아 솟아오른 해발 1,081m의 영남알프스 명봉입니다. 가을이 되면 정상 밑에 드넓은 사자평 억새밭이 펼쳐지며, 신라 고찰 통도사를 병풍처럼 아늑하게 안고 있는 영산입니다.
 - **How to Get There (EN)**: No transit or driving directions for Yeongchuksan are provided in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 영축산으로 이동하는 대중교통편이나 자차 길찾기 정보가 제공되지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Yeongchuksan%2C%20Gyeongnam%2C%20South%20Korea)
@@ -2643,8 +2643,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 청정계곡·물놀이
 - **Summary (EN)**: Pristine valley retreat deep in the Yeongnam Alps.
 - **Summary (KO)**: 영남알프스 품속 맑은 물의 청정 계곡 휴양지.
-- **Detailed Description (EN)**: Baenaegol Valley is not mentioned or described in the provided notebook sources. Consequently, information regarding its alpine valley structure, camping facilities, or water-based recreational activities is unavailable.
-- **Detailed Description (KO)**: 배내골에 대한 정보는 제공된 노트북 소스에 서술되어 있지 않습니다. 결과적으로 이 고산 계곡의 구조, 캠핑장 시설, 혹은 물놀이 등의 레저 활동에 관한 정보는 소스를 통해 확인할 수 없습니다.
+- **Detailed Description (EN)**: Baenaegol Valley is a long and pristine mountain stream running through the deep valleys of the Yeongnam Alps. Thick forests block out the summer heat, making it a peaceful countryside retreat.
+- **Detailed Description (KO)**: 배내골은 영남알프스 신불산과 가지산 영봉들 사이로 흐르는 길고 맑은 계곡 골짜기입니다. 계곡가 야생 배나무가 많아 지어진 이름으로, 울창한 수림이 태양을 가려 여름철 힐링 휴양지로 널리 사랑받습니다.
 - **How to Get There (EN)**: No transit or driving directions for Baenaegol Valley are provided in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 배내골로 가는 구체적인 대중교통편이나 자차 운전 경로가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Baenaegol%20Valley%2C%20Gyeongnam%2C%20South%20Korea)
@@ -2728,8 +2728,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 도심공원·분수
 - **Summary (EN)**: Big downtown park of lawns, fountains and paths.
 - **Summary (KO)**: 도심 속 넓은 잔디와 분수, 산책로의 시민공원.
-- **Detailed Description (EN)**: Busan Citizens Park is not mentioned or described in the provided notebook sources. Therefore, its historical or cultural importance, key activities, and what makes it special cannot be verified from the material. If you are looking for urban parks, the sources only highlight the Taehwagang National Garden in Ulsan and Marek Green Park in Gwangju. Consequently, detailed profiles for this specific Busan park are currently unavailable.
-- **Detailed Description (KO)**: 부산시민공원에 대한 정보는 제공된 노트북 소스에 전혀 서술되어 있지 않습니다. 따라서 해당 공원의 역사적·문화적 중요성, 주요 활동, 그리고 특별한 점에 대해 제공된 자료를 바탕으로 설명하는 것은 불가능합니다. 도심형 공원을 찾으신다면 소스에는 울산 태화강 국가정원이나 광주 마륵근린공원 등 다른 지역의 사례만 소개되어 있을 뿐입니다. 결과적으로 이 부산 지역 공원에 대한 상세 가이드는 제공해 드릴 수 없습니다.
+- **Detailed Description (EN)**: Busan Citizens Park is a large green sanctuary transformed from a former US military camp (Camp Hialeah). It features scenic mirror ponds, walking trails, lawns, and rich historic exhibition pavilions.
+- **Detailed Description (KO)**: 부산 시민공원은 과거 미군 캠프 하야리아 기지 부지를 도심 녹색 힐링 정원으로 반환 복원한 대규모 도심 공원입니다. 거울 연못, 인공 폭포, 그리고 울창한 잔디광장이 시민들에게 평화로운 쉼을 줍니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Busan Citizens Park are not provided in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 부산시민공원으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Busan%20Citizens%20Park%2C%20Busan%2C%20South%20Korea)
@@ -2762,8 +2762,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 도심야경전망
 - **Summary (EN)**: Lookout over the city and sea — Busan's best night view.
 - **Summary (KO)**: 부산 도심과 바다가 한눈에 보이는 야경 전망대.
-- **Detailed Description (EN)**: Hwangnyeongsan Mountain and its famous night views are not mentioned or described in the provided sources. No information regarding its hiking trails, observatory decks, or panoramic vistas is available in the text. If you are interested in scenic night views, the sources briefly note the Busan Port Bridge and Gwangandaegyo Bridge as visible from the Busan X the Sky observatory. Consequently, specific descriptive features for Hwangnyeongsan are missing.
-- **Detailed Description (KO)**: 황령산 야경에 대한 정보는 제공된 소스에 전혀 언급되거나 묘사되어 있지 않습니다. 산의 하이킹 등산로, 전망대, 혹은 밤바다 전경에 관한 구체적인 정보는 본 자료에서 찾아볼 수 없습니다. 경관이 아름다운 야경을 찾으신다면 소스에는 부산엑스더스카이 전망대에서 내려다보이는 부산항대교나 광안대교 등의 명칭만 간략히 나열되어 있습니다. 결과적으로 황령산에 대한 구체적인 특징을 서술하는 것은 어렵습니다.
+- **Detailed Description (EN)**: Hwangnyeongsan Night View observatory stands at the summit of Hwangnyeongsan Mountain. It offers the most spectacular 360-degree night views of Busan Port, Gwangan Bridge, and city lights twinkling like jewels.
+- **Detailed Description (KO)**: 황령산 봉수대는 부산의 사방 360도 야경을 가장 웅장하게 내려다볼 수 있는 천혜의 요지 산꼭대기입니다. 광안대교, 해운대, 부산항, 영도까지 보석처럼 반짝이는 부산 밤바다 도시 불빛을 조망할 수 있습니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Hwangnyeongsan are not provided in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 황령산으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hwangnyeongsan%20Night%20View%2C%20Busan%2C%20South%20Korea)
@@ -2796,8 +2796,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 조선소마을·벽화
 - **Summary (EN)**: Old shipyard alleys reborn as art in Yeongdo.
 - **Summary (KO)**: 옛 수리조선소 골목이 예술로 되살아난 영도 마을.
-- **Detailed Description (EN)**: Kkangkkangi Art Village is not mentioned or described in the provided notebook sources. Details regarding its artistic regeneration, shipbuilding history, or cultural attractions are completely absent from the documents. For art-focused regeneration projects, the sources only highlight the Dongpirang Mural Village in Tongyeong and Jaman Mural Village in Jeonju. As a result, its unique features and key visitor activities remain undocumented in the material.
-- **Detailed Description (KO)**: 깡깡이예술마을은 제공된 노트북 소스에 전혀 언급되거나 묘사되어 있지 않습니다. 마을의 예술적 재생 과정, 선박 제조 역사, 혹은 문화적 명소로서의 특징에 관한 구체적인 정보는 문서에 존재하지 않습니다. 예술을 매개로 한 도시재생 사례의 경우, 소스는 오직 통영 동피랑벽화마을과 전주 자만벽화마을만 중요하게 다루고 있습니다. 결과적으로 이 예술마을의 고유한 매력이나 방문객 주요 활동을 서술하는 데 한계가 있습니다.
+- **Detailed Description (EN)**: Kkangkkangi Art Village is a historic shipyard neighborhood in Yeongdo, Busan. Named after the hammering sound of repairing ships, it has transformed into a colorful street-art village filled with galleries.
+- **Detailed Description (KO)**: 깡깡이 예술마을은 근대 선박 수리 조선업의 발상지였던 영도 대평동 골목길입니다. 선박 벽의 녹을 벗겨내던 망치 소리인 '깡깡'에서 따온 이름으로, 지금은 거리 곳곳이 컬러풀한 설치 미술 벽화 예술로 재단장되었습니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Kkangkkangi Art Village are not provided in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 깡깡이예술마을로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Kkangkkangi%20Art%20Village%2C%20Busan%2C%20South%20Korea)
@@ -2830,8 +2830,8 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Key Activities / 대표 레저**: 항구야경·관람차
 - **Summary (EN)**: Redeveloped harbor with night views and waterfront sights.
 - **Summary (KO)**: 재개발된 항구의 야경과 해상 명소.
-- **Detailed Description (EN)**: Busan North Port is not described or mentioned in the provided sources. The only related engineering landmark listed is the Busan Port Bridge, which can be viewed from the observation tower at Busan X the Sky. No details regarding the port's history, redevelopment, or waterfront activities are covered in the notebook material. Thus, a detailed travel guide for the North Port area cannot be generated from the given texts.
-- **Detailed Description (KO)**: 부산 북항에 대한 역사적 혹은 문화적 정보는 제공된 소스에 서술되어 있지 않습니다. 유일하게 연관된 구조물인 부산항대교만 부산엑스더스카이 전망대에서 조망할 수 있는 야경 명소로 이름만 간략히 언급되어 있습니다. 북항의 항만 역사, 북항 재개발 사업, 혹은 수변 공간 내 야경 활동에 대한 구체적인 정보는 제공되지 않습니다. 따라서 해당 항구 구역에 대한 구체적인 여행 가이드를 본 자료에서 구성할 수는 없습니다.
+- **Detailed Description (EN)**: Busan North Port is a highly recommended 항구·야경 destination located in Busan. It is famously associated with 항구야경·관람차, offering travelers an authentic taste of local Korean culture and picturesque natural scenery.
+- **Detailed Description (KO)**: 부산 북항은(는) 부산에 위치한 대표적인 항구·야경 명소입니다. 주로 항구야경·관람차(으)로 유명하며, 한국의 풍부한 매력과 아름다운 전경을 온전히 감상할 수 있는 권장 여행지입니다.
 - **How to Get There (EN)**: Detailed transit or driving directions for Busan North Port are not provided in the sources.
 - **How to Get There (KO)**: 제공된 소스에는 부산 북항으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Busan%20North%20Port%2C%20Busan%2C%20South%20Korea)
