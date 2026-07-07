@@ -49,8 +49,42 @@ def save_tts_gtts(text, output_path, lang='ko'):
         pass
     return True
 
+def save_tts_azure(text, output_path, lang='ko'):
+    """공식 Azure Speech(상업 라이선스 명확)로 edge-tts와 **동일 음성**(SunHi/Emma) 생성.
+    유튜브 수익화 등 상업 사용 시 legal-safe. .env AZURE_SPEECH_KEY/REGION 사용."""
+    import azure.cognitiveservices.speech as sp
+    key = os.environ.get("AZURE_SPEECH_KEY")
+    region = os.environ.get("AZURE_SPEECH_REGION", "koreacentral")
+    ev = os.environ.get("EDGE_ACTIVE_VOICE", "sunhi").strip().lower()
+    if lang.startswith('ko'):
+        voice = {"injoon": "ko-KR-InJoonNeural",
+                 "hyunsu": "ko-KR-HyunsuMultilingualNeural"}.get(ev, "ko-KR-SunHiNeural")
+    elif lang.startswith('en'):
+        voice = "en-US-EmmaMultilingualNeural"
+    else:
+        voice = "ko-KR-SunHiNeural"
+    cfg = sp.SpeechConfig(subscription=key, region=region)
+    cfg.speech_synthesis_voice_name = voice
+    cfg.set_speech_synthesis_output_format(sp.SpeechSynthesisOutputFormat.Audio24Khz48KBitRateMonoMp3)
+    ac = sp.audio.AudioOutputConfig(filename=output_path)
+    syn = sp.SpeechSynthesizer(speech_config=cfg, audio_config=ac)
+    r = syn.speak_text_async(text).get()
+    if r.reason != sp.ResultReason.SynthesizingAudioCompleted:
+        det = r.cancellation_details.error_details if r.reason == sp.ResultReason.Canceled else str(r.reason)
+        raise RuntimeError(f"Azure TTS failed: {det}")
+    try:
+        with open(output_path + ".txt", "w", encoding="utf-8") as f:
+            f.write(text.strip())
+    except Exception:
+        pass
+    print(f"[TTS] Azure (voice={voice}, lang={lang}) — 상업 라이선스")
+    return output_path
+
+
 def save_tts_edge_tts(text, output_path, lang='ko'):
-    """edge-tts를 사용하여 고품질 Neural 음성을 생성하고 저장하는 함수"""
+    """Neural 음성 생성. TTS_ENGINE=azure 면 공식 Azure(합법)로, 아니면 edge-tts."""
+    if os.environ.get("TTS_ENGINE", "").strip().lower() == "azure":
+        return save_tts_azure(text, output_path, lang)
     edge_voice = os.environ.get("EDGE_ACTIVE_VOICE", "sunhi").strip().lower()
     
     if lang.startswith('ko'):

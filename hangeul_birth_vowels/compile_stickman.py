@@ -221,9 +221,14 @@ def load_scenes(lang="ko"):
             scene_motion=spec.get("motion", "static"), gestures=gpaths, bg=spec.get("bg"),
             place_en=spec.get("place_en", ""),
             draw_font=spec.get("draw_font"), draw_dur=spec.get("draw_dur"),
-            char_mode=spec.get("char_mode"),
+            char_mode=spec.get("char_mode"), char_key=spec.get("char_key"),
+            anim_seq=spec.get("anim_seq"),
             cam=spec.get("cam") or CAM_MODES[(s["seq"] - 1) % len(CAM_MODES)], objs=objs))
     con.close()
+    if scenes:
+        _maxseq = max(sc["seq"] for sc in scenes)
+        for sc in scenes:
+            sc["is_last"] = (sc["seq"] == _maxseq)
     return scenes
 
 
@@ -617,18 +622,27 @@ def compose(scene, t=None, lang="ko", overlay=True):
                 continue
         is_pose = "/poses/" in o["path"].replace("\\", "/")
         im = load_img(o["path"])
-        sm, dx, dy, rot, a = (1, 0, 0, 0, 1) if final else obj_state(o, tt, dur)
+        cmode = scene.get("char_mode") if is_pose else None
+        _ck = scene.get("char_key") or "zolla_girl"
+        # 마지막 씬 = 점프↔스트롱 시그니처(정지컷). sig_strong 보유 캐릭터(zolla_man)만 — W5 zolla_girl 무영향
+        last_sig = (not final) and is_pose and cmode == "teacher" and bool(scene.get("is_last")) \
+            and char_pose_info(_ck, "sig_strong") is not None
+        sm, dx, dy, rot, a = (1, 0, 0, 0, 1) if (final or last_sig) else obj_state(o, tt, dur)
         if a <= 0.01:
             continue
         glayers = None
         pen_hand = None                                # 매직펜 그릴 손 좌표(있으면 글쓰기 중)
-        cmode = scene.get("char_mode") if is_pose else None
         if is_pose and cmode == "teacher":             # 동작선(칠판 앞 선생님): 저장된 원본 컷아웃 + 좌우이동
             ck = scene.get("char_key") or "zolla_girl"
-            st = (400, "__SIGNATURE__") if final else seq_state(tt, dur)
+            _seqnm = scene.get("anim_seq") or "teacher_board"
+            st = (400, "__SIGNATURE__") if (final or last_sig) else seq_state(tt, dur, _seqnm)
             if st:
                 tx, pose_name = st
-                pp, flip, pen = char_pose_info(ck, pose_name)
+                # 시그니처: 점프↔스트롱 연속 번갈아(1.1s). sig_strong 없으면 점프만(W5 무영향)
+                sig_pose = "sig_jump"
+                if (final or last_sig) and char_pose_info(ck, "sig_strong") is not None:
+                    sig_pose = "sig_jump" if (int(tt / 1.1) % 2 == 0) else "sig_strong"
+                pp, flip, pen = char_pose_info(ck, pose_name, sig=sig_pose)
                 if pp is not None:
                     im = load_img_flip(pp) if flip else load_img(pp)
                 dx += (tx - o["cx"])               # 절대 위치 tx로 이동(그림자 함께)

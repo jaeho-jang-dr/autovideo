@@ -23,7 +23,7 @@ cs.EP = EP; cs.OUT_PREFIX = PREFIX
 try: cs.PROJECT_NAME = PREFIX
 except Exception: pass
 PDIR = "hangeul_birth_vowels"
-LEAD, TAIL = 0.25, 0.45
+LEAD, TAIL = 0.0, 0.45   # 나레이션 앞 딜레이 0 (사장님 지시 2026-07-06)
 RES = "1920:1080" if MODE == "review" else "3840:2160"
 FF = cs._ff() if hasattr(cs, "_ff") else "ffmpeg"
 def log(m): print(m, flush=True)
@@ -37,9 +37,11 @@ def draw_note_box(fr, cap):
     rows = cs.wrap(d, cap, f, int(cs.W * 0.44))
     if not rows: return
     boxw = max(d.textlength(t, font=f) for t in rows)
-    lh = 40; pad = 16
-    d.rounded_rectangle([x - pad, y - 8, x + boxw + pad, y + lh * len(rows) + 6],
-                        radius=18, fill=(255, 255, 255, 190))
+    asc, desc = f.getmetrics()
+    lh = asc + desc + 4                         # 실제 글자 높이 기준
+    padx, pady = 12, 7                          # 글자 크기에 딱 맞는 작은 박스
+    d.rounded_rectangle([x - padx, y - pady, x + boxw + padx, y + lh * len(rows) + pady - 4],
+                        radius=12, fill=(255, 255, 255, 235))
     yy = y
     for t in rows:
         d.text((x, yy), t, font=f, fill=(28, 28, 40)); yy += lh

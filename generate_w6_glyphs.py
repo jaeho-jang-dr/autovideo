@@ -22,9 +22,9 @@ except Exception:
 ROOT = os.path.dirname(os.path.abspath(__file__))
 LDIR = os.path.join(ROOT, "assets", "graphics", "letters")
 DB = os.path.join(ROOT, "channel", "content.db")
-FONT = "C:/Windows/Fonts/malgunbd.ttf"
+FONT = os.path.join(ROOT, "assets", "fonts", "Cafe24Dongdong.ttf")  # 동동체
 if not os.path.exists(FONT):
-    FONT = "C:/Windows/Fonts/malgun.ttf"
+    FONT = "C:/Windows/Fonts/malgunbd.ttf"
 
 WORDS = ["음악", "으막", "옷이", "오시", "꽃이", "꼬치", "책을", "채글",
          "한국어", "한구거", "좋아요", "조아요", "웃어요", "우서요", "있어요", "이써요",
@@ -33,19 +33,27 @@ SYMS = {"sym_arrow": "→"}
 
 
 def render(text, color=(28, 28, 28, 255)):
-    f = ImageFont.truetype(FONT, 200)
-    tmp = Image.new("RGBA", (len(text) * 230 + 80, 320), (0, 0, 0, 0))
-    d = ImageDraw.Draw(tmp)
-    b = d.textbbox((0, 0), text, font=f)
-    d.text((40 - b[0], 40 - b[1]), text, font=f, fill=color)
-    bb = tmp.split()[3].getbbox()
-    pad = 16
-    return tmp.crop((max(0, bb[0] - pad), max(0, bb[1] - pad), bb[2] + pad, bb[3] + pad))
+    # 동동체 우선, 동동에 없는 글리프(예: 화살표 →)는 malgun 폴백
+    for fp in [FONT, "C:/Windows/Fonts/malgunbd.ttf", "C:/Windows/Fonts/malgun.ttf"]:
+        f = ImageFont.truetype(fp, 200)
+        tmp = Image.new("RGBA", (len(text) * 230 + 80, 320), (0, 0, 0, 0))
+        d = ImageDraw.Draw(tmp)
+        b = d.textbbox((0, 0), text, font=f)
+        d.text((40 - b[0], 40 - b[1]), text, font=f, fill=color)
+        bb = tmp.split()[3].getbbox()
+        if bb is not None:
+            pad = 16
+            return tmp.crop((max(0, bb[0] - pad), max(0, bb[1] - pad), bb[2] + pad, bb[3] + pad))
+    return Image.new("RGBA", (60, 60), (0, 0, 0, 0))
 
 
 def reg(cur, has, name_kr, name_en, typ, fp):
-    cur.execute("DELETE FROM assets WHERE file_path=?", (fp,))
-    if has:
+    # ★ id 보존: 기존 행이 있으면 UPDATE(삭제·재삽입 금지 — scene_objects 링크 끊김 방지)
+    row = cur.execute("SELECT id FROM assets WHERE file_path=?", (fp,)).fetchone()
+    if row:
+        cur.execute("UPDATE assets SET name_kr=?, name_en=?, type=? WHERE file_path=?",
+                    (name_kr, name_en, typ, fp))
+    elif has:
         cur.execute("INSERT INTO assets (name_kr, name_en, type, file_path, flow_prompt, created_at) "
                     "VALUES (?,?,?,?,?, datetime('now'))", (name_kr, name_en, typ, fp, "generate_w6_glyphs.py"))
     else:

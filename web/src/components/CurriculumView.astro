@@ -543,6 +543,8 @@ const payload = {
   const ISKO = DATA.lang === 'ko';
   const DAYNM = DATA.dayNames || ['월', '화', '수', '목', '금', '토', '일'];
   const DAILY_VIDEOS = { '1-2': 'hangeul_w1d2_flat', '1-3': 'hangeul_w1d3_flat', '1-4': 'hangeul_w1d4_flat', '1-5': 'hangeul_w1d5_flat', '1-6': 'hangeul_w1d6_flat', '1-7': 'hangeul_w1d7_flat' };
+  // ★ 유튜브에 올린 주차 앵커 영상(R2 대신 유튜브 임베드로 재생) — 언어별 video_id
+  const YT_VIDEOS = { 7: { ko: 'zVVrm8De8QY', en: 'YNiTusNTJCM' }, 8: { ko: 'xp9ktV7zOYY', en: 'xgEedO2aFnk' } };
   // 일일 강의별 보유 미디어(요일별 동영상/슬라이드/노트/팟캐스트)
   const DAILY_MEDIA = {
     '1-2': { video: 1, slides: 1, notes: 1, podcast: 1 },
@@ -577,10 +579,15 @@ const payload = {
     // 미디어(슬라이드/노트/영상/팟캐스트)를 보다가 바로 이전 메뉴(보기 선택)로 돌아가는 버튼
     const backBar = `<div class="media-backbar"><button class="media-back" type="button">← ${ISKO ? '이전 메뉴' : 'Back'}</button></div>`;
     if (type === 'video') {
-      const src = anchor ? `${R2C}/docs/hangeul_w${wk}_stickman_${VSFX}.mp4` : `${R2C}/docs/${DAILY_VIDEOS[`${wk}-${day}`]}_${VSFX}.mp4`;
-      const poster = anchor ? `/docs/hangeul_w${wk}_thumbnail_${VSFX}.png` : `/docs/lesson_thumbs/w${wk}_d${day}_${VSFX}.png`;
-      viewEl.innerHTML = backBar + `<div class="mcomp-video-wrap"><video class="mcomp-video-player" controls playsinline preload="metadata" poster="${poster}" src="${src}"></video></div>`;
-      const v = viewEl.querySelector('video'); if (v) v.play().catch(() => {});
+      const yt = anchor && YT_VIDEOS[wk] ? YT_VIDEOS[wk][VSFX] : null;
+      if (yt) {                                          // ★ 유튜브 임베드(R2 미사용) — 유튜브는 링크만
+        viewEl.innerHTML = backBar + `<div class="mcomp-video-wrap"><iframe class="mcomp-video-player" src="https://www.youtube.com/embed/${yt}?rel=0" title="lesson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>`;
+      } else {
+        const src = anchor ? `${R2C}/docs/hangeul_w${wk}_stickman_${VSFX}.mp4` : `${R2C}/docs/${DAILY_VIDEOS[`${wk}-${day}`]}_${VSFX}.mp4`;
+        const poster = anchor ? `/docs/hangeul_w${wk}_thumbnail_${VSFX}.png` : `/docs/lesson_thumbs/w${wk}_d${day}_${VSFX}.png`;
+        viewEl.innerHTML = backBar + `<div class="mcomp-video-wrap"><video class="mcomp-video-player" controls playsinline preload="metadata" poster="${poster}" src="${src}"></video></div>`;
+        const v = viewEl.querySelector('video'); if (v) v.play().catch(() => {});
+      }
     } else if (type === 'slides') {
       viewEl.innerHTML = backBar + pdfBox(`/docs/${db}_slides${ESFX}.pdf`, ISKO ? '🖼 슬라이드 새 창에서 열기' : '🖼 Open slides');
     } else if (type === 'notes') {

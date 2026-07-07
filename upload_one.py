@@ -78,12 +78,12 @@ with sync_playwright() as pw:
         try: pg.locator("#next-button, ytcp-button:has-text('다음')").first.click(timeout=8000); pg.wait_for_timeout(2500)
         except Exception as e: log(f"다음{i+1} 실패 "+str(e)[:40])
     shot(pg,"3vis")
-    # 비공개
+    # ★일부공개(웹링크 해야 하므로 처음부터 unlisted) — 비공개로 시작하지 않는다
     try:
-        pg.get_by_role("radio",name="비공개",exact=True).first.click(timeout=6000); log("비공개")
+        pg.get_by_role("radio",name="일부 공개",exact=True).first.click(timeout=6000); log("일부공개")
     except Exception as e:
-        try: pg.get_by_text("비공개",exact=True).first.click(timeout=4000); log("비공개(text)")
-        except Exception as e2: log("비공개 실패 "+str(e)[:50])
+        try: pg.get_by_text("일부 공개",exact=True).first.click(timeout=4000); log("일부공개(text)")
+        except Exception as e2: log("일부공개 실패 "+str(e)[:50])
     pg.wait_for_timeout(1000)
     # 저장/완료
     try: pg.locator("#done-button, ytcp-button:has-text('저장'), ytcp-button:has-text('완료')").first.click(timeout=8000); log("저장")

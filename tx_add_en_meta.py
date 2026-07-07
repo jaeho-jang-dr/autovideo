@@ -8,8 +8,8 @@ from playwright.sync_api import sync_playwright
 
 VID = sys.argv[1]
 CG = "D:/Entertainments/DevEnvironment/autovideo/child_growth_science"
-EN_TITLE = "How Tall Will My Child Grow? | The Science of Child Growth & Height (A Must for Parents)"
-EN_DESC = open(os.path.join(CG, "desc_main_en.txt"), encoding="utf-8").read()
+EN_TITLE = sys.argv[2] if len(sys.argv) > 2 else "How Tall Will My Child Grow? | The Science of Child Growth & Height (A Must for Parents)"
+EN_DESC = open(sys.argv[3] if len(sys.argv) > 3 else os.path.join(CG, "desc_main_en.txt"), encoding="utf-8").read()
 SH = "scratch/yt"; os.makedirs(SH, exist_ok=True)
 def log(m): print(m, flush=True)
 def shot(pg, n):
