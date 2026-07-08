@@ -80,7 +80,7 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
 
         <ol class="lesson-list">
           {wk.lessons.map((x: any) => (
-            <li class={`lesson-row${x.anchor ? ' anchor' : ''}`}>
+            <li class={`lesson-row${x.anchor ? ' anchor' : ''}${x.day > 1 ? ' day-sub' : ''}`}>
               <span class="lr-no">{x.no}</span>
               <span class="lr-icon">{x.icon}</span>
               <span class="lr-skill">{isEn ? x.skill_en : x.skill_ko}</span>
@@ -88,7 +88,10 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
                 <b class="lr-title">
                   {isEn ? x.title_en : x.title_ko}
                   {x.anchor
-                    ? <a class="tag tag-video" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">▶ {isEn ? 'video' : '영상'}</a>
+                    ? (x.week <= 8
+                        ? <a class="tag tag-video yt-trigger" href="#" data-week={x.week}>▶ {isEn ? 'video' : '영상'}</a>
+                        : <a class="tag tag-video" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">▶ {isEn ? 'video' : '영상'}</a>
+                      )
                     : <span class="tag tag-new">NEW</span>}
                 </b>
                 <span class="lr-alt">{isEn ? x.title_ko : x.title_en}</span>
@@ -101,7 +104,7 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
 
         <div class="lesson-cards">
           {wk.lessons.map((x: any) => (
-            <div class={`lcard ${wk.level}${x.anchor ? ' anchor' : ''}`}>
+            <div class={`lcard ${wk.level}${x.anchor ? ' anchor' : ''}${x.day > 1 ? ' day-sub' : ''}`}>
               <div class="lc-top">
                 <span class="lc-icon">{x.icon}</span>
                 <span class="lc-day">{L.day} {x.day}</span>
@@ -112,13 +115,35 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
               </div>
               <div class="lc-title">{isEn ? x.title_en : x.title_ko}</div>
               {x.anchor
-                ? <a class="lc-link" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">{isEn ? '▶ Watch video' : '▶ 영상 보기'}</a>
+                ? (wk.week <= 8
+                    ? <a class="lc-link yt-trigger" href="#" data-week={wk.week}>{isEn ? '▶ Watch video' : '▶ 영상 보기'}</a>
+                    : <a class="lc-link" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">{isEn ? '▶ Watch video' : '▶ 영상 보기'}</a>
+                  )
                 : <div class="lc-no">#{x.no}</div>}
             </div>
           ))}
         </div>
       </section>
     ))}
+  </div>
+
+  <!-- 유튜브 전용 라이트박스 모달 -->
+  <div id="yt-modal" class="yt-modal" aria-hidden="true">
+    <div class="yt-modal-scrim"></div>
+    <div class="yt-modal-box">
+      <button type="button" class="yt-modal-close" id="yt-modal-close" title="닫기">✕</button>
+      <div class="yt-modal-body">
+        <div class="yt-modal-player" id="yt-modal-player"></div>
+      </div>
+      <div class="yt-modal-banner">
+        <span class="cc-badge">CC</span>
+        <p class="cc-text">
+          {isEn
+            ? 'This video supports <strong>5 languages of subtitles</strong> (Korean, English, Japanese, Chinese, Spanish). Please select your language from the Captions (CC) settings in the player.'
+            : '이 영상은 <strong>5개국어 자막</strong>(한국어, 영어, 일본어, 중국어, 스페인어)을 지원합니다. 플레이어 하단의 자막(CC) 설정에서 원하시는 언어를 선택해 주세요.'}
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -143,6 +168,76 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
     v.classList.add('active');
     weeksWrap.setAttribute('data-view', v.getAttribute('data-view') || 'list');
   }));
+
+  // ---- 유튜브 모달 핸들러 ----
+  const ytTriggerBtns = document.querySelectorAll('.yt-trigger');
+  const ytModal = document.getElementById('yt-modal');
+  const ytModalClose = document.getElementById('yt-modal-close');
+  const ytModalScrim = ytModal?.querySelector('.yt-modal-scrim');
+  const ytModalPlayer = document.getElementById('yt-modal-player');
+  const currentLang = document.documentElement.lang || 'en';
+
+  const YOUTUBE_MAP: Record<number, { ko: string; en: string }> = {
+    1: { ko: 'PfNFf6umSsc', en: 'X_biKW_jDYg' },
+    2: { ko: 'C8NQM0GaWrc', en: 'KrHzUwFQ0XI' },
+    3: { ko: 'gHYAXDo0MYs', en: '3UOVzWlilB4' },
+    4: { ko: '2Fl5pixR-yE', en: 'UqG0AdEh5Iw' },
+    5: { ko: 'Wo-O0-_914c', en: 'RL7QZ37HVXI' },
+    6: { ko: 'nF04YoEV8jk', en: 'pxufMbQq8sM' },
+    7: { ko: 'zVVrm8De8QY', en: 'YNiTusNTJCM' },
+    8: { ko: 'xp9ktV7zOYY', en: 'xgEedO2aFnk' }
+  };
+
+  function renderYtPlayer(week: number, activeLang: 'ko' | 'en') {
+    if (!ytModalPlayer) return;
+    const videoId = YOUTUBE_MAP[week][activeLang];
+    
+    ytModalPlayer.innerHTML = `
+      <div class="modal-yt-container">
+        <div class="modal-yt-iframe-wrap">
+          <iframe src="https://www.youtube.com/embed/${videoId}?rel=0&cc_load_policy=1&controls=1&hl=${activeLang === 'ko' ? 'ko' : 'en'}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="modal-yt-tabs">
+          <button class="modal-yt-tab ${activeLang === 'ko' ? 'active' : ''}" data-lang="ko" type="button">🇰🇷 한글 버전 (Ko Ver.)</button>
+          <button class="modal-yt-tab ${activeLang === 'en' ? 'active' : ''}" data-lang="en" type="button">🇺🇸 영어 버전 (En Ver.)</button>
+        </div>
+      </div>
+    `;
+
+    // 탭 전환 이벤트 바인딩
+    ytModalPlayer.querySelectorAll('.modal-yt-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetLang = btn.getAttribute('data-lang') as 'ko' | 'en';
+        renderYtPlayer(week, targetLang);
+      });
+    });
+  }
+
+  ytTriggerBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const week = parseInt(btn.getAttribute('data-week') || '1', 10);
+      if (ytModal && ytModalPlayer) {
+        renderYtPlayer(week, currentLang === 'ko' ? 'ko' : 'en');
+        ytModal.classList.add('open');
+        ytModal.setAttribute('aria-hidden', 'false');
+      }
+    });
+  });
+
+  function closeYtModal() {
+    if (ytModal) {
+      ytModal.classList.remove('open');
+      ytModal.setAttribute('aria-hidden', 'true');
+      if (ytModalPlayer) ytModalPlayer.innerHTML = ''; // 재생 중지
+    }
+  }
+
+  ytModalClose?.addEventListener('click', closeYtModal);
+  ytModalScrim?.addEventListener('click', closeYtModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeYtModal();
+  });
 </script>
 
 <style>
@@ -183,6 +278,8 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
   /* 리스트 뷰 */
   .lesson-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
   .lesson-row { display: grid; grid-template-columns: 38px 30px 64px 1fr 38px; align-items: center; gap: 10px; background: var(--c-card); border: 1px solid var(--c-line); border-radius: 12px; padding: 10px 14px; }
+  .lesson-row.day-sub { display: none; }
+  .week-block.show-all .lesson-row.day-sub { display: grid; }
   .lr-no { font-weight: 800; color: var(--c-gold); font-size: 0.95rem; text-align: center; }
   .lr-icon { font-size: 1.2rem; text-align: center; }
   .lr-skill { font-size: 0.72rem; font-weight: 700; color: var(--c-ink-3); text-align: center; }
@@ -195,6 +292,8 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
   /* 카드 뷰 */
   .lesson-cards { display: none; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
   .lcard { background: var(--c-card); border: 1px solid var(--c-line); border-top: 4px solid var(--c-gold); border-radius: 14px; padding: 14px; min-height: 128px; display: flex; flex-direction: column; gap: 6px; transition: transform .15s, box-shadow .15s; }
+  .lcard.day-sub { display: none; }
+  .week-block.show-all .lcard.day-sub { display: flex; }
   .lcard:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
   .lcard.beginner { border-top-color: var(--c-b); } .lcard.intermediate { border-top-color: var(--c-i); } .lcard.advanced { border-top-color: var(--c-a); }
   .lc-top { display: flex; justify-content: space-between; align-items: center; }
@@ -204,9 +303,147 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
   .lc-title { font-size: 0.95rem; font-weight: 700; line-height: 1.35; flex: 1; }
   .lc-no { font-size: 0.74rem; color: var(--c-ink-3); text-align: right; }
 
+  /* 토글 버튼 */
+  .week-toggle-wrap { display: flex; justify-content: center; margin-top: 10px; }
+  .toggle-days-btn { background: var(--c-card); border: 1px dashed var(--c-gold); color: var(--c-gold); border-radius: 12px; padding: 8px 24px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.18s ease-in-out; }
+  .toggle-days-btn:hover { background: var(--c-gold-soft); border-style: solid; transform: scale(1.02); }
+
   /* 뷰 토글 */
   .lr-weeks[data-view="cards"] .lesson-list { display: none; }
   .lr-weeks[data-view="cards"] .lesson-cards { display: grid; }
+
+  /* 유튜브 라이트박스 모달 */
+  .yt-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .yt-modal.open {
+    display: flex;
+  }
+  .yt-modal-scrim {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(28, 24, 19, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .yt-modal-box {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    background: var(--c-card);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    animation: zoomInModal 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  @keyframes zoomInModal {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .yt-modal-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--c-line);
+    background: #fff;
+    color: var(--c-ink-2);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: all 0.15s ease;
+    z-index: 10;
+  }
+  .yt-modal-close:hover {
+    background: #e44c4c;
+    color: #fff;
+    border-color: #e44c4c;
+  }
+  .yt-modal-body {
+    width: 100%;
+    margin-top: 12px;
+  }
+  .modal-yt-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .modal-yt-iframe-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .modal-yt-iframe-wrap iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+  }
+  .modal-yt-tabs {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+  .modal-yt-tab {
+    border: 1.5px solid var(--c-line);
+    background: #fff;
+    color: var(--c-ink-2);
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .modal-yt-tab:hover {
+    border-color: var(--c-gold);
+    background: var(--c-bg);
+  }
+  .modal-yt-tab.active {
+    background: #e44c4c;
+    color: #fff;
+    border-color: #e44c4c;
+    box-shadow: 0 4px 10px rgba(228, 76, 76, 0.25);
+  }
+  
+  .yt-modal-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--c-gold-soft);
+    border: 1.5px solid var(--c-gold);
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+  .cc-badge {
+    background: var(--c-gold);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+  .cc-text {
+    margin: 0;
+    font-size: 0.84rem;
+    color: var(--c-ink-2);
+    line-height: 1.45;
+  }
 
   @media (max-width: 640px) {
     .lesson-row { grid-template-columns: 30px 26px 1fr 34px; }
