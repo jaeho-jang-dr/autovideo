@@ -1,0 +1,127 @@
+1
+00:00:00,000 --> 00:00:06,679
+Hello! Today, we're learning how to say numbers, dates, and times in Korean.
+
+2
+00:00:06,679 --> 00:00:12,430
+Just knowing numbers makes life much more convenient. Let's start together!
+
+3
+00:00:12,880 --> 00:00:18,706
+There are two types of Korean numbers: pure Korean native numbers and Sino-Korean numbers derived from Chinese characters.
+
+4
+00:00:18,706 --> 00:00:21,540
+Their uses are different, so let's learn both.
+
+5
+00:00:21,990 --> 00:00:31,222
+First, the native Korean numbers: 'hana' (one), 'dul' (two), 'set' (three), 'net' (four), 'daseot' (five).
+
+6
+00:00:31,222 --> 00:00:34,300
+Try repeating them slowly.
+
+7
+00:00:34,750 --> 00:00:47,180
+Next, 'yeoseot' (six), 'ilgop' (seven), 'yeodeol' (eight), 'ahop' (nine), 'yeol' (ten). It's good to memorize up to ten.
+
+8
+00:00:47,630 --> 00:00:55,410
+Native Korean numbers are used when counting items or stating age. Like 'three apples' or 'twenty years old'.
+
+9
+00:00:56,550 --> 00:01:01,625
+Their forms change slightly when counting items.
+
+10
+00:01:01,625 --> 00:01:10,760
+'Hana' becomes 'han gae' (one item), 'dul' becomes 'du gae' (two items), and 'set' becomes 'se gae' (three items).
+
+11
+00:01:11,210 --> 00:01:17,460
+Ages are also counted with native Korean numbers: 'seumu sal' (twenty years old), 'seoreun sal' (thirty years old).
+
+12
+00:01:17,460 --> 00:01:23,040
+Just remember that 'seumul' (twenty) changes to 'seumu sal'.
+
+13
+00:01:23,490 --> 00:01:33,020
+Now, for Sino-Korean numbers: 'il' (one), 'i' (two), 'sam' (three), 'sa' (four), 'o' (five).
+
+14
+00:01:33,020 --> 00:01:36,280
+Pronounce them short and clear.
+
+15
+00:01:36,730 --> 00:01:49,020
+And then 'yuk' (six), 'chil' (seven), 'pal' (eight), 'gu' (nine), 'sip' (ten). Sino-Korean numbers are easy to learn because their pronunciations are short.
+
+16
+00:01:49,470 --> 00:01:53,314
+Large numbers are also Sino-Korean.
+
+17
+00:01:53,314 --> 00:02:08,690
+'Sip' is 10, 'baek' is 100, 'cheon' is 1000, and 'man' is 10000.
+
+18
+00:02:09,140 --> 00:02:24,240
+The number 0 is read in two ways: 'yeong' or 'gong'. In phone numbers, it's usually 'gong'.
+
+19
+00:02:24,690 --> 00:02:35,490
+Sino-Korean numbers are used for dates, prices, phone numbers, and identifying numbers. Like 'March' or 'five thousand won'.
+
+20
+00:02:35,940 --> 00:02:47,320
+For prices, you attach 'won' to the Sino-Korean number. Try saying 'samcheon won' (three thousand won), 'man won' (ten thousand won).
+
+21
+00:02:47,770 --> 00:02:54,133
+Phone numbers are read one digit at a time: 'gong-il-gong...'.
+
+22
+00:02:54,133 --> 00:02:58,740
+Don't forget that 0 is read as 'gong'.
+
+23
+00:02:59,190 --> 00:03:10,250
+Time is interesting. 'Si' (hour) uses native Korean numbers, while 'bun' (minute) uses Sino-Korean numbers. They're mixed!
+
+24
+00:03:10,700 --> 00:03:20,950
+So we say 'se si samsip bun' (three thirty). 'Se' for hour is native Korean, and 'samsip' for minute is Sino-Korean.
+
+25
+00:03:22,070 --> 00:03:32,700
+A day is divided into AM and PM. Morning is AM, evening is PM. You attach it like 'ohu se si' (three PM).
+
+26
+00:03:37,160 --> 00:03:49,500
+For months, you attach 'wol' to the Sino-Korean number: 'irwol' (January), 'iwol' (February)... up to 'sibiwol' (December) for twelve months.
+
+27
+00:03:49,950 --> 00:04:00,530
+'Il' (day) for dates is also Sino-Korean. 'What day is it today?' You answer like 'sibo il' (fifteenth).
+
+28
+00:04:00,980 --> 00:04:03,171
+Let's learn days of the week too.
+
+29
+00:04:03,171 --> 00:04:16,320
+'Wollyoil' (Monday), 'hwayoil' (Tuesday), 'suyoil' (Wednesday), 'mogyoil' (Thursday), 'geumyoil' (Friday), 'toyoil' (Saturday), 'iryoil' (Sunday).
+
+30
+00:04:16,770 --> 00:04:29,370
+To summarize! For quantity and age, use native Korean numbers. For dates, time, prices, and numbers, use Sino-Korean. For time, mix both.
+
+31
+00:04:29,820 --> 00:04:37,811
+Today we learned numbers, dates, and times. Try saying today's date and time in Korean.
+
+32
+00:04:37,811 --> 00:04:40,120
+See you next time!

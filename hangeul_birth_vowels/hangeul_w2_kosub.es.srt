@@ -1,0 +1,203 @@
+1
+00:00:00,250 --> 00:00:04,317
+¡Hola! La última vez aprendimos las vocales.
+
+2
+00:00:04,317 --> 00:00:09,493
+Hoy conoceremos al otro protagonista del Hangul, las consonantes.
+
+3
+00:00:09,493 --> 00:00:13,930
+¿Qué formas habrán imitado para crear las consonantes?
+
+4
+00:00:14,630 --> 00:00:19,720
+Sorprendentemente, las consonantes coreanas imitan la forma de nuestro cuerpo que produce sonidos,
+
+5
+00:00:19,720 --> 00:00:29,290
+es decir, la forma de la boca, la lengua y la garganta. A esto se le llama el "principio de la imitación de la forma".
+
+6
+00:00:29,990 --> 00:00:38,961
+Primero, "ㄱ". Es la forma en que la raíz de la lengua bloquea la garganta. Si lo pronuncias, 'geu'.
+
+7
+00:00:38,961 --> 00:00:42,900
+Es un sonido que se produce cerca de los molares.
+
+8
+00:00:43,600 --> 00:00:53,180
+"ㄴ" es la forma en que la punta de la lengua toca las encías superiores. 'neu'. La lengua se pega ligeramente a la parte delantera del paladar.
+
+9
+00:00:53,880 --> 00:01:02,830
+"ㅁ" es la forma de una boca cerrada. 'meu'. Es un sonido donde los dos labios se juntan y cierran.
+
+10
+00:01:03,530 --> 00:01:12,790
+"ㅅ" es la forma de dientes puntiagudos. 'seu'. Es un sonido donde el aire escapa entre los dientes.
+
+11
+00:01:13,490 --> 00:01:22,106
+"ㅇ" es la forma de una garganta redonda. Cuando se usa como 받침 (consonante final), se convierte en el sonido nasal 'eung'.
+
+12
+00:01:22,106 --> 00:01:27,360
+Cuando está en la posición inicial, es un marcador de posición sin sonido.
+
+13
+00:01:28,060 --> 00:01:35,551
+Así, las cinco consonantes básicas, "ㄱ", "ㄴ", "ㅁ", "ㅅ",
+
+14
+00:01:35,551 --> 00:01:39,920
+y "ㅇ", nacieron imitando nuestro cuerpo.
+
+15
+00:01:40,620 --> 00:01:46,442
+¿Y las demás consonantes? Utilizaron un método muy inteligente.
+
+16
+00:01:46,442 --> 00:01:56,630
+Si el sonido se vuelve más fuerte, se añade un trazo adicional a la letra básica. A esto se le llama el "principio de adición de trazos".
+
+17
+00:01:57,330 --> 00:02:04,985
+Si añades un trazo a "ㄴ", se convierte en "ㄷ". Si añades un trazo a "ㅁ", se convierte en "ㅂ".
+
+18
+00:02:04,985 --> 00:02:09,160
+El sonido se vuelve más claro y firme.
+
+19
+00:02:09,860 --> 00:02:18,319
+Si añades un trazo a "ㅅ", se convierte en "ㅈ". Si añades un trazo a "ㅇ", se convierte en "ㅎ".
+
+20
+00:02:18,319 --> 00:02:25,240
+Y hasta la "ㄹ" que hace girar la lengua. ¿Ves un patrón?
+
+21
+00:02:25,940 --> 00:02:30,111
+Aquí están las diez consonantes básicas que aprenderemos hoy.
+
+22
+00:02:30,111 --> 00:02:40,867
+"ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅎ".
+
+23
+00:02:40,867 --> 00:02:43,940
+¿Los nombramos juntos?
+
+24
+00:02:44,640 --> 00:02:47,353
+¡Ahora la parte más fascinante!
+
+25
+00:02:47,353 --> 00:02:55,701
+Hangul no escribe las consonantes y las vocales por separado, sino que las combina en una sola letra.
+
+26
+00:02:55,701 --> 00:02:59,040
+Esto es lo que se conoce como 'mo-a-sseu-gi' (escritura combinada).
+
+27
+00:02:59,740 --> 00:03:12,201
+La consonante es el sonido inicial, la vocal es el sonido central. ¿Qué obtenemos si combinamos el sonido inicial "ㄱ" y el sonido central "ㅏ"?
+
+28
+00:03:12,201 --> 00:03:15,600
+Se convierte en 'ga'.
+
+29
+00:03:16,300 --> 00:03:28,746
+La regla es simple. Las vocales que se escriben verticalmente 'ㅏ, ㅓ, ㅣ' se colocan a la derecha de la consonante.
+
+30
+00:03:28,746 --> 00:03:32,140
+Como en 'na', 'meo', 'di'.
+
+31
+00:03:32,840 --> 00:03:43,222
+Por el contrario, las vocales que se escriben horizontalmente 'ㅗ, ㅜ, ㅡ' se colocan debajo de la consonante.
+
+32
+00:03:43,222 --> 00:03:46,500
+Como en 'go', 'nu', 'deu'.
+
+33
+00:03:47,200 --> 00:03:50,833
+Hoy solo aprenderemos letras sin 받침 (consonante final).
+
+34
+00:03:50,833 --> 00:03:58,100
+Sin 받침, el sonido fluye libremente, por lo que las llamamos 'sílabas abiertas'.
+
+35
+00:03:58,800 --> 00:04:07,427
+Ahora, ¿construimos palabras? Si escribimos 'go' y 'gi' juntas, obtenemos 'gogi' (carne).
+
+36
+00:04:07,427 --> 00:04:11,740
+¡Dos letras se juntan para crear un significado!
+
+37
+00:04:12,440 --> 00:04:23,503
+¿Llamamos a la familia? 'ㄴ' y 'ㅏ' forman 'na', y 'nu-na' (hermana mayor).
+
+38
+00:04:23,503 --> 00:04:32,670
+'Oppa' (hermano mayor) y 'nuna' son formas cariñosas de llamar a la familia.
+
+39
+00:04:33,370 --> 00:04:50,940
+'ㅁ, ㅓ, ㄹ, ㅣ' forman 'meo-ri' (cabeza). 'ㅂ, ㅏ, ㄴ, ㅏ, ㄴ, ㅏ' forman 'ba-na-na' (plátano).
+
+40
+00:04:50,940 --> 00:04:56,670
+Las consonantes y las vocales se combinan perfectamente, ¿verdad?
+
+41
+00:04:57,370 --> 00:05:07,110
+'A-beo-ji' (padre) y 'eo-meo-ni' (madre). Incluso con letras sin 받침, podemos escribir palabras tan cálidas.
+
+42
+00:05:07,810 --> 00:05:15,797
+'O-i' (pepino), 'ho-su' (lago), 'ji-do' (mapa). Todas son palabras fáciles sin 받침.
+
+43
+00:05:15,797 --> 00:05:19,160
+Léanlas en voz alta.
+
+44
+00:05:19,860 --> 00:05:27,518
+¡Ahora, a jugar con las tarjetas! 'Gogi' (carne), 'hosu' (lago), 'gicha' (tren).
+
+45
+00:05:27,518 --> 00:05:33,320
+Piensen en las consonantes y vocales y léanlas claramente.
+
+46
+00:05:34,020 --> 00:05:38,927
+También es bueno escribir las consonantes que aprendieron, trazo a trazo, con un lápiz.
+
+47
+00:05:38,927 --> 00:05:42,680
+Escribirlas a mano les ayudará a recordar mejor la forma y el sonido.
+
+48
+00:05:43,380 --> 00:05:49,890
+Hoy aprendimos diez consonantes básicas y cómo combinar consonantes y vocales para formar sílabas.
+
+49
+00:05:49,890 --> 00:05:53,920
+¡Ahora pueden leer y escribir palabras sencillas!
+
+50
+00:05:54,620 --> 00:06:02,623
+Si practican un poco cada día, su coreano mejorará rápidamente. Suscríbanse y denle 'me gusta' para que sigamos juntos en este viaje del Hangul.
+
+51
+00:06:02,623 --> 00:06:04,290
+¡Nos vemos la próxima vez!

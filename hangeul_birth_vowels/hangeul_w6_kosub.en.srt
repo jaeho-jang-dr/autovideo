@@ -1,0 +1,87 @@
+1
+00:00:00,000 --> 00:00:07,840
+Hello! Today, we'll learn about natural linking sounds (yeon-eum) and phonological changes where letters naturally connect.
+
+2
+00:00:07,840 --> 00:00:09,120
+Let's start together!
+
+3
+00:00:09,570 --> 00:00:17,803
+When a syllable ending (batchim) is followed by a syllable starting with 'ㅇ' (a silent placeholder), the batchim moves to that 'ㅇ' position and is pronounced.
+
+4
+00:00:17,803 --> 00:00:22,340
+This natural linking is called yeon-eum.
+
+5
+00:00:22,790 --> 00:00:34,190
+For example, '음악' (eum-ak) is pronounced '으막' (eu-mak) because the batchim 'ㄱ' moves to the next syllable.
+
+6
+00:00:34,190 --> 00:00:41,030
+You write '음악,' but you read it '으막.'
+
+7
+00:00:41,480 --> 00:00:47,766
+'옷이' (ot-i) also becomes '오시' (o-si) as the batchim 'ㅅ' moves over.
+
+8
+00:00:47,766 --> 00:00:53,820
+It's like the batchim slides to the next spot.
+
+9
+00:00:54,270 --> 00:01:00,907
+'꽃이' (kkot-i) becomes '꼬치' (kko-chi) as the batchim 'ㅊ' moves.
+
+10
+00:01:00,907 --> 00:01:06,560
+The batchim sound carries directly to the next syllable.
+
+11
+00:01:07,010 --> 00:01:18,581
+Let's practice with words. '책을' (chaek-eul) is read '채글' (chae-geul), and '한국어' (han-guk-eo) is read '한구거' (han-gu-geo).
+
+12
+00:01:18,581 --> 00:01:22,920
+The batchim naturally moves, doesn't it?
+
+13
+00:01:23,370 --> 00:01:29,954
+The batchim 'ㅎ' (hieut) weakens before a vowel and almost disappears.
+
+14
+00:01:29,954 --> 00:01:37,270
+So '좋아요' (jo-a-yo) is pronounced softly like '조아요' (jo-a-yo).
+
+15
+00:01:37,720 --> 00:01:46,524
+'웃어요' (ut-eo-yo) is pronounced '우서요' (u-seo-yo), and '있어요' (it-eo-yo) is pronounced '이써요' (i-sseo-yo).
+
+16
+00:01:46,524 --> 00:01:52,220
+This is yeon-eum, where the batchim moves to the next syllable.
+
+17
+00:01:52,670 --> 00:01:58,715
+When writing, you keep the batchim, but when reading, you naturally link it.
+
+18
+00:01:58,715 --> 00:02:05,250
+The written form and the spoken form are different. Knowing this will make your Korean sound much more natural.
+
+19
+00:02:05,700 --> 00:02:14,948
+To summarize, when a batchim meets 'ㅇ', it moves to that position, creating a linking sound (yeon-eum).
+
+20
+00:02:14,948 --> 00:02:25,480
+Like '음악' (eum-ak) becoming '으막' (eu-mak) and '옷이' (ot-i) becoming '오시' (o-si). Try reading them smoothly.
+
+21
+00:02:25,930 --> 00:02:32,955
+Today, we learned about yeon-eum and phonological changes. Try finding linking sounds in your favorite song lyrics.
+
+22
+00:02:32,955 --> 00:02:35,030
+See you next time!

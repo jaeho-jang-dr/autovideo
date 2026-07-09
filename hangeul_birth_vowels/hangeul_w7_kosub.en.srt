@@ -1,0 +1,155 @@
+1
+00:00:00,000 --> 00:00:07,725
+Hello! Today, we'll learn common Korean greetings and how to introduce ourselves.
+
+2
+00:00:07,725 --> 00:00:11,330
+From greetings to self-introductions, let's start together!
+
+3
+00:00:11,780 --> 00:00:19,129
+Greetings are the first step to connecting with people. A cheerful greeting quickly brings hearts closer.
+
+4
+00:00:19,129 --> 00:00:22,100
+Shall we learn from the very basics, one by one?
+
+5
+00:00:22,550 --> 00:00:32,876
+The most common greeting is '안녕하세요' (Annyeonghaseyo). You can use it in the morning, afternoon, or evening.
+
+6
+00:00:32,876 --> 00:00:36,830
+Try saying it while bowing slightly.
+
+7
+00:00:37,280 --> 00:00:40,640
+In Korea, people bow slightly when greeting.
+
+8
+00:00:40,640 --> 00:00:45,460
+A deeper bow to elders shows more respect.
+
+9
+00:00:45,910 --> 00:00:51,264
+With friends or those you're close to, you can say '안녕!' (Annyeong!) briefly.
+
+10
+00:00:51,264 --> 00:00:56,810
+It's an informal greeting you can use when meeting or parting.
+
+11
+00:00:57,260 --> 00:01:01,855
+Express your gratitude with '감사합니다' (Gamsahamnida).
+
+12
+00:01:01,855 --> 00:01:08,200
+It's always good to say it when you receive help or a gift.
+
+13
+00:01:08,650 --> 00:01:16,714
+When thanked, you can reply with '천만에요' (Cheonmaneyo) or '아니에요' (Anieyo).
+
+14
+00:01:16,714 --> 00:01:20,170
+These are warm responses meaning 'You're welcome' or 'It's nothing.'
+
+15
+00:01:20,620 --> 00:01:25,395
+When you make a mistake, say '죄송합니다' (Joesonghamnida).
+
+16
+00:01:25,395 --> 00:01:32,670
+Among friends, you can say '미안해' (Mianhae) a bit more casually.
+
+17
+00:01:33,120 --> 00:01:42,340
+When meeting someone for the first time, say '반갑습니다' (Bangapseumnida). It's a warm greeting that expresses happiness to meet them.
+
+18
+00:01:42,790 --> 00:01:48,659
+If you meet someone you haven't seen in a long time, say '오랜만이에요' (Orenmanieyo).
+
+19
+00:01:48,659 --> 00:01:51,960
+It genuinely conveys your joy.
+
+20
+00:01:52,410 --> 00:01:58,015
+When asking about someone's well-being, say '잘 지냈어요?' (Jal jinaesseoyo?).
+
+21
+00:01:58,015 --> 00:02:05,130
+Replying '네, 잘 지냈어요' (Ne, jal jinaesseoyo) naturally continues the conversation.
+
+22
+00:02:05,580 --> 00:02:08,496
+There are two ways to say goodbye.
+
+23
+00:02:08,496 --> 00:02:17,870
+To someone leaving, say '안녕히 가세요' (Annyeonghi gaseyo), and to someone staying, say '안녕히 계세요' (Annyeonghi gyeseyo).
+
+24
+00:02:18,320 --> 00:02:25,481
+Adding '좋은 하루 보내세요' (Joeun haru bonaeseyo) when parting makes it even warmer.
+
+25
+00:02:25,481 --> 00:02:30,180
+At night, you say '안녕히 주무세요' (Annyeonghi jumuseyo).
+
+26
+00:02:30,630 --> 00:02:41,438
+Now, for self-introductions. Start your sentence with '저는' (Jeoneun) and end with '입니다' (imnida).
+
+27
+00:02:41,438 --> 00:02:44,140
+Just remember this structure.
+
+28
+00:02:44,590 --> 00:02:54,970
+Shall we add a name? Attach '입니다' after your name. For example, '저는 민수입니다' (Jeoneun Minsu imnida), "I am Minsu."
+
+29
+00:02:54,970 --> 00:02:59,780
+Try saying it with your own name.
+
+30
+00:03:00,230 --> 00:03:12,490
+Introduce your country too. Attach '사람입니다' (saram imnida) after your country. For example, '저는 미국 사람입니다' (Jeoneun Miguk saram imnida), "I am American."
+
+31
+00:03:12,940 --> 00:03:24,360
+Talk about your profession. For example, '저는 학생입니다' (Jeoneun haksaeng imnida), "I am a student." You can change it to '회사원' (hoesawon, office worker) or '선생님' (seonsaengnim, teacher).
+
+32
+00:03:24,810 --> 00:03:35,900
+For age, say '저는 스무 살입니다' (Jeoneun seumu sal imnida), "I am twenty years old." Remember to attach '살' (sal) after the number.
+
+33
+00:03:36,350 --> 00:03:47,560
+For where you live, say '저는 서울에 살아요' (Jeoneun Seoul-e sarayo), "I live in Seoul." Attach '에 살아요' (e sarayo) after the city name.
+
+34
+00:03:48,010 --> 00:03:52,316
+For hobbies, say '제 취미는 요리예요' (Je chwimineun yori-yeyo), "My hobby is cooking."
+
+35
+00:03:52,316 --> 00:03:57,370
+Make your own sentence by inserting what you like.
+
+36
+00:03:57,820 --> 00:04:07,419
+Now, let's put it all together! '안녕하세요, 저는 민수입니다. 미국 사람이고, 학생입니다.' (Annyeonghaseyo, Jeoneun Minsu imnida. Miguk saramigo, haksaeng imnida.)
+
+37
+00:04:07,419 --> 00:04:09,870
+'만나서 반갑습니다!' (Mannaseo bangapseumnida!) "Hello, I am Minsu. I am American, and I am a student. Nice to meet you!"
+
+38
+00:04:10,320 --> 00:04:17,392
+Today, we learned greetings and self-introductions. Practice clearly in front of a mirror.
+
+39
+00:04:17,392 --> 00:04:21,360
+Please take care of me, see you next time!

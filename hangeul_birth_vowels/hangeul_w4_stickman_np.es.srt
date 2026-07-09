@@ -1,0 +1,199 @@
+1
+00:00:00,250 --> 00:00:02,760
+¡Hola! Hoy aprenderemos el batchim coreano,
+
+2
+00:00:02,760 --> 00:00:04,078
+las consonantes finales,
+
+3
+00:00:04,078 --> 00:00:06,087
+y los 7 sonidos representativos.
+
+4
+00:00:06,087 --> 00:00:09,350
+Exploremos el sonido que sostiene cada sílaba.
+
+5
+00:00:13,790 --> 00:00:16,097
+Una sílaba coreana apila un sonido inicial,
+
+6
+00:00:16,097 --> 00:00:17,872
+un sonido medio y un batchim.
+
+7
+00:00:17,872 --> 00:00:20,770
+El batchim es la consonante final en la parte inferior,
+
+8
+00:00:20,770 --> 00:00:22,190
+sosteniendo la sílaba.
+
+9
+00:00:27,950 --> 00:00:31,515
+Por ejemplo, '강' (gang) se construye a partir de 'ㄱ', 'ㅏ',
+
+10
+00:00:31,515 --> 00:00:33,032
+y el batchim 'ㅇ'.
+
+11
+00:00:33,032 --> 00:00:36,900
+Tres bloques se apilan de arriba a abajo en una sílaba.
+
+12
+00:00:40,670 --> 00:00:44,310
+Pero los sonidos finales solo tienen siete.
+
+13
+00:00:44,310 --> 00:00:49,063
+"ㄱ" suena '윽', "ㄴ" suena '은', "ㄷ" suena '읃',
+
+14
+00:00:49,063 --> 00:00:53,816
+"ㄹ" suena '을', "ㅁ" suena '음', "ㅂ" suena '읍',
+
+15
+00:00:53,816 --> 00:00:55,333
+"ㅇ" suena '응'.
+
+16
+00:00:55,333 --> 00:00:59,580
+Los llamamos los 7 sonidos representativos.
+
+17
+00:01:10,290 --> 00:01:13,420
+Primero, el batchim "ㄱ" hace un sonido '윽'.
+
+18
+00:01:13,420 --> 00:01:15,208
+Como en '책' (chaek, libro),
+
+19
+00:01:15,208 --> 00:01:18,710
+cierra la parte posterior de tu boca para detener el sonido.
+
+20
+00:01:20,970 --> 00:01:24,782
+El batchim "ㄴ" hace un sonido '은'; como en '산' (san,
+
+21
+00:01:24,782 --> 00:01:25,529
+montaña),
+
+22
+00:01:25,529 --> 00:01:28,892
+toca la punta de tu lengua con el borde superior de la encía.
+
+23
+00:01:28,892 --> 00:01:32,629
+El batchim "ㄷ" hace un sonido '읃'; como en '옷' (ot,
+
+24
+00:01:32,629 --> 00:01:33,302
+ropa),
+
+25
+00:01:33,302 --> 00:01:36,590
+detén el sonido bruscamente con la punta de tu lengua.
+
+26
+00:01:37,290 --> 00:01:41,636
+El batchim "ㄹ" hace un sonido '을'; como en '물' (mul,
+
+27
+00:01:41,636 --> 00:01:44,788
+agua), curva ligeramente la lengua hacia arriba.
+
+28
+00:01:44,788 --> 00:01:49,134
+El batchim "ㅁ" hace un sonido '음'; como en '곰' (gom,
+
+29
+00:01:49,134 --> 00:01:51,690
+oso), cierra suavemente ambos labios.
+
+30
+00:01:53,540 --> 00:01:57,810
+El batchim "ㅂ" hace un sonido '읍'; como en '밥' (bap,
+
+31
+00:01:57,810 --> 00:02:00,154
+arroz), presiona los labios.
+
+32
+00:02:00,154 --> 00:02:04,507
+El batchim "ㅇ" hace un sonido '응'; como en '강' (gang,
+
+33
+00:02:04,507 --> 00:02:07,270
+río), zumba por la nariz.
+
+34
+00:02:09,720 --> 00:02:10,978
+Curiosamente,
+
+35
+00:02:10,978 --> 00:02:14,842
+otros batchim también cambian a estos siete.
+
+36
+00:02:14,842 --> 00:02:19,066
+El batchim "ㅋ" o "ㄲ" se convierte en el sonido "ㄱ" '윽',
+
+37
+00:02:19,066 --> 00:02:22,660
+así que '부엌' (cocina) se pronuncia como 부억.
+
+38
+00:02:26,570 --> 00:02:29,354
+Los batchim 'ㅅ', 'ㅈ', 'ㅊ', 'ㅌ',
+
+39
+00:02:29,354 --> 00:02:33,955
+'ㅎ' se convierten todos en un sonido 'ㄷ',
+
+40
+00:02:33,955 --> 00:02:37,587
+así que '꽃' (flor) suena como 꼳,
+
+41
+00:02:37,587 --> 00:02:40,250
+y '옷' suena como 옫.
+
+42
+00:02:41,930 --> 00:02:45,460
+El batchim 'ㅍ' se convierte en un sonido 'ㅂ',
+
+43
+00:02:45,460 --> 00:02:48,990
+así que '앞' (frente) se pronuncia como 압.
+
+44
+00:02:51,730 --> 00:02:52,627
+En resumen,
+
+45
+00:02:52,627 --> 00:02:59,004
+cada batchim se pronuncia como uno de siete sonidos: "ㄱ" como '윽',
+
+46
+00:02:59,004 --> 00:03:03,688
+"ㄴ" como '은', "ㄷ" como '읃', "ㄹ" como '을', "ㅁ" como '음',
+
+47
+00:03:03,688 --> 00:03:08,670
+"ㅂ" como '읍', "ㅇ" como '응'. Solo recuerda estos siete.
+
+48
+00:03:18,780 --> 00:03:22,426
+Hoy aprendimos el batchim y los 7 sonidos representativos.
+
+49
+00:03:22,426 --> 00:03:25,049
+Practica el sonido final de una palabra cada día.
+
+50
+00:03:25,049 --> 00:03:26,200
+¡Hasta la próxima!

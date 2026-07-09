@@ -1,0 +1,203 @@
+1
+00:00:00,250 --> 00:00:04,317
+Hello! Last time we learned about vowels.
+
+2
+00:00:04,317 --> 00:00:09,493
+Today, we'll meet another main character of Hangeul, the consonants.
+
+3
+00:00:09,493 --> 00:00:13,930
+What shapes were Hangeul consonants modeled after?
+
+4
+00:00:14,630 --> 00:00:19,720
+Surprisingly, Hangeul consonants were modeled after the shapes of our bodies that make sounds,
+
+5
+00:00:19,720 --> 00:00:29,290
+namely, the mouth, tongue, and throat. This is called the 'principle of pictography'.
+
+6
+00:00:29,990 --> 00:00:38,961
+First, "ㄱ" (giyeok). It's the shape of the root of the tongue blocking the throat. If you make the sound, it's 'geu'.
+
+7
+00:00:38,961 --> 00:00:42,900
+It's a sound made near the molars.
+
+8
+00:00:43,600 --> 00:00:53,180
+"ㄴ" (nieun) is the shape of the tongue tip touching the upper gums. 'neu'. The tongue slightly touches the front of the palate.
+
+9
+00:00:53,880 --> 00:01:02,830
+"ㅁ" (mieum) is the shape of tightly closed lips. 'meu'. It's a sound where both lips meet and close.
+
+10
+00:01:03,530 --> 00:01:12,790
+"ㅅ" (siot) is the shape of pointed teeth. 'seu'. It's a sound where air leaks between the teeth.
+
+11
+00:01:13,490 --> 00:01:22,106
+"ㅇ" (ieung) is the shape of a rounded throat. When used as a final consonant, it becomes the nasal sound 'eung'.
+
+12
+00:01:22,106 --> 00:01:27,360
+In the initial consonant position, it's a silent placeholder.
+
+13
+00:01:28,060 --> 00:01:35,551
+These five basic consonants, "ㄱ", "ㄴ", "ㅁ", "ㅅ",
+
+14
+00:01:35,551 --> 00:01:39,920
+and "ㅇ" were born by imitating our bodies.
+
+15
+00:01:40,620 --> 00:01:46,442
+What about the rest of the consonants? A very clever method was used.
+
+16
+00:01:46,442 --> 00:01:56,630
+When the sound becomes stronger, one stroke is added to the basic letter. This is called the 'principle of adding strokes'.
+
+17
+00:01:57,330 --> 00:02:04,985
+Adding a stroke to "ㄴ" makes "ㄷ" (digeut), and to "ㅁ" makes "ㅂ" (bieup).
+
+18
+00:02:04,985 --> 00:02:09,160
+The sounds become much clearer and firmer.
+
+19
+00:02:09,860 --> 00:02:18,319
+Adding a stroke to "ㅅ" makes "ㅈ" (jieut), and to "ㅇ" makes "ㅎ" (hieut).
+
+20
+00:02:18,319 --> 00:02:25,240
+And even "ㄹ" (rieul) which rolls the tongue. Do you see the pattern?
+
+21
+00:02:25,940 --> 00:02:30,111
+Here are the ten basic consonants we'll learn today.
+
+22
+00:02:30,111 --> 00:02:40,867
+"ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅎ".
+
+23
+00:02:40,867 --> 00:02:43,940
+Shall we call their names together?
+
+24
+00:02:44,640 --> 00:02:47,353
+Now, the most amazing part!
+
+25
+00:02:47,353 --> 00:02:55,701
+Hangeul does not write consonants and vowels separately; it combines them into one character.
+
+26
+00:02:55,701 --> 00:02:59,040
+This is called 'combined writing'.
+
+27
+00:02:59,740 --> 00:03:12,201
+The consonant is the initial sound, the vowel is the middle sound. If we combine initial sound "ㄱ" and middle sound "ㅏ"?
+
+28
+00:03:12,201 --> 00:03:15,600
+It becomes '가' (ga).
+
+29
+00:03:16,300 --> 00:03:28,746
+The rule is simple. Vowels with vertical lines like 'ㅏ, ㅓ, ㅣ' attach to the right of the consonant.
+
+30
+00:03:28,746 --> 00:03:32,140
+Like na, meo, di.
+
+31
+00:03:32,840 --> 00:03:43,222
+Conversely, vowels with horizontal lines like 'ㅗ, ㅜ, ㅡ' attach below the consonant.
+
+32
+00:03:43,222 --> 00:03:46,500
+Like go, nu, deu.
+
+33
+00:03:47,200 --> 00:03:50,833
+Today we'll only learn letters without a final consonant.
+
+34
+00:03:50,833 --> 00:03:58,100
+Without a final consonant, the sound opens up clearly, which is called an 'open syllable'.
+
+35
+00:03:58,800 --> 00:04:07,427
+Now, shall we make words? If we write '고' (go) and '기' (gi) next to each other, it's '고기' (gogi).
+
+36
+00:04:07,427 --> 00:04:11,740
+Two letters combined to create meaning!
+
+37
+00:04:12,440 --> 00:04:23,503
+Shall we call out family members? '나' (na) with 'ㄴ' and 'ㅏ', and then '누나' (nuna).
+
+38
+00:04:23,503 --> 00:04:32,670
+'오빠' (oppa) and '누나' (nuna) are affectionate words to call family.
+
+39
+00:04:33,370 --> 00:04:50,940
+'ㅁ, ㅓ, ㄹ, ㅣ' makes '머리' (meori). 'ㅂ, ㅏ, ㄴ, ㅏ, ㄴ, ㅏ' makes '바나나' (banana).
+
+40
+00:04:50,940 --> 00:04:56,670
+Consonants and vowels combine perfectly, don't they?
+
+41
+00:04:57,370 --> 00:05:07,110
+'아버지' (abeoji) and '어머니' (eomeoni). Even with only letters without final consonants, we can write such warm words.
+
+42
+00:05:07,810 --> 00:05:15,797
+'오이' (oi), '호수' (hosu), '지도' (jido). These are all easy words without final consonants.
+
+43
+00:05:15,797 --> 00:05:19,160
+Read along out loud.
+
+44
+00:05:19,860 --> 00:05:27,518
+Now, a flashcard game! '고기' (gogi), '호수' (hosu), '기차' (gicha).
+
+45
+00:05:27,518 --> 00:05:33,320
+Read them clearly, recalling the consonants and vowels.
+
+46
+00:05:34,020 --> 00:05:38,927
+It's also good to write the learned consonants stroke by stroke with a pencil.
+
+47
+00:05:38,927 --> 00:05:42,680
+Writing by hand helps remember the shapes and sounds better.
+
+48
+00:05:43,380 --> 00:05:49,890
+Today we learned ten basic consonants and combined writing, where consonants and vowels are grouped together.
+
+49
+00:05:49,890 --> 00:05:53,920
+Now you too can read and write simple words!
+
+50
+00:05:54,620 --> 00:06:02,623
+If you practice a little every day, your Hangeul skills will grow quickly. Let's continue our Hangeul journey together with a subscription and a like.
+
+51
+00:06:02,623 --> 00:06:04,290
+See you next time!

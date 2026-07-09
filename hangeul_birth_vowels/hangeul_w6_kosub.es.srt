@@ -1,0 +1,87 @@
+1
+00:00:00,000 --> 00:00:07,840
+¡Hola! Hoy aprenderemos sobre la asimilación de sonidos (연음), donde las letras se conectan de forma natural, y los cambios fonológicos, donde los sonidos se modifican.
+
+2
+00:00:07,840 --> 00:00:09,120
+¡Empecemos juntos!
+
+3
+00:00:09,570 --> 00:00:17,803
+Cuando una sílaba que empieza con 'ㅇ' sigue a una sílaba con *batchim*, el *batchim* se desplaza a la posición de la 'ㅇ' y se pronuncia allí.
+
+4
+00:00:17,803 --> 00:00:22,340
+A esta conexión natural se le llama *yeon-eum*.
+
+5
+00:00:22,790 --> 00:00:34,190
+Por ejemplo, en la palabra '음악' (*eum-ak*), el *batchim* 'ㄱ' se mueve hacia atrás y suena como '으막' (*eu-mak*).
+
+6
+00:00:34,190 --> 00:00:41,030
+Al escribir es '음악', pero al leerlo es '으막'.
+
+7
+00:00:41,480 --> 00:00:47,766
+En '옷이' (*ot-i*), el *batchim* 'ㅅ' también se mueve y se convierte en '오시' (*o-si*).
+
+8
+00:00:47,766 --> 00:00:53,820
+Es como si el *batchim* se deslizara a la siguiente sílaba.
+
+9
+00:00:54,270 --> 00:01:00,907
+En '꽃이' (*kkot-i*), el *batchim* 'ㅊ' se mueve y se convierte en '꼬치' (*kko-chi*).
+
+10
+00:01:00,907 --> 00:01:06,560
+El sonido del *batchim* simplemente se enlaza con la siguiente letra.
+
+11
+00:01:07,010 --> 00:01:18,581
+Practiquemos con palabras. '책을' (*chaek-eul*) se lee como '채글' (*chae-geul*), y '한국어' (*han-guk-eo*) como '한구거' (*han-gu-geo*).
+
+12
+00:01:18,581 --> 00:01:22,920
+¿Verdad que el *batchim* se mueve de forma natural?
+
+13
+00:01:23,370 --> 00:01:29,954
+El *batchim* 'ㅎ' (*hieut*) se debilita ante una vocal y casi desaparece.
+
+14
+00:01:29,954 --> 00:01:37,270
+Por eso, '좋아요' (*jo-a-yo*) suena suavemente como '조아요' (*jo-a-yo*).
+
+15
+00:01:37,720 --> 00:01:46,524
+'웃어요' (*ut-eo-yo*) suena como '우서요' (*u-seo-yo*), e '있어요' (*it-eo-yo*) suena como '이써요' (*i-sseo-yo*).
+
+16
+00:01:46,524 --> 00:01:52,220
+Esto es *yeon-eum*, donde el *batchim* se mueve hacia atrás y se conecta.
+
+17
+00:01:52,670 --> 00:01:58,715
+Al escribir, se mantiene el *batchim* original, pero al leer, se enlaza de forma natural.
+
+18
+00:01:58,715 --> 00:02:05,250
+La forma escrita y la forma pronunciada son diferentes. Con solo saber esto, el coreano se vuelve mucho más natural.
+
+19
+00:02:05,700 --> 00:02:14,948
+En resumen, cuando un *batchim* se encuentra con una 'ㅇ', se mueve a esa posición y se produce la *yeon-eum*.
+
+20
+00:02:14,948 --> 00:02:25,480
+Como '음악' que se convierte en '으막', y '옷이' en '오시'. Intenta leerlos como si fluyeran juntos.
+
+21
+00:02:25,930 --> 00:02:32,955
+Hoy hemos aprendido sobre la *yeon-eum* y los cambios fonológicos. Intenta encontrar ejemplos de *yeon-eum* en las letras de tus canciones favoritas.
+
+22
+00:02:32,955 --> 00:02:35,030
+¡Nos vemos la próxima vez!

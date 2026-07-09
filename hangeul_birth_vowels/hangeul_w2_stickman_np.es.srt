@@ -1,0 +1,275 @@
+1
+00:00:00,250 --> 00:00:02,767
+¡Hola! La última vez aprendimos las vocales.
+
+2
+00:00:02,767 --> 00:00:06,380
+Hoy conocemos al otro héroe del Hangeul: las consonantes.
+
+3
+00:00:06,380 --> 00:00:08,510
+¿En qué formas se modelaron?
+
+4
+00:00:14,630 --> 00:00:15,184
+Sorprendentemente,
+
+5
+00:00:15,184 --> 00:00:19,506
+las consonantes del Hangeul se modelaron en los mismos órganos que producen el sonido: la boca,
+
+6
+00:00:19,506 --> 00:00:21,002
+la lengua y la garganta.
+
+7
+00:00:21,002 --> 00:00:22,720
+Este es el principio de la forma.
+
+8
+00:00:29,990 --> 00:00:30,964
+Primero, "ㄱ".
+
+9
+00:00:30,964 --> 00:00:35,571
+Muestra la raíz de la lengua bloqueando la garganta.
+
+10
+00:00:35,571 --> 00:00:40,000
+Di el sonido: '그'. Suena cerca de los dientes posteriores.
+
+11
+00:00:43,600 --> 00:00:47,675
+"ㄴ" muestra la punta de la lengua tocando la encía superior.
+
+12
+00:00:47,675 --> 00:00:48,015
+'느'.
+
+13
+00:00:48,015 --> 00:00:52,430
+La lengua se une suavemente con la parte delantera del paladar.
+
+14
+00:00:53,880 --> 00:00:57,978
+"ㅁ" es la forma de los labios cerrados. '므'.
+
+15
+00:00:57,978 --> 00:01:01,080
+Los dos labios se unen y se cierran.
+
+16
+00:01:03,530 --> 00:01:07,196
+"ㅅ" es la forma de un diente. '스'.
+
+17
+00:01:07,196 --> 00:01:10,750
+El aire se desliza entre los dientes.
+
+18
+00:01:13,490 --> 00:01:16,672
+"ㅇ" es la forma redonda de la garganta.
+
+19
+00:01:16,672 --> 00:01:20,284
+Como sonido final se convierte en la nasal '응'.
+
+20
+00:01:20,284 --> 00:01:23,810
+Al principio, es un marcador de posición silencioso.
+
+21
+00:01:28,060 --> 00:01:33,483
+Así, las cinco consonantes básicas — "ㄱ", "ㄴ", "ㅁ", "ㅅ",
+
+22
+00:01:33,483 --> 00:01:38,690
+"ㅇ" — nacieron de las formas de nuestro propio cuerpo.
+
+23
+00:01:40,620 --> 00:01:41,817
+¿Y el resto?
+
+24
+00:01:41,817 --> 00:01:44,870
+Un método muy inteligente: cuando el sonido se fortalece,
+
+25
+00:01:44,870 --> 00:01:47,205
+se añade un trazo a la letra básica.
+
+26
+00:01:47,205 --> 00:01:49,360
+Este es el principio de la adición de trazos.
+
+27
+00:01:57,330 --> 00:02:04,237
+Añade un trazo a "ㄴ" y obtienes "ㄷ"; añade a "ㅁ" y obtienes "ㅂ".
+
+28
+00:02:04,237 --> 00:02:08,230
+El sonido se vuelve más claro y firme.
+
+29
+00:02:09,860 --> 00:02:15,870
+Añade un trazo a "ㅅ" para "ㅈ", y a "ㅇ" para "ㅎ".
+
+30
+00:02:15,870 --> 00:02:21,880
+Y también la "ㄹ" rodada. ¿Ves el patrón?
+
+31
+00:02:25,940 --> 00:02:32,667
+Aquí están las diez consonantes básicas de hoy: "ㄱ",
+
+32
+00:02:32,667 --> 00:02:38,707
+"ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅎ".
+
+33
+00:02:38,707 --> 00:02:43,100
+Digamos sus nombres juntos.
+
+34
+00:02:44,640 --> 00:02:46,252
+¡Ahora la parte más mágica!
+
+35
+00:02:46,252 --> 00:02:51,644
+El Hangeul no escribe la consonante y la vocal por separado, sino que las agrupa en un solo bloque.
+
+36
+00:02:51,644 --> 00:02:53,380
+Esto es 'ensamblaje de sílabas'.
+
+37
+00:02:59,740 --> 00:03:02,583
+La consonante es el primer sonido,
+
+38
+00:03:02,583 --> 00:03:04,908
+la vocal el sonido del medio.
+
+39
+00:03:04,908 --> 00:03:09,560
+Pon primero "ㄱ" y en medio "ㅏ" juntos y obtienes '가'.
+
+40
+00:03:16,300 --> 00:03:22,415
+La regla es simple. Las vocales verticales como ㅏ, ㅓ,
+
+41
+00:03:22,415 --> 00:03:29,210
+ㅣ van a la derecha de la consonante — como 나, 머, 디.
+
+42
+00:03:32,840 --> 00:03:38,328
+En contraste, las vocales planas como ㅗ, ㅜ,
+
+43
+00:03:38,328 --> 00:03:44,600
+ㅡ van debajo de la consonante — como 고, 누, 드.
+
+44
+00:03:47,200 --> 00:03:50,541
+Hoy solo usamos letras sin consonante final.
+
+45
+00:03:50,541 --> 00:03:51,441
+Sin final,
+
+46
+00:03:51,441 --> 00:03:54,140
+el sonido permanece abierto — una 'sílaba abierta'.
+
+47
+00:03:58,800 --> 00:04:00,926
+Construyamos una palabra.
+
+48
+00:04:00,926 --> 00:04:05,849
+Escribe '고' y '기' una al lado de la otra: '고기' — carne.
+
+49
+00:04:05,849 --> 00:04:09,430
+¡Dos bloques se unen para dar significado!
+
+50
+00:04:12,440 --> 00:04:21,029
+Nombremos a la familia. 'ㄴ' y 'ㅏ' forman '나', y '누나'.
+
+51
+00:04:21,029 --> 00:04:27,900
+'오빠' y '누나' son palabras cálidas para la familia.
+
+52
+00:04:33,370 --> 00:04:36,578
+머리 significa cabeza. 바나나 significa plátano.
+
+53
+00:04:36,578 --> 00:04:41,290
+¡Las consonantes y vocales se unen perfectamente!
+
+54
+00:04:57,370 --> 00:05:00,276
+아버지 (padre) y 어머니 (madre).
+
+55
+00:05:00,276 --> 00:05:03,181
+Incluso con solo sílabas abiertas,
+
+56
+00:05:03,181 --> 00:05:05,990
+podemos escribir palabras tan cálidas.
+
+57
+00:05:07,810 --> 00:05:11,019
+오이 (pepino), 호수 (lago),
+
+58
+00:05:11,019 --> 00:05:15,641
+지도 (mapa) — palabras sencillas de sílaba abierta.
+
+59
+00:05:15,641 --> 00:05:18,850
+Léelas en voz alta después de mí.
+
+60
+00:05:19,860 --> 00:05:24,313
+¡Ahora, hora de las tarjetas didácticas! '고기', '호수', '기차'.
+
+61
+00:05:24,313 --> 00:05:26,539
+Léelas en voz alta,
+
+62
+00:05:26,539 --> 00:05:30,640
+recordando cada consonante y vocal.
+
+63
+00:05:34,020 --> 00:05:37,364
+Intenta escribir cada consonante trazo a trazo con tu lápiz.
+
+64
+00:05:37,364 --> 00:05:40,380
+Escribir a mano te ayuda a recordar la forma y el sonido.
+
+65
+00:05:43,380 --> 00:05:46,946
+Hoy aprendimos diez consonantes básicas y cómo ensamblar bloques.
+
+66
+00:05:46,946 --> 00:05:49,140
+¡Ahora puedes leer y escribir palabras sencillas!
+
+67
+00:05:54,620 --> 00:05:58,112
+Practica un poco cada día y tu Hangeul crecerá rápido.
+
+68
+00:05:58,112 --> 00:06:00,672
+Suscríbete y dale me gusta para unirte al próximo viaje.
+
+69
+00:06:00,672 --> 00:06:01,720
+¡Nos vemos la próxima vez!

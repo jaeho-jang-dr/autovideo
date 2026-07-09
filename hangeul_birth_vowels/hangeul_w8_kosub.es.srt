@@ -1,0 +1,127 @@
+1
+00:00:00,000 --> 00:00:06,679
+¡Hola! Hoy aprenderemos a decir números, fechas y horas en coreano.
+
+2
+00:00:06,679 --> 00:00:12,430
+Conocer solo los números hará tu vida mucho más fácil. ¡Empecemos juntos!
+
+3
+00:00:12,880 --> 00:00:18,706
+Los números coreanos son de dos tipos: los números nativos puros (Goyueo) y los números de origen chino (Hanjaeo).
+
+4
+00:00:18,706 --> 00:00:21,540
+Sus usos son diferentes, así que aprendamos ambos.
+
+5
+00:00:21,990 --> 00:00:31,222
+Primero, los números nativos: '하나 (Hana)', '둘 (Dul)', '셋 (Set)', '넷 (Net)', '다섯 (Daseot)'.
+
+6
+00:00:31,222 --> 00:00:34,300
+Intenta repetirlos lentamente.
+
+7
+00:00:34,750 --> 00:00:47,180
+Luego, '여섯 (Yeoseot)', '일곱 (Ilgop)', '여덟 (Yeodeol)', '아홉 (Ahop)', '열 (Yeol)'. Es bueno memorizar hasta el diez.
+
+8
+00:00:47,630 --> 00:00:55,410
+Los números nativos se usan para contar objetos o decir la edad. Como "tres manzanas" o "veinte años".
+
+9
+00:00:56,550 --> 00:01:01,625
+Al contar objetos, su forma cambia ligeramente.
+
+10
+00:01:01,625 --> 00:01:10,760
+'하나 (Hana)' se convierte en '한 개 (han gae)', '둘 (Dul)' en '두 개 (du gae)', y '셋 (Set)' en '세 개 (se gae)'.
+
+11
+00:01:11,210 --> 00:01:17,460
+La edad también se cuenta con números nativos. "Veinte años (seumu sal)", "Treinta años (seoreun sal)".
+
+12
+00:01:17,460 --> 00:01:23,040
+Solo recuerda que "스물 (seumul)" cambia a "스무 살 (seumu sal)".
+
+13
+00:01:23,490 --> 00:01:33,020
+Ahora, los números de origen chino: '일 (Il)', '이 (I)', '삼 (Sam)', '사 (Sa)', '오 (O)'.
+
+14
+00:01:33,020 --> 00:01:36,280
+Pronúncialos corto y claro.
+
+15
+00:01:36,730 --> 00:01:49,020
+Y '육 (Yuk)', '칠 (Chil)', '팔 (Pal)', '구 (Gu)', '십 (Sip)'. Los números de origen chino son fáciles de aprender porque su pronunciación es corta.
+
+16
+00:01:49,470 --> 00:01:53,314
+Los números grandes también son de origen chino.
+
+17
+00:01:53,314 --> 00:02:08,690
+'십 (Sip)' es 10, '백 (Baek)' es 100, '천 (Cheon)' es 1000, y '만 (Man)' es 10000.
+
+18
+00:02:09,140 --> 00:02:24,240
+El número 0 se lee de dos maneras: '영 (Yeong)' o '공 (Gong)'. En los números de teléfono, normalmente se dice '공 (Gong)'.
+
+19
+00:02:24,690 --> 00:02:35,490
+Los números de origen chino se usan para fechas, precios, números de teléfono y números. Como "Marzo (Sam Wol)" o "cinco mil wones (Ocheon Won)".
+
+20
+00:02:35,940 --> 00:02:47,320
+Para los precios, añade '원 (Won)' a los números de origen chino. Intenta decir "tres mil wones (Samcheon Won)", "diez mil wones (Man Won)".
+
+21
+00:02:47,770 --> 00:02:54,133
+Los números de teléfono se leen dígito por dígito. "공일공 (Gong Il Gong)...".
+
+22
+00:02:54,133 --> 00:02:58,740
+No olvides que el 0 se lee como '공 (Gong)'.
+
+23
+00:02:59,190 --> 00:03:10,250
+La hora es interesante. '시 (Si)' usa números nativos, y '분 (Bun)' usa números de origen chino. ¡Se mezclan!
+
+24
+00:03:10,700 --> 00:03:20,950
+Así se dice "tres y treinta (se si samsip bun)". '시 (Si)' usa el número nativo "세 (se)", y '분 (Bun)' usa el número de origen chino "삼십 (samsip)".
+
+25
+00:03:22,070 --> 00:03:32,700
+El día se divide en mañana (오전 - ojeon) y tarde/noche (오후 - ohu). La mañana es "오전 (ojeon)", la tarde es "오후 (ohu)". Se añaden así: "tres de la tarde (ohu se si)".
+
+26
+00:03:37,160 --> 00:03:49,500
+Los meses usan números de origen chino y se les añade '월 (wol)'. "Enero (Ilwol)", "Febrero (Iwol)"... hasta "Diciembre (Sibi wol)". Son doce meses.
+
+27
+00:03:49,950 --> 00:04:00,530
+Los días del mes también usan números de origen chino. "¿Qué día es hoy?" Se responde "el quince (sibo il)".
+
+28
+00:04:00,980 --> 00:04:03,171
+También aprendamos los días de la semana.
+
+29
+00:04:03,171 --> 00:04:16,320
+'Lunes (Wollyoil)', 'Martes (Hwayoil)', 'Miércoles (Suyeoil)', 'Jueves (Mog-yoil)', 'Viernes (Geumyoil)', 'Sábado (Toyoil)', 'Domingo (Ilyoil)'.
+
+30
+00:04:16,770 --> 00:04:29,370
+¡Resumamos! Para contar objetos y la edad, se usan números nativos. Para fechas, horas, precios y números de teléfono, se usan números de origen chino. Para la hora, se mezclan ambos.
+
+31
+00:04:29,820 --> 00:04:37,811
+Hoy hemos aprendido números, fechas y horas. Intenta decir la fecha y la hora de hoy en coreano.
+
+32
+00:04:37,811 --> 00:04:40,120
+¡Nos vemos la próxima vez!

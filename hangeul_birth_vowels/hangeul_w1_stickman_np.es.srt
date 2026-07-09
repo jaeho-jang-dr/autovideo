@@ -1,0 +1,203 @@
+1
+00:00:00,250 --> 00:00:00,592
+¡Hola!
+
+2
+00:00:00,592 --> 00:00:04,414
+El Hangeul es uno de los sistemas de escritura más científicos del mundo.
+
+3
+00:00:04,414 --> 00:00:04,756
+Hoy,
+
+4
+00:00:04,756 --> 00:00:09,320
+descubramos cómo nació y desvelemos el secreto de sus ocho vocales simples.
+
+5
+00:00:14,680 --> 00:00:17,051
+Hace mucho tiempo, los coreanos no tenían escritura propia,
+
+6
+00:00:17,051 --> 00:00:19,368
+así que tomaron prestados complejos caracteres chinos.
+
+7
+00:00:19,368 --> 00:00:22,740
+El Hanja era tan difícil que la mayoría de la gente común no sabía leer.
+
+8
+00:00:26,440 --> 00:00:29,639
+Al ver a su pueblo sufrir por no saber leer,
+
+9
+00:00:29,639 --> 00:00:32,597
+el rey Sejong se conmovió profundamente. 'Por compasión,
+
+10
+00:00:32,597 --> 00:00:34,770
+creo veintiocho letras nuevas'.
+
+11
+00:00:38,710 --> 00:00:39,969
+Finalmente, en 1443,
+
+12
+00:00:39,969 --> 00:00:43,968
+nació el Hunminjeongeum, una escritura que cualquiera podía aprender.
+
+13
+00:00:43,968 --> 00:00:47,005
+Los sabios lo aprendieron en una mañana; cualquiera,
+
+14
+00:00:47,005 --> 00:00:48,190
+en diez días.
+
+15
+00:00:52,390 --> 00:00:56,674
+Las vocales del Hangeul se inspiran en tres elementos del universo: el cielo,
+
+16
+00:00:56,674 --> 00:00:59,088
+la tierra y el hombre. El cielo es un punto redondo,
+
+17
+00:00:59,088 --> 00:01:00,838
+la tierra una línea horizontal plana,
+
+18
+00:01:00,838 --> 00:01:02,950
+y el hombre una línea vertical erguida.
+
+19
+00:01:06,990 --> 00:01:11,974
+Añade el punto del cielo a la derecha de la línea del hombre y obtienes el sonido brillante 'ㅏ',
+
+20
+00:01:11,974 --> 00:01:14,797
+el sol naciente en el este. Ponlo a la izquierda,
+
+21
+00:01:14,797 --> 00:01:16,659
+y obtienes el sonido oscuro 'ㅓ',
+
+22
+00:01:16,659 --> 00:01:18,340
+el sol poniente en el oeste.
+
+23
+00:01:22,380 --> 00:01:26,969
+Coloca el punto encima de la línea de la tierra y obtienes 'ㅗ'; debajo,
+
+24
+00:01:26,969 --> 00:01:27,270
+'ㅜ'.
+
+25
+00:01:27,270 --> 00:01:30,730
+Ascender es brillante; hundirse es oscuro.
+
+26
+00:01:35,010 --> 00:01:36,998
+Así, las vocales brillantes se emparejan con las brillantes,
+
+27
+00:01:36,998 --> 00:01:38,519
+y las vocales oscuras con las oscuras.
+
+28
+00:01:38,519 --> 00:01:41,150
+Este hermoso orden se llama armonía vocálica.
+
+29
+00:01:48,690 --> 00:01:51,637
+Ahora, hagamos algunos sonidos.
+
+30
+00:01:51,637 --> 00:01:56,767
+El coreano tiene ocho vocales simples. A diferencia del inglés,
+
+31
+00:01:56,767 --> 00:02:02,771
+el secreto es mantener la forma de la boca perfectamente quieta.
+
+32
+00:02:02,771 --> 00:02:08,010
+Digámoslas juntas. ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ.
+
+33
+00:02:13,460 --> 00:02:16,068
+Primero, 'ㅏ' y 'ㅓ'. Para ambas,
+
+34
+00:02:16,068 --> 00:02:20,653
+baja la mandíbula para abrir bien la boca y mantén los labios planos.
+
+35
+00:02:20,653 --> 00:02:24,520
+Abre más para 'ㅏ', un poco más estrecho para 'ㅓ'.
+
+36
+00:02:31,150 --> 00:02:32,459
+Para 'ㅗ' y 'ㅜ',
+
+37
+00:02:32,459 --> 00:02:37,284
+redondea los labios como si sujetaras una pajita y empújalos hacia adelante.
+
+38
+00:02:37,284 --> 00:02:41,210
+'ㅗ' es un poco más grande, 'ㅜ' más pequeña y apretada.
+
+39
+00:02:45,700 --> 00:02:46,293
+Para 'ㅡ',
+
+40
+00:02:46,293 --> 00:02:50,145
+estira los labios planos hacia los lados como una sonrisa forzada.
+
+41
+00:02:50,145 --> 00:02:50,738
+Para 'ㅣ',
+
+42
+00:02:50,738 --> 00:02:54,220
+tíralos aún más para que los dientes casi se vean.
+
+43
+00:02:56,480 --> 00:02:57,926
+Finalmente, 'ㅐ' y 'ㅔ'.
+
+44
+00:02:57,926 --> 00:03:01,439
+Abre la boca moderadamente con la lengua hacia adelante.
+
+45
+00:03:01,439 --> 00:03:02,610
+En el coreano moderno,
+
+46
+00:03:02,610 --> 00:03:05,020
+los dos sonidos son casi iguales.
+
+47
+00:03:09,080 --> 00:03:10,950
+¡Compruébalo en un espejo!
+
+48
+00:03:10,950 --> 00:03:17,910
+Tus labios solo deben redondearse para 'ㅗ' y 'ㅜ', nunca para 'ㅓ' o 'ㅡ'.
+
+49
+00:03:23,100 --> 00:03:26,338
+Practica las vocales de hoy frente a un espejo todos los días.
+
+50
+00:03:26,338 --> 00:03:29,340
+Suscríbete y dale me gusta para más divertidas aventuras con el Hangeul.
+
+51
+00:03:29,340 --> 00:03:30,400
+¡Hasta la próxima!

@@ -1,0 +1,203 @@
+1
+00:00:00,000 --> 00:00:00,428
+¡Hola!
+
+2
+00:00:00,428 --> 00:00:05,703
+Hoy aprenderemos saludos coreanos cotidianos y cómo presentarse.
+
+3
+00:00:05,703 --> 00:00:07,200
+¡Empecemos juntos!
+
+4
+00:00:11,780 --> 00:00:14,617
+Un saludo es el primer paso que conecta a las personas.
+
+5
+00:00:14,617 --> 00:00:16,831
+Un saludo cordial calienta los corazones rápidamente.
+
+6
+00:00:16,831 --> 00:00:18,760
+Aprendamos lo básico uno por uno.
+
+7
+00:00:22,550 --> 00:00:25,333
+El saludo más común es '안녕하세요'.
+
+8
+00:00:25,333 --> 00:00:28,348
+Puedes usarlo por la mañana, al mediodía o por la noche.
+
+9
+00:00:28,347 --> 00:00:30,280
+Inténtalo con una ligera reverencia.
+
+10
+00:00:37,280 --> 00:00:37,791
+En Corea,
+
+11
+00:00:37,791 --> 00:00:40,117
+se inclina ligeramente la cabeza al saludar.
+
+12
+00:00:40,117 --> 00:00:43,180
+Inclínate un poco más profundo ante los mayores para un saludo más cortés.
+
+13
+00:00:45,910 --> 00:00:49,026
+Con amigos o personas cercanas, ¡simplemente di '안녕'!
+
+14
+00:00:49,026 --> 00:00:52,290
+Funciona tanto al encontrarse como al despedirse.
+
+15
+00:00:57,260 --> 00:00:59,705
+Expresa gratitud con '감사합니다'.
+
+16
+00:00:59,705 --> 00:01:03,810
+Es genial siempre que recibes ayuda o un regalo.
+
+17
+00:01:08,650 --> 00:01:12,646
+Cuando te den las gracias, responde '천만에요' o '아니에요'.
+
+18
+00:01:12,646 --> 00:01:16,210
+Es una forma cálida de decir "de nada".
+
+19
+00:01:20,620 --> 00:01:24,242
+Cuando cometas un error, di '죄송합니다'.
+
+20
+00:01:24,242 --> 00:01:28,060
+Con amigos puedes decir ligeramente '미안해'.
+
+21
+00:01:33,120 --> 00:01:36,124
+A alguien que conoces por primera vez,
+
+22
+00:01:36,124 --> 00:01:39,360
+di '반갑습니다'. Es un cálido "encantado de conocerte".
+
+23
+00:01:42,790 --> 00:01:46,020
+Cuando te encuentres con alguien después de mucho tiempo,
+
+24
+00:01:46,020 --> 00:01:49,170
+di '오랜만이에요'. Transmite tu alegría.
+
+25
+00:01:52,410 --> 00:01:57,629
+Para preguntar cómo está alguien, di '잘 지냈어요?'.
+
+26
+00:01:57,629 --> 00:02:03,260
+Responde '네, 잘 지냈어요' para continuar la conversación.
+
+27
+00:02:05,580 --> 00:02:08,205
+Hay dos formas de despedirse.
+
+28
+00:02:08,205 --> 00:02:11,538
+Di '안녕히 가세요' al que se va,
+
+29
+00:02:11,538 --> 00:02:14,870
+y '안녕히 계세요' al que se queda.
+
+30
+00:02:18,320 --> 00:02:23,601
+Añade '좋은 하루 보내세요' al despedirte para un extra de calidez.
+
+31
+00:02:23,601 --> 00:02:26,410
+Por la noche, di '안녕히 주무세요'.
+
+32
+00:02:30,630 --> 00:02:33,152
+Ahora, auto-presentación.
+
+33
+00:02:33,152 --> 00:02:36,989
+Empieza con '저는' y termina con '입니다'.
+
+34
+00:02:36,989 --> 00:02:39,730
+Simplemente recuerda este formato.
+
+35
+00:02:44,590 --> 00:02:50,405
+Añadamos un nombre. Pon '입니다' después. '저는 민수입니다'.
+
+36
+00:02:50,405 --> 00:02:53,490
+Inténtalo con tu propio nombre.
+
+37
+00:03:00,230 --> 00:03:06,336
+Presenta también tu país. Añade '사람입니다' después.
+
+38
+00:03:06,336 --> 00:03:08,080
+'저는 미국 사람입니다'.
+
+39
+00:03:12,940 --> 00:03:15,394
+Di también tu profesión. '저는 학생입니다'.
+
+40
+00:03:15,394 --> 00:03:19,540
+Puedes cambiarlo por oficinista, profesor y más.
+
+41
+00:03:24,810 --> 00:03:28,000
+Para la edad, di '저는 스무 살입니다'.
+
+42
+00:03:28,000 --> 00:03:32,540
+Recuerda añadir '살' después del número.
+
+43
+00:03:36,350 --> 00:03:40,608
+Para dónde vives, di '저는 서울에 살아요'.
+
+44
+00:03:40,608 --> 00:03:44,290
+Añade '에 살아요' después del nombre de la ciudad.
+
+45
+00:03:48,010 --> 00:03:50,402
+Para aficiones, di '제 취미는 요리예요'.
+
+46
+00:03:50,402 --> 00:03:54,230
+Pon lo que te gusta y crea tu propia frase.
+
+47
+00:03:57,820 --> 00:04:04,870
+Ahora conectémoslo todo. '안녕하세요, 저는 민수입니다.
+
+48
+00:04:04,870 --> 00:04:09,460
+미국 사람이고, 학생입니다. 만나서 반갑습니다! '
+
+49
+00:04:10,320 --> 00:04:13,928
+Hoy hemos aprendido saludos y auto-presentación.
+
+50
+00:04:13,928 --> 00:04:16,726
+Practica claramente frente a un espejo.
+
+51
+00:04:16,726 --> 00:04:17,830
+'다음 시간에 또 만나요'!

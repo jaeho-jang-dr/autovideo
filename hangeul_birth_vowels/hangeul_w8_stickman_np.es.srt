@@ -1,0 +1,187 @@
+1
+00:00:00,000 --> 00:00:00,431
+¡Hola!
+
+2
+00:00:00,431 --> 00:00:04,020
+Hoy aprenderemos los números, las fechas y la hora en coreano.
+
+3
+00:00:04,020 --> 00:00:07,609
+Solo con saber los números, la vida diaria es mucho más fácil.
+
+4
+00:00:07,609 --> 00:00:08,470
+¡Empecemos!
+
+5
+00:00:12,880 --> 00:00:17,500
+El coreano tiene dos sistemas numéricos: el nativo 'goyueo' y el sino coreano 한자어.
+
+6
+00:00:17,500 --> 00:00:20,580
+Se usan de forma diferente, así que aprende ambos.
+
+7
+00:00:21,990 --> 00:00:29,880
+Primero, los números nativos: '하나', '둘', '셋', '넷', '다섯'.
+
+8
+00:00:29,880 --> 00:00:33,100
+Síguenos lentamente.
+
+9
+00:00:34,750 --> 00:00:40,499
+Luego, '여섯', '일곱', '여덟', '아홉', '열'.
+
+10
+00:00:40,499 --> 00:00:45,740
+Ayuda memorizar hasta el diez.
+
+11
+00:00:47,630 --> 00:00:51,814
+Los números nativos cuentan cosas y dicen la edad.
+
+12
+00:00:51,814 --> 00:00:56,100
+Como 사과 세 개 (tres manzanas), 스무 살 (veinte).
+
+13
+00:00:56,550 --> 00:01:04,803
+Al contar, la forma cambia: 하나 a '한 개',
+
+14
+00:01:04,803 --> 00:01:08,930
+둘 a '두 개', 셋 a '세 개'.
+
+15
+00:01:11,210 --> 00:01:17,208
+La edad también usa los nativos: '스무 살', '서른 살'.
+
+16
+00:01:17,208 --> 00:01:22,540
+Solo recuerda que 스물 se convierte en '스무 살'.
+
+17
+00:01:23,490 --> 00:01:29,980
+Ahora los números sino coreanos: '일', '이', '삼', '사', '오'.
+
+18
+00:01:29,980 --> 00:01:34,770
+Pronúncialos cortos y claros.
+
+19
+00:01:36,730 --> 00:01:41,593
+Y '육', '칠', '팔', '구', '십'.
+
+20
+00:01:41,593 --> 00:01:47,150
+Los números sino coreanos son cortos y fáciles.
+
+21
+00:01:49,470 --> 00:01:57,189
+Los números grandes también son sino coreanos: '십' es 10, '백' es 100,
+
+22
+00:01:57,189 --> 00:02:01,370
+'천' es 1000, '만' es 10000.
+
+23
+00:02:09,140 --> 00:02:13,737
+El cero se lee de dos maneras: '영' o '공'.
+
+24
+00:02:13,737 --> 00:02:18,740
+En los números de teléfono, solemos decir '공'.
+
+25
+00:02:24,690 --> 00:02:29,990
+Los números sino coreanos son para fechas, precios, números de teléfono.
+
+26
+00:02:29,990 --> 00:02:31,580
+Como 삼 월, 오천 원.
+
+27
+00:02:35,940 --> 00:02:41,860
+Para los precios, añade '원' a los números sino coreanos.
+
+28
+00:02:41,860 --> 00:02:44,820
+Di '삼천 원', '만 원'.
+
+29
+00:02:47,770 --> 00:02:52,994
+Los números de teléfono se leen dígito por dígito: '공일공... '.
+
+30
+00:02:52,994 --> 00:02:55,020
+Recuerda, 0 es '공'.
+
+31
+00:02:59,190 --> 00:03:03,402
+La hora es divertida: '시' (hora) usa números nativos,
+
+32
+00:03:03,402 --> 00:03:07,730
+'분' (minuto) usa sino coreanos. ¡Los mezclas!
+
+33
+00:03:10,700 --> 00:03:15,505
+Así que dices '세 시 삼십 분'.
+
+34
+00:03:15,505 --> 00:03:21,620
+시 es el nativo 세, 분 es el sino coreano 삼십.
+
+35
+00:03:22,070 --> 00:03:29,390
+Un día se divide en 오전 (AM) y 오후 (PM).
+
+36
+00:03:29,390 --> 00:03:36,710
+Mañana 오전, tarde 오후. Como '오후 세 시'.
+
+37
+00:03:37,160 --> 00:03:45,227
+Los meses añaden '월' a los sino coreanos: '일월', '이월'... hasta '십이월',
+
+38
+00:03:45,227 --> 00:03:47,580
+doce meses.
+
+39
+00:03:49,950 --> 00:03:56,078
+El '일' del día también es sino coreano. '오늘은 며칠?
+
+40
+00:03:56,078 --> 00:03:58,880
+' Responde '십오 일'.
+
+41
+00:04:00,980 --> 00:04:11,185
+Días de la semana: '월요일', '화요일', '수요일', '목요일',
+
+42
+00:04:11,185 --> 00:04:15,720
+'금요일', '토요일', '일요일'.
+
+43
+00:04:16,770 --> 00:04:20,385
+¡Repasemos! Contar y la edad usan nativos; fechas, hora,
+
+44
+00:04:20,385 --> 00:04:22,870
+precios usan sino coreanos; la hora mezcla ambos.
+
+45
+00:04:29,820 --> 00:04:32,927
+Hoy aprendimos los números, las fechas y la hora.
+
+46
+00:04:32,927 --> 00:04:36,108
+Intenta decir la fecha y la hora de hoy en coreano.
+
+47
+00:04:36,108 --> 00:04:37,070
+¡Nos vemos la próxima vez!
