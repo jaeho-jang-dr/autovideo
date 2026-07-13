@@ -696,10 +696,10 @@
   "week": 12,
   "day": 1,
   "place_no": 12,
-  "name_ko": "성산일출봉",
-  "name_en": "Seongsan Ilchulbong",
-  "region_ko": "제주",
-  "motif": "huge green volcanic crater rising from the sea, hiking path, sunrise glow, fields below"
+  "name_ko": "강남",
+  "name_en": "Gangnam",
+  "region_ko": "서울",
+  "motif": "wide modern boulevard with glass towers, fashion boutiques, busy crosswalk, city energy"
  },
  {
   "week": 12,
@@ -759,10 +759,10 @@
   "week": 13,
   "day": 1,
   "place_no": 13,
-  "name_ko": "협재해수욕장",
-  "name_en": "Hyeopjae Beach",
+  "name_ko": "성산일출봉",
+  "name_en": "Seongsan Ilchulbong",
   "region_ko": "제주",
-  "motif": "white-sand beach with emerald shallow water, a small island offshore, palm trees, clear sky"
+  "motif": "huge green volcanic crater rising from the sea, hiking path, sunrise glow, fields below"
  },
  {
   "week": 13,
@@ -822,10 +822,10 @@
   "week": 14,
   "day": 1,
   "place_no": 14,
-  "name_ko": "한라산",
-  "name_en": "Hallasan",
+  "name_ko": "협재해수욕장",
+  "name_en": "Hyeopjae Beach",
   "region_ko": "제주",
-  "motif": "tall shield volcano above clouds, hiking trail through low brush, crater lake, autumn colors"
+  "motif": "white-sand beach with emerald shallow water, a small island offshore, palm trees, clear sky"
  },
  {
   "week": 14,
@@ -885,10 +885,10 @@
   "week": 15,
   "day": 1,
   "place_no": 15,
-  "name_ko": "불국사",
-  "name_en": "Bulguksa Temple",
-  "region_ko": "경주",
-  "motif": "grand old wooden temple, stone stairways and pagodas, autumn maples, lotus pond, tiled roofs"
+  "name_ko": "한라산",
+  "name_en": "Hallasan",
+  "region_ko": "제주",
+  "motif": "tall shield volcano above clouds, hiking trail through low brush, crater lake, autumn colors"
  },
  {
   "week": 15,
@@ -948,10 +948,10 @@
   "week": 16,
   "day": 1,
   "place_no": 16,
-  "name_ko": "전주한옥마을",
-  "name_en": "Jeonju Hanok Village",
-  "region_ko": "전주",
-  "motif": "wide hanok village of tiled roofs, hanbok visitors, food stalls, bibimbap bowl, lanterns"
+  "name_ko": "불국사",
+  "name_en": "Bulguksa Temple",
+  "region_ko": "경주",
+  "motif": "grand old wooden temple, stone stairways and pagodas, autumn maples, lotus pond, tiled roofs"
  },
  {
   "week": 16,
@@ -1011,10 +1011,10 @@
   "week": 17,
   "day": 1,
   "place_no": 17,
-  "name_ko": "남이섬",
-  "name_en": "Nami Island",
-  "region_ko": "강원",
-  "motif": "long straight tree-lined lane of tall metasequoia, couple walking, bicycles, autumn or snow"
+  "name_ko": "전주한옥마을",
+  "name_en": "Jeonju Hanok Village",
+  "region_ko": "전주",
+  "motif": "wide hanok village of tiled roofs, hanbok visitors, food stalls, bibimbap bowl, lanterns"
  },
  {
   "week": 17,
@@ -1074,10 +1074,10 @@
   "week": 18,
   "day": 1,
   "place_no": 18,
-  "name_ko": "설악산",
-  "name_en": "Seoraksan",
+  "name_ko": "남이섬",
+  "name_en": "Nami Island",
   "region_ko": "강원",
-  "motif": "jagged granite peaks blazing with red-orange autumn foliage, cable car, temple, stream, blue sky"
+  "motif": "long straight tree-lined lane of tall metasequoia, couple walking, bicycles, autumn or snow"
  },
  {
   "week": 18,
@@ -1137,10 +1137,10 @@
   "week": 19,
   "day": 1,
   "place_no": 19,
-  "name_ko": "강남",
-  "name_en": "Gangnam",
-  "region_ko": "서울",
-  "motif": "wide modern boulevard with glass towers, fashion boutiques, busy crosswalk, city energy"
+  "name_ko": "설악산",
+  "name_en": "Seoraksan",
+  "region_ko": "강원",
+  "motif": "jagged granite peaks blazing with red-orange autumn foliage, cable car, temple, stream, blue sky"
  },
  {
   "week": 19,

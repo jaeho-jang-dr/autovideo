@@ -4,6 +4,9 @@ import sys, time
 from playwright.sync_api import sync_playwright
 VID = sys.argv[1]; PL = sys.argv[2]
 def log(m): print(m, flush=True)
+def shot(pg, name):
+    try: pg.screenshot(path=f"scratch/yt/{name}.png", timeout=6000)
+    except Exception: pass
 with sync_playwright() as pw:
     b = pw.chromium.connect_over_cdp("http://localhost:9222"); ctx = b.contexts[0]
     pgs = [p for p in ctx.pages if "youtube.com" in p.url]
@@ -19,7 +22,7 @@ with sync_playwright() as pw:
     if not opened:
         try: pg.get_by_text("카드", exact=True).first.click(); opened = True
         except Exception: pass
-    time.sleep(5); pg.screenshot(path=f"scratch/yt/card_{VID}_1.png")
+    time.sleep(5); shot(pg, f"card_{VID}_1")
     added = False
     # 모달 안(y<500)의 '재생목록' 행 [+] 클릭 (배경 요소 회피)
     try:
@@ -40,7 +43,7 @@ with sync_playwright() as pw:
             time.sleep(2.5)
         else: log("모달 재생목록 못찾음")
     except Exception as e: log("재생목록+ 실패 " + str(e)[:40])
-    pg.screenshot(path=f"scratch/yt/card_{VID}_2.png")
+    shot(pg, f"card_{VID}_2")
     # '특정 재생목록 선택': 검색 금지(전체 유튜브라 다른 채널 나옴). 상단 내 재생목록 카드 직접 클릭
     try:
         time.sleep(1.5)
@@ -50,7 +53,7 @@ with sync_playwright() as pw:
                 el.click(); added = True; log("내 재생목록 카드 클릭"); time.sleep(2.5); break
         if not added: log("내 재생목록 카드 못찾음")
     except Exception as e: log("선택 실패 " + str(e)[:40])
-    pg.screenshot(path=f"scratch/yt/card_{VID}_3.png")
+    shot(pg, f"card_{VID}_3")
     # 저장
     saved = False
     for sel in ("#save-button", "ytcp-button#save-button"):

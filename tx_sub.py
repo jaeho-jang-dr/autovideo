@@ -18,10 +18,9 @@ def shot(pg, n):
     except Exception as e: log("shot fail " + str(e)[:40])
 
 with sync_playwright() as pw:
-    ctx = pw.chromium.launch_persistent_context(af.PROFILE, channel="chrome", headless=False, locale="ko-KR",
-        no_viewport=True, accept_downloads=True, ignore_default_args=["--enable-automation"],
-        args=["--start-maximized", "--no-first-run", "--lang=ko-KR", "--disable-gpu"])
-    pg = ctx.pages[0] if ctx.pages else ctx.new_page(); pg.set_default_timeout(30000)
+    b = pw.chromium.connect_over_cdp("http://localhost:9222")   # 로그인된 디버그 크롬 재사용(프로필 충돌 회피)
+    ctx = b.contexts[0]
+    pg = ctx.new_page(); pg.set_default_timeout(30000)
     pg.goto(f"https://studio.youtube.com/video/{VID}/translations", wait_until="domcontentloaded"); pg.wait_for_timeout(8000)
     shot(pg, "0_page")
 
@@ -41,15 +40,51 @@ with sync_playwright() as pw:
         except Exception as e: log("언어 추가 스킵/실패 " + str(e)[:60])
         shot(pg, "1_added")
 
-    # 행 자막칸 좌표 클릭
-    en = pg.get_by_text(ROW, exact=True).first
-    en.wait_for(state="visible", timeout=10000)
-    b = en.bounding_box(); rowy = b["y"] + b["height"]/2
-    hx = None
-    for h in pg.get_by_text("자막", exact=True).all():
-        bb = h.bounding_box()
-        if bb and bb["x"] > 400: hx = bb["x"] + bb["width"]/2; break
-    if hx is None: hx = b["x"] + 560
+    # 행/자막칸 좌표를 JS로 직접 계산 — 우선 <tr>/<td> 테이블에서 정확한 자막셀,
+    # 실패 시 기존 yt-formatted-string 폴백 (다른 페이지 호환)
+    part = ROW.split("(")[0].strip()
+    info = pg.evaluate("""(args) => {
+        const [full, part] = args;
+        const all = [...document.querySelectorAll('yt-formatted-string, span, div, td, th')];
+        // 자막 열 X (헤더 leaf)
+        let capx = null;
+        for(const e of document.querySelectorAll('th, td, span, div, yt-formatted-string')){
+            if(e.children.length===0 && e.textContent.trim()==='자막'){
+                const r=e.getBoundingClientRect();
+                if(r.width>0 && r.x>300 && r.y<320){ capx=r.x+r.width/2; break; } } }
+        // 대상 행 <tr>: 첫 td 텍스트가 언어명과 일치(자동 자막 제외)
+        let cellx=null, celly=null;
+        for(const tr of document.querySelectorAll('tr')){
+            const tds=[...tr.querySelectorAll('td')];
+            if(!tds.length) continue;
+            const lt=tds[0].textContent.trim();
+            const match = (lt===full) || (lt===part) ||
+                          (part && lt.startsWith(part) && lt.indexOf('자동')<0 && lt.indexOf('(동영상')<0 && full===part);
+            if(!match) continue;
+            // 자막 td = capx에 가장 가까운 td (없으면 두번째 td)
+            let capTd=null, bestdx=1e9;
+            if(capx!==null){ for(const td of tds){ const r=td.getBoundingClientRect();
+                const dx=Math.abs(r.x+r.width/2-capx); if(dx<bestdx){bestdx=dx; capTd=td;} } }
+            if(!capTd && tds.length>=2) capTd=tds[1];
+            if(capTd){ const rr=capTd.getBoundingClientRect();
+                cellx=rr.x+rr.width/2; celly=rr.y+rr.height/2; }
+            break;
+        }
+        // 폴백용 y/sx
+        function rowY(txt){ const cs=[];
+            for(const e of all){ if(e.offsetParent!==null && e.textContent.trim()===txt){
+                const r=e.getBoundingClientRect();
+                if(r.width>0 && r.height>0 && r.x<460 && r.y>150) cs.push(r.y+r.height/2); } }
+            return cs.length ? Math.max(...cs) : null; }
+        let y = rowY(full); if(y===null) y = rowY(part);
+        return {cellx:cellx, celly:celly, y:y, sx:capx, vw:window.innerWidth};
+    }""", [ROW, part])
+    if not info or (info.get("cellx") is None and info.get("y") is None):
+        shot(pg, "2b_norow"); log("행 못찾음: " + ROW); pg.close(); raise SystemExit
+    if info.get("cellx") is not None:
+        hx = info["cellx"]; rowy = info["celly"]; log("자막셀(td) 사용")
+    else:
+        rowy = info["y"]; hx = info["sx"] if info.get("sx") else info["vw"] * 0.42
     log(f"자막칸 클릭 ({round(hx)},{round(rowy)})")
     pg.mouse.click(round(hx), round(rowy)); pg.wait_for_timeout(5000)
     log("URL: " + pg.url); shot(pg, "2_editor")
@@ -104,5 +139,5 @@ with sync_playwright() as pw:
             if ROW.split("(")[0].strip() in t: log("ROW: " + t)
     except Exception: pass
     log(f"RESULT upload={ok} publish={pub}")
-    pg.wait_for_timeout(2000); ctx.close()
+    pg.wait_for_timeout(2000); pg.close()
 print("END")

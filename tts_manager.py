@@ -170,6 +170,12 @@ def save_tts(text, output_path, lang='ko', voice_id=None):
     active_voice = os.environ.get("ELEVEN_ACTIVE_VOICE", "female").strip().lower()
     
     if not voice_id:
+        # 언어별 보이스(최종 나레이션: ko→Kanna, en→Alice) — 설정 시 우선
+        if lang.startswith("ko") and os.environ.get("ELEVEN_VOICE_KO", "").strip():
+            voice_id = os.environ["ELEVEN_VOICE_KO"].strip()
+        elif lang.startswith("en") and os.environ.get("ELEVEN_VOICE_EN", "").strip():
+            voice_id = os.environ["ELEVEN_VOICE_EN"].strip()
+    if not voice_id:
         if active_voice == "male":
             voice_id = os.environ.get("ELEVEN_VOICE_MALE", "oq1t7YrJg871G2HokpW9").strip()
         elif active_voice == "custom":

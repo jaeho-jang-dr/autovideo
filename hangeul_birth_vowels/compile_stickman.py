@@ -29,6 +29,14 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) 
 from hangeul_strokes import render_vowel, STROKES
 import hangeul_write as hw   # 자음+음절 정획순 드로잉(획순 교육)
 import font_write as _fontw   # 글씨랑: 전용 폰트 글자꼴 파라메트릭 드로잉(안 비틀림)
+from PIL import ImageFilter as _IF
+def _halo_bake(wim):
+    """파라메트릭 글자에 흰 후광을 구워 하나의 RGBA로 반환(배경 위 가독성). prog>=1은 캐시됨."""
+    ha = wim.split()[3].filter(_IF.GaussianBlur(3)).point(lambda v: min(255, int(v * 2.4)))
+    out = Image.composite(Image.new("RGBA", wim.size, (255, 255, 255, 235)),
+                          Image.new("RGBA", wim.size, (0, 0, 0, 0)), ha)
+    out.alpha_composite(wim)
+    return out
 
 try:
     sys.stdout.reconfigure(encoding="utf-8")
@@ -53,7 +61,7 @@ if not os.path.exists(FONT_BD):
     FONT_BD = FONT
 TTS_DIR = os.path.join(PDIR, "tts_cache")
 os.makedirs(TTS_DIR, exist_ok=True)
-JAMO_DIR = os.path.join(ROOT, "web", "public", "audio", "jamo")   # SunHi 모음 발음 클립
+JAMO_DIR = os.environ.get("JAMO_DIR") or os.path.join(ROOT, "web", "public", "audio", "jamo")   # 발음 클립(기본 SunHi/jamo, env로 jamo_m 인준 오버라이드)
 
 # 끝에 따로 소리를 붙이지 않는다 — 발음은 나레이션 텍스트 안에서 처리(tts_text).
 SCENE_SOUNDS = {}
@@ -604,21 +612,24 @@ def compose(scene, t=None, lang="ko", overlay=True):
         if o["motion"] == "write":
             # 대상 글자: letter_X → X(자모), word_XXX → XXX(음절/단어). 빠른 매직펜 필기로 획순 드로잉.
             wtext = base_name[7:] if base_name.startswith("letter_") else (base_name[5:] if base_name.startswith("word_") else None)
+            wtext = wtext or scene.get("draw_text")   # 스펙 draw_text(자막의 한글 표현) 파라메트릭 필기
             if wtext:
                 style = scene.get("draw_font") or "nanum_pen"   # 글씨랑 폰트(기본 나눔손글씨 펜) — 안 비틀림
                 WDUR = scene.get("draw_dur") or 0.7        # 필기 속도(초). 붓글씨=느리게(2.0 등)
+                _align = scene.get("draw_align") or "center"   # left = 중앙(cx)에서 오른쪽으로 써나감
                 prog = 1.0 if final else max(0.0, min(1.0, (tt - 0.12) / WDUR))
                 if prog > 0.0:
                     size_px = max(8, int(200 * o["scale"] * pulse))
-                    if prog >= 1.0:                       # 완성 글리프 캐시
-                        ck = (wtext, style, size_px, round(o["cx"]))
+                    if prog >= 1.0:                       # 완성 글리프(후광 구워서) 캐시 — 전체 프레임 재계산 방지
+                        ck = (wtext, style, size_px, round(o["cx"]), _align)
                         wim = _VDONE.get(ck)
                         if wim is None:
-                            wim = _fontw.render_text_writing(wtext, style, size_px, progress=1.0)
+                            wim = _halo_bake(_fontw.render_text_writing(wtext, style, size_px, progress=1.0, align=_align))
                             _VDONE[ck] = wim
-                    else:
-                        wim = _fontw.render_text_writing(wtext, style, size_px, progress=prog)
-                    base.alpha_composite(wim, (int(o["cx"] - wim.width / 2), int(o["cy"] - wim.height / 2)))
+                    else:                                 # 그리는 중(3초)만 매 프레임 계산
+                        wim = _halo_bake(_fontw.render_text_writing(wtext, style, size_px, progress=prog, align=_align))
+                    _ax = int(o["cx"]) if _align == "left" else int(o["cx"] - wim.width / 2)
+                    base.alpha_composite(wim, (_ax, int(o["cy"] - wim.height / 2)))
                 continue
         is_pose = "/poses/" in o["path"].replace("\\", "/")
         im = load_img(o["path"])

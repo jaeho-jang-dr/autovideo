@@ -12,7 +12,8 @@ import numpy as np
 from PIL import ImageDraw
 import compile_stickman as cs
 
-os.environ["ELEVEN_API_KEY"] = ""
+if os.environ.get("USE_ELEVEN", "").strip().lower() not in ("1", "true", "yes"):
+    os.environ["ELEVEN_API_KEY"] = ""   # 기본=ElevenLabs 끔(초안=edge/azure). USE_ELEVEN=1이면 유지(최종 Kanna/Alice).
 os.environ.setdefault("EDGE_ACTIVE_VOICE", "sunhi")
 
 EP = sys.argv[1] if len(sys.argv) > 1 else "KO-W02"

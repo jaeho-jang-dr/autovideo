@@ -36,26 +36,33 @@ def list_fonts():
     con.close(); return rows
 
 
-def _render_alpha(text, fp, size_px, pad=0.22):
-    """폰트로 text를 렌더한 알파(L) + 잉크색 RGBA 반환 (SS 배율)."""
+def _render_alpha(text, fp, size_px, pad=0.22, align="center"):
+    """폰트로 text를 렌더한 알파(L) + 잉크색 RGBA 반환 (SS 배율). '\\n' 포함 시 여러 줄(align 정렬)."""
     fnt = ImageFont.truetype(fp, int(size_px * SS))
-    tmp = Image.new("L", (10, 10), 0)
-    bb = ImageDraw.Draw(tmp).textbbox((0, 0), text, font=fnt)
-    tw, th = bb[2] - bb[0], bb[3] - bb[1]
+    tmp = ImageDraw.Draw(Image.new("L", (10, 10), 0))
     px = int(size_px * SS * pad)
+    if "\n" in text:                                   # 여러 줄 — 파라메트릭 필기 자막 줄바꿈
+        sp = int(size_px * SS * 0.22)                  # 줄 간격
+        bb = tmp.multiline_textbbox((0, 0), text, font=fnt, spacing=sp, align=align)
+        tw, th = bb[2] - bb[0], bb[3] - bb[1]
+        W, H = int(tw + 2 * px), int(th + 2 * px)
+        a = Image.new("L", (W, H), 0)
+        ImageDraw.Draw(a).multiline_text((px - bb[0], px - bb[1]), text, font=fnt, fill=255, spacing=sp, align=align)
+        return a
+    bb = tmp.textbbox((0, 0), text, font=fnt)
+    tw, th = bb[2] - bb[0], bb[3] - bb[1]
     W, H = tw + 2 * px, th + 2 * px
     a = Image.new("L", (W, H), 0)
-    d = ImageDraw.Draw(a)
-    d.text((px - bb[0], px - bb[1]), text, font=fnt, fill=255)
+    ImageDraw.Draw(a).text((px - bb[0], px - bb[1]), text, font=fnt, fill=255)
     return a
 
 
-def render_text_writing(text, key, size_px, progress=1.0, ink=INK, pen=True):
+def render_text_writing(text, key, size_px, progress=1.0, ink=INK, pen=True, align="center"):
     """text를 전용 폰트꼴로 progress(0..1)까지 '써지는' 상태로 그린 RGBA."""
     fp = font_path(key)
     if not fp or not os.path.exists(fp):
         raise FileNotFoundError(key)
-    alpha = _render_alpha(text, fp, size_px)
+    alpha = _render_alpha(text, fp, size_px, align=align)
     W, H = alpha.size
     arr = np.asarray(alpha, dtype=np.float32) / 255.0   # (H,W) 잉크 강도
     ys, xs = np.nonzero(arr > 0.35)

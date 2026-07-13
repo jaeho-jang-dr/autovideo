@@ -17,6 +17,13 @@ VIDEO = os.path.abspath(_a(1, "hangeul_birth_vowels/hangeul_w1_stickman_np_ko_bu
 SRT   = os.path.abspath(_a(2, os.path.splitext(VIDEO)[0] + ".ko.srt"))
 LABEL = _a(3, "한글강의")
 PORT  = int(_a(4, "8920"))
+# ★자막 2개 동시 탑재: 지정된 SRT(주자막) + 짝 언어 SRT(부자막) → 브라우저 자막 메뉴에서 선택
+_base = re.sub(r"\.(ko|en)\.srt$", "", SRT) if re.search(r"\.(ko|en)\.srt$", SRT) else os.path.splitext(SRT)[0]
+_is_ko = SRT.endswith(".ko.srt")
+SRT2  = _base + (".en.srt" if _is_ko else ".ko.srt")      # 짝 자막
+SRT2  = SRT2 if os.path.exists(SRT2) else None
+LANG1, LABEL1 = ("ko", "한국어") if _is_ko else ("en", "English")
+LANG2, LABEL2 = ("en", "English") if _is_ko else ("ko", "한국어")
 _stem = os.path.splitext(os.path.basename(VIDEO))[0]
 _dir  = os.path.dirname(VIDEO)
 FB_JSON = os.path.join(_dir, f"review_{_stem}_feedback.json")
@@ -35,6 +42,13 @@ def load_scenes():
                        "cap": " ".join(L[2:])[:50]})
     return scenes
 SCENES = load_scenes()
+
+def srt_to_vtt(path=None):
+    p = path or SRT
+    if not p or not os.path.exists(p): return "WEBVTT\n\n"
+    txt = open(p, encoding="utf-8").read()
+    txt = re.sub(r"(\d\d:\d\d:\d\d),(\d\d\d)", r"\1.\2", txt)   # SRT(,) → VTT(.)
+    return "WEBVTT\n\n" + txt
 
 def load_fb():
     if os.path.exists(FB_JSON):
@@ -85,9 +99,18 @@ textarea{width:100%;height:80px;background:#11131a;color:#eee;border:1px solid #
 <div class=left>
   <div class=row><h1>🎬 교정 리뷰 — 한글강의 __LABEL__</h1>
     <span class=jump>영상 정지 → 메모 입력 → 추가</span></div>
+  <div class=row style="gap:8px;margin:6px 0">
+    <span style="font-size:12px;color:#8aa">🎧 소리 출력</span>
+    <select id=snk style="flex:1;background:#12202a;color:#dfe;border:1px solid #2a4050;border-radius:6px;padding:5px;font-size:12px">
+      <option value="">(기본 장치)</option>
+    </select>
+    <button class=btn style="width:auto;padding:5px 10px;font-size:12px" onclick=loadSinks()>장치 새로고침</button>
+  </div>
+  <div id=snkst style="font-size:11px;color:#6b8;margin:-2px 0 6px 2px"></div>
   <video id=vid controls preload=metadata crossorigin=anonymous>
     <source src="/video" type="video/mp4">
-    <track id=trk kind=subtitles srclang=ko label="한국어" src="/subs" default>
+    <track id=trk kind=subtitles srclang=__LANG1__ label="__LABEL1__" src="/subs" default>
+    __TRACK2__
   </video>
   <div class=tl id=tl></div>
 </div>
@@ -100,6 +123,68 @@ textarea{width:100%;height:80px;background:#11131a;color:#eee;border:1px solid #
   <div class=list id=list></div>
 </div></div>
 <script>
+// ── 🎧 소리 출력 = 컴퓨터(윈도우) 사운드 설정을 그대로 따라감 ─────────────
+// ★기본 동작: 'default' 싱크에 붙여 **윈도우 기본 출력 장치**를 따라간다.
+//   (Chrome이 예전 장치를 붙잡고 스피커로만 내보내는 문제 해결. 이어폰 꽂으면 이어폰으로.)
+//   시스템 오디오 설정·서비스는 절대 건드리지 않는다(원격 CRD 환경 — 만지면 소리 끊김).
+// 필요하면 아래 드롭다운으로 특정 장치를 강제 지정할 수도 있다.
+var SINK_KEY = 'review_sink_id';
+async function applySink(id){
+  var v = document.getElementById('vid');
+  if(typeof v.setSinkId !== 'function') return;          // 미지원 브라우저는 조용히 기본 동작
+  try{
+    await v.setSinkId(id || 'default');                  // ''/'default' → 윈도우 기본 장치 추종
+    localStorage.setItem(SINK_KEY, id || '');
+  }catch(e){ console.warn('setSinkId 실패', e); }
+}
+async function loadSinks(){
+  var sel = document.getElementById('snk');
+  try{
+    try{                                                  // 장치 '이름'을 보려면 권한 필요
+      var st = await navigator.mediaDevices.getUserMedia({audio:true});
+      st.getTracks().forEach(function(t){t.stop();});
+    }catch(e){ /* 거부해도 기본 추종은 동작 */ }
+    var devs = await navigator.mediaDevices.enumerateDevices();
+    var outs = devs.filter(function(d){return d.kind==='audiooutput';});
+    sel.innerHTML = '<option value="">🖥️ 컴퓨터 설정 따라가기 (기본)</option>';
+    outs.forEach(function(d){
+      if(d.deviceId === 'default') return;                // 기본은 위 항목으로 이미 있음
+      var o = document.createElement('option');
+      o.value = d.deviceId;
+      o.textContent = d.label || ('출력 장치 ' + d.deviceId.slice(0,6));
+      sel.appendChild(o);
+    });
+    // ★이어폰 자동 선택: 윈도우 기본이 모니터 스피커(HDMI)로 잡혀 있어도 이어폰으로 보낸다.
+    //   (이 컴퓨터: Galaxy Buds3 Pro = 이어폰 / PHL 245B1 = 모니터 스피커)
+    var EAR = /buds|이어폰|헤드폰|헤드셋|earphone|headphone|headset|airpod/i;
+    var SPK = /245b1|hdmi|nvidia|스피커|speaker|monitor|디지털/i;
+    function pickEarphone(){
+      var cand = outs.filter(function(d){
+        return d.deviceId && d.deviceId!=='default' && d.deviceId!=='communications'
+               && d.label && EAR.test(d.label) && !SPK.test(d.label);
+      });
+      return cand.length ? cand[0].deviceId : '';
+    }
+    var saved = localStorage.getItem(SINK_KEY);           // 사용자가 직접 고른 게 있으면 그것 우선
+    var use = (saved && outs.some(function(d){return d.deviceId===saved;})) ? saved : pickEarphone();
+    sel.value = use;
+    applySink(use);                                       // 이어폰 있으면 이어폰, 없으면 기본 추종
+    var cur = outs.filter(function(d){return d.deviceId===use;})[0];
+    var st = document.getElementById('snkst');
+    if(st) st.textContent = use ? ('▶ ' + (cur && cur.label ? cur.label : '선택 장치') + ' 로 출력')
+                                : '▶ 컴퓨터 기본 장치로 출력';
+  }catch(e){ console.warn('장치 조회 실패', e); applySink(''); }
+}
+document.addEventListener('DOMContentLoaded', function(){
+  var sel = document.getElementById('snk');
+  if(sel) sel.addEventListener('change', function(){ applySink(sel.value); });
+  loadSinks();
+  // ★이어폰을 꽂거나 빼면 자동으로 새 기본 장치를 따라간다
+  if(navigator.mediaDevices){
+    navigator.mediaDevices.addEventListener('devicechange', function(){ loadSinks(); });
+  }
+});
+// ───────────────────────────────────────────────────────────────────────
 var SCENES=__SCENES__;
 var vid=document.getElementById('vid');
 function fmt(t){t=Math.floor(t);return String(Math.floor(t/60)).padStart(2,'0')+':'+String(t%60).padStart(2,'0')}
@@ -152,13 +237,20 @@ def make_handler():
                         self.wfile.write(chunk)
         def do_GET(self):
             if self.path == "/" or self.path.startswith("/index"):
-                html = HTML.replace("__SCENES__", json.dumps(SCENES, ensure_ascii=False)).replace("__LABEL__", LABEL)
+                t2 = (f'<track id=trk2 kind=subtitles srclang={LANG2} label="{LABEL2}" src="/subs2">'
+                      if SRT2 else "")
+                html = (HTML.replace("__SCENES__", json.dumps(SCENES, ensure_ascii=False))
+                            .replace("__LABEL__", LABEL)
+                            .replace("__LANG1__", LANG1).replace("__LABEL1__", LABEL1)
+                            .replace("__TRACK2__", t2))
                 self._send(200, html, "text/html; charset=utf-8")
             elif self.path == "/video":
                 try: self._serve_video()
                 except Exception: pass
             elif self.path == "/subs":
-                self._send(200, b"WEBVTT\n\n", "text/vtt; charset=utf-8")   # 번인 영상이라 소프트 트랙은 비움
+                self._send(200, srt_to_vtt().encode("utf-8"), "text/vtt; charset=utf-8")   # 주자막(srt→vtt)
+            elif self.path == "/subs2":
+                self._send(200, srt_to_vtt(SRT2).encode("utf-8"), "text/vtt; charset=utf-8")  # 짝 언어 자막
             elif self.path == "/api/feedback":
                 self._send(200, json.dumps(load_fb(), ensure_ascii=False))
             else:
