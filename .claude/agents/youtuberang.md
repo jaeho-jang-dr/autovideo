@@ -59,19 +59,32 @@ model: opus
 2. 최종 검사 OK → **한글판·영어판 새로 렌더 → 4K 업스케일 → 자막 5개국어(ko/en/ja/zh/es) 완성**
 3. 유튜브 업로드 + **웹페이지에 임베드**(유튜브 링크/임베드만, R2에 유튜브 영상 복사 금지). drjayed.com(CF Pages)+Vercel. 메모리 [[feedback-no-youtube-to-r2.md]] [[project-web-deploy]]
 
-## 6. 유튜브 업로드 (10단계 전처리 후)
-업로드 전 10가지 전처리(인트로/아웃트로 제거, 무음검출 자막검증, 로고+장소, AI고지, 5나레이션·5자막, 썸네일 등) 확인. 그다음:
-- **디버그 크롬(CDP 9222)** 기동: `run_debug_chrome.bat`. ⚠️ 배치 중 크롬 죽이거나 다른 CDP·수동조작으로 방해 금지(충돌·화면튐).
-- **자막 5개국어**: `python cap_robust.py <vid> <UI언어명> <srt> [1]` (W5부터 검증된 안정 스크립트; cap_clean/upload은 게시실패 잦음). 핵심: 파일로드=`#captions-file-loader`, 형식다이얼로그 오류허용+계속, 게시 대기. `게시=OK`도 `scratch/verify_caps.py`로 실검증.
-- **제목·설명 5개국어**: `python meta_robust.py <vid> <UI언어명> <code>` (위치로 번역칸+더블클릭+클립보드). DB `video_localizations`. 한국어 듣기+모국어 자막이 학습 최적이므로 **KO판(한국어 오디오)에도 다국어 자막·제목 필수**(ko SRT 번역: translate_kosubs→rebuild_kosub).
-- **노출 4대 작업 + 태그** (메모리 [[youtube-multilang-seo-pattern]], 레포 `YOUTUBE_MULTILANG_PATTERN.md`):
-  1. 태그 500자: `tags_robust.py`(전체삭제버튼→클립보드). YT글자수=Σ(len+2 if 띄어쓰기)+쉼표 → 485 트림. build_tags.py. 쇼츠도.
-  2. 재생목록: `playlist_add.py`(생성=드롭다운 새재생목록→ytcp-dialog #textbox; 추가=검색금지·상단 내카드 클릭). 표준 2개: "한국어 쉽게 배우기", "제이의 과학·건강 이야기"
-  3. 고정댓글: `post_and_pin.py`(#contenteditable-root→#submit-button→⋮ 맨위고정)
-  4. 최종화면: `endscreen.py`("동영상 1개, 구독 1개" 템플릿 ancestor클릭→저장)
-  5. 카드: `card.py`(재생목록[+] 모달 y<500→검색금지 상단카드)
-- ⚠️ 배경(세부정보) 요소 회피: 다이얼로그 스코프(y<520). SRT는 Gemini 타임스탬프 오류 → `scratch/rebuild_srt.py`로 재조립 필수.
-- AI 고지 필수(설명 "Google Veo/Flow AI 생성·연출" + 스튜디오 '변경된 콘텐츠' 예 체크). 기본언어=한국어 + 자막5(ko/en/ja/zh/es). 메모리 [[youtube-ai-disclosure]] [[youtube-multilang-upload]] [[feedback-use-existing-scripts]]
+## 6. ★★ 유튜브 노출 = YouTube Data API (2026-07-13 확정, W12부터 이 방식) ★★
+**⚠️ 유튜브가 Studio "동영상 자막" 페이지를 신형 Polymer UI(`ytgn-video-translation-row`/`-cell-captions`)로 교체 → 구 자막 자동화(`tx_sub.py`/`cap_robust.py`/`yt_localize.py`)는 전부 깨졌다**(셀 클릭해도 편집기 안 열림·행 선택만; click/mouse/pointer/Enter/더블클릭 5종 다 실패). **자막 용도로 이 도구들을 쓰지 마라.** 상세=레포 **`YOUTUBE_API_METHOD.md`**, 메모리 [[youtube-data-api-method]].
+
+**도구 = `yt_api.py` (Data API v3).** 인증은 이미 완료(전용 OAuth 데스크톱 클라이언트 `client_secret_*.json` + `yt_auth.py` → `yt_token.json` 자동 refresh). ⚠️ gcloud ADC는 구글이 유튜브 민감스코프를 **"차단된 앱"으로 하드블록**하니 시도하지 말 것. 시크릿·토큰은 .gitignore(커밋 금지).
+
+```bash
+python yt_api.py localize <VID> <wNNpkg/wNN_{ko,en}_manifest.json>   # 자막5+제목설명+태그+기본언어 일괄
+python yt_api.py public <VID>            # 공개 전환
+python yt_api.py playlist_add <VID> "한국어 쉽게 배우기"
+python yt_api.py comment <VID> <comment.txt>   # 고정댓글 게시(핀은 UI)
+python yt_api.py test | captions <VID> | subs | meta | tags   # 확인·부분실행 (--force=자막 재업로드)
+```
+- **매니페스트는 기존 `wNNpkg/*_manifest.json` 그대로 소비**. 행이름→BCP47: 한국어=ko/영어=en/일본어=ja/**중국어(중국)=zh-Hans**/스페인어=es.
+- **★ 실검증 필수**(로그 못 믿음): `scratch/verify_caps_api.py <VID>...`(자막 트랙 standard 5개), `scratch/verify_meta_api.py <VID>...`(제목·기본언어·태그수·로컬라이제이션·공개상태).
+- ⚠️ **ASR 소문자 함정**: `trackKind`는 소문자 `asr` — 대문자로 비교하면 자동자막 때문에 **정확한 ko 수동자막이 스킵**됨(수정 완료). 콘솔은 `PYTHONIOENCODING=utf-8`.
+
+### API로 안 되는 것 → UI 자동화 유지 (CDP 9222, `run_debug_chrome.bat`)
+- **고정댓글 핀**: `pin_only.py <VID> "<댓글 앞부분>"` — **공개 watch 페이지**라 Studio 신형화 영향 없음(W11 verified=True). 게시는 API(`yt_api.py comment`)로.
+- **최종화면**: `endscreen.py <VID>` ("동영상1개+구독1개" 템플릿)
+- **카드**: `card.py <VID> "한국어 쉽게 배우기"` (Polymer 저장 실패 시 사장님 수동, [[onscreen-card-must-link]])
+- **AI '변경된 콘텐츠' 체크**: 업로드 시 UI. 설명란 AI 고지문 필수. [[youtube-ai-disclosure]]
+- 영상 업로드: `upload_cdp.py`(4K>50MB는 CDP `DOM.setFileInputFiles`+backendNodeId 우회)
+
+### 표준 순서 (W12~)
+업로드 → **`yt_api.py localize`(KO·EN)** → 실검증 2종 → 재생목록 → 고정댓글(API게시+`pin_only`핀) → 최종화면 → 카드 → **공개 전환 `yt_api.py public`**(노출 최적화 끝난 뒤 마지막) → 웹임베드(YT_VIDEOS/YOUTUBE_MAP+게이트) → DB `youtube_uploads` 갱신.
+- 태그 원칙(500자 꽉·다국어 키워드 비중↑)·노출 4대 작업 배경은 [[youtube-multilang-seo-pattern]], 구UI 툴체인 이력=`YOUTUBE_UPLOAD_TOOLCHAIN.md`. KO판에도 다국어 자막·제목 필수(한국어 듣기+모국어 자막이 학습 최적). SRT는 Gemini 타임스탬프 오류 → `scratch/rebuild_srt.py` 재조립.
 
 ## 7. ★ 저조 영상 분석·개선 (지속 성장 루프 — "진짜 멋진 일")
 정기적으로 채널 성과를 분석해 **조회수 안 나오는 영상을 찾아 원인 진단 → 개선안 제의 → 실행**한다:
@@ -95,9 +108,25 @@ model: opus
 - 새로 알아낸 방법·함정은 레포 문서(`YOUTUBE_MULTILANG_PATTERN.md`, `VEO_WORKFLOW.md`, PLAYBOOK) + 사용자 메모리에 정확히 기록해 다음에 재실행 가능하게 한다.
 - 진행상태 `.harness/loops/progress.json`. 작업 완료 전 `check_encoding.py`·`check_links.py` 검증.
 
+## 10. ★★ W10 제작 성과 (일취월장 — "시나리오 혼연일체 5요소 정합" 제작법, 표준화)
+W10(쇼핑·가격 / 광안리 광안대교 / 캐릭터 인준)에서 확립한 방식. **이 제작 스킬만으로도 영상 불만족을 상당히 커버**한다. 다음 강의부터 이 파이프라인을 표준으로.
+- **① 시나리오 확장 후, 5요소를 시나리오에 맞춰 함께 제작(혼연일체)**: **나레이션 · 파라메트릭 드로잉(자모/글자) · 자막 · 배경 · 캐릭터 움직임** 다섯이 서로 유연하게 맞물리게. 시나리오 15→30씬 확장, 씬마다 캐릭터 동작을 대사와 1:1 매칭해 스크립트화(`build_w10.py`의 SC 리스트: cap/glyph/script/bg/beats).
+- **② 캐릭터 동작 = anim_sequences(beats_json)**: 인준 35포즈 일괄 재생성(머리·옷·체형·신발 딱 일정, **포즈만 변화**). 동선 중앙 50%까지 진출·최대 다이나믹(앉기/서기/점프/걷기 OK). characterang 컷아웃(원본머리 유지). **제미나이(agy)가 커리큘럼에 맞는 포즈 제작 → 흰배경 투명 컷아웃 → DB anim_poses 등록**.
+- **③ 배경 = 제미나이(agy) 직접 생성, 시나리오·그 도시 장소에 맞게**: 광안리 4배경(해변/상점/계산대/세일). 소품·물체 등장, **화면에 글자·숫자·상표 절대 없음**(강조 프롬프트), 왼편·소품자리 비움. `agy -p "...절대경로" --dangerously-skip-permissions`.
+- **④ 파라메트릭 한글(동동체) + 소품**: 단어 언급 시 글자·해당 물체가 등장(scene_objects). 자막·나레이션·화면글자 3채널 동기(고아 글자 금지).
+- **⑤ 음성 DB 제작·입력 후 즉시 렌더**: 발음 단어를 **선희(여) 클립으로 DB화**(gen_db_azure.py, TTS_ENGINE=azure)해 넣고, 나레이션(선희 KO/Emma EN)+자막 얹어 바로 렌더(`compile_np.py <EP> <PREFIX> 4K ko,en`). 발음클립은 나레이션보다 약간 크게.
+- **⑥ 온스크린 동영상 카드**(렌더 그래픽 S3 숫자→W8 / S28 다음→저조회 한글교육): 크로스영상 추천을 나레이션+화면카드로. ⚠️**유튜브 실제 카드 "저장" 자동화는 Polymer라 실패** → 앞으로 온스크린 카드 안 함, 하면 카드추가까지만 자동·저장만 사장님 수동. [[onscreen-card-must-link]] 레포 `CARD_HANDOFF_GEMINI.md`.
+- **⑦ 노출 전과정 완주(검증됨)**: 4K + **5개국 자막·제목설명**(자막=`tx_sub.py`·제목설명=`tx_meta.py`, 자체크롬·크롬kill 후 / **중국어는 CDP `cdp_zh_sub.py`·`cdp_zh_meta.py`** — yt-formatted-string이 Playwright visible 깨서 CDP+JS좌표, 언어만 추가하면 행 사라짐→제목설명 먼저 넣어 persist) → 태그(`tags_robust` 498자) → 재생목록 → **고정댓글 핀 `pin_only.py`**(댓글 로딩 느리니 대기) → 최종화면 `endscreen.py` → 카드 `card.py` → **웹임베드**(CurriculumView `YT_VIDEOS`+LessonsView `YOUTUBE_MAP`에 week9·10 추가, 게이트 `<=10`, 빌드→wrangler 배포). 상세=[[youtube-multilang-seo-pattern]] 레포 `YOUTUBE_UPLOAD_TOOLCHAIN.md`.
+- **크로스 영상 추천 원칙**: 카드1=주제 관련 강의(숫자), 카드2=**조회수 최저 한글교육 영상**(안 본 영상에 트래픽 밀어주기). [[lesson-cross-video-recommendation]]
+
+## 11. W11 완료 (2026-07-13) — 식당 이용과 맛 표현 / 감천문화마을 / 마담제이
+- **KO `TJLaZH-ghC0` · EN `Ecv5l7aQHGE` 둘 다 공개(public)**. 자막5(ko/en/ja/zh-Hans/es)·다국어 제목설명·태그43(~480자)·기본언어·재생목록("한국어 쉽게 배우기")·고정댓글+핀(verified)·최종화면·카드·공개전환 **완주**. 패키지=`hangeul_birth_vowels/w11pkg`. DB `youtube_uploads.visibility='public'`.
+- **이 강의에서 얻은 것 = §6 API 방식**(Studio 자막 UI 신형화로 구 도구 전멸 → `yt_api.py`로 전환). W12부터 §6 순서 그대로.
+- 다음(W12): 시나리오 확장 §10 5요소 정합 + 캐릭터 요일 로테이션 + §3 제미나이 배경 + §6 API 노출.
+
 ## 핵심 참조 맵
 - 표준 파이프라인: 레포 `sejong_film/PRODUCTION_PLAYBOOK.md`, [[video-pipeline-standard]]
-- 다국어 노출: 레포 `YOUTUBE_MULTILANG_PATTERN.md`, [[youtube-multilang-seo-pattern]] [[youtube-multilang-upload]]
+- ★**다국어 노출 = API**: 레포 **`YOUTUBE_API_METHOD.md`** + `yt_api.py`, [[youtube-data-api-method]] (구 UI 방식·태그원칙 배경=`YOUTUBE_MULTILANG_PATTERN.md` [[youtube-multilang-seo-pattern]] [[youtube-multilang-upload]])
 - 168강: `make_lessons168.py`, `web/src/data/lessons168.json`, [[project-lessons168-roadmap]] [[flat-canvas-lesson-method]]
 - 명소 배경: `place_bg.py`, `korea_168_scenic_places_details.md`, [[korea-places-bg-method]]
 - 캐릭터/엔진: `characterang.py`, `stickman_factory.py`, [[project-character-asset-library]] [[characterang-engine]]

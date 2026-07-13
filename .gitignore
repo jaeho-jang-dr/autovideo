@@ -76,3 +76,7 @@ scratch/mocap/
 scratch/mx/
 *.fbx
 assets/chrome_profile_tmp/
+
+# YouTube Data API 인증 (절대 커밋 금지)
+client_secret_*.json
+yt_token.json
