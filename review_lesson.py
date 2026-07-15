@@ -17,11 +17,13 @@ VIDEO = os.path.abspath(_a(1, "hangeul_birth_vowels/hangeul_w1_stickman_np_ko_bu
 SRT   = os.path.abspath(_a(2, os.path.splitext(VIDEO)[0] + ".ko.srt"))
 LABEL = _a(3, "한글강의")
 PORT  = int(_a(4, "8920"))
-# ★자막 2개 동시 탑재: 지정된 SRT(주자막) + 짝 언어 SRT(부자막) → 브라우저 자막 메뉴에서 선택
-_base = re.sub(r"\.(ko|en)\.srt$", "", SRT) if re.search(r"\.(ko|en)\.srt$", SRT) else os.path.splitext(SRT)[0]
+# ★사장님 지시(2026-07-13): 한글판=한글 자막만 / 영문판=영문 자막만 (섞지 않는다).
+#   짝 언어 자막을 같이 보려면 5번째 인자로 'both' 를 준다.
 _is_ko = SRT.endswith(".ko.srt")
-SRT2  = _base + (".en.srt" if _is_ko else ".ko.srt")      # 짝 자막
-SRT2  = SRT2 if os.path.exists(SRT2) else None
+_both = (_a(5, "") or "").lower() == "both"
+_base = re.sub(r"\.(ko|en)\.srt$", "", SRT) if re.search(r"\.(ko|en)\.srt$", SRT) else os.path.splitext(SRT)[0]
+_pair = _base + (".en.srt" if _is_ko else ".ko.srt")
+SRT2  = _pair if (_both and os.path.exists(_pair)) else None
 LANG1, LABEL1 = ("ko", "한국어") if _is_ko else ("en", "English")
 LANG2, LABEL2 = ("en", "English") if _is_ko else ("ko", "한국어")
 _stem = os.path.splitext(os.path.basename(VIDEO))[0]
@@ -154,25 +156,18 @@ async function loadSinks(){
       o.textContent = d.label || ('출력 장치 ' + d.deviceId.slice(0,6));
       sel.appendChild(o);
     });
-    // ★이어폰 자동 선택: 윈도우 기본이 모니터 스피커(HDMI)로 잡혀 있어도 이어폰으로 보낸다.
-    //   (이 컴퓨터: Galaxy Buds3 Pro = 이어폰 / PHL 245B1 = 모니터 스피커)
-    var EAR = /buds|이어폰|헤드폰|헤드셋|earphone|headphone|headset|airpod/i;
-    var SPK = /245b1|hdmi|nvidia|스피커|speaker|monitor|디지털/i;
-    function pickEarphone(){
-      var cand = outs.filter(function(d){
-        return d.deviceId && d.deviceId!=='default' && d.deviceId!=='communications'
-               && d.label && EAR.test(d.label) && !SPK.test(d.label);
-      });
-      return cand.length ? cand[0].deviceId : '';
-    }
-    var saved = localStorage.getItem(SINK_KEY);           // 사용자가 직접 고른 게 있으면 그것 우선
-    var use = (saved && outs.some(function(d){return d.deviceId===saved;})) ? saved : pickEarphone();
+    // ★사장님 지시: 교정앱 소리는 **항상 시스템(윈도우) 음성 출력 상태를 그대로 따라간다**.
+    //   윈도우 기본 출력이 이어폰이면 이어폰, 스피커면 스피커. 장치를 바꾸면 즉시 따라감.
+    //   (특정 장치를 강제하고 싶을 때만 아래 드롭다운에서 직접 고르면 그 선택을 기억)
+    var saved = localStorage.getItem(SINK_KEY);           // 사용자가 직접 고른 게 있으면 그것만 우선
+    var use = (saved && outs.some(function(d){return d.deviceId===saved;})) ? saved : '';
     sel.value = use;
-    applySink(use);                                       // 이어폰 있으면 이어폰, 없으면 기본 추종
+    applySink(use);                                       // '' → 'default' 싱크 = 윈도우 기본 장치 추종
     var cur = outs.filter(function(d){return d.deviceId===use;})[0];
+    var dflt = outs.filter(function(d){return d.deviceId==='default';})[0];
     var st = document.getElementById('snkst');
-    if(st) st.textContent = use ? ('▶ ' + (cur && cur.label ? cur.label : '선택 장치') + ' 로 출력')
-                                : '▶ 컴퓨터 기본 장치로 출력';
+    if(st) st.textContent = use ? ('▶ ' + (cur && cur.label ? cur.label : '선택 장치') + ' (직접 지정)')
+                                : ('▶ 컴퓨터 설정 따라감' + (dflt && dflt.label ? ' — ' + dflt.label : ''));
   }catch(e){ console.warn('장치 조회 실패', e); applySink(''); }
 }
 document.addEventListener('DOMContentLoaded', function(){

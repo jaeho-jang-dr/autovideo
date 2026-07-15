@@ -229,6 +229,7 @@ def load_scenes(lang="ko"):
             scene_motion=spec.get("motion", "static"), gestures=gpaths, bg=spec.get("bg"),
             place_en=spec.get("place_en", ""),
             draw_font=spec.get("draw_font"), draw_dur=spec.get("draw_dur"),
+            draw_text=spec.get("draw_text"), draw_align=spec.get("draw_align"),
             char_mode=spec.get("char_mode"), char_key=spec.get("char_key"),
             anim_seq=spec.get("anim_seq"),
             cam=spec.get("cam") or CAM_MODES[(s["seq"] - 1) % len(CAM_MODES)], objs=objs))
@@ -763,9 +764,14 @@ def _seg_tts(text, lang):
     import subprocess
     if not _re.search(r"[0-9A-Za-z가-힣ㄱ-ㅎㅏ-ㅣ]", text or ""):   # 부호/공백만 → 짧은 무음(TTS 빈입력 크래시 방지)
         return _silence(max(0.06, min(0.4, len(text or "") * 0.03)))
-    h = _hl.md5((lang + "|" + text).encode("utf-8")).hexdigest()[:10]
-    raw = os.path.join(TTS_DIR, f"seg_{lang}_{h}.mp3")
-    fast = os.path.join(TTS_DIR, f"seg_{lang}_{h}_11.mp3")
+    # ★캐시 키에 TTS 엔진·음성을 포함한다.
+    #   (안 넣으면 초안 edge-tts 세그먼트를 Azure 최종 렌더가 그대로 재사용 → 무허가 음성이 유튜브로 나간다.
+    #    W13에서 발견: scene_* 캐시만 고쳐선 소용없고, 실제 나레이션 조각은 이 seg_* 다.)
+    _eng = os.environ.get("TTS_ENGINE", "edge").strip().lower()
+    _voi = os.environ.get("EDGE_ACTIVE_VOICE", "").strip().lower()
+    h = _hl.md5((lang + "|" + _eng + "|" + _voi + "|" + text).encode("utf-8")).hexdigest()[:10]
+    raw = os.path.join(TTS_DIR, f"seg_{lang}_{_eng}_{h}.mp3")
+    fast = os.path.join(TTS_DIR, f"seg_{lang}_{_eng}_{h}_11.mp3")
     if not os.path.exists(fast):
         if not os.path.exists(raw):
             save_tts(text, raw, lang=lang)          # edge-tts 여성 → gTTS 폴백
@@ -818,7 +824,13 @@ def ensure_scene_audio(seq, script, lang):
     from moviepy import AudioFileClip
     import subprocess
     import json as _json
-    h = _hl.md5((lang + "||" + f"g{CLIP_GAIN}" + "||krvoice2||" + script).encode("utf-8")).hexdigest()[:10]
+    # ★캐시 키에 TTS 엔진·음성·클립폴더를 포함한다.
+    #   (안 넣으면 edge-tts 초안 캐시를 Azure 최종 렌더가 그대로 재사용해 **무허가 음성이 유튜브로 나간다** — W12에서 발견)
+    _eng = os.environ.get("TTS_ENGINE", "edge")
+    _voi = os.environ.get("EDGE_ACTIVE_VOICE", "")
+    _jd  = os.path.basename(JAMO_DIR)
+    h = _hl.md5((lang + "||" + f"g{CLIP_GAIN}" + "||krvoice2||" + _eng + "|" + _voi + "|" + _jd + "||" + script)
+                .encode("utf-8")).hexdigest()[:10]
     final = os.path.join(TTS_DIR, f"scene_{lang}_{seq:02d}_{h}.mp3")
     schedf = final + ".sched.json"
     if os.path.exists(final) and os.path.exists(schedf):

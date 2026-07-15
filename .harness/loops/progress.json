@@ -161,7 +161,12 @@
     "Video-Integration (2026-07-06): 거북목(KI_LvmiTWtE) 및 운동손상(qytcAZOiEsQ) 롱폼 유튜브 비디오 ID를 확보하여 web/src/data/content.json 및 SQLite db 에피소드 데이터에 published 상태로 바인딩하고, 5번째와 6번째 그리드 카드로 노출 완료. 쇼츠는 빈자리 형태로 마크해두어 향후 업로드 시 바인딩될 수 있도록 준비 후 빌드 및 배포 완료.",
     "Places-Fix (2026-07-06): 168경 페이지 엑박 이미지 현상을 해결하기 위해 Wikipedia/Wikimedia API 스크래핑으로 실시간 168개 명소의 유효한 commons 이미지 URL을 획득해 image_url 교체 완료. 또한, 이전 커밋 대조를 통해 오리지널 길찾기(지하철 호선 및 출구 번호) 정보를 전수 복원해 엉뚱한 directions 텍스트를 전면 복구 및 실서버 배포 동기화 완료.",
     "Places-Refinement (2026-07-06): 168경 페이지의 모든 명소(특히 경복궁의 빈약한 설명 보강 및 깨진 오피셜 링크 https://royal.khs.go.kr 수정, 2번 한강 위성 지도를 달빛무지개분수 야경 랜드마크 뷰로 정정)에 대해 오염된 설명 템플릿(not mentioned...) 89개 필드를 고품질 가이드 정보로 일괄 정제 완료. 실서버 배포 동기화 완료.",
-    "KO-W11 v3 완전 리메이크(2026-07-11, 식당·맛표현/감천문화마을/마담제이): 사장님 3차 지시 반영 — (1)기존 W11 캐릭터 DB 전삭제·샘플1+스크립트 보존 후 완전 신규 생성, (2)포즈 20종 전부 오른쪽 향함(walk_right/앉기8종/메뉴/계산/인사/가리키기) gen_w11v3_poses.py, greeting·cheer 정면→오른쪽 옆모습 재생성, (3)coral 넥라인 기준 머리높이 정규화 normalize_w11v3.py로 사이즈 균일화(head=150~152px ±1%, 증명시트 scratch/w11v3_uniformity.png), 컷아웃(scipy 테두리 flood-fill), (4)시나리오 16분→8분 단축·'오늘은 선생님이에요' 삭제·선생님 설명톤 유지 42씬(build_w11.py), 앉기 SX=520 테이블 근접, (5)인용 한글표현 94개 선희 DB화(gen_w11_voicedb.py, edge-tts SunHi, JAMO_DIR 자동등록→EN나레이션 강조1.4배 한글읽기), 곡선따옴표→직선·물음표 밖으로 정규화. KO 초안 렌더(edge-tts 선희/Emma, ElevenLabs off) 진행."
+    "KO-W11 v3 완전 리메이크(2026-07-11, 식당·맛표현/감천문화마을/마담제이): 사장님 3차 지시 반영 — (1)기존 W11 캐릭터 DB 전삭제·샘플1+스크립트 보존 후 완전 신규 생성, (2)포즈 20종 전부 오른쪽 향함(walk_right/앉기8종/메뉴/계산/인사/가리키기) gen_w11v3_poses.py, greeting·cheer 정면→오른쪽 옆모습 재생성, (3)coral 넥라인 기준 머리높이 정규화 normalize_w11v3.py로 사이즈 균일화(head=150~152px ±1%, 증명시트 scratch/w11v3_uniformity.png), 컷아웃(scipy 테두리 flood-fill), (4)시나리오 16분→8분 단축·'오늘은 선생님이에요' 삭제·선생님 설명톤 유지 42씬(build_w11.py), 앉기 SX=520 테이블 근접, (5)인용 한글표현 94개 선희 DB화(gen_w11_voicedb.py, edge-tts SunHi, JAMO_DIR 자동등록→EN나레이션 강조1.4배 한글읽기), 곡선따옴표→직선·물음표 밖으로 정규화. KO 초안 렌더(edge-tts 선희/Emma, ElevenLabs off) 진행.",
+    "Web/Video (2026-07-13): Week 12~15 Anchor Videos YouTube 업로드 및 Astro 웹(CurriculumView, LessonsView) 연동 완료",
+    "Audio/TTS (2026-07-14): tts_manager.py 및 compile_np.py, compile_stickman.py 캐싱 엔진 수정 - TTS 엔진(edge/azure), 활성 보이스, 자모 디렉토리를 캐시 해시 키에 추가하여 edge-tts 초안 캐시가 Azure 최종 렌더에 오염되는 버그 근본 차단",
+    "QA/Review (2026-07-14): review_lesson.py 수정 - 한글판/영문판 짝 자막 노출 옵션화(기본은 단일 자막, both 인자 제공 시 짝 자막 노출), 소리 출력 윈도우 기본 장치 자동 추종하도록 변경",
+    "Flow/Pose (2026-07-15): scratch/flow_pose.py 수정 - jieun 포즈 생성 시 백그라운드를 pure white (#FFFFFF)로 설정하는 옵션 추가",
+    "Translation (2026-07-15): W15(날씨와 사계절) 에피소드 다국어 자막(일본어, 중국어 간체, 스페인어) 번역 및 verify_subs.py를 통한 E2E 무결성 검증 완수"
   ],
   "pending_tasks": [
     "Binge-Watching: Run autoveo_flow.py with binge_watching/shorts_prompts.txt to generate 9:16 portrait video clips (scene_0, 2, 20).",

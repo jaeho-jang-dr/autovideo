@@ -157,8 +157,22 @@ def save_tts(text, output_path, lang='ko', voice_id=None):
         except Exception as e:
             print(f"[TTS] Cache check warning: {e}")
 
+    # ★★ TTS_ENGINE=azure 면 Azure(정식 라이선스)를 먼저 쓴다.
+    #    (없으면 ElevenLabs 키 부재 시 곧바로 edge-tts=무허가로 떨어져,
+    #     '최종본은 Azure' 정책이 무력화된다 — W13에서 발견한 치명 버그)
+    engine = os.environ.get("TTS_ENGINE", "").strip().lower()
+    if engine == "azure":
+        try:
+            if save_tts_azure(text, output_path, lang):
+                return True
+            print("[TTS] Azure 실패 → 폴백")
+        except Exception as e:
+            print(f"[TTS] Azure 예외: {str(e)[:80]} → 폴백")
+        # ⚠️ 최종본에서 폴백이 일어나면 무허가 음성이 섞인다 → 로그로 크게 알림
+        print("[TTS] ##### WARNING: Azure 실패로 폴백 — 최종본이면 중단하고 원인 확인 #####")
+
     api_key = os.environ.get("ELEVEN_API_KEY", "").strip()
-    
+
     # API 키가 없으면 바로 edge-tts 사용
     if not api_key:
         print("[TTS] ELEVEN_API_KEY not set. Using edge-tts.")

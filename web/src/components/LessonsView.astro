@@ -88,7 +88,7 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
                 <b class="lr-title">
                   {isEn ? x.title_en : x.title_ko}
                   {x.anchor
-                    ? (x.week <= 10
+                    ? (x.week <= 13
                         ? <a class="tag tag-video yt-trigger" href="#" data-week={x.week}>▶ {isEn ? 'video' : '영상'}</a>
                         : <a class="tag tag-video" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">▶ {isEn ? 'video' : '영상'}</a>
                       )
@@ -115,7 +115,7 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
               </div>
               <div class="lc-title">{isEn ? x.title_en : x.title_ko}</div>
               {x.anchor
-                ? (wk.week <= 10
+                ? (wk.week <= 13
                     ? <a class="lc-link yt-trigger" href="#" data-week={wk.week}>{isEn ? '▶ Watch video' : '▶ 영상 보기'}</a>
                     : <a class="lc-link" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">{isEn ? '▶ Watch video' : '▶ 영상 보기'}</a>
                   )
@@ -188,7 +188,11 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
     8: { ko: 'xp9ktV7zOYY', en: 'xgEedO2aFnk' },
     9: { ko: 'Qlr6VRthasw', en: 'XHBT49ZsCB0' },
     10: { ko: 'YTex0QGe17o', en: 'HhSRarWJS0E' },
-    11: { ko: 'TJLaZH-ghC0', en: 'Ecv5l7aQHGE' }
+    11: { ko: 'TJLaZH-ghC0', en: 'Ecv5l7aQHGE' },
+    12: { ko: 'pM7eN6Qt6s4', en: 'VPgmXo5jXtY' },
+    13: { ko: 'zsfOc4R4IbA', en: 'XT0jYFhrsxY' },
+    14: { ko: 'B9kZVCxppPk', en: 'pGLrxq2xvC8' },
+    15: { ko: 'UVnkuRI7WQQ', en: 'XHtb4xBTnj0' }
   };
 
   function renderYtPlayer(week: number, activeLang: 'ko' | 'en') {

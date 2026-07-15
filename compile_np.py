@@ -6,7 +6,7 @@
 - 씬 길이 = max(KO,EN)+여백 → 두 자막이 두 영상에 다 정렬.
 사용: python compile_np.py KO-W02 hangeul_w2_stickman [4K|review] [ko,en|ko|en]
 """
-import sys, os, subprocess
+import sys, os, re, subprocess
 sys.path.insert(0, os.path.join(os.getcwd(), "hangeul_birth_vowels"))
 import numpy as np
 from PIL import ImageDraw
@@ -57,10 +57,15 @@ def build_srt(entries, path):
 
 # ---------- 나레이션 + 공통 씬 길이 ----------
 ko_scenes = cs.load_scenes("ko"); en_scenes = cs.load_scenes("en")
+def _strip_rom(s):
+    # ★나레이션에서만 로마자 발음기호 [..] 제거 — 외국인 나레이터가 발음기호를 읽지 않게(사장님 지시).
+    #   자막(SRT)에는 그대로 남는다(별도 생성). 따옴표 한글·뜻(..)은 유지.
+    s = re.sub(r"\s*\[[^\]]*\]", "", s)     # [bom], [han-ra-san] 등 제거
+    return re.sub(r"\s{2,}", " ", s).strip()
 meta=[]
 for ko,en in zip(ko_scenes, en_scenes):
-    ko_a, ko_dur, ko_js = cs.ensure_scene_audio(ko["seq"], ko["script"], "ko")
-    en_a, en_dur, en_js = cs.ensure_scene_audio(en["seq"], en["script"], "en")
+    ko_a, ko_dur, ko_js = cs.ensure_scene_audio(ko["seq"], _strip_rom(ko["script"]), "ko")
+    en_a, en_dur, en_js = cs.ensure_scene_audio(en["seq"], _strip_rom(en["script"]), "en")
     dur = max(ko_dur, en_dur) + LEAD + TAIL
     meta.append(dict(ko=ko,en=en,ko_a=ko_a,en_a=en_a,ko_dur=ko_dur,en_dur=en_dur,ko_js=ko_js,en_js=en_js,dur=dur))
     log(f"  S{ko['seq']:>2}: KO={ko_dur:4.1f} EN={en_dur:4.1f} → {dur:4.1f}s")
@@ -78,6 +83,42 @@ def build_lang_srt(lang, out):
     build_srt(entries, out)
 KO_SRT=os.path.join(PDIR,f"{PREFIX}_np.ko.srt"); EN_SRT=os.path.join(PDIR,f"{PREFIX}_np.en.srt")
 build_lang_srt("ko",KO_SRT); build_lang_srt("en",EN_SRT)
+
+# ★★자막 표기 원칙(사장님 확정) — 렌더 때마다 자동 적용, 빼먹지 말 것:
+#    자모  'ㅏ' [a]  /  단어 '오른쪽' [o-reun-jjok] (뜻)  /  문장 '어떻게 가요?' (뜻)
+#    ⚠️SRT에만 넣는다(DB/나레이션에 넣으면 TTS가 로마자를 읽어버림) → 렌더 후처리로 고정.
+#    ★한국인용 KO 자막에는 넣지 않는다(어색) — 외국어판(en/ja/zh/es)에만.
+try:
+    import add_pron_to_srt as _pron
+    for _s in (EN_SRT,):
+        _lines = []
+        for _ln in open(_s, encoding="utf-8"):
+            _t = _ln.rstrip("\n")
+            if re.match(r"^\d+$", _t) or " --> " in _t or not _t.strip():
+                _lines.append(_t)
+            else:
+                _t = _pron.process_line(_t)
+                # ★고유명사 이중 대괄호 교정: '한라산' [han-ra-san] [Hallasan] → … (Hallasan)
+                #   자막 원칙 = 단어 '한글' [로마자] (뜻). 뜻/영문명은 소괄호로.
+                _t = re.sub(r"(\[[a-z][a-z\-]*\])\s*\[([A-Z][A-Za-z]*)\]", r"\1 (\2)", _t)
+                _t = re.sub(r"\s+\)", ")", re.sub(r"\(\s+", "(", _t))   # "( " / " )" 정리
+                _lines.append(_t)
+        open(_s, "w", encoding="utf-8").write("\n".join(_lines) + "\n")
+        _n = len(re.findall(r"\[[a-z\-]+\]", open(_s, encoding="utf-8").read()))
+        log(f"[자막 발음기호] {os.path.basename(_s)}: [로마자] {_n}개")
+except Exception as _e:
+    log(f"[경고] 발음기호 후처리 실패 — 자막 원칙 위반 위험: {_e}")
+
+# ★타임라인 저장 — patch_scene.py(부분 렌더)가 이 값을 그대로 써야 오디오가 안 어긋난다.
+#   (TTS를 다시 생성하면 길이가 미세하게 달라지므로 렌더 시점의 길이를 고정 기록)
+import json as _json
+_tl = {"ep": EP, "prefix": PREFIX, "lead": LEAD, "tail": TAIL, "scenes": [
+    {"seq": m["ko"]["seq"], "dur": m["dur"], "ko_dur": m["ko_dur"], "en_dur": m["en_dur"],
+     "ko_a": m["ko_a"], "en_a": m["en_a"], "ko_js": [list(x) for x in m["ko_js"]]}
+    for m in meta]}
+open(os.path.join(PDIR, f"{PREFIX}_np_timeline.json"), "w", encoding="utf-8").write(
+    _json.dumps(_tl, ensure_ascii=False))
+log(f"[타임라인 저장] {PREFIX}_np_timeline.json ({len(meta)}씬) — 부분 렌더(patch_scene.py)용")
 
 # ---------- 버전별 렌더(그 언어 박스 + 그 언어 오디오 + 양쪽자막 + 드로잉) ----------
 from moviepy import VideoClip, concatenate_videoclips
