@@ -713,8 +713,9 @@ P = [
 # 외국인 인기순 상위(앞쪽). 상위 24곳 = 24주 월요일 배경. 나머지는 원래 순서로 뒤에 배치.
 POP_ORDER = [
     "경복궁", "한강", "명동", "남산서울타워", "북촌한옥마을", "홍대", "인사동", "광장시장",
-    "해운대해수욕장", "광안리 광안대교", "감천문화마을", "성산일출봉", "협재해수욕장", "한라산",
-    "불국사", "전주한옥마을", "남이섬", "설악산", "강남", "이태원", "성수동",
+    "해운대해수욕장", "광안리 광안대교", "감천문화마을",
+    "강남", "성산일출봉", "협재해수욕장", "한라산",
+    "남이섬", "불국사", "전주한옥마을", "설악산", "이태원", "성수동",
     "롯데월드타워 서울스카이", "에버랜드", "동대문디자인플라자",
     # 25위~
     "광화문광장", "청계천", "자갈치시장", "해동용궁사", "첨성대", "동궁과 월지", "수원화성",
@@ -727,14 +728,35 @@ POP_ORDER = [
 def main():
     OUT_WK = os.path.join(ROOT, "web", "src", "data", "korea_week_places.json")
     
-    # Load details if exists
+    # Robustly build name-to-details mapping from current verified korea_places.json
+    name_to_details = {}
+    current_places_path = os.path.join(ROOT, "web", "src", "data", "korea_places.json")
+    if os.path.exists(current_places_path):
+        try:
+            with open(current_places_path, "r", encoding="utf-8") as f:
+                current_places = json.load(f)
+            for p in current_places:
+                name_to_details[p["name_en"]] = {
+                    "description_en": p.get("description_en", ""),
+                    "description_ko": p.get("description_ko", ""),
+                    "directions_en": p.get("directions_en", ""),
+                    "directions_ko": p.get("directions_ko", ""),
+                    "map_link": p.get("map_link", ""),
+                    "official_link": p.get("official_link", ""),
+                    "image_url": p.get("image_url", ""),
+                }
+            print(f"Loaded {len(name_to_details)} details items by name_en mapping.")
+        except Exception as e:
+            print(f"Error loading name-to-details mapping from korea_places.json: {e}")
+            
+    # If mapping is empty, fallback to reading korea_places_details.json by index (original behavior)
     details = {}
     details_path = os.path.join(ROOT, "web", "src", "data", "korea_places_details.json")
-    if os.path.exists(details_path):
+    if not name_to_details and os.path.exists(details_path):
         try:
             with open(details_path, "r", encoding="utf-8") as f:
                 details = json.load(f)
-            print(f"Loaded {len(details)} details items from {details_path}")
+            print(f"[Fallback] Loaded {len(details)} details items from {details_path}")
         except Exception as e:
             print(f"Error loading details: {e}")
 
@@ -744,8 +766,14 @@ def main():
     data = []
     for newpos, idx in enumerate(order, 1):
         nk, ne, reg, cat, leisure, why_ko, why_en, motif = P[idx]
-        orig_no_str = str(idx + 1)
-        det = details.get(orig_no_str, {})
+        
+        # Resolve details by name_en or fallback to index
+        if ne in name_to_details:
+            det = name_to_details[ne]
+        else:
+            orig_no_str = str(idx + 1)
+            det = details.get(orig_no_str, {})
+            
         data.append({
             "no": newpos, "name_ko": nk, "name_en": ne,
             "region_ko": reg, "region_en": REGION_EN.get(reg, reg),
@@ -763,6 +791,23 @@ def main():
         })
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    
+    # Synchronize korea_places_details.json with the new order mapping
+    new_details = {}
+    for d in data:
+        new_details[str(d["no"])] = {
+            "no": d["no"],
+            "description_en": d.get("description_en", ""),
+            "description_ko": d.get("description_ko", ""),
+            "directions_en": d.get("directions_en", ""),
+            "directions_ko": d.get("directions_ko", ""),
+            "map_link": d.get("map_link", ""),
+            "official_link": d.get("official_link", ""),
+            "image_url": d.get("image_url", ""),
+        }
+    json.dump(new_details, open(details_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    print(f"Synchronized korea_places_details.json with {len(new_details)} items.")
+    
     # 주별 월요일 배경 매핑(상위 24)
     wk_map = [{"week": d["week"], "no": d["no"], "name_ko": d["name_ko"],
                "name_en": d["name_en"], "motif": d["motif"]} for d in data if d["week"]]

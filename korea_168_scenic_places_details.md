@@ -31,7 +31,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **How to Get There (KO)**: 한강공원 및 야시장으로 가는 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
 - **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Han%20River%2C%20Seoul%2C%20South%20Korea)
 - **Official Website / Reference**: [Travel Guide / Info](https://hangang.seoul.go.kr/)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/d/de/Seoul_best_attractions_%28Seoul_best_attractions%29_%EB%8B%AC%EB%B9%9B%EB%AC%B4%EC%A7%80%EA%B0%9C%EB%B6%84%EC%88%981.jpg)
+- **Image Link**: [View Photo](/images/han_river_1.png)
 - **Visual Motif (Veo prompt)**: `wide calm river, city skyline far back, picnic mats, bicycles, a ramen cup, paddle boats, sunset`
 
 ————————————————————————————————————————
@@ -189,7 +189,24 @@ This document provides comprehensive details for 168 top travel destinations in 
 
 ————————————————————————————————————————
 
-## #12. Seongsan Ilchulbong (성산일출봉)
+## #12. Gangnam (강남)
+- **Region / 지역**: Seoul (서울)
+- **Category / 분류**: 도시·쇼핑
+- **Key Activities / 대표 레저**: 쇼핑·카페·강남스타일
+- **Summary (EN)**: Glitzy district of towers, shopping and cafes.
+- **Summary (KO)**: 고층 빌딩과 쇼핑·카페가 모인 트렌디한 도심.
+- **Detailed Description (EN)**: Gangnam is a premier business and commercial district in Seoul, exhibiting an 8% monthly retail sales growth as of March 2026 [18]. Unlike other major lifestyle shopping hubs, Gangnam possesses a unique retail structure heavily concentrated in medical, clinical skincare, and wellness services, which account for 88% of its total commercial revenue [19].
+- **Detailed Description (KO)**: 강남은 2026년 3월 기준 전년 동월 대비 월 매출이 8% 가량 꾸준히 성장하고 있는 서울의 핵심 상권입니다 [18]. 라이프스타일이나 패션 중심의 소비가 밀집한 성수동 등의 상권과 달리, 강남역 부근은 의료 및 뷰티 관련 업종의 매출 비중이 무려 88%에 달할 정도로 성형·미용 시술과 웰니스 소비가 집중되는 차별화된 소비 구조를 보입니다 [19].
+- **How to Get There (EN)**: Specific transit or driving directions to Gangnam are not provided in your sources.
+- **How to Get There (KO)**: 강남역 부근으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
+- **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gangnam%2C%20Seoul%2C%20South%20Korea)
+- **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Teheran-ro_Yeongdong-daero_crossing_7.jpg/960px-Teheran-ro_Yeongdong-daero_crossing_7.jpg)
+- **Visual Motif (Veo prompt)**: `wide modern boulevard with glass towers, fashion boutiques, busy crosswalk, city energy`
+
+————————————————————————————————————————
+
+## #13. Seongsan Ilchulbong (성산일출봉)
 - **Region / 지역**: Jeju (제주)
 - **Category / 분류**: 자연·일출
 - **Key Activities / 대표 레저**: 일출·분화구등반
@@ -206,7 +223,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 
 ————————————————————————————————————————
 
-## #13. Hyeopjae Beach (협재해수욕장)
+## #14. Hyeopjae Beach (협재해수욕장)
 - **Region / 지역**: Jeju (제주)
 - **Category / 분류**: 해변·에메랄드
 - **Key Activities / 대표 레저**: 에메랄드물·비양도
@@ -223,7 +240,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 
 ————————————————————————————————————————
 
-## #14. Hallasan (한라산)
+## #15. Hallasan (한라산)
 - **Region / 지역**: Jeju (제주)
 - **Category / 분류**: 산·등산
 - **Key Activities / 대표 레저**: 등산·백록담
@@ -240,41 +257,7 @@ This document provides comprehensive details for 168 top travel destinations in 
 
 ————————————————————————————————————————
 
-## #15. Bulguksa Temple (불국사)
-- **Region / 지역**: Gyeongju (경주)
-- **Category / 분류**: 사찰·유네스코
-- **Key Activities / 대표 레저**: 고찰산책·다보탑
-- **Summary (EN)**: Pinnacle of Silla Buddhist art — UNESCO site.
-- **Summary (KO)**: 통일신라 불교 예술의 정수. 유네스코 세계유산.
-- **Detailed Description (EN)**: Bulguksa Temple is a premier historic site and UNESCO World Heritage monument in Gyeongju, housing eight national treasures (including Dabotap and Seokgatap) alongside numerous other cultural heritages [3, 4]. Originally established during the Silla Dynasty under King Gyeongdeok by Prime Minister Kim Dae-seong for his parents of his present life, it showcases the pinnacle of ancient Buddhist architecture [4]. To democratize access, viewing fees were permanently abolished on May 4, 2023, under a revised Cultural Heritage Protection Act, allowing tourists to explore this grand complex for free [3, 5].
-- **Detailed Description (KO)**: 경주 불국사는 다보탑과 석가탑 등 국보 8개를 비롯해 총 20여 개의 주요 문화재를 보유하고 있는 유네스코 지정 세계문화유산이자 사적입니다 [3, 4]. 신라 경덕왕 재위 시절 재상 김대성이 현세의 부모를 위해 창건하였으며, 고대 불교 건축예술의 정수를 완벽하게 보여주는 사찰입니다 [4]. 문화재보호법 개정에 따른 국가 재정 지원을 기반으로 2023년 5월 4일부터 문화재관람료가 전면 면제되어 모든 방문객이 별도의 비용 없이 자유롭게 입장할 수 있습니다 [3, 5].
-- **How to Get There (EN)**: Specific transit or driving directions to Bulguksa Temple are not provided in your sources.
-- **How to Get There (KO)**: 불국사로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
-- **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Bulguksa%20Temple%2C%20Gyeongju%2C%20South%20Korea)
-- **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Lotus_Flower_Bridge_and_Seven_Treasure_Bridge_at_Bulguksa_in_Gyeongju%2C_Korea.jpg/960px-Lotus_Flower_Bridge_and_Seven_Treasure_Bridge_at_Bulguksa_in_Gyeongju%2C_Korea.jpg)
-- **Visual Motif (Veo prompt)**: `grand old wooden temple, stone stairways and pagodas, autumn maples, lotus pond, tiled roofs`
-
-————————————————————————————————————————
-
-## #16. Jeonju Hanok Village (전주한옥마을)
-- **Region / 지역**: Jeonju (전주)
-- **Category / 분류**: 한옥·먹거리
-- **Key Activities / 대표 레저**: 한복·비빔밥·길거리음식
-- **Summary (EN)**: Hundreds of hanok plus bibimbap and street food.
-- **Summary (KO)**: 수백 채 한옥과 비빔밥, 길거리 음식의 한옥마을.
-- **Detailed Description (EN)**: Jeonju Hanok Village is a vibrant cultural district in Jeonju where visitors can rent traditional Hanbok to stroll among beautifully preserved Korean wooden houses [6, 7]. It serves as a dense enclave of national history, containing crucial landmarks such as Jeondong Cathedral [8, 9], Gyeonggijeon Shrine [8, 10], and the Jeonju Hanok Village History Museum [8, 11]. Beyond architecture, the village is highly celebrated for its iconic local cuisine, particularly the hot, restorative bowls of Jeonju bean sprout soup (kongnamul-gukbap) and sweet rice wine (moju) [12-14].
-- **Detailed Description (KO)**: 전주한옥마을은 고즈넉한 전통 가옥들 사이를 아름다운 한복을 차려입고 한가로이 노닐 수 있어 남녀노소 모두에게 최고의 추억을 선물하는 문화 관광지입니다 [6, 7]. 마을 중심부에는 태조 이성계의 어진을 모신 경기전 [8, 10]을 시작으로, 우리나라 최초의 천주교 순교지인 전동성당 [9]과 한옥마을역사관 [8, 11] 등이 인접해 풍부한 도보 여행을 제공합니다. 더불어, 여행의 든든한 동반자가 되어 주는 뜨끈한 전주 콩나물국밥과 향긋한 모주 등 깊은 역사와 맛이 깃든 풍성한 먹거리가 가득합니다 [12-14].
-- **How to Get There (EN)**: From Jeonju Station, visitors can take low-floor bus number 119 at the 'Jeonju Station First Welcome Road' stop and get off at the 'Jeondong Cathedral, Hanok Village' or 'Dongbu Market' stop.
-- **How to Get There (KO)**: 전주역에서 출발하는 경우, '전주역 첫마중길 정류장'에서 저상버스 119번을 타고 이동하여 '전동성당.한옥마을' 또는 '동부시장' 정류장에서 하차하시면 편리합니다 [12, 14].
-- **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Jeonju%20Hanok%20Village%2C%20Jeonju%2C%20South%20Korea)
-- **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
-- **Visual Motif (Veo prompt)**: `wide hanok village of tiled roofs, hanbok visitors, food stalls, bibimbap bowl, lanterns`
-
-————————————————————————————————————————
-
-## #17. Nami Island (남이섬)
+## #16. Nami Island (남이섬)
 - **Region / 지역**: Gangwon (강원)
 - **Category / 분류**: 섬·산책
 - **Key Activities / 대표 레저**: 메타세쿼이아길·자전거
@@ -291,7 +274,41 @@ This document provides comprehensive details for 168 top travel destinations in 
 
 ————————————————————————————————————————
 
-## #18. Seoraksan (설악산)
+## #17. Bulguksa Temple (불국사)
+- **Region / 지역**: Gyeongju (경주)
+- **Category / 분류**: 사찰·유네스코
+- **Key Activities / 대표 레저**: 고찰산책·다보탑
+- **Summary (EN)**: Pinnacle of Silla Buddhist art — UNESCO site.
+- **Summary (KO)**: 통일신라 불교 예술의 정수. 유네스코 세계유산.
+- **Detailed Description (EN)**: Bulguksa Temple is a premier historic site and UNESCO World Heritage monument in Gyeongju, housing eight national treasures (including Dabotap and Seokgatap) alongside numerous other cultural heritages [3, 4]. Originally established during the Silla Dynasty under King Gyeongdeok by Prime Minister Kim Dae-seong for his parents of his present life, it showcases the pinnacle of ancient Buddhist architecture [4]. To democratize access, viewing fees were permanently abolished on May 4, 2023, under a revised Cultural Heritage Protection Act, allowing tourists to explore this grand complex for free [3, 5].
+- **Detailed Description (KO)**: 경주 불국사는 다보탑과 석가탑 등 국보 8개를 비롯해 총 20여 개의 주요 문화재를 보유하고 있는 유네스코 지정 세계문화유산이자 사적입니다 [3, 4]. 신라 경덕왕 재위 시절 재상 김대성이 현세의 부모를 위해 창건하였으며, 고대 불교 건축예술의 정수를 완벽하게 보여주는 사찰입니다 [4]. 문화재보호법 개정에 따른 국가 재정 지원을 기반으로 2023년 5월 4일부터 문화재관람료가 전면 면제되어 모든 방문객이 별도의 비용 없이 자유롭게 입장할 수 있습니다 [3, 5].
+- **How to Get There (EN)**: Specific transit or driving directions to Bulguksa Temple are not provided in your sources.
+- **How to Get There (KO)**: 불국사로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
+- **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Bulguksa%20Temple%2C%20Gyeongju%2C%20South%20Korea)
+- **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Lotus_Flower_Bridge_and_Seven_Treasure_Bridge_at_Bulguksa_in_Gyeongju%2C_Korea.jpg/960px-Lotus_Flower_Bridge_and_Seven_Treasure_Bridge_at_Bulguksa_in_Gyeongju%2C_Korea.jpg)
+- **Visual Motif (Veo prompt)**: `grand old wooden temple, stone stairways and pagodas, autumn maples, lotus pond, tiled roofs`
+
+————————————————————————————————————————
+
+## #18. Jeonju Hanok Village (전주한옥마을)
+- **Region / 지역**: Jeonju (전주)
+- **Category / 분류**: 한옥·먹거리
+- **Key Activities / 대표 레저**: 한복·비빔밥·길거리음식
+- **Summary (EN)**: Hundreds of hanok plus bibimbap and street food.
+- **Summary (KO)**: 수백 채 한옥과 비빔밥, 길거리 음식의 한옥마을.
+- **Detailed Description (EN)**: Jeonju Hanok Village is a vibrant cultural district in Jeonju where visitors can rent traditional Hanbok to stroll among beautifully preserved Korean wooden houses [6, 7]. It serves as a dense enclave of national history, containing crucial landmarks such as Jeondong Cathedral [8, 9], Gyeonggijeon Shrine [8, 10], and the Jeonju Hanok Village History Museum [8, 11]. Beyond architecture, the village is highly celebrated for its iconic local cuisine, particularly the hot, restorative bowls of Jeonju bean sprout soup (kongnamul-gukbap) and sweet rice wine (moju) [12-14].
+- **Detailed Description (KO)**: 전주한옥마을은 고즈넉한 전통 가옥들 사이를 아름다운 한복을 차려입고 한가로이 노닐 수 있어 남녀노소 모두에게 최고의 추억을 선물하는 문화 관광지입니다 [6, 7]. 마을 중심부에는 태조 이성계의 어진을 모신 경기전 [8, 10]을 시작으로, 우리나라 최초의 천주교 순교지인 전동성당 [9]과 한옥마을역사관 [8, 11] 등이 인접해 풍부한 도보 여행을 제공합니다. 더불어, 여행의 든든한 동반자가 되어 주는 뜨끈한 전주 콩나물국밥과 향긋한 모주 등 깊은 역사와 맛이 깃든 풍성한 먹거리가 가득합니다 [12-14].
+- **How to Get There (EN)**: From Jeonju Station, visitors can take low-floor bus number 119 at the 'Jeonju Station First Welcome Road' stop and get off at the 'Jeondong Cathedral, Hanok Village' or 'Dongbu Market' stop.
+- **How to Get There (KO)**: 전주역에서 출발하는 경우, '전주역 첫마중길 정류장'에서 저상버스 119번을 타고 이동하여 '전동성당.한옥마을' 또는 '동부시장' 정류장에서 하차하시면 편리합니다 [12, 14].
+- **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Jeonju%20Hanok%20Village%2C%20Jeonju%2C%20South%20Korea)
+- **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
+- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg)
+- **Visual Motif (Veo prompt)**: `wide hanok village of tiled roofs, hanbok visitors, food stalls, bibimbap bowl, lanterns`
+
+————————————————————————————————————————
+
+## #19. Seoraksan (설악산)
 - **Region / 지역**: Gangwon (강원)
 - **Category / 분류**: 산·단풍
 - **Key Activities / 대표 레저**: 단풍·케이블카·울산바위
@@ -305,23 +322,6 @@ This document provides comprehensive details for 168 top travel destinations in 
 - **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
 - **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Dinosaur_Ridge_of_Seoraksan.jpg/960px-Dinosaur_Ridge_of_Seoraksan.jpg)
 - **Visual Motif (Veo prompt)**: `jagged granite peaks blazing with red-orange autumn foliage, cable car, temple, stream, blue sky`
-
-————————————————————————————————————————
-
-## #19. Gangnam (강남)
-- **Region / 지역**: Seoul (서울)
-- **Category / 분류**: 도시·쇼핑
-- **Key Activities / 대표 레저**: 쇼핑·카페·강남스타일
-- **Summary (EN)**: Glitzy district of towers, shopping and cafes.
-- **Summary (KO)**: 고층 빌딩과 쇼핑·카페가 모인 트렌디한 도심.
-- **Detailed Description (EN)**: Gangnam is a premier business and commercial district in Seoul, exhibiting an 8% monthly retail sales growth as of March 2026 [18]. Unlike other major lifestyle shopping hubs, Gangnam possesses a unique retail structure heavily concentrated in medical, clinical skincare, and wellness services, which account for 88% of its total commercial revenue [19].
-- **Detailed Description (KO)**: 강남은 2026년 3월 기준 전년 동월 대비 월 매출이 8% 가량 꾸준히 성장하고 있는 서울의 핵심 상권입니다 [18]. 라이프스타일이나 패션 중심의 소비가 밀집한 성수동 등의 상권과 달리, 강남역 부근은 의료 및 뷰티 관련 업종의 매출 비중이 무려 88%에 달할 정도로 성형·미용 시술과 웰니스 소비가 집중되는 차별화된 소비 구조를 보입니다 [19].
-- **How to Get There (EN)**: Specific transit or driving directions to Gangnam are not provided in your sources.
-- **How to Get There (KO)**: 강남역 부근으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.
-- **Map Location**: [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Gangnam%2C%20Seoul%2C%20South%20Korea)
-- **Official Website / Reference**: [Travel Guide / Info](https://english.visitkorea.or.kr)
-- **Image Link**: [View Photo](https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Teheran-ro_Yeongdong-daero_crossing_7.jpg/960px-Teheran-ro_Yeongdong-daero_crossing_7.jpg)
-- **Visual Motif (Veo prompt)**: `wide modern boulevard with glass towers, fashion boutiques, busy crosswalk, city energy`
 
 ————————————————————————————————————————
 

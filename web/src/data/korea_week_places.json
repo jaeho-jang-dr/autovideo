@@ -107,23 +107,23 @@
  {
   "week": 16,
   "no": 16,
+  "name_ko": "남이섬",
+  "name_en": "Nami Island",
+  "motif": "long straight tree-lined lane of tall metasequoia, couple walking, bicycles, autumn or snow"
+ },
+ {
+  "week": 17,
+  "no": 17,
   "name_ko": "불국사",
   "name_en": "Bulguksa Temple",
   "motif": "grand old wooden temple, stone stairways and pagodas, autumn maples, lotus pond, tiled roofs"
  },
  {
-  "week": 17,
-  "no": 17,
+  "week": 18,
+  "no": 18,
   "name_ko": "전주한옥마을",
   "name_en": "Jeonju Hanok Village",
   "motif": "wide hanok village of tiled roofs, hanbok visitors, food stalls, bibimbap bowl, lanterns"
- },
- {
-  "week": 18,
-  "no": 18,
-  "name_ko": "남이섬",
-  "name_en": "Nami Island",
-  "motif": "long straight tree-lined lane of tall metasequoia, couple walking, bicycles, autumn or snow"
  },
  {
   "week": 19,
