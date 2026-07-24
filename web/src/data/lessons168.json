@@ -1,6 +1,8 @@
 [
  {
-  "no": 1,
+  "no": "W1",
+  "seq": 1,
+  "code": "W1-1",
   "week": 1,
   "day": 1,
   "level": "beginner",
@@ -21,7 +23,9 @@
   "video": "hangeul_w1_stickman"
  },
  {
-  "no": 2,
+  "no": "W1-2",
+  "seq": 2,
+  "code": "W1-2",
   "week": 1,
   "day": 2,
   "level": "beginner",
@@ -42,7 +46,9 @@
   "video": null
  },
  {
-  "no": 3,
+  "no": "W1-3",
+  "seq": 3,
+  "code": "W1-3",
   "week": 1,
   "day": 3,
   "level": "beginner",
@@ -63,7 +69,9 @@
   "video": null
  },
  {
-  "no": 4,
+  "no": "W1-4",
+  "seq": 4,
+  "code": "W1-4",
   "week": 1,
   "day": 4,
   "level": "beginner",
@@ -84,7 +92,9 @@
   "video": null
  },
  {
-  "no": 5,
+  "no": "W1-5",
+  "seq": 5,
+  "code": "W1-5",
   "week": 1,
   "day": 5,
   "level": "beginner",
@@ -105,7 +115,9 @@
   "video": null
  },
  {
-  "no": 6,
+  "no": "W1-6",
+  "seq": 6,
+  "code": "W1-6",
   "week": 1,
   "day": 6,
   "level": "beginner",
@@ -126,7 +138,9 @@
   "video": null
  },
  {
-  "no": 7,
+  "no": "W1-7",
+  "seq": 7,
+  "code": "W1-7",
   "week": 1,
   "day": 7,
   "level": "beginner",
@@ -147,7 +161,9 @@
   "video": null
  },
  {
-  "no": 8,
+  "no": "W2",
+  "seq": 8,
+  "code": "W2-1",
   "week": 2,
   "day": 1,
   "level": "beginner",
@@ -168,7 +184,9 @@
   "video": "hangeul_w2_stickman"
  },
  {
-  "no": 9,
+  "no": "W2-2",
+  "seq": 9,
+  "code": "W2-2",
   "week": 2,
   "day": 2,
   "level": "beginner",
@@ -189,7 +207,9 @@
   "video": null
  },
  {
-  "no": 10,
+  "no": "W2-3",
+  "seq": 10,
+  "code": "W2-3",
   "week": 2,
   "day": 3,
   "level": "beginner",
@@ -210,7 +230,9 @@
   "video": null
  },
  {
-  "no": 11,
+  "no": "W2-4",
+  "seq": 11,
+  "code": "W2-4",
   "week": 2,
   "day": 4,
   "level": "beginner",
@@ -231,7 +253,9 @@
   "video": null
  },
  {
-  "no": 12,
+  "no": "W2-5",
+  "seq": 12,
+  "code": "W2-5",
   "week": 2,
   "day": 5,
   "level": "beginner",
@@ -252,7 +276,9 @@
   "video": null
  },
  {
-  "no": 13,
+  "no": "W2-6",
+  "seq": 13,
+  "code": "W2-6",
   "week": 2,
   "day": 6,
   "level": "beginner",
@@ -273,7 +299,9 @@
   "video": null
  },
  {
-  "no": 14,
+  "no": "W2-7",
+  "seq": 14,
+  "code": "W2-7",
   "week": 2,
   "day": 7,
   "level": "beginner",
@@ -294,7 +322,9 @@
   "video": null
  },
  {
-  "no": 15,
+  "no": "W3",
+  "seq": 15,
+  "code": "W3-1",
   "week": 3,
   "day": 1,
   "level": "beginner",
@@ -315,7 +345,9 @@
   "video": "hangeul_w3_stickman"
  },
  {
-  "no": 16,
+  "no": "W3-2",
+  "seq": 16,
+  "code": "W3-2",
   "week": 3,
   "day": 2,
   "level": "beginner",
@@ -336,7 +368,9 @@
   "video": null
  },
  {
-  "no": 17,
+  "no": "W3-3",
+  "seq": 17,
+  "code": "W3-3",
   "week": 3,
   "day": 3,
   "level": "beginner",
@@ -357,7 +391,9 @@
   "video": null
  },
  {
-  "no": 18,
+  "no": "W3-4",
+  "seq": 18,
+  "code": "W3-4",
   "week": 3,
   "day": 4,
   "level": "beginner",
@@ -378,7 +414,9 @@
   "video": null
  },
  {
-  "no": 19,
+  "no": "W3-5",
+  "seq": 19,
+  "code": "W3-5",
   "week": 3,
   "day": 5,
   "level": "beginner",
@@ -399,7 +437,9 @@
   "video": null
  },
  {
-  "no": 20,
+  "no": "W3-6",
+  "seq": 20,
+  "code": "W3-6",
   "week": 3,
   "day": 6,
   "level": "beginner",
@@ -420,7 +460,9 @@
   "video": null
  },
  {
-  "no": 21,
+  "no": "W3-7",
+  "seq": 21,
+  "code": "W3-7",
   "week": 3,
   "day": 7,
   "level": "beginner",
@@ -441,7 +483,9 @@
   "video": null
  },
  {
-  "no": 22,
+  "no": "W4",
+  "seq": 22,
+  "code": "W4-1",
   "week": 4,
   "day": 1,
   "level": "beginner",
@@ -462,7 +506,9 @@
   "video": "hangeul_w4_stickman"
  },
  {
-  "no": 23,
+  "no": "W4-2",
+  "seq": 23,
+  "code": "W4-2",
   "week": 4,
   "day": 2,
   "level": "beginner",
@@ -483,7 +529,9 @@
   "video": null
  },
  {
-  "no": 24,
+  "no": "W4-3",
+  "seq": 24,
+  "code": "W4-3",
   "week": 4,
   "day": 3,
   "level": "beginner",
@@ -504,7 +552,9 @@
   "video": null
  },
  {
-  "no": 25,
+  "no": "W4-4",
+  "seq": 25,
+  "code": "W4-4",
   "week": 4,
   "day": 4,
   "level": "beginner",
@@ -525,7 +575,9 @@
   "video": null
  },
  {
-  "no": 26,
+  "no": "W4-5",
+  "seq": 26,
+  "code": "W4-5",
   "week": 4,
   "day": 5,
   "level": "beginner",
@@ -546,7 +598,9 @@
   "video": null
  },
  {
-  "no": 27,
+  "no": "W4-6",
+  "seq": 27,
+  "code": "W4-6",
   "week": 4,
   "day": 6,
   "level": "beginner",
@@ -567,7 +621,9 @@
   "video": null
  },
  {
-  "no": 28,
+  "no": "W4-7",
+  "seq": 28,
+  "code": "W4-7",
   "week": 4,
   "day": 7,
   "level": "beginner",
@@ -588,7 +644,9 @@
   "video": null
  },
  {
-  "no": 29,
+  "no": "W5",
+  "seq": 29,
+  "code": "W5-1",
   "week": 5,
   "day": 1,
   "level": "beginner",
@@ -609,7 +667,9 @@
   "video": "hangeul_w5_stickman"
  },
  {
-  "no": 30,
+  "no": "W5-2",
+  "seq": 30,
+  "code": "W5-2",
   "week": 5,
   "day": 2,
   "level": "beginner",
@@ -630,7 +690,9 @@
   "video": null
  },
  {
-  "no": 31,
+  "no": "W5-3",
+  "seq": 31,
+  "code": "W5-3",
   "week": 5,
   "day": 3,
   "level": "beginner",
@@ -651,7 +713,9 @@
   "video": null
  },
  {
-  "no": 32,
+  "no": "W5-4",
+  "seq": 32,
+  "code": "W5-4",
   "week": 5,
   "day": 4,
   "level": "beginner",
@@ -672,7 +736,9 @@
   "video": null
  },
  {
-  "no": 33,
+  "no": "W5-5",
+  "seq": 33,
+  "code": "W5-5",
   "week": 5,
   "day": 5,
   "level": "beginner",
@@ -693,7 +759,9 @@
   "video": null
  },
  {
-  "no": 34,
+  "no": "W5-6",
+  "seq": 34,
+  "code": "W5-6",
   "week": 5,
   "day": 6,
   "level": "beginner",
@@ -714,7 +782,9 @@
   "video": null
  },
  {
-  "no": 35,
+  "no": "W5-7",
+  "seq": 35,
+  "code": "W5-7",
   "week": 5,
   "day": 7,
   "level": "beginner",
@@ -735,7 +805,9 @@
   "video": null
  },
  {
-  "no": 36,
+  "no": "W6",
+  "seq": 36,
+  "code": "W6-1",
   "week": 6,
   "day": 1,
   "level": "beginner",
@@ -756,7 +828,9 @@
   "video": "hangeul_w6_stickman"
  },
  {
-  "no": 37,
+  "no": "W6-2",
+  "seq": 37,
+  "code": "W6-2",
   "week": 6,
   "day": 2,
   "level": "beginner",
@@ -777,7 +851,9 @@
   "video": null
  },
  {
-  "no": 38,
+  "no": "W6-3",
+  "seq": 38,
+  "code": "W6-3",
   "week": 6,
   "day": 3,
   "level": "beginner",
@@ -798,7 +874,9 @@
   "video": null
  },
  {
-  "no": 39,
+  "no": "W6-4",
+  "seq": 39,
+  "code": "W6-4",
   "week": 6,
   "day": 4,
   "level": "beginner",
@@ -819,7 +897,9 @@
   "video": null
  },
  {
-  "no": 40,
+  "no": "W6-5",
+  "seq": 40,
+  "code": "W6-5",
   "week": 6,
   "day": 5,
   "level": "beginner",
@@ -840,7 +920,9 @@
   "video": null
  },
  {
-  "no": 41,
+  "no": "W6-6",
+  "seq": 41,
+  "code": "W6-6",
   "week": 6,
   "day": 6,
   "level": "beginner",
@@ -861,7 +943,9 @@
   "video": null
  },
  {
-  "no": 42,
+  "no": "W6-7",
+  "seq": 42,
+  "code": "W6-7",
   "week": 6,
   "day": 7,
   "level": "beginner",
@@ -882,7 +966,9 @@
   "video": null
  },
  {
-  "no": 43,
+  "no": "W7",
+  "seq": 43,
+  "code": "W7-1",
   "week": 7,
   "day": 1,
   "level": "beginner",
@@ -903,7 +989,9 @@
   "video": "hangeul_w7_stickman"
  },
  {
-  "no": 44,
+  "no": "W7-2",
+  "seq": 44,
+  "code": "W7-2",
   "week": 7,
   "day": 2,
   "level": "beginner",
@@ -924,7 +1012,9 @@
   "video": null
  },
  {
-  "no": 45,
+  "no": "W7-3",
+  "seq": 45,
+  "code": "W7-3",
   "week": 7,
   "day": 3,
   "level": "beginner",
@@ -945,7 +1035,9 @@
   "video": null
  },
  {
-  "no": 46,
+  "no": "W7-4",
+  "seq": 46,
+  "code": "W7-4",
   "week": 7,
   "day": 4,
   "level": "beginner",
@@ -966,7 +1058,9 @@
   "video": null
  },
  {
-  "no": 47,
+  "no": "W7-5",
+  "seq": 47,
+  "code": "W7-5",
   "week": 7,
   "day": 5,
   "level": "beginner",
@@ -987,7 +1081,9 @@
   "video": null
  },
  {
-  "no": 48,
+  "no": "W7-6",
+  "seq": 48,
+  "code": "W7-6",
   "week": 7,
   "day": 6,
   "level": "beginner",
@@ -1008,7 +1104,9 @@
   "video": null
  },
  {
-  "no": 49,
+  "no": "W7-7",
+  "seq": 49,
+  "code": "W7-7",
   "week": 7,
   "day": 7,
   "level": "beginner",
@@ -1029,7 +1127,9 @@
   "video": null
  },
  {
-  "no": 50,
+  "no": "W8",
+  "seq": 50,
+  "code": "W8-1",
   "week": 8,
   "day": 1,
   "level": "beginner",
@@ -1050,7 +1150,9 @@
   "video": "hangeul_w8_stickman"
  },
  {
-  "no": 51,
+  "no": "W8-2",
+  "seq": 51,
+  "code": "W8-2",
   "week": 8,
   "day": 2,
   "level": "beginner",
@@ -1071,7 +1173,9 @@
   "video": null
  },
  {
-  "no": 52,
+  "no": "W8-3",
+  "seq": 52,
+  "code": "W8-3",
   "week": 8,
   "day": 3,
   "level": "beginner",
@@ -1092,7 +1196,9 @@
   "video": null
  },
  {
-  "no": 53,
+  "no": "W8-4",
+  "seq": 53,
+  "code": "W8-4",
   "week": 8,
   "day": 4,
   "level": "beginner",
@@ -1113,7 +1219,9 @@
   "video": null
  },
  {
-  "no": 54,
+  "no": "W8-5",
+  "seq": 54,
+  "code": "W8-5",
   "week": 8,
   "day": 5,
   "level": "beginner",
@@ -1134,7 +1242,9 @@
   "video": null
  },
  {
-  "no": 55,
+  "no": "W8-6",
+  "seq": 55,
+  "code": "W8-6",
   "week": 8,
   "day": 6,
   "level": "beginner",
@@ -1155,7 +1265,9 @@
   "video": null
  },
  {
-  "no": 56,
+  "no": "W8-7",
+  "seq": 56,
+  "code": "W8-7",
   "week": 8,
   "day": 7,
   "level": "beginner",
@@ -1176,7 +1288,9 @@
   "video": null
  },
  {
-  "no": 57,
+  "no": "W9",
+  "seq": 57,
+  "code": "W9-1",
   "week": 9,
   "day": 1,
   "level": "intermediate",
@@ -1197,7 +1311,9 @@
   "video": "hangeul_w9_stickman"
  },
  {
-  "no": 58,
+  "no": "W9-2",
+  "seq": 58,
+  "code": "W9-2",
   "week": 9,
   "day": 2,
   "level": "intermediate",
@@ -1218,7 +1334,9 @@
   "video": null
  },
  {
-  "no": 59,
+  "no": "W9-3",
+  "seq": 59,
+  "code": "W9-3",
   "week": 9,
   "day": 3,
   "level": "intermediate",
@@ -1239,7 +1357,9 @@
   "video": null
  },
  {
-  "no": 60,
+  "no": "W9-4",
+  "seq": 60,
+  "code": "W9-4",
   "week": 9,
   "day": 4,
   "level": "intermediate",
@@ -1260,7 +1380,9 @@
   "video": null
  },
  {
-  "no": 61,
+  "no": "W9-5",
+  "seq": 61,
+  "code": "W9-5",
   "week": 9,
   "day": 5,
   "level": "intermediate",
@@ -1281,7 +1403,9 @@
   "video": null
  },
  {
-  "no": 62,
+  "no": "W9-6",
+  "seq": 62,
+  "code": "W9-6",
   "week": 9,
   "day": 6,
   "level": "intermediate",
@@ -1302,7 +1426,9 @@
   "video": null
  },
  {
-  "no": 63,
+  "no": "W9-7",
+  "seq": 63,
+  "code": "W9-7",
   "week": 9,
   "day": 7,
   "level": "intermediate",
@@ -1323,7 +1449,9 @@
   "video": null
  },
  {
-  "no": 64,
+  "no": "W10",
+  "seq": 64,
+  "code": "W10-1",
   "week": 10,
   "day": 1,
   "level": "intermediate",
@@ -1344,7 +1472,9 @@
   "video": "hangeul_w10_stickman"
  },
  {
-  "no": 65,
+  "no": "W10-2",
+  "seq": 65,
+  "code": "W10-2",
   "week": 10,
   "day": 2,
   "level": "intermediate",
@@ -1365,7 +1495,9 @@
   "video": null
  },
  {
-  "no": 66,
+  "no": "W10-3",
+  "seq": 66,
+  "code": "W10-3",
   "week": 10,
   "day": 3,
   "level": "intermediate",
@@ -1386,7 +1518,9 @@
   "video": null
  },
  {
-  "no": 67,
+  "no": "W10-4",
+  "seq": 67,
+  "code": "W10-4",
   "week": 10,
   "day": 4,
   "level": "intermediate",
@@ -1407,7 +1541,9 @@
   "video": null
  },
  {
-  "no": 68,
+  "no": "W10-5",
+  "seq": 68,
+  "code": "W10-5",
   "week": 10,
   "day": 5,
   "level": "intermediate",
@@ -1428,7 +1564,9 @@
   "video": null
  },
  {
-  "no": 69,
+  "no": "W10-6",
+  "seq": 69,
+  "code": "W10-6",
   "week": 10,
   "day": 6,
   "level": "intermediate",
@@ -1449,7 +1587,9 @@
   "video": null
  },
  {
-  "no": 70,
+  "no": "W10-7",
+  "seq": 70,
+  "code": "W10-7",
   "week": 10,
   "day": 7,
   "level": "intermediate",
@@ -1470,7 +1610,9 @@
   "video": null
  },
  {
-  "no": 71,
+  "no": "W11",
+  "seq": 71,
+  "code": "W11-1",
   "week": 11,
   "day": 1,
   "level": "intermediate",
@@ -1491,7 +1633,9 @@
   "video": "hangeul_w11_stickman"
  },
  {
-  "no": 72,
+  "no": "W11-2",
+  "seq": 72,
+  "code": "W11-2",
   "week": 11,
   "day": 2,
   "level": "intermediate",
@@ -1512,7 +1656,9 @@
   "video": null
  },
  {
-  "no": 73,
+  "no": "W11-3",
+  "seq": 73,
+  "code": "W11-3",
   "week": 11,
   "day": 3,
   "level": "intermediate",
@@ -1533,7 +1679,9 @@
   "video": null
  },
  {
-  "no": 74,
+  "no": "W11-4",
+  "seq": 74,
+  "code": "W11-4",
   "week": 11,
   "day": 4,
   "level": "intermediate",
@@ -1554,7 +1702,9 @@
   "video": null
  },
  {
-  "no": 75,
+  "no": "W11-5",
+  "seq": 75,
+  "code": "W11-5",
   "week": 11,
   "day": 5,
   "level": "intermediate",
@@ -1575,7 +1725,9 @@
   "video": null
  },
  {
-  "no": 76,
+  "no": "W11-6",
+  "seq": 76,
+  "code": "W11-6",
   "week": 11,
   "day": 6,
   "level": "intermediate",
@@ -1596,7 +1748,9 @@
   "video": null
  },
  {
-  "no": 77,
+  "no": "W11-7",
+  "seq": 77,
+  "code": "W11-7",
   "week": 11,
   "day": 7,
   "level": "intermediate",
@@ -1617,7 +1771,9 @@
   "video": null
  },
  {
-  "no": 78,
+  "no": "W12",
+  "seq": 78,
+  "code": "W12-1",
   "week": 12,
   "day": 1,
   "level": "intermediate",
@@ -1638,7 +1794,9 @@
   "video": "hangeul_w12_stickman"
  },
  {
-  "no": 79,
+  "no": "W12-2",
+  "seq": 79,
+  "code": "W12-2",
   "week": 12,
   "day": 2,
   "level": "intermediate",
@@ -1659,7 +1817,9 @@
   "video": null
  },
  {
-  "no": 80,
+  "no": "W12-3",
+  "seq": 80,
+  "code": "W12-3",
   "week": 12,
   "day": 3,
   "level": "intermediate",
@@ -1680,7 +1840,9 @@
   "video": null
  },
  {
-  "no": 81,
+  "no": "W12-4",
+  "seq": 81,
+  "code": "W12-4",
   "week": 12,
   "day": 4,
   "level": "intermediate",
@@ -1701,7 +1863,9 @@
   "video": null
  },
  {
-  "no": 82,
+  "no": "W12-5",
+  "seq": 82,
+  "code": "W12-5",
   "week": 12,
   "day": 5,
   "level": "intermediate",
@@ -1722,7 +1886,9 @@
   "video": null
  },
  {
-  "no": 83,
+  "no": "W12-6",
+  "seq": 83,
+  "code": "W12-6",
   "week": 12,
   "day": 6,
   "level": "intermediate",
@@ -1743,7 +1909,9 @@
   "video": null
  },
  {
-  "no": 84,
+  "no": "W12-7",
+  "seq": 84,
+  "code": "W12-7",
   "week": 12,
   "day": 7,
   "level": "intermediate",
@@ -1764,7 +1932,9 @@
   "video": null
  },
  {
-  "no": 85,
+  "no": "W13",
+  "seq": 85,
+  "code": "W13-1",
   "week": 13,
   "day": 1,
   "level": "intermediate",
@@ -1785,7 +1955,9 @@
   "video": "hangeul_w13_stickman"
  },
  {
-  "no": 86,
+  "no": "W13-2",
+  "seq": 86,
+  "code": "W13-2",
   "week": 13,
   "day": 2,
   "level": "intermediate",
@@ -1806,7 +1978,9 @@
   "video": null
  },
  {
-  "no": 87,
+  "no": "W13-3",
+  "seq": 87,
+  "code": "W13-3",
   "week": 13,
   "day": 3,
   "level": "intermediate",
@@ -1827,7 +2001,9 @@
   "video": null
  },
  {
-  "no": 88,
+  "no": "W13-4",
+  "seq": 88,
+  "code": "W13-4",
   "week": 13,
   "day": 4,
   "level": "intermediate",
@@ -1848,7 +2024,9 @@
   "video": null
  },
  {
-  "no": 89,
+  "no": "W13-5",
+  "seq": 89,
+  "code": "W13-5",
   "week": 13,
   "day": 5,
   "level": "intermediate",
@@ -1869,7 +2047,9 @@
   "video": null
  },
  {
-  "no": 90,
+  "no": "W13-6",
+  "seq": 90,
+  "code": "W13-6",
   "week": 13,
   "day": 6,
   "level": "intermediate",
@@ -1890,7 +2070,9 @@
   "video": null
  },
  {
-  "no": 91,
+  "no": "W13-7",
+  "seq": 91,
+  "code": "W13-7",
   "week": 13,
   "day": 7,
   "level": "intermediate",
@@ -1911,7 +2093,9 @@
   "video": null
  },
  {
-  "no": 92,
+  "no": "W14",
+  "seq": 92,
+  "code": "W14-1",
   "week": 14,
   "day": 1,
   "level": "intermediate",
@@ -1932,7 +2116,9 @@
   "video": "hangeul_w14_stickman"
  },
  {
-  "no": 93,
+  "no": "W14-2",
+  "seq": 93,
+  "code": "W14-2",
   "week": 14,
   "day": 2,
   "level": "intermediate",
@@ -1953,7 +2139,9 @@
   "video": null
  },
  {
-  "no": 94,
+  "no": "W14-3",
+  "seq": 94,
+  "code": "W14-3",
   "week": 14,
   "day": 3,
   "level": "intermediate",
@@ -1974,7 +2162,9 @@
   "video": null
  },
  {
-  "no": 95,
+  "no": "W14-4",
+  "seq": 95,
+  "code": "W14-4",
   "week": 14,
   "day": 4,
   "level": "intermediate",
@@ -1995,7 +2185,9 @@
   "video": null
  },
  {
-  "no": 96,
+  "no": "W14-5",
+  "seq": 96,
+  "code": "W14-5",
   "week": 14,
   "day": 5,
   "level": "intermediate",
@@ -2016,7 +2208,9 @@
   "video": null
  },
  {
-  "no": 97,
+  "no": "W14-6",
+  "seq": 97,
+  "code": "W14-6",
   "week": 14,
   "day": 6,
   "level": "intermediate",
@@ -2037,7 +2231,9 @@
   "video": null
  },
  {
-  "no": 98,
+  "no": "W14-7",
+  "seq": 98,
+  "code": "W14-7",
   "week": 14,
   "day": 7,
   "level": "intermediate",
@@ -2058,7 +2254,9 @@
   "video": null
  },
  {
-  "no": 99,
+  "no": "W15",
+  "seq": 99,
+  "code": "W15-1",
   "week": 15,
   "day": 1,
   "level": "intermediate",
@@ -2079,7 +2277,9 @@
   "video": "hangeul_w15_stickman"
  },
  {
-  "no": 100,
+  "no": "W15-2",
+  "seq": 100,
+  "code": "W15-2",
   "week": 15,
   "day": 2,
   "level": "intermediate",
@@ -2100,7 +2300,9 @@
   "video": null
  },
  {
-  "no": 101,
+  "no": "W15-3",
+  "seq": 101,
+  "code": "W15-3",
   "week": 15,
   "day": 3,
   "level": "intermediate",
@@ -2121,7 +2323,9 @@
   "video": null
  },
  {
-  "no": 102,
+  "no": "W15-4",
+  "seq": 102,
+  "code": "W15-4",
   "week": 15,
   "day": 4,
   "level": "intermediate",
@@ -2142,7 +2346,9 @@
   "video": null
  },
  {
-  "no": 103,
+  "no": "W15-5",
+  "seq": 103,
+  "code": "W15-5",
   "week": 15,
   "day": 5,
   "level": "intermediate",
@@ -2163,7 +2369,9 @@
   "video": null
  },
  {
-  "no": 104,
+  "no": "W15-6",
+  "seq": 104,
+  "code": "W15-6",
   "week": 15,
   "day": 6,
   "level": "intermediate",
@@ -2184,7 +2392,9 @@
   "video": null
  },
  {
-  "no": 105,
+  "no": "W15-7",
+  "seq": 105,
+  "code": "W15-7",
   "week": 15,
   "day": 7,
   "level": "intermediate",
@@ -2205,7 +2415,9 @@
   "video": null
  },
  {
-  "no": 106,
+  "no": "W16",
+  "seq": 106,
+  "code": "W16-1",
   "week": 16,
   "day": 1,
   "level": "intermediate",
@@ -2226,7 +2438,9 @@
   "video": "hangeul_w16_stickman"
  },
  {
-  "no": 107,
+  "no": "W16-2",
+  "seq": 107,
+  "code": "W16-2",
   "week": 16,
   "day": 2,
   "level": "intermediate",
@@ -2247,7 +2461,9 @@
   "video": null
  },
  {
-  "no": 108,
+  "no": "W16-3",
+  "seq": 108,
+  "code": "W16-3",
   "week": 16,
   "day": 3,
   "level": "intermediate",
@@ -2268,7 +2484,9 @@
   "video": null
  },
  {
-  "no": 109,
+  "no": "W16-4",
+  "seq": 109,
+  "code": "W16-4",
   "week": 16,
   "day": 4,
   "level": "intermediate",
@@ -2289,7 +2507,9 @@
   "video": null
  },
  {
-  "no": 110,
+  "no": "W16-5",
+  "seq": 110,
+  "code": "W16-5",
   "week": 16,
   "day": 5,
   "level": "intermediate",
@@ -2310,7 +2530,9 @@
   "video": null
  },
  {
-  "no": 111,
+  "no": "W16-6",
+  "seq": 111,
+  "code": "W16-6",
   "week": 16,
   "day": 6,
   "level": "intermediate",
@@ -2331,7 +2553,9 @@
   "video": null
  },
  {
-  "no": 112,
+  "no": "W16-7",
+  "seq": 112,
+  "code": "W16-7",
   "week": 16,
   "day": 7,
   "level": "intermediate",
@@ -2352,7 +2576,9 @@
   "video": null
  },
  {
-  "no": 113,
+  "no": "W17",
+  "seq": 113,
+  "code": "W17-1",
   "week": 17,
   "day": 1,
   "level": "advanced",
@@ -2373,7 +2599,9 @@
   "video": "hangeul_w17_stickman"
  },
  {
-  "no": 114,
+  "no": "W17-2",
+  "seq": 114,
+  "code": "W17-2",
   "week": 17,
   "day": 2,
   "level": "advanced",
@@ -2394,7 +2622,9 @@
   "video": null
  },
  {
-  "no": 115,
+  "no": "W17-3",
+  "seq": 115,
+  "code": "W17-3",
   "week": 17,
   "day": 3,
   "level": "advanced",
@@ -2415,7 +2645,9 @@
   "video": null
  },
  {
-  "no": 116,
+  "no": "W17-4",
+  "seq": 116,
+  "code": "W17-4",
   "week": 17,
   "day": 4,
   "level": "advanced",
@@ -2436,7 +2668,9 @@
   "video": null
  },
  {
-  "no": 117,
+  "no": "W17-5",
+  "seq": 117,
+  "code": "W17-5",
   "week": 17,
   "day": 5,
   "level": "advanced",
@@ -2457,7 +2691,9 @@
   "video": null
  },
  {
-  "no": 118,
+  "no": "W17-6",
+  "seq": 118,
+  "code": "W17-6",
   "week": 17,
   "day": 6,
   "level": "advanced",
@@ -2478,7 +2714,9 @@
   "video": null
  },
  {
-  "no": 119,
+  "no": "W17-7",
+  "seq": 119,
+  "code": "W17-7",
   "week": 17,
   "day": 7,
   "level": "advanced",
@@ -2499,7 +2737,9 @@
   "video": null
  },
  {
-  "no": 120,
+  "no": "W18",
+  "seq": 120,
+  "code": "W18-1",
   "week": 18,
   "day": 1,
   "level": "advanced",
@@ -2520,7 +2760,9 @@
   "video": "hangeul_w18_stickman"
  },
  {
-  "no": 121,
+  "no": "W18-2",
+  "seq": 121,
+  "code": "W18-2",
   "week": 18,
   "day": 2,
   "level": "advanced",
@@ -2541,7 +2783,9 @@
   "video": null
  },
  {
-  "no": 122,
+  "no": "W18-3",
+  "seq": 122,
+  "code": "W18-3",
   "week": 18,
   "day": 3,
   "level": "advanced",
@@ -2562,7 +2806,9 @@
   "video": null
  },
  {
-  "no": 123,
+  "no": "W18-4",
+  "seq": 123,
+  "code": "W18-4",
   "week": 18,
   "day": 4,
   "level": "advanced",
@@ -2583,7 +2829,9 @@
   "video": null
  },
  {
-  "no": 124,
+  "no": "W18-5",
+  "seq": 124,
+  "code": "W18-5",
   "week": 18,
   "day": 5,
   "level": "advanced",
@@ -2604,7 +2852,9 @@
   "video": null
  },
  {
-  "no": 125,
+  "no": "W18-6",
+  "seq": 125,
+  "code": "W18-6",
   "week": 18,
   "day": 6,
   "level": "advanced",
@@ -2625,7 +2875,9 @@
   "video": null
  },
  {
-  "no": 126,
+  "no": "W18-7",
+  "seq": 126,
+  "code": "W18-7",
   "week": 18,
   "day": 7,
   "level": "advanced",
@@ -2646,7 +2898,9 @@
   "video": null
  },
  {
-  "no": 127,
+  "no": "W19",
+  "seq": 127,
+  "code": "W19-1",
   "week": 19,
   "day": 1,
   "level": "advanced",
@@ -2667,7 +2921,9 @@
   "video": "hangeul_w19_stickman"
  },
  {
-  "no": 128,
+  "no": "W19-2",
+  "seq": 128,
+  "code": "W19-2",
   "week": 19,
   "day": 2,
   "level": "advanced",
@@ -2688,7 +2944,9 @@
   "video": null
  },
  {
-  "no": 129,
+  "no": "W19-3",
+  "seq": 129,
+  "code": "W19-3",
   "week": 19,
   "day": 3,
   "level": "advanced",
@@ -2709,7 +2967,9 @@
   "video": null
  },
  {
-  "no": 130,
+  "no": "W19-4",
+  "seq": 130,
+  "code": "W19-4",
   "week": 19,
   "day": 4,
   "level": "advanced",
@@ -2730,7 +2990,9 @@
   "video": null
  },
  {
-  "no": 131,
+  "no": "W19-5",
+  "seq": 131,
+  "code": "W19-5",
   "week": 19,
   "day": 5,
   "level": "advanced",
@@ -2751,7 +3013,9 @@
   "video": null
  },
  {
-  "no": 132,
+  "no": "W19-6",
+  "seq": 132,
+  "code": "W19-6",
   "week": 19,
   "day": 6,
   "level": "advanced",
@@ -2772,7 +3036,9 @@
   "video": null
  },
  {
-  "no": 133,
+  "no": "W19-7",
+  "seq": 133,
+  "code": "W19-7",
   "week": 19,
   "day": 7,
   "level": "advanced",
@@ -2793,7 +3059,9 @@
   "video": null
  },
  {
-  "no": 134,
+  "no": "W20",
+  "seq": 134,
+  "code": "W20-1",
   "week": 20,
   "day": 1,
   "level": "advanced",
@@ -2814,7 +3082,9 @@
   "video": "hangeul_w20_stickman"
  },
  {
-  "no": 135,
+  "no": "W20-2",
+  "seq": 135,
+  "code": "W20-2",
   "week": 20,
   "day": 2,
   "level": "advanced",
@@ -2835,7 +3105,9 @@
   "video": null
  },
  {
-  "no": 136,
+  "no": "W20-3",
+  "seq": 136,
+  "code": "W20-3",
   "week": 20,
   "day": 3,
   "level": "advanced",
@@ -2856,7 +3128,9 @@
   "video": null
  },
  {
-  "no": 137,
+  "no": "W20-4",
+  "seq": 137,
+  "code": "W20-4",
   "week": 20,
   "day": 4,
   "level": "advanced",
@@ -2877,7 +3151,9 @@
   "video": null
  },
  {
-  "no": 138,
+  "no": "W20-5",
+  "seq": 138,
+  "code": "W20-5",
   "week": 20,
   "day": 5,
   "level": "advanced",
@@ -2898,7 +3174,9 @@
   "video": null
  },
  {
-  "no": 139,
+  "no": "W20-6",
+  "seq": 139,
+  "code": "W20-6",
   "week": 20,
   "day": 6,
   "level": "advanced",
@@ -2919,7 +3197,9 @@
   "video": null
  },
  {
-  "no": 140,
+  "no": "W20-7",
+  "seq": 140,
+  "code": "W20-7",
   "week": 20,
   "day": 7,
   "level": "advanced",
@@ -2940,7 +3220,9 @@
   "video": null
  },
  {
-  "no": 141,
+  "no": "W21",
+  "seq": 141,
+  "code": "W21-1",
   "week": 21,
   "day": 1,
   "level": "advanced",
@@ -2961,7 +3243,9 @@
   "video": "hangeul_w21_stickman"
  },
  {
-  "no": 142,
+  "no": "W21-2",
+  "seq": 142,
+  "code": "W21-2",
   "week": 21,
   "day": 2,
   "level": "advanced",
@@ -2982,7 +3266,9 @@
   "video": null
  },
  {
-  "no": 143,
+  "no": "W21-3",
+  "seq": 143,
+  "code": "W21-3",
   "week": 21,
   "day": 3,
   "level": "advanced",
@@ -3003,7 +3289,9 @@
   "video": null
  },
  {
-  "no": 144,
+  "no": "W21-4",
+  "seq": 144,
+  "code": "W21-4",
   "week": 21,
   "day": 4,
   "level": "advanced",
@@ -3024,7 +3312,9 @@
   "video": null
  },
  {
-  "no": 145,
+  "no": "W21-5",
+  "seq": 145,
+  "code": "W21-5",
   "week": 21,
   "day": 5,
   "level": "advanced",
@@ -3045,7 +3335,9 @@
   "video": null
  },
  {
-  "no": 146,
+  "no": "W21-6",
+  "seq": 146,
+  "code": "W21-6",
   "week": 21,
   "day": 6,
   "level": "advanced",
@@ -3066,7 +3358,9 @@
   "video": null
  },
  {
-  "no": 147,
+  "no": "W21-7",
+  "seq": 147,
+  "code": "W21-7",
   "week": 21,
   "day": 7,
   "level": "advanced",
@@ -3087,7 +3381,9 @@
   "video": null
  },
  {
-  "no": 148,
+  "no": "W22",
+  "seq": 148,
+  "code": "W22-1",
   "week": 22,
   "day": 1,
   "level": "advanced",
@@ -3108,7 +3404,9 @@
   "video": "hangeul_w22_stickman"
  },
  {
-  "no": 149,
+  "no": "W22-2",
+  "seq": 149,
+  "code": "W22-2",
   "week": 22,
   "day": 2,
   "level": "advanced",
@@ -3129,7 +3427,9 @@
   "video": null
  },
  {
-  "no": 150,
+  "no": "W22-3",
+  "seq": 150,
+  "code": "W22-3",
   "week": 22,
   "day": 3,
   "level": "advanced",
@@ -3150,7 +3450,9 @@
   "video": null
  },
  {
-  "no": 151,
+  "no": "W22-4",
+  "seq": 151,
+  "code": "W22-4",
   "week": 22,
   "day": 4,
   "level": "advanced",
@@ -3171,7 +3473,9 @@
   "video": null
  },
  {
-  "no": 152,
+  "no": "W22-5",
+  "seq": 152,
+  "code": "W22-5",
   "week": 22,
   "day": 5,
   "level": "advanced",
@@ -3192,7 +3496,9 @@
   "video": null
  },
  {
-  "no": 153,
+  "no": "W22-6",
+  "seq": 153,
+  "code": "W22-6",
   "week": 22,
   "day": 6,
   "level": "advanced",
@@ -3213,7 +3519,9 @@
   "video": null
  },
  {
-  "no": 154,
+  "no": "W22-7",
+  "seq": 154,
+  "code": "W22-7",
   "week": 22,
   "day": 7,
   "level": "advanced",
@@ -3234,7 +3542,9 @@
   "video": null
  },
  {
-  "no": 155,
+  "no": "W23",
+  "seq": 155,
+  "code": "W23-1",
   "week": 23,
   "day": 1,
   "level": "advanced",
@@ -3255,7 +3565,9 @@
   "video": "hangeul_w23_stickman"
  },
  {
-  "no": 156,
+  "no": "W23-2",
+  "seq": 156,
+  "code": "W23-2",
   "week": 23,
   "day": 2,
   "level": "advanced",
@@ -3276,7 +3588,9 @@
   "video": null
  },
  {
-  "no": 157,
+  "no": "W23-3",
+  "seq": 157,
+  "code": "W23-3",
   "week": 23,
   "day": 3,
   "level": "advanced",
@@ -3297,7 +3611,9 @@
   "video": null
  },
  {
-  "no": 158,
+  "no": "W23-4",
+  "seq": 158,
+  "code": "W23-4",
   "week": 23,
   "day": 4,
   "level": "advanced",
@@ -3318,7 +3634,9 @@
   "video": null
  },
  {
-  "no": 159,
+  "no": "W23-5",
+  "seq": 159,
+  "code": "W23-5",
   "week": 23,
   "day": 5,
   "level": "advanced",
@@ -3339,7 +3657,9 @@
   "video": null
  },
  {
-  "no": 160,
+  "no": "W23-6",
+  "seq": 160,
+  "code": "W23-6",
   "week": 23,
   "day": 6,
   "level": "advanced",
@@ -3360,7 +3680,9 @@
   "video": null
  },
  {
-  "no": 161,
+  "no": "W23-7",
+  "seq": 161,
+  "code": "W23-7",
   "week": 23,
   "day": 7,
   "level": "advanced",
@@ -3381,7 +3703,9 @@
   "video": null
  },
  {
-  "no": 162,
+  "no": "W24",
+  "seq": 162,
+  "code": "W24-1",
   "week": 24,
   "day": 1,
   "level": "advanced",
@@ -3402,7 +3726,9 @@
   "video": "hangeul_w24_stickman"
  },
  {
-  "no": 163,
+  "no": "W24-2",
+  "seq": 163,
+  "code": "W24-2",
   "week": 24,
   "day": 2,
   "level": "advanced",
@@ -3423,7 +3749,9 @@
   "video": null
  },
  {
-  "no": 164,
+  "no": "W24-3",
+  "seq": 164,
+  "code": "W24-3",
   "week": 24,
   "day": 3,
   "level": "advanced",
@@ -3444,7 +3772,9 @@
   "video": null
  },
  {
-  "no": 165,
+  "no": "W24-4",
+  "seq": 165,
+  "code": "W24-4",
   "week": 24,
   "day": 4,
   "level": "advanced",
@@ -3465,7 +3795,9 @@
   "video": null
  },
  {
-  "no": 166,
+  "no": "W24-5",
+  "seq": 166,
+  "code": "W24-5",
   "week": 24,
   "day": 5,
   "level": "advanced",
@@ -3486,7 +3818,9 @@
   "video": null
  },
  {
-  "no": 167,
+  "no": "W24-6",
+  "seq": 167,
+  "code": "W24-6",
   "week": 24,
   "day": 6,
   "level": "advanced",
@@ -3507,7 +3841,9 @@
   "video": null
  },
  {
-  "no": 168,
+  "no": "W24-7",
+  "seq": 168,
+  "code": "W24-7",
   "week": 24,
   "day": 7,
   "level": "advanced",

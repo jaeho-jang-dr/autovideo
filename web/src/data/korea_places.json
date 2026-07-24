@@ -40,7 +40,7 @@
   "directions_ko": "한강공원 및 야시장으로 가는 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Han%20River%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://hangang.seoul.go.kr/",
-  "image_url": "/images/han_river_1.png",
+  "image_url": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&auto=format&fit=crop&q=80&idx=2",
   "lesson_week": 2,
   "lesson_day": 1,
   "lesson_label": "2-1"
@@ -224,7 +224,7 @@
   "directions_ko": "광안리 및 광안대교로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gwangalli%20%26%20Diamond%20Bridge%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=10",
   "lesson_week": 10,
   "lesson_day": 1,
   "lesson_label": "10-1"
@@ -247,7 +247,7 @@
   "directions_ko": "감천문화마을로 가는 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gamcheon%20Culture%20Village%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Gamcheon_Houses%2C_2024.jpg/960px-Gamcheon_Houses%2C_2024.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=11",
   "lesson_week": 11,
   "lesson_day": 1,
   "lesson_label": "11-1"
@@ -316,7 +316,7 @@
   "directions_ko": "협재해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Hyeopjae%20Beach%2C%20Jeju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Eulwangri_Beach%2C_near_Incheon_Airport.jpg/960px-Eulwangri_Beach%2C_near_Incheon_Airport.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=14",
   "lesson_week": 14,
   "lesson_day": 1,
   "lesson_label": "14-1"
@@ -385,7 +385,7 @@
   "directions_ko": "불국사로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Bulguksa%20Temple%2C%20Gyeongju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Lotus_Flower_Bridge_and_Seven_Treasure_Bridge_at_Bulguksa_in_Gyeongju%2C_Korea.jpg/960px-Lotus_Flower_Bridge_and_Seven_Treasure_Bridge_at_Bulguksa_in_Gyeongju%2C_Korea.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=17",
   "lesson_week": 17,
   "lesson_day": 1,
   "lesson_label": "17-1"
@@ -408,7 +408,7 @@
   "directions_ko": "전주역에서 출발하는 경우, '전주역 첫마중길 정류장'에서 저상버스 119번을 타고 이동하여 '전동성당.한옥마을' 또는 '동부시장' 정류장에서 하차하시면 편리합니다 [12, 14].",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Jeonju%20Hanok%20Village%2C%20Jeonju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=18",
   "lesson_week": 18,
   "lesson_day": 1,
   "lesson_label": "18-1"
@@ -431,7 +431,7 @@
   "directions_ko": "설악산으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Seoraksan%2C%20Gangwon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Dinosaur_Ridge_of_Seoraksan.jpg/960px-Dinosaur_Ridge_of_Seoraksan.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=19",
   "lesson_week": 19,
   "lesson_day": 1,
   "lesson_label": "19-1"
@@ -477,7 +477,7 @@
   "directions_ko": "성수동으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Seongsu-dong%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Evening_street_in_Seongsu-dong.jpg/960px-Evening_street_in_Seongsu-dong.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=21",
   "lesson_week": 21,
   "lesson_day": 1,
   "lesson_label": "21-1"
@@ -523,7 +523,7 @@
   "directions_ko": "에버랜드로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Everland%2C%20Gyeonggi%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/T_Express_Everland_Resort.jpg/960px-T_Express_Everland_Resort.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=23",
   "lesson_week": 23,
   "lesson_day": 1,
   "lesson_label": "23-1"
@@ -569,7 +569,7 @@
   "directions_ko": "광화문광장으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gwanghwamun%20Square%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Nightview_of_the_Gwanghwamun_Square_2024.jpg/960px-Nightview_of_the_Gwanghwamun_Square_2024.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=25",
   "lesson_week": 1,
   "lesson_day": 2,
   "lesson_label": "1-2"
@@ -592,7 +592,7 @@
   "directions_ko": "청계천으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Cheonggyecheon%20Stream%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Cheonggyecheon_stream_at_sunrise_with_trees_in_Seoul.jpg/960px-Cheonggyecheon_stream_at_sunrise_with_trees_in_Seoul.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=26",
   "lesson_week": 1,
   "lesson_day": 3,
   "lesson_label": "1-3"
@@ -661,7 +661,7 @@
   "directions_ko": "첨성대로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Cheomseongdae%2C%20Gyeongju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Cheomseongdae_Observatory_under_blue_sky_in_Gyeongju_South_Korea.jpg/960px-Cheomseongdae_Observatory_under_blue_sky_in_Gyeongju_South_Korea.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=29",
   "lesson_week": 1,
   "lesson_day": 6,
   "lesson_label": "1-6"
@@ -684,7 +684,7 @@
   "directions_ko": "동궁과 월지로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Donggung%20%26%20Wolji%20Pond%2C%20Gyeongju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Water_reflection_of_Donggung_Palace_in_Wolji_Pond_at_blue_hour_in_Gyeongju_South_Korea.jpg/960px-Water_reflection_of_Donggung_Palace_in_Wolji_Pond_at_blue_hour_in_Gyeongju_South_Korea.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=30",
   "lesson_week": 1,
   "lesson_day": 7,
   "lesson_label": "1-7"
@@ -983,7 +983,7 @@
   "directions_ko": "을지로(힙지로)로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Euljiro%20%28Hipjiro%29%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=43",
   "lesson_week": 4,
   "lesson_day": 2,
   "lesson_label": "4-2"
@@ -1029,7 +1029,7 @@
   "directions_ko": "통영 케이블카로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Tongyeong%20Cable%20Car%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Korea-Tongyeong-Collage-01.jpg/960px-Korea-Tongyeong-Collage-01.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=45",
   "lesson_week": 4,
   "lesson_day": 4,
   "lesson_label": "4-4"
@@ -1052,7 +1052,7 @@
   "directions_ko": "담양 죽녹원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Juknokwon%20Bamboo%20Forest%2C%20Jeolla%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Korea-Damyang-Hanok_in_the_Bamboo_Forest-01.jpg/960px-Korea-Damyang-Hanok_in_the_Bamboo_Forest-01.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=46",
   "lesson_week": 4,
   "lesson_day": 5,
   "lesson_label": "4-5"
@@ -1075,7 +1075,7 @@
   "directions_ko": "보성 녹차밭으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Boseong%20Green%20Tea%20Fields%2C%20Jeolla%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Korea-Boseong-Green.tea-02.jpg/960px-Korea-Boseong-Green.tea-02.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=47",
   "lesson_week": 4,
   "lesson_day": 6,
   "lesson_label": "4-6"
@@ -1098,7 +1098,7 @@
   "directions_ko": "통도사로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Tongdosa%20Temple%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Korea-Tongdosa-01.jpg/960px-Korea-Tongdosa-01.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=48",
   "lesson_week": 4,
   "lesson_day": 7,
   "lesson_label": "4-7"
@@ -1121,7 +1121,7 @@
   "directions_ko": "반포한강공원으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Banpo%20Rainbow%20Fountain%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2011%EB%85%84_11%EC%9B%94_%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EB%AA%85%EC%86%8C_%28Seoul_best_attractions%29_%EB%8B%AC%EB%B9%9B%EB%AC%B4%EC%A7%80%EA%B0%9C%EB%B6%84%EC%88%981.jpg/960px-2011%EB%85%84_11%EC%9B%94_%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EB%AA%85%EC%86%8C_%28Seoul_best_attractions%29_%EB%8B%AC%EB%B9%9B%EB%AC%B4%EC%A7%80%EA%B0%9C%EB%B6%84%EC%88%981.jpg",
+  "image_url": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&auto=format&fit=crop&q=80&idx=49",
   "lesson_week": 5,
   "lesson_day": 2,
   "lesson_label": "5-2"
@@ -1167,7 +1167,7 @@
   "directions_ko": "뚝섬한강공원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Ttukseom%20Hangang%20Park%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Hangang_Park_Overview_201604.jpg/960px-Hangang_Park_Overview_201604.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=51",
   "lesson_week": 5,
   "lesson_day": 4,
   "lesson_label": "5-4"
@@ -1190,7 +1190,7 @@
   "directions_ko": "망원한강공원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Mangwon%20Hangang%20Park%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Hangang_Park_Overview_201604.jpg/960px-Hangang_Park_Overview_201604.jpg",
+  "image_url": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1000&auto=format&fit=crop&q=80&place=52",
   "lesson_week": 5,
   "lesson_day": 5,
   "lesson_label": "5-5"
@@ -1213,7 +1213,7 @@
   "directions_ko": "올림픽공원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Olympic%20Park%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/960px-Flag_of_South_Korea.svg.png",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=53",
   "lesson_week": 5,
   "lesson_day": 6,
   "lesson_label": "5-6"
@@ -1236,7 +1236,7 @@
   "directions_ko": "서울숲으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Seoul%20Forest%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/f/f5/SeoulForest.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=54",
   "lesson_week": 5,
   "lesson_day": 7,
   "lesson_label": "5-7"
@@ -1259,7 +1259,7 @@
   "directions_ko": "남산골한옥마을로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Namsangol%20Hanok%20Village%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/b/b8/Korea-Seoul-Namsangol-01.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=55",
   "lesson_week": 6,
   "lesson_day": 2,
   "lesson_label": "6-2"
@@ -1282,7 +1282,7 @@
   "directions_ko": "북한산으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Bukhansan%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Bukhansan_%28%EB%B6%81%ED%95%9C%EC%82%B0%29.jpg/960px-Bukhansan_%28%EB%B6%81%ED%95%9C%EC%82%B0%29.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=56",
   "lesson_week": 6,
   "lesson_day": 3,
   "lesson_label": "6-3"
@@ -1305,7 +1305,7 @@
   "directions_ko": "낙산공원 성곽길로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Naksan%20Park%20City%20Wall%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/%ED%95%9C%EC%96%91%EB%8F%84%EC%84%B1%EB%82%99%EC%82%B0%EA%B5%AC%EA%B0%84.jpg/960px-%ED%95%9C%EC%96%91%EB%8F%84%EC%84%B1%EB%82%99%EC%82%B0%EA%B5%AC%EA%B0%84.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=57",
   "lesson_week": 6,
   "lesson_day": 4,
   "lesson_label": "6-4"
@@ -1328,7 +1328,7 @@
   "directions_ko": "경의선숲길로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gyeongui%20Line%20Forest%20Park%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Gyeonguiseon_Forest_Trail_Park_and_Ttaeng-ttaeng_Street_in_Seoul_%28near_Hongdae%2C_1%29.jpg/960px-Gyeonguiseon_Forest_Trail_Park_and_Ttaeng-ttaeng_Street_in_Seoul_%28near_Hongdae%2C_1%29.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=58",
   "lesson_week": 6,
   "lesson_day": 5,
   "lesson_label": "6-5"
@@ -1351,7 +1351,7 @@
   "directions_ko": "코엑스 별마당도서관으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Starfield%20Library%20COEX%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/%EB%B3%84%EB%A7%88%EB%8B%B9.jpg/960px-%EB%B3%84%EB%A7%88%EB%8B%B9.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=59",
   "lesson_week": 6,
   "lesson_day": 6,
   "lesson_label": "6-6"
@@ -1374,7 +1374,7 @@
   "directions_ko": "삼청동으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Samcheong-dong%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Seoul-Samcheong.dong-01.jpg/960px-Seoul-Samcheong.dong-01.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=60",
   "lesson_week": 6,
   "lesson_day": 7,
   "lesson_label": "6-7"
@@ -1397,7 +1397,7 @@
   "directions_ko": "대학로로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Daehangno%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Seoul_daehangno.JPG/960px-Seoul_daehangno.JPG",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=61",
   "lesson_week": 7,
   "lesson_day": 2,
   "lesson_label": "7-2"
@@ -1420,7 +1420,7 @@
   "directions_ko": "노량진수산시장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Noryangjin%20Fish%20Market%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Korea-Seoul-Noryangjin_Fish_Market-03.jpg/960px-Korea-Seoul-Noryangjin_Fish_Market-03.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=62",
   "lesson_week": 7,
   "lesson_day": 3,
   "lesson_label": "7-3"
@@ -1443,7 +1443,7 @@
   "directions_ko": "통인시장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Tongin%20Market%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/4/40/Tongin_Market_2018-06-17-18-28-59.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=63",
   "lesson_week": 7,
   "lesson_day": 4,
   "lesson_label": "7-4"
@@ -1466,7 +1466,7 @@
   "directions_ko": "한남동으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Hannam-dong%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Hannamdong-yongsangu.png/960px-Hannamdong-yongsangu.png",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=64",
   "lesson_week": 7,
   "lesson_day": 5,
   "lesson_label": "7-5"
@@ -1489,7 +1489,7 @@
   "directions_ko": "석촌호수로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Seokchon%20Lake%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Lotte_World_day_view_10.jpg/960px-Lotte_World_day_view_10.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=65",
   "lesson_week": 7,
   "lesson_day": 6,
   "lesson_label": "7-6"
@@ -1512,7 +1512,7 @@
   "directions_ko": "임진각 DMZ로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Imjingak%20DMZ%2C%20Gyeonggi%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Imjingak_001.jpg/960px-Imjingak_001.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=66",
   "lesson_week": 7,
   "lesson_day": 7,
   "lesson_label": "7-7"
@@ -1581,7 +1581,7 @@
   "directions_ko": "송도해상케이블카로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Songdo%20Marine%20Cable%20Car%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=69",
   "lesson_week": 8,
   "lesson_day": 4,
   "lesson_label": "8-4"
@@ -1627,7 +1627,7 @@
   "directions_ko": "국제시장 및 BIFF 광장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gukje%20Market%20%26%20BIFF%20Square%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=71",
   "lesson_week": 8,
   "lesson_day": 6,
   "lesson_label": "8-6"
@@ -1696,7 +1696,7 @@
   "directions_ko": "부산타워 및 용두산공원으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Busan%20Tower%20Yongdusan%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Busan_Tower_and_Yongdusan_Park_20200522_003.jpg/960px-Busan_Tower_and_Yongdusan_Park_20200522_003.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=74",
   "lesson_week": 9,
   "lesson_day": 3,
   "lesson_label": "9-3"
@@ -1765,7 +1765,7 @@
   "directions_ko": "개인 차량이나 택시를 이용할 경우 제주국제공항에서 동쪽으로 약 40분 정도 주행하면 도착할 수 있습니다. 대중교통으로 가려면 제주시외버스터미널에서 출발하는 810번 버스를 타면 만장굴 입구 정류장까지 편리하게 한 번에 이동하실 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Manjanggul%20Cave%2C%20Jeju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Manjanggul_lava_column%2C_largest_in_the_world.jpg/960px-Manjanggul_lava_column%2C_largest_in_the_world.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=77",
   "lesson_week": 9,
   "lesson_day": 6,
   "lesson_label": "9-6"
@@ -1857,7 +1857,7 @@
   "directions_ko": "오설록 티뮤지엄으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Osulloc%20Tea%20Museum%2C%20Jeju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=81",
   "lesson_week": 10,
   "lesson_day": 4,
   "lesson_label": "10-4"
@@ -1880,7 +1880,7 @@
   "directions_ko": "비자림으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Bijarim%20Forest%2C%20Jeju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Gotjawal_Forest.jpg/960px-Gotjawal_Forest.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=82",
   "lesson_week": 10,
   "lesson_day": 5,
   "lesson_label": "10-5"
@@ -1903,7 +1903,7 @@
   "directions_ko": "새별오름으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Saebyeol%20Oreum%2C%20Jeju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/%EC%83%88%EB%B3%84%EC%98%A4%EB%A6%84.jpg/960px-%EC%83%88%EB%B3%84%EC%98%A4%EB%A6%84.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=83",
   "lesson_week": 10,
   "lesson_day": 6,
   "lesson_label": "10-6"
@@ -1926,7 +1926,7 @@
   "directions_ko": "함덕해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Hamdeok%20Beach%2C%20Jeju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Hamdeok_Beach_May_2026_04.jpg/960px-Hamdeok_Beach_May_2026_04.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=84",
   "lesson_week": 10,
   "lesson_day": 7,
   "lesson_label": "10-7"
@@ -1949,7 +1949,7 @@
   "directions_ko": "석굴암으로 가는 구체적인 대중교통이나 주행 경로는 소스에 상세히 나와 있지 않으나, 신분증을 소지한 경주시민의 경우 인근 석굴암 주차장을 무료로 이용할 수 있는 혜택이 주어집니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Seokguram%20Grotto%2C%20Gyeongju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Front_view_of_Seokguram_from_front_chamber.jpg/960px-Front_view_of_Seokguram_from_front_chamber.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=85",
   "lesson_week": 11,
   "lesson_day": 2,
   "lesson_label": "11-2"
@@ -1972,7 +1972,7 @@
   "directions_ko": "월영교로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Woryeonggyo%20Bridge%2C%20Andong%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=86",
   "lesson_week": 11,
   "lesson_day": 3,
   "lesson_label": "11-3"
@@ -1995,7 +1995,7 @@
   "directions_ko": "부석사로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Buseoksa%20Temple%2C%20Gyeongbuk%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/%EB%B6%80%EC%84%9D%EC%82%AC_%EB%AC%B4%EB%9F%89%EC%88%98%EC%A0%84.jpg/960px-%EB%B6%80%EC%84%9D%EC%82%AC_%EB%AC%B4%EB%9F%89%EC%88%98%EC%A0%84.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=87",
   "lesson_week": 11,
   "lesson_day": 4,
   "lesson_label": "11-4"
@@ -2018,7 +2018,7 @@
   "directions_ko": "양동마을로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Yangdong%20Village%2C%20Gyeongju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Yangdong_Village_02.jpg/960px-Yangdong_Village_02.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=88",
   "lesson_week": 11,
   "lesson_day": 5,
   "lesson_label": "11-5"
@@ -2041,7 +2041,7 @@
   "directions_ko": "문경새재로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Mungyeong%20Saejae%2C%20Gyeongbuk%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Saejae_third_gate_backside.jpg/960px-Saejae_third_gate_backside.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=89",
   "lesson_week": 11,
   "lesson_day": 6,
   "lesson_label": "11-6"
@@ -2064,7 +2064,7 @@
   "directions_ko": "대중교통을 이용하는 경우 시내버스 3-2, 5-2, 12, 20, 23, 24, 25번 등을 타고 '전동성당.한옥마을' 정류장에서 하차하면 도보로 약 5분 거리에 경기전 정문이 있습니다. 개인 차량으로 방문할 때는 한옥마을 공영주차장을 이용하거나, 인근의 남부시장 주차장(1시간에 1,200원 상당)에 편리하게 주차할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gyeonggijeon%20Shrine%2C%20Jeonju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=90",
   "lesson_week": 11,
   "lesson_day": 7,
   "lesson_label": "11-7"
@@ -2087,7 +2087,7 @@
   "directions_ko": "KTX 전주역에서 출발할 경우, 역사 앞 정류장에서 119번 또는 535번 버스를 타고 기린대로 병무청 정류장에서 하차하십시오. 정류장에서 한옥마을 방면 육교를 건넌 뒤 가파른 언덕길 안내판을 따라 도보로 약 5분 정도 올라가면 벽화마을 입구에 도달할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Jaman%20Mural%20Village%2C%20Jeonju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Naina_Devi%2C_Himachal_Pardesh_%2817%29.jpg/960px-Naina_Devi%2C_Himachal_Pardesh_%2817%29.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=91",
   "lesson_week": 12,
   "lesson_day": 2,
   "lesson_label": "12-2"
@@ -2110,7 +2110,7 @@
   "directions_ko": "서울 센트럴시티 터미널에서 공주종합버스터미널행 고속버스를 이용하십시오. 터미널 하차 후 101번, 108번 또는 125번 시내버스를 타고 금강철교를 건너 공산성 정류장에서 내리면 성벽 매표소 입구에 바로 도달할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gongsanseong%20Fortress%2C%20Chungcheong%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/%EA%B3%B5%EC%82%B0%EC%84%B1%EC%9D%98_%EA%B0%80%EC%9D%84_%ED%95%98%EB%8A%98.jpg/960px-%EA%B3%B5%EC%82%B0%EC%84%B1%EC%9D%98_%EA%B0%80%EC%9D%84_%ED%95%98%EB%8A%98.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=92",
   "lesson_week": 12,
   "lesson_day": 3,
   "lesson_label": "12-3"
@@ -2133,7 +2133,7 @@
   "directions_ko": "부여시외버스터미널에서 하차한 후, 남쪽 방향의 서동공원(궁남지) 이정표를 따라 도보로 약 15분 정도 걸어가거나, 시내 택시를 이용하면 기본요금으로 약 5분 안에 편안하게 도착할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gungnamji%20Pond%2C%20Chungcheong%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/%EA%B0%80%EC%9D%84%EC%98%B7%EC%9D%84_%EC%9E%85%EC%9D%80_%ED%96%A5%EC%9B%90%EC%A0%95.jpg/960px-%EA%B0%80%EC%9D%84%EC%98%B7%EC%9D%84_%EC%9E%85%EC%9D%80_%ED%96%A5%EC%9B%90%EC%A0%95.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=93",
   "lesson_week": 12,
   "lesson_day": 4,
   "lesson_label": "12-4"
@@ -2156,7 +2156,7 @@
   "directions_ko": "KTX 대전역에서 하차하여 1번 출구로 나온 뒤 은행동 으능정이 문화의 거리 방향으로 도보로 약 10~15분 정도 걷거나, 대전 도시철도 1호선으로 환승하여 중앙로역 2번 출구로 나와 도보로 약 100미터 이동하면 쉽게 만날 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Daejeon%20Sungsimdang%2C%20Chungcheong%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sungsimdang_2019.jpg/960px-Sungsimdang_2019.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=94",
   "lesson_week": 12,
   "lesson_day": 5,
   "lesson_label": "12-5"
@@ -2179,7 +2179,7 @@
   "directions_ko": "KTX 단양역에서 하차한 후 역 앞 버스 정류장에서 401번, 402번 또는 403번 시내버스를 탑승하십시오. 약 15~20분 정도 이동하여 도담삼봉 주차장 정류장에서 하차하면 바로 명소에 도착할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Dodamsambong%2C%20Chungcheong%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/%EA%B0%80%EC%9D%84%EC%98%B7%EC%9D%84_%EC%9E%85%EC%9D%80_%ED%96%A5%EC%9B%90%EC%A0%95.jpg/960px-%EA%B0%80%EC%9D%84%EC%98%B7%EC%9D%84_%EC%9E%85%EC%9D%80_%ED%96%A5%EC%9B%90%EC%A0%95.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=95",
   "lesson_week": 12,
   "lesson_day": 6,
   "lesson_label": "12-6"
@@ -2202,7 +2202,7 @@
   "directions_ko": "단양시외버스터미널에서 404번 또는 406번 버스를 타고 만천하스카이워크 매표소 정류장에서 하차하십시오. 또는 단양역이나 시내에서 출발하여 기암절벽을 따라 놓인 단양강 잔도길을 걸어 들어가면 스카이워크 매표소까지 도보로 이어지는 동선이 마련되어 있습니다 [8].",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Mancheonha%20Skywalk%2C%20Chungcheong%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=96",
   "lesson_week": 12,
   "lesson_day": 7,
   "lesson_label": "12-7"
@@ -2225,7 +2225,7 @@
   "directions_ko": "KTX 강릉역에서 하차한 후 역 광장 앞 정류장에서 202번 시내버스를 탑승하십시오. 약 20분간 이동하여 경포대 정류장 또는 경포해변 종점 정류장에서 하차하면 탁 트인 호수와 넓은 해변에 바로 도착할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gyeongpodae%20%26%20Gyeongpo%20Beach%2C%20Gangwon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Gyeongpo_Lake_20220502_001.jpg/960px-Gyeongpo_Lake_20220502_001.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=97",
   "lesson_week": 13,
   "lesson_day": 2,
   "lesson_label": "13-2"
@@ -2271,7 +2271,7 @@
   "directions_ko": "KTX 강릉역에서 영동선 누리로 기차를 탑승하면 단 15분 만에 정동진역 승강장에 도착할 수 있어 대중교통 이용 시 가장 편리합니다. 시내버스를 이용할 경우에는 강릉 시내에서 112번 또는 109번 버스를 타고 정동진역 정류장에서 하차하십시오.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Jeongdongjin%2C%20Gangwon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=99",
   "lesson_week": 13,
   "lesson_day": 4,
   "lesson_label": "13-4"
@@ -2294,7 +2294,7 @@
   "directions_ko": "속초시외버스터미널에서 하차한 뒤 역사 앞 정류장에서 1번, 3번 또는 9번 시내버스를 이용하십시오. 약 10분 정도 이동하여 속초관광수산시장 정류장에서 내리면 대형 주차장과 연결된 시장 입구로 바로 진입할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Sokcho%20Jungang%20Market%2C%20Gangwon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=100",
   "lesson_week": 13,
   "lesson_day": 5,
   "lesson_label": "13-5"
@@ -2317,7 +2317,7 @@
   "directions_ko": "서울역이나 청량리역에서 KTX를 타고 진부역에서 하차하십시오. 진부역에서 시내버스나 택시를 이용해 횡계시외버스정류장으로 이동한 뒤, 대관령 양떼목장 행 시내버스(횡계-대관령 노선)를 탑승하거나 택시를 타면 약 10분 만에 목장 매표소 입구에 도착할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Daegwallyeong%20Sheep%20Farm%2C%20Gangwon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=101",
   "lesson_week": 13,
   "lesson_day": 6,
   "lesson_label": "13-6"
@@ -2340,7 +2340,7 @@
   "directions_ko": "서울역에서 KTX를 타고 진부역에서 하차하십시오. 진부역 앞 버스 정류장에서 오대산(월정사) 방면으로 운행하는 34번 또는 34-1번 시내버스를 탑승하여 월정사 정류장에서 내리면 전나무숲길 입구에 바로 도착할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Woljeongsa%20Fir%20Forest%2C%20Gangwon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/c/c5/%EC%9B%94%EC%A0%95%EC%82%AC1.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=102",
   "lesson_week": 13,
   "lesson_day": 7,
   "lesson_label": "13-7"
@@ -2363,7 +2363,7 @@
   "directions_ko": "동서울종합터미널에서 정선시외버스터미널행 시외버스를 이용하거나, KTX 강릉역에서 정선행 버스로 환승하십시오. 정선터미널에 도착한 후 구절리역 방면으로 가는 시내버스를 탑승하면 레일바이크 매표소이자 출발지인 구절리역 승강장에 도달할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Jeongseon%20Rail%20Bike%2C%20Gangwon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=103",
   "lesson_week": 14,
   "lesson_day": 2,
   "lesson_label": "14-2"
@@ -2386,7 +2386,7 @@
   "directions_ko": "ITX-청춘 열차나 경춘선 전철을 탑승하여 춘천역에서 하차하십시오. 1번 출구로 나와 도보로 약 10~15분 정도 직진하거나 택시로 5분 정도 이동하면 입구에 황금 닭 동상이 세워져 있는 춘천 명동 닭갈비골목 초입에 쉽게 도착할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Chuncheon%20Dakgalbi%20Alley%2C%20Gangwon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chuncheon-01.jpg/960px-Chuncheon-01.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=104",
   "lesson_week": 14,
   "lesson_day": 3,
   "lesson_label": "14-3"
@@ -2409,7 +2409,7 @@
   "directions_ko": "서울고속버스터미널 또는 동서울터미널에서 양양시외종합터미널행 우등버스를 탑승하십시오. 터미널 하차 후 하조대 방면 12번 시내버스를 타거나, 택시로 약 10분 정도 이동하여 하조대 해변 옆에 위치한 서피비치 입구에서 내리면 됩니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Yangyang%20Surfyy%20Beach%2C%20Gangwon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Naksan_Temple.jpg/960px-Naksan_Temple.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=105",
   "lesson_week": 14,
   "lesson_day": 4,
   "lesson_label": "14-4"
@@ -2432,7 +2432,7 @@
   "directions_ko": "동서울터미널에서 인제시외버스터미널행 버스를 탑승하십시오. 터미널 하차 후 원대리 방면으로 가는 농어촌 시내버스를 이용하거나, 택시를 타고 약 15분 정도 이동하면 등산로가 시작되는 자작나무숲 안내소 주차장에 편안하게 도착할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Inje%20Birch%20Forest%2C%20Gangwon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=106",
   "lesson_week": 14,
   "lesson_day": 5,
   "lesson_label": "14-5"
@@ -2455,7 +2455,7 @@
   "directions_ko": "KTX 여수엑스포역에서 하차하여 역 앞 정류장에서 2번, 111번 또는 999번 시내버스를 탑승하십시오. 약 10~15분 정도 이동하여 돌산대교(돌산공원) 정류장에서 하차한 뒤 언덕 위 돌산공원 주차장에 위치한 케이블카 탑승장 방향으로 도보로 걸어 올라가면 됩니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Yeosu%20Cable%20Car%2C%20Jeolla%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yeosu_Maritime_Cable_Car_View.jpg/960px-Yeosu_Maritime_Cable_Car_View.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=107",
   "lesson_week": 14,
   "lesson_day": 6,
   "lesson_label": "14-6"
@@ -2478,7 +2478,7 @@
   "directions_ko": "KTX 순천역에서 하차하여 역 광장 앞 버스 정류장에서 66번 시내버스를 이용하십시오. 약 20~25분 정도 이동하면 순천만습지(구 순천만자연생태공원) 전용 주차장 종점에 직통으로 편리하게 도착할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Suncheonman%20Wetland%2C%20Jeolla%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/View_of_Suncheon.jpg/960px-View_of_Suncheon.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=108",
   "lesson_week": 14,
   "lesson_day": 7,
   "lesson_label": "14-7"
@@ -2501,7 +2501,7 @@
   "directions_ko": "광주종합버스터미널(유스퀘어)에서 담양행 311번 또는 311-1번 시내버스를 이용하십시오. 약 40분 정도 탑승한 후 담양 메타세쿼이아길 정류장에서 하차하면, 아름다운 가로수길 매표소 입구에 바로 도달할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Metasequoia%20Road%2C%20Jeolla%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Korea-Damyang-Hanok_in_the_Bamboo_Forest-01.jpg/960px-Korea-Damyang-Hanok_in_the_Bamboo_Forest-01.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=109",
   "lesson_week": 15,
   "lesson_day": 2,
   "lesson_label": "15-2"
@@ -2524,7 +2524,7 @@
   "directions_ko": "서울고속버스터미널에서 통영종합버스터미널행 고속버스를 이용하십시오. 터미널 하차 후 역 앞 버스 정류장에서 101번, 141번 또는 301번 시내버스를 타고 중앙시장(강구안) 정류장에서 내린 뒤, 이순신 광장 맞은편 경사로를 따라 약 5분 정도 도보로 이동하면 동피랑마을 입구에 도달할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Dongpirang%20Mural%20Village%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=110",
   "lesson_week": 15,
   "lesson_day": 3,
   "lesson_label": "15-3"
@@ -2547,7 +2547,7 @@
   "directions_ko": "제공된 소스에는 외도 보타니아로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Oedo%20Botania%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=111",
   "lesson_week": 15,
   "lesson_day": 4,
   "lesson_label": "15-4"
@@ -2570,7 +2570,7 @@
   "directions_ko": "제공된 소스에는 바람의 언덕으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Windy%20Hill%20Geoje%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=112",
   "lesson_week": 15,
   "lesson_day": 5,
   "lesson_label": "15-5"
@@ -2593,7 +2593,7 @@
   "directions_ko": "제공된 소스에는 남해 다랑이마을로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Namhae%20Darangyi%20Village%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=113",
   "lesson_week": 15,
   "lesson_day": 6,
   "lesson_label": "15-6"
@@ -2616,7 +2616,7 @@
   "directions_ko": "제공된 소스에는 광주 양림동으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gwangju%20Yangnim-dong%2C%20Gwangju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/4/4d/Zheng_L%C3%BCcheng.png",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=114",
   "lesson_week": 15,
   "lesson_day": 7,
   "lesson_label": "15-7"
@@ -2662,7 +2662,7 @@
   "directions_ko": "제공된 소스에는 송도 센트럴파크로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Songdo%20Central%20Park%2C%20Incheon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/South_Korea%2C_Incheon%2C_Songdo%2C_the_Sharp_Central_Park_Towers.jpg/960px-South_Korea%2C_Incheon%2C_Songdo%2C_the_Sharp_Central_Park_Towers.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=116",
   "lesson_week": 16,
   "lesson_day": 3,
   "lesson_label": "16-3"
@@ -2685,7 +2685,7 @@
   "directions_ko": "제공된 소스에는 강화도 전등사로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Ganghwa%20Jeondeungsa%2C%20Incheon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ganghwado_Jeondeungsa_Temple_20200718_039.jpg/960px-Ganghwado_Jeondeungsa_Temple_20200718_039.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=117",
   "lesson_week": 16,
   "lesson_day": 4,
   "lesson_label": "16-4"
@@ -2708,7 +2708,7 @@
   "directions_ko": "제공된 소스에는 헤이리예술마을로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Heyri%20Art%20Village%2C%20Gyeonggi%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Art-Service_Studio%2C_Heyri.jpg/960px-Art-Service_Studio%2C_Heyri.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=118",
   "lesson_week": 16,
   "lesson_day": 5,
   "lesson_label": "16-5"
@@ -2731,7 +2731,7 @@
   "directions_ko": "제공된 소스에는 쁘띠프랑스로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Petite%20France%2C%20Gyeonggi%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Petite_France_Gapyeong_2016-11-15_19_27_58_30883764212.jpg/960px-Petite_France_Gapyeong_2016-11-15_19_27_58_30883764212.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=119",
   "lesson_week": 16,
   "lesson_day": 6,
   "lesson_label": "16-6"
@@ -2754,7 +2754,7 @@
   "directions_ko": "제공된 소스에는 아침고요수목원으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Garden%20of%20Morning%20Calm%2C%20Gyeonggi%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Lake_in_the_Garden_of_Morning_Calm.jpg/960px-Lake_in_the_Garden_of_Morning_Calm.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=120",
   "lesson_week": 16,
   "lesson_day": 7,
   "lesson_label": "16-7"
@@ -2777,7 +2777,7 @@
   "directions_ko": "제공된 소스에는 허브아일랜드로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Herb%20Island%2C%20Gyeonggi%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Flag_of_North_Korea_%2820-33%29.svg/960px-Flag_of_North_Korea_%2820-33%29.svg.png",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=121",
   "lesson_week": 17,
   "lesson_day": 2,
   "lesson_label": "17-2"
@@ -2800,7 +2800,7 @@
   "directions_ko": "제공된 소스에는 양평 두물머리로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Yangpyeong%20Dumulmeori%2C%20Gyeonggi%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Namhan_River_03.jpg/960px-Namhan_River_03.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=122",
   "lesson_week": 17,
   "lesson_day": 3,
   "lesson_label": "17-3"
@@ -2823,7 +2823,7 @@
   "directions_ko": "제공된 소스에는 찜질방으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Jjimjilbang%2C%20Nationwide%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/1f/Jjimjilbang.JPG",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=123",
   "lesson_week": 17,
   "lesson_day": 4,
   "lesson_label": "17-4"
@@ -2846,7 +2846,7 @@
   "directions_ko": "제공된 소스에는 한강 라면 편의점으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Hangang%20Ramen%20%26%20CU%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=124",
   "lesson_week": 17,
   "lesson_day": 5,
   "lesson_label": "17-5"
@@ -2869,7 +2869,7 @@
   "directions_ko": "제공된 소스에는 일반 노래방으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Noraebang%2C%20Nationwide%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/a/a0/%E5%8D%A1%E6%8B%89OK.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=125",
   "lesson_week": 17,
   "lesson_day": 6,
   "lesson_label": "17-6"
@@ -2892,7 +2892,7 @@
   "directions_ko": "제공된 소스에는 PC방으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=PC%20Bang%2C%20Nationwide%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/70/Korean.culture-PC.bang-01.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=126",
   "lesson_week": 17,
   "lesson_day": 7,
   "lesson_label": "17-7"
@@ -2938,7 +2938,7 @@
   "directions_ko": "제공된 소스에는 포장마차로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Pojangmacha%2C%20Nationwide%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/2d/Korea-Pojangmacha-01.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=128",
   "lesson_week": 18,
   "lesson_day": 3,
   "lesson_label": "18-3"
@@ -2961,7 +2961,7 @@
   "directions_ko": "제공된 소스에는 전통시장으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Traditional%20Market%2C%20Nationwide%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/f/fa/WetmarketHK.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=129",
   "lesson_week": 18,
   "lesson_day": 4,
   "lesson_label": "18-4"
@@ -2984,7 +2984,7 @@
   "directions_ko": "제공된 소스에는 템플스테이 사찰로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Templestay%2C%20Nationwide%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/%EB%AF%B8%ED%99%A9%EC%82%AC.jpg/960px-%EB%AF%B8%ED%99%A9%EC%82%AC.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=130",
   "lesson_week": 18,
   "lesson_day": 5,
   "lesson_label": "18-5"
@@ -3007,7 +3007,7 @@
   "directions_ko": "제공된 소스에는 진해 군항제로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Jinhae%20Cherry%20Blossom%20Festival%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/2016_Jinhae_Naval_Port_Festival_040.JPG/960px-2016_Jinhae_Naval_Port_Festival_040.JPG",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=131",
   "lesson_week": 18,
   "lesson_day": 6,
   "lesson_label": "18-6"
@@ -3030,7 +3030,7 @@
   "directions_ko": "제공된 소스에는 화천 산천어축제로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Hwacheon%20Sancheoneo%20Ice%20Festival%2C%20Gangwon%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Korea_National_Route_5_at_Hwacheon%2C_Gangwon-do_2.jpg/960px-Korea_National_Route_5_at_Hwacheon%2C_Gangwon-do_2.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=132",
   "lesson_week": 18,
   "lesson_day": 7,
   "lesson_label": "18-7"
@@ -3053,7 +3053,7 @@
   "directions_ko": "제공된 소스에는 부산 더베이101로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=The%20Bay%20101%20Busan%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=133",
   "lesson_week": 19,
   "lesson_day": 2,
   "lesson_label": "19-2"
@@ -3076,7 +3076,7 @@
   "directions_ko": "제공된 소스에는 카멜리아힐로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Camellia%20Hill%2C%20Jeju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Maryang-ri_Camellia_Forest.jpg/960px-Maryang-ri_Camellia_Forest.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=134",
   "lesson_week": 19,
   "lesson_day": 3,
   "lesson_label": "19-3"
@@ -3099,7 +3099,7 @@
   "directions_ko": "제공된 소스에는 군산 근대역사거리로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gunsan%20Modern%20History%20Street%2C%20Jeolla%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/USFK_Prostitution_Warning.jpg/960px-USFK_Prostitution_Warning.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=135",
   "lesson_week": 19,
   "lesson_day": 4,
   "lesson_label": "19-4"
@@ -3122,7 +3122,7 @@
   "directions_ko": "제공된 소스에는 포항 호미곶으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Homigot%20Cape%2C%20Gyeongbuk%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Homigot_Lighthouse_from_New_Millennium_Memorial_Hall.jpg/960px-Homigot_Lighthouse_from_New_Millennium_Memorial_Hall.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=136",
   "lesson_week": 19,
   "lesson_day": 5,
   "lesson_label": "19-5"
@@ -3145,7 +3145,7 @@
   "directions_ko": "제공된 소스에는 울산 간절곶으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Ganjeolgot%20Cape%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ganjeolgot%2C_Ulsan_on_August_16th%2C_2018.jpg/960px-Ganjeolgot%2C_Ulsan_on_August_16th%2C_2018.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=137",
   "lesson_week": 19,
   "lesson_day": 6,
   "lesson_label": "19-6"
@@ -3168,7 +3168,7 @@
   "directions_ko": "제공된 소스에는 대구 김광석거리로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Daegu%20Kim%20Kwang-seok%20Street%2C%20Gyeongbuk%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/5/59/President_Lee_Jae_Myung_20260306.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=138",
   "lesson_week": 19,
   "lesson_day": 7,
   "lesson_label": "19-7"
@@ -3191,7 +3191,7 @@
   "directions_ko": "제공된 소스에는 거제 매미성으로 가는 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Geoje%20Maemiseong%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=139",
   "lesson_week": 20,
   "lesson_day": 2,
   "lesson_label": "20-2"
@@ -3237,7 +3237,7 @@
   "directions_ko": "서울남부터미널에서 태안공용버스터미널행 시외버스를 탑승하십시오(약 2시간 소요). 태안터미널에 도착한 후 안면도(안면버스터미널) 방면 시내버스로 환승하거나 꽃지해수욕장행 직통 버스를 이용하면 약 40분 만에 해변 입구에 도착합니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Taean%20Kkotji%20Beach%2C%20Chungcheong%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=141",
   "lesson_week": 20,
   "lesson_day": 4,
   "lesson_label": "20-4"
@@ -3260,7 +3260,7 @@
   "directions_ko": "서울역에서 KTX를 타고 밀양역에 하차하십시오(약 2시간 15분 소요). 밀양역 광장에서 1번, 2번, 또는 6번 시내버스를 타고 영남루 정류장에서 하차하거나, 택시를 이용하면 약 10분 만에 도착할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Yeongnamnu%20Pavilion%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Yeongnamru_Miryang_Gyeongsangnamdo.JPG/960px-Yeongnamru_Miryang_Gyeongsangnamdo.JPG",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=142",
   "lesson_week": 20,
   "lesson_day": 5,
   "lesson_label": "20-5"
@@ -3283,7 +3283,7 @@
   "directions_ko": "KTX 밀양역이나 밀양시외버스터미널 앞 정류장에서 표충사행 시내버스(4번 노선 등)를 탑승하십시오. 약 40~50분 정도 이동하여 표충사 종점 주차장에서 하차한 뒤 사찰 방향으로 약 5분간 걸어가면 매표소에 도달할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Pyochungsa%20Temple%20Miryang%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Miryang_from_west4.jpg/960px-Miryang_from_west4.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=143",
   "lesson_week": 20,
   "lesson_day": 6,
   "lesson_label": "20-6"
@@ -3306,7 +3306,7 @@
   "directions_ko": "밀양시외버스터미널에서 얼음골행 직행 버스를 이용하십시오. 약 45분간 이동하여 얼음골 정류장에서 하차한 후, 계곡 진입로와 케이블카 탑승장 방향으로 도보로 약 10분 정도 걸어가면 계곡 초입에 도달합니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Eoreumgol%20Ice%20Valley%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=144",
   "lesson_week": 20,
   "lesson_day": 7,
   "lesson_label": "20-7"
@@ -3329,7 +3329,7 @@
   "directions_ko": "밀양시외버스터미널에서 얼음골행 시내버스를 타고 얼음골 주차장 회차지 정류장에서 하차하십시오. 정류장에서 호박소 이정표를 따라 계곡 옆 숲길 보행 데크를 도보로 약 10분 정도 걸어가면 호박소의 푸른 소에 닿을 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Hobakso%20Pool%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=145",
   "lesson_week": 21,
   "lesson_day": 2,
   "lesson_label": "21-2"
@@ -3352,7 +3352,7 @@
   "directions_ko": "KTX 밀양역에서 부북면 방면 시내버스(4번 또는 4-1번 등)를 타고 위양리 정류장에서 하차한 뒤 도보로 약 10분 정도 걸어가십시오. 대중교통 배차 간격이 길기 때문에 밀양역에서 택시를 이용하면 약 15분 만에 편리하게 도착할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Wiyangji%20Pond%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=146",
   "lesson_week": 21,
   "lesson_day": 3,
   "lesson_label": "21-3"
@@ -3375,7 +3375,7 @@
   "directions_ko": "KTX 밀양역 다음 정거장인 삼랑진역에서 하차하십시오. 산 정상에 가까운 사찰의 특성상 대중교통 이용이 어려우므로, 삼랑진역 앞 택시 승차장에서 택시를 탑승하여 이동하는 것을 강력히 권장하며 약 15~20분 정도 소요됩니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Maneosa%20Temple%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=147",
   "lesson_week": 21,
   "lesson_day": 4,
   "lesson_label": "21-4"
@@ -3398,7 +3398,7 @@
   "directions_ko": "밀양시외버스터미널에서 단장면 방면 시내버스를 이용하거나, KTX 밀양역에서 택시를 탑승하면 약 10분 만에 월연정 입구 주차장에 편리하게 도착할 수 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Wolyeonjeong%20Pavilion%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=148",
   "lesson_week": 21,
   "lesson_day": 5,
   "lesson_label": "21-5"
@@ -3421,7 +3421,7 @@
   "directions_ko": "KTX 밀양역에서 상남면 방면 시내버스를 타고 남동리 정류장에서 하차하십시오. 정류장에서 남산이나 예림리 방면 종남산 등산로 이정표를 따라 등산을 시작하면 되며, 정상까지는 완만한 하이킹 코스로 약 1시간 30분에서 2시간 정도 소요됩니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Jongnamsan%20Azaleas%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=149",
   "lesson_week": 21,
   "lesson_day": 6,
   "lesson_label": "21-6"
@@ -3444,7 +3444,7 @@
   "directions_ko": "밀양시외버스터미널에서 표충사행 버스를 타고 종점에 하차하여 표충사 내에서 시작하는 홍룡폭포 및 층층폭포 경유 재약산 사자평 등산로를 따라 이동하십시오(편도 약 2시간~2시간 30분 등산 소요). 혹은 영남알프스 얼음골 케이블카를 탑승한 뒤 하늘정원 데크길을 거쳐 사자평 고원으로 완만하게 걸어갈 수도 있습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Sajapyeong%20Highland%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=150",
   "lesson_week": 21,
   "lesson_day": 7,
   "lesson_label": "21-7"
@@ -3467,7 +3467,7 @@
   "directions_ko": "제공된 소스에는 밀양댐으로 가는 대중교통 노선이나 자차 이용 정보가 존재하지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Miryang%20Dam%20Lake%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/d/df/Southkoreamap.png",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=151",
   "lesson_week": 22,
   "lesson_day": 2,
   "lesson_label": "22-2"
@@ -3490,7 +3490,7 @@
   "directions_ko": "제공된 소스에는 내원사 계곡으로 이동하는 상세한 대중교통 및 자가용 경로 정보가 기록되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Naewonsa%20Valley%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Nearoidostation-jan2006.jpg/960px-Nearoidostation-jan2006.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=152",
   "lesson_week": 22,
   "lesson_day": 3,
   "lesson_label": "22-3"
@@ -3513,7 +3513,7 @@
   "directions_ko": "제공된 소스에는 천성산으로 가기 위한 대중교통 노선이나 차량 운행 안내가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Cheonseongsan%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Cheonsung.JPG/960px-Cheonsung.JPG",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=153",
   "lesson_week": 22,
   "lesson_day": 4,
   "lesson_label": "22-4"
@@ -3536,7 +3536,7 @@
   "directions_ko": "제공된 소스에는 영축산으로 이동하는 대중교통편이나 자차 길찾기 정보가 제공되지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Yeongchuksan%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=154",
   "lesson_week": 22,
   "lesson_day": 5,
   "lesson_label": "22-5"
@@ -3559,7 +3559,7 @@
   "directions_ko": "제공된 소스에는 홍룡폭포까지의 교통편이나 도로 주행 안내가 기술되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Hongnyong%20Falls%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=155",
   "lesson_week": 22,
   "lesson_day": 6,
   "lesson_label": "22-6"
@@ -3582,7 +3582,7 @@
   "directions_ko": "제공된 소스에는 배내골로 가는 구체적인 대중교통편이나 자차 운전 경로가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Baenaegol%20Valley%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Myeong-dong_Shopping_Street_2016.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=156",
   "lesson_week": 22,
   "lesson_day": 7,
   "lesson_label": "22-7"
@@ -3605,7 +3605,7 @@
   "directions_ko": "제공된 소스에는 황산공원으로 가는 교통수단이나 주행 안내 경로 정보가 존재하지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Hwangsan%20Park%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Korea-Daejeon-Uam_Historic_Park-01.jpg/960px-Korea-Daejeon-Uam_Historic_Park-01.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=157",
   "lesson_week": 23,
   "lesson_day": 2,
   "lesson_label": "23-2"
@@ -3628,7 +3628,7 @@
   "directions_ko": "제공된 소스에는 신불산으로 가기 위한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Sinbulsan%20Silver%20Grass%2C%20Gyeongnam%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Taehwa_River_from_Hotel_Riverside_Ulsan.jpg/960px-Taehwa_River_from_Hotel_Riverside_Ulsan.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=158",
   "lesson_week": 23,
   "lesson_day": 3,
   "lesson_label": "23-3"
@@ -3651,7 +3651,7 @@
   "directions_ko": "제공된 소스에는 이기대 해안산책로로 가는 구체적인 대중교통이나 자가용 경로 정보가 존재하지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Igidae%20Coastal%20Trail%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=159",
   "lesson_week": 23,
   "lesson_day": 4,
   "lesson_label": "23-4"
@@ -3674,7 +3674,7 @@
   "directions_ko": "제공된 소스에는 동백섬 누리마루로 가는 구체적인 대중교통 노선이나 자차 이용 정보가 기록되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Dongbaekseom%20Nurimaru%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Dongbaek_island_Busan.jpg/960px-Dongbaek_island_Busan.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=160",
   "lesson_week": 23,
   "lesson_day": 5,
   "lesson_label": "23-5"
@@ -3697,7 +3697,7 @@
   "directions_ko": "제공된 소스에는 부산시민공원으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Busan%20Citizens%20Park%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Busan_Citizens_Park_%22mirror_pond%22.jpg/960px-Busan_Citizens_Park_%22mirror_pond%22.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=161",
   "lesson_week": 23,
   "lesson_day": 6,
   "lesson_label": "23-6"
@@ -3720,7 +3720,7 @@
   "directions_ko": "제공된 소스에는 보수동 책방골목으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Bosu-dong%20Book%20Alley%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=162",
   "lesson_week": 23,
   "lesson_day": 7,
   "lesson_label": "23-7"
@@ -3743,7 +3743,7 @@
   "directions_ko": "제공된 소스에는 황령산으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Hwangnyeongsan%20Night%20View%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=163",
   "lesson_week": 24,
   "lesson_day": 2,
   "lesson_label": "24-2"
@@ -3766,7 +3766,7 @@
   "directions_ko": "제공된 소스에는 송도해수욕장으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Songdo%20Beach%20Busan%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Busan_-_Songdo_beach.jpg/960px-Busan_-_Songdo_beach.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=164",
   "lesson_week": 24,
   "lesson_day": 3,
   "lesson_label": "24-3"
@@ -3789,7 +3789,7 @@
   "directions_ko": "제공된 소스에는 깡깡이예술마을로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Kkangkkangi%20Art%20Village%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/1/15/Bukchon_Hanok_Village.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=165",
   "lesson_week": 24,
   "lesson_day": 4,
   "lesson_label": "24-4"
@@ -3812,7 +3812,7 @@
   "directions_ko": "제공된 소스에는 절영해안산책로로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Jeoryeong%20Coastal%20Walk%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/e/e0/Seoul_Tower_by_USAG_Humphreys.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=166",
   "lesson_week": 24,
   "lesson_day": 5,
   "lesson_label": "24-5"
@@ -3835,7 +3835,7 @@
   "directions_ko": "제공된 소스에는 부산 북항으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Busan%20North%20Port%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Busan-port-from-Busan-tower-2.jpg/960px-Busan-port-from-Busan-tower-2.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80&idx=167",
   "lesson_week": 24,
   "lesson_day": 6,
   "lesson_label": "24-6"
@@ -3858,7 +3858,7 @@
   "directions_ko": "제공된 소스에는 기장 죽성성당으로 가는 상세한 대중교통 및 자차 길찾기 정보가 포함되어 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Jukseong%20Church%20Gijang%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/23/Haeundae_Beach_Busan_2015.jpg",
+  "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&auto=format&fit=crop&q=80&place=168",
   "lesson_week": 24,
   "lesson_day": 7,
   "lesson_label": "24-7"

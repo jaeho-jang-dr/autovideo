@@ -539,8 +539,9 @@ def main():
         s_ko, s_en, c_title_ko, c_title_en, c_desc_ko, c_desc_en = W[wk]
         for day in range(1, 8):
             icon, sk_ko, sk_en = SLOT[day - 1]
-            no = (wk - 1) * 7 + day
+            seq = (wk - 1) * 7 + day
             anchor = (day == 1)
+            display_no = f"W{wk}" if anchor else f"W{wk}-{day}"
             if anchor:
                 # Day1 = 기존 24강 핵심 영상(앵커). 기존 영상이 다루는 핵심.
                 t_ko = f"{wrow['title_ko']}"
@@ -554,7 +555,7 @@ def main():
             else:
                 t_ko, t_en, d_ko, d_en = D[wk][DAY_TO_DIDX[day]]
             lessons.append({
-                "no": no, "week": wk, "day": day, "level": lvl, "level_ko": LEVEL_KO[lvl],
+                "no": display_no, "seq": seq, "code": f"W{wk}-{day}", "week": wk, "day": day, "level": lvl, "level_ko": LEVEL_KO[lvl],
                 "theme_ko": wrow["title_ko"], "theme_en": wrow["title_en"],
                 "skill": sk_en.lower().split()[0], "skill_ko": sk_ko, "skill_en": sk_en, "icon": icon,
                 "title_ko": t_ko, "title_en": t_en,
