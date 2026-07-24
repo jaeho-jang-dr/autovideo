@@ -17,7 +17,7 @@
   "directions_ko": "경복궁으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gyeongbokgung%20Palace%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://royal.khs.go.kr",
-  "image_url": "/images/places/place_1.jpg",
+  "image_url": "/images/places/place_1_gyeongbokgung.jpg",
   "lesson_week": 1,
   "lesson_day": 1,
   "lesson_label": "1-1"
@@ -63,7 +63,7 @@
   "directions_ko": "명동으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Myeongdong%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://www.seoultower.co.kr/",
-  "image_url": "/images/places/place_3.jpg",
+  "image_url": "/images/places/place_3_myeongdong.jpg",
   "lesson_week": 3,
   "lesson_day": 1,
   "lesson_label": "3-1"
@@ -86,7 +86,7 @@
   "directions_ko": "남산서울타워로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Namsan%20Seoul%20Tower%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://hanok.seoul.go.kr/",
-  "image_url": "/images/places/place_4.jpg",
+  "image_url": "/images/places/place_4_namsan.jpg",
   "lesson_week": 4,
   "lesson_day": 1,
   "lesson_label": "4-1"
@@ -109,7 +109,7 @@
   "directions_ko": "관광객 방문 시간이 제한되는 '레드존'은 서울 종로구 북촌로11길 일대에 위치하고 있으며, 스마트서울맵(map.seoul.go.kr)을 통해 정확한 구역 정보와 안내를 확인할 수 있습니다 [11, 12].",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Bukchon%20Hanok%20Village%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://www.myeongdong.org/",
-  "image_url": "/images/places/place_5.jpg",
+  "image_url": "/images/places/place_5_bukchon.jpg",
   "lesson_week": 5,
   "lesson_day": 1,
   "lesson_label": "5-1"
@@ -132,7 +132,7 @@
   "directions_ko": "홍대로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Hongdae%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "/images/places/place_6.jpg",
+  "image_url": "/images/places/place_6_hongdae.jpg",
   "lesson_week": 6,
   "lesson_day": 1,
   "lesson_label": "6-1"
@@ -155,7 +155,7 @@
   "directions_ko": "인사동으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Insadong%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "/images/places/place_7.jpg",
+  "image_url": "/images/places/place_7_insadong.jpg",
   "lesson_week": 7,
   "lesson_day": 1,
   "lesson_label": "7-1"
@@ -178,7 +178,7 @@
   "directions_ko": "광장시장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gwangjang%20Market%2C%20Seoul%2C%20South%20Korea",
   "official_link": "http://www.kwangjangmarket.co.kr/",
-  "image_url": "/images/places/place_8.jpg",
+  "image_url": "/images/places/place_8_gwangjang.jpg",
   "lesson_week": 8,
   "lesson_day": 1,
   "lesson_label": "8-1"
@@ -201,7 +201,7 @@
   "directions_ko": "해운대해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Haeundae%20Beach%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://www.haeundae.go.kr/tour/index.do",
-  "image_url": "/images/places/place_9.jpg",
+  "image_url": "/images/places/place_9_haeundae_busan.jpg",
   "lesson_week": 9,
   "lesson_day": 1,
   "lesson_label": "9-1"
@@ -224,7 +224,7 @@
   "directions_ko": "광안리 및 광안대교로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gwangalli%20%26%20Diamond%20Bridge%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "/images/places/place_10.jpg",
+  "image_url": "/images/places/place_10_gwangalli.jpg",
   "lesson_week": 10,
   "lesson_day": 1,
   "lesson_label": "10-1"
@@ -247,7 +247,7 @@
   "directions_ko": "감천문화마을로 가는 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gamcheon%20Culture%20Village%2C%20Busan%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "/images/places/place_11.jpg",
+  "image_url": "/images/places/place_11_gamcheon.jpg",
   "lesson_week": 11,
   "lesson_day": 1,
   "lesson_label": "11-1"
@@ -270,7 +270,7 @@
   "directions_ko": "강남역 부근으로 가는 구체적인 대중교통 및 주행 경로는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Gangnam%2C%20Seoul%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "/images/places/place_12.jpg",
+  "image_url": "/images/places/place_12_gangnam.jpg",
   "lesson_week": 12,
   "lesson_day": 1,
   "lesson_label": "12-1"
@@ -293,7 +293,7 @@
   "directions_ko": "성산일출봉으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Seongsan%20Ilchulbong%2C%20Jeju%2C%20South%20Korea",
   "official_link": "https://www.jeju.go.kr/jeju/cultural/heritage/natural.htm",
-  "image_url": "/images/places/place_13.jpg",
+  "image_url": "/images/places/place_13_seongsan.jpg",
   "lesson_week": 13,
   "lesson_day": 1,
   "lesson_label": "13-1"
@@ -316,7 +316,7 @@
   "directions_ko": "협재해수욕장으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Hyeopjae%20Beach%2C%20Jeju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "/images/places/place_14.jpg",
+  "image_url": "/images/places/place_14_hyeopjae_jeju.jpg",
   "lesson_week": 14,
   "lesson_day": 1,
   "lesson_label": "14-1"
@@ -339,7 +339,7 @@
   "directions_ko": "한라산으로 가는 대중교통 안내는 제공된 소스에 나와 있지 않습니다.",
   "map_link": "https://www.google.com/maps/search/?api=1&query=Hallasan%2C%20Jeju%2C%20South%20Korea",
   "official_link": "https://english.visitkorea.or.kr",
-  "image_url": "/images/places/place_15.jpg",
+  "image_url": "/images/places/place_15_hallasan.jpg",
   "lesson_week": 15,
   "lesson_day": 1,
   "lesson_label": "15-1"
