@@ -1,0 +1,37 @@
+{
+   "checksum": "dbbb2b86296bdab2bdf61c1044d1e7e2",
+   "roots": {
+      "bookmark_bar": {
+         "children": [  ],
+         "date_added": "13428649365068913",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "북마크바",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13428649365068913",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "기타 북마크",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13428649365068913",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "모바일 북마크",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CqYBCoUBCIiBAhJ/IACSAWwKagoOY2hyb21lX3N5bmNfYm0SBTUxIWJtGhIJ3clNzLJWBgAR3clNzLJWBgAiNAnv1j3MslYGABADGf0qFNsOdVtpIAEqHDUxIWJtL2ZkOjkxNjM3MjM1NTk0Njg4OTMxNjEplM9QzLJWBgDqAQsIsLnh0gYQgMTOFhIAKhhTbUljTmp3MGtzT3FWMHZDK1FPbGx3PT1IAxKrAQgBEqYBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9Ek5aOkFEcXRBWnhlYzk3OEpiTUE0aWo3bTk4TW15eGF0ak05MXd5WXRYSzB1T0c4bEQ0MHBBdEg3Q3RXeVZ4ZCtPcW4rQjlYMktUdmJXMWoYACAAKAAw7ITB26fWlQM4AEAAShxhUkNXTGdoRjliNUlucUtJRHZ1Si9qdlFrRmM9WgBlAAAAABLDAQgCEr4BChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EmZaOkFEcXRBWncxNDRFUWNaNDd6aUZMbHhtdjF4bWU1anNLd0duVVFRN3hSZy9UVXcxWnZJMTM5TXMzU1hYWnVKdWRmZGlZdzFSRmdWd0F2d3g1VW1oZnJZTUxucGh2NGwvU3ZRPT0YACAAKAAw7ITB26fWlQM4AEAAShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAABLDAQgDEr4BChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EmZaOkFEcXRBWnh2UFoxTDhHN3FXTjRpVi9GaGU3c1RHOFBTeWRTK0pTRkY3ZnBHN1F6UVE0cDNlaUc5Y2hhT08wN1lmZGptQndOZGFEUktHVDVNdDlXcGtUZk9leXYwR2hPbWdBPT0YACAAKAAw7ITB26fWlQM4AEAAShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAADABOAA=",
+   "version": 1
+}

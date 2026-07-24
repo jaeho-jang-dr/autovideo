@@ -1,0 +1,383 @@
+1
+00:00:00,000 --> 00:00:00,365
+Hello!
+
+2
+00:00:00,365 --> 00:00:04,015
+Hoy aprenderemos frases para un restaurante en la aldea de Gamcheon.
+
+3
+00:00:04,015 --> 00:00:06,692
+¿No sabes qué decir en un restaurante coreano?
+
+4
+00:00:06,692 --> 00:00:09,673
+Apréndelas una por una y pide con confianza.
+
+5
+00:00:09,673 --> 00:00:10,220
+¡Vamos!
+
+6
+00:00:16,050 --> 00:00:20,379
+Caminando por ahí, nos da hambre. Decimos '배고파요' (Tenemos hambre).
+
+7
+00:00:20,379 --> 00:00:24,900
+'배' [bae] (estómago) es tu estómago, '고파요' [gopayo] (tienes hambre) significa que necesitas comida.
+
+8
+00:00:24,900 --> 00:00:27,690
+Busquemos un buen restaurante.
+
+9
+00:00:34,240 --> 00:00:37,006
+Un restaurante tiene un flujo: encontrar, ordenar, probar, pagar.
+
+10
+00:00:37,006 --> 00:00:39,660
+Hoy aprenderemos cada paso con la frase correcta.
+
+11
+00:00:50,870 --> 00:00:52,001
+En una nueva área,
+
+12
+00:00:52,001 --> 00:00:55,153
+pregunta a un transeúnte: '이 근처에 맛있는 식당이 어디 있어요'? (¿Dónde hay un buen restaurante cerca de aquí?)
+
+13
+00:00:55,153 --> 00:00:57,577
+(¿Dónde hay un buen restaurante?).
+
+14
+00:00:57,577 --> 00:00:59,920
+Esta frase te consigue ayuda amable.
+
+15
+00:01:03,320 --> 00:01:07,280
+¿Difícil elegir? Pregunta '추천할 만한 식당 있어요'? (¿Hay algún restaurante que puedas recomendar?).
+
+16
+00:01:07,280 --> 00:01:11,240
+'추천' [chuchon] (recomendación) significa sugerir algo bueno.
+
+17
+00:01:13,850 --> 00:01:18,175
+Para especialidades locales, pregunta '여기 뭐가 유명해요'? (¿Qué es famoso aquí?).
+
+18
+00:01:18,175 --> 00:01:21,550
+'유명해요' [yumyonghayo] (es famoso) significa muy querido por muchos.
+
+19
+00:01:25,680 --> 00:01:30,078
+Pregunta '이 집은 어떤 걸 팔아요'? (¿Qué vende esta casa?).
+
+20
+00:01:30,078 --> 00:01:34,580
+'팔아요' [parayo] (vender) significa vender. Útil antes de entrar.
+
+21
+00:01:39,670 --> 00:01:43,108
+Cuando se ve rico, di '맛있어 보여요' (Se ve delicioso).
+
+22
+00:01:43,108 --> 00:01:46,841
+'-어 보여요' [oboyeo] (-parece) significa que parece así al mirarlo.
+
+23
+00:01:46,841 --> 00:01:48,020
+¡Entremos!
+
+24
+00:01:53,200 --> 00:01:55,078
+El personal pregunta '몇 분이세요'? (¿Cuántas personas son?).
+
+25
+00:01:55,078 --> 00:01:57,268
+— que significa '¿cuántas personas?'.
+
+26
+00:01:57,268 --> 00:01:59,850
+Están verificando el tamaño de tu grupo.
+
+27
+00:02:04,140 --> 00:02:10,062
+¿Solo? '한 명이요' (Una persona). ¿Dos? '두 명이요' (Dos personas). '명' [myong] (persona (contador)) cuenta a las personas.
+
+28
+00:02:10,062 --> 00:02:13,640
+Muestra los dedos también para mayor claridad.
+
+29
+00:02:18,270 --> 00:02:23,055
+¿Ves un asiento? Pregunta '여기 앉아도 돼요'? (¿Puedo sentarme aquí?).
+
+30
+00:02:23,055 --> 00:02:28,040
+'-아도 돼요' [a-dwo-dwoyo] (¿Puedo...?) pide permiso. Cuando dicen que sí, siéntate.
+
+31
+00:02:32,260 --> 00:02:36,301
+Sentado, necesitas el menú: '메뉴 주세요' (El menú, por favor).
+
+32
+00:02:36,301 --> 00:02:41,240
+'메뉴' [menyu] (menú) es la lista, '주세요' [juseyo] (por favor (dar)) es una petición educada.
+
+33
+00:02:44,520 --> 00:02:48,183
+¿No sabes qué elegir? Pregunta '여기 뭐가 맛있어요'? (¿Qué es delicioso aquí?).
+
+34
+00:02:48,183 --> 00:02:51,310
+Te dirán lo que hacen mejor.
+
+35
+00:02:54,570 --> 00:02:57,817
+Pregunta '인기 메뉴가 뭐예요'? (¿Cuál es el menú popular?).
+
+36
+00:02:57,817 --> 00:03:01,240
+El plato popular suele ser una apuesta segura.
+
+37
+00:03:04,210 --> 00:03:08,260
+Pregúntale al personal '메뉴를 추천해 주세요' (Recomiéndame un menú, por favor).
+
+38
+00:03:08,260 --> 00:03:11,190
+Significa 'elige uno bueno para mí'.
+
+39
+00:03:15,360 --> 00:03:20,850
+Señala un plato nuevo: '이건 뭐예요'? (¿Qué es esto?).
+
+40
+00:03:20,850 --> 00:03:23,710
+'이건' [igon] (esto) es 'esto'. ¡Solo pregunta!
+
+41
+00:03:30,570 --> 00:03:33,810
+Pregunta '무엇으로 만들었어요'? (¿De qué está hecho?).
+
+42
+00:03:33,810 --> 00:03:37,050
+Siempre verifica si no puedes comer algo.
+
+43
+00:03:40,600 --> 00:03:46,558
+Ingredientes comunes: '쌀' [ssal] (arroz) (arroz), '고기' [gogi] (carne) (carne),
+
+44
+00:03:46,558 --> 00:03:51,161
+'채소' [chaeso] (vegetales) (vegetales), '해물' [haemul] (mariscos) (mariscos).
+
+45
+00:03:51,161 --> 00:03:54,140
+Estos cuatro cubren la mayoría.
+
+46
+00:03:55,880 --> 00:03:59,216
+Pregunta '어떤 맛이에요'? (¿Qué sabor tiene?).
+
+47
+00:03:59,216 --> 00:04:01,470
+Saber te ayuda a elegir.
+
+48
+00:04:04,970 --> 00:04:09,212
+¿No te gusta lo picante? Pregunta '이거 매워요'? (¿Esto es picante?).
+
+49
+00:04:09,212 --> 00:04:13,270
+La comida coreana suele ser picante — una pregunta clave.
+
+50
+00:04:14,010 --> 00:04:18,365
+Pregunta '안 매운 거 있어요'? (¿Hay algo no picante?).
+
+51
+00:04:18,365 --> 00:04:22,720
+'안' [an] (no) significa 'no' — algo no picante.
+
+52
+00:04:27,730 --> 00:04:33,910
+¿Compartiendo o con hambre? Pregunta '양이 많아요'? (¿Es una porción grande?).
+
+53
+00:04:33,910 --> 00:04:36,180
+'양' [yang] (cantidad) es la cantidad.
+
+54
+00:04:37,950 --> 00:04:41,850
+¿Elegiste? Señala y di '이거 주세요' (Esto, por favor).
+
+55
+00:04:41,850 --> 00:04:44,450
+La frase más usada para ordenar.
+
+56
+00:04:50,860 --> 00:04:56,289
+Di la cuenta: '이거 하나하고 저거 둘 주세요' (Dame uno de esto y dos de aquello).
+
+57
+00:04:56,289 --> 00:05:00,440
+Cerca es '이거' [igo], lejos es '저거' [jogo].
+
+58
+00:05:03,450 --> 00:05:09,229
+¿Sediento? '물 좀 주세요' (Agua, por favor) (Agua, por favor). El agua es gratis.
+
+59
+00:05:09,229 --> 00:05:11,540
+'좀' [jom] (un poco) lo hace más suave.
+
+60
+00:05:13,860 --> 00:05:16,155
+¡La comida está aquí! Antes de comer,
+
+61
+00:05:16,155 --> 00:05:20,150
+di '잘 먹겠습니다' (Comeré bien (Gracias por la comida)) — un agradecimiento a quien lo preparó.
+
+62
+00:05:25,250 --> 00:05:30,574
+¿Se acabaron los acompañamientos? '반찬 좀 더 주세요' (Dame más acompañamientos, por favor). '더' [deu] (más) significa más.
+
+63
+00:05:30,574 --> 00:05:33,290
+Las recargas suelen ser gratuitas.
+
+64
+00:05:35,830 --> 00:05:40,560
+¿No hay utensilios? '젓가락하고 숟가락 주세요' (Palillos y cuchara, por favor).
+
+65
+00:05:40,560 --> 00:05:45,290
+'젓가락' [jottgarak] (palillos) recoge, '숟가락' [suttgarak] (cuchara) coge con cuchara.
+
+66
+00:05:47,390 --> 00:05:52,150
+¿Quieres más? '이거 리필 돼요'? (¿Esto se puede rellenar?).
+
+67
+00:05:52,150 --> 00:05:55,090
+'리필' [ripiil] (recarga) significa recargar.
+
+68
+00:05:56,070 --> 00:05:59,073
+Describe el sabor. ¿Bueno? '맛있어요'! (¡Está delicioso!).
+
+69
+00:05:59,073 --> 00:06:03,440
+Un pulgar arriba ayuda. Un gran cumplido para el cocinero.
+
+70
+00:06:07,730 --> 00:06:13,161
+Picante es '매워요' [maewoyo], salado es '짜요' [jjayo].
+
+71
+00:06:13,161 --> 00:06:18,410
+Añade '조금' [jogeum] (un poco) para suavizar: '조금 매워요' ([[Spanish translation of: 조금 매워요]] ).
+
+72
+00:06:20,060 --> 00:06:24,037
+Dulce es '달아요' [darayo], insípido es '싱거워요' [singgwowoyo].
+
+73
+00:06:24,037 --> 00:06:27,020
+Cada sabor tiene su palabra.
+
+74
+00:06:29,340 --> 00:06:33,614
+Limpio es '담백해요' [dambaekhaeyo], a nuez es '고소해요' [gosohaeyo].
+
+75
+00:06:33,614 --> 00:06:37,240
+Perfecto para alabar el caldo.
+
+76
+00:06:39,770 --> 00:06:46,414
+Repasemos las palabras de sabor: picante '맵다' [maebda] (ser picante),
+
+77
+00:06:46,414 --> 00:06:54,031
+salado '짜다' [jjada] (ser salado), dulce '달다' [dalda] (ser dulce), agrio '시다' [sida] (ser agrio), amargo '쓰다' [sseuda] (ser amargo),
+
+78
+00:06:54,031 --> 00:07:01,000
+ligero '담백하다' [dambaekhada] (ser limpio/ligero), sabroso '고소하다' [gosohada] (ser a nuez/aromático), grasoso '느끼하다' [neukkihaeda] (ser grasoso).
+
+79
+00:07:01,000 --> 00:07:06,510
+¡Usa el correcto para cada sabor!
+
+80
+00:07:06,960 --> 00:07:09,240
+¿Listo? '잘 먹었습니다' (He comido bien (Gracias por la comida)).
+
+81
+00:07:09,240 --> 00:07:15,081
+Antes de comer '잘 먹겠습니다' (Comeré bien (Gracias por la comida)), después '잘 먹었습니다' (He comido bien (Gracias por la comida)).
+
+82
+00:07:15,081 --> 00:07:18,500
+Recuérdalas como un par.
+
+83
+00:07:20,510 --> 00:07:25,729
+¿Sobras? '남은 음식을 싸 주시겠어요'? (¿Podrías empacar la comida sobrante?).
+
+84
+00:07:25,729 --> 00:07:28,530
+'싸다' [ssada] (envolver) significa envolver.
+
+85
+00:07:29,650 --> 00:07:34,004
+Ve al mostrador: '계산할게요, 얼마예요'? (Pagaré, ¿cuánto es?).
+
+86
+00:07:34,004 --> 00:07:39,150
+'계산' [gyesan] (cuenta/pago) es pagar, '얼마예요'? (¿Cuánto es?) pregunta el precio.
+
+87
+00:07:42,870 --> 00:07:46,783
+Tarjeta: '카드 돼요'? (¿Aceptan tarjeta?). Efectivo: '현금으로 할게요' (Pagaré en efectivo).
+
+88
+00:07:46,783 --> 00:07:50,330
+Las tiendas pequeñas pueden ser solo en efectivo.
+
+89
+00:07:53,400 --> 00:07:58,300
+¿Necesitas un recibo? '영수증 주세요' (Recibo, por favor). Muestra lo que pagaste.
+
+90
+00:08:00,690 --> 00:08:04,224
+¿Te encantó? '여기 진짜 맛있었어요, 또 오고 싶어요'! (¡Estaba realmente delicioso aquí, quiero volver!).
+
+91
+00:08:04,224 --> 00:08:07,550
+Una palabra cálida crea un lindo recuerdo.
+
+92
+00:08:09,680 --> 00:08:12,101
+El flujo de hoy: encontrar, ordenar, probar, pagar.
+
+93
+00:08:12,101 --> 00:08:14,840
+Ya conoces las frases, ¿verdad? ¡Buen trabajo!
+
+94
+00:08:23,910 --> 00:08:26,510
+Usa las frases de hoy en un restaurante.
+
+95
+00:08:26,510 --> 00:08:29,398
+Cuanto más las uses, más natural.
+
+96
+00:08:29,398 --> 00:08:31,420
+Siguiente: expresiones de café. ¡Adiós!

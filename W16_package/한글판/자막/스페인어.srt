@@ -1,0 +1,359 @@
+1
+00:00:00,000 --> 00:00:03,357
+¡Hola a todos! Soy Injun, encantado de conoceros.
+
+2
+00:00:03,357 --> 00:00:07,386
+Hoy estoy en una hermosa isla — '남이섬' [nam-i-seom] (Isla Nami).
+
+3
+00:00:07,386 --> 00:00:10,370
+Tiempo precioso y tantos árboles, ¿verdad?
+
+4
+00:00:15,500 --> 00:00:20,209
+'Hobby' — '취미' [chwi-mi] (pasatiempo) — es algo divertido que haces en tu tiempo libre,
+
+5
+00:00:20,209 --> 00:00:22,600
+como deportes, leer o dibujar.
+
+6
+00:00:31,190 --> 00:00:34,071
+Cuando te encuentres con un amigo, pregunta: '취미가 뭐예요' [chwi-mi-ga-mwo-ye-yo]?
+
+7
+00:00:34,071 --> 00:00:35,696
+(¿Cuál es tu pasatiempo?).
+
+8
+00:00:35,696 --> 00:00:38,650
+Una pregunta muy común — ¡díganlo conmigo!
+
+9
+00:00:43,060 --> 00:00:48,439
+Responde así: '제 취미는 자전거 타기예요' (Mi pasatiempo es el ciclismo),
+
+10
+00:00:48,439 --> 00:00:51,742
+'제 취미는 독서예요' [je-chwi-mi-neun-dok-seo-ye-yo] (Mi pasatiempo es la lectura).
+
+11
+00:00:51,742 --> 00:00:54,290
+¡Inténtalo con tu propio pasatiempo!
+
+12
+00:00:54,740 --> 00:01:01,370
+También puedes decir: '저는 사진 찍는 것을 좋아해요' (Me gusta tomar fotos).
+
+13
+00:01:01,370 --> 00:01:07,890
+Añade '-는 것을 좋아해요' [--neun-geot-eul-jot-a-hae-yo] a un verbo — '걷는 것을 좋아해요' [geot-neun-geot-eul-jot-a-hae-yo] (Me gusta caminar).
+
+14
+00:01:08,340 --> 00:01:13,542
+Pero una cosa realmente importa con los pasatiempos: '얼마나 자주' [eol-ma-na-ja-ju] (¿con qué frecuencia)?
+
+15
+00:01:13,542 --> 00:01:17,200
+¿Todos los días? ¿A veces? Aprendamos esto hoy.
+
+16
+00:01:22,930 --> 00:01:25,978
+'매일' [mae-il] (todos los días) significa todos los días,
+
+17
+00:01:25,978 --> 00:01:28,657
+sin perder ni un solo día.
+
+18
+00:01:28,657 --> 00:01:31,520
+'저는 매일 조깅해요' [jeo-neun-mae-il-jo-ging-hae-yo] (Salgo a correr todos los días).
+
+19
+00:01:39,100 --> 00:01:41,679
+'보통' [bo-tong] (normalmente) significa normalmente.
+
+20
+00:01:41,679 --> 00:01:47,192
+'저는 보통 아침에 산책해요' (Normalmente salgo a pasear por la mañana) — no siempre,
+
+21
+00:01:47,192 --> 00:01:49,060
+pero la mayoría de las veces.
+
+22
+00:01:50,570 --> 00:01:52,847
+'자주' [ja-ju] (a menudo) significa a menudo.
+
+23
+00:01:52,847 --> 00:02:00,770
+'저는 자주 사진을 찍어요' (A menudo tomo fotos) — la Isla Nami es tan bonita que la fotografío mucho.
+
+24
+00:02:02,880 --> 00:02:06,229
+'가끔' [ga-kkeum] (a veces) significa a veces.
+
+25
+00:02:06,229 --> 00:02:11,710
+'저는 가끔 낚시를 해요' (A veces pesco) — solo de vez en cuando.
+
+26
+00:02:14,080 --> 00:02:17,186
+'거의 안 해요' [geo-ui-an-hae-yo] (casi nunca) significa casi nunca.
+
+27
+00:02:17,186 --> 00:02:23,010
+'저는 게임을 거의 안 해요' (Casi nunca juego) — ¿quizás una vez al mes?
+
+28
+00:02:24,150 --> 00:02:27,997
+'전혀 안 해요' [jeon-hyeo-an-hae-yo] (nunca) significa nunca — ¡cero!
+
+29
+00:02:27,997 --> 00:02:32,260
+'저는 커피를 전혀 안 마셔요' (Nunca bebo café).
+
+30
+00:02:35,760 --> 00:02:42,649
+Pon la palabra de frecuencia antes del verbo: '매일 산책해요' [mae-il-san-chaek-hae-yo] (Paseo todos los días),
+
+31
+00:02:42,649 --> 00:02:46,144
+'자주 사진을 찍어요' [ja-ju-sa-jin-eul-jjik-eo-yo] (A menudo tomo fotos).
+
+32
+00:02:46,144 --> 00:02:48,840
+'저는 자주 걸어요' [jeo-neun-ja-ju-geol-eo-yo] (A menudo camino).
+
+33
+00:02:49,290 --> 00:02:52,696
+Cuando piensas en '남이섬' [nam-i-seom] (Isla Nami),
+
+34
+00:02:52,696 --> 00:02:55,027
+piensas en '자전거' [ja-jeon-geo] (ciclismo).
+
+35
+00:02:55,027 --> 00:02:59,150
+Pasear con la brisa fresca — mi pasatiempo favorito.
+
+36
+00:02:59,600 --> 00:03:02,360
+¿Con qué frecuencia? Tres veces por semana.
+
+37
+00:03:02,360 --> 00:03:08,340
+'저는 일주일에 세 번 자전거를 타요' (Monto en bicicleta tres veces por semana) — ¡bastante!
+
+38
+00:03:09,650 --> 00:03:12,731
+¡Mira este camino de metasecuoyas!
+
+39
+00:03:12,731 --> 00:03:15,504
+Me encanta '산책' [san-chaek] (caminar) aquí.
+
+40
+00:03:15,504 --> 00:03:18,790
+'저는 매일 산책해요' [jeo-neun-mae-il-san-chaek-hae-yo] (Camino todos los días).
+
+41
+00:03:19,240 --> 00:03:24,192
+Por la mañana hago '조깅' [jo-ging] (footing) junto al río.
+
+42
+00:03:24,192 --> 00:03:28,216
+'저는 매일 아침에 조깅해요' (Salgo a correr todas las mañanas).
+
+43
+00:03:28,216 --> 00:03:29,660
+¡Qué refrescante!
+
+44
+00:03:30,110 --> 00:03:35,108
+En estos bonitos caminos me encanta '사진' [sa-jin] (fotos).
+
+45
+00:03:35,108 --> 00:03:39,990
+'저는 사진 찍는 것을 좋아해요' (Me gusta tomar fotos),
+
+46
+00:03:39,990 --> 00:03:42,780
+así que lo hago '자주' [ja-ju] (a menudo).
+
+47
+00:03:43,230 --> 00:03:51,395
+En días agradables disfruto de un '피크닉' [pi-keu-nik] (picnic) en el césped — incluso preparo '김밥' [gim-bap] (gimbap).
+
+48
+00:03:51,395 --> 00:03:54,850
+Lo hago '자주' [ja-ju] (a menudo) los fines de semana.
+
+49
+00:03:55,300 --> 00:03:58,955
+En el amplio césped vuelo una '연' [yeon] (cometa).
+
+50
+00:03:58,955 --> 00:04:04,640
+Es un pasatiempo '가끔' [ga-kkeum] (a veces) — perfecto cuando hace viento.
+
+51
+00:04:05,090 --> 00:04:11,445
+También juego al '프리스비' [peu-ri-seu-bi] (frisbee) con un amigo — lanzar y atrapar,
+
+52
+00:04:11,445 --> 00:04:14,570
+muy divertido. También '가끔' [ga-kkeum] (a veces).
+
+53
+00:04:15,020 --> 00:04:22,524
+También me gusta el '배드민턴' [bae-deu-min-teon] (bádminton) — golpear el volante de un lado a otro.
+
+54
+00:04:22,524 --> 00:04:25,800
+Aproximadamente '일주일에 한 번' [il-ju-il-e-han-beon] (una vez a la semana).
+
+55
+00:04:26,250 --> 00:04:32,364
+Junto al río hago '낚시' [nak-si] (pesca) — el encanto es esperar en silencio.
+
+56
+00:04:32,364 --> 00:04:36,090
+'가끔' [ga-kkeum] (a veces), cuando quiero relajarme.
+
+57
+00:04:36,540 --> 00:04:40,357
+También hago '강아지 산책' [gang-a-ji-san-chaek] (pasear perros).
+
+58
+00:04:40,357 --> 00:04:46,140
+Los perros necesitan paseos diarios, así que '하루에 두 번' [ha-ru-e-du-beon] (dos veces al día).
+
+59
+00:04:46,590 --> 00:04:50,713
+Este es especial — '짚와이어' [jip-wa-i-eo] (tirolesa).
+
+60
+00:04:50,713 --> 00:04:51,981
+Como volar.
+
+61
+00:04:51,981 --> 00:04:56,210
+Asusta, así que '일 년에 한 번' (una vez al año).
+
+62
+00:04:56,660 --> 00:05:01,452
+A veces voy de '캠핑' [kaem-ping] (camping) — monto una tienda,
+
+63
+00:05:01,452 --> 00:05:06,670
+paso la noche. Aproximadamente '한 달에 한 번' (una vez al mes).
+
+64
+00:05:07,120 --> 00:05:10,932
+Leo en un banco junto al río — tranquilo y agradable.
+
+65
+00:05:10,932 --> 00:05:14,490
+'저는 매일 저녁에 책을 읽어요' (Leo todas las tardes).
+
+66
+00:05:15,660 --> 00:05:17,673
+Es una isla de arte,
+
+67
+00:05:17,673 --> 00:05:22,653
+así que hago '그림 그리기' [geu-rim-geu-ri-gi] (dibujar) — bocetando paisajes.
+
+68
+00:05:22,653 --> 00:05:26,150
+Aproximadamente '한 달에 두 번' (dos veces al mes).
+
+69
+00:05:26,600 --> 00:05:31,555
+Mi nuevo pasatiempo últimamente es el '스케이트보드' [seu-ke-i-teu-bo-deu] (skateboarding).
+
+70
+00:05:31,555 --> 00:05:35,890
+Todavía soy torpe, pero '자주' [ja-ju] (a menudo) estos días.
+
+71
+00:05:36,340 --> 00:05:42,491
+En casa toco el '피아노' [pi-a-no] (piano) — mis canciones favoritas me alegran el ánimo.
+
+72
+00:05:42,491 --> 00:05:45,940
+'매일' [mae-il] (todos los días) practico un poco.
+
+73
+00:05:46,390 --> 00:05:50,717
+En casa a veces cocino '요리' [yo-ri] (cocinar).
+
+74
+00:05:50,717 --> 00:05:54,360
+'저는 가끔 요리해요' [jeo-neun-ga-kkeum-yo-ri-hae-yo] (A veces cocino).
+
+75
+00:05:55,170 --> 00:06:02,211
+Cada fin de semana hago '영화 보기' [yeong-hwa-bo-gi] (ver películas) en casa — sofá y palomitas.
+
+76
+00:06:02,211 --> 00:06:04,460
+'주말마다' [ju-mal-ma-da] (cada fin de semana).
+
+77
+00:06:04,910 --> 00:06:11,320
+También disfruto de '게임' [ge-im] (juegos) — un poco '매일' [mae-il] (todos los días),
+
+78
+00:06:11,320 --> 00:06:14,050
+porque es divertido. Jaja.
+
+79
+00:06:14,500 --> 00:06:16,897
+Tengo muchos pasatiempos, ¿verdad?
+
+80
+00:06:16,897 --> 00:06:21,452
+Pero hay una cosa que hago '매일' [mae-il] (todos los días) sin falta.
+
+81
+00:06:21,452 --> 00:06:23,450
+¿Qué es? ¡Adivina!
+
+82
+00:06:25,870 --> 00:06:29,201
+¡Es estudiar '한국어' [han-guk-eo] (coreano) todos los días!
+
+83
+00:06:29,201 --> 00:06:32,104
+Justo como tú, mirando ahora mismo.
+
+84
+00:06:32,104 --> 00:06:34,410
+Ese es mi verdadero pasatiempo diario.
+
+85
+00:06:35,270 --> 00:06:37,759
+¿Cuál es TU '취미' [chwi-mi] (pasatiempo)?
+
+86
+00:06:37,759 --> 00:06:41,543
+Y '얼마나 자주' [eol-ma-na-ja-ju] (con qué frecuencia) lo haces?
+
+87
+00:06:41,543 --> 00:06:46,720
+Por favor, dímelo en los comentarios — ¡tengo mucha curiosidad!
+
+88
+00:06:47,170 --> 00:06:49,354
+¡Disfruta de tus pasatiempos!
+
+89
+00:06:49,354 --> 00:06:54,642
+Y no olvides estudiar '한국어' [han-guk-eo] (coreano) '매일' [mae-il].
+
+90
+00:06:54,642 --> 00:06:59,240
+Hasta la próxima — 안녕히 계세요! (¡Adiós!)

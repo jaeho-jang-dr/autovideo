@@ -1,0 +1,27 @@
+# W9 v2 배경 — 개념 연동(위치어를 그림으로), 파스텔 해운대. 옛 bg_w9_s* 유지, 새로 bg_w9v2_s* 생성.
+# 공통: soft muted pastel storybook illustration, low saturation, gentle warm Haeundae seaside palette,
+#       thick friendly outlines, NO text/words/numbers/letters, no people,
+#       keep the LEFT side and lower-left OPEN/EMPTY for a foreground character, main subject on the RIGHT, full-frame, 16:9.
+# 형식: <저장경로> ||| <프롬프트(위 공통을 반드시 포함)>
+# ─ 위치 개념 씬(S3~S12)은 공간 관계가 한눈에 보이게 그린다 ─
+
+assets/graphics/bg/bg_w9v2_s01.png ||| Haeundae beach on a bright calm morning, a cute wooden welcome signboard with a big friendly question-mark shape (asking 'where?'), open turquoise sea and soft sand
+assets/graphics/bg/bg_w9v2_s02.png ||| a charming Haeundae street corner with a signpost and a simple direction/map board, showing the idea of place and direction
+assets/graphics/bg/bg_w9v2_s03.png ||| FRONT concept: a pastel Haeundae beach cabana with a round beach ball placed clearly IN FRONT of its entrance, obvious front position
+assets/graphics/bg/bg_w9v2_s04.png ||| BEHIND concept: a small seaside house with a green park clearly BEHIND it, the park peeking out from behind the house, Haeundae
+assets/graphics/bg/bg_w9v2_s05.png ||| BESIDE concept: a bank building and a cafe standing right next to each other side by side on a Haeundae street, clearly beside
+assets/graphics/bg/bg_w9v2_s06.png ||| ON-TOP/ABOVE concept: a striped beach parasol with a round beach ball resting clearly ON TOP of it, obvious above position, Haeundae sand
+assets/graphics/bg/bg_w9v2_s07.png ||| UNDER/BELOW concept: a beach umbrella with a little bag and a tiny crab tucked clearly UNDERNEATH it, obvious below position, Haeundae sand
+assets/graphics/bg/bg_w9v2_s08.png ||| INSIDE concept: an open sand bucket with seashells clearly INSIDE it, contents visible inside, on Haeundae beach
+assets/graphics/bg/bg_w9v2_s09.png ||| OUTSIDE concept: a cozy seaside house with a small car parked clearly OUTSIDE in front of it, clear inside-vs-outside contrast, Haeundae
+assets/graphics/bg/bg_w9v2_s10.png ||| BETWEEN concept: a small sandcastle placed clearly BETWEEN two striped beach umbrellas, obvious middle position, Haeundae
+assets/graphics/bg/bg_w9v2_s11.png ||| LEFT concept: a Haeundae street where a school building sits clearly on the LEFT side and open sky on the right
+assets/graphics/bg/bg_w9v2_s12.png ||| RIGHT concept: a Haeundae street where a neighborhood mart sits clearly on the RIGHT side
+assets/graphics/bg/bg_w9v2_s13.png ||| a friendly neighborhood mart storefront near Haeundae with fruit and grocery stands
+assets/graphics/bg/bg_w9v2_s14.png ||| a tidy neighborhood school gate near Haeundae
+assets/graphics/bg/bg_w9v2_s15.png ||| a Haeundae street with a small bank, a cafe, and a pocket park lined up in a row
+assets/graphics/bg/bg_w9v2_s16.png ||| a Haeundae seaside path curving toward a destination, gentle sense of going 'to' and being 'at' a place
+assets/graphics/bg/bg_w9v2_s17.png ||| open sandy Haeundae shore under a wide clear sky, gentle waves
+assets/graphics/bg/bg_w9v2_s18.png ||| a Haeundae seaside street crossroad with cafes and lamp posts
+assets/graphics/bg/bg_w9v2_s19.png ||| high aerial bird's-eye view of Haeundae beach and its streets meeting the sea
+assets/graphics/bg/bg_w9v2_s20.png ||| Haeundae beach at warm golden-pink sunset with the bridge lights and calm sea

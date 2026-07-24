@@ -1,0 +1,8 @@
+요청하신 조건과 기준 이미지(`madam_front_base_frame1.png`)의 캐릭터 디자인 및 싱글라인 팔·다리 스타일을 정확히 반영하여 이미지를 생성하고 지정된 경로에 PNG 형식으로 저장하였습니다.
+
+### 📌 작업 요약
+* **캐릭터**: 마담제이 (진갈색 탑번 쪽머리, 점 눈, 따뜻한 크림빛 살색, 코랄/살구색 V넥 조끼, 흰색 A라인 치마, 흰색 벙어리장갑, 흰색 운동화)
+* **팔·다리 특징**: 폭과 속채움이 없는 **단일 검정 선(single stroke line)** 유지
+* **포즈**: 두 팔을 머리 위로 들고 응원하듯 기뻐하는 정면 전신
+* **배경**: 순백색 (#ffffff), 그림자 및 텍스트 없음
+* **저장 위치**: [mj_w21_cheer_arms.png](file:///D:/Entertainments/DevEnvironment/autovideo/home_vocab/w21/poses2_raw/mj_w21_cheer_arms.png)

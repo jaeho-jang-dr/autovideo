@@ -1,0 +1,41 @@
+# W4 받침·대표 7음 — 남산서울타워 배경 13장 (사람없음·파스텔·씬별)
+# Flow 붙여넣기용. 각 씬 배경 = bg_w4_XX
+
+### S1 — 남산타워 원경(맑은 낮)
+Namsan Seoul Tower rising on the wooded mountain, clear day, Seoul, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S2 — 케이블카 오르기
+Namsan cable car ascending the green mountain slope toward the tower, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S3 — 타워 아래 광장
+Namsan Tower base plaza with the tall tower rising above, tidy and empty, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S4 — 전망대 서울 조망
+panoramic Seoul city view seen from Namsan Tower observation deck, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S5 — 사랑의 열쇠 펜스
+wall of colorful love padlocks on the Namsan fence, heart shapes, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S6 — 노을진 남산타워
+Namsan Seoul Tower at warm golden dusk, soft sky, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S7 — 남산 숲길
+forest walking path up Namsan, the tower peeking through the trees, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S8 — 타워 첨탑 클로즈
+close view of the Namsan Tower spire against a soft sky, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S9 — 서울 야경
+sparkling Seoul city night view from Namsan, city lights below, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S10 — 타워+스카이라인
+Namsan Tower with a sweeping pastel Seoul skyline panorama, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S11 — 케이블카 승강장
+Namsan cable car station platform with cabins, empty, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S12 — 야간 조명 타워
+Namsan Seoul Tower lit in soft colorful lights at night, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S13 — 타워 노을(아이코닉)
+iconic Namsan Seoul Tower at soft sunset, Seoul, calm, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9

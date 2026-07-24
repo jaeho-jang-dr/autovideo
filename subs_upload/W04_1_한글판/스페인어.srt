@@ -1,0 +1,115 @@
+1
+00:00:00,250 --> 00:00:07,526
+¡Hola! Hoy aprenderemos sobre las consonantes finales (batchim) del Hangeul y los siete sonidos representativos.
+
+2
+00:00:07,526 --> 00:00:13,090
+Descubramos los sonidos que sustentan las letras, ¿les parece?
+
+3
+00:00:13,790 --> 00:00:19,533
+Los caracteres Hangeul se componen de una consonante inicial, una vocal y una consonante final.
+
+4
+00:00:19,533 --> 00:00:27,250
+La consonante final es el sonido que va al final de un carácter, apoyando firmemente la consonante inicial y la vocal.
+
+5
+00:00:27,950 --> 00:00:35,705
+Por ejemplo, '강' [gang] se compone de 'ㄱ' [g], 'ㅏ' [a] y la consonante final 'ㅇ' [ng].
+
+6
+00:00:35,705 --> 00:00:39,970
+Se apilan tres bloques verticalmente para formar un carácter.
+
+7
+00:00:40,670 --> 00:00:46,967
+Sin embargo, solo hay siete sonidos pronunciados como consonantes finales.
+
+8
+00:00:46,967 --> 00:00:56,763
+El sonido 'ㄱ' [g] suena como 'euk', el sonido 'ㄴ' [n] suena como 'eun', el sonido 'ㄷ' [d] suena como 'eut', el sonido 'ㄹ' [r/l] suena como 'eul',
+
+9
+00:00:56,763 --> 00:01:05,625
+el sonido 'ㅁ' [m] suena como 'eum', el sonido 'ㅂ' [b] suena como 'eup', y el sonido 'ㅇ' [ng] suena como 'eung'.
+
+10
+00:01:05,625 --> 00:01:09,590
+A estos se les llama los siete sonidos representativos.
+
+11
+00:01:10,290 --> 00:01:15,280
+Primero, la consonante final 'ㄱ' [g] produce un sonido 'euk'.
+
+12
+00:01:15,280 --> 00:01:20,270
+Como en '책' [chaek] (libro), bloquea el interior de tu boca para cerrar el sonido.
+
+13
+00:01:20,970 --> 00:01:28,302
+La consonante final 'ㄴ' [n] produce un sonido 'eun', y como en '산' [san] (montaña), la punta de tu lengua toca tus encías superiores.
+
+14
+00:01:28,302 --> 00:01:36,020
+La consonante final 'ㄷ' [d] produce un sonido 'eut', y como en '옷' [ot] (ropa), bloqueas el sonido bruscamente con la punta de tu lengua.
+
+15
+00:01:37,290 --> 00:01:44,871
+La consonante final 'ㄹ' [r/l] produce un sonido 'eul', y como en '물' [mul] (agua), enrollas ligeramente la lengua.
+
+16
+00:01:44,871 --> 00:01:52,840
+La consonante final 'ㅁ' [m] produce un sonido 'eum', y como en '곰' [gom] (oso), cierras suavemente los labios.
+
+17
+00:01:53,540 --> 00:02:01,378
+La consonante final 'ㅂ' [b] produce un sonido 'eup', y como en '밥' [bap] (comida), cierras firmemente los labios para detener el sonido.
+
+18
+00:02:01,378 --> 00:02:09,020
+La consonante final 'ㅇ' [ng] produce un sonido 'eung', y como en '강' [gang] (río), es un sonido que resuena en tu nariz.
+
+19
+00:02:09,720 --> 00:02:15,383
+Curiosamente, otras consonantes finales también cambian a estos siete sonidos.
+
+20
+00:02:15,383 --> 00:02:21,675
+Las consonantes finales 'ㅋ' [k] o 'ㄲ' [kk] se convierten en el sonido 'euk' de 'ㄱ' [g].
+
+21
+00:02:21,675 --> 00:02:25,870
+Así, '부엌' [bu-eok] (cocina) se pronuncia como '부억' [bu-eok].
+
+22
+00:02:26,570 --> 00:02:35,655
+Las consonantes finales 'ㅅ' [s], 'ㅈ' [j], 'ㅊ' [ch], 'ㅌ' [t], 'ㅎ' [h] cambian al sonido 'ㄷ' [d].
+
+23
+00:02:35,655 --> 00:02:41,230
+Así, '꽃' [kkot] (flor) suena como '꼳' [kkot] y '옷' [ot] (ropa) suena como '옫' [ot].
+
+24
+00:02:41,930 --> 00:02:51,030
+La consonante final 'ㅍ' [p] cambia al sonido 'ㅂ' [b]. Así, '앞' [ap] (frente) se pronuncia como '압' [ap].
+
+25
+00:02:51,730 --> 00:03:00,876
+En resumen, todas las consonantes finales se pronuncian como uno de estos siete sonidos: 'ㄱ' [g] como 'euk', 'ㄴ' [n] como 'eun', 'ㄷ' [d] como 'eut',
+
+26
+00:03:00,876 --> 00:03:09,369
+'ㄹ' [r/l] como 'eul', 'ㅁ' [m] como 'eum', 'ㅂ' [b] como 'eup', y 'ㅇ' [ng] como 'eung'.
+
+27
+00:03:09,369 --> 00:03:18,080
+Solo necesitas recordar estos siete.
+
+28
+00:03:18,780 --> 00:03:27,772
+Hoy aprendimos sobre las consonantes finales y los siete sonidos representativos. Practica los sonidos de las consonantes finales con una palabra cada día.
+
+29
+00:03:27,772 --> 00:03:30,370
+¡Nos vemos la próxima!

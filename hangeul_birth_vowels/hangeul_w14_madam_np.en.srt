@@ -1,0 +1,328 @@
+1
+00:00:00,000 --> 00:00:00,362
+Hello!
+
+2
+00:00:00,362 --> 00:00:03,195
+Today we spend a day at Hyeopjae Beach in Jeju.
+
+3
+00:00:03,195 --> 00:00:08,740
+From waking up in the morning to falling asleep at night — let's describe our day in Korean!
+
+4
+00:00:11,560 --> 00:00:15,456
+'일과' [il-gwa] means daily routine — the things you do every day.
+
+5
+00:00:15,456 --> 00:00:17,510
+Today we learn them in order.
+
+6
+00:00:19,230 --> 00:00:20,077
+Key word!
+
+7
+00:00:20,077 --> 00:00:24,030
+'일어나다' [il-eo-na-da] — to wake up, to get up from sleep.
+
+8
+00:00:25,440 --> 00:00:30,709
+'아침에 일어나요' [a-chim-e-il-eo-na-yo] (I wake up in the morning).
+
+9
+00:00:30,709 --> 00:00:35,979
+'-에' [--e] marks time: 아침에 (in the morning),
+
+10
+00:00:35,979 --> 00:00:37,920
+밤에 (at night).
+
+11
+00:00:38,370 --> 00:00:42,268
+Ask '몇 시에 일어나요' [myeot-si-e-il-eo-na-yo]? (What time do you get up? ).
+
+12
+00:00:42,268 --> 00:00:44,780
+A great conversation starter.
+
+13
+00:00:45,230 --> 00:00:48,457
+'일곱 시에 일어나요' [il-gop-si-e-il-eo-na-yo] (I get up at seven).
+
+14
+00:00:48,457 --> 00:00:50,510
+Answer with the time.
+
+15
+00:00:50,960 --> 00:00:55,697
+'일찍' [il-jjik] (early) and '늦게' [neut-ge] (late).
+
+16
+00:00:55,697 --> 00:01:01,740
+Learn them as a pair: 일찍 일어나요, 늦게 자요.
+
+17
+00:01:02,190 --> 00:01:04,723
+'창문을 열어요' [chang-mun-eul-yeol-eo-yo] (I open the window).
+
+18
+00:01:04,723 --> 00:01:06,919
+Wow — the sea at Hyeopjae!
+
+19
+00:01:06,919 --> 00:01:09,030
+And what a beautiful sky.
+
+20
+00:01:10,990 --> 00:01:15,860
+'세수하다' [se-su-ha-da] means to wash your face — the first thing in the morning.
+
+21
+00:01:18,500 --> 00:01:20,942
+'이를 닦다' [i-reul-dak-da] (to brush your teeth).
+
+22
+00:01:20,942 --> 00:01:23,710
+Clean them well with a toothbrush.
+
+23
+00:01:24,160 --> 00:01:27,127
+'옷을 입다' [ot-eul-ip-da] (to put on clothes).
+
+24
+00:01:27,127 --> 00:01:31,154
+The opposite is '옷을 벗다' [ot-eul-beot-da] (to take off).
+
+25
+00:01:31,154 --> 00:01:33,380
+Learn them as a pair.
+
+26
+00:01:37,090 --> 00:01:45,150
+Use these to connect your routine: '세수하고 그다음에 아침을 먹어요' (I wash my face and then eat breakfast).
+
+27
+00:01:45,630 --> 00:01:50,661
+'아침을 먹다' [a-chim-eul-meok-da] (to eat breakfast).
+
+28
+00:01:50,661 --> 00:01:56,770
+아침/점심/저녁 + 먹다 — three meals a day.
+
+29
+00:01:57,220 --> 00:02:00,401
+'마시다' [ma-si-da] is for liquids.
+
+30
+00:02:00,401 --> 00:02:07,520
+Korean distinguishes 먹다 (eat) from 마시다 (drink).
+
+31
+00:02:07,970 --> 00:02:11,802
+Uh-oh — look at the clock! '늦었어요' [neut-eot-eo-yo] (We're late).
+
+32
+00:02:11,802 --> 00:02:14,330
+And we have to get to the cafe!
+
+33
+00:02:14,780 --> 00:02:19,530
+'서두르다' [seo-du-reu-da] means to hurry. Let's move quickly!
+
+34
+00:02:21,450 --> 00:02:24,980
+Key word! '일하다' [il-ha-da] — to work.
+
+35
+00:02:27,610 --> 00:02:35,700
+'-에서' [--e-seo] marks the place where an action happens: 카페에서 (at a cafe),
+
+36
+00:02:35,700 --> 00:02:37,470
+집에서 (at home).
+
+37
+00:02:39,390 --> 00:02:42,317
+Key word! '공부하다' [gong-bu-ha-da] — to study.
+
+38
+00:02:42,317 --> 00:02:44,930
+I study Korean every day.
+
+39
+00:02:45,860 --> 00:02:53,303
+'을/를' [eul-/-reul] marks the object: 한국어를 공부해요 (I study Korean),
+
+40
+00:02:53,303 --> 00:02:56,660
+책을 읽어요 (I read a book).
+
+41
+00:02:57,110 --> 00:03:01,910
+'책을 읽다' [chaek-eul-il-da] (to read a book). Sit quietly and read.
+
+42
+00:03:02,360 --> 00:03:06,850
+'쓰다' [sseu-da] means to write. Write it in your notebook.
+
+43
+00:03:08,880 --> 00:03:11,183
+'점심을 먹다' [jeom-sim-eul-meok-da] (to eat lunch).
+
+44
+00:03:11,183 --> 00:03:15,020
+Eating lunch with a sea view — the best!
+
+45
+00:03:15,930 --> 00:03:19,543
+Wait — look at the sky! '구름' [gu-reum] (clouds).
+
+46
+00:03:19,543 --> 00:03:21,350
+They are beautiful.
+
+47
+00:03:22,260 --> 00:03:26,920
+'쉬다' [swi-da] means to rest — to stop working and relax.
+
+48
+00:03:29,600 --> 00:03:33,443
+'일하고 나서 쉬어요' [il-ha-go-na-seo-swi-eo-yo] (I rest after working).
+
+49
+00:03:33,443 --> 00:03:37,180
+'-고 나서' [--go-na-seo] shows the order of actions.
+
+50
+00:03:37,630 --> 00:03:40,718
+'산책하다' [san-chaek-ha-da] — to take a leisurely walk.
+
+51
+00:03:40,718 --> 00:03:43,170
+Let's walk along the beach.
+
+52
+00:03:44,750 --> 00:03:47,548
+'해변을 걸어요' [hae-byeon-eul-geol-eo-yo] (I walk on the beach).
+
+53
+00:03:47,548 --> 00:03:50,870
+The white sand at Hyeopjae is so soft.
+
+54
+00:03:51,320 --> 00:03:56,380
+'수영하다' [su-yeong-ha-da] (to swim). Let's swim in the emerald water!
+
+55
+00:03:56,830 --> 00:03:59,304
+'사진을 찍다' [sa-jin-eul-jjik-da] (to take a photo).
+
+56
+00:03:59,304 --> 00:04:02,970
+One shot with Biyangdo Island behind us!
+
+57
+00:04:03,420 --> 00:04:07,810
+'재미있어요' [jae-mi-it-eo-yo]! (It's fun! ). What a great day.
+
+58
+00:04:08,260 --> 00:04:12,750
+After all that play — '피곤해요' [pi-gon-hae-yo] (I'm tired).
+
+59
+00:04:14,300 --> 00:04:19,080
+'저녁을 먹다' [jeo-nyeok-eul-meok-da] (to eat dinner) — the last meal of the day.
+
+60
+00:04:19,530 --> 00:04:23,679
+'자기 전에 씻어요' [ja-gi-jeon-e-ssit-eo-yo] (I wash before sleeping).
+
+61
+00:04:23,679 --> 00:04:27,380
+'-기 전에' [--gi-jeon-e] = before doing something.
+
+62
+00:04:27,830 --> 00:04:32,340
+'저녁을 먹은 후에 산책해요' (I walk after dinner).
+
+63
+00:04:32,340 --> 00:04:36,040
+'-ㄴ 후에' [--n-hu-e] = after doing something.
+
+64
+00:04:36,490 --> 00:04:37,993
+'전화하다' [jeon-hwa-ha-da] (to call).
+
+65
+00:04:37,993 --> 00:04:42,060
+Call your family and tell them about your day.
+
+66
+00:04:43,520 --> 00:04:50,670
+'보다' [bo-da] means to watch/see. 텔레비전을 봐요 (I watch TV).
+
+67
+00:04:51,120 --> 00:04:53,849
+'노을을 보다' [no-eul-eul-bo-da] (to watch the sunset).
+
+68
+00:04:53,849 --> 00:04:56,930
+The sunset at Hyeopjae is stunning.
+
+69
+00:04:57,380 --> 00:04:59,755
+'아름다워요' [a-reum-da-wo-yo] (It's beautiful).
+
+70
+00:04:59,755 --> 00:05:02,320
+The whole sky turns orange.
+
+71
+00:05:04,690 --> 00:05:09,710
+'샤워하다' [sya-wo-ha-da] (to take a shower). Wash up before bed.
+
+72
+00:05:10,160 --> 00:05:12,465
+'일기를 쓰다' [il-gi-reul-sseu-da] (to write a diary).
+
+73
+00:05:12,465 --> 00:05:15,510
+Write about your day — a great habit.
+
+74
+00:05:16,780 --> 00:05:22,040
+Wait — the sky is full of '별' [byeol] (stars)!
+
+75
+00:05:22,490 --> 00:05:26,745
+Sitting on the '모래' [mo-rae] (sand), watching the stars.
+
+76
+00:05:26,745 --> 00:05:29,280
+What a lovely day it's been.
+
+77
+00:05:29,730 --> 00:05:34,460
+Key word! '자다' [ja-da] — to sleep. The end of the day.
+
+78
+00:05:34,910 --> 00:05:40,421
+'열한 시에 자요' [yeol-han-si-e-ja-yo] (I sleep at eleven). Time + 자다.
+
+79
+00:05:40,421 --> 00:05:42,520
+The day is done.
+
+80
+00:05:43,040 --> 00:05:48,985
+Let's review: 일어나다 (wake up), 일하다 (work),
+
+81
+00:05:48,985 --> 00:05:55,510
+공부하다 (study), 자다 (sleep). How about your day?
+
+82
+00:05:55,510 --> 00:06:00,730
+Tell us in the comments. Good night!
+

@@ -1,0 +1,120 @@
+1
+00:00:00,000 --> 00:00:02,309
+Hello! Today we'll learn 'liaison',
+
+2
+00:00:02,309 --> 00:00:04,091
+where sounds link smoothly,
+
+3
+00:00:04,091 --> 00:00:07,060
+and the sound changes behind it. Let's begin!
+
+4
+00:00:09,570 --> 00:00:13,519
+When a syllable with a batchim is followed by one starting with 'ㅇ',
+
+5
+00:00:13,519 --> 00:00:15,783
+the batchim slides over into that spot.
+
+6
+00:00:15,783 --> 00:00:17,990
+This smooth linking is called liaison.
+
+7
+00:00:22,790 --> 00:00:24,258
+For example,
+
+8
+00:00:24,258 --> 00:00:31,720
+'음악' (music) links its 'ㄱ' batchim over and sounds like '으막'.
+
+9
+00:00:31,720 --> 00:00:35,390
+You write 음악, but you read 으막.
+
+10
+00:00:41,480 --> 00:00:47,364
+'옷이' (the clothes) links its 'ㅅ' batchim over to become '오시'.
+
+11
+00:00:47,364 --> 00:00:51,030
+The batchim glides into the next slot.
+
+12
+00:00:54,270 --> 00:00:59,885
+'꽃이' (the flower) links its 'ㅊ' batchim over to become '꼬치'.
+
+13
+00:00:59,885 --> 00:01:04,470
+The batchim sound carries into the next syllable.
+
+14
+00:01:07,010 --> 00:01:12,563
+Practice with words: '책을' reads as '채글',
+
+15
+00:01:12,563 --> 00:01:16,033
+and '한국어' reads as '한구거'.
+
+16
+00:01:16,033 --> 00:01:19,920
+Hear the batchim glide over?
+
+17
+00:01:23,370 --> 00:01:29,539
+A 'ㅎ' batchim weakens and almost disappears before a vowel.
+
+18
+00:01:29,539 --> 00:01:32,990
+So '좋아요' sounds soft, like '조아요'.
+
+19
+00:01:37,720 --> 00:01:44,176
+'웃어요' reads as '우서요', and '있어요' reads as '이써요'.
+
+20
+00:01:44,176 --> 00:01:49,670
+The batchim links over — that's liaison.
+
+21
+00:01:52,670 --> 00:01:54,366
+You write the batchim as it is,
+
+22
+00:01:54,366 --> 00:01:56,280
+but you read it by gliding it over.
+
+23
+00:01:56,280 --> 00:02:00,930
+Spelling and pronunciation differ — knowing this makes your Korean much more natural.
+
+24
+00:02:05,700 --> 00:02:09,695
+In sum, when a batchim meets 'ㅇ',
+
+25
+00:02:09,695 --> 00:02:13,085
+it slides over into liaison.
+
+26
+00:02:13,085 --> 00:02:16,353
+'음악' to '으막', '옷이' to '오시'.
+
+27
+00:02:16,353 --> 00:02:19,380
+Read it flowing smoothly.
+
+28
+00:02:25,930 --> 00:02:28,421
+Today we learned liaison and sound rules.
+
+29
+00:02:28,421 --> 00:02:31,216
+Look for liaison in your favorite song lyrics.
+
+30
+00:02:31,216 --> 00:02:32,310
+See you next time!
+

@@ -1,0 +1,271 @@
+1
+00:00:00,000 --> 00:00:04,043
+¡Hola! En Corea, a menudo escucharás '어디에 있어요?
+
+2
+00:00:04,043 --> 00:00:05,419
+' —¿dónde está?
+
+3
+00:00:05,419 --> 00:00:09,118
+Hoy aprenderemos a decir dónde están las cosas.
+
+4
+00:00:09,118 --> 00:00:10,150
+¡Empecemos!
+
+5
+00:00:10,600 --> 00:00:14,895
+La ubicación en coreano sigue un orden sencillo: lugar,
+
+6
+00:00:14,895 --> 00:00:17,790
+luego una palabra de posición, y después '에'.
+
+7
+00:00:17,790 --> 00:00:21,338
+Como '학교 앞에', que significa delante de la escuela.
+
+8
+00:00:21,338 --> 00:00:25,260
+Aprendamos las palabras de posición una por una.
+
+9
+00:00:25,710 --> 00:00:31,212
+'앞' significa el frente. En coreano, '앞'. Por ejemplo,
+
+10
+00:00:31,212 --> 00:00:36,715
+'학교 앞에서 만나요', que significa reunámonos frente a la escuela.
+
+11
+00:00:36,715 --> 00:00:39,410
+Ahora dilo conmigo: '앞'.
+
+12
+00:00:39,860 --> 00:00:44,442
+'뒤' significa la parte de atrás. '뒤'. Por ejemplo,
+
+13
+00:00:44,442 --> 00:00:50,510
+'집 뒤에 공원이 있어요', que significa hay un parque detrás de la casa.
+
+14
+00:00:50,510 --> 00:00:53,110
+Repite conmigo: '뒤'.
+
+15
+00:00:53,560 --> 00:00:58,969
+'옆' significa al lado, junto a. '옆'. Por ejemplo,
+
+16
+00:00:58,969 --> 00:01:05,115
+'은행 옆에 카페가 있어요', que significa hay una cafetería al lado del banco.
+
+17
+00:01:05,115 --> 00:01:06,590
+Dilo: '옆'.
+
+18
+00:01:07,040 --> 00:01:12,332
+'위' significa sobre o encima. '위'. Por ejemplo,
+
+19
+00:01:12,332 --> 00:01:18,153
+'책상 위에 책이 있어요', que significa hay un libro sobre el escritorio.
+
+20
+00:01:18,153 --> 00:01:19,740
+Repite: '위'.
+
+21
+00:01:20,190 --> 00:01:25,938
+'밑' significa debajo, abajo. '밑'. Por ejemplo,
+
+22
+00:01:25,938 --> 00:01:32,668
+'의자 밑에 가방이 있어요', que significa hay un bolso debajo de la silla.
+
+23
+00:01:32,668 --> 00:01:34,350
+Dilo: '밑'.
+
+24
+00:01:34,800 --> 00:01:39,696
+'안' significa dentro. '안'. Por ejemplo,
+
+25
+00:01:39,696 --> 00:01:46,271
+'가방 안에 책이 있어요', que significa hay un libro dentro del bolso.
+
+26
+00:01:46,271 --> 00:01:47,950
+Repite: '안'.
+
+27
+00:01:48,400 --> 00:01:53,708
+'밖' significa fuera. '밖'. Por ejemplo,
+
+28
+00:01:53,708 --> 00:02:01,081
+'집 밖에 자동차가 있어요', que significa hay un coche fuera de la casa.
+
+29
+00:02:01,081 --> 00:02:02,850
+Dilo: '밖'.
+
+30
+00:02:03,300 --> 00:02:08,461
+'사이' significa entre. '사이'. Por ejemplo,
+
+31
+00:02:08,461 --> 00:02:15,794
+'은행과 카페 사이에 있어요', que significa está entre el banco y la cafetería.
+
+32
+00:02:15,794 --> 00:02:17,560
+Repite: '사이'.
+
+33
+00:02:18,010 --> 00:02:23,814
+'왼쪽' significa el lado izquierdo. '왼쪽'. Por ejemplo,
+
+34
+00:02:23,814 --> 00:02:29,355
+'왼쪽에 학교가 있어요', que significa la escuela está a la izquierda.
+
+35
+00:02:29,355 --> 00:02:31,070
+Dilo: '왼쪽'.
+
+36
+00:02:31,520 --> 00:02:37,662
+'오른쪽' significa el lado derecho. '오른쪽'. Por ejemplo,
+
+37
+00:02:37,662 --> 00:02:43,150
+'오른쪽에 마트가 있어요', que significa el supermercado está a la derecha.
+
+38
+00:02:43,150 --> 00:02:44,980
+Repite: '오른쪽'.
+
+39
+00:02:45,430 --> 00:02:51,254
+Ahora algunos nombres de lugares. '마트' es una tienda grande, un supermercado.
+
+40
+00:02:51,254 --> 00:02:55,796
+'마트에서 우유를 사요', que significa compro leche en el supermercado.
+
+41
+00:02:55,796 --> 00:02:57,310
+Dilo: '마트'.
+
+42
+00:02:57,760 --> 00:03:00,202
+'학교' significa escuela.
+
+43
+00:03:00,202 --> 00:03:04,542
+'학교에 걸어서 가요', que significa voy caminando a la escuela.
+
+44
+00:03:04,542 --> 00:03:09,697
+La '에' después de un lugar indica dirección.
+
+45
+00:03:09,697 --> 00:03:11,460
+Repite: '학교'.
+
+46
+00:03:11,910 --> 00:03:18,321
+'은행' es un banco, '카페' es una cafetería, '공원' es un parque.
+
+47
+00:03:18,321 --> 00:03:20,504
+'은행 옆에 카페가 있어요'.
+
+48
+00:03:20,504 --> 00:03:26,779
+Y '공원 안에서 산책해요', que significa doy un paseo por el parque.
+
+49
+00:03:26,779 --> 00:03:31,280
+Úsalas con las palabras de posición.
+
+50
+00:03:31,730 --> 00:03:33,512
+Una regla pequeña.
+
+51
+00:03:33,512 --> 00:03:38,622
+Usa '에' para la ubicación y '에서' para las acciones.
+
+52
+00:03:38,622 --> 00:03:41,593
+'학교에 가요' indica dirección,
+
+53
+00:03:41,593 --> 00:03:48,960
+mientras que '학교에서 공부해요', que significa estudio en la escuela, indica una acción allí.
+
+54
+00:03:49,410 --> 00:03:52,520
+Practiquemos una situación real.
+
+55
+00:03:52,520 --> 00:03:57,283
+Alguien pregunta '마트가 어디에 있어요? ', que significa ¿dónde está el supermercado?
+
+56
+00:03:57,283 --> 00:04:02,824
+Y tú respondes '학교 앞에 있어요', que significa está delante de la escuela.
+
+57
+00:04:02,824 --> 00:04:03,310
+¡Bien!
+
+58
+00:04:03,760 --> 00:04:09,591
+Una más. '은행이 어디에 있어요? ', que significa ¿dónde está el banco?
+
+59
+00:04:09,591 --> 00:04:18,210
+Puedes responder '카페 옆에 있어요', que significa al lado de la cafetería, o '공원과 카페 사이에 있어요'.
+
+60
+00:04:18,660 --> 00:04:21,151
+Ahora demos indicaciones.
+
+61
+00:04:21,151 --> 00:04:23,835
+'왼쪽으로 가세요', que significa ve a la izquierda.
+
+62
+00:04:23,835 --> 00:04:29,009
+Luego '학교 앞에서 오른쪽', que significa gira a la derecha delante de la escuela.
+
+63
+00:04:29,009 --> 00:04:30,830
+¡Lo estás haciendo genial!
+
+64
+00:04:31,280 --> 00:04:36,960
+Repasemos las palabras de posición de hoy.
+
+65
+00:04:36,960 --> 00:04:43,270
+'앞' delante, '뒤' detrás, '옆' al lado, '위' encima,
+
+66
+00:04:43,270 --> 00:04:51,001
+'밑' debajo, '안' dentro, '밖' fuera, '사이' en medio,
+
+67
+00:04:51,001 --> 00:04:58,100
+'왼쪽' izquierda, '오른쪽' derecha. Intenta usarlas hoy.
+
+68
+00:04:58,100 --> 00:05:00,940
+¡Nos vemos la próxima vez!

@@ -1,0 +1,188 @@
+1
+00:00:00,000 --> 00:00:00,431
+안녕하세요!
+
+2
+00:00:00,431 --> 00:00:04,020
+Today we'll learn Korean numbers, dates, and time.
+
+3
+00:00:04,020 --> 00:00:07,609
+Just knowing numbers makes daily life much easier.
+
+4
+00:00:07,609 --> 00:00:08,470
+Let's start!
+
+5
+00:00:12,880 --> 00:00:17,500
+Korean has two number systems: native 'goyueo' and Sino 한자어.
+
+6
+00:00:17,500 --> 00:00:20,580
+They're used differently, so learn both.
+
+7
+00:00:21,990 --> 00:00:29,880
+First, native numbers: '하나', '둘', '셋', '넷', '다섯'.
+
+8
+00:00:29,880 --> 00:00:33,100
+Follow along slowly.
+
+9
+00:00:34,750 --> 00:00:40,499
+Next, '여섯', '일곱', '여덟', '아홉', '열'.
+
+10
+00:00:40,499 --> 00:00:45,740
+It helps to memorize up to ten.
+
+11
+00:00:47,630 --> 00:00:51,814
+Native numbers count things and tell age.
+
+12
+00:00:51,814 --> 00:00:56,100
+Like 사과 세 개 (three apples), 스무 살 (twenty).
+
+13
+00:00:56,550 --> 00:01:04,803
+When counting, the shape changes: 하나 to '한 개',
+
+14
+00:01:04,803 --> 00:01:08,930
+둘 to '두 개', 셋 to '세 개'.
+
+15
+00:01:11,210 --> 00:01:17,208
+Age uses native too: '스무 살', '서른 살'.
+
+16
+00:01:17,208 --> 00:01:22,540
+Just remember 스물 becomes '스무 살'.
+
+17
+00:01:23,490 --> 00:01:29,980
+Now Sino numbers: '일', '이', '삼', '사', '오'.
+
+18
+00:01:29,980 --> 00:01:34,770
+Pronounce them short and clear.
+
+19
+00:01:36,730 --> 00:01:41,593
+And '육', '칠', '팔', '구', '십'.
+
+20
+00:01:41,593 --> 00:01:47,150
+Sino numbers are short and easy.
+
+21
+00:01:49,470 --> 00:01:57,189
+Big numbers are Sino too: '십' is 10, '백' is 100,
+
+22
+00:01:57,189 --> 00:02:01,370
+'천' is 1000, '만' is 10000.
+
+23
+00:02:09,140 --> 00:02:13,737
+Zero is read two ways: '영' or '공'.
+
+24
+00:02:13,737 --> 00:02:18,740
+In phone numbers, we usually say '공'.
+
+25
+00:02:24,690 --> 00:02:29,990
+Sino numbers are for dates, prices, phone numbers.
+
+26
+00:02:29,990 --> 00:02:31,580
+Like 삼 월, 오천 원.
+
+27
+00:02:35,940 --> 00:02:41,860
+For prices, add '원' to Sino numbers.
+
+28
+00:02:41,860 --> 00:02:44,820
+Say '삼천 원', '만 원'.
+
+29
+00:02:47,770 --> 00:02:52,994
+Phone numbers are read digit by digit: '공일공... '.
+
+30
+00:02:52,994 --> 00:02:55,020
+Remember, 0 is '공'.
+
+31
+00:02:59,190 --> 00:03:03,402
+Time is fun: '시' (hour) uses native,
+
+32
+00:03:03,402 --> 00:03:07,730
+'분' (minute) uses Sino. You mix them!
+
+33
+00:03:10,700 --> 00:03:15,505
+So you say '세 시 삼십 분'.
+
+34
+00:03:15,505 --> 00:03:21,620
+시 is native 세, 분 is Sino 삼십.
+
+35
+00:03:22,070 --> 00:03:29,390
+A day splits into 오전 (AM) and 오후 (PM).
+
+36
+00:03:29,390 --> 00:03:36,710
+Morning 오전, evening 오후. Like '오후 세 시'.
+
+37
+00:03:37,160 --> 00:03:45,227
+Months add '월' to Sino: '일월', '이월'… up to '십이월',
+
+38
+00:03:45,227 --> 00:03:47,580
+twelve months.
+
+39
+00:03:49,950 --> 00:03:56,078
+The day's '일' is Sino too. '오늘은 며칠?
+
+40
+00:03:56,078 --> 00:03:58,880
+' Answer '십오 일'.
+
+41
+00:04:00,980 --> 00:04:11,185
+Days of the week: '월요일', '화요일', '수요일', '목요일',
+
+42
+00:04:11,185 --> 00:04:15,720
+'금요일', '토요일', '일요일'.
+
+43
+00:04:16,770 --> 00:04:20,385
+Recap! Counting and age use native; dates, time,
+
+44
+00:04:20,385 --> 00:04:22,870
+prices use Sino; time mixes both.
+
+45
+00:04:29,820 --> 00:04:32,927
+Today we learned numbers, dates, and time.
+
+46
+00:04:32,927 --> 00:04:36,108
+Try saying today's date and time in Korean.
+
+47
+00:04:36,108 --> 00:04:37,070
+다음 시간에 또 만나요!
+

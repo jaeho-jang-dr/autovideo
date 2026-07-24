@@ -1,0 +1,10 @@
+# 졸라맨 — 왼손으로 설명하며 가리키기 (Flow에 붙여넣어 생성)
+# 사장님이 직접 Flow에서 생성용. 이미지 모드, 흰 배경. 생성 후 파일명: zollaman_point_left.png
+# 핵심: 기존 jjolla-man 스타일 100% 동일 + 단정한 머리(닭머리 방지) + 왼팔이 화면 오른쪽(콘텐츠)을 가리킴
+
+# ===== 붙여넣기용 전체 프롬프트 (이 아래 한 덩어리) =====
+Hand-drawn rough black ink doodle of a simple stick-figure MAN (Korean jjolla-man / classic stickman): one big round circle head with two small simple dot eyes and a tiny short mouth line, SHORT NEAT TIDY solid-BLACK hair sketched smoothly on top of the round head (clean and neat, NOT spiky, NOT messy, NOT bushy), a thin single-line neck and a thin single-line torso, thin straight arms and legs each drawn as a single thin pen stroke, small simple stick hands, small simple shoes. He is standing and cheerfully EXPLAINING like a friendly teacher: his LEFT arm is raised and fully extended out to point toward the RIGHT side of the frame, index finger clearly pointing to the right at the lesson content, while his other arm rests relaxed near his body; friendly open explaining expression, front-facing full-body pose, body turned very slightly toward the content he is pointing at. Loose sketchy hand-drawn pen lines, slightly wobbly imperfect outlines, minimalist whiteboard-doodle sketch-animation style. Solid flat pure white background. ONE single full-body figure only, centered, no other figures, no character sheet, no text, no signatures, no captions
+# =====================================================
+
+# (참고) gen_assets_flow.py 자동생성용 포즈 한 줄 형식:
+# zollaman_point_left | cheerfully explaining like a teacher, LEFT arm raised and extended pointing to the RIGHT side at the lesson content, index finger out, neat tidy short black hair

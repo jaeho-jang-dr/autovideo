@@ -1,0 +1,28 @@
+<raw_notification>
+<task_notification>
+<task_id>43b9cacb-7861-4b07-8af0-de301843d0af/task-10</task_id>
+<status>COMPLETED</status>
+<exit_code>0</exit_code>
+</task_notification>
+</raw_notification>
+
+<raw_notification>
+<task_notification>
+<task_id>43b9cacb-7861-4b07-8af0-de301843d0af/task-15</task_id>
+<status>COMPLETED</status>
+<exit_code>0</exit_code>
+</task_notification>
+</raw_notification>
+
+요청하신 **마담제이 '낮은 키(crouch_low)' 전신 이미지** 생성이 완료되어 지정된 경로에 PNG 파일로 저장되었습니다.
+
+### 🎨 생성 결과 요약
+* **캐릭터 스타일 유지**:
+  * **팔·다리**: 기준 이미지와 동일하게 **폭과 채움이 없는 얇은 단일 검정 선(single stroke line)**으로 구현 (튜브/살색 채움 금지 준수)
+  * **얼굴 및 피부**: Warm Cream 살색 피부톤, 둥근 진갈색 탑번 쪽머리(양옆 잔머리), 점 두 개 눈, 미소, 연한 분홍 볼터치
+  * **의상**: 코랄/살구색 V넥 조끼(가슴 펜 주머니 디테일), 흰색 A라인 무릎길이 치마, 흰 벙어리장갑 손, 흰 운동화
+* **포즈**: 정면에서 무릎을 굽히고 한 손을 무릎 아래로 내린 낮은 키(crouch_low) 전신 포즈
+* **배경**: 순백색(`#ffffff`), 바닥선·그림자·워터마크 없음
+
+### 📁 저장 위치
+* [mj_w21_crouch_low.png](file:///D:/Entertainments/DevEnvironment/autovideo/home_vocab/w21/poses2_raw/mj_w21_crouch_low.png)

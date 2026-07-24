@@ -1,0 +1,15 @@
+# W6 홍대 배경 06~11 (Flow 생성용) — 01~05는 이미 완료
+# ★ 저장 위치: assets/graphics/bg/  ★ 파일명: bg_w6_06.png ~ bg_w6_11.png
+# 스타일 = W5(북촌)와 동일 파스텔 스토리북. 이미지모드, 16:9, 왼쪽·하단은 캐릭터 자리로 비움.
+
+bg_w6_06: a cozy Hongdae book-street corner with a small library cafe and open book stalls, warm afternoon light, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w6_07: a calm Hongdae Playground park square with benches, trees and a small street stage, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w6_08: a cheerful Hongdae street corner with a little music and record shop, guitars in the window, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w6_09: a quiet Hongdae evening street with warm glowing cafe windows and hanging lanterns, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w6_10: a wide Hongdae street panorama with colorful mural walls, cafes and cute shops, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w6_11: an iconic Hongdae street at soft golden sunset, mural walls and cozy shops, calm and warm, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9

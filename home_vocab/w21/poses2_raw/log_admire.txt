@@ -1,0 +1,11 @@
+요청하신 조건과 기준 이미지([madam_front_base_frame1.png](file:///D:/Entertainments/DevEnvironment/autovideo/W21/madam_front_base_frame1.png))의 디자인 스타일을 준수하여 **마담제이 감탄 포즈(mj_w21_admire)** 이미지를 생성하고 지정된 경로에 저장 완료했습니다.
+
+### ✨ 적용된 주요 사항
+- **팔·다리 표현**: 기준 이미지 그대로 **단 하나의 얇은 검정 선(Single stroke line)**으로 구현 (튜브/살색 채움 없음)
+- **손/발**: 손목 끝 흰색 둥근 벙어리장갑, 발끝 흰색 운동화
+- **얼굴 및 피부**: 순백색이 아닌 따뜻한 크림빛 살색, 연한 볼 터치, 눈을 반짝이며 감탄하는 표정
+- **의상**: 코랄/살구색 V넥 선생님 조끼 + 흰색 A라인 무릎길이 치마
+- **배경 및 전신**: 순백색(#FFFFFF) 배경, 그림자/바닥선/워터마크 없는 머리끝~발끝 전신
+
+### 📁 저장 위치
+- [`D:/Entertainments/DevEnvironment/autovideo/home_vocab/w21/poses2_raw/mj_w21_admire.png`](file:///D:/Entertainments/DevEnvironment/autovideo/home_vocab/w21/poses2_raw/mj_w21_admire.png)

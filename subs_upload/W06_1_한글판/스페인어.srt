@@ -1,0 +1,87 @@
+1
+00:00:00,000 --> 00:00:07,840
+¡Hola! Hoy aprenderemos sobre los sonidos de enlace naturales (yeon-eum) y los cambios fonológicos donde las letras se conectan de forma natural.
+
+2
+00:00:07,840 --> 00:00:09,120
+¡Empecemos juntos!
+
+3
+00:00:09,570 --> 00:00:17,803
+Cuando un final de sílaba (batchim) es seguido por una sílaba que comienza con 'ㅇ' [silent], el batchim se mueve a esa posición de 'ㅇ' [silent] y se pronuncia.
+
+4
+00:00:17,803 --> 00:00:22,340
+Este enlace natural se llama yeon-eum.
+
+5
+00:00:22,790 --> 00:00:34,190
+Por ejemplo, '음악' [eum-ak] (música) se pronuncia '으막' [eu-mak] (música) porque el batchim 'ㄱ' [g] se mueve a la siguiente sílaba.
+
+6
+00:00:34,190 --> 00:00:41,030
+Se escribe '음악' (música), pero se lee '으막' (música).
+
+7
+00:00:41,480 --> 00:00:47,766
+'옷이' [ot-i] (la ropa) también se convierte en '오시' [o-si] (la ropa) a medida que el batchim 'ㅅ' [s] se desplaza.
+
+8
+00:00:47,766 --> 00:00:53,820
+Es como si el batchim se deslizara al siguiente lugar.
+
+9
+00:00:54,270 --> 00:01:00,907
+'꽃이' [kkot-i] (la flor) se convierte en '꼬치' [kko-chi] (la flor) a medida que el batchim 'ㅊ' [ch] se mueve.
+
+10
+00:01:00,907 --> 00:01:06,560
+El sonido batchim se traslada directamente a la siguiente sílaba.
+
+11
+00:01:07,010 --> 00:01:18,581
+Practiquemos con palabras. '책을' [chaek-eul] (el libro) se lee '채글' [chae-geul] (el libro), y '한국어' [han-guk-eo] (idioma coreano) se lee '한구거' [han-gu-geo] (idioma coreano).
+
+12
+00:01:18,581 --> 00:01:22,920
+El batchim se mueve de forma natural, ¿verdad?
+
+13
+00:01:23,370 --> 00:01:29,954
+El batchim 'ㅎ' [h] se debilita antes de una vocal y casi desaparece.
+
+14
+00:01:29,954 --> 00:01:37,270
+Así que '좋아요' [jo-a-yo] (me gusta) se pronuncia suavemente como '조아요' [jo-a-yo] (me gusta).
+
+15
+00:01:37,720 --> 00:01:46,524
+'웃어요' [ut-eo-yo] (ríe) se pronuncia '우서요' [u-seo-yo] (ríe), y '있어요' [it-eo-yo] (hay/está) se pronuncia '이써요' [i-sseo-yo] (hay/está).
+
+16
+00:01:46,524 --> 00:01:52,220
+Esto es yeon-eum, donde el batchim se mueve a la siguiente sílaba.
+
+17
+00:01:52,670 --> 00:01:58,715
+Al escribir, se mantiene el batchim, pero al leer, se enlaza de forma natural.
+
+18
+00:01:58,715 --> 00:02:05,250
+La forma escrita y la forma hablada son diferentes. Saber esto hará que tu coreano suene mucho más natural.
+
+19
+00:02:05,700 --> 00:02:14,948
+En resumen, cuando un batchim se encuentra con 'ㅇ' [silent], se mueve a esa posición, creando un sonido de enlace (yeon-eum).
+
+20
+00:02:14,948 --> 00:02:25,480
+Como '음악' [eum-ak] (música) que se convierte en '으막' [eu-mak] (música) y '옷이' [ot-i] (la ropa) que se convierte en '오시' [o-si] (la ropa). Intenta leerlos con fluidez.
+
+21
+00:02:25,930 --> 00:02:32,955
+Hoy aprendimos sobre yeon-eum y los cambios fonológicos. Intenta encontrar sonidos de enlace en la letra de tus canciones favoritas.
+
+22
+00:02:32,955 --> 00:02:35,030
+¡Hasta la próxima!

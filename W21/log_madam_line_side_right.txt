@@ -1,0 +1,15 @@
+요청하신 **마담제이 캐릭터의 우측 측면 전신 이미지**가 기준 이미지([madam_jay_base_front.png](file:///D:/Entertainments/DevEnvironment/autovideo/assets/characters/madam_jay_base_front.png)) 스타일을 완벽히 유지하여 생성 및 저장되었습니다.
+
+### 🎨 작업 결과 요약
+1. **기준 이미지 참조 및 스타일 유지**:
+   - 진갈색 탑번(쪽머리) 및 잔머리 표현
+   - 코랄/살구색 V넥 조끼 및 흰색 A라인 치마
+   - 굵은 검정 외곽선 플랫 카툰 스타일 및 큰 머리·작은 몸통 비율
+2. **팔·다리 싱글라인(Single Stroke Line) 적용**:
+   - 튜브나 닫힌 도형 형태가 아닌, **단 하나의 얇은 검정 선(stick stroke)** 스타일을 완벽히 유지
+   - 손끝에 흰색 벙어리장갑, 발끝에 흰색 라운드 슬립온 운동화 연결
+3. **포즈 및 배경**:
+   - 완전한 우측 측면(facing right) 전신 포즈
+   - 순백색(#ffffff) 배경, 바닥선/그림자/워터마크 없는 깔끔한 컷아웃 스타일
+
+📁 **저장 위치**: [madam_line_side_right.png](file:///D:/Entertainments/DevEnvironment/autovideo/W21/madam_line_side_right.png)

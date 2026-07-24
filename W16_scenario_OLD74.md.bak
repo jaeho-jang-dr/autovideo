@@ -1,0 +1,126 @@
+# W16 시나리오 — 취미생활과 빈도 묘사 (인준 · 남이섬) ★10분+ 보강판
+
+> **주제:** 취미(hobby) 어휘 + **빈도 표현**(매일·자주·가끔·일주일에 세 번 …)
+> **캐릭터:** 인준(남) — 남이섬 액티비티 포즈 다수
+> **배경:** **남이섬**(강원 춘천) — 메타세쿼이아길·강변·잔디밭·자전거길·짚와이어·동물방사장
+> **길이:** ~74씬 / **약 10분 30초**(나레이션·모션 보강판, EN ~4800자)
+> **컨셉:** "취미 부자" 인준이 남이섬을 돌며 취미 자랑 → 반전(야구·게임 "거의 안 해요") → 메타(진짜 매일 = "한국어 공부")
+
+---
+
+## 학습 목표
+**① 취미 어휘:** 자전거·산책·조깅·사진·피크닉·연날리기·프리스비·배드민턴·낚시·독서·강아지산책·동물구경·그림·짚와이어·캠핑·줄넘기·스케이트보드 / (집) 피아노·요리·영화·게임·노래·여행
+**② 빈도 부사 사다리:** 항상 → 보통 → 자주 → 가끔 → 거의 안 → 전혀 안
+**③ 빈도 세기:** 하루에 N번 · 일주일에 N번 · 한 달에 한 번 · 일 년에 한 번 · ~마다
+**④ 핵심 문형:** 취미가 뭐예요? / 제 취미는 ~예요 / ~는 것을 좋아해요 / 얼마나 자주 ~해요? / 일주일에 세 번 ~해요
+
+> **자막 원칙:** 단어 `'취미' [chwi-mi] (hobby)` / 문장 `'취미가 뭐예요?' (What's your hobby?)`. 로마자는 SRT에만, 화면 글자는 한글, 발음기호는 나레이터가 읽지 않음.
+
+## 배경 20종 (agy, 플랫 파스텔, 글자 없음)
+dock · metasequoia · ginkgo · cherry_lane · pine_forest · riverside · lawn · bike_path · zipwire ·
+fishing_pier · animal_zone · art_plaza · cafe · campsite · winter_lane · autumn_tunnel · bench_rest ·
+home_living · kitchen · dock_sunset
+
+## 인준 포즈 ~38종 (640px 통일·투명 컷아웃·DB)
+활동24 + 제스처9 + **걷기 사이클(walk_left/right ×2프레임)** — 모션 보강용.
+
+---
+
+# 씬별 시나리오 (74씬) — ★나레이션·모션 보강
+
+> 표기: **[씬] 자막(KO) | 화면글자 | 나레이션(KO) → (EN) | 배경 | 인준 동작(2~3) | 빈도**
+
+## 1막 — 도입: 남이섬과 취미 (S1–S9)
+- **S1** 남이섬에 왔어요! | `남이섬` | "안녕하세요, 여러분! 저는 인준이에요. 만나서 반가워요. 오늘은 아주 아름다운 섬, 남이섬에 왔어요. 날씨도 좋고 나무도 정말 많죠?" → (Hello, everyone! I'm Injun, nice to meet you. Today I'm on a beautiful island — '남이섬' [Nam-i-seom], Nami Island. Lovely weather and so many trees, right?) | dock | walk_right→greeting→presenting | —
+- **S2** 취미 | `취미` | "여러분, '취미'가 뭐예요? '취미'는 시간이 있을 때 즐겁게 하는 일이에요. 예를 들면 운동, 독서, 그림 같은 거예요." → ('Hobby' — '취미' [chwi-mi] — is a fun thing you do in your free time, like sports, reading, or drawing.) | dock | presenting→point_self | 어휘
+- **S3** 취미가 뭐예요? | `취미가 / 뭐예요?` | "친구를 만나면 이렇게 물어봐요. '취미가 뭐예요?' 아주 자주 쓰는 질문이에요. 같이 말해 볼까요? '취미가 뭐예요?'" → (When you meet a friend, ask: '취미가 뭐예요?' (What's your hobby?). A very common question — say it with me!) | metasequoia | point_right→presenting | 질문문형
+- **S4** 제 취미는… | `제 취미는` | "대답은 이렇게 해요. '제 취미는 자전거 타기예요.' '제 취미는 독서예요.' 여러분의 취미도 넣어서 말해 보세요." → (Answer like this: '제 취미는 자전거 타기예요' (My hobby is cycling), '제 취미는 독서예요' (My hobby is reading). Try it with your own hobby!) | metasequoia | presenting→point_self | 답변문형
+- **S5** 좋아해요 | `좋아해요` | "이렇게도 말해요. '저는 사진 찍는 것을 좋아해요.' 동사에 '-는 것을 좋아해요'를 붙이면 돼요. '걷는 것을 좋아해요.'" → (You can also say: '저는 사진 찍는 것을 좋아해요' (I like taking photos). Add '-는 것을 좋아해요' to a verb — '걷는 것을 좋아해요' (I like walking).) | metasequoia | taking_photo | ~는 것을 좋아해요
+- **S6** 취미 부자 인준 | `취미가 많아요!` | "그런데 사실 저는 취미가 아주아주 많아요. 스스로 '취미 부자'라고 불러요. 오늘 하나씩 다 보여드릴게요!" → (Actually, I have SO many hobbies — I call myself a '취미 부자' (hobby millionaire). I'll show you every one today!) | lawn | cheering→presenting | 컨셉
+- **S7** 얼마나 자주? | `얼마나 / 자주?` | "그런데 취미에서 정말 중요한 게 하나 있어요. 바로 '얼마나 자주' 하느냐예요. 매일? 가끔? 오늘 이걸 배워요." → (But one thing really matters with hobbies: '얼마나 자주' — how OFTEN? Every day? Sometimes? Let's learn this today.) | lawn | thinking→point_up | 빈도 예고
+- **S8** 오늘의 약속 | `취미 + 빈도` | "그래서 오늘은 두 가지를 같이 배워요. 첫째, 다양한 취미 이름. 둘째, '빈도' 표현. 준비됐나요?" → (So today we learn two things: hobby names, and '빈도' (frequency) words. Ready?) | riverside | presenting→cheering | 목표
+- **S9** 남이섬 한 바퀴! | `가 볼까요?` | "자, 그럼 남이섬을 한 바퀴 돌면서 제 취미를 하나씩 보여드릴게요. 신나게 출발해요. 갈까요?" → (Let's tour '남이섬' (Nami Island) and see my hobbies one by one. Let's go — 갈까요? (Shall we go?)) | dock | walk_left→walk_right→cheering | 전환
+
+## 2막 — 빈도 부사 사다리 (S10–S23)
+- **S10** 매일 | `매일` | "먼저 '매일'이에요. '매일'은 하루도 빠지지 않고 한다는 뜻이에요. '저는 매일 조깅해요.' 매일매일, 하루도 안 빠져요." → ('매일' [mae-il] means every day, without missing a single day. '저는 매일 조깅해요' (I jog every day).) | riverside | jogging | 100%
+- **S11** 항상 | `항상` | "'항상'도 비슷해요. 늘, 언제나라는 뜻이에요. '저는 항상 웃어요.' '항상 안전하게 자전거를 타요.'" → ('항상' [hang-sang] means always. '저는 항상 웃어요' (I always smile). '항상 안전하게 타요' (I always ride safely).) | riverside | cheering→presenting | ~100%
+- **S12** 보통 | `보통` | "'보통'은 대개, 거의 그렇다는 뜻이에요. '저는 보통 아침에 산책해요.' 백 퍼센트는 아니지만 거의요." → ('보통' [bo-tong] means usually. '저는 보통 아침에 산책해요' (I usually walk in the morning) — not always, but most of the time.) | metasequoia | walking→presenting | ~80%
+- **S13** 자주 | `자주` | "'자주'는 여러 번, 흔히 한다는 뜻이에요. '저는 자주 사진을 찍어요.' 남이섬은 예뻐서 사진을 정말 자주 찍게 돼요." → ('자주' [ja-ju] means often. '저는 자주 사진을 찍어요' (I often take photos) — Nami Island is so pretty I photograph it a lot.) | ginkgo | taking_photo | ~70%
+- **S14** 가끔 | `가끔` | "'가끔'은 이따금, 어쩌다 한 번씩이에요. '저는 가끔 낚시를 해요.' 매일은 아니고 생각날 때만요." → ('가끔' [ga-kkeum] means sometimes. '저는 가끔 낚시를 해요' (I sometimes fish) — only now and then.) | fishing_pier | fishing | ~30%
+- **S15** 거의 안 | `거의 안` | "'거의 안 해요'는 하기는 하는데 아주 드물다예요. '저는 게임을 거의 안 해요.' 한 달에 한 번쯤?" → ('거의 안 해요' [geo-ui an] means rarely. '저는 게임을 거의 안 해요' (I rarely play games) — maybe once a month?) | lawn | thinking→point_left | ~10%
+- **S16** 전혀 안 | `전혀 안` | "'전혀 안 해요'는 하나도 안 한다예요. 제로! '저는 커피를 전혀 안 마셔요.' '담배는 전혀 안 피워요.'" → ('전혀 안 해요' [jeon-hyeo an] means never — zero! '저는 커피를 전혀 안 마셔요' (I never drink coffee).) | lawn | point_left→clapping | 0%
+- **S17** 빈도 사다리 | `항상 보통 / 자주 가끔 / 거의 안 전혀 안` | "정리해 볼게요. 많은 것부터: 항상 - 보통 - 자주 - 가끔 - 거의 안 - 전혀 안. 이게 빈도 사다리예요. 기억하세요!" → (Let's review, most to least: '항상' (always) - '보통' (usually) - '자주' (often) - '가끔' (sometimes) - '거의 안' (rarely) - '전혀 안' (never).) | art_plaza | presenting→raising_hand | 사다리
+- **S18** 어순 | `매일 산책해요` | "빈도 말은 동사 앞에 놓아요. '매일 산책해요.' '자주 사진을 찍어요.' 순서를 꼭 기억하세요." → (Put the frequency word before the verb: '매일 산책해요' (I walk every day), '자주 사진을 찍어요' (I often take photos).) | art_plaza | walking | 어순
+- **S19** 예문1 | `자주 걸어요` | "예문을 볼까요? '저는 자주 걸어요.' 걷는 걸 좋아하거든요. 여러분은 자주 걸어요?" → (Example: '저는 자주 걸어요' (I often walk) — I love walking. Do you walk often?) | pine_forest | walk_right→walk_left | 예문
+- **S20** 예문2 | `가끔 그림 그려요` | "또 하나. '저는 가끔 그림을 그려요.' 남이섬은 예술의 섬이라 그림 그리기 딱 좋아요." → (Another: '저는 가끔 그림을 그려요' (I sometimes draw) — Nami is an art island, perfect for drawing.) | pine_forest | painting | 예문
+- **S21** 대조 | `매일 ↔ 전혀` | "이렇게 매일 하는 것도 있고, 전혀 안 하는 것도 있어요. 사람마다 다르죠. 여러분은 어때요?" → (Some things I do '매일' (every day), some '전혀 안 해요' (never do). Everyone's different — how about you?) | bench_rest | point_left→point_right | 대조
+- **S22** 빈도 질문 | `얼마나 자주?` | "빈도를 물을 땐 이렇게요. '얼마나 자주 운동해요?' 그럼 '일주일에 세 번요.' 이렇게 대답해요." → (To ask frequency: '얼마나 자주 운동해요?' (How often do you exercise?) — Answer: '일주일에 세 번요' (Three times a week).) | bench_rest | point_right→thinking | 질문
+- **S23** 2막 정리 | `빈도 부사 끝!` | "빈도 부사, 다 배웠어요! 잘하셨어요. 이제 제 취미로 하나씩 연습해 봐요. 따라오세요!" → (You've learned the '빈도' (frequency) words — great job! Now let's practice with my hobbies. Follow me!) | lawn | cheering→walk_right | 정리
+
+## 3막 — 남이섬 활동 취미 대공개 (S24–S43) ★재미 핵심
+- **S24** 자전거 타기 | `자전거 타기` | "남이섬 하면 뭐니 뭐니 해도 자전거죠! 시원한 바람을 맞으며 자전거를 타요. 제 취미 중 최고예요." → (When you think of '남이섬', you think '자전거' (cycling)! Riding in the cool breeze — my favorite hobby.) | bike_path | walking→cycling | 도입
+- **S25** 자전거 빈도 | `일주일에 세 번` | "얼마나 자주 타냐고요? 일주일에 세 번 타요. '저는 일주일에 세 번 자전거를 타요.' 꽤 자주죠?" → (How often? Three times a week. '저는 일주일에 세 번 자전거를 타요' (I cycle three times a week) — quite a lot!) | bike_path | cycling | 일주일에 세 번
+- **S26** 산책 | `산책` | "이 메타세쿼이아 길을 보세요. 여기서 산책하는 걸 정말 좋아해요. 저는 매일 산책해요." → (Look at this metasequoia road! I love '산책' (walking) here. '저는 매일 산책해요' (I walk every day).) | metasequoia | walk_left→walking | 매일
+- **S27** 조깅 | `조깅` | "아침에는 강변에서 조깅해요. 건강에 최고죠. '저는 매일 아침에 조깅해요.' 상쾌해요!" → (In the morning I do '조깅' (jogging) by the river. '저는 매일 아침에 조깅해요' (I jog every morning). So refreshing!) | riverside | jogging | 매일 아침
+- **S28** 사진 찍기 | `사진 찍기` | "이렇게 예쁜 길에서는 사진을 안 찍을 수가 없어요. 저는 사진 찍는 걸 아주 좋아해서 자주 찍어요." → (On these pretty lanes I love '사진' (photos). '저는 사진 찍는 것을 좋아해요' (I like taking photos), so I do it '자주' (often).) | ginkgo | taking_photo | 자주
+- **S29** 사진 문형 | `찍는 것을 좋아해요` | "다시 한번. '저는 사진 찍는 것을 좋아해요.' 그리고 '자주 찍어요.' 좋아하는 것과 빈도를 같이 말해 봤어요." → (Again: '저는 사진 찍는 것을 좋아해요' (I like taking photos) and '자주 찍어요' (I take them often).) | cherry_lane | taking_photo→presenting | ~는 것을
+- **S30** 피크닉 | `피크닉` | "날씨 좋은 날엔 잔디밭에서 피크닉을 해요. 김밥도 싸 오고요. 주말에 자주 해요." → (On nice days I enjoy a '피크닉' (picnic) on the lawn — I even pack '김밥' (gimbap). I do it '자주' (often) on weekends.) | lawn | walking→picnic_sit | 자주
+- **S31** 연날리기 | `연날리기` | "넓은 잔디밭에서는 연을 날려요. 바람이 불면 딱 좋아요. 가끔 하는 취미예요." → (On the wide lawn I fly a '연' (kite). It's a '가끔' (sometimes) hobby — perfect when it's windy.) | lawn | kite | 가끔
+- **S32** 프리스비 | `프리스비` | "친구랑 프리스비도 던져요. 원반을 휙 던지고 받고, 재미있어요. 이것도 가끔요." → (I also play '프리스비' (frisbee) with a friend — throw and catch, so fun. Also '가끔' (sometimes).) | lawn | frisbee | 가끔
+- **S33** 배드민턴 | `배드민턴` | "배드민턴도 좋아해요. 셔틀콕을 주고받죠. 일주일에 한 번 정도 쳐요." → (I like '배드민턴' (badminton) too — hitting the shuttlecock back and forth. About '일주일에 한 번' (once a week).) | lawn | badminton | 일주일에 한 번
+- **S34** 낚시 | `낚시` | "강가에서는 낚시를 해요. 조용히 앉아서 기다리는 게 매력이에요. 가끔, 마음이 편할 때요." → (By the river I do '낚시' (fishing) — the charm is waiting quietly. '가끔' (sometimes), when I want to relax.) | fishing_pier | walking→fishing | 가끔
+- **S35** 강아지 산책 | `강아지 산책` | "우리 강아지랑 산책도 해요. 강아지는 매일 나가야 하죠. 그래서 하루에 두 번 산책시켜요." → (I also do '강아지 산책' (dog-walking). Dogs need daily walks, so '하루에 두 번' (twice a day).) | pine_forest | walking_dog | 하루에 두 번
+- **S36** 동물 구경 | `동물 구경` | "남이섬엔 타조랑 다람쥐, 토끼도 살아요. 동물 구경하는 걸 좋아해서 자주 봐요." → (Nami has ostriches and rabbits. I love '동물 구경' (animal-watching), so I do it '자주' (often).) | animal_zone | animal_watch | 자주
+- **S37** 짚와이어 | `짚와이어` | "이건 특별해요. 짚와이어! 하늘을 나는 기분이에요. 무서워서 일 년에 한 번만 타요." → (This one's special — '짚와이어' (zip-wire)! Like flying. It's scary, so '일 년에 한 번' (once a year).) | zipwire | cheering→zipwire | 일 년에 한 번
+- **S38** 줄넘기 | `줄넘기` | "아침 운동으로 줄넘기도 해요. 콩콩콩! 심장이 튼튼해져요. 저는 매일 줄넘기해요." → (For morning exercise I do '줄넘기' (jump rope) — hop hop hop! '저는 매일 줄넘기해요' (I jump rope every day).) | riverside | jump_rope | 매일
+- **S39** 캠핑 | `캠핑` | "가끔은 캠핑도 가요. 텐트를 치고 밤을 보내죠. 한 달에 한 번 정도 캠핑을 해요." → (Sometimes I go '캠핑' (camping) — pitch a tent, spend the night. About '한 달에 한 번' (once a month).) | campsite | walking→camping | 한 달에 한 번
+- **S40** 독서 | `독서` | "강변 벤치에 앉아서 책도 읽어요. 조용하고 좋아요. 저는 매일 저녁에 책을 읽어요." → (I read on a riverside bench — quiet and nice. '저는 매일 저녁에 책을 읽어요' (I read every evening).) | bench_rest | reading_bench | 매일 저녁
+- **S41** 그림 그리기 | `그림 그리기` | "예술의 섬이니까 그림도 그려요. 풍경을 스케치하죠. 한 달에 두 번 정도 그려요." → (It's an art island, so I do '그림 그리기' (drawing) — sketching scenery. About '한 달에 두 번' (twice a month).) | art_plaza | painting | 한 달에 두 번
+- **S42** 스케이트보드 | `스케이트보드` | "요즘 새로 시작한 취미가 있어요. 스케이트보드! 아직 서툴지만 요즘 자주 타요." → (My new hobby lately is '스케이트보드' (skateboarding)! Still clumsy, but '자주' (often) these days.) | bike_path | skateboard | 자주
+- **S43** 3막 정리 | `활동 취미!` | "와, 남이섬에서 하는 취미가 정말 많죠? 활동적인 취미를 다 봤어요. 이제 집에서 하는 취미로 가요." → (Wow, so many hobbies on '남이섬'! We've seen the active ones — now let's see what I do at '집' (home).) | lawn | cheering→walk_right | 정리
+
+## 4막 — 집에서 하는 취미 + 계절 (S44–S57)
+- **S44** 피아노 | `피아노` | "집에서는 피아노를 쳐요. 좋아하는 곡을 연주하면 기분이 좋아져요. 매일 조금씩 연습해요." → (At home I play the '피아노' (piano) — my favorite songs lift my mood. '매일' (every day) I practice a little.) | home_living | piano | 매일
+- **S45** 요리 | `요리` | "가끔 요리도 해요. 앞치마를 두르고 맛있는 걸 만들죠. 요리하는 것도 훌륭한 취미예요." → (Sometimes I do '요리' (cooking) — apron on, making something tasty. A wonderful hobby too.) | kitchen | cooking | 가끔
+- **S46** 요리 문형 | `요리하는 것` | "'저는 요리하는 것을 좋아해요.' 그리고 '가끔 새 요리에 도전해요.' 실패해도 재미있어요." → ('저는 요리하는 것을 좋아해요' (I like cooking), and '가끔 새 요리에 도전해요' (I sometimes try new recipes). Fun even when it flops!) | kitchen | cooking→presenting | ~는 것을
+- **S47** 영화 보기 | `영화 보기` | "주말마다 집에서 영화를 봐요. 소파에 앉아 팝콘을 먹으면서요. 이게 주말의 행복이에요." → (Every weekend I do '영화 보기' (watching movies) at home — sofa and popcorn. '주말마다' (every weekend).) | home_living | watching_movie | 주말마다
+- **S48** 노래 부르기 | `노래` | "가끔 노래도 불러요. 노래방을 아주 좋아하거든요. 마이크를 잡으면 신이 나요." → (I '가끔' (sometimes) do '노래' (singing) — I love karaoke! Grab the mic and I light up.) | home_living | singing | 가끔
+- **S49** 게임 (개그복선) | `게임` | "게임은요… 음… 매일 조금? 아니, 사실은 좀 더 많이 해요. 하하, 비밀이에요." → ('게임' (games)… um… '매일' (every day) a little? Okay, honestly, a bit more. Haha, it's a secret.) | home_living | gaming→thinking | 매일(복선)
+- **S50** 여행 | `여행` | "방학마다 여행을 떠나요. 새로운 곳에 가는 게 설레거든요. 이번 여행지가 바로 남이섬이에요!" → (Every vacation I go on a '여행' (trip) — new places thrill me. This trip's destination? '남이섬'!) | dock | suitcase→presenting | 방학마다
+- **S51** 봄 남이섬 | `봄에는 벚꽃` | "남이섬은 계절마다 달라요. 봄에는 벚꽃 길을 걸어요. 분홍빛이 정말 예뻐요." → ('남이섬' changes by season. In '봄' (spring) I walk the '벚꽃' (cherry-blossom) lane — the pink is gorgeous.) | cherry_lane | walking | 계절
+- **S52** 가을 남이섬 | `가을에는 단풍` | "가을에는 단풍 나무 터널에서 사진을 찍어요. 노랗고 빨간 잎이 최고의 배경이에요." → (In '가을' (autumn) I take '사진' at the '단풍' (autumn-leaves) tunnel — yellow and red, the best backdrop.) | autumn_tunnel | taking_photo | 계절
+- **S53** 겨울 남이섬 | `겨울에는 눈길` | "겨울에는 하얀 눈길을 걸어요. 온 세상이 하얗게 변해서 정말 낭만적이에요." → (In '겨울' (winter) I walk the snowy lane — the whole world turns white, so romantic.) | winter_lane | walking | 계절
+- **S54** 여름 물놀이 | `물놀이` | "여름엔 강가에서 물놀이도 해요. 시원하죠. 여름마다 일주일에 두 번은 나와요." → (In '여름' (summer) I enjoy '물놀이' (water play) — so cool. '일주일에 두 번' (twice a week) every summer.) | riverside | stretching | 일주일에 두 번
+- **S55** 밤 캠핑 | `밤에는 별 구경` | "밤에는 캠핑하며 별을 봐요. 도시에서는 못 보는 별이 가득해요. 가끔 하는 특별한 취미예요." → (At '밤' (night) I '캠핑' and watch '별' (stars) — full of stars you can't see in the city. A special '가끔' hobby.) | campsite | camping | 가끔
+- **S56** 취미 종합 | `취미가 많죠?` | "어때요, 정말 취미가 많죠? 활동도 하고, 집에서도 하고, 계절마다 즐겨요. 여러분은 어떤 취미가 있어요?" → (See? So many hobbies — outdoors, at '집' (home), every season. What hobbies do YOU have?) | art_plaza | presenting→point_right | 종합
+- **S57** 4막 정리 | `이제 세기!` | "이제 마지막으로, '얼마나 자주'를 숫자로 정확히 세는 법을 배워요. 아주 유용해요." → (Finally, let's count '얼마나 자주' (how often) exactly with numbers — super useful.) | bench_rest | thinking→raising_hand | 정리
+
+## 5막 — 빈도 정확히 세기 (S58–S66)
+- **S58** 하루에 N번 | `하루에 두 번` | "'하루에 두 번' — 하루 안에 두 번이에요. '강아지를 하루에 두 번 산책시켜요.' 아침에 한 번, 저녁에 한 번." → ('하루에 두 번' — twice in one day. '강아지를 하루에 두 번 산책시켜요' (I walk my dog twice a day) — once morning, once evening.) | riverside | raising_hand→walking_dog | 하루에
+- **S59** 일주일에 N번 | `일주일에 세 번` | "'일주일에 세 번' — 한 주에 세 번이에요. '일주일에 세 번 자전거를 타요.' 월, 수, 금처럼요." → ('일주일에 세 번' — three times a week. '일주일에 세 번 자전거를 타요' (I cycle three times a week), like Mon, Wed, Fri.) | bike_path | cycling | 일주일에
+- **S60** 한 달에 N번 | `한 달에 한 번` | "'한 달에 한 번' — 한 달에 딱 한 번이에요. '한 달에 한 번 캠핑을 가요.' 자주는 아니죠." → ('한 달에 한 번' — once a month. '한 달에 한 번 캠핑을 가요' (I camp once a month) — not that often.) | campsite | camping | 한 달에
+- **S61** 일 년에 N번 | `일 년에 한 번` | "'일 년에 한 번' — 일 년에 딱 한 번, 아주 가끔이에요. '일 년에 한 번 짚와이어를 타요.'" → ('일 년에 한 번' — once a year, very rarely. '일 년에 한 번 짚와이어를 타요' (I ride the zip-wire once a year).) | zipwire | cheering | 일 년에
+- **S62** ~마다 | `주말마다 / 매주` | "규칙적으로 반복될 땐 '-마다'를 써요. '주말마다', '매주', '매일'. '주말마다 영화를 봐요.'" → (For regular repetition use '-마다': '주말마다' (every weekend), '매주' (every week), '매일'. '주말마다 영화를 봐요' (I watch movies every weekend).) | metasequoia | presenting | ~마다
+- **S63** 예문1 | `일주일에 세 번 운동해요` | "이제 문장으로 만들어 봐요. '저는 일주일에 세 번 운동해요.' 빈도 + 동사, 완벽해요." → (Make a sentence: '저는 일주일에 세 번 운동해요' (I exercise three times a week). Frequency + verb, perfect.) | lawn | stretching | 예문
+- **S64** 예문2 | `한 달에 한 번 여행해요` | "또. '저는 한 달에 한 번 여행해요.' 어때요, 이제 쉽죠?" → (Another: '저는 한 달에 한 번 여행해요' (I travel once a month). Easy now, right?) | dock | suitcase | 예문
+- **S65** 예문3 | `하루에 두 번 산책해요` | "마지막. '저는 하루에 두 번 강아지를 산책시켜요.' 이렇게 빈도를 정확히 말할 수 있어요." → (Last: '저는 하루에 두 번 강아지를 산책시켜요' (I walk my dog twice a day). Now you can state frequency exactly.) | pine_forest | walking_dog | 예문
+- **S66** 5막 정리 | `빈도 세기 끝!` | "잘하셨어요! 이제 얼마나 자주 하는지 자신 있게 말할 수 있어요. 정말 대단해요." → (Well done! Now you can confidently say '얼마나 자주' (how often). Amazing!) | lawn | cheering | 정리
+
+## 6막 — 질문·정리·반전·예고 (S67–S74)
+- **S67** 얼마나 자주? | `얼마나 자주 해요?` | "이제 친구에게 물어보세요. '얼마나 자주 운동해요?' '얼마나 자주 여행해요?' 대화가 술술 이어질 거예요." → (Now ask a friend: '얼마나 자주 운동해요?' (How often do you exercise?), '얼마나 자주 여행해요?' (How often do you travel?). Conversation flows!) | dock_sunset | point_right→presenting | 질문
+- **S68** 취미 묻고 답하기 | `취미가 뭐예요?` | "그리고 처음 배운 질문, 기억하죠? '취미가 뭐예요?' '제 취미는 자전거 타기예요.' 완벽한 대화예요." → (And our first question, remember? '취미가 뭐예요?' — '제 취미는 자전거 타기예요' (My hobby is cycling). A perfect exchange!) | dock_sunset | presenting→point_self | 종합
+- **S69** 인준의 고백 (반전) | `사실은…` | "그런데 여러분, 사실 고백할 게 있어요. 아까 자랑한 야구랑 게임요? 하하… 사실 거의 안 해요. '취미 부자'인 척했어요, 죄송해요!" → (A confession, everyone: the '야구' (baseball) and '게임' (games) I bragged about? Haha… I actually '거의 안 해요' (rarely do them). Sorry!) | dock_sunset | thinking→clapping | 반전
+- **S70** 진짜 매일? | `매일 하는 건?` | "그럼 제가 진짜, 정말 매일 빠지지 않고 하는 건 뭘까요? 한번 맞혀 보세요." → (So what do I REALLY do '매일' (every day), without fail? Take a guess.) | dock_sunset | thinking→point_self | 궁금증
+- **S71** 반전: 한국어 공부! | `매일 한국어 공부!` | "바로 매일 한국어 공부예요! 지금 이 영상을 보는 여러분처럼요. 이게 제 진짜 매일 취미예요." → (It's studying '한국어' (Korean) every day! Just like you, watching right now. That's my real daily hobby.) | dock_sunset | cheering→reading_bench | 메타개그
+- **S72** 여러분의 취미는? | `여러분은?` | "여러분의 취미는 뭐예요? 그리고 얼마나 자주 해요? 꼭 댓글로 알려주세요. 정말 궁금해요!" → (What's YOUR '취미' (hobby)? And '얼마나 자주' (how often)? Please tell me in the comments!) | metasequoia | point_right→presenting | 참여
+- **S73** 총정리 | `취미 + 빈도` | "오늘은 취미 이름과 빈도 표현을 배웠어요. 매일, 자주, 가끔, 일주일에 세 번, 한 달에 한 번! 정말 많이 배웠죠?" → (Today we learned hobby names and '빈도' (frequency): '매일' (every day), '자주' (often), '가끔' (sometimes), '일주일에 세 번' (three times a week), '한 달에 한 번' (once a month)!) | metasequoia | presenting→cheering | 총정리
+- **S74** 마무리 | `또 만나요!` | "즐거운 취미 생활 하세요! 그리고 매일 한국어 공부도 잊지 마세요. 다음 시간에 또 만나요. 안녕히 계세요!" → (Enjoy your hobbies! And don't forget to study '한국어' '매일'. See you next time — 안녕히 계세요! (Goodbye!)) | dock_sunset | waving | 마무리
+
+## ★ 면책 자막 (S75) — 자막 전용, 나레이션 없음, 각 나라 언어로만 표시
+> 나레이션에 넣지 않는다. 5개국어 SRT 말미에만 삽입(소프트 자막). 화면 글자·캐릭터 없음, 배경만. 고정 약 6초.
+- **S75** (면책·무나레이션) | (화면 글자 없음) | [나레이션 없음] | dock_sunset | (없음) | 면책
+  - KO: 이 모든 활동을 남이섬에서 다 할 수 있는 것은 아니에요. 남이섬은 이 한글 교육 영상의 배경으로만 사용되었어요.
+  - EN: Not all of these activities can actually be done on Nami Island. It was used only as the backdrop for this Korean-learning video.
+  - JA: これらの活動すべてを南怡島（ナミソム）でできるわけではありません。南怡島はこの韓国語学習動画の背景として使われただけです。
+  - ZH: 并非所有这些活动都能在南怡岛进行。南怡岛只是作为这部韩语教学视频的背景使用。
+  - ES: No todas estas actividades se pueden hacer en la isla de Nami. La isla de Nami se usó solo como escenario para este video de aprendizaje de coreano.

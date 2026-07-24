@@ -166,7 +166,11 @@
     "Audio/TTS (2026-07-14): tts_manager.py 및 compile_np.py, compile_stickman.py 캐싱 엔진 수정 - TTS 엔진(edge/azure), 활성 보이스, 자모 디렉토리를 캐시 해시 키에 추가하여 edge-tts 초안 캐시가 Azure 최종 렌더에 오염되는 버그 근본 차단",
     "QA/Review (2026-07-14): review_lesson.py 수정 - 한글판/영문판 짝 자막 노출 옵션화(기본은 단일 자막, both 인자 제공 시 짝 자막 노출), 소리 출력 윈도우 기본 장치 자동 추종하도록 변경",
     "Flow/Pose (2026-07-15): scratch/flow_pose.py 수정 - jieun 포즈 생성 시 백그라운드를 pure white (#FFFFFF)로 설정하는 옵션 추가",
-    "Translation (2026-07-15): W15(날씨와 사계절) 에피소드 다국어 자막(일본어, 중국어 간체, 스페인어) 번역 및 verify_subs.py를 통한 E2E 무결성 검증 완수"
+    "Translation (2026-07-15): W15(날씨와 사계절) 에피소드 다국어 자막(일본어, 중국어 간체, 스페인어) 번역 및 verify_subs.py를 통한 E2E 무결성 검증 완수",
+    "Web/Video (2026-07-16): 거북목 및 운동손상 한/영 쇼츠 4종 빌드 완료 (Google Flow 미사용, 기존 씬 비디오 첫 프레임 키프레임 추출 9:16 세로 4K 업스케일 합성), 구글 드라이브 Shorts 폴더 저장 완료",
+    "Flow/Account (2026-07-16): 6개 구글 Advanced 구독 계정(drjang00~004) 세션 등록 연동 완료 및 autoveo_flow.py 다중 프로필 라운드 로빈 순환 자동화 빌더 검증 완료",
+    "W17 Advanced (2026-07-20, Gemini=조감독): W17 Advanced Course scenario (w17_scenario.txt) and spec (w17_scenario_spec.md) finalized according to user feedback (1-on-1 polite/casual comparison, mobile slang warning, K-Pop/K-Drama shadowing tools, and Emma/SunHi voice cross-linguality).",
+    "W17 Advanced (2026-07-20, Gemini=조감독): Completely purged unaligned new poses (5 types) and backgrounds (3 types) from files and SQLite assets table. Restored the 48-scene compilation map to only use verified 9 character poses and 10 Bulguksa backgrounds (scene_0.png ~ scene_47.png successfully regenerated)."
   ],
   "pending_tasks": [
     "Binge-Watching: Run autoveo_flow.py with binge_watching/shorts_prompts.txt to generate 9:16 portrait video clips (scene_0, 2, 20).",
@@ -187,7 +191,7 @@
     "skill_doc": ".harness/skills/autoveo/SKILL.md",
     "test_result": "scene_901 + scene_902 each 8s 1280x720 24fps; merged test_merged.mp4 16s",
     "constraints": "account login only, NO API key, NO extension; images=0 credits (Nano Banana 2); ULTRA account",
-    "notes": "GEMINI_API_KEY expired and gemini CLI cannot save image files -> images are generated inside Flow in-browser"
+    "notes": "GEMINI_API_KEY expired and gemini CLI cannot save image files -> images are generated inside Flow in-browser. [RULE] 클로드 감독이 비디오/이미지 생성 지시 시, 쇼츠용 9:16 비율(--aspect 9:16)을 디폴트로 간주하여 순환 연동할 것."
   },
   "known_issues": [
     "Caching bug resolved: Old audio clips are now automatically deleted/overwritten on run to ensure narration matches subtitles.",

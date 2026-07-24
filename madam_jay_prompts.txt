@@ -1,0 +1,55 @@
+# 마담제이 동작 — Flow 이미지-투-비디오 프롬프트
+# 방식: Flow에서 "이미지 → 비디오"로, 아래 입력 이미지 + 프롬프트를 넣으면
+#       Veo가 캐릭터를 그대로 유지하며 자연스럽게(관절·좌우 다 맞춰) 움직입니다.
+# 스타일 고정 문구가 모든 프롬프트에 들어가 있어 라인아트가 안 깨집니다.
+# 참고: [[feedback-autoveo-best-method]] 단일세션+클립보드 붙여넣기
+
+# ── 공통 스타일 앵커(프롬프트에 이미 포함됨) ──
+# "minimal 2D flat line-art animation, keep the exact character design
+#  (brown bun hair, coral vest reading 선생님, white skirt, white shoes),
+#  soft cream background, clean hand-drawn look, character identical every frame,
+#  smooth natural motion, no realism, no style change"
+
+=====================================================================
+[1] 인사 (waving hello)   입력: assets/characters/madam_jay_base_front.png
+---------------------------------------------------------------------
+The same minimal 2D flat line-art teacher character stands centered, keeping her
+exact design (brown bun hair, coral vest reading 선생님, white skirt, white shoes).
+She smiles warmly and raises her right hand to wave hello twice in a friendly
+greeting, then lowers it. Clean hand-drawn animation, smooth natural arm motion,
+soft cream background, character identical every frame, no realism, no style change.
+
+=====================================================================
+[2] 걷기 (walking)   입력: assets/characters/madam_jay_base_front.png
+---------------------------------------------------------------------
+The same minimal 2D flat line-art teacher character walks with a gentle, natural
+stride, legs alternating correctly and arms swinging softly in opposition, a calm
+confident teacher walk. She keeps her exact design. Clean hand-drawn animation,
+smooth natural gait, soft cream background, character identical every frame,
+no realism, no style change.
+
+=====================================================================
+[3] 가리키기 (pointing at the board)   입력: assets/characters/madam_jay_pointing.png
+---------------------------------------------------------------------
+The same minimal 2D flat line-art teacher character raises her left arm and points
+toward a lesson board on the side, elbow bending naturally, holding the point while
+looking that way, then gestures once. She keeps her exact design. Clean hand-drawn
+animation, natural arm and hand motion, soft cream background, character identical
+every frame, no realism, no style change.
+
+=====================================================================
+[4] 설명 (talking / explaining)   입력: assets/characters/madam_jay_presenting.png
+---------------------------------------------------------------------
+The same minimal 2D flat line-art teacher character talks and explains, making
+small natural hand gestures with both hands, head nodding slightly, a warm friendly
+teacher explaining a lesson. She keeps her exact design. Clean hand-drawn animation,
+subtle lively motion, soft cream background, character identical every frame,
+no realism, no style change.
+
+=====================================================================
+[5] 앉기 (sitting down)   입력: assets/characters/madam_jay_base_front.png
+---------------------------------------------------------------------
+The same minimal 2D flat line-art teacher character sits down onto a simple chair
+with a smooth natural motion, keeping her back straight and hands resting on her
+lap. She keeps her exact design. Clean hand-drawn animation, natural sitting motion,
+soft cream background, character identical every frame, no realism, no style change.

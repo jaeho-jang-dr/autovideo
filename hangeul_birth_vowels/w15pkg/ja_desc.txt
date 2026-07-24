@@ -1,0 +1,20 @@
+韓国語で天気と四季を学びます — 済州の漢拏山（ハルラサン）で春・夏・秋・冬を一巡り。
+春のソンジャクジワッのツツジ、夏のトンネコ渓谷、秋のヨンシル奇岩の紅葉、冬の白鹿潭の雪景色まで。
+天気の表現と季節の形容詞を自然に覚えられます。チウンと一緒に漢拏山の四季を旅しましょう。初心者歓迎！
+
+📚 重要表現
+날씨 (weather) · 사계절 (four seasons) · 봄 (spring) · 여름 (summer) · 가을 (autumn) · 겨울 (winter) · 따뜻하다 (warm) · 덥다 (hot) · 시원하다 (cool) · 춥다 (cold) · 비가 오다 (rain) · 눈이 오다 (snow) · 바람이 불다 (windy) · 꽃이 피다 (bloom) · 단풍 (foliage) · 첫눈 (first snow) · 눈사람 (snowman) · Hallasan · Seonjakjiwat · Saraoreum · Baengnokdam
+
+⏱️ チャプター
+0:00 Intro: Hallasan & the four seasons
+1:14 Spring · warm · flowers bloom · Seonjakjiwat
+2:58 Summer · hot · rainy season · Donnaeko
+5:09 Autumn · foliage · high sky · Yeongsil rocks
+6:59 Winter · cold · snow · first snow · frost
+8:50 Winter gear · Baengnokdam snowscape
+9:33 Four-season review
+
+🤖 Production note
+Visuals were generated with Google Gemini (Nano Banana); narration was created with Microsoft Azure TTS (SunHi & Emma).
+
+🌐 drjayed.com

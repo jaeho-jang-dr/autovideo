@@ -1,0 +1,69 @@
+{
+   "checksum": "2b1b00e9e89908e310fa2dfe8b5e8a0b",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "134195604750000000",
+            "date_last_used": "0",
+            "guid": "e1cc632d-d227-464c-94ca-d406fa76b892",
+            "id": "5",
+            "name": "쿠팡!",
+            "type": "url",
+            "url": "http://xn--o39an5bf2p1yd8rjol5a.com/?e=AhwZTVZcWFYKCBFNVUoNERcJVEJVXF1AUQ=="
+         }, {
+            "date_added": "134189550120000000",
+            "date_last_used": "0",
+            "guid": "7afa5ee6-c7ba-46a1-9a4e-6ef33f57e35c",
+            "id": "6",
+            "name": "Everytime 십일절 - 11번가",
+            "type": "url",
+            "url": "http://xn--o39an5bf2p1yd8rjol5a.com/?e=AhwZTVZcWFYKCBFNVEoNERcJVEJVXFpCVQ=="
+         }, {
+            "date_added": "13420181513408236",
+            "date_last_used": "0",
+            "guid": "93b9e0f6-554e-409d-992d-fba0a6289cc5",
+            "id": "7",
+            "name": "쿠팡!",
+            "type": "url",
+            "url": "https://coupa.ng/cb0ZYt"
+         } ],
+         "date_added": "13428649317730179",
+         "date_last_used": "0",
+         "date_modified": "134195604750000000",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "북마크바",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13420181513408238",
+            "date_last_used": "0",
+            "guid": "edc0b59d-6c2f-4e12-91aa-f5d5f151af3d",
+            "id": "8",
+            "name": "쿠팡!",
+            "type": "url",
+            "url": "https://coupa.ng/cb0ZYt"
+         } ],
+         "date_added": "13428649317730179",
+         "date_last_used": "0",
+         "date_modified": "13420181513408238",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "기타 북마크",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13428649317730179",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "모바일 북마크",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CqYBCoUBCIiBAhJ/IACSAWwKagoOY2hyb21lX3N5bmNfYm0SBTUxIWJtGhIJylySybJWBgARylySybJWBgAiNAlugoHJslYGABADGVGcwF0/K3OUIAEqHDUxIWJtL2ZkOjkxNjM3MjM1NTk0Njg4OTMxNjEpwIqTybJWBgDqAQsIgrnh0gYQuO3bYxIAKhhHWElNM3hoQ3MrcnRYYmFuYVcxNVNRPT1IAxLDAQgDEr4BChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EmZaOkFEcXRBWnpXMU5DZ2V6czZtUUYvb3ltZWNyUkY2UkhhRUR3ajMyQVQvVGNxY09uVnJONDdycXY0Z0tIanpaTEowblZBWTZuMEFKMjZ0a05CU2JFbks4MVl6eDZ4dmEvbGxBPT0YACAAKAAw1P7ytafWlQM4AEAAShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAABLrAQgIEuYBChxXWHhabFVpaUk3Q1lmaVI1MlZoVTkvRmdtNjg9EmZaOkFEcXRBWndIbWtJUVFGZFMwYnVZN2dLV1JGaHNxR3FkSHl2ZlhONEg3UnA2WVVPeGFyRnI1U1ZLd0dHTGtRSWc0dnNqSlpxSTJUN0ZiR3QxMjhCcWNjV1RtWWNkcVNDZ293PT0YACAAKAAwqvrGxPPfkwM4q//Cg9czQKv/woPXM0ocT2R4UmUvZTd4amRFNC9oYlNrNVpheXNKYUNjPVoeIhwzNGZmN1F3WGdzTmdtVGdpbC93K0ZSMUtNdW89ZQAAAAAS7AEIBxLnAQocZDh1dFJEdi9KdUlQcWsvTURvaEYzTitFWk04PRJmWjpBRHF0QVp3SG1rSVFRRmRTMGJ1WTdnS1dSRmhzM0h2b1M4cXdXdkNIVDhlN21odkZZc3pod2ltVjRvVzJPQzdwYk1IeE1Jb09SaGhlbVpWdnBXY2pPcGRXSGpqRjQyRndwQT09GAAgACgAMKr6xsTz35MDOKv/woPXM0Cr/8KD1zNKHE8xcGc5N2kxSlhZK2dwOEJ1NGxVbzBPQXZXTT1aHyId2CswYlFjN2l6QXBTWUdiVlZZTXZtdXZXRnhuYz1lAAAAABLsAQgGEucBChx6QVBCbkVTeWF3WWZmeXdFaFdZS2hGVW50Y2s9EmZaOkFEcXRBWndIbWtJUVFGZFMwYnVZN2dLV1JGaHN2Rjk1Y2tvOGl3L0NReXRBK3VmbW85N2pianhkMGFOM1VZeEw2MDNuZ1FFdnFuSVkrSnpKbFJ3T2R5UnAvWkVBS0RYZlRBPT0YACAAKAAwqvrGxPPfkwM4q//Cg9czQKv/woPXM0oceElBM0hlazZjRDVXTUJLYlJJQ0hpdXkwc2M0PVofIh2xOGZ0cjNCSjdvUWkyNStRRVIyWFlKd1hvL0owPWUAAAAAEsMBCAISvgEKHFljU1RvbnZFU1B3cUNzNEwyY3JWaHY2OEw5OD0SZlo6QURxdEFaeFpHV2o4VnkrbUdZaFlsWFVTZkhiMVd4b3FCWStGZXlaSWhTWEpZMmdSYk44SHhwWnFMR0ViWEREL1MzeGE1elY1RzM0SXEvTWxUM0Y0VDFhbFUvV1F5enVJeFE9PRgAIAAoADDU/vK1p9aVAzgAQABKHG9QVmtod0JSYlY2NUtDV1IyK0lPTkhXb091OD1aAGUAAAAAEusBCAUS5gEKHEVManhIRHVhN2J2eCtFRUVSL0puWmp0ZGFJcz0SZlo6QURxdEFad0hta0lRUUZkUzBidVk3Z0tXUkZoc0VxUEdtenZic2VPL0dRL0Y3OFl2WDF2WEEwdUJNTTlsako5RHUrUTFiSTh3TEhmcDBSNHRMVzRwYXNIbGFiS3Y0YnZRN3c9PRgAIAAoADCq+sbE89+TAzir/8KD1zNAq//Cg9czShxSc2JuTzFnZkVSTUhxeFJLQ3NORFQrYmtvNDQ9Wh4iHGJtQjFCSFlXMkFocm02MFpCemp4dEt5NzF6RT1lAAAAABKrAQgBEqYBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9Ek5aOkFEcXRBWngzOFR3U0xDeEhjV0M4akl5VUppVHpDdlRPMlRrZG9jem9vQ1lHVWVTUkMyL2dGbnBvZlVueHdjeHlVSGd2dGJQSmdnN0oYACAAKAAw1P7ytafWlQM4AEAAShxhUkNXTGdoRjliNUlucUtJRHZ1Si9qdlFrRmM9WgBlAAAAADABOAA=",
+   "version": 1
+}

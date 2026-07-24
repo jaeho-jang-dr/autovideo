@@ -1,0 +1,63 @@
+# KO-W09 해운대 씬별 배경 프롬프트 (은은한 파스텔)
+# 생성: Gemini 무료 이미지(250/일)로 씬별 1장 → 저장: assets/graphics/bg/bg_w9_sNN.png
+# 좌측/하단 비움(캐릭터 자리). no text/people. 16:9.
+
+## 씬 01  [wide]  → bg_w9_s01.png
+Haeundae Beach wide crescent bay, calm turquoise sea, soft sand, a few seagulls, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 02  [wide]  → bg_w9_s02.png
+Haeundae seaside boardwalk promenade with benches, the sea on one side, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 03  [wide]  → bg_w9_s03.png
+Haeundae beach with a small lifeguard tower and striped umbrellas near the front, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 04  [wide]  → bg_w9_s04.png
+the tall Marine City skyscrapers of Haeundae seen from the sea, a small sailboat on calm water, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 05  [wide]  → bg_w9_s05.png
+Dongbaek Island green cliff hill with a red-and-white lighthouse beside Haeundae Beach, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 06  [wide]  → bg_w9_s06.png
+Gwangan Bridge arching over the sea in front of Haeundae Beach, open sky, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 07  [wide]  → bg_w9_s07.png
+a striped beach umbrella with a few seashells and a tiny crab on the Haeundae sand, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 08  [wide]  → bg_w9_s08.png
+cozy interior of a bright seaside cafe overlooking Haeundae Beach, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 09  [wide]  → bg_w9_s09.png
+open sandy Haeundae shore under a wide clear sky, gentle waves, outdoors, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 10  [wide]  → bg_w9_s10.png
+the Cheongsapo twin lighthouses, one red one white, on the Haeundae coast, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 11  [wide]  → bg_w9_s11.png
+a Haeundae coastal cliff path looking toward the left, the sea below, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 12  [wide]  → bg_w9_s12.png
+a Haeundae seaside street looking toward the right, cafes and lamp posts, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 13  [wide]  → bg_w9_s13.png
+a friendly neighborhood mart storefront near Haeundae, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 14  [wide]  → bg_w9_s14.png
+a tidy neighborhood school gate near Haeundae, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 15  [wide]  → bg_w9_s15.png
+a Haeundae cafe street with a small bank and a pocket park, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 16  [aerial]  → bg_w9_s16.png
+high-altitude aerial drone shot, bird's-eye view, the whole crescent of Haeundae Beach with Gwangan Bridge and Marine City, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 17  [wide]  → bg_w9_s17.png
+Haeundae Beach and its buildings along the shore seen from out on the sea, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 18  [wide]  → bg_w9_s18.png
+a Haeundae seaside street crossroad with cafes and shops on both sides, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 19  [aerial]  → bg_w9_s19.png
+high-altitude aerial drone shot, bird's-eye view, Haeundae streets meeting the beach, the bridge in the distance, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9
+
+## 씬 20  [wide]  → bg_w9_s20.png
+Haeundae Beach at warm sunset, the bridge lights and calm sea, golden-pink pastel sky, soft muted pastel storybook illustration, low saturation, gentle warm palette, simple minimal detail, light and unobtrusive so foreground pops, thick friendly outlines, no text, no people, full-frame background covering the whole image, avoid large buildings or busy props as much as possible, keep it open and simple (small touches like a few seashells, a conch or a tiny crab are fine), 16:9

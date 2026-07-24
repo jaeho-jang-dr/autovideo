@@ -1,0 +1,7 @@
+기준(포즈·형태) 이미지: D:/Entertainments/DevEnvironment/autovideo/W21/madam_line_side_right.png — 이 오른쪽 측면 마담제이를 그대로 유지한다.
+얼굴 살색 참고 이미지: D:/Entertainments/DevEnvironment/autovideo/W21/madam_line_front.png — 이 정면 인사 이미지의 얼굴/피부 살색을 그대로 가져온다.
+다른 것은 전부 동일하게 유지: 오른쪽을 보는 완전한 우측 측면 서 있는 자세, 진갈색 탑번 머리(양옆 잔머리), 코랄/살구색 조끼(가슴 펜주머니·니트 밑단·작은 '선생님' 글자), 흰색 A라인 치마, 흰색 벙어리장갑 손, 흰색 운동화, 굵은 검정 외곽선.
+★팔과 다리는 반드시 '폭·속채움 없는 단 하나의 얇은 검정 선(single stroke line)' 그대로 — 튜브·살로 채우지 말 것.
+★변경은 딱 하나: 얼굴과 목의 피부색을 순백색이 아니라 '따뜻한 크림빛 살색'(정면 인사 이미지의 얼굴색과 똑같이)으로 칠한다. 흰 얼굴 금지.
+순백색(#ffffff) 배경, 그림자·바닥선·글자·워터마크 없음. 나노바나나(제미나이 이미지)로 직접 생성, Google Flow 금지.
+결과 PNG 저장(덮어쓰기): D:/Entertainments/DevEnvironment/autovideo/W21/madam_line_side_right.png

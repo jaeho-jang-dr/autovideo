@@ -1,0 +1,47 @@
+{
+ "video": "hangeul_birth_vowels/hangeul_w12_injun_np_en.mp4",
+ "thumb": "hangeul_birth_vowels/thumb_w12_1280x720.jpg",
+ "title_file": "hangeul_birth_vowels/w12pkg/en_title.txt",
+ "desc_file": "hangeul_birth_vowels/w12pkg/en_desc.txt",
+ "tags_file": "hangeul_birth_vowels/w12pkg/w12_tags.txt",
+ "langs": [
+  {
+   "row": "영어 (동영상 언어)",
+   "srt": "hangeul_birth_vowels/w12pkg/en_en.srt",
+   "add": false,
+   "do": ["sub"]
+  },
+  {
+   "row": "한국어",
+   "srt": "hangeul_birth_vowels/w12pkg/en_ko.srt",
+   "add": true,
+   "do": ["sub", "meta"],
+   "title": "hangeul_birth_vowels/w12pkg/ko_title.txt",
+   "desc": "hangeul_birth_vowels/w12pkg/ko_desc.txt"
+  },
+  {
+   "row": "일본어",
+   "srt": "hangeul_birth_vowels/w12pkg/en_ja.srt",
+   "add": true,
+   "do": ["sub", "meta"],
+   "title": "hangeul_birth_vowels/w12pkg/ja_title.txt",
+   "desc": "hangeul_birth_vowels/w12pkg/ja_desc.txt"
+  },
+  {
+   "row": "중국어(중국)",
+   "srt": "hangeul_birth_vowels/w12pkg/en_zh.srt",
+   "add": true,
+   "do": ["sub", "meta"],
+   "title": "hangeul_birth_vowels/w12pkg/zh_title.txt",
+   "desc": "hangeul_birth_vowels/w12pkg/zh_desc.txt"
+  },
+  {
+   "row": "스페인어",
+   "srt": "hangeul_birth_vowels/w12pkg/en_es.srt",
+   "add": true,
+   "do": ["sub", "meta"],
+   "title": "hangeul_birth_vowels/w12pkg/es_title.txt",
+   "desc": "hangeul_birth_vowels/w12pkg/es_desc.txt"
+  }
+ ]
+}

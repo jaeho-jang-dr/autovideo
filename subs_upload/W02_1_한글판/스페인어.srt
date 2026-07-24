@@ -1,0 +1,203 @@
+1
+00:00:00,250 --> 00:00:04,317
+¡Hola! La última vez aprendimos sobre las vocales.
+
+2
+00:00:04,317 --> 00:00:09,493
+Hoy conoceremos a otro personaje principal del Hangeul, las consonantes.
+
+3
+00:00:09,493 --> 00:00:13,930
+¿En qué formas se modelaron las consonantes Hangeul?
+
+4
+00:00:14,630 --> 00:00:19,720
+Sorprendentemente, las consonantes Hangeul se modelaron a partir de las formas de nuestros cuerpos que producen sonidos,
+
+5
+00:00:19,720 --> 00:00:29,290
+es decir, la boca, la lengua y la garganta. Esto se llama el 'principio de la pictografía'.
+
+6
+00:00:29,990 --> 00:00:38,961
+Primero, 'ㄱ' [g] (conocida como giyeok). Es la forma de la raíz de la lengua bloqueando la garganta. Si pronuncias el sonido, es '그' [geu].
+
+7
+00:00:38,961 --> 00:00:42,900
+Es un sonido que se hace cerca de los molares.
+
+8
+00:00:43,600 --> 00:00:53,180
+'ㄴ' [n] (conocida como nieun) es la forma de la punta de la lengua tocando las encías superiores. '느' [neu]. La lengua toca ligeramente la parte delantera del paladar.
+
+9
+00:00:53,880 --> 00:01:02,830
+'ㅁ' [m] (conocida como mieum) es la forma de los labios bien cerrados. '므' [meu]. Es un sonido donde ambos labios se encuentran y se cierran.
+
+10
+00:01:03,530 --> 00:01:12,790
+'ㅅ' [s] (conocida como siot) es la forma de los dientes puntiagudos. '스' [seu]. Es un sonido donde el aire se escapa entre los dientes.
+
+11
+00:01:13,490 --> 00:01:22,106
+'ㅇ' [ng] (conocida como ieung) es la forma de una garganta redondeada. Cuando se usa como consonante final, se convierte en el sonido nasal '응' [eung].
+
+12
+00:01:22,106 --> 00:01:27,360
+En la posición de consonante inicial, es un marcador de posición silencioso.
+
+13
+00:01:28,060 --> 00:01:35,551
+Estas cinco consonantes básicas, 'ㄱ' [g], 'ㄴ' [n], 'ㅁ' [m], 'ㅅ' [s],
+
+14
+00:01:35,551 --> 00:01:39,920
+y 'ㅇ' [ng] nacieron imitando nuestros cuerpos.
+
+15
+00:01:40,620 --> 00:01:46,442
+¿Qué pasa con el resto de las consonantes? Se utilizó un método muy inteligente.
+
+16
+00:01:46,442 --> 00:01:56,630
+Cuando el sonido se vuelve más fuerte, se añade un trazo a la letra básica. Esto se llama el 'principio de añadir trazos'.
+
+17
+00:01:57,330 --> 00:02:04,985
+Añadir un trazo a 'ㄴ' [n] hace 'ㄷ' [d] (conocida como digeut), y a 'ㅁ' [m] hace 'ㅂ' [b] (conocida como bieup).
+
+18
+00:02:04,985 --> 00:02:09,160
+Los sonidos se vuelven mucho más claros y firmes.
+
+19
+00:02:09,860 --> 00:02:18,319
+Añadir un trazo a 'ㅅ' [s] hace 'ㅈ' [j] (conocida como jieut), y a 'ㅇ' [ng] hace 'ㅎ' [h] (conocida como hieut).
+
+20
+00:02:18,319 --> 00:02:25,240
+E incluso 'ㄹ' [r/l] (conocida como rieul) que hace rodar la lengua. ¿Ves el patrón?
+
+21
+00:02:25,940 --> 00:02:30,111
+Aquí están las diez consonantes básicas que aprenderemos hoy.
+
+22
+00:02:30,111 --> 00:02:40,867
+'ㄱ' [g], 'ㄴ' [n], 'ㄷ' [d], 'ㄹ' [r/l], 'ㅁ' [m], 'ㅂ' [b], 'ㅅ' [s], 'ㅇ' [ng], 'ㅈ' [j], 'ㅎ' [h].
+
+23
+00:02:40,867 --> 00:02:43,940
+¿Llamamos sus nombres juntos?
+
+24
+00:02:44,640 --> 00:02:47,353
+¡Ahora, la parte más sorprendente!
+
+25
+00:02:47,353 --> 00:02:55,701
+El Hangeul no escribe consonantes y vocales por separado; las combina en un solo carácter.
+
+26
+00:02:55,701 --> 00:02:59,040
+Esto se llama 'escritura combinada'.
+
+27
+00:02:59,740 --> 00:03:12,201
+La consonante es el sonido inicial, la vocal es el sonido medio. Si combinamos el sonido inicial 'ㄱ' [g] y el sonido medio 'ㅏ' [a]?
+
+28
+00:03:12,201 --> 00:03:15,600
+Se convierte en '가' [ga].
+
+29
+00:03:16,300 --> 00:03:28,746
+La regla es simple. Las vocales con líneas verticales como 'ㅏ' [a], 'ㅓ' [eo], 'ㅣ' [i] se unen a la derecha de la consonante.
+
+30
+00:03:28,746 --> 00:03:32,140
+Como '나' [na], '머' [meo], '디' [di].
+
+31
+00:03:32,840 --> 00:03:43,222
+Por el contrario, las vocales con líneas horizontales como 'ㅗ' [o], 'ㅜ' [u], 'ㅡ' [eu] se unen debajo de la consonante.
+
+32
+00:03:43,222 --> 00:03:46,500
+Como '고' [go], '누' [nu], '드' [deu].
+
+33
+00:03:47,200 --> 00:03:50,833
+Hoy solo aprenderemos letras sin consonante final.
+
+34
+00:03:50,833 --> 00:03:58,100
+Sin una consonante final, el sonido se abre claramente, lo que se llama una 'sílaba abierta'.
+
+35
+00:03:58,800 --> 00:04:07,427
+Ahora, ¿hacemos palabras? Si escribimos '고' [go] y '기' [gi] una al lado de la otra, es '고기' [gogi] (carne).
+
+36
+00:04:07,427 --> 00:04:11,740
+¡Dos letras combinadas para crear significado!
+
+37
+00:04:12,440 --> 00:04:23,503
+¿Llamamos a los miembros de la familia? '나' [na] (yo) con 'ㄴ' [n] y 'ㅏ' [a], y luego '누나' [nuna] (hermana mayor (para un hombre)).
+
+38
+00:04:23,503 --> 00:04:32,670
+'오빠' [oppa] (hermano mayor (para una mujer)) y '누나' [nuna] (hermana mayor (para un hombre)) son palabras cariñosas para llamar a la familia.
+
+39
+00:04:33,370 --> 00:04:50,940
+'ㅁ' [m], 'ㅓ' [eo], 'ㄹ' [r/l], 'ㅣ' [i] forman '머리' [meori] (cabeza/pelo). 'ㅂ' [b], 'ㅏ' [a], 'ㄴ' [n], 'ㅏ' [a], 'ㄴ' [n], 'ㅏ' [a] forman '바나나' [banana] (plátano/banana).
+
+40
+00:04:50,940 --> 00:04:56,670
+Las consonantes y las vocales se combinan perfectamente, ¿verdad?
+
+41
+00:04:57,370 --> 00:05:07,110
+'아버지' [abeoji] (padre) y '어머니' [eomeoni] (madre). Incluso con solo letras sin consonantes finales, podemos escribir palabras tan cálidas.
+
+42
+00:05:07,810 --> 00:05:15,797
+'오이' [oi] (pepino), '호수' [hosu] (lago), '지도' [jido] (mapa). Todas estas son palabras fáciles sin consonantes finales.
+
+43
+00:05:15,797 --> 00:05:19,160
+Lee en voz alta.
+
+44
+00:05:19,860 --> 00:05:27,518
+¡Ahora, un juego de flashcards! '고기' [gogi] (carne), '호수' [hosu] (lago), '기차' [gicha] (tren).
+
+45
+00:05:27,518 --> 00:05:33,320
+Léelos claramente, recordando las consonantes y las vocales.
+
+46
+00:05:34,020 --> 00:05:38,927
+También es bueno escribir las consonantes aprendidas trazo a trazo con un lápiz.
+
+47
+00:05:38,927 --> 00:05:42,680
+Escribir a mano ayuda a recordar mejor las formas y los sonidos.
+
+48
+00:05:43,380 --> 00:05:49,890
+Hoy aprendimos diez consonantes básicas y la escritura combinada, donde las consonantes y las vocales se agrupan.
+
+49
+00:05:49,890 --> 00:05:53,920
+¡Ahora tú también puedes leer y escribir palabras sencillas!
+
+50
+00:05:54,620 --> 00:06:02,623
+Si practicas un poco cada día, tus habilidades en Hangeul crecerán rápidamente. Continuemos nuestro viaje Hangeul juntos con una suscripción y un "me gusta".
+
+51
+00:06:02,623 --> 00:06:04,290
+¡Nos vemos la próxima vez!

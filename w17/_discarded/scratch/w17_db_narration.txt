@@ -1,0 +1,23 @@
+CODE: KO-W17
+TITLE_KR: K-컬처와 실생활 구어
+TITLE_EN: K-Culture & Spoken Korean
+NARR_KR:
+안녕하세요! 드라마와 K팝을 보면 교과서에 없는 진짜 한국어가 들려요. 오늘은 친구끼리 쓰는 편한 말과 줄임말을 배워, 한국 문화를 더 가깝게 느껴 봐요.
+친한 사이에서는 '반말'을, SNS에서는 '축약어'를 자주 써요. 상황에 맞게 골라 쓰는 게 중요해요.
+'반말'는 친구·가까운 사이에서 쓰는 편한 말투라는 뜻이에요. 예를 들어, 친구에게는 '밥 먹었어?'처럼 반말로 말해요. 라고 말해요. 처음 본 사람에겐 존댓말을 써요. 자, 천천히 따라 해 보세요. '반말'.
+'축약어'는 길게 쓰는 말을 짧게 줄인 말라는 뜻이에요. 예를 들어, '생일 축하해'를 줄여 '생축'이라고 해요. 라고 말해요. SNS·메시지에서 자주 봐요. 자, 천천히 따라 해 보세요. '축약어'.
+'케이팝'는 전 세계가 즐기는 한국 대중음악라는 뜻이에요. 예를 들어, 저는 케이팝을 들으며 한국어를 배워요. 라고 말해요. 가사를 따라 부르면 발음 연습이 돼요. 자, 천천히 따라 해 보세요. '케이팝'.
+'케이드라마'는 한국에서 만든 드라마라는 뜻이에요. 예를 들어, 케이드라마로 자연스러운 표현을 익혀요. 라고 말해요. 자막을 켜고 한 문장씩 따라 해 보세요. 자, 천천히 따라 해 보세요. '케이드라마'.
+이번엔 실제 상황이에요. 누군가 '주말에 뭐 해?' 하고 물으면, '그냥 집에서 케이드라마 봐. 너는?' 하고 답할 수 있어요. 함께 연습해 봐요.
+오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!
+훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!
+NARR_EN:
+Hello! In dramas and K-pop you'll hear real Korean that's not in textbooks. Today we'll learn casual speech and abbreviations to feel Korean culture up close.
+Among close friends, people use casual speech (반말); online, abbreviations. Choosing the right one for the situation matters.
+'반말' means casual speech. For example: To a friend you say casually, 'Did you eat?' Now repeat slowly after me: '반말'.
+'축약어' means abbreviation. For example: 'Happy birthday' is shortened to '생축'. Now repeat slowly after me: '축약어'.
+'케이팝' means K-Pop. For example: I learn Korean by listening to K-pop. Now repeat slowly after me: '케이팝'.
+'케이드라마' means K-Drama. For example: I pick up natural expressions from K-dramas. Now repeat slowly after me: '케이드라마'.
+Now a real situation. If someone asks, 'What are you doing this weekend?', you can answer, 'Just watching K-dramas at home. You?'. Let's practice together.
+Here are today's expressions. Let's read them aloud once more. You're doing great!
+Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!

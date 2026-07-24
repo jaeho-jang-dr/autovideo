@@ -1,0 +1,14 @@
+2026/07/16-13:30:27.519 1f58 Reusing MANIFEST D:\Entertainments\DevEnvironment\autovideo\assets\chrome_profile_5\Default\IndexedDB\https_labs.google_0.indexeddb.leveldb/MANIFEST-000001
+2026/07/16-13:30:27.520 1f58 Recovering log #14
+2026/07/16-13:30:27.520 1f58 Reusing old log D:\Entertainments\DevEnvironment\autovideo\assets\chrome_profile_5\Default\IndexedDB\https_labs.google_0.indexeddb.leveldb/000014.log 
+2026/07/16-13:30:27.521 1f58 Delete type=2 #12
+2026/07/16-13:30:27.675 1f58 Level-0 table #19: started
+2026/07/16-13:30:27.728 1f58 Level-0 table #19: 1177 bytes OK
+2026/07/16-13:30:27.803 1f58 Delete type=0 #14
+2026/07/16-13:30:27.804 1f58 Manual compaction at level-0 from '\x00\x08\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x09\x00\x00\x00' @ 0 : 0; will stop at '\x00\x08\x00\x00\x05' @ 455 : 1
+2026/07/16-13:30:27.804 1f58 Compacting 1@0 + 1@1 files
+2026/07/16-13:30:27.859 1f58 Generated table #20@0: 144 keys, 3292 bytes
+2026/07/16-13:30:27.859 1f58 Compacted 1@0 + 1@1 files => 3292 bytes
+2026/07/16-13:30:27.893 1f58 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/07/16-13:30:27.893 1f58 Delete type=2 #19
+2026/07/16-13:30:27.894 1f58 Manual compaction at level-0 from '\x00\x08\x00\x00\x05' @ 455 : 1 .. '\x00\x09\x00\x00\x00' @ 0 : 0; will stop at (end)

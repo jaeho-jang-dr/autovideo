@@ -1,0 +1,57 @@
+{
+  "video_lang": "영어",
+  "langs": [
+    {
+      "row": "영어 (동영상 언어)",
+      "srt": "hangeul_birth_vowels/hangeul_w10_injun_np.en.srt",
+      "add": false,
+      "do": [
+        "sub"
+      ]
+    },
+    {
+      "row": "한국어",
+      "srt": "hangeul_birth_vowels/hangeul_w10_injun_np.ko.srt",
+      "add": true,
+      "do": [
+        "sub",
+        "meta"
+      ],
+      "title": "hangeul_birth_vowels/w10pkg/en_ko_title.txt",
+      "desc": "hangeul_birth_vowels/w10pkg/en_ko_desc.txt"
+    },
+    {
+      "row": "일본어",
+      "srt": "hangeul_birth_vowels/w10pkg/hangeul_w10_injun_np.ja.srt",
+      "add": true,
+      "do": [
+        "sub",
+        "meta"
+      ],
+      "title": "hangeul_birth_vowels/w10pkg/en_ja_title.txt",
+      "desc": "hangeul_birth_vowels/w10pkg/en_ja_desc.txt"
+    },
+    {
+      "row": "중국어(중국)",
+      "srt": "hangeul_birth_vowels/w10pkg/hangeul_w10_injun_np.zh.srt",
+      "add": true,
+      "do": [
+        "sub",
+        "meta"
+      ],
+      "title": "hangeul_birth_vowels/w10pkg/en_zh_title.txt",
+      "desc": "hangeul_birth_vowels/w10pkg/en_zh_desc.txt"
+    },
+    {
+      "row": "스페인어",
+      "srt": "hangeul_birth_vowels/w10pkg/hangeul_w10_injun_np.es.srt",
+      "add": true,
+      "do": [
+        "sub",
+        "meta"
+      ],
+      "title": "hangeul_birth_vowels/w10pkg/en_es_title.txt",
+      "desc": "hangeul_birth_vowels/w10pkg/en_es_desc.txt"
+    }
+  ]
+}

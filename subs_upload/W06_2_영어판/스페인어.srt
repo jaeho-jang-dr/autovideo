@@ -1,0 +1,119 @@
+1
+00:00:00,000 --> 00:00:02,309
+¡Hola! Hoy aprenderemos 'liaison',
+
+2
+00:00:02,309 --> 00:00:04,091
+donde los sonidos se enlazan suavemente,
+
+3
+00:00:04,091 --> 00:00:07,060
+y el cambio de sonido que hay detrás. ¡Empecemos!
+
+4
+00:00:09,570 --> 00:00:13,519
+Cuando una sílaba con un 'batchim' es seguida por una que comienza con 'ㅇ' [ng],
+
+5
+00:00:13,519 --> 00:00:15,783
+el 'batchim' se desliza a ese lugar.
+
+6
+00:00:15,783 --> 00:00:17,990
+Este enlace suave se llama 'liaison'.
+
+7
+00:00:22,790 --> 00:00:24,258
+Por ejemplo,
+
+8
+00:00:24,258 --> 00:00:31,720
+'음악' [eum-ak] (música) enlaza su 'ㄱ' [g] batchim y suena como '으막' [eu-mak].
+
+9
+00:00:31,720 --> 00:00:35,390
+Se escribe '음악' [eum-ak], pero se lee '으막' [eu-mak].
+
+10
+00:00:41,480 --> 00:00:47,364
+'옷이' [o-si] (la ropa) enlaza su 'ㅅ' [s] batchim para convertirse en '오시' [o-si].
+
+11
+00:00:47,364 --> 00:00:51,030
+El 'batchim' se desliza a la siguiente posición.
+
+12
+00:00:54,270 --> 00:00:59,885
+'꽃이' [kko-chi] (la flor) enlaza su 'ㅊ' [ch] batchim para convertirse en '꼬치' [kko-chi].
+
+13
+00:00:59,885 --> 00:01:04,470
+El sonido del 'batchim' se traslada a la siguiente sílaba.
+
+14
+00:01:07,010 --> 00:01:12,563
+Practica con palabras: '책을' [chae-geul] se lee como '채글' [chae-geul],
+
+15
+00:01:12,563 --> 00:01:16,033
+y '한국어' [han-gu-geo] se lee como '한구거' [han-gu-geo].
+
+16
+00:01:16,033 --> 00:01:19,920
+¿Escuchas cómo se desliza el 'batchim'?
+
+17
+00:01:23,370 --> 00:01:29,539
+Un 'ㅎ' [h] batchim se debilita y casi desaparece antes de una vocal.
+
+18
+00:01:29,539 --> 00:01:32,990
+Así que '좋아요' [jo-a-yo] suena suave, como '조아요' [jo-a-yo].
+
+19
+00:01:37,720 --> 00:01:44,176
+'웃어요' [u-seo-yo] se lee como '우서요' [u-seo-yo], y '있어요' [i-sseo-yo] se lee como '이써요' [i-sseo-yo].
+
+20
+00:01:44,176 --> 00:01:49,670
+El 'batchim' se enlaza, eso es 'liaison'.
+
+21
+00:01:52,670 --> 00:01:54,366
+Se escribe el 'batchim' tal como es,
+
+22
+00:01:54,366 --> 00:01:56,280
+pero se lee deslizándolo.
+
+23
+00:01:56,280 --> 00:02:00,930
+La ortografía y la pronunciación difieren; saber esto hace que tu coreano sea mucho más natural.
+
+24
+00:02:05,700 --> 00:02:09,695
+En resumen, cuando un 'batchim' se encuentra con 'ㅇ' [ng],
+
+25
+00:02:09,695 --> 00:02:13,085
+se desliza en 'liaison'.
+
+26
+00:02:13,085 --> 00:02:16,353
+'음악' [eum-ak] a '으막' [eu-mak], '옷이' [o-si] a '오시' [o-si].
+
+27
+00:02:16,353 --> 00:02:19,380
+Léelo fluyendo suavemente.
+
+28
+00:02:25,930 --> 00:02:28,421
+Hoy aprendimos 'liaison' y las reglas de sonido.
+
+29
+00:02:28,421 --> 00:02:31,216
+Busca 'liaison' en las letras de tus canciones favoritas.
+
+30
+00:02:31,216 --> 00:02:32,310
+¡Nos vemos la próxima vez!

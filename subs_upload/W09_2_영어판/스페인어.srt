@@ -1,0 +1,271 @@
+1
+00:00:00,000 --> 00:00:04,043
+¡Hola! En Corea, a menudo escucharás '어디에 있어요? (¿Dónde está?)
+
+2
+00:00:04,043 --> 00:00:05,419
+'
+
+3
+00:00:05,419 --> 00:00:09,118
+Hoy aprenderemos a decir dónde están las cosas.
+
+4
+00:00:09,118 --> 00:00:10,150
+¡Empecemos!
+
+5
+00:00:10,600 --> 00:00:14,895
+La ubicación coreana sigue un orden simple: lugar,
+
+6
+00:00:14,895 --> 00:00:17,790
+luego una palabra de posición, luego '에' [e] (a, en (para lugar y tiempo)).
+
+7
+00:00:17,790 --> 00:00:21,338
+Como '학교 앞에' (está delante de la escuela)
+
+8
+00:00:21,338 --> 00:00:25,260
+Aprendamos las palabras de posición una por una.
+
+9
+00:00:25,710 --> 00:00:31,212
+'앞' [ap] (delante, enfrente) . En coreano, '앞' [ap] (delante, enfrente). Por ejemplo,
+
+10
+00:00:31,212 --> 00:00:36,715
+'학교 앞에서 만나요' (Nos vemos delante de la escuela).
+
+11
+00:00:36,715 --> 00:00:39,410
+Ahora dilo conmigo: '앞' [ap] (delante, enfrente).
+
+12
+00:00:39,860 --> 00:00:44,442
+'뒤' [dwi] (atrás, detrás) . '뒤' [dwi] (atrás, detrás). Por ejemplo,
+
+13
+00:00:44,442 --> 00:00:50,510
+'집 뒤에 공원이 있어요' (Hay un parque detrás de la casa).
+
+14
+00:00:50,510 --> 00:00:53,110
+Repite conmigo: '뒤' [dwi] (atrás, detrás).
+
+15
+00:00:53,560 --> 00:00:58,969
+'옆' [yeop] (al lado, junto a) . '옆' [yeop] (al lado, junto a). Por ejemplo,
+
+16
+00:00:58,969 --> 00:01:05,115
+'은행 옆에 카페가 있어요' (Hay una cafetería al lado del banco).
+
+17
+00:01:05,115 --> 00:01:06,590
+Dilo: '옆' [yeop] (al lado, junto a).
+
+18
+00:01:07,040 --> 00:01:12,332
+'위' [wi] (arriba, encima) . '위' [wi] (arriba, encima). Por ejemplo,
+
+19
+00:01:12,332 --> 00:01:18,153
+'책상 위에 책이 있어요' (Hay un libro encima del escritorio).
+
+20
+00:01:18,153 --> 00:01:19,740
+Repite: '위' [wi] (arriba, encima).
+
+21
+00:01:20,190 --> 00:01:25,938
+'밑' [mit] (debajo, bajo) . '밑' [mit] (debajo, bajo). Por ejemplo,
+
+22
+00:01:25,938 --> 00:01:32,668
+'의자 밑에 가방이 있어요' (Hay una bolsa debajo de la silla).
+
+23
+00:01:32,668 --> 00:01:34,350
+Dilo: '밑' [mit] (debajo, bajo).
+
+24
+00:01:34,800 --> 00:01:39,696
+'안' [an] (dentro, en) . '안' [an] (dentro, en). Por ejemplo,
+
+25
+00:01:39,696 --> 00:01:46,271
+'가방 안에 책이 있어요' (Hay un libro dentro de la bolsa).
+
+26
+00:01:46,271 --> 00:01:47,950
+Repite: '안' [an] (dentro, en).
+
+27
+00:01:48,400 --> 00:01:53,708
+'밖' [bak] (fuera) . '밖' [bak] (fuera). Por ejemplo,
+
+28
+00:01:53,708 --> 00:02:01,081
+'집 밖에 자동차가 있어요' (Hay un coche fuera de la casa).
+
+29
+00:02:01,081 --> 00:02:02,850
+Dilo: '밖' [bak] (fuera).
+
+30
+00:02:03,300 --> 00:02:08,461
+'사이' [sai] (entre) . '사이' [sai] (entre). Por ejemplo,
+
+31
+00:02:08,461 --> 00:02:15,794
+'은행과 카페 사이에 있어요' (Está entre el banco y la cafetería).
+
+32
+00:02:15,794 --> 00:02:17,560
+Repite: '사이' [sai] (entre).
+
+33
+00:02:18,010 --> 00:02:23,814
+'왼쪽' [oenjjok] (izquierda) . '왼쪽' [oenjjok] (izquierda). Por ejemplo,
+
+34
+00:02:23,814 --> 00:02:29,355
+'왼쪽에 학교가 있어요' (Hay una escuela a la izquierda).
+
+35
+00:02:29,355 --> 00:02:31,070
+Dilo: '왼쪽' [oenjjok] (izquierda).
+
+36
+00:02:31,520 --> 00:02:37,662
+'오른쪽' [oreunjjok] (derecha) . '오른쪽' [oreunjjok] (derecha). Por ejemplo,
+
+37
+00:02:37,662 --> 00:02:43,150
+'오른쪽에 마트가 있어요' (Hay un supermercado a la derecha).
+
+38
+00:02:43,150 --> 00:02:44,980
+Repite: '오른쪽' [oreunjjok] (derecha).
+
+39
+00:02:45,430 --> 00:02:51,254
+Ahora algunos nombres de lugares. '마트' [mateu] (supermercado, mercado) es una tienda grande, un supermercado.
+
+40
+00:02:51,254 --> 00:02:55,796
+'마트에서 우유를 사요' (Compro leche en el supermercado).
+
+41
+00:02:55,796 --> 00:02:57,310
+Dilo: '마트' [mateu] (supermercado, mercado).
+
+42
+00:02:57,760 --> 00:03:00,202
+'학교' [hakgyo] (escuela, colegio) .
+
+43
+00:03:00,202 --> 00:03:04,542
+'학교에 걸어서 가요' (Voy a la escuela caminando).
+
+44
+00:03:04,542 --> 00:03:09,697
+El '에' [e] (a, en (para lugar y tiempo)) después de un lugar muestra dirección.
+
+45
+00:03:09,697 --> 00:03:11,460
+Repite: '학교' [hakgyo] (escuela, colegio).
+
+46
+00:03:11,910 --> 00:03:18,321
+'은행' [eunhaeng] (banco) es un banco, '카페' [ka-pe] (café, cafetería) es una cafetería, '공원' [gongwon] (parque) es un parque.
+
+47
+00:03:18,321 --> 00:03:20,504
+'은행 옆에 카페가 있어요' (Hay una cafetería al lado del banco).
+
+48
+00:03:20,504 --> 00:03:26,779
+Y '공원 안에서 산책해요' (Paseo en el parque).
+
+49
+00:03:26,779 --> 00:03:31,280
+Úsalos con las palabras de posición.
+
+50
+00:03:31,730 --> 00:03:33,512
+Una pequeña regla.
+
+51
+00:03:33,512 --> 00:03:38,622
+Usa '에' [e] (a, en (para lugar y tiempo)) para ubicación, y '에서' [eseo] (en, desde (para lugar donde ocurre una acción o "from")) para acciones.
+
+52
+00:03:38,622 --> 00:03:41,593
+'학교에 가요' (Voy a la escuela) muestra dirección,
+
+53
+00:03:41,593 --> 00:03:48,960
+mientras que '학교에서 공부해요' (Estudio en la escuela) muestra una acción allí.
+
+54
+00:03:49,410 --> 00:03:52,520
+Practiquemos una situación real.
+
+55
+00:03:52,520 --> 00:03:57,283
+Alguien pregunta '마트가 어디에 있어요? (¿Dónde está el supermercado?)'
+
+56
+00:03:57,283 --> 00:04:02,824
+Y tú respondes '학교 앞에 있어요' (Está delante de la escuela).
+
+57
+00:04:02,824 --> 00:04:03,310
+¡Bien!
+
+58
+00:04:03,760 --> 00:04:09,591
+Una más. '은행이 어디에 있어요? (¿Dónde está el banco?)'
+
+59
+00:04:09,591 --> 00:04:18,210
+Puedes responder '카페 옆에 있어요' (Hay una cafetería al lado del banco) o '공원과 카페 사이에 있어요' (Está entre el banco y la cafetería).
+
+60
+00:04:18,660 --> 00:04:21,151
+Ahora demos direcciones.
+
+61
+00:04:21,151 --> 00:04:23,835
+'왼쪽으로 가세요' (Vaya a la izquierda).
+
+62
+00:04:23,835 --> 00:04:29,009
+Luego '학교 앞에서 오른쪽' (A la derecha delante de la escuela).
+
+63
+00:04:29,009 --> 00:04:30,830
+¡Lo estás haciendo genial!
+
+64
+00:04:31,280 --> 00:04:36,960
+Repasemos las palabras de posición de hoy.
+
+65
+00:04:36,960 --> 00:04:43,270
+'앞' [ap] (delante, enfrente), '뒤' [dwi] (atrás, detrás), '옆' [yeop] (al lado, junto a), '위' [wi] (arriba, encima),
+
+66
+00:04:43,270 --> 00:04:51,001
+'밑' [mit] (debajo, bajo), '안' [an] (dentro, en), '밖' [bak] (fuera), '사이' [sai] (entre),
+
+67
+00:04:51,001 --> 00:04:58,100
+'왼쪽' [oenjjok] (izquierda), '오른쪽' [oreunjjok] (derecha). Intenta usarlas hoy.
+
+68
+00:04:58,100 --> 00:05:00,940
+¡Nos vemos la próxima vez!

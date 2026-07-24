@@ -1,0 +1,19 @@
+ atmospheric notification received:
+<notification>
+<task-10>
+<stdout>
+</stdout>
+<stderr>
+</stderr>
+<exit_code>0</exit_code>
+</task-10>
+</notification>
+
+요청하신 마담제이 전신 포즈 이미지가 성공적으로 생성되어 요청하신 경로에 저장되었습니다.
+
+### 📌 이미지 생성 및 검증 내역
+- **기준 이미지 스타일 준수**: `madam_front_base_frame1.png`의 싱글라인(Single Stroke Line) 팔·다리, 진갈색 쪽머리 및 잔머리, 따뜻한 크림빛 살색 얼굴 및 연한 핑크 볼터치 적용.
+- **포즈 구현**: 정면에서 검지를 입술에 대고 쉿 하는 전신 포즈.
+- **의상 및 요소**: 코랄/살구색 V넥 조끼 + 흰색 A라인 치마 + 흰 벙어리장갑 손 + 흰 운동화.
+- **배경**: 순백색(#ffffff) 배경, 그림자/바닥선/글자/워터마크 없음.
+- **저장 위치**: `D:/Entertainments/DevEnvironment/autovideo/home_vocab/w21/poses2_raw/mj_w21_finger_lips.png`

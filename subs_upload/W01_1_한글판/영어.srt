@@ -1,0 +1,204 @@
+1
+00:00:00,250 --> 00:00:00,592
+Hello!
+
+2
+00:00:00,592 --> 00:00:04,414
+Hangeul is one of the most scientific writing systems in the world.
+
+3
+00:00:04,414 --> 00:00:04,756
+Today,
+
+4
+00:00:04,756 --> 00:00:09,320
+let's discover how it was born and unlock the secret of its eight simple vowels.
+
+5
+00:00:14,680 --> 00:00:17,051
+Long ago, Koreans had no script of their own,
+
+6
+00:00:17,051 --> 00:00:19,368
+so they borrowed complex Chinese characters.
+
+7
+00:00:19,368 --> 00:00:22,740
+Hanja was so hard that most common people could not read at all.
+
+8
+00:00:26,440 --> 00:00:29,639
+Seeing his people suffer because they could not read,
+
+9
+00:00:29,639 --> 00:00:32,597
+King Sejong was deeply moved. 'Out of compassion,
+
+10
+00:00:32,597 --> 00:00:34,770
+I create twenty-eight new letters. '
+
+11
+00:00:38,710 --> 00:00:39,969
+Finally, in 1443,
+
+12
+00:00:39,969 --> 00:00:43,968
+Hunminjeongeum was born — a script anyone could learn.
+
+13
+00:00:43,968 --> 00:00:47,005
+The wise learned it in a morning; anyone,
+
+14
+00:00:47,005 --> 00:00:48,190
+within ten days.
+
+15
+00:00:52,390 --> 00:00:56,674
+Hangeul's vowels are modeled on three elements of the universe: heaven,
+
+16
+00:00:56,674 --> 00:00:59,088
+earth, and human. Heaven is a round dot,
+
+17
+00:00:59,088 --> 00:01:00,838
+earth a flat horizontal line,
+
+18
+00:01:00,838 --> 00:01:02,950
+and human an upright vertical line.
+
+19
+00:01:06,990 --> 00:01:11,974
+Add the heaven dot to the right of the human line and you get the bright sound 'ㅏ',
+
+20
+00:01:11,974 --> 00:01:14,797
+the rising sun in the east. Put it on the left,
+
+21
+00:01:14,797 --> 00:01:16,659
+and you get the dark sound 'ㅓ',
+
+22
+00:01:16,659 --> 00:01:18,340
+the setting sun in the west.
+
+23
+00:01:22,380 --> 00:01:26,969
+Place the dot above the earth line and you get 'ㅗ'; below it,
+
+24
+00:01:26,969 --> 00:01:27,270
+'ㅜ'.
+
+25
+00:01:27,270 --> 00:01:30,730
+Rising above is bright; sinking below is dark.
+
+26
+00:01:35,010 --> 00:01:36,998
+So bright vowels pair with bright,
+
+27
+00:01:36,998 --> 00:01:38,519
+and dark vowels with dark.
+
+28
+00:01:38,519 --> 00:01:41,150
+This beautiful order is called vowel harmony.
+
+29
+00:01:48,690 --> 00:01:51,637
+Now let's make some sounds.
+
+30
+00:01:51,637 --> 00:01:56,767
+Korean has eight simple vowels. Unlike English,
+
+31
+00:01:56,767 --> 00:02:02,771
+the secret is to keep your mouth shape perfectly still.
+
+32
+00:02:02,771 --> 00:02:08,010
+Let's say them together. ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ.
+
+33
+00:02:13,460 --> 00:02:16,068
+First, 'ㅏ' and 'ㅓ'. For both,
+
+34
+00:02:16,068 --> 00:02:20,653
+drop your jaw to open wide and keep your lips flat.
+
+35
+00:02:20,653 --> 00:02:24,520
+Open wider for 'ㅏ', a bit narrower for 'ㅓ'.
+
+36
+00:02:31,150 --> 00:02:32,459
+For 'ㅗ' and 'ㅜ',
+
+37
+00:02:32,459 --> 00:02:37,284
+round your lips like holding a straw and push them forward.
+
+38
+00:02:37,284 --> 00:02:41,210
+'ㅗ' is a little bigger, 'ㅜ' smaller and tighter.
+
+39
+00:02:45,700 --> 00:02:46,293
+For 'ㅡ',
+
+40
+00:02:46,293 --> 00:02:50,145
+stretch your lips flat sideways like a forced smile.
+
+41
+00:02:50,145 --> 00:02:50,738
+For 'ㅣ',
+
+42
+00:02:50,738 --> 00:02:54,220
+pull them even wider so your teeth almost show.
+
+43
+00:02:56,480 --> 00:02:57,926
+Finally, 'ㅐ' and 'ㅔ'.
+
+44
+00:02:57,926 --> 00:03:01,439
+Open your mouth moderately with the tongue forward.
+
+45
+00:03:01,439 --> 00:03:02,610
+In modern Korean,
+
+46
+00:03:02,610 --> 00:03:05,020
+the two sounds are almost the same.
+
+47
+00:03:09,080 --> 00:03:10,950
+Check in a mirror!
+
+48
+00:03:10,950 --> 00:03:17,910
+Your lips should round only for 'ㅗ' and 'ㅜ' — never for 'ㅓ' or 'ㅡ'.
+
+49
+00:03:23,100 --> 00:03:26,338
+Practice today's vowels in front of a mirror every day.
+
+50
+00:03:26,338 --> 00:03:29,340
+Subscribe and like for more fun Hangeul adventures.
+
+51
+00:03:29,340 --> 00:03:30,400
+See you next time!
+

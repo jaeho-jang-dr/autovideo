@@ -1,0 +1,231 @@
+1
+00:00:00,250 --> 00:00:01,201
+¡Hola a todos!
+
+2
+00:00:01,201 --> 00:00:04,307
+Hoy aprenderemos las consonantes aspiradas y tensas,
+
+3
+00:00:04,307 --> 00:00:07,350
+los sonidos que enriquecen el coreano. ¡Comencemos!
+
+4
+00:00:12,090 --> 00:00:17,016
+La última vez aprendimos las consonantes suaves y simples 'ㄱ' [g],
+
+5
+00:00:17,016 --> 00:00:18,851
+'ㄷ' [d], 'ㅂ' [b], 'ㅈ' [j], 'ㅅ' [s],
+
+6
+00:00:18,851 --> 00:00:24,260
+pronunciadas cómodamente sin tensión en la garganta o la boca.
+
+7
+00:00:24,260 --> 00:00:27,640
+Hoy veremos cómo se transforman.
+
+8
+00:00:33,360 --> 00:00:35,619
+Nuestro primer amigo es el sonido aspirado,
+
+9
+00:00:35,619 --> 00:00:39,346
+un sonido potente que libera una fuerte ráfaga de aire por la boca.
+
+10
+00:00:39,346 --> 00:00:42,170
+Como exhalar un aliento cálido, siente el aire salir.
+
+11
+00:00:46,680 --> 00:00:52,750
+Los sonidos aspirados se forman añadiendo un trazo a una consonante simple.
+
+12
+00:00:52,750 --> 00:00:56,061
+¡Añade un trazo a "ㄱ" [g] y obtendrás "ㅋ" [k]!
+
+13
+00:00:56,061 --> 00:01:00,108
+Un trazo convierte la suave "ㄱ" [g] en un sonido fuerte,
+
+14
+00:01:00,108 --> 00:01:01,580
+aspirado.
+
+15
+00:01:03,220 --> 00:01:09,080
+De la misma manera, 'ㄷ' [d] se convierte en 'ㅌ' [t], 'ㅂ' [b] se convierte en 'ㅍ' [p],
+
+16
+00:01:09,080 --> 00:01:14,566
+y 'ㅈ' [j] se convierte en 'ㅊ' [ch]. Con cada trazo añadido,
+
+17
+00:01:14,566 --> 00:01:20,550
+el aire sale disparado y el sonido se vuelve más fuerte.
+
+18
+00:01:24,780 --> 00:01:26,704
+Practiquemos 'ㅋ' [k].
+
+19
+00:01:26,704 --> 00:01:29,843
+Expulsa el aire con fuerza desde tu garganta.
+
+20
+00:01:29,843 --> 00:01:32,374
+Es la 'ㅋ' [k] en '코' [ko] (nariz).
+
+21
+00:01:32,374 --> 00:01:37,640
+Acerca la palma de tu mano a la boca y siente la ráfaga cálida.
+
+22
+00:01:42,020 --> 00:01:44,603
+Siguiente: 'ㅌ' [t], 'ㅍ' [p], 'ㅊ' [ch].
+
+23
+00:01:44,603 --> 00:01:50,415
+Pronúncialas como '타조' [ta-jo] (avestruz), '포도' [po-do] (uva),
+
+24
+00:01:50,415 --> 00:01:55,581
+y '치마' [chi-ma] (falda), liberando el aire con frescura.
+
+25
+00:01:55,581 --> 00:02:00,360
+Cada una expulsa el aire con fuerza.
+
+26
+00:02:02,420 --> 00:02:04,479
+Nuestro segundo amigo es el sonido tenso,
+
+27
+00:02:04,479 --> 00:02:07,373
+un sonido firme emitido al tensar la garganta.
+
+28
+00:02:07,373 --> 00:02:08,263
+Retén el aire,
+
+29
+00:02:08,263 --> 00:02:10,600
+como si cerraras la garganta para que no se escape nada.
+
+30
+00:02:14,280 --> 00:02:19,546
+Los sonidos tensos se forman colocando dos consonantes simples una al lado de la otra.
+
+31
+00:02:19,546 --> 00:02:20,960
+¡Dos 'ㄱ' [g] juntas forman 'ㄲ' [kk]!
+
+32
+00:02:20,960 --> 00:02:23,554
+Como si presionaras dos manos,
+
+33
+00:02:23,554 --> 00:02:26,540
+el sonido se vuelve más fuerte y firme.
+
+34
+00:02:29,040 --> 00:02:35,662
+De igual manera, 'ㄷ' [d] se convierte en 'ㄸ' [tt], 'ㅂ' [b] se convierte en 'ㅃ' [pp],
+
+35
+00:02:35,662 --> 00:02:41,360
+'ㅅ' [s] se convierte en 'ㅆ' [ss], y 'ㅈ' [j] se convierte en 'ㅉ' [jj].
+
+36
+00:02:41,360 --> 00:02:44,748
+A medida que las letras se duplican,
+
+37
+00:02:44,748 --> 00:02:49,060
+el sonido se aprieta.
+
+38
+00:02:54,580 --> 00:02:56,270
+Practiquemos 'ㄲ' [kk].
+
+39
+00:02:56,270 --> 00:03:01,784
+Tensa la garganta y produce el sonido bloqueando el aire.
+
+40
+00:03:01,784 --> 00:03:04,452
+Es la 'ㄲ' [kk] en '까치' [kka-chi] (urraca).
+
+41
+00:03:04,452 --> 00:03:07,920
+Apenas sentirás aire en la palma de tu mano.
+
+42
+00:03:11,860 --> 00:03:15,367
+Ahora 'ㄸ' [tt], 'ㅃ' [pp], 'ㅆ' [ss], 'ㅉ' [jj].
+
+43
+00:03:15,367 --> 00:03:22,077
+Siente el sonido firme al decir '꼬리' [kko-ri] (cola),
+
+44
+00:03:22,077 --> 00:03:27,567
+'땅' [ttang] (tierra), '빵' [ppang] (pan), '짜' [jja] (salado),
+
+45
+00:03:27,567 --> 00:03:32,600
+cada una producida al tensar la garganta.
+
+46
+00:03:34,980 --> 00:03:36,425
+Intentemos un experimento divertido.
+
+47
+00:03:36,425 --> 00:03:38,834
+Sostén una hoja de papel frente a tu boca.
+
+48
+00:03:38,834 --> 00:03:45,738
+Con un sonido aspirado, el aire sale y el papel se mueve; con un sonido tenso, el aire se retiene y el papel apenas se mueve.
+
+49
+00:03:45,738 --> 00:03:48,040
+Esa es la mayor diferencia entre ellos.
+
+50
+00:03:52,530 --> 00:03:55,538
+Ahora comparemos tres sonidos.
+
+51
+00:03:55,538 --> 00:03:59,904
+'개' [gae] (perro), '캐' [kae] (desenterrar), '깨' [kkae] (sésamo) suenan parecido,
+
+52
+00:03:59,904 --> 00:04:02,815
+pero la cantidad de aire difiere.
+
+53
+00:04:02,815 --> 00:04:06,502
+'개' [gae] es relajado, '캐' [kae] expulsa aire fuerte,
+
+54
+00:04:06,502 --> 00:04:10,675
+y '깨' [kkae] se afirma al tensar la garganta.
+
+55
+00:04:10,675 --> 00:04:14,750
+Pruébalos tú mismo y siente la diferencia.
+
+56
+00:04:19,410 --> 00:04:23,008
+Hoy aprendimos las consonantes aspiradas y tensas del coreano.
+
+57
+00:04:23,008 --> 00:04:25,406
+Practica los sonidos un poco cada día.
+
+58
+00:04:25,406 --> 00:04:27,110
+¡Nos vemos la próxima! ¡Adiós!

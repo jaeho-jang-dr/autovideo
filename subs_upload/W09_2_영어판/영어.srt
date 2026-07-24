@@ -1,0 +1,272 @@
+1
+00:00:00,000 --> 00:00:04,043
+Hi there! In Korea, you'll often hear '어디에 있어요?
+
+2
+00:00:04,043 --> 00:00:05,419
+' — where is it?
+
+3
+00:00:05,419 --> 00:00:09,118
+Today we learn how to say where things are.
+
+4
+00:00:09,118 --> 00:00:10,150
+Let's start!
+
+5
+00:00:10,600 --> 00:00:14,895
+Korean location follows a simple order: place,
+
+6
+00:00:14,895 --> 00:00:17,790
+then a position word, then '에'.
+
+7
+00:00:17,790 --> 00:00:21,338
+Like '학교 앞에' — in front of the school.
+
+8
+00:00:21,338 --> 00:00:25,260
+Let's learn the position words one by one.
+
+9
+00:00:25,710 --> 00:00:31,212
+'앞' means the front. In Korean, '앞'. For example,
+
+10
+00:00:31,212 --> 00:00:36,715
+'학교 앞에서 만나요' — let's meet in front of the school.
+
+11
+00:00:36,715 --> 00:00:39,410
+Now say it with me: '앞'.
+
+12
+00:00:39,860 --> 00:00:44,442
+'뒤' means the back. '뒤'. For example,
+
+13
+00:00:44,442 --> 00:00:50,510
+'집 뒤에 공원이 있어요' — there's a park behind the house.
+
+14
+00:00:50,510 --> 00:00:53,110
+Repeat after me: '뒤'.
+
+15
+00:00:53,560 --> 00:00:58,969
+'옆' means beside, next to. '옆'. For example,
+
+16
+00:00:58,969 --> 00:01:05,115
+'은행 옆에 카페가 있어요' — there's a cafe next to the bank.
+
+17
+00:01:05,115 --> 00:01:06,590
+Say it: '옆'.
+
+18
+00:01:07,040 --> 00:01:12,332
+'위' means on or above. '위'. For example,
+
+19
+00:01:12,332 --> 00:01:18,153
+'책상 위에 책이 있어요' — there's a book on the desk.
+
+20
+00:01:18,153 --> 00:01:19,740
+Repeat: '위'.
+
+21
+00:01:20,190 --> 00:01:25,938
+'밑' means under, below. '밑'. For example,
+
+22
+00:01:25,938 --> 00:01:32,668
+'의자 밑에 가방이 있어요' — there's a bag under the chair.
+
+23
+00:01:32,668 --> 00:01:34,350
+Say it: '밑'.
+
+24
+00:01:34,800 --> 00:01:39,696
+'안' means inside. '안'. For example,
+
+25
+00:01:39,696 --> 00:01:46,271
+'가방 안에 책이 있어요' — there's a book inside the bag.
+
+26
+00:01:46,271 --> 00:01:47,950
+Repeat: '안'.
+
+27
+00:01:48,400 --> 00:01:53,708
+'밖' means outside. '밖'. For example,
+
+28
+00:01:53,708 --> 00:02:01,081
+'집 밖에 자동차가 있어요' — there's a car outside the house.
+
+29
+00:02:01,081 --> 00:02:02,850
+Say it: '밖'.
+
+30
+00:02:03,300 --> 00:02:08,461
+'사이' means between. '사이'. For example,
+
+31
+00:02:08,461 --> 00:02:15,794
+'은행과 카페 사이에 있어요' — it's between the bank and the cafe.
+
+32
+00:02:15,794 --> 00:02:17,560
+Repeat: '사이'.
+
+33
+00:02:18,010 --> 00:02:23,814
+'왼쪽' means the left side. '왼쪽'. For example,
+
+34
+00:02:23,814 --> 00:02:29,355
+'왼쪽에 학교가 있어요' — the school is on the left.
+
+35
+00:02:29,355 --> 00:02:31,070
+Say it: '왼쪽'.
+
+36
+00:02:31,520 --> 00:02:37,662
+'오른쪽' means the right side. '오른쪽'. For example,
+
+37
+00:02:37,662 --> 00:02:43,150
+'오른쪽에 마트가 있어요' — the mart is on the right.
+
+38
+00:02:43,150 --> 00:02:44,980
+Repeat: '오른쪽'.
+
+39
+00:02:45,430 --> 00:02:51,254
+Now some place names. '마트' is a big store, a mart.
+
+40
+00:02:51,254 --> 00:02:55,796
+'마트에서 우유를 사요' — I buy milk at the mart.
+
+41
+00:02:55,796 --> 00:02:57,310
+Say it: '마트'.
+
+42
+00:02:57,760 --> 00:03:00,202
+'학교' means school.
+
+43
+00:03:00,202 --> 00:03:04,542
+'학교에 걸어서 가요' — I walk to school.
+
+44
+00:03:04,542 --> 00:03:09,697
+The '에' after a place shows direction.
+
+45
+00:03:09,697 --> 00:03:11,460
+Repeat: '학교'.
+
+46
+00:03:11,910 --> 00:03:18,321
+'은행' is a bank, '카페' is a cafe, '공원' is a park.
+
+47
+00:03:18,321 --> 00:03:20,504
+'은행 옆에 카페가 있어요'.
+
+48
+00:03:20,504 --> 00:03:26,779
+And '공원 안에서 산책해요' — I take a walk in the park.
+
+49
+00:03:26,779 --> 00:03:31,280
+Use them with the position words.
+
+50
+00:03:31,730 --> 00:03:33,512
+One small rule.
+
+51
+00:03:33,512 --> 00:03:38,622
+Use '에' for location, and '에서' for actions.
+
+52
+00:03:38,622 --> 00:03:41,593
+'학교에 가요' shows direction,
+
+53
+00:03:41,593 --> 00:03:48,960
+while '학교에서 공부해요' — I study at school — shows an action there.
+
+54
+00:03:49,410 --> 00:03:52,520
+Let's practice a real situation.
+
+55
+00:03:52,520 --> 00:03:57,283
+Someone asks '마트가 어디에 있어요? ' — where is the mart?
+
+56
+00:03:57,283 --> 00:04:02,824
+And you answer '학교 앞에 있어요' — it's in front of the school.
+
+57
+00:04:02,824 --> 00:04:03,310
+Nice!
+
+58
+00:04:03,760 --> 00:04:09,591
+One more. '은행이 어디에 있어요? ' — where is the bank?
+
+59
+00:04:09,591 --> 00:04:18,210
+You can answer '카페 옆에 있어요' — next to the cafe — or '공원과 카페 사이에 있어요'.
+
+60
+00:04:18,660 --> 00:04:21,151
+Now let's give directions.
+
+61
+00:04:21,151 --> 00:04:23,835
+'왼쪽으로 가세요' — go to the left.
+
+62
+00:04:23,835 --> 00:04:29,009
+Then '학교 앞에서 오른쪽' — turn right in front of the school.
+
+63
+00:04:29,009 --> 00:04:30,830
+You're doing great!
+
+64
+00:04:31,280 --> 00:04:36,960
+Let's review today's position words.
+
+65
+00:04:36,960 --> 00:04:43,270
+'앞' front, '뒤' back, '옆' beside, '위' on,
+
+66
+00:04:43,270 --> 00:04:51,001
+'밑' under, '안' inside, '밖' outside, '사이' between,
+
+67
+00:04:51,001 --> 00:04:58,100
+'왼쪽' left, '오른쪽' right. Try using them today.
+
+68
+00:04:58,100 --> 00:05:00,940
+See you next time!
+

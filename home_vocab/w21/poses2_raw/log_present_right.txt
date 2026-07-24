@@ -1,0 +1,15 @@
+요청하신 조건과 기준 이미지([madam_front_base_frame1.png](file:///D:/Entertainments/DevEnvironment/autovideo/W21/madam_front_base_frame1.png))를 완벽하게 반영하여 **마담제이 정중히 오른쪽 제시 포즈 이미지**를 생성하였습니다.
+
+![mj_w21_present_right](file:///D:/Entertainments/DevEnvironment/autovideo/home_vocab/w21/poses2_raw/mj_w21_present_right.png)
+
+### 반영사항 검증:
+- **팔·다리 싱글라인 (★★★)**: 기준 이미지와 동일하게 두께/속채움이 전혀 없는 단 하나의 얇은 검정 선(single stroke line) 처리
+- **손/발**: 손목 끝 둥근 흰 벙어리장갑, 발끝 흰 운동화
+- **피부톤**: 순백색이 아닌 따뜻한 크림빛 살색 얼굴·목 + 연한 핑크 볼발그레
+- **헤어 & 이목구비**: 진갈색 탑번 쪽머리, 양옆 잔머리 한 가닥, 점 두 개 눈, 작은 코, 미소
+- **의상**: 코랄/살구색 V넥 선생님 조끼(가슴 펜주머니·니트 밑단), 흰색 A라인 무릎길이 치마
+- **포즈**: 정면 자세 유지 + 오른팔을 펴 손바닥을 위로 하여 오른쪽을 정중히 제시
+- **배경**: 순백색(#ffffff) 전신 배경, 그림자/바닥선/글자/워터마크 없음
+
+### 저장 파일 위치:
+- [mj_w21_present_right.png](file:///D:/Entertainments/DevEnvironment/autovideo/home_vocab/w21/poses2_raw/mj_w21_present_right.png)

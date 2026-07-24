@@ -31,21 +31,26 @@ def log(m): print(m, flush=True)
 
 # ---------- 왼위 노트박스(그 버전 언어 단일) — 중앙캡션 대신 ----------
 def draw_note_box(fr, cap):
+    # ★왼편 제목 박스 — make_textbox와 동일한 코랄 악센트+크림 스타일(승인된 한글판과 동일 모양).
+    #   KO판=한글 glyph, EN판=영어 제목. 언어별 cap을 그린다.
     if not cap: return
     d = ImageDraw.Draw(fr)
-    f = cs.get_font(cs.FONT_BD, 30)
-    x, y = 26, 56
-    rows = cs.wrap(d, cap, f, int(cs.W * 0.44))
+    f = cs.get_font(cs.FONT_BD, 34)
+    rows = cs.wrap(d, cap, f, int(cs.W * 0.42))
     if not rows: return
     boxw = max(d.textlength(t, font=f) for t in rows)
-    asc, desc = f.getmetrics()
-    lh = asc + desc + 4                         # 실제 글자 높이 기준
-    padx, pady = 12, 7                          # 글자 크기에 딱 맞는 작은 박스
-    d.rounded_rectangle([x - padx, y - pady, x + boxw + padx, y + lh * len(rows) + pady - 4],
-                        radius=12, fill=(255, 255, 255, 235))
-    yy = y
+    asc, desc = f.getmetrics(); lh = asc + desc + 6
+    accent, padx, pady, rad = 12, 26, 14, 18
+    x0, y0 = 22, 44
+    x1 = x0 + accent + padx * 2 + int(boxw)
+    y1 = y0 + pady * 2 + lh * len(rows)
+    d.rounded_rectangle([x0, y0, x1, y1], radius=rad, fill=(255, 251, 244, 238), outline=(60, 55, 50, 90), width=2)
+    d.rounded_rectangle([x0, y0, x0 + accent + rad, y1], radius=rad, fill=(240, 138, 116, 255))
+    d.rectangle([x0 + accent, y0, x0 + accent + rad, y1], fill=(255, 251, 244, 238))
+    d.rounded_rectangle([x0, y0, x0 + accent, y1], radius=0, fill=(240, 138, 116, 255))
+    yy = y0 + pady
     for t in rows:
-        d.text((x, yy), t, font=f, fill=(28, 28, 40)); yy += lh
+        d.text((x0 + accent + padx, yy), t, font=f, fill=(45, 42, 40)); yy += lh
 
 def srt_ts(t):
     h=int(t//3600); m=int((t%3600)//60); s=t%60
@@ -62,10 +67,24 @@ def _strip_rom(s):
     #   자막(SRT)에는 그대로 남는다(별도 생성). 따옴표 한글·뜻(..)은 유지.
     s = re.sub(r"\s*\[[^\]]*\]", "", s)     # [bom], [han-ra-san] 등 제거
     return re.sub(r"\s{2,}", " ", s).strip()
+def _strip_en_gloss(s):
+    # ★KO 나레이션 전용: 괄호 영어뜻 (K-pop)·(iced americano)·(polite speech) 등을 제거.
+    #   → KO판 오디오는 순수 한국어(선희 러닝 + 선희 DB클립)만. Emma(영어 성우)가 KO판에서 영어뜻을
+    #     읽지 않게(사장님 지시 W17). 자막(SRT)에는 그대로 유지된다(별도 생성 경로라 영향 없음).
+    #   한글이 든 괄호는 보존(한국어 부연 설명일 수 있음).
+    s = re.sub(r"\s*\(([^()]*)\)", lambda m: "" if not re.search(r"[가-힣]", m.group(1)) else m.group(0), s)
+    return re.sub(r"\s{2,}", " ", s).strip()
+def _strip_blank(s):
+    # ★밑줄 자리(___)를 나레이터가 읽지 않게(사장님 지시): 한글 문형은 '무엇을', 영어 뜻은 'something'.
+    #   자막(SRT)에는 그대로 '___을 잃어버렸어요' 유지(별도 생성 경로).
+    s = s.replace("___을", "무엇을").replace("___를", "무엇을").replace("___", "something")
+    # ★한글 문맥의 숫자는 선희가 한국어로 읽게(영어 성우가 '24'를 읽던 문제). 자막엔 숫자 유지.
+    s = s.replace("24시간", "이십사 시간")
+    return re.sub(r"\s{2,}", " ", s).strip()
 meta=[]
 for ko,en in zip(ko_scenes, en_scenes):
-    ko_a, ko_dur, ko_js = cs.ensure_scene_audio(ko["seq"], _strip_rom(ko["script"]), "ko")
-    en_a, en_dur, en_js = cs.ensure_scene_audio(en["seq"], _strip_rom(en["script"]), "en")
+    ko_a, ko_dur, ko_js = cs.ensure_scene_audio(ko["seq"], _strip_blank(_strip_en_gloss(_strip_rom(ko["script"]))), "ko")  # ★KO=순수 한국어
+    en_a, en_dur, en_js = cs.ensure_scene_audio(en["seq"], _strip_blank(_strip_rom(en["script"])), "en")
     dur = max(ko_dur, en_dur) + LEAD + TAIL
     meta.append(dict(ko=ko,en=en,ko_a=ko_a,en_a=en_a,ko_dur=ko_dur,en_dur=en_dur,ko_js=ko_js,en_js=en_js,dur=dur))
     log(f"  S{ko['seq']:>2}: KO={ko_dur:4.1f} EN={en_dur:4.1f} → {dur:4.1f}s")
@@ -87,10 +106,11 @@ build_lang_srt("ko",KO_SRT); build_lang_srt("en",EN_SRT)
 # ★★자막 표기 원칙(사장님 확정) — 렌더 때마다 자동 적용, 빼먹지 말 것:
 #    자모  'ㅏ' [a]  /  단어 '오른쪽' [o-reun-jjok] (뜻)  /  문장 '어떻게 가요?' (뜻)
 #    ⚠️SRT에만 넣는다(DB/나레이션에 넣으면 TTS가 로마자를 읽어버림) → 렌더 후처리로 고정.
-#    ★한국인용 KO 자막에는 넣지 않는다(어색) — 외국어판(en/ja/zh/es)에만.
+#    ★KO 자막에도 넣는다(사장님 지시 2026-07-22): 외국인이 한글판으로도 공부 →
+#      한국 성우(선희)가 읽는 따옴표 친 한글 단어에 [발음기호] 표기. (문장 4어절+는 생략)
 try:
     import add_pron_to_srt as _pron
-    for _s in (EN_SRT,):
+    for _s in (EN_SRT, KO_SRT):
         _lines = []
         for _ln in open(_s, encoding="utf-8"):
             _t = _ln.rstrip("\n")
@@ -156,16 +176,23 @@ def render_lang(lang):
         stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,check=True)
     # mux: video + 그언어오디오 + KO/EN 자막 둘다
     final=os.path.join(PDIR,f"{PREFIX}_np_{lang}.mp4")
-    ksd = "default" if lang=="ko" else "0"; esd = "default" if lang=="en" else "0"
-    subprocess.run([FF,"-y","-i",silent,"-i",track,"-i",KO_SRT,"-i",EN_SRT,
-        "-vf",f"scale={RES}:flags=lanczos",
-        "-map","0:v","-map","1:a","-map","2:s","-map","3:s",
-        "-c:v","libx264","-preset","medium","-crf","20","-pix_fmt","yuv420p",
-        "-c:a","aac","-b:a","160k","-c:s","mov_text",
-        "-metadata:s:a:0",f"language={ac}",
-        "-metadata:s:s:0","language=kor","-metadata:s:s:1","language=eng",
-        "-disposition:s:0",ksd,"-disposition:s:1",esd,
-        final], check=True)
+    # ★자막 트랙 선택: SUB_LANGS(기본 ko,en). 예) SUB_LANGS=en → 영어 자막만(사장님 지시 W20 v2, 이중자막 제거).
+    _subsel = [s.strip() for s in os.environ.get("SUB_LANGS", "ko,en").split(",") if s.strip()]
+    sub_srcs = []                                   # (srt, lang_code, is_default)
+    if "ko" in _subsel: sub_srcs.append((KO_SRT, "kor", lang == "ko"))
+    if "en" in _subsel: sub_srcs.append((EN_SRT, "eng", lang == "en"))
+    if not sub_srcs: sub_srcs.append((EN_SRT if lang == "en" else KO_SRT, ac, True))
+    if not any(d for _, _, d in sub_srcs): sub_srcs[0] = (sub_srcs[0][0], sub_srcs[0][1], True)
+    inputs = ["-i", silent, "-i", track]
+    for srt, _, _ in sub_srcs: inputs += ["-i", srt]
+    maps = ["-map", "0:v", "-map", "1:a"]
+    for i in range(len(sub_srcs)): maps += ["-map", f"{2+i}:s"]
+    smeta = ["-metadata:s:a:0", f"language={ac}"]
+    for i, (_, lc, isdef) in enumerate(sub_srcs):
+        smeta += [f"-metadata:s:s:{i}", f"language={lc}", f"-disposition:s:{i}", ("default" if isdef else "0")]
+    subprocess.run([FF, "-y", *inputs, "-vf", f"scale={RES}:flags=lanczos", *maps,
+        "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
+        "-c:a", "aac", "-b:a", "160k", "-c:s", "mov_text", *smeta, final], check=True)
     log(f"### {lang.upper()}_DONE -> {final} (버전언어 박스 + 양쪽자막 + 드로잉) ###")
 
 for lang in LANGS:

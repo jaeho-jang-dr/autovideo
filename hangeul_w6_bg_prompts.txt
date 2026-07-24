@@ -1,0 +1,15 @@
+# W6 소리 이음(연음·음운변동) — 홍대 Hongdae 배경 11장 (사람없음·파스텔·씬별)
+# 생성: python gen_assets_flow.py --prompts hangeul_w6_bg_prompts.txt --outdir assets/graphics/bg --no-transparent --aspect 16:9
+# 각 씬 배경 = bg_w6_XX (W5와 같은 형태)
+
+bg_w6_01: a lively Hongdae street with colorful mural walls and small indie shops, Seoul youth culture, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+bg_w6_02: a Hongdae busking street with a small street stage and guitar, music vibes, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+bg_w6_03: a cozy Hongdae cafe street lined with cute cafes and string lights, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+bg_w6_04: a large colorful graffiti mural wall in Hongdae, playful art, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+bg_w6_05: a Hongdae shopping alley with trendy little shops and awnings, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+bg_w6_06: Hongdae street at soft dusk with gentle glowing signs, youthful energy, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+bg_w6_07: Hongdae Playground park square with benches and a small stage, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+bg_w6_08: a Hongdae street corner with a music shop and guitars in the window, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+bg_w6_09: a Hongdae evening street with warm cafe window lights and lanterns, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+bg_w6_10: a wide Hongdae street panorama with murals, cafes and a youthful vibe, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+bg_w6_11: an iconic Hongdae street at soft sunset, mural walls and cozy shops, Seoul, calm, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9

@@ -8,6 +8,8 @@ with sync_playwright() as pw:
     b = pw.chromium.connect_over_cdp("http://localhost:9222"); ctx = b.contexts[0]
     pgs = [p for p in ctx.pages if "youtube.com" in p.url]
     pg = pgs[-1] if pgs else ctx.new_page(); pg.set_default_timeout(12000)
+    posts = []
+    pg.on("request", lambda r: posts.append(r.url) if "youtubei" in r.url else None)
     pg.goto(f"https://studio.youtube.com/video/{VID}/edit", wait_until="domcontentloaded"); time.sleep(6)
     # 엔딩 화면 열기
     opened = False
@@ -29,13 +31,25 @@ with sync_playwright() as pw:
         else: lbl.click(); tpl = True
     except Exception as e: log("템플릿 실패 " + str(e)[:40])
     time.sleep(3)
-    # 저장
-    saved = False
-    for sel in ("#save-button", "ytcp-button#save-button"):
+    # 저장 — ★JS 클릭(actionability 우회) + edit_video POST 검증
+    time.sleep(2)
+    cands = []
+    for loc in (pg.locator("#save-button"), pg.locator("ytcp-button#save-button"),
+                pg.get_by_role("button", name="저장"), pg.get_by_text("저장", exact=True)):
+        for i in range(loc.count()):
+            try:
+                bb = loc.nth(i).bounding_box(); en = loc.nth(i).is_enabled()
+                if bb and en: cands.append((loc.nth(i), bb))
+            except Exception: pass
+    cands.sort(key=lambda t: -t[1]["x"])
+    log(f"저장후보(활성) {len(cands)}개 x={[round(b['x']) for _,b in cands]}")
+    for el, bb in cands:
         try:
-            s = pg.locator(sel).first
-            if s.is_visible(timeout=2000) and s.is_enabled(): s.click(); saved = True; break
-        except Exception: pass
-    time.sleep(4)
-    log(f"=== {VID}: 템플릿={tpl} 저장={'OK' if saved else 'NO(이미있음/변경없음)'} ===")
+            el.evaluate("e => e.click()"); log(f"  JS저장클릭 @{round(bb['x'])},{round(bb['y'])}")
+            time.sleep(3)
+            if any("edit_video" in p for p in posts): break
+        except Exception as e: log("  JS클릭실패 " + str(e)[:24])
+    time.sleep(6)
+    ev = any("edit_video" in p for p in posts)
+    log(f"=== {VID}: 템플릿={tpl} 저장={'OK(edit_video)' if ev else 'MISS'} ===")
 print("DONE")

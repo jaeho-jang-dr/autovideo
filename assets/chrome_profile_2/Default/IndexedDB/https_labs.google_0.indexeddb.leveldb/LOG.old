@@ -1,0 +1,25 @@
+2026/07/16-15:00:53.276 ee6c Reusing MANIFEST D:\Entertainments\DevEnvironment\autovideo\assets\chrome_profile_2\Default\IndexedDB\https_labs.google_0.indexeddb.leveldb/MANIFEST-000001
+2026/07/16-15:00:53.276 ee6c Recovering log #134
+2026/07/16-15:00:53.276 ee6c Reusing old log D:\Entertainments\DevEnvironment\autovideo\assets\chrome_profile_2\Default\IndexedDB\https_labs.google_0.indexeddb.leveldb/000134.log 
+2026/07/16-15:00:53.277 ee6c Delete type=2 #133
+2026/07/16-15:00:53.432 7cd8 Level-0 table #139: started
+2026/07/16-15:00:53.457 7cd8 Level-0 table #139: 2678 bytes OK
+2026/07/16-15:00:53.483 7cd8 Delete type=0 #134
+2026/07/16-15:00:53.483 82b0 Manual compaction at level-0 from '\x003\x00\x00\x00' @ 72057594037927935 : 1 .. '\x004\x00\x00\x00' @ 0 : 0; will stop at '\x003\x00\x00\x05' @ 1980 : 1
+2026/07/16-15:00:53.484 82b0 Compacting 1@0 + 1@1 files
+2026/07/16-15:00:53.509 82b0 Generated table #140@0: 211 keys, 4050 bytes
+2026/07/16-15:00:53.509 82b0 Compacted 1@0 + 1@1 files => 4050 bytes
+2026/07/16-15:00:53.533 82b0 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/07/16-15:00:53.534 82b0 Delete type=2 #139
+2026/07/16-15:00:53.535 82b0 Manual compaction at level-0 from '\x003\x00\x00\x05' @ 1980 : 1 .. '\x004\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/07/16-15:01:01.403 32f4 Level-0 table #142: started
+2026/07/16-15:01:01.469 32f4 Level-0 table #142: 1313 bytes OK
+2026/07/16-15:01:01.629 32f4 Delete type=2 #136
+2026/07/16-15:01:01.629 32f4 Delete type=0 #138
+2026/07/16-15:01:01.630 82b0 Manual compaction at level-0 from '\x004\x00\x00\x00' @ 72057594037927935 : 1 .. '\x005\x00\x00\x00' @ 0 : 0; will stop at '\x004\x00\x00\x05' @ 2023 : 1
+2026/07/16-15:01:01.630 82b0 Compacting 1@0 + 1@1 files
+2026/07/16-15:01:01.667 82b0 Generated table #143@0: 211 keys, 4050 bytes
+2026/07/16-15:01:01.667 82b0 Compacted 1@0 + 1@1 files => 4050 bytes
+2026/07/16-15:01:01.691 82b0 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/07/16-15:01:01.692 82b0 Delete type=2 #142
+2026/07/16-15:01:01.693 82b0 Manual compaction at level-0 from '\x004\x00\x00\x05' @ 2023 : 1 .. '\x005\x00\x00\x00' @ 0 : 0; will stop at (end)

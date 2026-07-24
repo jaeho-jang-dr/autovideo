@@ -1,0 +1,48 @@
+========================================================
+ W5 (북촌 한옥마을) 배경 — 수동 생성 안내
+========================================================
+
+■ 현재 상태: 6/13 완성 (bg_w5_01·02·03·05·06·07)
+■ 남은 것: 7장 (bg_w5_04, 08, 09, 10, 11, 12, 13)
+
+■ 만드는 곳: Google Flow (labs.google/fx → 이미지 생성)
+   - 비율(aspect): 16:9 로 설정
+   - 아래 프롬프트를 하나씩 복사 → 붙여넣기 → 생성
+
+■ ★저장 위치 (반드시 이 폴더에, 이 파일명으로):
+   D:\Entertainments\DevEnvironment\autovideo\assets\graphics\bg\
+   - 생성된 이미지를 다운받아 아래 파일명으로 저장
+   - 예: 씬4 이미지 → bg_w5_04.png
+
+--------------------------------------------------------
+[ bg_w5_04.png ]  (씬4 — 한옥 대문)
+a traditional wooden hanok gate with a tiled roof and a stone wall, Bukchon, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+--------------------------------------------------------
+[ bg_w5_08.png ]  (씬8 — 처마·기와 클로즈)
+close view of curved hanok roof eaves and grey giwa roof tiles against a soft sky, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+--------------------------------------------------------
+[ bg_w5_09.png ]  (씬9 — 저녁 창불빛)
+Bukchon village at soft evening with warm glowing hanok paper windows, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+--------------------------------------------------------
+[ bg_w5_10.png ]  (씬10 — 지붕+서울 스카이라인)
+a Bukchon panorama of hanok tiled roofs with a gentle Seoul skyline beyond, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+--------------------------------------------------------
+[ bg_w5_11.png ]  (씬11 — 감나무·장독)
+a peaceful hanok yard with a persimmon tree and brown clay jars, autumn, Bukchon, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+--------------------------------------------------------
+[ bg_w5_12.png ]  (씬12 — 아침빛 마을)
+Bukchon hanok village in soft morning light, tiled roofs and a low stone wall, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+--------------------------------------------------------
+[ bg_w5_13.png ]  (씬13 — 노을 아이코닉)
+iconic view of Bukchon Hanok Village at soft sunset, curved tiled roofs, Seoul, calm, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+========================================================
+ 7장 다 저장하시면 알려주세요 → 제가 W5 렌더해서 교정앱에 띄웁니다.
+ (참고: 정책 위반 아님. 자동화 속도 감지일 뿐, 손으로 만들면 정상.)
+========================================================

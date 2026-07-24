@@ -1,0 +1,13 @@
+요청하신 **마담제이 작별 인사(손 흔드는 포즈)** 캐릭터 이미지를 제미나이 이미지 생성을 통해 성공적으로 생성하여 지정하신 경로에 저장하였습니다.
+
+### 📌 캐릭터 상세 및 디자인 준수 사항
+- **캐릭터 디자인 유지**: 기준 이미지([madam_front_base_frame1.png](file:///D:/Entertainments/DevEnvironment/autovideo/W21/madam_front_base_frame1.png))의 진갈색 탑번 쪽머리, 잔머리, 점 눈, 작은 코, 볼 발그레, 코랄/살구색 V넥 조끼(펜 주머니 포함), 흰색 A라인 치마, 흰 벙어리장갑, 흰 운동화 완벽 반영
+- **피부 톤**: 따뜻한 크림빛 살색 톤 유지
+- **팔·다리 싱글라인 (Single Stroke Line)**: 두께/속채움 없는 **단 하나의 얇은 검정 싱글 라인**으로 팔·다리 및 목 표현
+- **포즈**: 정면 전신 구도에서 한 손을 어깨 높이로 들어 작별 인사하는 포즈
+- **배경 및 요소**: 깔끔한 순백색(`#ffffff`) 배경, 바닥선/그림자/글자/워터마크 제거
+
+---
+
+### 💾 저장 위치
+- [mj_w21_wave.png](file:///D:/Entertainments/DevEnvironment/autovideo/home_vocab/w21/poses2_raw/mj_w21_wave.png)

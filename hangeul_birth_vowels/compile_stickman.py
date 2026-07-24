@@ -465,7 +465,18 @@ def seq_state(tt, dur, seq="teacher_board"):
             local = min(1.0, max(0.0, (p - acc) / max(1e-6, d)))
             x = b["x_from"] + (b["x_to"] - b["x_from"]) * _smooth(local)
             cyc = b["cycle"]
-            ci = int(local * len(cyc) * 3) % len(cyc) if len(cyc) > 1 else 0
+            if len(cyc) > 1:
+                # ★걷기 순환: WALK_STRIDE_SEC 지정 시 '1 스트라이드(cycle 전체)=그 초'로 절대시간 재생
+                #   (미지정=기존 동작: 비트당 6순환). 사장님 지시 2026-07-23: 1스트라이드=1.08초.
+                _stride = os.environ.get("WALK_STRIDE_SEC", "").strip()
+                if _stride:
+                    beat_secs = (d / total) * dur          # 이 비트가 차지하는 절대 초
+                    t_in_beat = local * beat_secs           # 비트 내 경과 초
+                    ci = int((t_in_beat / float(_stride)) * len(cyc)) % len(cyc)
+                else:
+                    ci = int(local * len(cyc) * 6) % len(cyc)
+            else:
+                ci = 0
             return x, cyc[ci]
         acc += d
     return beats[-1]["x_to"], beats[-1]["cycle"][0]
@@ -869,9 +880,9 @@ def ensure_scene_audio(seq, script, lang):
                 files.append(_silence(PAD)); t += PAD
         elif _PUNCT.match(part):                      # 구두점/공백 → 짧은 무음
             files.append(_silence(PUNCT_SIL)); t += PUNCT_SIL
-        else:                                         # 일반 텍스트 → 한글런은 ko 음성, 그 외는 해당 언어
+        else:                                         # 일반 텍스트 → 한글런은 ko(선희), 그 외(영어 등)는 en(Emma)
             for run, is_kr in _split_kr_runs(part):
-                seg = _seg_tts(run, "ko" if is_kr else lang)
+                seg = _seg_tts(run, "ko" if is_kr else "en")   # ★영어런은 항상 Emma(en) — KO판에서도 한글 성우가 영어 읽지 않게(사장님 지시 W17)
                 files.append(seg); t += AudioFileClip(seg).duration
 
     # 입력 샘플레이트가 달라도 안전: 각 입력 24kHz mono 리샘플 후 concat 필터로 이어붙임

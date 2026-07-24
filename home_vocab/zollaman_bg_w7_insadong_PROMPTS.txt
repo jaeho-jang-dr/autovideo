@@ -1,0 +1,25 @@
+# W7 인사동(Insadong) 배경 11장 (Flow 생성용) — W5/W6와 동일 파스텔 스토리북
+# ★ 저장 위치: assets/graphics/bg/   ★ 파일명: bg_w7_01.png ~ bg_w7_11.png
+# 이미지모드, 16:9, 왼쪽·하단은 캐릭터 자리로 비움, 사람 없음.
+
+bg_w7_01: a charming Insadong traditional culture street in Seoul with hanok-style craft shops and hanging paper lanterns, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w7_02: a cozy Insadong traditional tea house exterior with wooden signboards and small stools, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w7_03: an Insadong craft street lined with pottery and ceramic shops, cute jars on display, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w7_04: a traditional Korean hanji paper craft shop in Insadong with colorful paper fans and lanterns, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w7_05: a charming traditional Korean hanbok clothing shop in Insadong with colorful hanbok dresses on display racks and a paper lantern by the door, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w7_06: the Ssamzigil spiral craft building in Insadong with little studios and plants, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w7_07: a quiet Insadong traditional art gallery street with framed paintings in windows, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w7_08: a narrow Insadong antique and craft alley with wooden shelves of trinkets, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w7_09: an Insadong traditional street-snack corner with kkultarae honey candy and hotteok stalls, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w7_10: a serene Insadong traditional teahouse courtyard with a low table, teapot and a small garden, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+bg_w7_11: an iconic Insadong street at soft golden sunset with lanterns and hanok roofs, calm and warm, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9

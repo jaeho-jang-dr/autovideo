@@ -1,0 +1,44 @@
+========================================================
+  W6 (홍대 Hongdae) 배경 — 수동 생성 안내
+========================================================
+
+■ Flow 차단 상태 → 다른 네트워크/수동으로 생성
+■ 비율: 16:9  |  저장 위치:
+   D:\Entertainments\DevEnvironmentutovideossets\graphicsg\
+■ 파일명 그대로 저장 (예: 씬1 → bg_w6_01.png)
+
+--------------------------------------------------------
+[ bg_w6_01.png ]  (씬1 — 홍대 머럴 거리)
+a lively Hongdae street with colorful mural walls and small indie shops, Seoul youth culture, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+--------------------------------------------------------
+[ bg_w6_02.png ]  (씬2 — 버스킹 거리)
+a Hongdae busking street with a small street stage and guitar, music vibes, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+--------------------------------------------------------
+[ bg_w6_03.png ]  (씬3 — 카페 거리)
+a cozy Hongdae cafe street lined with cute cafes and string lights, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+--------------------------------------------------------
+[ bg_w6_04.png ]  (씬4 — 그래피티 벽)
+a large colorful graffiti mural wall in Hongdae, playful art, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+--------------------------------------------------------
+[ bg_w6_05.png ]  (씬5 — 쇼핑 골목)
+a Hongdae shopping alley with trendy little shops and awnings, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+--------------------------------------------------------
+[ bg_w6_06.png ]  (씬6 — 해질녘 거리)
+Hongdae street at soft dusk with gentle glowing signs, youthful energy, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+--------------------------------------------------------
+[ bg_w6_07.png ]  (씬7 — 홍대 놀이터)
+Hongdae Playground park square with benches and a small stage, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+--------------------------------------------------------
+[ bg_w6_08.png ]  (씬8 — 음악 상점)
+a Hongdae street corner with a music shop and guitars in the window, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+--------------------------------------------------------
+[ bg_w6_09.png ]  (씬9 — 저녁 카페 불빛)
+a Hongdae evening street with warm cafe window lights and lanterns, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+--------------------------------------------------------
+[ bg_w6_10.png ]  (씬10 — 거리 파노라마)
+a wide Hongdae street panorama with murals, cafes and a youthful vibe, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+--------------------------------------------------------
+[ bg_w6_11.png ]  (씬11 — 노을 홍대)
+an iconic Hongdae street at soft sunset, mural walls and cozy shops, Seoul, calm, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+--------------------------------------------------------
+11장 저장하면 알려주세요 → W6 렌더 진행합니다.

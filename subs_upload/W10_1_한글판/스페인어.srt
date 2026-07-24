@@ -1,0 +1,195 @@
+1
+00:00:00,000 --> 00:00:00,962
+¡Hola! Bienvenido.
+
+2
+00:00:00,962 --> 00:00:04,105
+Hoy aprendemos las frases que necesitas para ir de compras.
+
+3
+00:00:04,105 --> 00:00:06,670
+¡Vamos a una tienda en la playa de Gwangalli!
+
+4
+00:00:12,670 --> 00:00:18,111
+Ir de compras tiene un flujo: pregunta el precio ‘얼마예요’ [eol-ma-ye-yo] (¿cuánto cuesta?),
+
+5
+00:00:18,111 --> 00:00:21,480
+elige ‘이거 주세요’ [i-geo ju-se-yo] (dame esto), paga ‘결제’ [gyeol-je] (pago),
+
+6
+00:00:21,480 --> 00:00:27,310
+y verifica el descuento ‘할인’ [hal-in] (descuento). Solo estos cuatro.
+
+7
+00:00:30,500 --> 00:00:33,472
+Para captar los precios, ‘숫자’ [sut-ja] (números) importan.
+
+8
+00:00:33,472 --> 00:00:35,148
+Si los números son complicados,
+
+9
+00:00:35,148 --> 00:00:38,730
+mira nuestro vídeo anterior en la tarjeta superior derecha.
+
+10
+00:00:41,800 --> 00:00:43,991
+Estamos en la ‘가게’ [ga-ge] (tienda).
+
+11
+00:00:43,991 --> 00:00:46,444
+Ves algo que te gusta.
+
+12
+00:00:46,444 --> 00:00:48,810
+Te preguntas el precio.
+
+13
+00:00:50,050 --> 00:00:56,190
+Para preguntar un precio, di ‘얼마예요’ [eol-ma-ye-yo]. ‘얼마예요’ significa ¿cuánto cuesta?.
+
+14
+00:01:00,030 --> 00:01:03,870
+Señala el artículo y pregunta: ‘이거 얼마예요’? [i-geo eol-ma-ye-yo] (¿cuánto cuesta esto?).
+
+15
+00:01:06,620 --> 00:01:09,910
+Ahora repite lentamente: ‘얼마예요’ [eol-ma-ye-yo].
+
+16
+00:01:12,300 --> 00:01:14,721
+¿Comprando varios a la vez?
+
+17
+00:01:14,721 --> 00:01:18,300
+Pregunta ‘전부 얼마예요’ [jeon-bu eol-ma-ye-yo] (¿cuánto es todo?).
+
+18
+00:01:19,280 --> 00:01:21,750
+Has decidido. Ahora pídela.
+
+19
+00:01:24,290 --> 00:01:26,572
+Señala y di ‘이거 주세요’ [i-geo ju-se-yo].
+
+20
+00:01:26,572 --> 00:01:29,350
+Significa 'esto, por favor'.
+
+21
+00:01:34,650 --> 00:01:41,771
+Cerca: ‘이거 주세요’ [i-geo ju-se-yo]. Un poco lejos: ‘그거 주세요’ [geu-geo ju-se-yo] (dame eso - un poco lejos).
+
+22
+00:01:41,771 --> 00:01:44,540
+Lejos: ‘저거 주세요’ [jeo-geo ju-se-yo] (dame aquello - lejos).
+
+23
+00:01:45,760 --> 00:01:48,780
+Ahora repite: ‘이거 주세요’ [i-geo ju-se-yo].
+
+24
+00:01:51,060 --> 00:01:57,420
+Di la cantidad: uno es ‘한 개 주세요’ [han gae ju-se-yo] (dame uno), dos es ‘두 개 주세요’ [du gae ju-se-yo] (dame dos).
+
+25
+00:02:00,150 --> 00:02:05,899
+¿No es del todo correcto? Pregunta ‘다른 거 있어요’ [da-reun geo i-sseo-yo] (¿hay otros?).
+
+26
+00:02:05,899 --> 00:02:09,220
+O ‘더 큰 거’ [deo keun geo] (uno más grande).
+
+27
+00:02:09,890 --> 00:02:13,440
+¿Todo elegido? Dirígete al mostrador. Es hora de pagar.
+
+28
+00:02:15,450 --> 00:02:20,390
+Pagar se llama ‘결제’ [gyeol-je] (pago).
+
+29
+00:02:21,230 --> 00:02:26,320
+Con tarjeta: di ‘카드’ [ka-deu] (tarjeta)로 결제할게요 (pagaré con tarjeta).
+
+30
+00:02:29,100 --> 00:02:34,090
+En efectivo: di ‘현금’ [hyeon-geum] (efectivo)으로 결제할게요 (pagaré en efectivo).
+
+31
+00:02:37,130 --> 00:02:40,130
+Ahora repite: ‘결제’ [gyeol-je].
+
+32
+00:02:42,400 --> 00:02:46,020
+¿Necesitas una bolsa? Di ‘봉투 주세요’ [bong-tu ju-se-yo] (dame una bolsa).
+
+33
+00:02:48,350 --> 00:02:52,330
+¿Necesitas un recibo? Di ‘영수증 주세요’ [yeong-su-jeung ju-se-yo] (dame un recibo).
+
+34
+00:02:54,610 --> 00:02:57,730
+¿Oh? ¡Está en oferta! El precio ha bajado.
+
+35
+00:03:00,750 --> 00:03:05,600
+Bajar el precio es ‘할인’ [hal-in] (descuento).
+
+36
+00:03:06,860 --> 00:03:13,080
+Durante una venta, pregunta: 이거 ‘할인’ [hal-in] 돼요? (¿hay descuento en esto?).
+
+37
+00:03:14,730 --> 00:03:20,405
+¿Un poco caro? Pregunta ‘좀 깎아 주세요’ [jom kkak-ka ju-se-yo] (por favor, baje el precio).
+
+38
+00:03:20,405 --> 00:03:22,940
+Demasiado caro: ‘너무 비싸요’ [neo-mu bi-ssa-yo] (demasiado caro).
+
+39
+00:03:24,850 --> 00:03:27,830
+Ahora repite: ‘할인’ [hal-in].
+
+40
+00:03:30,120 --> 00:03:35,125
+¡Ahora, la vida real! Un cliente pregunta ‘이거 얼마예요’ [i-geo eol-ma-ye-yo] (¿cuánto cuesta esto?),
+
+41
+00:03:35,125 --> 00:03:40,250
+y el dependiente dice ‘오천 원이에요’ [o-cheon won-i-e-yo] (son cinco mil wones), ‘지금 할인 중이에요’! [ji-geum hal-in jung-i-e-yo] (¡ahora mismo hay un descuento!).
+
+42
+00:03:45,590 --> 00:03:46,908
+¿Quieres más frases para tiendas?
+
+43
+00:03:46,908 --> 00:03:49,371
+Mira el vídeo en la tarjeta superior derecha — a continuación,
+
+44
+00:03:49,371 --> 00:03:51,090
+pedir comida y hablar del mercado.
+
+45
+00:03:55,830 --> 00:04:01,650
+Las frases de hoy: ‘얼마예요’ [eol-ma-ye-yo], ‘이거 주세요’ [i-geo ju-se-yo], ‘결제’ [gyeol-je], ‘할인’ [hal-in].
+
+46
+00:04:01,650 --> 00:04:07,470
+Léelos en voz alta una vez más. ¡Lo estás haciendo genial!
+
+47
+00:04:10,660 --> 00:04:11,364
+¡Maravilloso!
+
+48
+00:04:11,364 --> 00:04:14,182
+Usa las frases de hoy al menos una vez hoy.
+
+49
+00:04:14,182 --> 00:04:17,210
+Pequeños pasos, grandes habilidades. ¡Hasta la próxima!

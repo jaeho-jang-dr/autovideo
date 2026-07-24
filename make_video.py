@@ -540,8 +540,31 @@ def main():
             audio_clip = None
             print(f"Scene {scene['id']}: custom duration {duration:.2f}s (TTS skipped)")
         else:
-            print(f"Generating TTS for Scene {scene['id']} ({args.lang})...")
-            save_tts(narration_text, audio_path, lang=args.lang)
+            db_audio_found = False
+            import sqlite3
+            import shutil
+            db_path = "channel/content.db"
+            if os.path.exists(db_path):
+                try:
+                    db_conn = sqlite3.connect(db_path, timeout=10.0)
+                    db_cur = db_conn.cursor()
+                    db_cur.execute("SELECT filepath FROM hangeul_audio_assets WHERE text = ?", (narration_text,))
+                    row = db_cur.fetchone()
+                    db_conn.close()
+                    if row:
+                        pre_rendered_rel_path = row[0]
+                        pre_rendered_abs_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), pre_rendered_rel_path.replace("/", os.sep))
+                        if os.path.exists(pre_rendered_abs_path) and os.path.getsize(pre_rendered_abs_path) > 0:
+                            print(f"Scene {scene['id']}: Using pre-rendered database audio: {pre_rendered_abs_path}")
+                            shutil.copy(pre_rendered_abs_path, audio_path)
+                            db_audio_found = True
+                except Exception as e:
+                    print(f"Warning: Database audio lookup failed: {e}")
+                    
+            if not db_audio_found:
+                print(f"Generating TTS for Scene {scene['id']} ({args.lang})...")
+                save_tts(narration_text, audio_path, lang=args.lang)
+                
             # Load audio and apply 1.1x speed MultiplySpeed
             raw_audio = AudioFileClip(audio_path)
             audio_clip = raw_audio.with_effects([fx.MultiplySpeed(1.1)])
@@ -714,8 +737,9 @@ def main():
             arrow_layer = ImageClip(arrow_path).with_duration(3.0).with_start(2.5)
             
             def arrow_pos(t):
-                if t < 0.7:
-                    ratio = t / 0.7
+                local_t = max(0.0, t)
+                if local_t < 0.7:
+                    ratio = local_t / 0.7
                     x = 1100 - (1100 - 880) * ratio
                     y = 150 + (350 - 150) * ratio
                 else:

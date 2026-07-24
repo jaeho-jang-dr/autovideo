@@ -1,0 +1,10 @@
+# 졸라맨 — 스트롱맨(알통 자랑, 남성 시그니처) (Flow에 붙여넣어 생성)
+# 사장님이 직접 Flow에서 생성용. 이미지 모드, 흰 배경. 생성 후 파일명: zollaman_strong.png
+# 핵심: 기존 jjolla-man 스타일 100% 동일 + 단정한 머리 + 양팔 알통 플렉스(더블 바이셉) 당당한 포즈
+
+# ===== 붙여넣기용 전체 프롬프트 (이 아래 한 덩어리) =====
+Hand-drawn rough black ink doodle of a simple stick-figure MAN (Korean jjolla-man / classic stickman): one big round circle head with two small simple dot eyes and a tiny short mouth line, SHORT NEAT TIDY solid-BLACK hair sketched smoothly on top of the round head (clean and neat, NOT spiky, NOT messy, NOT bushy), a thin single-line neck and a thin single-line torso, thin straight arms and legs each drawn as a single thin pen stroke, small simple stick hands, small simple shoes. He is striking a proud STRONGMAN double-biceps flex pose: BOTH arms raised and bent sharply at the elbows, both fists up near his shoulders showing off his muscles, chest puffed out, standing firmly with feet planted slightly apart, big confident happy grin, energetic and strong. Loose sketchy hand-drawn pen lines, slightly wobbly imperfect outlines, minimalist whiteboard-doodle sketch-animation style. Solid flat pure white background. ONE single full-body figure only, centered, no other figures, no character sheet, no text, no signatures, no captions
+# =====================================================
+
+# (참고) gen_assets_flow.py 자동생성용 포즈 한 줄 형식:
+# zollaman_strong | proud strongman double-biceps flex, BOTH arms bent with fists up by the shoulders showing muscles, chest out, confident big grin, feet planted apart, neat tidy short black hair

@@ -38,7 +38,7 @@
       "name_en": "World Through MD's Eyes",
       "medical_lens": "역사·예술·사회 현상을 정렬·하중·병리의 눈으로 재해석",
       "priority": 1,
-      "count": 5
+      "count": 6
     },
     {
       "code": "GEN",
@@ -46,7 +46,7 @@
       "name_en": "Enlightenment for All",
       "medical_lens": "신경가소성·영양·회복으로 세대 공감과 건강을 잇기",
       "priority": 2,
-      "count": 4
+      "count": 5
     },
     {
       "code": "LM",
@@ -59,17 +59,51 @@
   ],
   "episodes": [
     {
+      "code": "SEJONG",
+      "category": "MD",
+      "title_kr": "세종대왕과 한글의 탄생",
+      "title_en": "Who Created Hangul? King Sejong & the Birth of the Korean Alphabet",
+      "hook_kr": "한글은 왜, 어떻게 태어났을까요? 세종대왕의 창제 철학을 만나봅니다.",
+      "logline_kr": null,
+      "status": "published",
+      "priority": 1,
+      "runtime_sec": 704,
+      "youtube_kr": "6lGedBJ5xx4",
+      "youtube_en": "6lGedBJ5xx4",
+      "publish_date": null,
+      "reverse_spec": null,
+      "style_profile": null,
+      "scenes": []
+    },
+    {
+      "code": "GROWTH",
+      "category": "GEN",
+      "title_kr": "우리 아이 키 얼마나 클까? | 소아 성장·키 크는 과학",
+      "title_en": "How Tall Will Your Child Grow? | Child Growth Science",
+      "hook_kr": "부모의 키로 아이의 미래 키를 예상하는 공식과 소아 성장의 원리를 밝힙니다.",
+      "logline_kr": null,
+      "status": "published",
+      "priority": 2,
+      "runtime_sec": 651,
+      "youtube_kr": "Bohkrg5mmTw",
+      "youtube_en": "Bohkrg5mmTw",
+      "publish_date": null,
+      "reverse_spec": null,
+      "style_profile": null,
+      "scenes": []
+    },
+    {
       "code": "CA-001",
       "category": "CA",
       "title_kr": "몰아보기는 정말 우리 몸에 나쁠까?",
       "title_en": "Is Binge Watching Bad For You?",
       "hook_kr": "침대에 누워 드라마를 몰아보는 일, 정말 우리 몸에 괜찮을까요?",
       "logline_kr": "뇌 도파민 회로, 신체 비활동성(정형외과적 디스크 하중/혈전/대사), 안구 피로/수면 분석 및 해결책",
-      "status": "scripted",
-      "priority": 1,
-      "runtime_sec": 125,
-      "youtube_kr": null,
-      "youtube_en": null,
+      "status": "published",
+      "priority": 3,
+      "runtime_sec": 496,
+      "youtube_kr": "wJUAiZW5fW0",
+      "youtube_en": "wJUAiZW5fW0",
       "publish_date": null,
       "reverse_spec": null,
       "style_profile": null,
@@ -653,137 +687,201 @@
       ]
     },
     {
-      "code": "CA-002",
+      "code": "CA-003",
       "category": "CA",
-      "title_kr": "진격의 거인이 실존한다면?",
-      "title_en": "If Titans Were Real",
-      "hook_kr": "50m 거인은 한 걸음 떼는 순간 제 뼈에 으스러진다?",
-      "logline_kr": "제곱-세제곱 법칙과 골강도 한계 (스케일의 저주)",
-      "status": "idea",
-      "priority": 1,
+      "title_kr": "열심히 운동하는데 왜 자꾸 아플까? | 웨이트 트레이닝 부상의 과학",
+      "title_en": "Workout Injury: The Science of Weight Lifting",
+      "hook_kr": "초음속으로 날아오를 때, 슈트 속 사람의 척추에 무슨 일이?",
+      "logline_kr": "G포스·추간판 압박·충격흡수의 역학",
+      "status": "published",
+      "priority": 4,
       "runtime_sec": null,
-      "youtube_kr": null,
-      "youtube_en": null,
+      "youtube_kr": "qytcAZOiEsQ",
+      "youtube_en": "qytcAZOiEsQ",
       "publish_date": null,
       "reverse_spec": null,
       "style_profile": null,
       "scenes": []
     },
     {
-      "code": "IMP-001",
-      "category": "IMP",
-      "title_kr": "공짜 에너지가 불가능한 이유",
-      "title_en": "Why Free Energy Is Impossible",
-      "hook_kr": "넣지 않아도 영원히 도는 바퀴, 왜 한 번도 성공 못 했나?",
-      "logline_kr": "열역학 제2법칙 ↔ 인체 항상성·대사의 비유",
-      "status": "idea",
-      "priority": 1,
-      "runtime_sec": null,
-      "youtube_kr": null,
-      "youtube_en": null,
+      "code": "MD-003",
+      "category": "MD",
+      "title_kr": "스마트폰과 거북목, 인류의 다음 진화?",
+      "title_en": "Text Neck: A New Human Spine?",
+      "hook_kr": "고개 숙인 현대인의 목, 진화일까 퇴화일까?",
+      "logline_kr": "경추 전만 소실과 하중 증가의 미래",
+      "status": "published",
+      "priority": 5,
+      "runtime_sec": 374,
+      "youtube_kr": "KI_LvmiTWtE",
+      "youtube_en": "KI_LvmiTWtE",
       "publish_date": null,
       "reverse_spec": null,
-      "style_profile": null,
-      "scenes": []
-    },
-    {
-      "code": "IMP-002",
-      "category": "IMP",
-      "title_kr": "빛보다 빠를 수 없는 이유",
-      "title_en": "Why Nothing Can Outrun Light",
-      "hook_kr": "시속 300km 바이크와 광속은 왜 차원이 다른 이야기일까?",
-      "logline_kr": "상대성 질량 증가 ↔ 신경전달 속도 비유",
-      "status": "idea",
-      "priority": 1,
-      "runtime_sec": null,
-      "youtube_kr": null,
-      "youtube_en": null,
-      "publish_date": null,
-      "reverse_spec": null,
-      "style_profile": null,
-      "scenes": []
-    },
-    {
-      "code": "IMP-006",
-      "category": "IMP",
-      "title_kr": "트롤리 딜레마와 자율주행",
-      "title_en": "The Trolley Problem & Self-Driving Cars",
-      "hook_kr": "5명을 살릴까 1명을 살릴까, 답이 없는 문제를 기계가 푼다?",
-      "logline_kr": "의사의 생명윤리 관점에서 본 알고리즘의 벽",
-      "status": "idea",
-      "priority": 1,
-      "runtime_sec": null,
-      "youtube_kr": null,
-      "youtube_en": null,
-      "publish_date": null,
-      "reverse_spec": null,
-      "style_profile": null,
-      "scenes": []
-    },
-    {
-      "code": "KO-001",
-      "category": "KO",
-      "title_kr": "한글단어교실: 집에서 편",
-      "title_en": "Korean Word Classroom: At Home",
-      "hook_kr": "집에서 만나는 사물들의 한글 이름과 발음은 무엇일까?",
-      "logline_kr": "아침부터 등교까지 만나는 18종 일상 단어와 지은이의 발음 학습",
-      "status": "rendering",
-      "priority": 1,
-      "runtime_sec": 116,
-      "youtube_kr": null,
-      "youtube_en": null,
-      "publish_date": null,
-      "reverse_spec": null,
-      "style_profile": null,
+      "style_profile": "assets/profiles/black_box_sub.json",
       "scenes": [
         {
+          "seq": 0,
+          "script_kr": "혹시 지금 이 영상을 보면서 고개를 푹 숙이고 계신가요? 스마트폰이 만든 현대인의 고질병, 거북목 증후군의 충격적인 진실과 완벽한 치료법을 파헤쳐 봅니다.",
+          "script_en": "Are you looking down while watching this video? Let's dig into the shocking truth and perfect cure for text neck syndrome, a modern disease caused by smartphones.",
+          "duration_sec": 12.3
+        },
+        {
           "seq": 1,
-          "script_kr": "아침에 침대에서 일어납니다. 따뜻한 이불을 개고, 알람시계를 끕니다.",
-          "script_en": "Wake up in bed in the morning. Fold the warm blanket, and turn off the alarm clock.",
-          "duration_sec": 18.0
+          "script_kr": "해부학적으로 정상적인 성인의 목뼈는 완만한 C자 곡선, 즉 경추 전만을 유지하도록 설계되어 있습니다. 이 중립 상태(0도)에서 경추가 지탱하는 머리의 고유 무게는 약 5kg에 불과하죠.",
+          "script_en": "Anatomically, a normal adult's cervical spine is designed to maintain a gentle C-curve, or cervical lordosis. In this neutral 0-degree state, the neck supports a head weight of only about 5kg.",
+          "duration_sec": 14.7
         },
         {
           "seq": 2,
-          "script_kr": "학교에 갈 준비를 합니다. 책가방에 책과 공책, 그리고 연필을 챙깁니다.",
-          "script_en": "Get ready for school. Pack a book, a notebook, and a pencil into the backpack.",
-          "duration_sec": 18.0
+          "script_kr": "하지만 스마트폰을 보며 고개를 전방으로 숙이면 힘점까지의 '모멘트 암' 레버 효과가 길어지며 하중이 지수함수적으로 증가합니다. 고개를 15도만 숙여도 목에는 약 12kg의 하중이 실립니다.",
+          "script_en": "However, as you tilt your head forward to look at your smartphone, the 'moment arm' lever effect lengthens, increasing the load exponentially. Even a 15-degree tilt places a 12kg load on the neck.",
+          "duration_sec": 15.0
         },
         {
           "seq": 3,
-          "script_kr": "욕실로 가서 깨끗이 씻습니다. 거울을 보며 세수를 하고, 수건으로 물기를 닦은 뒤, 칫솔로 양치를 합니다.",
-          "script_en": "Go to the bathroom and wash up. Wash face looking at the mirror, dry with a towel, and brush teeth with a toothbrush.",
-          "duration_sec": 18.0
+          "script_kr": "각도가 커져 60도로 푹 숙이게 되면 하중은 약 27kg까지 치솟습니다. 이는 7살 어린이를 하루 종일 목덜미에 얹고 버티는 것과 같은 엄청난 물리적 충격입니다.",
+          "script_en": "If the angle increases to a 60-degree steep tilt, the load skyrockets to about 27kg. This is an immense physical shock, equivalent to carrying a 7-year-old child on the back of your neck all day.",
+          "duration_sec": 12.9
         },
         {
           "seq": 4,
-          "script_kr": "식탁에 앉아 아침 식사를 합니다. 숟가락과 젓가락으로 밥을 먹고 물컵으로 물을 마십니다.",
-          "script_en": "Sit at the dining table and eat breakfast. Eat rice using a spoon and chopsticks, and drink water from a cup.",
-          "duration_sec": 18.0
+          "script_kr": "이 엄청난 하중을 견디기 위해 목 뒤쪽의 상부 승모근, 견갑거근, 판상근은 머리가 떨어지지 않도록 끌어당기는 등척성 수축 상태로 극도로 긴장하게 됩니다.",
+          "script_en": "To withstand this immense load, the posterior neck muscles—upper trapezius, levator scapulae, and splenius—become extremely tense through constant isometric contraction to keep the head from falling.",
+          "duration_sec": 12.1
         },
         {
           "seq": 5,
-          "script_kr": "이제 학교로 출발합니다. 신발을 신고 현관문을 열고 나갑니다. 버스정류장에서 버스를 타고 등교합니다.",
-          "script_en": "Off to school now. Put on shoes and open the front door. Take a bus at the bus stop to go to school.",
-          "duration_sec": 18.0
+          "script_kr": "반면 앞쪽의 깊은 목 굽힘근, 즉 심부경추굴곡근은 점차 약화됩니다. 이로 인해 근육의 '길이-장력 관계'가 무너지는 심각한 생체역학적 불균형이 초래되는 것이죠.",
+          "script_en": "Conversely, the deep anterior neck flexors gradually weaken. This causes a severe biomechanical imbalance where the muscle's 'length-tension relationship' completely collapses.",
+          "duration_sec": 12.7
+        },
+        {
+          "seq": 6,
+          "script_kr": "뼈를 지지하는 인대 역시 지속적인 기계적 스트레스를 받으면 탄성을 잃고 반영구적으로 늘어나는 이른바 '크리프 현상(Creep Deformation)'을 겪게 됩니다.",
+          "script_en": "Ligaments supporting the bones also suffer from 'Creep Deformation,' a phenomenon where they lose elasticity and permanently stretch under constant mechanical stress.",
+          "duration_sec": 13.1
+        },
+        {
+          "seq": 7,
+          "script_kr": "인대가 늘어나면 충격 흡수 장치인 C자 곡선이 상실되어 일자목이나 거북목이 됩니다. 이는 하중을 뼈와 디스크로 직접 전달해 척추의 관절염과 퇴행성 병변을 가속화합니다.",
+          "script_en": "Stretched ligaments lead to the loss of the C-curve shock absorber, causing straight or text neck. This transfers the load directly to bones and discs, accelerating arthritis and degenerative lesions.",
+          "duration_sec": 13.3
+        },
+        {
+          "seq": 8,
+          "script_kr": "특히 움직임이 가장 많은 경추 5-6번 및 6-7번 디스크가 후방으로 탈출하기 쉽습니다. 빠져나온 디스크가 신경을 압박하면 팔과 손가락의 저림, 근력 저하 현상이 나타납니다.",
+          "script_en": "The highly mobile C5-C6 and C6-C7 discs are especially prone to posterior herniation. The herniated disc compresses nerves, causing arm and finger numbness and muscle weakness.",
+          "duration_sec": 13.9
+        },
+        {
+          "seq": 9,
+          "script_kr": "연쇄 반응은 전신으로 이어집니다. 짧아진 가슴 근육(흉근)이 어깨를 안으로 말리게 하는 '라운드 숄더'와 등이 둥글게 굽는 흉추 후만, 일명 '거북등'을 유발하죠.",
+          "script_en": "A chain reaction spreads throughout the body. Shortened pectoral muscles pull the shoulders inward, causing 'round shoulders,' and the thoracic spine curves backward into 'turtle back' kyphosis.",
+          "duration_sec": 13.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "또한 고개가 앞으로 빠지면 턱 밑의 설골 근육 장력에 불균형이 생겨 하악골을 잡아당기게 됩니다. 이는 결국 입을 벌릴 때 통증을 유발하는 턱관절 장애(TMD)의 숨은 원인이 됩니다.",
+          "script_en": "Furthermore, the forward head posture disrupts the tension balance of the hyoid muscles under the jaw, pulling the mandible and becoming a hidden cause of Temporomandibular Joint Disorder (TMD).",
+          "duration_sec": 14.4
+        },
+        {
+          "seq": 11,
+          "script_kr": "굽은 상체는 흉곽을 압박하여 폐가 온전히 팽창하지 못하게 막습니다. 이로 인해 폐활량이 최대 30%까지 떨어지면서 몸은 만성적인 산소 부족과 극심한 피로에 시달리게 됩니다.",
+          "script_en": "The hunched upper body compresses the rib cage, preventing full lung expansion. Lung capacity drops by up to 30%, plunging the body into chronic oxygen deficiency and extreme fatigue.",
+          "duration_sec": 13.7
+        },
+        {
+          "seq": 12,
+          "script_kr": "나아가 2018년 '네이처 사이언티픽 리포트'에는 충격적인 뼈의 구조적 변형 연구가 실렸습니다. 지속적으로 뒤통수 뼈를 당기는 인대 때문에 후두골에 'EOP'라는 뼈 뿔이 자라나고 있다는 겁니다.",
+          "script_en": "Furthermore, a 2018 study in 'Nature Scientific Reports' revealed shocking structural bone changes. A bone horn called 'EOP' is growing on the occipital bone due to ligaments constantly pulling the skull.",
+          "duration_sec": 15.6
+        },
+        {
+          "seq": 13,
+          "script_kr": "신종 환경 자극에 뼈가 적응하는 이 현상을 두고, 학계에서는 우리가 혹시 스마트폰을 쥐고 뿔이 달린 '스마트폰 뿔 사피엔스'로 진화하는 게 아니냐는 뼈있는 농담까지 나옵니다.",
+          "script_en": "Regarding this bone adaptation to new environmental stimuli, scholars jokingly warn that we might be evolving into 'Smartphone Horn Sapiens,' holding phones with horns on our heads.",
+          "duration_sec": 13.9
+        },
+        {
+          "seq": 14,
+          "script_kr": "내 목이 어느 단계인지 진단하기 위해 방사선 촬영을 통한 '콥스 각도(Cobb's Angle)' 기법을 씁니다. 제2경추와 제7경추가 이루는 각도가 12.5도 미만이라면 거북목으로 명확히 진단됩니다.",
+          "script_en": "To diagnose your stage, the 'Cobb's Angle' X-ray method is used. If the angle between the C2 and C7 vertebrae is less than 12.5 degrees, it is clearly diagnosed as a text neck.",
+          "duration_sec": 15.9
+        },
+        {
+          "seq": 15,
+          "script_kr": "증상이 심화된 경우 의학적 치료가 필수입니다. 비정상적으로 잠긴 관절과 경직된 연부 조직을 한의사나 물리치료사가 직접 풀어 가동성을 회복시키는 '도수치료(관절가동술)'가 기본입니다.",
+          "script_en": "If symptoms worsen, medical treatment is essential. Manual therapy (joint mobilization), where a specialist manually releases locked joints and stiff tissues to restore mobility, is fundamental.",
+          "duration_sec": 14.4
+        },
+        {
+          "seq": 16,
+          "script_kr": "이와 함께 굳은 근육의 긴장을 완화하고 깊은 조직의 혈액 순환을 촉진하여 회복을 돕는 온열 치료와 초음파 기기를 활용한 전문 물리치료를 병행합니다.",
+          "script_en": "Along with this, professional physical therapy using heat or ultrasound equipment is applied to relieve muscle tension and promote deep tissue blood circulation for recovery.",
+          "duration_sec": 11.7
+        },
+        {
+          "seq": 17,
+          "script_kr": "만약 근막 조직에 만성 병변이 생겼다면 체외충격파(ESWT)가 효과적입니다. 고에너지 충격파를 환부에 쏘아 미세혈관 신생과 세포의 자생적 조직 재생 원리를 유도하죠.",
+          "script_en": "For chronic myofascial lesions, Extracorporeal Shock Wave Therapy (ESWT) is highly effective. It shoots high-energy shock waves into the lesion, inducing micro-vessel formation and tissue regeneration.",
+          "duration_sec": 13.1
+        },
+        {
+          "seq": 18,
+          "script_kr": "근육 섬유가 단단한 띠처럼 뭉친 결절, 즉 타우트 밴드(Taut Band)가 발생했다면 통증유발점 주사(TPI)를 시행합니다. 주삿바늘로 결절을 직접 파쇄해 뭉침을 해소합니다.",
+          "script_en": "If muscle fibers form hard nodular bands (Taut Bands), a Trigger Point Injection (TPI) is administered. The needle physically breaks down the nodule to instantly relieve the muscle knot.",
+          "duration_sec": 14.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "늘어나고 약화된 후방 관절 지지 인대에는 고농도 포도당 등을 주입하는 프롤로테라피를 적용합니다. 이는 국소 염증 반응을 일으켜 인대 세포가 스스로 증식하고 튼튼해지도록 만듭니다.",
+          "script_en": "Prolotherapy, injecting high-concentration dextrose, is applied to stretched and weakened posterior ligaments. It induces local inflammation, causing ligament cells to proliferate and strengthen.",
+          "duration_sec": 14.1
+        },
+        {
+          "seq": 20,
+          "script_kr": "심한 통증은 신경차단술 주사로 예민해진 신경 역치를 안정화시킵니다. 이후 무중력 상태를 이용한 슬링 운동(뉴렉)을 병행하여 약화된 심부 근육을 안전하게 재활 활성화해야 합니다.",
+          "script_en": "Severe pain is stabilized through nerve block injections to lower nerve thresholds. Afterward, sling exercises (Neurac) utilizing zero gravity safely rehabilitate and activate weakened deep muscles.",
+          "duration_sec": 14.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "하지만 생활 습관 교정이 병행되지 않으면 치료는 헛수고입니다! 하지 말아야 할 행동, Don'ts! 엎드려 스마트폰을 보거나 모니터를 시선 아래에 두고 목을 거북이처럼 빼는 행동은 절대 금물입니다.",
+          "script_en": "However, without lifestyle correction, treatment is in vain! The Don'ts! Lying face down using your phone, or placing the monitor low and sticking your neck out like a turtle are absolute strict no-nos.",
+          "duration_sec": 15.7
+        },
+        {
+          "seq": 22,
+          "script_kr": "컴퓨터 주변 기기인 키보드와 마우스를 몸에서 멀리 두는 것도 위험합니다. 멀리 있는 마우스를 잡으려고 팔을 뻗는 순간, 상체와 목이 자연스럽게 앞으로 굽어지기 때문입니다.",
+          "script_en": "Placing computer peripherals like a keyboard and mouse far away is also dangerous. The moment you stretch your arm to grab a distant mouse, your upper body and neck naturally hunch forward.",
+          "duration_sec": 13.6
+        },
+        {
+          "seq": 23,
+          "script_kr": "이제 꼭 실천해야 할 Dos! 모니터 상단을 내 눈높이에 정확히 맞추고, 스마트폰을 볼 때는 팔꿈치를 반대 손으로 지지해 기기를 눈높이까지 번쩍 들어 올려야 합니다.",
+          "script_en": "Now the Dos you must practice! Align the top of your monitor exactly to your eye level, and when using a smartphone, support your elbow with the other hand and raise the device to your eye level.",
+          "duration_sec": 13.1
+        },
+        {
+          "seq": 24,
+          "script_kr": "50분간 업무나 작업을 했다면, 반드시 5분의 '자세 리셋' 시간이 필요합니다. 양 발뒤꿈치, 엉덩이, 등, 뒤통수를 평평한 벽에 밀착시키고 서 있는 '벽 서기'가 어긋난 정렬을 리셋해 줍니다.",
+          "script_en": "After 50 minutes of work, a 5-minute 'posture reset' is mandatory. 'Wall standing,' where you press your heels, hips, back, and back of the head flat against a wall, resets your misaligned posture.",
+          "duration_sec": 15.4
+        },
+        {
+          "seq": 25,
+          "script_kr": "언제 어디서나 할 수 있는 자가 재활 운동의 핵심은 '친턱(Chin-Tuck) 운동'입니다. 시선을 정면에 두고 정수리를 위로 뽑아 올리듯 턱을 몸쪽 수평 방향으로 당겨 심부경추굴곡근을 강화합니다.",
+          "script_en": "The core self-rehabilitation exercise you can do anywhere is the 'Chin-Tuck'. Look straight, pull your chin horizontally towards your body as if pulling the crown of your head up, strengthening the deep neck flexors.",
+          "duration_sec": 15.7
+        },
+        {
+          "seq": 26,
+          "script_kr": "다음은 '맥켄지 신전 운동'입니다. 가슴을 크게 열면서 등 뒤의 양 날개뼈(견갑골)를 중앙으로 꽉 조이고, 허리 전만을 유지한 채 고개를 뒤로 지그시 젖혀 줍니다.",
+          "script_en": "Next is the 'McKenzie Extension'. Open your chest wide, firmly squeeze both shoulder blades (scapulae) together in the back, and gently tilt your head backward while maintaining lumbar lordosis.",
+          "duration_sec": 13.0
         }
       ]
-    },
-    {
-      "code": "LM-004",
-      "category": "LM",
-      "title_kr": "하루 8천보, 무릎은 정말 닳을까?",
-      "title_en": "Do 8,000 Steps Wear Out Your Knees?",
-      "hook_kr": "많이 걸으면 무릎이 닳는다는 말, 사실일까?",
-      "logline_kr": "연골 영양·관절 부하의 과학 (TED-Ed '1만보' 정면 대결)",
-      "status": "idea",
-      "priority": 1,
-      "runtime_sec": null,
-      "youtube_kr": null,
-      "youtube_en": null,
-      "publish_date": null,
-      "reverse_spec": null,
-      "style_profile": null,
-      "scenes": []
     },
     {
       "code": "MD-000",
@@ -793,10 +891,10 @@
       "hook_kr": "회중시계가 흔들리면 정말 마음이 움직일까?",
       "logline_kr": "암시·자율신경 반응으로 본 최면의 의학사 (회중시계 오프닝)",
       "status": "published",
-      "priority": 1,
+      "priority": 6,
       "runtime_sec": 136,
-      "youtube_kr": null,
-      "youtube_en": null,
+      "youtube_kr": "JohmMBxizkg",
+      "youtube_en": "JohmMBxizkg",
       "publish_date": null,
       "reverse_spec": "[역공학 케이스] 최면술의 탄생 (MD-000 / hypnosis_science)\n- 자사 게시본: https://youtu.be/JohmMBxizkg (4K, 공개). 외부 원본 소스 영상은 기록 없음 — 하우스 카툰 스타일 + TED-Ed식 친근 교육 애니메이션 벤치마크.\n- 비주얼: 다정한 카툰/웹툰 일러스트, 셀셰이딩, 따뜻한 소프트 컬러, 굵고 깔끔한 외곽선. 인물=둥글둥글 친근. 배경=장면별 맥락(무대/바로크 왕실/실험실/병원/뇌스캔).\n- 파이프라인: Flow(Nano Banana, 0크레딧) 키프레임 이미지(장면당 1장) -> Veo image-to-video 모션클립(scene_N.mp4) -> moviepy 합성(무박스 자막 malgunbd + 로고로 워터마크 덮기 + 디졸브/컷 전환).\n- 구성: 16씬(1=인트로 회중시계, 16=아웃트로 결론 포함). 본편은 2~15 사용. 나레이션 Azure 선희/Emma 1.1x, 한/영 자막.\n- 쇼츠(9:16): 인트로/아웃트로 제외, 훅->전환->결론 3비트 = 씬2 마술쇼 / 씬13 fMRI 뇌 / 씬15 무마취 의료. shorts_src에 같은 카툰 스타일 9:16 키프레임 재생성 -> autoveo 네이티브 모드 애니메이션 -> 플랫 그린배경 합성. (정주행 쇼츠와 동일 방법)\n- 핵심 교훈: Flow 생성은 CDP 재사용보다 autoveo 네이티브 브라우저 모드가 안정적. 워터마크 ✦는 9:16 클립 가로0.82·세로0.90 위치.",
       "style_profile": "{\"look\": \"friendly cartoon/webtoon illustration, warm cel-shaded, soft rounded shapes, thick clean black outlines, warm soft color palette, Dr.Jay-ed friendly-doctor house style\", \"method\": \"Flow(Nano Banana) keyframe image per scene -> Veo image-to-video (scene_N.mp4) -> moviepy composite (boxless malgunbd subtitles, logo over Veo watermark, transitions)\", \"ref\": \"youtu.be/JohmMBxizkg (our published 4K)\", \"external_source\": \"NOT recorded — house cartoon style; benchmark = TED-Ed friendly educational animation. (add external source URL if one existed)\", \"narration\": \"Azure ko-KR-SunHiNeural(SunHi) / en-US-EmmaMultilingualNeural(Emma), 1.1x; KR/EN subtitle+audio tracks\", \"font\": \"C:/Windows/Fonts/malgunbd.ttf\", \"canvas\": [1920, 1080], \"short_variant\": {\"aspect\": [1080, 1920], \"beats\": [2, 13, 15], \"bg\": \"pastel green (212,230,213) flat-layered\", \"source\": \"shorts_src 9:16 cartoon keyframes -> autoveo native Veo animate\", \"prompts_file\": \"hypnosis_science/hyp_short_prompts.txt\"}}",
@@ -900,6 +998,139 @@
       ]
     },
     {
+      "code": "CA-002",
+      "category": "CA",
+      "title_kr": "진격의 거인이 실존한다면?",
+      "title_en": "If Titans Were Real",
+      "hook_kr": "50m 거인은 한 걸음 떼는 순간 제 뼈에 으스러진다?",
+      "logline_kr": "제곱-세제곱 법칙과 골강도 한계 (스케일의 저주)",
+      "status": "idea",
+      "priority": 11,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "reverse_spec": null,
+      "style_profile": null,
+      "scenes": []
+    },
+    {
+      "code": "IMP-001",
+      "category": "IMP",
+      "title_kr": "공짜 에너지가 불가능한 이유",
+      "title_en": "Why Free Energy Is Impossible",
+      "hook_kr": "넣지 않아도 영원히 도는 바퀴, 왜 한 번도 성공 못 했나?",
+      "logline_kr": "열역학 제2법칙 ↔ 인체 항상성·대사의 비유",
+      "status": "idea",
+      "priority": 11,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "reverse_spec": null,
+      "style_profile": null,
+      "scenes": []
+    },
+    {
+      "code": "IMP-002",
+      "category": "IMP",
+      "title_kr": "빛보다 빠를 수 없는 이유",
+      "title_en": "Why Nothing Can Outrun Light",
+      "hook_kr": "시속 300km 바이크와 광속은 왜 차원이 다른 이야기일까?",
+      "logline_kr": "상대성 질량 증가 ↔ 신경전달 속도 비유",
+      "status": "idea",
+      "priority": 11,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "reverse_spec": null,
+      "style_profile": null,
+      "scenes": []
+    },
+    {
+      "code": "IMP-006",
+      "category": "IMP",
+      "title_kr": "트롤리 딜레마와 자율주행",
+      "title_en": "The Trolley Problem & Self-Driving Cars",
+      "hook_kr": "5명을 살릴까 1명을 살릴까, 답이 없는 문제를 기계가 푼다?",
+      "logline_kr": "의사의 생명윤리 관점에서 본 알고리즘의 벽",
+      "status": "idea",
+      "priority": 11,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "reverse_spec": null,
+      "style_profile": null,
+      "scenes": []
+    },
+    {
+      "code": "KO-001",
+      "category": "KO",
+      "title_kr": "한글단어교실: 집에서 편",
+      "title_en": "Korean Word Classroom: At Home",
+      "hook_kr": "집에서 만나는 사물들의 한글 이름과 발음은 무엇일까?",
+      "logline_kr": "아침부터 등교까지 만나는 18종 일상 단어와 지은이의 발음 학습",
+      "status": "rendering",
+      "priority": 11,
+      "runtime_sec": 116,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "reverse_spec": null,
+      "style_profile": null,
+      "scenes": [
+        {
+          "seq": 1,
+          "script_kr": "아침에 침대에서 일어납니다. 따뜻한 이불을 개고, 알람시계를 끕니다.",
+          "script_en": "Wake up in bed in the morning. Fold the warm blanket, and turn off the alarm clock.",
+          "duration_sec": 18.0
+        },
+        {
+          "seq": 2,
+          "script_kr": "학교에 갈 준비를 합니다. 책가방에 책과 공책, 그리고 연필을 챙깁니다.",
+          "script_en": "Get ready for school. Pack a book, a notebook, and a pencil into the backpack.",
+          "duration_sec": 18.0
+        },
+        {
+          "seq": 3,
+          "script_kr": "욕실로 가서 깨끗이 씻습니다. 거울을 보며 세수를 하고, 수건으로 물기를 닦은 뒤, 칫솔로 양치를 합니다.",
+          "script_en": "Go to the bathroom and wash up. Wash face looking at the mirror, dry with a towel, and brush teeth with a toothbrush.",
+          "duration_sec": 18.0
+        },
+        {
+          "seq": 4,
+          "script_kr": "식탁에 앉아 아침 식사를 합니다. 숟가락과 젓가락으로 밥을 먹고 물컵으로 물을 마십니다.",
+          "script_en": "Sit at the dining table and eat breakfast. Eat rice using a spoon and chopsticks, and drink water from a cup.",
+          "duration_sec": 18.0
+        },
+        {
+          "seq": 5,
+          "script_kr": "이제 학교로 출발합니다. 신발을 신고 현관문을 열고 나갑니다. 버스정류장에서 버스를 타고 등교합니다.",
+          "script_en": "Off to school now. Put on shoes and open the front door. Take a bus at the bus stop to go to school.",
+          "duration_sec": 18.0
+        }
+      ]
+    },
+    {
+      "code": "LM-004",
+      "category": "LM",
+      "title_kr": "하루 8천보, 무릎은 정말 닳을까?",
+      "title_en": "Do 8,000 Steps Wear Out Your Knees?",
+      "hook_kr": "많이 걸으면 무릎이 닳는다는 말, 사실일까?",
+      "logline_kr": "연골 영양·관절 부하의 과학 (TED-Ed '1만보' 정면 대결)",
+      "status": "idea",
+      "priority": 11,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "reverse_spec": null,
+      "style_profile": null,
+      "scenes": []
+    },
+    {
       "code": "MD-001",
       "category": "MD",
       "title_kr": "나폴레옹의 손은 왜 늘 옷 속에 있었나",
@@ -907,7 +1138,7 @@
       "hook_kr": "초상화 속 그 손, 멋인가 병의 흔적인가?",
       "logline_kr": "역사 인물의 자세·습관에서 읽는 숨은 질병",
       "status": "idea",
-      "priority": 1,
+      "priority": 11,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -924,7 +1155,7 @@
       "hook_kr": "근육이 10배 커지면 가장 먼저 찢어지는 곳은?",
       "logline_kr": "건·인대 인장강도와 근력의 불균형",
       "status": "idea",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -941,7 +1172,7 @@
       "hook_kr": "사람이 손끝으로 벽에 붙으려면 몸이 어떻게 바뀌어야 할까?",
       "logline_kr": "체중 대비 접착력·관절 부하의 생체역학",
       "status": "idea",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -958,7 +1189,7 @@
       "hook_kr": "어린 뇌와 나이 든 뇌가 대화하면 어떤 기적이 일어날까?",
       "logline_kr": "신경가소성과 시냅스로 본 세대 간 학습",
       "status": "idea",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -975,7 +1206,7 @@
       "hook_kr": "오늘 식탁이 10년 뒤 내 무릎을 결정한다?",
       "logline_kr": "칼슘·비타민D·단백질의 정형외과",
       "status": "idea",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -992,7 +1223,7 @@
       "hook_kr": "밤사이 우리 몸은 어떤 수리를 할까?",
       "logline_kr": "수면 중 회복·성장호르몬·조직 재생",
       "status": "idea",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -1009,7 +1240,7 @@
       "hook_kr": "과거로 가 할아버지를 막으면 지금의 나는?",
       "logline_kr": "인과율과 기억의 의학적 비유",
       "status": "idea",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -1026,7 +1257,7 @@
       "hook_kr": "아무리 똑똑한 AI도 절대 못 푸는 수학 문제가 있다?",
       "logline_kr": "'참이나 증명 불가' ↔ 진단의 본질적 불확실성",
       "status": "idea",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -1043,7 +1274,7 @@
       "hook_kr": "세계에서 가장 과학적인 문자는 어떻게 태어났을까?",
       "logline_kr": "스틱맨과 함께 천지인 창제원리와 단모음 8개를 배운다 (초급 1주차).",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 204,
       "youtube_kr": null,
       "youtube_en": null,
@@ -1151,7 +1382,7 @@
       "hook_kr": "자음 없이, 모음만으로 만드는 가장 쉬운 첫 단어들",
       "logline_kr": "지난 1강 단모음 8개로 '아이·이·오이·우유·오·아우' 어휘를 익힌다 (초급 1주 화요일).",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 106,
       "youtube_kr": null,
       "youtube_en": null,
@@ -1223,7 +1454,7 @@
       "hook_kr": null,
       "logline_kr": null,
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 86,
       "youtube_kr": null,
       "youtube_en": null,
@@ -1301,7 +1532,7 @@
       "hook_kr": null,
       "logline_kr": null,
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 120,
       "youtube_kr": null,
       "youtube_en": null,
@@ -1373,7 +1604,7 @@
       "hook_kr": null,
       "logline_kr": null,
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 119,
       "youtube_kr": null,
       "youtube_en": null,
@@ -1457,7 +1688,7 @@
       "hook_kr": null,
       "logline_kr": null,
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 136,
       "youtube_kr": null,
       "youtube_en": null,
@@ -1553,7 +1784,7 @@
       "hook_kr": null,
       "logline_kr": null,
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 108,
       "youtube_kr": null,
       "youtube_en": null,
@@ -1625,7 +1856,7 @@
       "hook_kr": "한글 자음은 우리 몸을 본떠 만들어졌다?",
       "logline_kr": "컬러 연필 스틱맨과 함께 발음기관 상형·기초 자음 10자·모아쓰기를 배운다 (초급 2주차).",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 370,
       "youtube_kr": null,
       "youtube_en": null,
@@ -1799,7 +2030,7 @@
       "hook_kr": "휴지가 흔들리면 거센소리, 안 흔들리면 된소리?",
       "logline_kr": "졸라맨과 함께 거센소리(ㅋㅌㅍㅊ)와 된소리(ㄲㄸㅃㅆㅉ)를 휴지 실험·최소대립쌍으로 배운다 (초급 3주차).",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 315,
       "youtube_kr": null,
       "youtube_en": null,
@@ -1907,7 +2138,7 @@
       "hook_kr": "받침은 일곱 소리로만 난다?",
       "logline_kr": "졸라걸과 함께 받침의 구조와 대표 7음(ㄱㄴㄷㄹㅁㅂㅇ)을 예시 단어로 배운다 (초급 4주차).",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 269,
       "youtube_kr": null,
       "youtube_en": null,
@@ -2003,7 +2234,7 @@
       "hook_kr": "두 모음이 미끄러지면 한 소리?",
       "logline_kr": "졸라걸과 함께 이중모음(ㅑㅕㅛㅠ ㅘㅝㅟㅚㅢ)과 반모음 활주(y·w 활음)를 배운다 (초급 5주차).",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 272,
       "youtube_kr": null,
       "youtube_en": null,
@@ -2099,7 +2330,7 @@
       "hook_kr": "쓰는 대로 안 읽힌다? 받침이 넘어가는 연음!",
       "logline_kr": "졸라맨과 함께 연음(받침이 ㅇ로 넘어감)과 음운 변동을 표기형·발음형으로 배운다 (초급 6주차).",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 229,
       "youtube_kr": null,
       "youtube_en": null,
@@ -2183,7 +2414,7 @@
       "hook_kr": "인사 한마디로 마음이 가까워진다",
       "logline_kr": "졸라걸과 함께 필수 인사말과 '저는 ~입니다' 자기소개를 배운다 (초급 7주차).",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 220,
       "youtube_kr": null,
       "youtube_en": null,
@@ -2333,7 +2564,7 @@
       "hook_kr": "한국어 숫자는 왜 두 가지일까?",
       "logline_kr": "졸라맨과 함께 고유어·한자어 숫자, 요일, 시간 말하기를 배운다 (초급 8주차).",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 232,
       "youtube_kr": null,
       "youtube_en": null,
@@ -2483,7 +2714,7 @@
       "hook_kr": "앞·뒤·옆·위·밑, 위치를 말해 봐요",
       "logline_kr": "중급 1주차. 우리 동네와 위치 표현 — stickman 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 373,
       "youtube_kr": null,
       "youtube_en": null,
@@ -2621,7 +2852,7 @@
       "hook_kr": "얼마예요? 사고 싶을 때 쓰는 말",
       "logline_kr": "중급 2주차. 상점 구매와 가격 묻기 — zw 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 262,
       "youtube_kr": null,
       "youtube_en": null,
@@ -2819,7 +3050,7 @@
       "hook_kr": "주문하고 맛을 표현해 봐요",
       "logline_kr": "중급 3주차. 식당 이용과 맛 표현 — zm 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 256,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3089,7 +3320,7 @@
       "hook_kr": "버스·지하철로 이동하고 환승해요",
       "logline_kr": "중급 4주차. 교통수단과 지하철 환승 — jieun 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 265,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3099,57 +3330,267 @@
       "scenes": [
         {
           "seq": 1,
-          "script_kr": "안녕하세요! 한국의 대중교통은 빠르고 편리해요. 오늘은 버스와 지하철을 타고 환승하는 표현을 배워서, 어디든 갈 수 있게 해요.",
-          "script_en": "Hello! Korea's public transit is fast and convenient. Today we'll learn bus, subway, and transfer phrases so you can go anywhere.",
-          "duration_sec": 29.0
+          "script_kr": "안녕하세요! 오늘은 제가 여러분의 가이드예요. 인천공항에서 강남역까지 같이 가 봐요. 버스도 타고, 지하철도 타고, 환승도 해요. 이 영상 하나면 서울에서 길 잃지 않아요!",
+          "script_en": "Hello! Today I'm your guide. Let's travel together from Incheon Airport to Gangnam Station. We'll take a bus, ride the subway, and transfer. After this video, you won't get lost in Seoul!",
+          "duration_sec": 8.0
         },
         {
           "seq": 2,
-          "script_kr": "교통은 '무엇을 타다 → 어디서 내리다 → 환승하다' 순서로 말해요. 'X을/를 타다'를 기억하세요.",
-          "script_en": "Transit: 'take what → get off where → transfer'. Remember 'take X' = 'X을/를 타다'.",
-          "duration_sec": 23.0
+          "script_kr": "공항에 내리면 제일 먼저 드는 생각. '서울까지 어떻게 가지'? 이럴 때 쓰는 만능 문장이 있어요. '어떻게 가요'? 이 한마디면 됩니다.",
+          "script_en": "The first thought when you land: 'How do I get to Seoul'? There's one magic phrase for this: '어떻게 가요'? — How do I get there?",
+          "duration_sec": 8.0
         },
         {
           "seq": 3,
-          "script_kr": "'버스'는 여러 사람이 타는 큰 차라는 뜻이에요. 예를 들어, 버스를 타고 가요. 라고 말해요. '버스를 타다'로 써요. 자, 천천히 따라 해 보세요. '버스'.",
-          "script_en": "'버스' means bus. For example: I go by bus. Now repeat slowly after me: '버스'.",
-          "duration_sec": 34.0
+          "script_kr": "목적지를 넣어서 말해 봐요. '서울까지 어떻게 가요'? '까지'는 목적지를 나타내요. '강남역까지 어떻게 가요'? 이렇게 바꿔 쓸 수 있어요.",
+          "script_en": "Add your destination: '서울까지 어떻게 가요'? The word '까지' marks the destination. You can swap it: '강남역까지 어떻게 가요'?",
+          "duration_sec": 8.0
         },
         {
           "seq": 4,
-          "script_kr": "'지하철'는 땅속을 달리는 기차라는 뜻이에요. 예를 들어, 지하철이 더 빨라요. 라고 말해요. 호선 번호로 길을 찾아요. 자, 천천히 따라 해 보세요. '지하철'.",
-          "script_en": "'지하철' means subway. For example: The subway is faster. Now repeat slowly after me: '지하철'.",
-          "duration_sec": 34.0
+          "script_kr": "오늘의 핵심 동사예요. '타다'. 버스를 타요. 지하철을 타요. 택시를 타요. 무엇이든 이 동사 하나면 돼요.",
+          "script_en": "Today's key verb: '타다' — to ride, to take. 버스를 타요 (take a bus). 지하철을 타요 (take the subway). One verb covers them all.",
+          "duration_sec": 8.0
         },
         {
           "seq": 5,
-          "script_kr": "'타다'는 차에 오르다라는 뜻이에요. 예를 들어, 여기서 2호선을 타요. 라고 말해요. '을/를 타다' 형태로 써요. 자, 천천히 따라 해 보세요. '타다'.",
-          "script_en": "'타다' means to ride. For example: I take Line 2 here. Now repeat slowly after me: '타다'.",
-          "duration_sec": 34.0
+          "script_kr": "공항에서 서울 가는 방법은 크게 두 가지예요. 버스와 지하철. 오늘은 둘 다 배워요.",
+          "script_en": "There are two main ways from the airport to Seoul: bus and subway. Today we'll learn both.",
+          "duration_sec": 8.0
         },
         {
           "seq": 6,
-          "script_kr": "'환승'는 다른 노선으로 갈아타기라는 뜻이에요. 예를 들어, 시청역에서 환승해요. 라고 말해요. 역 안내 방송에서 자주 들어요. 자, 천천히 따라 해 보세요. '환승'.",
-          "script_en": "'환승' means transfer. For example: I transfer at City Hall. Now repeat slowly after me: '환승'.",
-          "duration_sec": 34.0
+          "script_kr": "먼저 버스예요. 공항버스는 짐이 많을 때 아주 편해요. 앉아서 편하게 갈 수 있고, 짐은 버스 아래 짐칸에 넣어요.",
+          "script_en": "First, the bus. The airport bus is great when you have luggage. You sit comfortably, and your bags go in the compartment below.",
+          "duration_sec": 8.0
         },
         {
           "seq": 7,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '강남역에 어떻게 가요?' 하고 물으면, '지하철을 타고 시청역에서 환승하세요.' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'How do I get to Gangnam Station?', you can answer, 'Take the subway and transfer at City Hall Station.'. Let's practice together.",
-          "duration_sec": 34.0
+          "script_kr": "버스를 타는 곳은 '정류장'이라고 해요. 공항 밖으로 나가면 버스 정류장이 있어요. '버스 정류장이 어디예요'? 하고 물어보세요.",
+          "script_en": "The place you catch a bus is '정류장' (bus stop). Just outside the airport you'll find them. Ask: '버스 정류장이 어디예요'?",
+          "duration_sec": 8.0
         },
         {
           "seq": 8,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "script_kr": "한국 버스는 번호로 구분해요. 그래서 이렇게 물어요. '몇 번 버스예요'? 번호만 알면 어디든 갈 수 있어요.",
+          "script_en": "Korean buses are identified by number. So you ask: '몇 번 버스예요'? (Which bus number?). Know the number, and you can go anywhere.",
+          "duration_sec": 8.0
         },
         {
           "seq": 9,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
+          "script_kr": "시간이 궁금하면 '얼마나 걸려요'? 하고 물어요. 버스는 길이 막히면 늦을 수 있어요. 그래서 시간을 꼭 물어보세요.",
+          "script_en": "To ask about time: '얼마나 걸려요'? (How long does it take?). Buses can be delayed by traffic, so always ask.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "돈은 '요금'이라고 해요. '요금이 얼마예요'? 하고 물어요. 공항버스는 지하철보다 조금 비싸요.",
+          "script_en": "The fare is '요금'. Ask: '요금이 얼마예요'? (How much is the fare?). The airport bus costs a bit more than the subway.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 11,
+          "script_kr": "그런데 오늘은 지하철로 가요. 왜냐하면 지하철은 길이 막히지 않아서 시간이 정확해요. '빨라요'는 시간이 적게 걸린다는 뜻이에요.",
+          "script_en": "But today we'll take the subway. Why? It never gets stuck in traffic, so the time is exact. '빨라요' means fast.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "'지하철'. 땅 아래로 다니는 기차예요. 공항에서 타는 지하철을 공항철도라고 해요. 자, 타러 가요!",
+          "script_en": "'지하철' — the subway, a train that runs underground. The one from the airport is called the Airport Railroad. Let's go!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "그런데 문제가 생겼어요! 지하철을 타려면 카드가 필요해요. 카드가 없으면 탈 수 없어요. 이 카드를 '교통카드'라고 해요.",
+          "script_en": "But there's a problem! To ride, you need a card. Without it you can't get in. This card is called '교통카드' (transit card).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "걱정 마세요. 편의점이나 판매기에서 살 수 있어요. '교통카드 주세요'. 이 한마디면 됩니다. '주세요'는 정중한 부탁이에요.",
+          "script_en": "Don't worry — you can buy one at a convenience store or machine. Just say: '교통카드 주세요' (A transit card, please).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "카드를 샀으면 돈을 넣어야 해요. 이걸 '충전'이라고 해요. 카드에 돈을 채우는 거예요.",
+          "script_en": "Once you have the card, you must put money in. That's '충전' — to top up, to charge the card.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "금액을 넣어서 말해요. '만 원 충전해 주세요'. 이 카드 하나로 지하철도 타고 버스도 타요. 아주 편해요.",
+          "script_en": "Say it with an amount: '만 원 충전해 주세요' (Please top up 10,000 won). One card works for both subway and bus. Very handy.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "이제 개찰구예요. 카드를 단말기에 살짝 대요. 이걸 '대다'라고 해요. '카드를 대세요'.",
+          "script_en": "Now the gate. Lightly touch your card to the reader. That's '대다' — to tap. '카드를 대세요' (Tap your card).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "'삑'! 소리가 나면 통과예요. 문이 열려요. 성공! 이제 승강장으로 내려가요.",
+          "script_en": "'Beep'! — and you're through. The gate opens. Success! Now down to the platform.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "승강장에 오면 또 고민이 생겨요. 방향이 두 개예요. 왼쪽? 오른쪽? 어느 쪽으로 가야 할까요?",
+          "script_en": "On the platform, another puzzle: there are two directions. Left? Right? Which way do we go?",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "여기서 실수하는 사람이 정말 많아요. 반대 방향으로 타면 어떻게 될까요? 다시 돌아와야 해요. 시간을 많이 버려요.",
+          "script_en": "So many travelers make a mistake here. Take the wrong direction and you have to come all the way back. A big waste of time.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "열차에는 '행'이 붙어요. '서울역행'은 서울역으로 가는 열차라는 뜻이에요. 가고 싶은 곳 이름을 찾아보세요.",
+          "script_en": "Trains are marked with '행' (bound for). '서울역행' means the train bound for Seoul Station. Look for your destination.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "그래도 헷갈리면 물어보세요. '이거 서울역 가요'? 이 문장이 오늘의 생명줄이에요. 한국 사람들은 친절하게 알려줘요.",
+          "script_en": "Still unsure? Just ask: '이거 서울역 가요'? (Does this go to Seoul Station?). This phrase is your lifeline — Koreans will gladly help.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "'네, 맞아요'. 이 대답을 들으면 안심이에요. 반대로 '아니요'라고 하면 반대편으로 가면 돼요.",
+          "script_en": "'네, 맞아요' — Yes, that's right. Now you can relax. If they say '아니요' (no), just go to the other side.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "문이 열리면 타요. 내리는 사람이 먼저예요. 다 내린 다음에 타는 게 예의예요.",
+          "script_en": "The doors open — get on. But let people off first; that's the polite way in Korea.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "자리가 없으면 서서 가요. 천장에 있는 '손잡이'를 잡으세요. 열차가 흔들려도 안전해요.",
+          "script_en": "No seat? Stand and hold the '손잡이' (strap) hanging from the ceiling. You'll be steady even when the train rocks.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "얼마나 가야 할까요? '몇 정거장이에요'? 하고 물어요. 그리고 안내방송을 잘 들으세요. 다음 역 이름을 말해 줘요.",
+          "script_en": "How far is it? Ask '몇 정거장이에요'? (How many stops?). And listen to the announcements — they call out the next station.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 27,
+          "script_kr": "서울역에 도착했어요. 그런데 아직 강남역이 아니에요. 여기서 다른 열차로 바꿔 타야 해요.",
+          "script_en": "We've arrived at Seoul Station. But this isn't Gangnam yet — here we must change to a different train.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 28,
+          "script_kr": "오늘의 가장 중요한 단어예요. '환승'! 다른 노선으로 갈아타는 것을 환승이라고 해요. 이 단어를 꼭 기억하세요.",
+          "script_en": "Today's most important word: '환승' — transfer. Changing to a different line is called 환승. Remember this one!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 29,
+          "script_kr": "'환승하다'와 '갈아타다'는 같은 뜻이에요. '2호선으로 갈아타요'. 둘 다 자주 쓰니까 같이 외우세요.",
+          "script_en": "'환승하다' and '갈아타다' mean the same thing. '2호선으로 갈아타요' (Change to Line 2). Both are common — learn them together.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 30,
+          "script_kr": "환승통로는 정말 커요. 표지판도 많고 사람도 많아요. 어디로 가야 할지 헷갈려요. 그럴 땐 어떻게 할까요?",
+          "script_en": "Transfer corridors are huge — many signs, many people. It's easy to get confused. So what do we do?",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 31,
+          "script_kr": "물어보면 돼요! '어디서 갈아타요'? 아주 쉬운 문장이죠. 역무원이나 옆 사람에게 물어보세요.",
+          "script_en": "Just ask! '어디서 갈아타요'? (Where do I transfer?). Ask a station staff member or the person next to you.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 32,
+          "script_kr": "지하철 노선은 번호로 불러요. 1호선, 2호선, 3호선. '호선'은 노선 번호를 말해요.",
+          "script_en": "Subway lines are called by number: 1호선, 2호선, 3호선 (Line 1, 2, 3). '호선' means the line number.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 33,
+          "script_kr": "강남역은 2호선에 있어요. 그래서 '2호선으로 갈아타세요'. 우리도 2호선을 찾아가요.",
+          "script_en": "Gangnam Station is on Line 2. So: '2호선으로 갈아타세요' (Change to Line 2). Let's find it.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 34,
+          "script_kr": "꿀팁이에요! 노선은 색깔이 있어요. 2호선은 초록색이에요. 글자를 못 읽어도 색만 따라가면 돼요.",
+          "script_en": "Here's a tip! Each line has a color. Line 2 is green. Even if you can't read the letters, just follow the color.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 35,
+          "script_kr": "이제 초록색 표지판을 따라가요. 화살표가 길을 알려줘요. 표지판만 잘 보면 절대 안 헤매요.",
+          "script_en": "Now follow the green signs. The arrows show the way. Watch the signs and you'll never get lost.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 36,
+          "script_kr": "해냈어요! 2호선 승강장에 도착했어요. 이게 바로 환승이에요. 어렵지 않죠?",
+          "script_en": "We did it! We've reached the Line 2 platform. That's what 환승 means. Not so hard, right?",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 37,
+          "script_kr": "이제 2호선을 타고 강남역으로 가요. 창밖으로 서울 도시가 보여요. 거의 다 왔어요!",
+          "script_en": "Now we ride Line 2 to Gangnam Station. You can see the city through the window. Almost there!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 38,
+          "script_kr": "'타다'의 반대말은 '내리다'예요. 타다, 내리다. 짝으로 외우면 쉬워요. '여기서 내려요'.",
+          "script_en": "The opposite of '타다' is '내리다' (to get off). 타다 / 내리다 — learn them as a pair. '여기서 내려요' (I get off here).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 39,
+          "script_kr": "마지막 문제예요! 강남역은 출구가 정말 많아요. 잘못 나가면 한참 걸어야 해요.",
+          "script_en": "One last problem! Gangnam Station has a LOT of exits. Take the wrong one and you'll walk a long way.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 40,
+          "script_kr": "그래서 이렇게 물어요. '몇 번 출구예요'? 한국에서는 약속할 때 출구 번호로 만나요. '강남역 11번 출구에서 만나요'.",
+          "script_en": "So ask: '몇 번 출구예요'? (Which exit number?). In Korea, people meet by exit number: 'Let's meet at Gangnam Exit 11'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 41,
+          "script_kr": "'11번 출구요'. 번호로 대답해 줘요. 이제 계단을 올라가면 강남 거리예요!",
+          "script_en": "'11번 출구요' — Exit 11. They answer with a number. Climb the stairs and you're on the streets of Gangnam!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 42,
+          "script_kr": "마지막 꿀팁! 지하철에서 내려서 버스로도 갈아탈 수 있어요. 같은 교통카드를 그냥 대면 돼요. 아주 편하죠?",
+          "script_en": "Final tip! You can also transfer from the subway to a bus. Just tap the same transit card. So convenient!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 43,
+          "script_kr": "오늘 배운 걸 정리해요. 버스, 지하철, 타다, 환승, 내리다, 출구. 이 여섯 단어면 서울 어디든 갈 수 있어요.",
+          "script_en": "Let's review: 버스 (bus), 지하철 (subway), 타다 (ride), 환승 (transfer), 내리다 (get off), 출구 (exit). These six words take you anywhere in Seoul.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 44,
+          "script_kr": "강남역 도착! 공항에서 여기까지 함께 왔어요. 다음 시간에는 길 찾기와 위치 안내를 배워요. 그때 또 만나요!",
+          "script_en": "We made it to Gangnam! We traveled all the way from the airport together. Next time: asking for directions. See you then!",
+          "duration_sec": 8.0
         }
       ]
     },
@@ -3161,7 +3602,7 @@
       "hook_kr": "오른쪽? 왼쪽? 길을 안내해요",
       "logline_kr": "중급 5주차. 길 찾기와 위치 안내 — injun 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 261,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3171,57 +3612,267 @@
       "scenes": [
         {
           "seq": 1,
-          "script_kr": "안녕하세요! 길을 잃어도 걱정 마세요. 오늘은 길을 묻고 안내하는 표현을 배워서, 어디서든 길을 찾고 도와줄 수 있게 해요.",
-          "script_en": "Hello! Don't worry if you get lost. Today we'll learn to ask for and give directions, so you can find your way and help others.",
-          "duration_sec": 28.0
+          "script_kr": "안녕하세요! 지난 시간에는 지하철과 버스를 배웠죠. 이제 목적지에 왔는데, 길을 못 찾으면 어떻게 하죠? 오늘은 제주 성산일출봉에서 길 찾기를 배워요!",
+          "script_en": "Hello! Last time we learned the subway and buses. But once you arrive, what if you can't find the way? Today we learn how to find your way, here at Seongsan Ilchulbong in Jeju!",
+          "duration_sec": 8.0
         },
         {
           "seq": 2,
-          "script_kr": "길 안내는 '방향 + 가다/돌다/건너다'로 말해요. 손으로 방향을 가리키면 더 쉬워요.",
-          "script_en": "Directions use 'direction + go/turn/cross'. Pointing with your hand makes it easier.",
-          "duration_sec": 20.0
+          "script_kr": "낯선 곳에 오면 제일 먼저 드는 생각. '여기가 어디예요'? 위치를 물을 때 쓰는 가장 기본 문장이에요.",
+          "script_en": "The first thought in an unfamiliar place: '여기가 어디예요'? (Where am I?). The most basic phrase for asking where you are.",
+          "duration_sec": 8.0
         },
         {
           "seq": 3,
-          "script_kr": "'오른쪽'는 오른편 방향라는 뜻이에요. 예를 들어, 오른쪽으로 도세요. 라고 말해요. '오른쪽으로 + 동사'. 자, 천천히 따라 해 보세요. '오른쪽'.",
-          "script_en": "'오른쪽' means right. For example: Turn to the right. Now repeat slowly after me: '오른쪽'.",
-          "duration_sec": 34.0
+          "script_kr": "지도를 봐도 모르겠어요. 이럴 때 '길을 잃었어요' 라고 해요. 걱정 마세요, 물어보면 되니까요!",
+          "script_en": "Even with a map, you're not sure. Then you say '길을 잃었어요' (I'm lost). Don't worry — just ask!",
+          "duration_sec": 8.0
         },
         {
           "seq": 4,
-          "script_kr": "'왼쪽'는 왼편 방향라는 뜻이에요. 예를 들어, 왼쪽에 편의점이 있어요. 라고 말해요. 오른쪽의 반대예요. 자, 천천히 따라 해 보세요. '왼쪽'.",
-          "script_en": "'왼쪽' means left. For example: There's a convenience store on the left. Now repeat slowly after me: '왼쪽'.",
-          "duration_sec": 34.0
+          "script_kr": "'길'은 도로, 또는 가는 방향을 말해요. 길을 잃다, 길을 묻다, 길을 건너다. 오늘의 중심 단어예요.",
+          "script_en": "'길' means a road or a way. 길을 잃다 (get lost), 길을 묻다 (ask the way), 길을 건너다 (cross the road). Today's core word.",
+          "duration_sec": 8.0
         },
         {
           "seq": 5,
-          "script_kr": "'똑바로 가다'는 곧장 앞으로 가다라는 뜻이에요. 예를 들어, 이 길로 똑바로 가세요. 라고 말해요. '쭉 가세요'와 비슷해요. 자, 천천히 따라 해 보세요. '똑바로 가다'.",
-          "script_en": "'똑바로 가다' means go straight. For example: Go straight along this road. Now repeat slowly after me: '똑바로 가다'.",
-          "duration_sec": 34.0
+          "script_kr": "모르는 사람에게 말을 걸 때는 '실례합니다' 로 시작해요. 이 한마디면 상대가 기분 좋게 들어줘요.",
+          "script_en": "To approach a stranger, start with '실례합니다' (Excuse me). This one word makes people happy to help.",
+          "duration_sec": 8.0
         },
         {
           "seq": 6,
-          "script_kr": "'건너다'는 길 반대편으로 넘어가다라는 뜻이에요. 예를 들어, 횡단보도에서 길을 건너세요. 라고 말해요. '길을 건너다'로 써요. 자, 천천히 따라 해 보세요. '건너다'.",
-          "script_en": "'건너다' means to cross. For example: Cross at the crosswalk. Now repeat slowly after me: '건너다'.",
-          "duration_sec": 34.0
+          "script_kr": "'길 좀 물어봐도 돼요'? 정중하게 물으면 한국 사람들은 아주 친절하게 알려줘요.",
+          "script_en": "'길 좀 물어봐도 돼요'? (May I ask for directions?). Ask politely and Koreans will gladly help you.",
+          "duration_sec": 8.0
         },
         {
           "seq": 7,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '지하철역이 어디예요?' 하고 물으면, '똑바로 가서 오른쪽으로 길을 건너세요.' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'Where is the subway station?', you can answer, 'Go straight, then cross the street to the right.'. Let's practice together.",
-          "duration_sec": 34.0
+          "script_kr": "지난 시간에 배운 만능 문장이 또 나와요. '어떻게 가요'? 어디를 가든 이 문장 하나면 돼요.",
+          "script_en": "The magic phrase from last lesson returns: '어떻게 가요'? (How do I get there?). It works anywhere.",
+          "duration_sec": 8.0
         },
         {
           "seq": 8,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "script_kr": "가고 싶은 곳 이름을 넣어요. '성산일출봉 어떻게 가요'? 목적지만 바꾸면 어디서든 쓸 수 있어요.",
+          "script_en": "Add your destination: '성산일출봉 어떻게 가요'? Just swap the place name and it works anywhere.",
+          "duration_sec": 8.0
         },
         {
           "seq": 9,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
+          "script_kr": "오늘의 핵심 단어! '오른쪽'. 이 손 방향이 오른쪽이에요. 길 안내에서 제일 많이 나와요.",
+          "script_en": "Today's key word: '오른쪽' — right. This direction is 오른쪽. It comes up constantly in directions.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "반대는 '왼쪽'. 오른쪽, 왼쪽. 짝으로 외우면 절대 안 헷갈려요.",
+          "script_en": "The opposite is '왼쪽' — left. 오른쪽 / 왼쪽. Learn them as a pair and you won't mix them up.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 11,
+          "script_kr": "-으로는 방향을 나타내요. '오른쪽으로 가세요'. '왼쪽으로 가세요'. 이렇게 안내를 받아요.",
+          "script_en": "'-으로' marks direction. '오른쪽으로 가세요' (Go right). '왼쪽으로 가세요' (Go left). That's how you'll be guided.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "그런데 문제! 너무 빨리 말해서 못 알아들었어요. 이럴 때 그냥 넘어가면 또 길을 잃어요.",
+          "script_en": "But a problem! They spoke too fast and you didn't catch it. If you just nod and go, you'll get lost again.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "부끄러워하지 마세요! '다시 말해 주세요'. 이 문장이 오늘의 생명줄이에요.",
+          "script_en": "Don't be shy! '다시 말해 주세요' (Please say that again). This phrase is your lifeline today.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "더 좋은 문장! '천천히 말해 주세요'. 그러면 아주 천천히 또박또박 말해 줘요.",
+          "script_en": "Even better: '천천히 말해 주세요' (Please speak slowly). Then they'll speak nice and slow for you.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "핵심 단어! '똑바로'. 방향을 바꾸지 않고 앞으로 곧장 가는 거예요. '똑바로 가세요'.",
+          "script_en": "Key word! '똑바로' — straight. Keep going forward without turning. '똑바로 가세요' (Go straight).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "'쭉 가세요'도 같은 뜻이에요. 실제로는 이 말을 더 많이 들어요.",
+          "script_en": "'쭉 가세요' means the same. In real life you'll hear this one even more often.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "핵심 단어! '건너다'. 길이나 다리의 반대편으로 가는 거예요.",
+          "script_en": "Key word! '건너다' — to cross. To go to the other side of a road or bridge.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "'길을 건너세요'. 횡단보도에서 초록불을 기다렸다가 건너요.",
+          "script_en": "'길을 건너세요' (Cross the road). Wait for the green light at the crosswalk, then cross.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "'돌다'는 방향을 바꾸는 거예요. 모퉁이에서 방향을 트는 것.",
+          "script_en": "'돌다' means to turn — to change direction, like at a corner.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "'오른쪽으로 도세요'. 이제 방향 단어와 동사를 합쳐서 완전한 안내가 돼요.",
+          "script_en": "'오른쪽으로 도세요' (Turn right). Now you can combine direction words with verbs for full directions.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "'사거리'는 길이 넷으로 갈라지는 곳이에요. 길 안내의 기준점이 돼요.",
+          "script_en": "'사거리' is an intersection where four roads meet. It's a key landmark in directions.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "'신호등'도 좋은 기준점이에요. '신호등에서 왼쪽으로 가세요'. 이렇게 말해요.",
+          "script_en": "'신호등' (traffic light) is another great landmark. '신호등에서 왼쪽으로 가세요' — Turn left at the light.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "건물을 기준으로도 말해요. '편의점에서 오른쪽으로 가세요'. 실전에서 가장 많이 듣는 방식이에요.",
+          "script_en": "People also use buildings: '편의점에서 오른쪽으로 가세요' (Turn right at the convenience store). You'll hear this a lot.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "이해했으면 '알겠어요'! 라고 답해요. 고맙다는 인사도 잊지 마세요. '감사합니다'!",
+          "script_en": "When you understand, say '알겠어요'! (I got it!). And don't forget to say thank you — '감사합니다'!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "거리도 물어봐야죠. '얼마나 멀어요'? 걸어갈 수 있는지 알 수 있어요.",
+          "script_en": "You should also ask the distance: '얼마나 멀어요'? (How far is it?). Then you know if you can walk.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "대답은 둘 중 하나. '가까워요' 아니면 '멀어요'. 짝으로 외워요.",
+          "script_en": "The answer is one of two: '가까워요' (it's near) or '멀어요' (it's far). Learn them as a pair.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 27,
+          "script_kr": "시간으로도 알려줘요. '걸어서 10분이에요'. 아, 가깝네요!",
+          "script_en": "They may answer with time: '걸어서 10분이에요' (10 minutes on foot). Oh, that's close!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 28,
+          "script_kr": "'근처'는 가까운 곳이라는 뜻이에요. '이 근처에 있어요'.",
+          "script_en": "'근처' means nearby. '이 근처에 있어요' — It's near here.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 29,
+          "script_kr": "위치를 말할 때 써요. '앞'은 front, '뒤'는 back. '건물 앞에 있어요'.",
+          "script_en": "For positions: '앞' is front, '뒤' is back. '건물 앞에 있어요' — It's in front of the building.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 30,
+          "script_kr": "'옆'은 beside, '사이'는 between. '편의점 옆에 있어요'.",
+          "script_en": "'옆' is beside, '사이' is between. '편의점 옆에 있어요' — It's next to the convenience store.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 31,
+          "script_kr": "위치 표현으로 약속도 해요. '매표소 앞에서 만나요'. 아주 유용하죠?",
+          "script_en": "Use position words to make plans: '매표소 앞에서 만나요' (Let's meet in front of the ticket booth).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 32,
+          "script_kr": "드디어! 저기 성산일출봉이 보여요. 길을 제대로 찾아왔어요!",
+          "script_en": "Finally! There it is — Seongsan Ilchulbong. We found the way!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 33,
+          "script_kr": "이제 정상까지 올라가요. '올라가다'는 위로 가는 거예요. 반대는 '내려가다'.",
+          "script_en": "Now let's go up to the top. '올라가다' means to go up. The opposite is '내려가다' (to go down).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 34,
+          "script_kr": "성산일출봉은 계단이 아주 많아요. '계단'을 하나씩 올라가요.",
+          "script_en": "Seongsan Ilchulbong has a LOT of stairs. Let's climb them one by one.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 35,
+          "script_kr": "솔직히 힘들어요! 이럴 때 '힘들어요' 라고 해요. 잠깐 쉬어 가요.",
+          "script_en": "Honestly, it's tough! You can say '힘들어요' (It's hard). Let's take a short break.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 36,
+          "script_kr": "'조금만 더'! 서로 힘을 줄 때 쓰는 말이에요. 거의 다 왔어요!",
+          "script_en": "'조금만 더'! (Just a little more!) — what you say to encourage each other. Almost there!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 37,
+          "script_kr": "해냈어요! '다 왔어요'! 도착했다는 뜻이에요.",
+          "script_en": "We did it! '다 왔어요'! means we've arrived.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 38,
+          "script_kr": "와, 분화구와 바다가 한눈에! '경치가 좋아요'. 이 말이 절로 나와요.",
+          "script_en": "Wow — the crater and the sea in one view! '경치가 좋아요' (The view is beautiful). It just comes out naturally.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 39,
+          "script_kr": "그런데 이번엔 반대예요! 외국인 관광객이 저에게 길을 물어봐요. 배운 걸 써먹을 시간!",
+          "script_en": "But now it's reversed! A tourist is asking ME for directions. Time to use what we learned!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 40,
+          "script_kr": "자신 있게 말해요. '저기로 똑바로 가세요'. 오늘 배운 '똑바로'를 써요!",
+          "script_en": "Say it with confidence: '저기로 똑바로 가세요' (Go straight that way). Using today's word 똑바로!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 41,
+          "script_kr": "'그리고 왼쪽으로 도세요'. 방향 단어를 자유롭게 쓸 수 있게 됐어요!",
+          "script_en": "'그리고 왼쪽으로 도세요' (Then turn left). Now you can use direction words freely!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 42,
+          "script_kr": "'다리를 건너세요'. 완벽해요! 이제 길을 묻는 것도, 안내하는 것도 다 할 수 있어요.",
+          "script_en": "'다리를 건너세요' (Cross the bridge). Perfect! Now you can both ask for AND give directions.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 43,
+          "script_kr": "오늘 배운 걸 정리해요. 오른쪽, 왼쪽, 똑바로, 건너다. 그리고 '다시 말해 주세요'. 이거면 어디서도 길을 잃지 않아요!",
+          "script_en": "Let's review: 오른쪽 (right), 왼쪽 (left), 똑바로 (straight), 건너다 (cross). And '다시 말해 주세요'. You'll never be lost again!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 44,
+          "script_kr": "성산일출봉의 일출이 정말 아름답죠? 오늘도 수고했어요. 다음 시간에 또 만나요!",
+          "script_en": "Isn't the sunrise at Seongsan beautiful? Great work today. See you next time!",
+          "duration_sec": 8.0
         }
       ]
     },
@@ -3233,7 +3884,7 @@
       "hook_kr": "하루 동작을 동사로 말해요",
       "logline_kr": "중급 6주차. 나의 하루 일과와 동작 — madam_jay 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 260,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3243,57 +3894,279 @@
       "scenes": [
         {
           "seq": 1,
-          "script_kr": "안녕하세요! 하루 일과를 한국어로 말할 수 있으면 자기소개가 훨씬 풍부해져요. 오늘은 아침부터 밤까지의 동작을 배워 봐요.",
-          "script_en": "Hello! Describing your daily routine makes your Korean much richer. Today we'll learn actions from morning to night.",
-          "duration_sec": 28.0
+          "script_kr": "안녕하세요! 오늘은 제주 협재 바다에서 하루를 보내요. 아침에 일어나서 밤에 잠들 때까지, 나의 하루를 한국어로 말해 봐요!",
+          "script_en": "Hello! Today we spend a day at Hyeopjae Beach in Jeju. From waking up in the morning to falling asleep at night — let's describe our day in Korean!",
+          "duration_sec": 8.0
         },
         {
           "seq": 2,
-          "script_kr": "일과는 시간 순서로 말해요. '아침에 일어나다 → 낮에 일하다 → 밤에 자다'처럼요.",
-          "script_en": "Describe routines in time order: 'wake up in the morning → work during the day → sleep at night'.",
-          "duration_sec": 19.0
+          "script_kr": "'일과'는 매일 하는 일이에요. 오늘은 하루의 일과를 순서대로 배워요.",
+          "script_en": "'일과' means daily routine — the things you do every day. Today we learn them in order.",
+          "duration_sec": 8.0
         },
         {
           "seq": 3,
-          "script_kr": "'일어나다'는 잠에서 깨어 몸을 일으키다라는 뜻이에요. 예를 들어, 아침 일곱 시에 일어나요. 라고 말해요. '~시에 일어나요'로 써요. 자, 천천히 따라 해 보세요. '일어나다'.",
-          "script_en": "'일어나다' means to wake up. For example: I wake up at seven in the morning. Now repeat slowly after me: '일어나다'.",
-          "duration_sec": 34.0
+          "script_kr": "핵심 단어! '일어나다'. 잠에서 깨어 몸을 일으키는 거예요.",
+          "script_en": "Key word! '일어나다' — to wake up, to get up from sleep.",
+          "duration_sec": 8.0
         },
         {
           "seq": 4,
-          "script_kr": "'공부하다'는 배우고 익히다라는 뜻이에요. 예를 들어, 도서관에서 한국어를 공부해요. 라고 말해요. 장소 + 에서 + 공부해요. 자, 천천히 따라 해 보세요. '공부하다'.",
-          "script_en": "'공부하다' means to study. For example: I study Korean at the library. Now repeat slowly after me: '공부하다'.",
-          "duration_sec": 34.0
+          "script_kr": "'아침에 일어나요'. '-에'는 시간을 나타내요. 아침에, 저녁에, 밤에.",
+          "script_en": "'아침에 일어나요' (I wake up in the morning). '-에' marks time: 아침에 (in the morning), 밤에 (at night).",
+          "duration_sec": 8.0
         },
         {
           "seq": 5,
-          "script_kr": "'일하다'는 직장에서 일을 하다라는 뜻이에요. 예를 들어, 회사에서 아홉 시부터 일해요. 라고 말해요. '에서 일해요'로 써요. 자, 천천히 따라 해 보세요. '일하다'.",
-          "script_en": "'일하다' means to work. For example: I work from nine at the company. Now repeat slowly after me: '일하다'.",
-          "duration_sec": 34.0
+          "script_kr": "'몇 시에 일어나요'? 하고 물어봐요. 대화의 좋은 시작이에요.",
+          "script_en": "Ask '몇 시에 일어나요'? (What time do you get up?). A great conversation starter.",
+          "duration_sec": 8.0
         },
         {
           "seq": 6,
-          "script_kr": "'자다'는 잠을 자다라는 뜻이에요. 예를 들어, 밤 열한 시에 자요. 라고 말해요. '일찍/늦게 자요'도 자주 써요. 자, 천천히 따라 해 보세요. '자다'.",
-          "script_en": "'자다' means to sleep. For example: I go to sleep at eleven at night. Now repeat slowly after me: '자다'.",
-          "duration_sec": 34.0
+          "script_kr": "'일곱 시에 일어나요'. 시간을 넣어서 대답해요.",
+          "script_en": "'일곱 시에 일어나요' (I get up at seven). Answer with the time.",
+          "duration_sec": 8.0
         },
         {
           "seq": 7,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '보통 몇 시에 일어나요?' 하고 물으면, '일곱 시에 일어나서 도서관에서 공부해요.' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'What time do you usually wake up?', you can answer, 'I wake up at seven and study at the library.'. Let's practice together.",
-          "duration_sec": 34.0
+          "script_kr": "'일찍'과 '늦게'. 짝으로 외우면 쉬워요. 일찍 일어나요, 늦게 자요.",
+          "script_en": "'일찍' (early) and '늦게' (late). Learn them as a pair: 일찍 일어나요, 늦게 자요.",
+          "duration_sec": 8.0
         },
         {
           "seq": 8,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "script_kr": "'창문을 열어요'. 와, 협재 바다가 보여요! 하늘도 정말 예뻐요.",
+          "script_en": "'창문을 열어요' (I open the window). Wow — the sea at Hyeopjae! And what a beautiful sky.",
+          "duration_sec": 8.0
         },
         {
           "seq": 9,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
+          "script_kr": "'세수하다'는 얼굴을 씻는 거예요. 아침에 제일 먼저 하는 일이죠.",
+          "script_en": "'세수하다' means to wash your face — the first thing in the morning.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "'이를 닦다'. 칫솔로 이를 깨끗하게 닦아요.",
+          "script_en": "'이를 닦다' (to brush your teeth). Clean them well with a toothbrush.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 11,
+          "script_kr": "'옷을 입다'. 반대말은 '옷을 벗다'예요. 입다, 벗다. 짝으로 기억해요.",
+          "script_en": "'옷을 입다' (to put on clothes). The opposite is '옷을 벗다' (to take off). Learn them as a pair.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "일과를 이어서 말할 때 써요. '세수하고 그다음에 아침을 먹어요'. 이렇게 연결해요.",
+          "script_en": "Use these to connect your routine: '세수하고 그다음에 아침을 먹어요' (I wash my face and then eat breakfast).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "'아침을 먹다'. 아침, 점심, 저녁 + 먹다. 하루 세 끼예요.",
+          "script_en": "'아침을 먹다' (to eat breakfast). 아침/점심/저녁 + 먹다 — three meals a day.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "'마시다'는 액체를 먹는 거예요. 먹다와 마시다, 구분해서 써요.",
+          "script_en": "'마시다' is for liquids. Korean distinguishes 먹다 (eat) from 마시다 (drink).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "어? 시계를 보니 늦었어요! 오늘은 카페에 가야 하는데!",
+          "script_en": "Uh-oh — look at the clock! '늦었어요' (We're late). And we have to get to the cafe!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "'서두르다'는 빨리 움직이는 거예요. 서둘러요!",
+          "script_en": "'서두르다' means to hurry. Let's move quickly!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "핵심 단어! '일하다'. 직장이나 카페에서 하는 일이에요.",
+          "script_en": "Key word! '일하다' — to work.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "'-에서'는 장소를 나타내요. 행동이 일어나는 곳이에요. 카페에서, 집에서, 학교에서.",
+          "script_en": "'-에서' marks the place where an action happens: 카페에서 (at a cafe), 집에서 (at home).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "핵심 단어! '공부하다'. 저는 매일 한국어를 공부해요.",
+          "script_en": "Key word! '공부하다' — to study. I study Korean every day.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "'을/를'은 목적어를 나타내요. 한국어를 공부해요. 책을 읽어요.",
+          "script_en": "'을/를' marks the object: 한국어를 공부해요 (I study Korean), 책을 읽어요 (I read a book).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "'책을 읽다'. 조용히 앉아서 책을 읽어요.",
+          "script_en": "'책을 읽다' (to read a book). Sit quietly and read.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "'쓰다'는 글씨를 적는 거예요. 노트에 써요.",
+          "script_en": "'쓰다' means to write. Write it in your notebook.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "'점심을 먹다'. 바다를 보면서 점심을 먹어요. 최고예요!",
+          "script_en": "'점심을 먹다' (to eat lunch). Eating lunch with a sea view — the best!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "잠깐! 하늘 좀 보세요. 구름이 정말 예뻐요.",
+          "script_en": "Wait — look at the sky! '구름' (clouds). They are beautiful.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "'쉬다'는 일을 멈추고 편히 있는 거예요. 잠깐 쉬어요.",
+          "script_en": "'쉬다' means to rest — to stop working and relax.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "일하고 나서 쉬어요. '-고 나서'는 순서를 나타내요.",
+          "script_en": "'일하고 나서 쉬어요' (I rest after working). '-고 나서' shows the order of actions.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 27,
+          "script_kr": "'산책하다'는 천천히 걷는 거예요. 바닷가를 산책해요.",
+          "script_en": "'산책하다' — to take a leisurely walk. Let's walk along the beach.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 28,
+          "script_kr": "'해변을 걸어요'. 협재의 하얀 모래가 정말 부드러워요.",
+          "script_en": "'해변을 걸어요' (I walk on the beach). The white sand at Hyeopjae is so soft.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 29,
+          "script_kr": "'수영하다'. 에메랄드빛 바다에서 수영해요!",
+          "script_en": "'수영하다' (to swim). Let's swim in the emerald water!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 30,
+          "script_kr": "'사진을 찍다'. 저기 비양도를 배경으로 한 장!",
+          "script_en": "'사진을 찍다' (to take a photo). One shot with Biyangdo Island behind us!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 31,
+          "script_kr": "'재미있어요'! 정말 즐거운 하루예요.",
+          "script_en": "'재미있어요'! (It's fun!). What a great day.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 32,
+          "script_kr": "많이 놀았더니 '피곤해요'. 몸이 지쳤어요.",
+          "script_en": "After all that play — '피곤해요' (I'm tired).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 33,
+          "script_kr": "'저녁을 먹다'. 하루의 마지막 식사예요.",
+          "script_en": "'저녁을 먹다' (to eat dinner) — the last meal of the day.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 34,
+          "script_kr": "'자기 전에 씻어요'. '-기 전에'는 그 일보다 먼저 하는 걸 말해요.",
+          "script_en": "'자기 전에 씻어요' (I wash before sleeping). '-기 전에' = before doing something.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 35,
+          "script_kr": "'저녁을 먹은 후에 산책해요'. '-ㄴ 후에'는 그 일 다음이에요.",
+          "script_en": "'저녁을 먹은 후에 산책해요' (I walk after dinner). '-ㄴ 후에' = after doing something.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 36,
+          "script_kr": "'전화하다'. 가족에게 전화해요. 오늘 하루를 이야기해요.",
+          "script_en": "'전화하다' (to call). Call your family and tell them about your day.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 37,
+          "script_kr": "'보다'는 눈으로 보는 거예요. 텔레비전을 봐요.",
+          "script_en": "'보다' means to watch/see. 텔레비전을 봐요 (I watch TV).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 38,
+          "script_kr": "'노을을 보다'. 협재의 노을은 정말 아름다워요.",
+          "script_en": "'노을을 보다' (to watch the sunset). The sunset at Hyeopjae is stunning.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 39,
+          "script_kr": "'아름다워요'. 이 말이 저절로 나와요. 하늘이 온통 주황색이에요.",
+          "script_en": "'아름다워요' (It's beautiful). The whole sky turns orange.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 40,
+          "script_kr": "'샤워하다'. 자기 전에 깨끗이 씻어요.",
+          "script_en": "'샤워하다' (to take a shower). Wash up before bed.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 41,
+          "script_kr": "'일기를 쓰다'. 오늘 하루를 적어요. 좋은 습관이에요.",
+          "script_en": "'일기를 쓰다' (to write a diary). Write about your day — a great habit.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 42,
+          "script_kr": "잠깐! 창밖에 별이 가득해요.",
+          "script_en": "Wait — the sky is full of '별' (stars)!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 43,
+          "script_kr": "모래에 앉아서 별을 봐요. 오늘 하루가 참 좋았어요.",
+          "script_en": "Sitting on the '모래' (sand), watching the stars. What a lovely day it's been.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 44,
+          "script_kr": "핵심 단어! '자다'. 하루의 끝이에요.",
+          "script_en": "Key word! '자다' — to sleep. The end of the day.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 45,
+          "script_kr": "'열한 시에 자요'. 시간 + 자다. 이제 하루가 끝났어요.",
+          "script_en": "'열한 시에 자요' (I sleep at eleven). Time + 자다. The day is done.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 46,
+          "script_kr": "오늘 배운 걸 정리해요. 일어나다, 일하다, 공부하다, 자다. 여러분의 하루는 어때요? 댓글로 알려주세요. 잘 자요!",
+          "script_en": "Let's review: 일어나다 (wake up), 일하다 (work), 공부하다 (study), 자다 (sleep). How about your day? Tell us in the comments. Good night!",
+          "duration_sec": 8.0
         }
       ]
     },
@@ -3305,7 +4178,7 @@
       "hook_kr": "맑음·비·눈, 사계절을 말해요",
       "logline_kr": "중급 7주차. 날씨와 아름다운 사계절 — dr_jay 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 330,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3315,69 +4188,459 @@
       "scenes": [
         {
           "seq": 1,
-          "script_kr": "안녕하세요! 한국은 사계절이 뚜렷해서 날씨 이야기를 자주 해요. 오늘은 날씨와 계절 표현을 배워서, 매일의 대화를 시작해 봐요.",
-          "script_en": "Hello! Korea has four distinct seasons, so weather is a common topic. Today we'll learn weather and season words to start everyday conversations.",
-          "duration_sec": 29.0
+          "script_kr": "안녕하세요! 오늘은 한라산에 왔어요. 한라산은 사계절이 모두 아름다운 산이에요.",
+          "script_en": "Hello! Today we're at '한라산' [Hallasan]. It's a mountain beautiful in all four seasons.",
+          "duration_sec": 8.0
         },
         {
           "seq": 2,
-          "script_kr": "날씨는 '오늘 날씨가 + 상태'로 말해요. 형용사는 '춥다, 덥다'처럼 끝이 바뀌어요.",
-          "script_en": "Weather is said as 'today's weather is + state'. Adjectives change endings, like '춥다, 덥다'.",
-          "duration_sec": 20.0
+          "script_kr": "'날씨'는 하늘의 상태예요. 맑음, 흐림, 비, 눈 — 매일 바뀌어요.",
+          "script_en": "'날씨' [nal-ssi] means the weather. Clear, cloudy, rain, snow — it changes every day.",
+          "duration_sec": 8.0
         },
         {
           "seq": 3,
-          "script_kr": "'맑음'는 구름 없이 하늘이 맑은 상태라는 뜻이에요. 예를 들어, 오늘은 날씨가 맑아요. 라고 말해요. 일기예보에서 자주 봐요. 자, 천천히 따라 해 보세요. '맑음'.",
-          "script_en": "'맑음' means sunny/clear. For example: The weather is clear today. Now repeat slowly after me: '맑음'.",
-          "duration_sec": 34.0
+          "script_kr": "누군가를 만나면 물어봐요. '날씨가 어때요'? 대화를 여는 좋은 질문이에요.",
+          "script_en": "When you meet someone, ask: '날씨가 어때요'? (How's the weather?). A great way to start a chat.",
+          "duration_sec": 8.0
         },
         {
           "seq": 4,
-          "script_kr": "'비'는 하늘에서 내리는 물라는 뜻이에요. 예를 들어, 비가 와요. 우산을 챙기세요. 라고 말해요. '비가 오다/내리다'. 자, 천천히 따라 해 보세요. '비'.",
-          "script_en": "'비' means rain. For example: It's raining. Take an umbrella. Now repeat slowly after me: '비'.",
-          "duration_sec": 34.0
+          "script_kr": "한국에는 네 계절이 있어요. 이걸 '사계절'이라고 해요.",
+          "script_en": "Korea has four seasons. We call them '사계절' [sa-gye-jeol].",
+          "duration_sec": 8.0
         },
         {
           "seq": 5,
-          "script_kr": "'눈'는 겨울에 내리는 흰 것라는 뜻이에요. 예를 들어, 겨울에 눈이 많이 내려요. 라고 말해요. '눈이 오다/내리다'. 자, 천천히 따라 해 보세요. '눈'.",
-          "script_en": "'눈' means snow. For example: It snows a lot in winter. Now repeat slowly after me: '눈'.",
-          "duration_sec": 34.0
+          "script_kr": "봄, 여름, 가을, 겨울. 한라산은 계절마다 옷을 갈아입어요.",
+          "script_en": "'봄' (spring), '여름' (summer), '가을' (fall), '겨울' (winter). Hallasan changes clothes each season.",
+          "duration_sec": 8.0
         },
         {
           "seq": 6,
-          "script_kr": "'춥다'는 기온이 낮아 차갑다라는 뜻이에요. 예를 들어, 겨울은 정말 추워요. 라고 말해요. 말할 때 '추워요'로 바뀌어요. 자, 천천히 따라 해 보세요. '춥다'.",
-          "script_en": "'춥다' means cold. For example: Winter is really cold. Now repeat slowly after me: '춥다'.",
-          "duration_sec": 34.0
+          "script_kr": "한라산의 사계절을 하나씩 만나 볼까요? 계절마다 날씨도, 풍경도 달라져요.",
+          "script_en": "Shall we meet Hallasan's four seasons one by one? The weather and scenery change each time.",
+          "duration_sec": 8.0
         },
         {
           "seq": 7,
-          "script_kr": "'덥다'는 기온이 높아 뜨겁다라는 뜻이에요. 예를 들어, 여름은 너무 더워요. 라고 말해요. 말할 때 '더워요'로 바뀌어요. 자, 천천히 따라 해 보세요. '덥다'.",
-          "script_en": "'덥다' means hot. For example: Summer is very hot. Now repeat slowly after me: '덥다'.",
-          "duration_sec": 34.0
+          "script_kr": "'-에는'은 그 계절을 말해요. 봄에는, 여름에는, 가을에는, 겨울에는.",
+          "script_en": "'-에는' [-e-neun] marks a season: 봄에는 (in spring), 겨울에는 (in winter).",
+          "duration_sec": 8.0
         },
         {
           "seq": 8,
-          "script_kr": "'사계절'는 봄·여름·가을·겨울라는 뜻이에요. 예를 들어, 한국은 사계절이 뚜렷해요. 라고 말해요. 계절마다 날씨가 달라요. 자, 천천히 따라 해 보세요. '사계절'.",
-          "script_en": "'사계절' means four seasons. For example: Korea has four distinct seasons. Now repeat slowly after me: '사계절'.",
-          "duration_sec": 34.0
+          "script_kr": "그럼 봄부터 시작해요. 한라산의 봄으로 가 볼까요?",
+          "script_en": "Let's start with spring. Shall we go to Hallasan in spring?",
+          "duration_sec": 8.0
         },
         {
           "seq": 9,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '오늘 날씨 어때요?' 하고 물으면, '맑아요. 그런데 바람이 불어서 좀 추워요.' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'How's the weather today?', you can answer, 'It's clear, but it's a bit cold because of the wind.'. Let's practice together.",
-          "duration_sec": 34.0
+          "script_kr": "'봄'이에요. 겨우내 얼었던 땅이 녹고, 날이 따뜻해져요.",
+          "script_en": "It's '봄' [bom] — spring. The frozen ground melts and days grow warm.",
+          "duration_sec": 8.0
         },
         {
           "seq": 10,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "script_kr": "'따뜻하다'. 봄 날씨는 춥지도 덥지도 않아요. 딱 좋아요.",
+          "script_en": "'따뜻하다' [tta-tteut-ha-da] — to be warm. Spring isn't cold or hot. Just right.",
+          "duration_sec": 8.0
         },
         {
           "seq": 11,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
+          "script_kr": "'봄에는 따뜻해요'. 형용사에 '-아요/어요'를 붙여요.",
+          "script_en": "'봄에는 따뜻해요' (In spring, it's warm). Add '-아요/어요' to adjectives.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "'꽃이 피다'. 봄이 되면 꽃이 펴요.",
+          "script_en": "'꽃이 피다' [kkoch-i-pi-da] — flowers bloom. In spring, flowers open up.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "여기는 '선작지왓'이에요. 봄이면 산철쭉이 분홍 바다처럼 펴요. 산 위의 꽃밭이에요!",
+          "script_en": "This is '선작지왓' [Seonjakjiwat]. In spring, royal azaleas bloom like a pink sea — a garden in the sky!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "'벚꽃'도 봄의 꽃이에요. 바람이 불면 꽃잎이 눈처럼 날려요.",
+          "script_en": "'벚꽃' [beot-kkot] — cherry blossom. When wind blows, petals fly like snow.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "'바람이 불다'. 봄바람은 부드럽고 따뜻해요.",
+          "script_en": "'바람이 불다' [ba-ram-i-bul-da] — the wind blows. Spring wind is soft and warm.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "'봄바람이 불어요'. '-이/가 불다'는 바람에 써요.",
+          "script_en": "'봄바람이 불어요' (Spring wind blows). Use '-이/가 불다' for wind.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "'맑다'. 하늘에 구름이 없고 파래요. '오늘은 맑아요'.",
+          "script_en": "'맑다' [mak-da] — to be clear. No clouds, blue sky. '오늘은 맑아요' (It's clear today).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "따뜻하고 맑은 봄날엔 소풍을 가요. 지은이도 신났어요!",
+          "script_en": "On a warm, clear spring day, we go on a '소풍' [so-pung] (picnic). Jieun is excited!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "봄에는 얇은 옷을 입어요. 카디건 하나면 충분해요.",
+          "script_en": "In spring, wear light clothes. A cardigan is enough.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "봄: 따뜻하다, 꽃이 피다, 바람이 불다. 기억하세요!",
+          "script_en": "Spring: 따뜻하다 (warm), 꽃이 피다 (bloom), 바람이 불다 (windy). Remember!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "봄이 지나면? 점점 더워져요.",
+          "script_en": "After spring? It gets hotter and hotter.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "이제 여름이에요. 옷을 갈아입을게요!",
+          "script_en": "Now it's summer. Let me change clothes!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "이제 '여름'이에요. 한라산이 온통 초록으로 우거졌어요!",
+          "script_en": "Now it's '여름' [yeo-reum] — summer. Hallasan is lush and green all over!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "'덥다'. 여름은 아주 더워요. '너무 더워요'!",
+          "script_en": "'덥다' [deop-da] — to be hot. Summer is very hot. '너무 더워요'! (So hot!)",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "'여름에는 더워요'. 반대말은 춥다예요.",
+          "script_en": "'여름에는 더워요' (In summer, it's hot). The opposite is 춥다 (cold).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "'습하다'. 한국의 여름은 덥고 습해요. 끈적끈적해요.",
+          "script_en": "'습하다' [seup-ha-da] — to be humid. Korean summer is hot and humid. Sticky!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 27,
+          "script_kr": "여름에는 '장마'가 있어요. 비가 많이 와요. '비가 와요'.",
+          "script_en": "Summer has '장마' [jang-ma] — the rainy season. It rains a lot. '비가 와요' (It rains).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 28,
+          "script_kr": "'-이/가 오다'. 비가 오다, 눈이 오다. 하늘에서 내리는 건 '오다'를 써요.",
+          "script_en": "'-이/가 오다' — 비가 오다 (rain), 눈이 오다 (snow). Use 오다 for what falls from the sky.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 29,
+          "script_kr": "비가 오면 우비를 입고 우산을 써요. 노란 우비를 입은 지은이!",
+          "script_en": "When it rains, wear a '우비' [u-bi] (raincoat) and use a '우산' (umbrella). Jieun in a yellow raincoat!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 30,
+          "script_kr": "여름엔 갑자기 '소나기'가 쏟아지기도 해요. 잠깐 세게 내리고 그쳐요.",
+          "script_en": "In summer, a '소나기' [so-na-gi] (sudden shower) can pour down — hard and brief.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 31,
+          "script_kr": "비가 온 뒤 '사라오름'에 오면 분화구에 호수가 생겨요. 신비로워요!",
+          "script_en": "After rain, '사라오름' [Saraoreum] forms a lake in its crater. So mystical!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 32,
+          "script_kr": "비가 그치고 그늘에 들어가면? '시원하다'. 아, 시원해요!",
+          "script_en": "Rain stops, step into shade — '시원하다' [si-won-ha-da] (cool). Ah, refreshing!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 33,
+          "script_kr": "더운 여름엔 '돈내코' 계곡으로! 에메랄드빛 물이 정말 시원해요.",
+          "script_en": "On a hot day, head to '돈내코' [Donnaeko] valley! Emerald water, so cool.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 34,
+          "script_kr": "더운 여름엔 시원한 수박을 먹어요. 최고예요!",
+          "script_en": "In hot summer, eat cool '수박' [su-bak] (watermelon). The best!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 35,
+          "script_kr": "여름에는 반팔과 반바지를 입어요. 시원하게!",
+          "script_en": "In summer, wear '반팔' (short sleeves) and '반바지' (shorts). Stay cool!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 36,
+          "script_kr": "여름: 덥다, 습하다, 비가 오다. 우산 잊지 마세요!",
+          "script_en": "Summer: 덥다 (hot), 습하다 (humid), 비가 오다 (rains). Don't forget your umbrella!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 37,
+          "script_kr": "무더운 여름이 지나가면? 시원한 가을이 와요. 옷 갈아입을게요!",
+          "script_en": "After the hot summer? Cool autumn comes. Let me change clothes!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 38,
+          "script_kr": "이제 '가을'이에요. 한라산이 붉게 물들기 시작했어요!",
+          "script_en": "Now it's '가을' [ga-eul] — autumn. Hallasan is starting to turn red!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 39,
+          "script_kr": "가을은 '선선해요'. 덥지도 춥지도 않아 딱 좋아요.",
+          "script_en": "Autumn is '선선하다' [seon-seon-ha-da] (crisp). Not hot, not cold. Just right.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 40,
+          "script_kr": "'가을에는 시원해요'. 산책하기 좋은 계절이에요.",
+          "script_en": "'가을에는 시원해요' (In autumn, it's cool). A great season for a walk.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 41,
+          "script_kr": "'하늘이 높다'. 가을 하늘은 아주 높고 파래요.",
+          "script_en": "'하늘이 높다' [ha-neul-i-nop-da] — the sky is high. Autumn sky is high and blue.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 42,
+          "script_kr": "'단풍'이에요. 잎이 빨갛고 노랗게 물들어요.",
+          "script_en": "'단풍' [dan-pung] — autumn foliage. Leaves turn red and yellow.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 43,
+          "script_kr": "여기는 '영실기암'! 병풍 같은 절벽에 단풍이 들면 한라산 최고의 절경이에요!",
+          "script_en": "This is '영실기암' [Yeongsil]! Foliage on these screen-like cliffs — Hallasan's finest view!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 44,
+          "script_kr": "'단풍이 들다'. 한라산이 온통 빨강, 주황, 노랑으로 물들어요!",
+          "script_en": "'단풍이 들다' — leaves change color. Hallasan turns red, orange, and yellow!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 45,
+          "script_kr": "가을 '사라오름'은 산정호수에 단풍이 비쳐 그림 같아요.",
+          "script_en": "Autumn '사라오름' reflects foliage in its crater lake — like a painting.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 46,
+          "script_kr": "단풍잎이 떨어지면 '낙엽'이 돼요. 밟으면 바스락 소리가 나요.",
+          "script_en": "Fallen leaves are '낙엽' [nak-yeop]. Step on them — crunch, crunch!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 47,
+          "script_kr": "'건조하다'. 가을 공기는 건조해요. 촉촉하지 않아요.",
+          "script_en": "'건조하다' [geon-jo-ha-da] — to be dry. Autumn air is dry, not moist.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 48,
+          "script_kr": "'어리목'엔 은빛 억새가 바람에 흔들려요. 가을이 깊었어요.",
+          "script_en": "At '어리목' [Eorimok], silver '억새' [eok-sae] (grass) sways in the wind. Deep autumn.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 49,
+          "script_kr": "가을엔 맛있는 게 많아요. '감', '밤', '고구마'! 배부른 계절이에요.",
+          "script_en": "Autumn has tasty food: '감' (persimmon), '밤' (chestnut), '고구마' (sweet potato)! A full-belly season.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 50,
+          "script_kr": "가을에는 긴팔에 얇은 겉옷을 걸쳐요. 아침저녁으로 쌀쌀해요.",
+          "script_en": "In autumn, wear '긴팔' (long sleeves) with a light jacket. Chilly mornings and evenings.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 51,
+          "script_kr": "가을이 깊어지면? 이제 추운 겨울이에요. 따뜻하게 입을게요!",
+          "script_en": "As autumn deepens? Now comes cold winter. Let me bundle up!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 52,
+          "script_kr": "이제 '겨울'이에요. 한라산에 하얀 눈이 내리기 시작했어요!",
+          "script_en": "Now it's '겨울' [gyeo-ul] — winter. White snow begins to fall on Hallasan!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 53,
+          "script_kr": "'춥다'. 겨울은 아주 추워요. '너무 추워요'!",
+          "script_en": "'춥다' [chup-da] — to be cold. Winter is very cold. '너무 추워요'! (So cold!)",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 54,
+          "script_kr": "'겨울에는 추워요'. 봄의 따뜻하다와 반대예요.",
+          "script_en": "'겨울에는 추워요' (In winter, it's cold). The opposite of spring's 따뜻하다.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 55,
+          "script_kr": "겨울의 시작, 그해 처음 내리는 눈을 '첫눈'이라고 해요. 설레는 순간이에요!",
+          "script_en": "The season's first snow is '첫눈' [cheot-nun]. Such an exciting moment!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 56,
+          "script_kr": "'눈이 와요'. 하얀 눈이 펑펑 내려요.",
+          "script_en": "'눈이 와요' (It's snowing). White snow falls thick and fast.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 57,
+          "script_kr": "비가 오다, 눈이 오다. 똑같이 '-이/가 오다'예요.",
+          "script_en": "비가 오다 (rain), 눈이 오다 (snow) — both use '-이/가 오다'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 58,
+          "script_kr": "눈이 쌓이면 '눈사람'을 만들어요. 지은이가 눈사람을 만들어요!",
+          "script_en": "When snow piles up, make a '눈사람' [nun-sa-ram] (snowman). Jieun is building one!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 59,
+          "script_kr": "친구랑 '눈싸움'도 해요. 겨울의 즐거움이에요!",
+          "script_en": "Have a '눈싸움' [nun-ssa-um] (snowball fight) with friends. Winter fun!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 60,
+          "script_kr": "'얼다'. 너무 추우면 물이 얼어요. 강도 얼고, 손도 꽁꽁 얼어요.",
+          "script_en": "'얼다' [eol-da] — to freeze. When it's cold, water freezes. Rivers freeze, hands freeze!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 61,
+          "script_kr": "온도가 0도 아래로 내려가면 '영하'예요. '오늘은 영하 5도예요'.",
+          "script_en": "Below zero is '영하' [yeong-ha]. '오늘은 영하 5도예요' (It's -5°C today).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 62,
+          "script_kr": "'1100고지'엔 나뭇가지에 얼음꽃이 펴요. '상고대'라고 해요. 보석처럼 반짝여요!",
+          "script_en": "At '1100고지', ice flowers bloom on branches — '상고대' [sang-go-dae]. Sparkling like jewels!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 63,
+          "script_kr": "겨울엔 두꺼운 옷을 입어요. 스웨터에 코트, 목도리까지.",
+          "script_en": "In winter, wear thick clothes — sweater, coat, and a scarf.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 64,
+          "script_kr": "그런데 한라산 꼭대기는 더 추워요. 이 정도로는 부족해요!",
+          "script_en": "But Hallasan's peak is even colder. This isn't enough!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 65,
+          "script_kr": "그래서 완벽하게 준비했어요! 두꺼운 롱패딩, 털모자, 목도리, 장갑까지!",
+          "script_en": "So I got fully ready! A thick long padded coat, fur hat, scarf, and gloves — '방한복' [bang-han-bok]!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 66,
+          "script_kr": "이제 하나도 안 추워요. 방한복이 최고예요!",
+          "script_en": "Now I'm not cold at all. Winter gear is the best!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 67,
+          "script_kr": "자, 이제 한라산 꼭대기 백록담까지 올라가요! '등산'을 시작해요. 영차영차!",
+          "script_en": "Now let's go up to Baengnokdam at the very top! Let's start our '등산' (hike). Up we go!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 68,
+          "script_kr": "드디어 정상! 눈 덮인 '백록담'이에요. 하얀 분화구가 온 세상을 품었어요!",
+          "script_en": "The peak at last! Snow-covered '백록담' [Baengnokdam]. A white crater holding the whole world!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 69,
+          "script_kr": "눈 덮인 한라산은 정말 장관이에요. 하얀 세상이 펼쳐져요!",
+          "script_en": "Snowy Hallasan is truly magnificent. A white world unfolds!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 70,
+          "script_kr": "겨울: 춥다, 눈이 오다, 얼다, 첫눈, 상고대. 따뜻하게 입으세요!",
+          "script_en": "Winter: 춥다 (cold), 눈이 오다 (snows), 얼다 (freeze), 첫눈, 상고대. Bundle up!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 71,
+          "script_kr": "봄, 여름, 가을, 겨울 — 한라산을 한 바퀴 돌았어요!",
+          "script_en": "Spring, summer, autumn, winter — we circled all of Hallasan!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 72,
+          "script_kr": "따뜻하다, 덥다, 시원하다, 춥다. 계절마다 날씨가 달라요.",
+          "script_en": "따뜻하다 (warm), 덥다 (hot), 시원하다 (cool), 춥다 (cold). Each season differs.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 73,
+          "script_kr": "비가 와요, 눈이 와요, 바람이 불어요. 기억나죠?",
+          "script_en": "비가 와요 (rain), 눈이 와요 (snow), 바람이 불어요 (wind). Remember?",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 74,
+          "script_kr": "여러분은 무슨 계절을 좋아해요? 저는… 다 좋아요!",
+          "script_en": "Which season do you like? Me… I like them all!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 75,
+          "script_kr": "한라산은 계절마다 다른 얼굴을 보여줘요. 정말 멋진 산이죠?",
+          "script_en": "Hallasan shows a different face each season. What a wonderful mountain!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 76,
+          "script_kr": "다음 시간에 또 만나요. 안녕히 계세요!",
+          "script_en": "See you next time. Goodbye!",
+          "duration_sec": 8.0
         }
       ]
     },
@@ -3389,7 +4652,7 @@
       "hook_kr": "취미와 '자주·가끔'을 말해요",
       "logline_kr": "중급 8주차. 취미 생활과 빈도 묘사 — stickman 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 303,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3399,63 +4662,225 @@
       "scenes": [
         {
           "seq": 1,
-          "script_kr": "안녕하세요! 취미를 한국어로 말할 수 있으면 친구를 사귀기가 훨씬 쉬워져요. 오늘은 취미와 '얼마나 자주' 하는지를 표현하는 법을 배워 봐요.",
-          "script_en": "Hello! Talking about hobbies in Korean makes it much easier to make friends. Today we'll learn hobbies and how to say 'how often' you do them.",
-          "duration_sec": 33.0
+          "script_kr": "안녕하세요, 여러분! 저는 인준이에요. 만나서 반가워요. 오늘은 아주 아름다운 섬, 남이섬에 왔어요. 날씨도 좋고 나무도 정말 많죠?",
+          "script_en": "Hello, everyone! I'm Injun, nice to meet you. Today I'm on a beautiful island — '남이섬' (Nami Island). Lovely weather and so many trees, right?",
+          "duration_sec": 8.0
         },
         {
           "seq": 2,
-          "script_kr": "취미는 '저는 ~을 좋아해요'로, 빈도는 '자주·가끔'으로 말해요. 동사 앞에 빈도 부사를 넣어요.",
-          "script_en": "Say hobbies with '저는 ~을 좋아해요', and frequency with '자주' (often) or '가끔' (sometimes), placed before the verb.",
-          "duration_sec": 23.0
+          "script_kr": "여러분, '취미'가 뭐예요? '취미'는 시간이 있을 때 즐겁게 하는 일이에요. 예를 들면 운동, 독서, 그림 같은 거예요.",
+          "script_en": "'Hobby' — '취미' (hobby) — is a fun thing you do in your free time, like sports, reading, or drawing.",
+          "duration_sec": 8.0
         },
         {
           "seq": 3,
-          "script_kr": "'영화 감상'는 영화를 보며 즐기는 취미라는 뜻이에요. 예를 들어, 주말에 영화 감상을 해요. 라고 말해요. '영화를 보다'와 같은 뜻이에요. 자, 천천히 따라 해 보세요. '영화 감상'.",
-          "script_en": "'영화 감상' means watching movies. For example: I watch movies on weekends. Now repeat slowly after me: '영화 감상'.",
-          "duration_sec": 34.0
+          "script_kr": "친구를 만나면 이렇게 물어봐요. '취미가 뭐예요'? 아주 자주 쓰는 질문이에요. 같이 말해 볼까요? '취미가 뭐예요'?",
+          "script_en": "When you meet a friend, ask: '취미가 뭐예요'? (What's your hobby?). A very common question — say it with me!",
+          "duration_sec": 8.0
         },
         {
           "seq": 4,
-          "script_kr": "'운동'는 몸을 움직여 건강을 지키는 활동라는 뜻이에요. 예를 들어, 저는 매일 아침 운동을 해요. 라고 말해요. '운동을 하다'로 써요. 자, 천천히 따라 해 보세요. '운동'.",
-          "script_en": "'운동' means exercise. For example: I exercise every morning. Now repeat slowly after me: '운동'.",
-          "duration_sec": 34.0
+          "script_kr": "대답은 이렇게 해요. '제 취미는 자전거 타기예요'. '제 취미는 독서예요'. 여러분의 취미도 넣어서 말해 보세요.",
+          "script_en": "Answer like this: '제 취미는 자전거 타기예요' (My hobby is cycling), '제 취미는 독서예요' (My hobby is reading). Try it with your own hobby!",
+          "duration_sec": 8.0
         },
         {
           "seq": 5,
-          "script_kr": "'자주'는 짧은 사이를 두고 여러 번라는 뜻이에요. 예를 들어, 저는 자주 음악을 들어요. 라고 말해요. 동사 앞에 넣어 빈도를 말해요. 자, 천천히 따라 해 보세요. '자주'.",
-          "script_en": "'자주' means often. For example: I often listen to music. Now repeat slowly after me: '자주'.",
-          "duration_sec": 34.0
+          "script_kr": "이렇게도 말해요. '저는 사진 찍는 것을 좋아해요'. 동사에 '-는 것을 좋아해요'를 붙이면 돼요. '걷는 것을 좋아해요'.",
+          "script_en": "You can also say: '저는 사진 찍는 것을 좋아해요' (I like taking photos). Add '-는 것을 좋아해요' to a verb — '걷는 것을 좋아해요' (I like walking).",
+          "duration_sec": 8.0
         },
         {
           "seq": 6,
-          "script_kr": "'가끔'는 이따금, 드물게 한 번씩라는 뜻이에요. 예를 들어, 가끔 친구와 등산을 가요. 라고 말해요. '자주'의 반대예요. 자, 천천히 따라 해 보세요. '가끔'.",
-          "script_en": "'가끔' means sometimes. For example: I sometimes go hiking with friends. Now repeat slowly after me: '가끔'.",
-          "duration_sec": 34.0
+          "script_kr": "그런데 취미에서 정말 중요한 게 하나 있어요. 바로 '얼마나 자주' 하느냐예요. 매일? 가끔? 오늘 이걸 배워요.",
+          "script_en": "But one thing really matters with hobbies: '얼마나 자주' (how often)? Every day? Sometimes? Let's learn this today.",
+          "duration_sec": 8.0
         },
         {
           "seq": 7,
-          "script_kr": "'좋아하다'는 마음에 들어 즐기다라는 뜻이에요. 예를 들어, 저는 한국 음식을 좋아해요. 라고 말해요. '~을/를 좋아해요'로 써요. 자, 천천히 따라 해 보세요. '좋아하다'.",
-          "script_en": "'좋아하다' means to like. For example: I like Korean food. Now repeat slowly after me: '좋아하다'.",
-          "duration_sec": 34.0
+          "script_kr": "먼저 '매일'이에요. '매일'은 하루도 빠지지 않고 한다는 뜻이에요. '저는 매일 조깅해요'. 매일매일, 하루도 안 빠져요.",
+          "script_en": "'매일' (every day) means every day, without missing a single day. '저는 매일 조깅해요' (I jog every day).",
+          "duration_sec": 8.0
         },
         {
           "seq": 8,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '취미가 뭐예요?' 하고 물으면, '저는 영화 감상을 좋아해요. 주말에 자주 봐요.' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'What's your hobby?', you can answer, 'I like watching movies. I watch them often on weekends.'. Let's practice together.",
-          "duration_sec": 34.0
+          "script_kr": "'보통'은 대개, 거의 그렇다는 뜻이에요. '저는 보통 아침에 산책해요'. 백 퍼센트는 아니지만 거의요.",
+          "script_en": "'보통' (usually) means usually. '저는 보통 아침에 산책해요' (I usually walk in the morning) — not always, but most of the time.",
+          "duration_sec": 8.0
         },
         {
           "seq": 9,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "script_kr": "'자주'는 여러 번, 흔히 한다는 뜻이에요. '저는 자주 사진을 찍어요'. 남이섬은 예뻐서 사진을 정말 자주 찍게 돼요.",
+          "script_en": "'자주' (often) means often. '저는 자주 사진을 찍어요' (I often take photos) — Nami Island is so pretty I photograph it a lot.",
+          "duration_sec": 8.0
         },
         {
           "seq": 10,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
+          "script_kr": "'가끔'은 이따금, 어쩌다 한 번씩이에요. '저는 가끔 낚시를 해요'. 매일은 아니고 생각날 때만요.",
+          "script_en": "'가끔' (sometimes) means sometimes. '저는 가끔 낚시를 해요' (I sometimes fish) — only now and then.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 11,
+          "script_kr": "'거의 안 해요'는 하기는 하는데 아주 드물다예요. '저는 게임을 거의 안 해요'. 한 달에 한 번쯤?",
+          "script_en": "'거의 안 해요' (rarely) means rarely. '저는 게임을 거의 안 해요' (I rarely play games) — maybe once a month?",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "'전혀 안 해요'는 하나도 안 한다예요. 제로! '저는 커피를 전혀 안 마셔요'. '담배는 전혀 안 피워요'.",
+          "script_en": "'전혀 안 해요' (never) means never — zero! '저는 커피를 전혀 안 마셔요' (I never drink coffee).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "빈도 말은 동사 앞에 놓아요. '매일 산책해요'. '자주 사진을 찍어요'. 순서를 꼭 기억하세요. '저는 자주 걸어요'.",
+          "script_en": "Put the frequency word before the verb: '매일 산책해요' (I walk every day), '자주 사진을 찍어요' (I often take photos). '저는 자주 걸어요' (I often walk).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "남이섬 하면 뭐니 뭐니 해도 자전거죠! 시원한 바람을 맞으며 자전거를 타요. 제 취미 중 최고예요.",
+          "script_en": "When you think of '남이섬' (Nami Island), you think '자전거' (cycling)! Riding in the cool breeze — my favorite hobby.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "얼마나 자주 타냐고요? 일주일에 세 번 타요. '저는 일주일에 세 번 자전거를 타요'. 꽤 자주죠?",
+          "script_en": "How often? Three times a week. '저는 일주일에 세 번 자전거를 타요' (I cycle three times a week) — quite a lot!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "이 메타세쿼이아 길을 보세요. 여기서 산책하는 걸 정말 좋아해요. 저는 매일 산책해요.",
+          "script_en": "Look at this metasequoia road! I love '산책' (walking) here. '저는 매일 산책해요' (I walk every day).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "아침에는 강변에서 조깅해요. 건강에 최고죠. '저는 매일 아침에 조깅해요'. 상쾌해요!",
+          "script_en": "In the morning I do '조깅' (jogging) by the river. '저는 매일 아침에 조깅해요' (I jog every morning). So refreshing!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "이렇게 예쁜 길에서는 사진을 안 찍을 수가 없어요. 저는 사진 찍는 걸 아주 좋아해서 자주 찍어요.",
+          "script_en": "On these pretty lanes I love '사진' (photos). '저는 사진 찍는 것을 좋아해요' (I like taking photos), so I do it '자주' (often).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "날씨 좋은 날엔 잔디밭에서 피크닉을 해요. 김밥도 싸 오고요. 주말에 자주 해요.",
+          "script_en": "On nice days I enjoy a '피크닉' (picnic) on the lawn — I even pack '김밥' (gimbap). I do it '자주' (often) on weekends.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "넓은 잔디밭에서는 연을 날려요. 바람이 불면 딱 좋아요. 가끔 하는 취미예요.",
+          "script_en": "On the wide lawn I fly a '연' (kite). It's a '가끔' (sometimes) hobby — perfect when it's windy.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "친구랑 프리스비도 던져요. 원반을 휙 던지고 받고, 재미있어요. 이것도 가끔요.",
+          "script_en": "I also play '프리스비' (frisbee) with a friend — throw and catch, so fun. Also '가끔' (sometimes).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "배드민턴도 좋아해요. 셔틀콕을 주고받죠. 일주일에 한 번 정도 쳐요.",
+          "script_en": "I like '배드민턴' (badminton) too — hitting the shuttlecock back and forth. About '일주일에 한 번' (once a week).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "강가에서는 낚시를 해요. 조용히 앉아서 기다리는 게 매력이에요. 가끔, 마음이 편할 때요.",
+          "script_en": "By the river I do '낚시' (fishing) — the charm is waiting quietly. '가끔' (sometimes), when I want to relax.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "우리 강아지랑 산책도 해요. 강아지는 매일 나가야 하죠. 그래서 하루에 두 번 산책시켜요.",
+          "script_en": "I also do '강아지 산책' (dog-walking). Dogs need daily walks, so '하루에 두 번' (twice a day).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "이건 특별해요. 짚와이어! 하늘을 나는 기분이에요. 무서워서 일 년에 한 번만 타요.",
+          "script_en": "This one's special — '짚와이어' (zip-wire)! Like flying. It's scary, so '일 년에 한 번' (once a year).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "가끔은 캠핑도 가요. 텐트를 치고 밤을 보내죠. 한 달에 한 번 정도 캠핑을 해요.",
+          "script_en": "Sometimes I go '캠핑' (camping) — pitch a tent, spend the night. About '한 달에 한 번' (once a month).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 27,
+          "script_kr": "강변 벤치에 앉아서 책도 읽어요. 조용하고 좋아요. 저는 매일 저녁에 책을 읽어요.",
+          "script_en": "I read on a riverside bench — quiet and nice. '저는 매일 저녁에 책을 읽어요' (I read every evening).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 28,
+          "script_kr": "예술의 섬이니까 그림도 그려요. 풍경을 스케치하죠. 한 달에 두 번 정도 그려요.",
+          "script_en": "It's an art island, so I do '그림 그리기' (drawing) — sketching scenery. About '한 달에 두 번' (twice a month).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 29,
+          "script_kr": "요즘 새로 시작한 취미가 있어요. 스케이트보드! 아직 서툴지만 요즘 자주 타요.",
+          "script_en": "My new hobby lately is '스케이트보드' (skateboarding)! Still clumsy, but '자주' (often) these days.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 30,
+          "script_kr": "집에서는 피아노를 쳐요. 좋아하는 곡을 연주하면 기분이 좋아져요. 매일 조금씩 연습해요.",
+          "script_en": "At home I play the '피아노' (piano) — my favorite songs lift my mood. '매일' (every day) I practice a little.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 31,
+          "script_kr": "집에서는 가끔 요리도 해요. 앞치마를 두르고 맛있는 걸 만들어요. '저는 가끔 요리해요'.",
+          "script_en": "At home I sometimes do '요리' (cooking). '저는 가끔 요리해요' (I sometimes cook).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 32,
+          "script_kr": "주말마다 집에서 영화를 봐요. 소파에 앉아 팝콘을 먹으면서요. 이게 주말의 행복이에요.",
+          "script_en": "Every weekend I do '영화 보기' (watching movies) at home — sofa and popcorn. '주말마다' (every weekend).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 33,
+          "script_kr": "게임도 좋아해요. 매일 조금씩 해요. 재미있으니까요, 하하.",
+          "script_en": "I also enjoy '게임' (games) — a little '매일' (every day), because it's fun. Haha.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 34,
+          "script_kr": "제가 취미가 참 많죠? 그런데 딱 하나, 진짜 매일 빠지지 않고 하는 게 있어요. 뭘까요? 맞혀 보세요.",
+          "script_en": "I have so many hobbies, right? But there's one thing I do '매일' (every day) without fail. What is it? Take a guess!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 35,
+          "script_kr": "바로 매일 한국어 공부예요! 지금 이 영상을 보는 여러분처럼요. 이게 제 진짜 매일 취미예요.",
+          "script_en": "It's studying '한국어' (Korean) every day! Just like you, watching right now. That's my real daily hobby.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 36,
+          "script_kr": "여러분의 취미는 뭐예요? 그리고 얼마나 자주 하세요? 댓글로 꼭 알려주세요. 정말 궁금해요!",
+          "script_en": "What's YOUR '취미' (hobby)? And '얼마나 자주' (how often) do you do it? Please tell me in the comments — I'm really curious!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 37,
+          "script_kr": "즐거운 취미 생활 하세요! 그리고 매일 한국어 공부도 잊지 마세요. 다음 시간에 또 만나요. 안녕히 계세요!",
+          "script_en": "Enjoy your hobbies! And don't forget to study '한국어' (Korean) '매일'. See you next time — 안녕히 계세요! (Goodbye!)",
+          "duration_sec": 8.0
         }
       ]
     },
@@ -3467,7 +4892,7 @@
       "hook_kr": "드라마·K팝 속 진짜 한국어",
       "logline_kr": "중급 9주차. K-컬처와 실생활 구어 — stickman 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 270,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3477,57 +4902,279 @@
       "scenes": [
         {
           "seq": 1,
-          "script_kr": "안녕하세요! 드라마와 K팝을 보면 교과서에 없는 진짜 한국어가 들려요. 오늘은 친구끼리 쓰는 편한 말과 줄임말을 배워, 한국 문화를 더 가깝게 느껴 봐요.",
-          "script_en": "Hello! In dramas and K-pop you'll hear real Korean that's not in textbooks. Today we'll learn casual speech and abbreviations to feel Korean culture up close.",
-          "duration_sec": 34.0
+          "script_kr": "안녕하세요, 여러분! 여기는 '경주'에 있는 '불국사'예요. 세계유산으로 이름난 아름다운 절이죠. 오늘도 저와 함께 살아 있는 한국어를 배워 볼까요?",
+          "script_en": "Hello, everyone! This is '불국사' (Bulguksa) Temple in '경주' (Gyeongju) — a beautiful temple famous as a World Heritage site. Shall we learn living, real Korean together today?",
+          "duration_sec": 8.0
         },
         {
           "seq": 2,
-          "script_kr": "친한 사이에서는 '반말'을, SNS에서는 '축약어'를 자주 써요. 상황에 맞게 골라 쓰는 게 중요해요.",
-          "script_en": "Among close friends, people use casual speech (반말); online, abbreviations. Choosing the right one for the situation matters.",
-          "duration_sec": 23.0
+          "script_kr": "드라마를 보거나 '케이팝' (K-pop)을 들으면, 교과서엔 없는 진짜 한국어가 귀에 쏙쏙 들어와요. 그런 표현들이 바로 오늘의 주인공이에요.",
+          "script_en": "When you watch dramas or listen to '케이팝' (K-pop), you hear real Korean that no textbook teaches. Those expressions are today's stars.",
+          "duration_sec": 8.0
         },
         {
           "seq": 3,
-          "script_kr": "'반말'는 친구·가까운 사이에서 쓰는 편한 말투라는 뜻이에요. 예를 들어, 친구에게는 '밥 먹었어?'처럼 반말로 말해요. 라고 말해요. 처음 본 사람에겐 존댓말을 써요. 자, 천천히 따라 해 보세요. '반말'.",
-          "script_en": "'반말' means casual speech. For example: To a friend you say casually, 'Did you eat?' Now repeat slowly after me: '반말'.",
-          "duration_sec": 34.0
+          "script_kr": "오늘은 친구끼리 쓰는 '반말'과, 짧게 줄인 '축약어'를 함께 배웁니다. 그러면 한국 문화가 한층 더 가깝게 느껴질 거예요.",
+          "script_en": "Today we'll learn '반말' (casual speech) and '축약어' (shortened words). Korean culture will feel much closer to you.",
+          "duration_sec": 8.0
         },
         {
           "seq": 4,
-          "script_kr": "'축약어'는 길게 쓰는 말을 짧게 줄인 말라는 뜻이에요. 예를 들어, '생일 축하해'를 줄여 '생축'이라고 해요. 라고 말해요. SNS·메시지에서 자주 봐요. 자, 천천히 따라 해 보세요. '축약어'.",
-          "script_en": "'축약어' means abbreviation. For example: 'Happy birthday' is shortened to '생축'. Now repeat slowly after me: '축약어'.",
-          "duration_sec": 34.0
+          "script_kr": "천 년 역사가 살아 숨 쉬는 불국사를 거닐며 공부하니, 어렵던 한국어도 훨씬 재미있게 다가오네요.",
+          "script_en": "Strolling through Bulguksa, alive with a thousand years of history, even tricky Korean becomes much more fun.",
+          "duration_sec": 8.0
         },
         {
           "seq": 5,
-          "script_kr": "'케이팝'는 전 세계가 즐기는 한국 대중음악라는 뜻이에요. 예를 들어, 저는 케이팝을 들으며 한국어를 배워요. 라고 말해요. 가사를 따라 부르면 발음 연습이 돼요. 자, 천천히 따라 해 보세요. '케이팝'.",
-          "script_en": "'케이팝' means K-Pop. For example: I learn Korean by listening to K-pop. Now repeat slowly after me: '케이팝'.",
-          "duration_sec": 34.0
+          "script_kr": "한국어엔 아주 중요한 특징이 하나 있어요. 상대가 누구냐에 따라 말투가 완전히 달라진다는 점이죠.",
+          "script_en": "Korean has one very important feature: the way you speak changes completely depending on who you're talking to.",
+          "duration_sec": 8.0
         },
         {
           "seq": 6,
-          "script_kr": "'케이드라마'는 한국에서 만든 드라마라는 뜻이에요. 예를 들어, 케이드라마로 자연스러운 표현을 익혀요. 라고 말해요. 자막을 켜고 한 문장씩 따라 해 보세요. 자, 천천히 따라 해 보세요. '케이드라마'.",
-          "script_en": "'케이드라마' means K-Drama. For example: I pick up natural expressions from K-dramas. Now repeat slowly after me: '케이드라마'.",
-          "duration_sec": 34.0
+          "script_kr": "자, 이 아름다운 돌계단 앞에서 오늘 수업을 시작해 봅시다. 다들 준비되셨나요?",
+          "script_en": "Now, let's begin today's lesson before these beautiful stone stairs. Are you all ready?",
+          "duration_sec": 8.0
         },
         {
           "seq": 7,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '주말에 뭐 해?' 하고 물으면, '그냥 집에서 케이드라마 봐. 너는?' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'What are you doing this weekend?', you can answer, 'Just watching K-dramas at home. You?'. Let's practice together.",
-          "duration_sec": 34.0
+          "script_kr": "한국어 말투는 크게 둘로 나뉩니다. 예의를 갖춘 '존댓말' (polite speech), 그리고 편하게 하는 '반말' (casual speech)이에요.",
+          "script_en": "Korean speech splits into two: '존댓말' (polite speech) and '반말' (casual speech).",
+          "duration_sec": 8.0
         },
         {
           "seq": 8,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "script_kr": "'존댓말' (polite speech)은 어른이나 처음 만난 사람에게 씁니다. 반대로 '반말' (casual speech)은 아주 친한 친구 사이에서만 쓰죠.",
+          "script_en": "'존댓말' (polite speech) is for elders and people you just met. '반말' (casual speech) is only for very close friends.",
+          "duration_sec": 8.0
         },
         {
           "seq": 9,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
+          "script_kr": "비밀은 아주 간단해요. 문장 끝의 '요' (yo)나 '습니다' (seumnida)만 빼면 바로 반말이 됩니다. 함께 비교해 볼까요?",
+          "script_en": "The secret is simple: just drop the ending '요' (yo) or '습니다' (seumnida), and it becomes casual. Let's compare!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "첫 번째예요. '밥 먹었어요'? (Have you eaten?) 여기서 '요'를 빼면, 친구에게는 '밥 먹었어'?가 됩니다.",
+          "script_en": "First: '밥 먹었어요'? (Have you eaten?). Drop the '요', and to a friend it becomes '밥 먹었어'?.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 11,
+          "script_kr": "들으셨나요? 두 문장의 끝만 다르죠. 친한 사이에선 '요'를 슬쩍 빼고 '밥 먹었어'?라고 편하게 묻는답니다.",
+          "script_en": "Did you hear it? Only the endings differ. Among close friends, we drop the '요' and casually ask '밥 먹었어'?.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "두 번째예요. '어디 가요'? (Where are you going?) 이것도 친구끼리는 '요'를 빼고 '어디 가'?라고 물어요.",
+          "script_en": "Second: '어디 가요'? (Where are you going?). Among friends, drop the '요' and ask '어디 가'?.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "'어디 가요'?가 '어디 가'?로, 이렇게 짧아지죠. 짧아질수록 더 가깝고 편한 사이라는 뜻이랍니다.",
+          "script_en": "'어디 가요'? shortens to '어디 가'?. The shorter it gets, the closer and more comfortable the relationship.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "고마운 마음도 마찬가지예요. '고마워요' (Thank you)에서 '요'를 빼면 친구에게 하는 '고마워'가 됩니다.",
+          "script_en": "Gratitude works the same. '고마워요' (Thank you) becomes '고마워' to a friend when you drop the '요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "말은 짧아져도 고마운 마음은 똑같아요. 가까운 친구에겐 '고마워'라고 따뜻하게 말해 보세요.",
+          "script_en": "The words shorten, but the gratitude stays the same. To a close friend, warmly say '고마워'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "헤어질 때도 그래요. '잘 가요' (Goodbye)에서 '요'를 빼면 친구에게 하는 '잘 가'가 됩니다.",
+          "script_en": "Same when parting. '잘 가요' (Goodbye) becomes '잘 가' to a friend without the '요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "네 가지 모두 끝소리만 다르죠? 원어민을 따라 소리 내어 읽어 보세요. 끝의 '요'가 있고 없고를 귀로 느껴 봅시다.",
+          "script_en": "All four differ only at the ending. Read aloud after the native speaker, and feel the presence or absence of the final '요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "다만 조심하세요. '반말' (casual speech)은 친하면 정겹지만, 어른이나 처음 본 사람에게 쓰면 아주 무례해 보입니다.",
+          "script_en": "But be careful: '반말' (casual speech) feels warm among friends, yet sounds very rude to elders or strangers.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "이번엔 메신저나 SNS에서 자주 보이는 '축약어' (abbreviation)를 알아봅시다. 짧게 줄여 쓰는 재미있는 말이에요.",
+          "script_en": "Next, let's look at '축약어' (abbreviation), the fun shortened words you often see in messages and on social media.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "'축약어' (abbreviation)는 정식 표준어는 아니에요. 하지만 알아 두면 요즘 한국 사람들의 대화를 훨씬 잘 이해하게 됩니다.",
+          "script_en": "'축약어' (abbreviation) isn't standard, but knowing it helps you understand real Korean conversations much better.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "스마트폰으로 빠르게 메시지를 치다 보면, 자연스럽게 글자를 줄이게 되거든요. 표준어와 줄임말을 나란히 비교해 봐요.",
+          "script_en": "Typing fast on a smartphone, people naturally shorten words. Let's compare the full words with their short forms.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "'생일 축하해' (Happy birthday)를 짧게 줄이면 '생축'이 돼요. 친구 생일에 이렇게 톡을 보낸답니다.",
+          "script_en": "'생일 축하해' (Happy birthday) shortens to '생축'. Friends send this on birthdays.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "보세요, 앞글자만 콕 집어 '생축'이죠. 이렇게 각 단어의 첫 글자를 모으는 게 축약어의 기본이랍니다.",
+          "script_en": "See — just the first syllables make '생축'. Gathering each word's first letter is the basic rule of abbreviations.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "카페에서도 써요. '아이스 아메리카노' (iced americano)는 너무 길죠? 그래서 흔히 '아아'라고 줄여 부릅니다.",
+          "script_en": "Cafés use it too. '아이스 아메리카노' (iced americano) is long, so people often shorten it to '아아'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "이제 카페에서 '아아 주세요'라고 말하면 진짜 한국 사람 같아요. 따뜻한 건 '뜨아'라고 한답니다.",
+          "script_en": "Order '아아 주세요' at a café and you'll sound truly Korean. The hot one is '뜨아'!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "'진짜 재미있다' (really fun)는 어떻게 줄일까요? 달콤한 '꿀'과 '재미'가 만나 '꿀잼'이 됩니다.",
+          "script_en": "How about '진짜 재미있다' (really fun)? Sweet '꿀' (honey) meets '재미' (fun) to make '꿀잼'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 27,
+          "script_kr": "반대로 하나도 재미없으면 '노잼'이라고 해요. 영어 '노'와 '재미'를 붙인 말이죠. 참 기발하죠?",
+          "script_en": "The opposite, not fun at all, is '노잼' — English 'no' plus '재미' (fun). Clever, right?",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 28,
+          "script_kr": "줄임말은 친구 사이에선 정겹지만, 공식적인 자리나 어른 앞에서는 피하는 게 좋습니다. 상황에 맞게 골라 쓰세요.",
+          "script_en": "Slang is warm among friends, but avoid it in formal settings or before elders. Choose the right words for the situation.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 29,
+          "script_kr": "이제 '케이팝' (K-pop)과 '케이드라마' (K-drama)로 한국어를 똑똑하게 공부하는 법을 이야기해 봅시다.",
+          "script_en": "Now let's talk about smart ways to study Korean with '케이팝' (K-pop) and K-drama.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 30,
+          "script_kr": "좋아하는 노래와 드라마는 그냥 즐기기만 하면 아까워요. 발음과 억양을 익히는 최고의 교재가 되거든요.",
+          "script_en": "It's a waste just to enjoy your favorite songs and dramas — they're the best material for learning pronunciation and intonation.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 31,
+          "script_kr": "좋아하는 노래 가사를 한 줄씩 소리 내어 읽어 보세요. 이게 발음 교정에 정말 큰 도움이 됩니다.",
+          "script_en": "Read your favorite lyrics aloud, one line at a time. This helps enormously with fixing your pronunciation.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 32,
+          "script_kr": "드라마를 볼 땐 대사에서 잠깐 멈추고, 자막을 보며 한 문장씩 따라 해 보세요. 이 '섀도잉' (shadowing) 훈련이 아주 효과적이랍니다.",
+          "script_en": "With dramas, pause on a line and shadow the subtitle sentence by sentence. This '섀도잉' (shadowing) practice is very effective.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 33,
+          "script_kr": "그럼 배운 반말로, 친한 친구와 나누는 실제 전화 통화를 연습해 봅시다. 조용한 '석굴암'에서요.",
+          "script_en": "Now let's practice a real phone call with a close friend using the casual speech we learned — here at the peaceful '석굴암' (Seokguram).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 34,
+          "script_kr": "친구가 편한 반말로 건네는 질문을, 먼저 귀 기울여 정확히 들어 보세요.",
+          "script_en": "First, listen carefully to the casual question your friend asks.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 35,
+          "script_kr": "질문이에요. '주말에 뭐 해'? (What are you doing this weekend?) 친구끼리 아주 자연스럽게 묻는 반말 질문이죠.",
+          "script_en": "The question: '주말에 뭐 해'? (What are you doing this weekend?) — a very natural casual question between friends.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 36,
+          "script_kr": "'주말에 뭐 해요'?에서 '요'가 빠져 '주말에 뭐 해'?가 됐죠. 끝을 살짝 내려 말하는 게 반말의 느낌이에요.",
+          "script_en": "'주말에 뭐 해요'? drops the '요' to become '주말에 뭐 해'?. Lowering the ending gives that casual feel.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 37,
+          "script_kr": "이렇게 답해요. '그냥 집에서 케이드라마 봐. 너는'? (Just watching K-dramas at home. You?) 편안하게 되묻는 '너는'?이 참 친근하죠.",
+          "script_en": "Answer like this: '그냥 집에서 케이드라마 봐. 너는'? (Just watching K-dramas at home. You?). The casual '너는'? feels friendly.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 38,
+          "script_kr": "이제 자연스러운 발음과 억양으로 '그냥 집에서 케이드라마 봐. 너는'?을 섀도잉해 보세요. 진짜 대화처럼요!",
+          "script_en": "Now shadow '그냥 집에서 케이드라마 봐. 너는'? with natural pronunciation and intonation — like a real conversation!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 39,
+          "script_kr": "오늘은 존댓말과 반말의 차이를 하나하나 비교하고, 실생활 줄임말까지 배웠습니다. 정말 알차죠?",
+          "script_en": "Today we compared '존댓말' and '반말' one by one, and learned everyday slang too. Quite a full lesson!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 40,
+          "script_kr": "실생활 문장은 또박또박 큰 소리로 반복해 읽는 게 좋아요. 그럴수록 한국어 읽는 속도가 쑥쑥 빨라집니다.",
+          "script_en": "Read real-life sentences aloud, clearly and repeatedly. Your Korean reading speed will grow quickly.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 41,
+          "script_kr": "낱글자 암기를 넘어 진짜 회화 문장으로 연습하다 보면, 어느새 한국어가 훨씬 친숙해질 거예요.",
+          "script_en": "Practice with real conversation sentences, not just isolated letters, and Korean will soon feel much more familiar.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 42,
+          "script_kr": "오늘 배운 비교 표현을, 하루에 한 번은 꼭 써 보시길 권합니다. 작은 연습이 큰 실력이 되니까요.",
+          "script_en": "I recommend using today's expressions at least once a day. Small practice builds big skills.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 43,
+          "script_kr": "천 년 고도 경주에서 한국어를 공부하니, 배움이 한결 더 생생하게 느껴지네요.",
+          "script_en": "Studying Korean in Gyeongju, a thousand-year-old capital, makes the learning feel wonderfully vivid.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 44,
+          "script_kr": "먼저 표준이 되는 존댓말을 충분히 익히고, 친한 친구와 조금씩 반말을 섞는 순서가 가장 좋습니다.",
+          "script_en": "Master standard '존댓말' first, then gradually mix in '반말' with close friends — that's the best order.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 45,
+          "script_kr": "다음 시간에도 아름다운 한국의 명소에서, 유익한 실생활 한국어로 찾아뵙겠습니다.",
+          "script_en": "Next time, I'll meet you again at another beautiful Korean landmark with useful, real-life Korean.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 46,
+          "script_kr": "구독과 좋아요는 더 풍성한 한국어 교육을 만드는 데 큰 힘이 됩니다. 오늘도 정말 잘하셨어요. 안녕히 계세요!",
+          "script_en": "Subscribing and liking give great strength to making richer Korean lessons. Great job today — goodbye!",
+          "duration_sec": 8.0
         }
       ]
     },
@@ -3539,7 +5186,7 @@
       "hook_kr": "마음을 한국어로 섬세하게",
       "logline_kr": "중급 10주차. 감정과 세밀한 마음 묘사 — zw 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 264,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3549,57 +5196,279 @@
       "scenes": [
         {
           "seq": 1,
-          "script_kr": "안녕하세요! 마음을 정확히 표현하면 대화가 훨씬 깊어져요. 오늘은 기쁨부터 속상함까지, 다양한 감정을 한국어로 섬세하게 말하는 법을 배워 봐요.",
-          "script_en": "Hello! Expressing your feelings precisely makes conversations deeper. Today we'll learn to describe emotions from joy to disappointment in Korean.",
-          "duration_sec": 33.0
+          "script_kr": "안녕하세요, 여러분. 여기는 고운 기와지붕이 물결처럼 이어지는 '전주 한옥마을'이에요. 오늘은 저 마담제이와 함께, 마음을 표현하는 한국어를 배워 볼까요?",
+          "script_en": "Hello, everyone. This is '전주 한옥마을' (Jeonju Hanok Village), where graceful tiled roofs ripple like waves. Today, with me, Madam J, shall we learn the Korean of the heart?",
+          "duration_sec": 8.0
         },
         {
           "seq": 2,
-          "script_kr": "감정은 형용사로 말해요. 말할 때는 '기쁘다 → 기뻐요'처럼 부드럽게 끝을 바꿔요.",
-          "script_en": "Emotions are adjectives. When speaking, endings soften: '기쁘다 → 기뻐요'.",
-          "duration_sec": 19.0
+          "script_kr": "우리는 하루에도 참 많은 감정을 느끼죠. 기쁨, 슬픔, 설렘… 그 마음을 말로 나눌 수 있다면, 한국어가 훨씬 더 따뜻해진답니다.",
+          "script_en": "We feel so many emotions each day — joy, sadness, flutter. When you can put those feelings into words, Korean grows much warmer.",
+          "duration_sec": 8.0
         },
         {
           "seq": 3,
-          "script_kr": "'기쁘다'는 마음이 즐겁고 좋다라는 뜻이에요. 예를 들어, 합격해서 정말 기뻐요. 라고 말해요. 말할 때 '기뻐요'로 바뀌어요. 자, 천천히 따라 해 보세요. '기쁘다'.",
-          "script_en": "'기쁘다' means happy. For example: I'm so happy I passed. Now repeat slowly after me: '기쁘다'.",
-          "duration_sec": 34.0
+          "script_kr": "그래서 오늘의 주제는 '감정 표현' (expressing emotions)과, 한 걸음 더 들어간 '세밀한 마음 묘사'예요. 비슷해 보여도 미묘하게 다른 마음까지 짚어 봅시다.",
+          "script_en": "So today's theme is '감정 표현' (expressing emotions), and a step deeper — describing subtle feelings. We'll even catch emotions that look alike but differ ever so slightly.",
+          "duration_sec": 8.0
         },
         {
           "seq": 4,
-          "script_kr": "'슬프다'는 마음이 아프고 울고 싶다라는 뜻이에요. 예를 들어, 영화가 슬퍼서 울었어요. 라고 말해요. '슬퍼요'로 부드럽게 말해요. 자, 천천히 따라 해 보세요. '슬프다'.",
-          "script_en": "'슬프다' means sad. For example: The movie was sad, so I cried. Now repeat slowly after me: '슬프다'.",
-          "duration_sec": 34.0
+          "script_kr": "천천히 한옥 골목을 거닐다 보면 마음도 차분해지죠. 이렇게 편안한 곳에서 감정 표현을 배우면, 오래오래 기억에 남을 거예요.",
+          "script_en": "Strolling slowly through the hanok alleys, your heart settles too. Learning emotion words in such a calm place, they'll stay with you a long time.",
+          "duration_sec": 8.0
         },
         {
           "seq": 5,
-          "script_kr": "'긴장되다'는 떨리고 마음이 불안하다라는 뜻이에요. 예를 들어, 발표 전에는 긴장돼요. 라고 말해요. '긴장돼요'로 자주 써요. 자, 천천히 따라 해 보세요. '긴장되다'.",
-          "script_en": "'긴장되다' means nervous. For example: I get nervous before a presentation. Now repeat slowly after me: '긴장되다'.",
-          "duration_sec": 34.0
+          "script_kr": "먼저 살짝 귀띔할게요. 한국어에서 감정을 나타내는 말은 대부분 '형용사' (adjective), 즉 상태를 그리는 그림씨예요. '기쁘다', '슬프다'처럼요.",
+          "script_en": "A little hint first: in Korean, most feeling words are '형용사' (adjectives) — words that paint a state, like '기쁘다' (to be glad) and '슬프다' (to be sad).",
+          "duration_sec": 8.0
         },
         {
           "seq": 6,
-          "script_kr": "'속상하다'는 일이 잘 안돼 마음이 상하다라는 뜻이에요. 예를 들어, 실수해서 속상해요. 라고 말해요. 아쉽고 마음 아플 때 써요. 자, 천천히 따라 해 보세요. '속상하다'.",
-          "script_en": "'속상하다' means upset. For example: I'm upset that I made a mistake. Now repeat slowly after me: '속상하다'.",
-          "duration_sec": 34.0
+          "script_kr": "자, 포근한 이 골목에서 오늘 수업을 시작해 봐요. 마음을 살며시 들여다볼 준비, 되셨나요?",
+          "script_en": "Now, let's begin today's lesson in this cozy alley. Are you ready to gently look inside your heart?",
+          "duration_sec": 8.0
         },
         {
           "seq": 7,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '시험 어떻게 됐어요?' 하고 물으면, '합격했어요! 정말 기뻐요.' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'How did the exam go?', you can answer, 'I passed! I'm really happy.'. Let's practice together.",
-          "duration_sec": 33.0
+          "script_kr": "오늘 꼭 익힐 기본 감정은 네 가지예요. '기쁘다' (to be happy), '슬프다' (to be sad), '긴장되다' (to feel nervous), 그리고 '속상하다' (to be upset). 하나씩 만나 볼까요?",
+          "script_en": "There are four core feelings to master today: '기쁘다' (to be happy), '슬프다' (to be sad), '긴장되다' (to feel nervous), and '속상하다' (to be upset). Let's meet them one by one.",
+          "duration_sec": 8.0
         },
         {
           "seq": 8,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "script_kr": "첫 번째, '기쁘다' (to be happy). 좋은 일이 생겨 마음이 환하게 밝아지는 느낌이에요. 얼굴에 절로 미소가 번지죠.",
+          "script_en": "First, '기쁘다' (to be happy) — the feeling of your heart brightening when something good happens. A smile spreads across your face.",
+          "duration_sec": 8.0
         },
         {
           "seq": 9,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
+          "script_kr": "이렇게 써 봐요. '합격 소식을 들어서 정말 기뻐요'. 기쁠 땐 이렇게 환하게 말해 보세요. 듣는 사람도 함께 기뻐진답니다.",
+          "script_en": "Use it like this: '합격 소식을 들어서 정말 기뻐요' (I'm so glad to hear I passed). Say it brightly — the listener grows glad with you.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "두 번째, '슬프다' (to be sad). 마음이 가라앉고 눈시울이 뜨거워지는, 그런 먹먹한 감정이에요.",
+          "script_en": "Second, '슬프다' (to be sad) — that heavy feeling when your heart sinks and your eyes grow warm.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 11,
+          "script_kr": "'헤어지게 되어서 슬퍼요'. 슬플 땐 억지로 참기보다, 이렇게 솔직하게 말하는 것도 큰 위로가 돼요.",
+          "script_en": "'헤어지게 되어서 슬퍼요' (I'm sad because we have to part). When you're sad, saying it honestly like this can be a great comfort.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "세 번째, '긴장되다' (to feel nervous). 중요한 일을 앞두고 가슴이 두근거리고 몸이 굳는 느낌이죠. 발표 직전을 떠올려 보세요.",
+          "script_en": "Third, '긴장되다' (to feel nervous) — heart pounding, body stiffening before something important. Picture the moment right before a presentation.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "'면접을 앞두고 있어서 너무 긴장돼요'. 이럴 땐 숨을 크게 한 번 쉬고, '괜찮아, 잘할 수 있어'라고 스스로를 다독여 봐요.",
+          "script_en": "'면접을 앞두고 있어서 너무 긴장돼요' (I'm so nervous with the interview ahead). Take a deep breath and soothe yourself: 'It's okay, I can do it'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "네 번째, '속상하다' (to be upset). 일이 뜻대로 안 되거나 마음이 상해서, 속이 쓰리고 답답한 감정이에요. 아주 자주 쓰는 말이랍니다.",
+          "script_en": "Fourth, '속상하다' (to be upset) — when things don't go your way and your heart aches, a sore, stuffy feeling. It's used very often.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "'실수를 해서 많이 속상해요'. 속상할 땐 혼자 삭이지 말고 가까운 사람에게 이렇게 털어놓아 보세요. 한결 가벼워질 거예요.",
+          "script_en": "'실수를 해서 많이 속상해요' (I'm really upset because I made a mistake). Don't bottle it up — share it like this with someone close, and it'll feel lighter.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "여기에 하나 더, '설레다' (to feel a flutter). 좋은 일을 기대하며 가슴이 콩닥콩닥 뛰는, 기분 좋은 떨림이에요.",
+          "script_en": "One more: '설레다' (to feel a flutter) — the pleasant thrill of your heart pattering as you look forward to something good.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "감정어는 더 있어요. 몹시 언짢은 '화나다' (to be angry), 마음이 놓이지 않는 '걱정되다' (to be worried)까지, 상황에 맞게 골라 쓰면 된답니다.",
+          "script_en": "There are more: '화나다' (to be angry) and '걱정되다' (to be worried). Pick the one that fits the moment.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "정리해 봐요. 기쁘고, 슬프고, 긴장되고, 속상하고. 이 네 감정만 잘 말해도 하루의 마음을 충분히 나눌 수 있어요.",
+          "script_en": "Let's recap: glad, sad, nervous, upset. Just these four already let you share a whole day's heart.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "이제 한 단계 나아가 봐요. '왜' 그런 기분인지, 원인을 함께 말하는 법이에요. 원인과 감정을 이어 주는 연결 고리를 배워 봅시다.",
+          "script_en": "Now a step further: how to say 'why' you feel that way, joining the cause to the feeling. Let's learn the link that connects them.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "그 고리가 바로 '-아서'와 '-어서'예요. 원인을 잇는 '연결어미'죠. 밝은 모음엔 '-아서', 나머지엔 '-어서'를 붙여요.",
+          "script_en": "That link is '-아서' and '-어서' — connective endings that join a cause. Bright vowels take '-아서', the rest take '-어서'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "예문을 볼까요? '시험이 끝나서 기뻐요'. 앞에는 원인, 뒤에는 감정. '끝나다'에 '-아서'가 붙어 '끝나서'가 되었죠.",
+          "script_en": "An example: '시험이 끝나서 기뻐요' (I'm glad because the exam is over). Cause first, feeling next. '끝나다' plus '-아서' becomes '끝나서'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "들리시나요? '왜 기쁜지'가 자연스럽게 이어지죠. 이렇게 말하면 상대가 내 마음을 훨씬 깊이 이해하게 돼요.",
+          "script_en": "Hear it? The 'why' flows right into the feeling. Speaking this way lets others understand your heart much more deeply.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "이번엔 슬픈 쪽. '비가 와서 속상해요'. '오다'가 '와서'로 바뀌었네요. 소풍이 취소된 아이의 마음이 그려지죠.",
+          "script_en": "Now the sad side: '비가 와서 속상해요' (I'm upset because it rained). '오다' turns into '와서'. You can picture a child whose picnic was canceled.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "모든 감정에는 이유가 있어요. 그 이유를 '-아서/어서'로 살며시 밝히면, 투정이 아니라 진심 어린 이야기가 된답니다.",
+          "script_en": "Every feeling has a reason. Reveal it gently with '-아서/어서', and it becomes not a complaint but a heartfelt story.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "긴장도 이렇게. '발표가 있어서 긴장돼요'. 원인을 말해 두면, 옆 사람이 '괜찮아, 잘할 거야' 하고 응원해 주기 쉬워지죠.",
+          "script_en": "Nervousness too: '발표가 있어서 긴장돼요' (I'm nervous because I have a presentation). Naming the cause makes it easy for others to cheer, 'You'll do great'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "설렘도 넣어 봐요. '오랜 친구를 만나서 설레요'. 기대되는 마음이 '-아서'를 타고 콩닥콩닥 전해지네요.",
+          "script_en": "Add flutter: '오랜 친구를 만나서 설레요' (I feel a flutter because I'm meeting an old friend). The anticipation rides on '-아서', pit-a-pat.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 27,
+          "script_kr": "하나 더. '칭찬을 들어서 뿌듯해요'. 여기 '뿌듯하다' (to feel proud and content)는 마음이 가득 차오르는 흐뭇한 감정이에요.",
+          "script_en": "One more: '칭찬을 들어서 뿌듯해요' (I feel proud because I was praised). '뿌듯하다' (proud and content) is that warm, filling feeling.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 28,
+          "script_kr": "정리하면, '원인 + 아서/어서 + 감정'이에요. 이 한 줄이면 '무슨 마음인지'와 '왜 그런지'를 한 번에 전할 수 있답니다.",
+          "script_en": "In sum: 'cause + 아서/어서 + feeling'. This one line conveys both what you feel and why, all at once.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 29,
+          "script_kr": "이제 오늘의 하이라이트예요. 비슷해 보이지만 결이 다른 감정들. 이 미묘한 차이를 알면, 마음을 정말 섬세하게 그릴 수 있어요.",
+          "script_en": "Now today's highlight: feelings that look similar but differ in texture. Knowing these subtle shades lets you paint your heart with real delicacy.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 30,
+          "script_kr": "'속상하다'는 일이 안 풀려 속이 상한 것, '서운하다' (to feel let down)는 상대에게 바란 게 채워지지 않아 섭섭한 마음이에요. '연락이 없어서 서운했어요'처럼요.",
+          "script_en": "'속상하다' is when things go wrong; '서운하다' (to feel let down) is the quiet hurt when someone doesn't meet what you'd hoped, like '연락이 없어서 서운했어요' (I felt let down that you didn't call).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 31,
+          "script_kr": "'뿌듯하다' (to feel proud and content)는 애쓴 만큼 마음이 가득 차오르는 흐뭇함이에요. '해내서 뿌듯해요'라고 하면, 그 벅찬 보람이 그대로 전해지죠.",
+          "script_en": "'뿌듯하다' (proud and content) is the warm fullness after real effort. Say '해내서 뿌듯해요' (I feel proud that I pulled it off), and the reward carries over.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 32,
+          "script_kr": "끝날 때의 두 마음도 배워요. 남은 미련은 '아쉽다' (to feel it's a pity), 짐을 내려놓은 개운함은 '홀가분하다' (to feel light and free). 같은 이별에도 두 마음이 함께 있죠.",
+          "script_en": "Two feelings at an ending: lingering regret is '아쉽다' (what a pity), and the relief of setting a burden down is '홀가분하다' (light and free). One farewell can hold both.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 33,
+          "script_kr": "감동이 클 땐, 가슴이 꽉 차는 '벅차다' (to be overwhelmed with emotion)와, 코끝이 찡해지는 '뭉클하다' (to be deeply moved)를 써요. '그 말에 마음이 뭉클했어요'처럼요.",
+          "script_en": "For deep emotion: '벅차다' (overwhelmed, heart brimming) and '뭉클하다' (deeply moved, throat tightening), as in '그 말에 마음이 뭉클했어요' (those words deeply moved me).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 34,
+          "script_kr": "기대의 떨림도 두 결이에요. 은근히 부푸는 '설레다', 심장이 빠르게 뛰는 '두근거리다' (to have one's heart pound). '첫 여행이라 두근거려요'처럼 함께 써도 좋아요.",
+          "script_en": "Anticipation has two shades: the gentle swell of '설레다', and the fast beat of '두근거리다' (heart pounding), as in '첫 여행이라 두근거려요' (my heart's pounding — it's my first trip).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 35,
+          "script_kr": "이번엔 '마음'으로 그리는 표현이에요. 걱정이 사라져 편안해지면 '마음이 놓이다' (to feel relieved). '무사하다니 마음이 놓여요'라고 하면 안도가 물씬 느껴지죠.",
+          "script_en": "Now expressions painted with '마음' (the heart): when worry lifts, '마음이 놓이다' (to feel relieved), as in '무사하다니 마음이 놓여요' (I'm so relieved you're safe).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 36,
+          "script_kr": "걱정이 얹히면 '마음이 무겁다', 훌훌 털면 '마음이 가볍다'예요. 마음을 무게로 그리는, 참 한국어다운 표현이랍니다.",
+          "script_en": "Weighed by worry, '마음이 무겁다' (heavy-hearted); shaken off, '마음이 가볍다' (light-hearted). Painting the heart as weight — so very Korean.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 37,
+          "script_kr": "감정이 왈칵 북받쳐 목이 메면 '울컥하다' (to well up with emotion). 고마움이나 서러움이 한꺼번에 밀려올 때, '편지를 읽다가 울컥했어요'라고 해요.",
+          "script_en": "When emotion surges and your throat catches, '울컥하다' (to well up). When gratitude or sorrow floods in at once: '편지를 읽다가 울컥했어요' (I welled up reading the letter).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 38,
+          "script_kr": "보셨죠? 속상함과 서운함, 벅참과 뭉클함… 결이 조금씩 달라요. 이 미세한 차이를 담을수록, 여러분의 한국어는 더 깊고 다정해진답니다.",
+          "script_en": "See? Upset and let-down, brimming and moved — each a slightly different grain. The more you catch these fine shades, the deeper and warmer your Korean becomes.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 39,
+          "script_kr": "감정은 혼자 삼키는 게 아니라 나누는 거예요. 상대의 마음을 함께 느껴 주는 것, 그게 바로 '공감' (empathy)이랍니다.",
+          "script_en": "Feelings aren't meant to be swallowed alone but shared. Feeling another's heart together — that's '공감' (empathy).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 40,
+          "script_kr": "공감의 대표 표현이에요. '많이 속상했겠어요'. 여기 '-겠어요'는 상대의 마음을 헤아려 추측하는 다정한 어미죠. 이 한마디에 마음이 스르르 풀린답니다.",
+          "script_en": "The classic empathy line: '많이 속상했겠어요' (You must have been so upset). '-겠어요' is a tender ending that guesses at another's heart. This one phrase melts the tension away.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 41,
+          "script_kr": "기쁜 일엔 함께 크게 기뻐해 줘요. '얼마나 기뻤어요'!, '정말 설렜겠어요'. 이렇게 마음을 맞장구쳐 주면 기쁨이 두 배가 되죠.",
+          "script_en": "For happy news, rejoice big together: '얼마나 기뻤어요'! (How glad you must have been!), '정말 설렜겠어요' (You must have been so thrilled). Echoing the heart doubles the joy.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 42,
+          "script_kr": "때론 완벽한 말보다 곁에 있어 주는 게 더 큰 위로예요. '괜찮아요, 제가 곁에 있을게요'. 이 한마디의 온기를 기억해 두세요.",
+          "script_en": "Sometimes being there comforts more than perfect words: '괜찮아요, 제가 곁에 있을게요' (It's okay, I'll be by your side). Remember the warmth of this line.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 43,
+          "script_kr": "이런 마음이 쌓이면 한국의 '정' (jeong)이 돼요. 말로 다 못 하는, 오래 함께한 사람들 사이의 깊고 따뜻한 유대감이랍니다.",
+          "script_en": "When such hearts pile up, they become Korea's '정' (jeong) — the deep, warm bond between people who've shared time, beyond what words can say.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 44,
+          "script_kr": "'정'은 소소한 데서 드러나요. '밥은 먹었어요'? 하고 안부를 챙기고, 말없이 반찬 한 접시를 더 놓아 주는 마음. 그게 한국인의 정이에요.",
+          "script_en": "'정' shows in little things — asking '밥은 먹었어요'? (Have you eaten?), quietly adding one more side dish. That is the jeong of Koreans.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 45,
+          "script_kr": "오늘 우리는 기본 감정 네 가지부터, '-아서/어서'로 원인 잇기, 세밀한 뉘앙스, 공감과 위로, 그리고 '정'까지 마음을 그리는 한국어를 배웠어요.",
+          "script_en": "Today we learned to paint the heart in Korean — four core feelings, joining causes with '-아서/어서', subtle nuances, empathy and comfort, and even '정'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 46,
+          "script_kr": "여러분의 오늘 하루는 어떤 마음이었나요? 댓글로 살며시 들려주세요. 마음을 나누는 한국어, 다음 시간에 또 함께해요. 구독과 좋아요, 잊지 마시고요!",
+          "script_en": "What did your heart feel today? Share it gently in the comments. Let's meet again for the Korean of the heart — and don't forget to subscribe and like!",
+          "duration_sec": 8.0
         }
       ]
     },
@@ -3611,7 +5480,7 @@
       "hook_kr": "내 생각을 논리적으로 말해요",
       "logline_kr": "중급 11주차. 논리적 의견과 설득하기 — zm 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 230,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3621,51 +5490,279 @@
       "scenes": [
         {
           "seq": 1,
-          "script_kr": "안녕하세요! 자기 생각을 논리적으로 말하면 신뢰를 얻어요. 오늘은 의견을 밝히고 이유를 들어 설득하는 표현을 배워 봐요.",
-          "script_en": "Hello! Stating your views logically builds trust. Today we'll learn to give opinions and persuade with reasons.",
-          "duration_sec": 28.0
+          "script_kr": "안녕하세요, 여러분! 여기는 단풍으로 붉게 물든 '설악산'이에요. 오늘은 저 지은이와 함께 산을 오르며 한국어를 배워 봐요!",
+          "script_en": "Hi, everyone! This is '설악산' (Seoraksan), ablaze with red autumn leaves. Today, let's climb with me, Jieun, and learn Korean!",
+          "duration_sec": 8.0
         },
         {
           "seq": 2,
-          "script_kr": "의견은 '~다고 생각해요', 이유는 '왜냐하면', 결론은 '따라서'로 이어요. 이 흐름을 기억하세요.",
-          "script_en": "State opinion with '~라고 생각해요', reason with '왜냐하면', conclusion with '따라서'. Remember this flow.",
-          "duration_sec": 23.0
+          "script_kr": "산에 오르면 이런저런 생각이 떠올라요. 그 생각을 조리 있게 말하는 법, 궁금하지 않으세요?",
+          "script_en": "Climbing a mountain stirs up all kinds of thoughts. Curious how to say them clearly?",
+          "duration_sec": 8.0
         },
         {
           "seq": 3,
-          "script_kr": "'생각해요'는 자기 의견을 밝히는 말라는 뜻이에요. 예를 들어, 저는 그게 좋다고 생각해요. 라고 말해요. '~다고 생각해요'로 의견을 말해요. 자, 천천히 따라 해 보세요. '생각해요'.",
-          "script_en": "'생각해요' means I think. For example: I think that's a good idea. Now repeat slowly after me: '생각해요'.",
-          "duration_sec": 34.0
+          "script_kr": "오늘 주제는 '의견 표현' (expressing opinions)과 '설득' (persuasion)이에요. 주장과 근거를 함께 말하면 한국어가 훨씬 논리적으로 들려요.",
+          "script_en": "Today's theme is '의견 표현' (expressing opinions) and '설득' (persuasion). Pairing a claim with a reason makes your Korean sound far more logical.",
+          "duration_sec": 8.0
         },
         {
           "seq": 4,
-          "script_kr": "'왜냐하면'는 이유를 설명할 때 쓰는 말라는 뜻이에요. 예를 들어, 왜냐하면 시간이 절약되니까요. 라고 말해요. 이유 문장 앞에 붙여요. 자, 천천히 따라 해 보세요. '왜냐하면'.",
-          "script_en": "'왜냐하면' means because. For example: Because it saves time. Now repeat slowly after me: '왜냐하면'.",
-          "duration_sec": 34.0
+          "script_kr": "붉은 단풍길을 한 걸음씩 오르며 공부해 봐요. 생각을 정리하듯 차근차근요.",
+          "script_en": "Let's study climbing the red-leaf trail step by step, organizing our thoughts as we go.",
+          "duration_sec": 8.0
         },
         {
           "seq": 5,
-          "script_kr": "'따라서'는 앞 내용의 결론을 말하는 말라는 뜻이에요. 예를 들어, 따라서 저는 찬성해요. 라고 말해요. 결론을 정리할 때 써요. 자, 천천히 따라 해 보세요. '따라서'.",
-          "script_en": "'따라서' means therefore. For example: Therefore, I agree. Now repeat slowly after me: '따라서'.",
-          "duration_sec": 34.0
+          "script_kr": "기억할 것 하나. 좋은 의견에는 반드시 '근거' (reason)가 따라와야 해요. '왜 그런지'가 있어야 설득력이 생기거든요.",
+          "script_en": "Remember: a good opinion needs a '근거' (reason). The 'why' makes it persuasive.",
+          "duration_sec": 8.0
         },
         {
           "seq": 6,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '운동이 정말 중요할까요?' 하고 물으면, '네, 건강에 좋다고 생각해요. 왜냐하면 몸이 튼튼해지니까요.' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'Is exercise really important?', you can answer, 'Yes, I think it's good for health, because it makes the body strong.'. Let's practice together.",
-          "duration_sec": 34.0
+          "script_kr": "자, 이 시원한 단풍길에서 오늘 수업을 시작해요. 다들 준비됐나요?",
+          "script_en": "Now, let's begin today's lesson on this crisp autumn trail. Ready?",
+          "duration_sec": 8.0
         },
         {
           "seq": 7,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "script_kr": "의견을 꺼낼 때 가장 자주 쓰는 말이에요. '제 생각에는'. 이 말로 시작하면 '지금부터 내 의견이에요'라는 신호가 돼요.",
+          "script_en": "The most common opener: '제 생각에는' (in my opinion). It signals 'here comes my view'.",
+          "duration_sec": 8.0
         },
         {
           "seq": 8,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
+          "script_kr": "'제 생각에는, 설악산이 한국에서 가장 아름다워요'. 앞에 붙이기만 하면 정중한 의견이 돼요.",
+          "script_en": "'제 생각에는, 설악산이 한국에서 가장 아름다워요' — In my opinion, Seoraksan is the most beautiful in Korea.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 9,
+          "script_kr": "또렷하게 주장할 땐 '저는 ~다고 생각해요'예요. 여기 '생각하다'는 마음속 판단을 나타내는 '동사'예요.",
+          "script_en": "To state a claim clearly, use '저는 ~다고 생각해요' (I think ~). '생각하다' (to think) is a verb.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "저는 저 '울산바위' (Ulsanbawi)가 정말 웅장하다고 생각해요! 어때요, 감탄이 절로 나오죠?",
+          "script_en": "I think '울산바위' (Ulsanbawi) over there is truly majestic! It takes your breath away, right?",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 11,
+          "script_kr": "상대 말에 찬성할 땐 '동의하다'예요. '저도 그렇게 생각해요', '동의해요'라고 하면 부드럽게 맞장구가 돼요.",
+          "script_en": "To agree, use '동의하다'. '저도 그렇게 생각해요' or '동의해요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "생각이 다를 땐 '반대하다'를 써요. 무작정 반대가 아니라 이유를 붙여 정중히 말하는 게 한국식이에요.",
+          "script_en": "When you differ, use '반대하다'. The Korean way: add a reason and stay polite.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "예를 들어 '좋은 말씀이에요. 그렇지만 저는 조금 다르게 생각해요'. 상대를 먼저 존중하면 기분이 안 상해요.",
+          "script_en": "'Good point. But I see it a bit differently'. Respecting the other first keeps it pleasant.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "가장 중요한 말이에요. '왜냐하면'. 이유를 이어 주는 '접속부사'로, 주장 뒤에 근거를 붙일 때 써요.",
+          "script_en": "The key word: '왜냐하면' (because), a conjunctive adverb that attaches a reason.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "'왜냐하면, 공기가 맑기 때문이에요'. 이렇게 이유를 또렷하게 밝힐 수 있어요.",
+          "script_en": "'왜냐하면, 공기가 맑기 때문이에요' — because the air is clean.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "근거에서 결론으로 넘어갈 땐 '따라서'나 '그래서'를 써요. '따라서, 저는 등산을 추천해요'.처럼요.",
+          "script_en": "To move from reason to conclusion, use '따라서' (therefore).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "오늘의 핵심 문형이에요. 주장과 근거를 한 문장에! '저는 ___다고 생각해요, 왜냐하면 ___'.",
+          "script_en": "Today's core pattern — claim and reason in one: '저는 ___다고 생각해요, 왜냐하면 ___'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "여기 '-다고'는 생각이나 말을 옮겨 담는 '간접인용'이에요. '예쁘다'는 '예쁘다고', '좋다'는 '좋다고'처럼 바꿔요.",
+          "script_en": "'-다고' is indirect quotation: '예쁘다' becomes '예쁘다고', '좋다' becomes '좋다고'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "'저는 설악산이 아름답다고 생각해요, 왜냐하면 단풍이 정말 곱기 때문이에요'. 주장 뒤에 이유가 착 붙었죠.",
+          "script_en": "I think Seoraksan is beautiful, because the leaves are truly lovely.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "들었나요? '왜 그렇게 생각하는지'가 한 문장에 다 있어요. 이러면 듣는 사람이 고개를 끄덕여요.",
+          "script_en": "Hear it? The 'why' sits inside the sentence, and the listener nods along.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "'저는 케이블카가 편하다고 생각해요, 왜냐하면 힘을 아낄 수 있기 때문이에요'. 생활 속 의견도 척척!",
+          "script_en": "I think the cable car is convenient, because it saves energy.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "근거는 두루뭉술하지 않게 구체적으로! '좋으니까'보다 '경치가 탁 트여서'처럼 또렷할수록 설득력이 커져요.",
+          "script_en": "Make reasons specific: 'the view opens up wide' beats just 'because it's nice'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "반대 의견도 같은 틀로. '저는 걷는 게 더 좋다고 생각해요, 왜냐하면 단풍을 천천히 볼 수 있기 때문이에요'.",
+          "script_en": "I think walking is better, because you can enjoy the leaves slowly.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "근거를 말했으면 '따라서'로 맺어요. '따라서 저는 걸어서 오르기로 했어요'. 결론까지 있으면 완성!",
+          "script_en": "After reasons, close with '따라서': 'Therefore, I decided to hike up'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "의견을 말할 땐 표정과 손짓도 함께예요. 확신엔 밝은 얼굴로, 이유엔 손가락을 세워서요.",
+          "script_en": "Let expression and gesture join your words — a bright face for conviction, a raised finger for the reason.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "저를 따라 소리 내어 말해 봐요. '저는 ~다고 생각해요, 왜냐하면 ~, 따라서 ~'. 세 박자를 익히면 술술!",
+          "script_en": "Say it after me: 'I think ~, because ~, therefore ~'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 27,
+          "script_kr": "의견은 특히 정중하게. 끝을 '-요'나 '-습니다'로 맺으면 강한 주장도 부드럽게 들려요.",
+          "script_en": "Keep opinions polite. Ending with '-요' or '-습니다' softens even a strong claim.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 28,
+          "script_kr": "정리! '저는 ~다고 생각해요, 왜냐하면 ~'. 이 한 문형이면 주장·근거·설득이 한 번에!",
+          "script_en": "In sum: 'I think ~, because ~'. One pattern for claim, reason, and persuasion.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 29,
+          "script_kr": "이제 짧은 토론을 들어 봐요. 한 주제에 '찬성'과 '반대'가 오갈 때, 양쪽 근거를 잡아내는 게 핵심이에요.",
+          "script_en": "Now a short debate. When '찬성' (for) and '반대' (against) go back and forth, catch each side's reasons.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 30,
+          "script_kr": "오늘 토론 주제는 '설악산을 케이블카로 오를까, 걸어서 오를까'예요. 가볍고 재미있죠?",
+          "script_en": "Today's topic: 'Cable car up Seoraksan, or hike'? Light and fun, right?",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 31,
+          "script_kr": "먼저 찬성. '저는 케이블카가 좋다고 생각해요, 왜냐하면 시간을 아끼고 경치도 볼 수 있기 때문이에요'. 근거가 두 개!",
+          "script_en": "In favor: 'I think the cable car is good, because it saves time and you can enjoy the view'. Two reasons!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 32,
+          "script_kr": "이번엔 반대. '저는 걸어야 한다고 생각해요, 왜냐하면 단풍을 가까이서 느낄 수 있기 때문이에요'.",
+          "script_en": "Against: 'I think we should walk, because you feel the leaves up close'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 33,
+          "script_kr": "토론을 들을 땐 양쪽 근거를 콕콕 메모하세요. '찬성=시간 절약, 반대=단풍 감상'. 한눈에 보이죠.",
+          "script_en": "Jot each reason: 'for = saves time, against = enjoy leaves'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 34,
+          "script_kr": "상대 근거에 공감되면 '저도 그렇게 생각해요'로 이어요. 동의는 토론을 부드럽게 하는 윤활유예요.",
+          "script_en": "If a reason resonates, follow with '저도 그렇게 생각해요' (I think so too).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 35,
+          "script_kr": "반대할 땐 '그 점도 맞지만, 저는 ~다고 생각해요'처럼 먼저 인정하고 이어요. 그러면 다툼이 아니라 대화예요.",
+          "script_en": "Disagree by first acknowledging: 'That's true, but I think ~'. Then it's a conversation.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 36,
+          "script_kr": "이유가 궁금하면 '왜 그렇게 생각하세요'?라고 물어봐요. 상대 근거를 더 듣는 좋은 질문이에요.",
+          "script_en": "Curious? Ask '왜 그렇게 생각하세요'? (Why do you think so?).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 37,
+          "script_kr": "토론은 이기는 게 아니라 서로 배우는 거예요. 좋은 근거를 들으면 '아, 그렇군요'! 하고 생각을 바꿀 줄도 알아야죠.",
+          "script_en": "A debate is about learning, not winning. On a good reason, say 'Ah, I see'! and be ready to change your mind.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 38,
+          "script_kr": "찬성이든 반대든, 근거만 또렷하면 훌륭한 의견이에요. 중요한 건 '왜'를 말할 수 있느냐예요.",
+          "script_en": "For or against, a clear reason makes a fine opinion. What matters is saying 'why'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 39,
+          "script_kr": "이제 설득이에요. 설득은 억지가 아니라, 좋은 근거로 상대 마음을 살며시 움직이는 거예요.",
+          "script_en": "Now, persuasion — not force, but gently moving someone's heart with good reasons.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 40,
+          "script_kr": "'조금만 더 힘내요! 저는 우리가 정상까지 갈 수 있다고 생각해요, 왜냐하면 여기까지 잘 왔기 때문이에요'.",
+          "script_en": "'Just a little more! I think we can reach the top, because we've made it this far'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 41,
+          "script_kr": "설득의 비결은 '공감 먼저, 근거 나중'. '힘든 거 알아요. 그렇지만 조금만 더 가면 멋진 풍경이 있거든요'.",
+          "script_en": "The secret: empathy first, reason second. 'I know it's hard. But a bit farther, there's a gorgeous view'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 42,
+          "script_kr": "한국에선 의견을 나눌 때 '예의'를 아주 중요하게 여겨요. 아무리 반대해도 상대를 존중하고, 끝엔 웃으며 마무리해요.",
+          "script_en": "In Korea, courtesy matters greatly. However much you disagree, respect the other and end with a smile.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 43,
+          "script_kr": "어른이거나 처음 본 사이면 더 정중히요. '제 생각을 말씀드려도 될까요'?처럼 양해를 먼저 구하면 아주 공손해요.",
+          "script_en": "With elders, be extra polite. 'May I share my view'? asks leave first.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 44,
+          "script_kr": "드디어 정상! '저는 우리가 해낼 줄 알았다고 생각해요, 왜냐하면 끝까지 포기하지 않았기 때문이에요'. 오늘 문형, 정상에서도 딱!",
+          "script_en": "The summit at last! 'I knew we'd make it, because we never gave up'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 45,
+          "script_kr": "오늘 우리는 '제 생각에는'으로 열고, '왜냐하면'으로 근거를 대고, '따라서'로 맺고, 정중히 동의·반대하는 법까지 배웠어요.",
+          "script_en": "Today we learned to open with '제 생각에는', give a reason with '왜냐하면', close with '따라서', and agree/disagree politely.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 46,
+          "script_kr": "여러분은 어떤 의견이 있나요? 근거와 함께 댓글로 들려주세요. 설악산에서 배운 논리적인 한국어, 다음에 또 함께해요! 구독과 좋아요 잊지 마시고요!",
+          "script_en": "What's your opinion? Share it with a reason in the comments. Let's meet again for logical Korean — and don't forget to subscribe and like!",
+          "duration_sec": 8.0
         }
       ]
     },
@@ -3677,7 +5774,7 @@
       "hook_kr": "문제가 생겼을 때 도움 요청",
       "logline_kr": "중급 12주차. 돌발 상황 대처와 문제 해결 — jieun 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 263,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3687,57 +5784,171 @@
       "scenes": [
         {
           "seq": 1,
-          "script_kr": "안녕하세요! 여행이나 일상에서 갑작스러운 문제가 생길 수 있어요. 오늘은 물건을 잃거나 고장 났을 때 침착하게 도움을 요청하는 표현을 배워 봐요.",
-          "script_en": "Hello! Unexpected problems can happen anytime. Today we'll learn to calmly ask for help when you lose something or something breaks.",
-          "duration_sec": 34.0
+          "script_kr": "안녕하세요! 세계 각국의 문화가 모인 서울 '이태원'이에요. 오늘은 갑작스러운 돌발 상황에 한국어로 대처하는 법을 배워 봐요!",
+          "script_en": "Hi! This is Seoul's '이태원', where cultures from around the world meet. Today, let's learn to handle sudden emergencies in Korean!",
+          "duration_sec": 8.0
         },
         {
           "seq": 2,
-          "script_kr": "돌발 상황에서는 '무엇이 어떻게 됐어요'를 분명히 말하고 도움을 요청해요.",
-          "script_en": "In emergencies, clearly say 'what happened' and ask for help.",
-          "duration_sec": 17.0
+          "script_kr": "여행 중엔 갑자기 몸이 아프거나 소중한 물건을 '잃어버릴' 수 있어요. 그럴 때 가장 중요한 건 '침착'이에요.",
+          "script_en": "While traveling, you might suddenly feel sick or '잃어버리다' something precious. The most important thing is to stay '침착'.",
+          "duration_sec": 8.0
         },
         {
           "seq": 3,
-          "script_kr": "'분실'는 물건을 잃어버리는 것라는 뜻이에요. 예를 들어, 지하철에서 가방을 분실했어요. 라고 말해요. '분실했어요'로 신고해요. 자, 천천히 따라 해 보세요. '분실'.",
-          "script_en": "'분실' means loss. For example: I lost my bag on the subway. Now repeat slowly after me: '분실'.",
-          "duration_sec": 34.0
+          "script_kr": "기억하세요. 위급할 땐 '도와주세요'라고 말하는 걸 부끄러워하지 마세요. 한국 사람들은 기꺼이 도와줘요.",
+          "script_en": "Remember: never be shy to say '도와주세요' in an emergency. Koreans are glad to help.",
+          "duration_sec": 8.0
         },
         {
           "seq": 4,
-          "script_kr": "'고장'는 기계가 망가져 작동 안 함라는 뜻이에요. 예를 들어, 휴대폰이 고장 났어요. 라고 말해요. '고장 났어요'로 말해요. 자, 천천히 따라 해 보세요. '고장'.",
-          "script_en": "'고장' means breakdown. For example: My phone is broken. Now repeat slowly after me: '고장'.",
-          "duration_sec": 34.0
+          "script_kr": "몸이 안 좋을 때는 '아프다'예요. 상태를 나타내는 형용사죠. 아픈 곳을 앞에 붙여 '배가 아파요'라고 해요.",
+          "script_en": "When you feel unwell: '아프다' (to be sick), a descriptive adjective. Put the spot in front: '배가 아파요' — my stomach hurts.",
+          "duration_sec": 8.0
         },
         {
           "seq": 5,
-          "script_kr": "'예약 변경'는 정한 예약을 바꾸는 것라는 뜻이에요. 예를 들어, 예약을 변경하고 싶어요. 라고 말해요. 정중히 부탁해요. 자, 천천히 따라 해 보세요. '예약 변경'.",
-          "script_en": "'예약 변경' means reschedule. For example: I'd like to reschedule my reservation. Now repeat slowly after me: '예약 변경'.",
-          "duration_sec": 34.0
+          "script_kr": "넘어지거나 부딪쳐 몸을 상하면 '다치다'예요. 동사고요, '다리를 다쳤어요'처럼 써요.",
+          "script_en": "If you fall or bump into something: '다치다' (to get hurt), a verb. '다리를 다쳤어요' — I hurt my leg.",
+          "duration_sec": 8.0
         },
         {
           "seq": 6,
-          "script_kr": "'긴급'는 아주 급해 빨리 도와야 함라는 뜻이에요. 예를 들어, 긴급 상황이에요, 빨리요! 라고 말해요. 급할 때 분명히 말해요. 자, 천천히 따라 해 보세요. '긴급'.",
-          "script_en": "'긴급' means urgent. For example: It's an emergency, quickly please! Now repeat slowly after me: '긴급'.",
-          "duration_sec": 34.0
+          "script_kr": "가벼운 증상엔 '약국'을 찾아요. 초록색 십자 표시가 있는 곳이에요. '약 주세요'라고 하면 돼요.",
+          "script_en": "For mild symptoms, find a '약국' — look for the green cross. Just say '약 주세요' — medicine, please.",
+          "duration_sec": 8.0
         },
         {
           "seq": 7,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '무슨 일이세요?' 하고 물으면, '지갑을 분실했어요. 도와주세요.' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'What's the matter?', you can answer, 'I lost my wallet. Please help me.'. Let's practice together.",
-          "duration_sec": 33.0
+          "script_kr": "많이 아프거나 다치면 '병원'에 가요. '병원에 가고 싶어요'라고 하면 주변에서 길을 알려줄 거예요.",
+          "script_en": "If it's serious, go to a '병원'. Say '병원에 가고 싶어요' — I want to go to a hospital.",
+          "duration_sec": 8.0
         },
         {
           "seq": 8,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "script_kr": "불이 나거나 크게 다쳐 구급차가 필요할 땐 '119'예요. 전화해서 '도와주세요'라고 해요.",
+          "script_en": "For fire or an ambulance, call '119'. Call and say '도와주세요'.",
+          "duration_sec": 8.0
         },
         {
           "seq": 9,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
+          "script_kr": "도둑을 만나거나 위험한 일엔 '112', 경찰이에요. '112'와 '119'는 24시간, 요금도 없어요.",
+          "script_en": "For crime or danger, call '112', the police. Both '112' and '119' are free, 24 hours.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "물건이 사라졌을 땐 '잃어버리다'예요. 동사고, 오늘의 핵심 표현이에요.",
+          "script_en": "When something's gone: '잃어버리다' (to lose), a verb — and today's key expression.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 11,
+          "script_kr": "가장 든든한 한마디, '도와주세요'. '돕다'에 '-아 주세요'를 붙인 아주 정중한 요청이에요.",
+          "script_en": "The most reassuring phrase: '도와주세요' — a polite request from '돕다' (to help).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "오늘의 핵심 문형이에요. '___을 잃어버렸어요'. 잃어버린 물건을 앞에 쏙 넣어요.",
+          "script_en": "Today's core pattern: '___을 잃어버렸어요' (I lost ___). Put the lost item in the blank.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "'지갑을 잃어버렸어요'. '여권을 잃어버렸어요'. 물건만 바꾸면 다 돼요.",
+          "script_en": "'지갑을 잃어버렸어요' — I lost my wallet. Swap the item: '여권', '휴대폰'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "앞에 '도와주세요'를 붙이면 더 간절하게 들려요. '도와주세요, 가방을 잃어버렸어요'!",
+          "script_en": "Add '도와주세요' up front for urgency: '도와주세요, 가방을 잃어버렸어요'! — Help, I lost my bag!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "도와주는 사람이 물을 거예요. '어디에서 잃어버렸어요'? 그럼 '지하철에서요'라고 답해요.",
+          "script_en": "They'll ask '어디에서 잃어버렸어요'? — Where did you lose it? Answer '지하철에서요' — on the subway.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "몸이 안 좋을 땐 '배가 아파요', 다쳤을 땐 '다리를 다쳤어요'. 아픈 곳을 콕 집어 말해요.",
+          "script_en": "'배가 아파요' — my stomach hurts; '다리를 다쳤어요' — I hurt my leg. Point to where it hurts.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "부탁은 정중하게 해요. '실례합니다'로 시작하면, 처음 본 사람도 기꺼이 도와줘요.",
+          "script_en": "Be polite. Start with '실례합니다' (excuse me), and even strangers will gladly help.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "신고할 땐 두 가지가 핵심이에요. '무슨 일'이 '어디'에서 일어났는지, 이 두 가지만 또렷하면 돼요.",
+          "script_en": "When you report, two keys: what happened, and where. Just be clear about those two.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "전화를 받으면 이렇게 물어요. '무슨 일이에요'? 그럼 침착하게 상황을 말하면 돼요.",
+          "script_en": "They'll ask '무슨 일이에요'? — What happened? Just explain calmly.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "'119죠 친구가 다쳤어요 여기는 이태원이에요'라고 해요. 다친 일과 위치를 함께 말해요.",
+          "script_en": "Call and say '119죠 친구가 다쳤어요 여기는 이태원이에요' — Is this 119? My friend is hurt. We're in Itaewon.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "'112죠 가방을 잃어버렸어요 도와주세요'라고 해요. 잃어버린 물건과 장소를 또렷하게요.",
+          "script_en": "Call and say '112죠 가방을 잃어버렸어요 도와주세요' — Is this 112? I lost my bag. Please help.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "급해도 천천히요. 못 알아들으면 '다시 말해 주세요'. 위치는 '여기는 이태원역 근처예요'처럼 알려요.",
+          "script_en": "Even in a rush, go slow. If they don't understand: '다시 말해 주세요' — please say it again. Give your spot: '여기는 이태원역 근처예요' — I'm near Itaewon Station.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "이제 역할극이에요. 약국에서 '배가 아파요', '소화제 주세요'라고 해요. 증상을 말하고 약을 청해요.",
+          "script_en": "Now a roleplay. At the pharmacy, say '배가 아파요', '소화제 주세요' — My stomach hurts; digestive medicine, please.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "유실물 센터에서 '실례합니다, 가방을 잃어버렸어요. 도와주세요'. 물건과 장소를 함께요.",
+          "script_en": "At the lost-and-found: '가방을 잃어버렸어요. 도와주세요'. — I lost my bag. Please help.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "한국에선 위급할 때 서로 돕는 걸 당연하게 여겨요. '112'와 '119'는 통역 도움도 받을 수 있어요.",
+          "script_en": "In Korea, helping in a crisis is natural. '112' and '119' even offer interpreter help.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "도움을 받았으면 '고맙습니다', '정말 감사합니다'. 작은 인사가 큰 고마움이 돼요.",
+          "script_en": "After help, say '고맙습니다' — thank you. A small thanks means a lot.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 27,
+          "script_kr": "오늘 우리는 '아프다', '다치다', '잃어버리다'를 배우고, '___을 잃어버렸어요'와 '도와주세요'로 도움을 청하고, '112'와 '119' 신고까지 익혔어요.",
+          "script_en": "Today we learned '아프다', '다치다', '잃어버리다', asked for help with '___을 잃어버렸어요' and '도와주세요', and practiced calling '112' and '119'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 28,
+          "script_kr": "여러분은 어떤 돌발 상황을 겪어 봤나요? 댓글로 들려주세요. 이태원에서 배운 든든한 한국어, 다음에 또 함께해요! 구독과 좋아요도 잊지 마세요.",
+          "script_en": "What emergencies have you faced? Tell us in the comments. Let's meet again for helpful Korean — and don't forget to subscribe and like!",
+          "duration_sec": 8.0
         }
       ]
     },
@@ -3749,7 +5960,7 @@
       "hook_kr": "사람의 외모와 성격을 묘사해요",
       "logline_kr": "중급 13주차. 인물 묘사와 외모·성격 — injun 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 266,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3821,7 +6032,7 @@
       "hook_kr": "경험을 말하고 계획을 세워요",
       "logline_kr": "중급 14주차. 여행 경험과 미래 계획 — madam_jay 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 232,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3887,7 +6098,7 @@
       "hook_kr": "여럿의 일정을 맞춰 약속해요",
       "logline_kr": "중급 15주차. 모임 약속과 사회적 조율 — dr_jay 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 233,
       "youtube_kr": null,
       "youtube_en": null,
@@ -3953,7 +6164,7 @@
       "hook_kr": "24주 여정의 마무리, 축하해요!",
       "logline_kr": "중급 16주차. 종합 정리와 수료 축하 — stickman 진행, 이중언어.",
       "status": "rendered",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": 234,
       "youtube_kr": null,
       "youtube_en": null,
@@ -4019,7 +6230,7 @@
       "hook_kr": "달릴 때의 그 해방감, 뇌 속에선 무슨 일이?",
       "logline_kr": "자율신경·도파민·전정감각의 치유 메커니즘",
       "status": "idea",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -4036,7 +6247,7 @@
       "hook_kr": "직립보행 한 번이 인류의 운명을 바꿨다?",
       "logline_kr": "척추 S커브와 직립의 인류학",
       "status": "idea",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -4053,7 +6264,7 @@
       "hook_kr": "꼬불꼬불 잘못 깔린 도로망과 휜 척추는 같은 병을 앓는다?",
       "logline_kr": "정렬·하중분산 원리의 도시-인체 평행이론",
       "status": "idea",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -4070,7 +6281,7 @@
       "hook_kr": "거장이 그린 인물의 비틀린 자세, 우연이 아니다?",
       "logline_kr": "미술 속 자세 진단학(고병리)",
       "status": "idea",
-      "priority": 2,
+      "priority": 12,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -4087,7 +6298,7 @@
       "hook_kr": "늙는다는 건 정말 무너지는 걸까?",
       "logline_kr": "노화를 적응·완숙으로 재정의",
       "status": "idea",
-      "priority": 3,
+      "priority": 13,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -4104,7 +6315,7 @@
       "hook_kr": "무한루프를 미리 알려주는 완벽한 프로그램은 왜 못 만드나?",
       "logline_kr": "정지 문제 ↔ 만성통증 악순환의 비유",
       "status": "idea",
-      "priority": 3,
+      "priority": 13,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -4121,7 +6332,7 @@
       "hook_kr": "한 라운드를 도는 동안 우리는 인생을 한 번 산다?",
       "logline_kr": "균형·체중이동에 담긴 삶의 리듬",
       "status": "idea",
-      "priority": 3,
+      "priority": 13,
       "runtime_sec": null,
       "youtube_kr": null,
       "youtube_en": null,
@@ -4129,208 +6340,11 @@
       "reverse_spec": null,
       "style_profile": null,
       "scenes": []
-    },
-    {
-      "code": "MD-003",
-      "category": "MD",
-      "title_kr": "스마트폰과 거북목, 인류의 다음 진화?",
-      "title_en": "Text Neck: A New Human Spine?",
-      "hook_kr": "고개 숙인 현대인의 목, 진화일까 퇴화일까?",
-      "logline_kr": "경추 전만 소실과 하중 증가의 미래",
-      "status": "published",
-      "priority": 5,
-      "runtime_sec": 374,
-      "youtube_kr": "KI_LvmiTWtE",
-      "youtube_en": "KI_LvmiTWtE",
-      "publish_date": null,
-      "reverse_spec": null,
-      "style_profile": "assets/profiles/black_box_sub.json",
-      "scenes": [
-        {
-          "seq": 0,
-          "script_kr": "혹시 지금 이 영상을 보면서 고개를 푹 숙이고 계신가요? 스마트폰이 만든 현대인의 고질병, 거북목 증후군의 충격적인 진실과 완벽한 치료법을 파헤쳐 봅니다.",
-          "script_en": "Are you looking down while watching this video? Let's dig into the shocking truth and perfect cure for text neck syndrome, a modern disease caused by smartphones.",
-          "duration_sec": 12.3
-        },
-        {
-          "seq": 1,
-          "script_kr": "해부학적으로 정상적인 성인의 목뼈는 완만한 C자 곡선, 즉 경추 전만을 유지하도록 설계되어 있습니다. 이 중립 상태(0도)에서 경추가 지탱하는 머리의 고유 무게는 약 5kg에 불과하죠.",
-          "script_en": "Anatomically, a normal adult's cervical spine is designed to maintain a gentle C-curve, or cervical lordosis. In this neutral 0-degree state, the neck supports a head weight of only about 5kg.",
-          "duration_sec": 14.7
-        },
-        {
-          "seq": 2,
-          "script_kr": "하지만 스마트폰을 보며 고개를 전방으로 숙이면 힘점까지의 '모멘트 암' 레버 효과가 길어지며 하중이 지수함수적으로 증가합니다. 고개를 15도만 숙여도 목에는 약 12kg의 하중이 실립니다.",
-          "script_en": "However, as you tilt your head forward to look at your smartphone, the 'moment arm' lever effect lengthens, increasing the load exponentially. Even a 15-degree tilt places a 12kg load on the neck.",
-          "duration_sec": 15.0
-        },
-        {
-          "seq": 3,
-          "script_kr": "각도가 커져 60도로 푹 숙이게 되면 하중은 약 27kg까지 치솟습니다. 이는 7살 어린이를 하루 종일 목덜미에 얹고 버티는 것과 같은 엄청난 물리적 충격입니다.",
-          "script_en": "If the angle increases to a 60-degree steep tilt, the load skyrockets to about 27kg. This is an immense physical shock, equivalent to carrying a 7-year-old child on the back of your neck all day.",
-          "duration_sec": 12.9
-        },
-        {
-          "seq": 4,
-          "script_kr": "이 엄청난 하중을 견디기 위해 목 뒤쪽의 상부 승모근, 견갑거근, 판상근은 머리가 떨어지지 않도록 끌어당기는 등척성 수축 상태로 극도로 긴장하게 됩니다.",
-          "script_en": "To withstand this immense load, the posterior neck muscles—upper trapezius, levator scapulae, and splenius—become extremely tense through constant isometric contraction to keep the head from falling.",
-          "duration_sec": 12.1
-        },
-        {
-          "seq": 5,
-          "script_kr": "반면 앞쪽의 깊은 목 굽힘근, 즉 심부경추굴곡근은 점차 약화됩니다. 이로 인해 근육의 '길이-장력 관계'가 무너지는 심각한 생체역학적 불균형이 초래되는 것이죠.",
-          "script_en": "Conversely, the deep anterior neck flexors gradually weaken. This causes a severe biomechanical imbalance where the muscle's 'length-tension relationship' completely collapses.",
-          "duration_sec": 12.7
-        },
-        {
-          "seq": 6,
-          "script_kr": "뼈를 지지하는 인대 역시 지속적인 기계적 스트레스를 받으면 탄성을 잃고 반영구적으로 늘어나는 이른바 '크리프 현상(Creep Deformation)'을 겪게 됩니다.",
-          "script_en": "Ligaments supporting the bones also suffer from 'Creep Deformation,' a phenomenon where they lose elasticity and permanently stretch under constant mechanical stress.",
-          "duration_sec": 13.1
-        },
-        {
-          "seq": 7,
-          "script_kr": "인대가 늘어나면 충격 흡수 장치인 C자 곡선이 상실되어 일자목이나 거북목이 됩니다. 이는 하중을 뼈와 디스크로 직접 전달해 척추의 관절염과 퇴행성 병변을 가속화합니다.",
-          "script_en": "Stretched ligaments lead to the loss of the C-curve shock absorber, causing straight or text neck. This transfers the load directly to bones and discs, accelerating arthritis and degenerative lesions.",
-          "duration_sec": 13.3
-        },
-        {
-          "seq": 8,
-          "script_kr": "특히 움직임이 가장 많은 경추 5-6번 및 6-7번 디스크가 후방으로 탈출하기 쉽습니다. 빠져나온 디스크가 신경을 압박하면 팔과 손가락의 저림, 근력 저하 현상이 나타납니다.",
-          "script_en": "The highly mobile C5-C6 and C6-C7 discs are especially prone to posterior herniation. The herniated disc compresses nerves, causing arm and finger numbness and muscle weakness.",
-          "duration_sec": 13.9
-        },
-        {
-          "seq": 9,
-          "script_kr": "연쇄 반응은 전신으로 이어집니다. 짧아진 가슴 근육(흉근)이 어깨를 안으로 말리게 하는 '라운드 숄더'와 등이 둥글게 굽는 흉추 후만, 일명 '거북등'을 유발하죠.",
-          "script_en": "A chain reaction spreads throughout the body. Shortened pectoral muscles pull the shoulders inward, causing 'round shoulders,' and the thoracic spine curves backward into 'turtle back' kyphosis.",
-          "duration_sec": 13.0
-        },
-        {
-          "seq": 10,
-          "script_kr": "또한 고개가 앞으로 빠지면 턱 밑의 설골 근육 장력에 불균형이 생겨 하악골을 잡아당기게 됩니다. 이는 결국 입을 벌릴 때 통증을 유발하는 턱관절 장애(TMD)의 숨은 원인이 됩니다.",
-          "script_en": "Furthermore, the forward head posture disrupts the tension balance of the hyoid muscles under the jaw, pulling the mandible and becoming a hidden cause of Temporomandibular Joint Disorder (TMD).",
-          "duration_sec": 14.4
-        },
-        {
-          "seq": 11,
-          "script_kr": "굽은 상체는 흉곽을 압박하여 폐가 온전히 팽창하지 못하게 막습니다. 이로 인해 폐활량이 최대 30%까지 떨어지면서 몸은 만성적인 산소 부족과 극심한 피로에 시달리게 됩니다.",
-          "script_en": "The hunched upper body compresses the rib cage, preventing full lung expansion. Lung capacity drops by up to 30%, plunging the body into chronic oxygen deficiency and extreme fatigue.",
-          "duration_sec": 13.7
-        },
-        {
-          "seq": 12,
-          "script_kr": "나아가 2018년 '네이처 사이언티픽 리포트'에는 충격적인 뼈의 구조적 변형 연구가 실렸습니다. 지속적으로 뒤통수 뼈를 당기는 인대 때문에 후두골에 'EOP'라는 뼈 뿔이 자라나고 있다는 겁니다.",
-          "script_en": "Furthermore, a 2018 study in 'Nature Scientific Reports' revealed shocking structural bone changes. A bone horn called 'EOP' is growing on the occipital bone due to ligaments constantly pulling the skull.",
-          "duration_sec": 15.6
-        },
-        {
-          "seq": 13,
-          "script_kr": "신종 환경 자극에 뼈가 적응하는 이 현상을 두고, 학계에서는 우리가 혹시 스마트폰을 쥐고 뿔이 달린 '스마트폰 뿔 사피엔스'로 진화하는 게 아니냐는 뼈있는 농담까지 나옵니다.",
-          "script_en": "Regarding this bone adaptation to new environmental stimuli, scholars jokingly warn that we might be evolving into 'Smartphone Horn Sapiens,' holding phones with horns on our heads.",
-          "duration_sec": 13.9
-        },
-        {
-          "seq": 14,
-          "script_kr": "내 목이 어느 단계인지 진단하기 위해 방사선 촬영을 통한 '콥스 각도(Cobb's Angle)' 기법을 씁니다. 제2경추와 제7경추가 이루는 각도가 12.5도 미만이라면 거북목으로 명확히 진단됩니다.",
-          "script_en": "To diagnose your stage, the 'Cobb's Angle' X-ray method is used. If the angle between the C2 and C7 vertebrae is less than 12.5 degrees, it is clearly diagnosed as a text neck.",
-          "duration_sec": 15.9
-        },
-        {
-          "seq": 15,
-          "script_kr": "증상이 심화된 경우 의학적 치료가 필수입니다. 비정상적으로 잠긴 관절과 경직된 연부 조직을 한의사나 물리치료사가 직접 풀어 가동성을 회복시키는 '도수치료(관절가동술)'가 기본입니다.",
-          "script_en": "If symptoms worsen, medical treatment is essential. Manual therapy (joint mobilization), where a specialist manually releases locked joints and stiff tissues to restore mobility, is fundamental.",
-          "duration_sec": 14.4
-        },
-        {
-          "seq": 16,
-          "script_kr": "이와 함께 굳은 근육의 긴장을 완화하고 깊은 조직의 혈액 순환을 촉진하여 회복을 돕는 온열 치료와 초음파 기기를 활용한 전문 물리치료를 병행합니다.",
-          "script_en": "Along with this, professional physical therapy using heat or ultrasound equipment is applied to relieve muscle tension and promote deep tissue blood circulation for recovery.",
-          "duration_sec": 11.7
-        },
-        {
-          "seq": 17,
-          "script_kr": "만약 근막 조직에 만성 병변이 생겼다면 체외충격파(ESWT)가 효과적입니다. 고에너지 충격파를 환부에 쏘아 미세혈관 신생과 세포의 자생적 조직 재생 원리를 유도하죠.",
-          "script_en": "For chronic myofascial lesions, Extracorporeal Shock Wave Therapy (ESWT) is highly effective. It shoots high-energy shock waves into the lesion, inducing micro-vessel formation and tissue regeneration.",
-          "duration_sec": 13.1
-        },
-        {
-          "seq": 18,
-          "script_kr": "근육 섬유가 단단한 띠처럼 뭉친 결절, 즉 타우트 밴드(Taut Band)가 발생했다면 통증유발점 주사(TPI)를 시행합니다. 주삿바늘로 결절을 직접 파쇄해 뭉침을 해소합니다.",
-          "script_en": "If muscle fibers form hard nodular bands (Taut Bands), a Trigger Point Injection (TPI) is administered. The needle physically breaks down the nodule to instantly relieve the muscle knot.",
-          "duration_sec": 14.0
-        },
-        {
-          "seq": 19,
-          "script_kr": "늘어나고 약화된 후방 관절 지지 인대에는 고농도 포도당 등을 주입하는 프롤로테라피를 적용합니다. 이는 국소 염증 반응을 일으켜 인대 세포가 스스로 증식하고 튼튼해지도록 만듭니다.",
-          "script_en": "Prolotherapy, injecting high-concentration dextrose, is applied to stretched and weakened posterior ligaments. It induces local inflammation, causing ligament cells to proliferate and strengthen.",
-          "duration_sec": 14.1
-        },
-        {
-          "seq": 20,
-          "script_kr": "심한 통증은 신경차단술 주사로 예민해진 신경 역치를 안정화시킵니다. 이후 무중력 상태를 이용한 슬링 운동(뉴렉)을 병행하여 약화된 심부 근육을 안전하게 재활 활성화해야 합니다.",
-          "script_en": "Severe pain is stabilized through nerve block injections to lower nerve thresholds. Afterward, sling exercises (Neurac) utilizing zero gravity safely rehabilitate and activate weakened deep muscles.",
-          "duration_sec": 14.0
-        },
-        {
-          "seq": 21,
-          "script_kr": "하지만 생활 습관 교정이 병행되지 않으면 치료는 헛수고입니다! 하지 말아야 할 행동, Don'ts! 엎드려 스마트폰을 보거나 모니터를 시선 아래에 두고 목을 거북이처럼 빼는 행동은 절대 금물입니다.",
-          "script_en": "However, without lifestyle correction, treatment is in vain! The Don'ts! Lying face down using your phone, or placing the monitor low and sticking your neck out like a turtle are absolute strict no-nos.",
-          "duration_sec": 15.7
-        },
-        {
-          "seq": 22,
-          "script_kr": "컴퓨터 주변 기기인 키보드와 마우스를 몸에서 멀리 두는 것도 위험합니다. 멀리 있는 마우스를 잡으려고 팔을 뻗는 순간, 상체와 목이 자연스럽게 앞으로 굽어지기 때문입니다.",
-          "script_en": "Placing computer peripherals like a keyboard and mouse far away is also dangerous. The moment you stretch your arm to grab a distant mouse, your upper body and neck naturally hunch forward.",
-          "duration_sec": 13.6
-        },
-        {
-          "seq": 23,
-          "script_kr": "이제 꼭 실천해야 할 Dos! 모니터 상단을 내 눈높이에 정확히 맞추고, 스마트폰을 볼 때는 팔꿈치를 반대 손으로 지지해 기기를 눈높이까지 번쩍 들어 올려야 합니다.",
-          "script_en": "Now the Dos you must practice! Align the top of your monitor exactly to your eye level, and when using a smartphone, support your elbow with the other hand and raise the device to your eye level.",
-          "duration_sec": 13.1
-        },
-        {
-          "seq": 24,
-          "script_kr": "50분간 업무나 작업을 했다면, 반드시 5분의 '자세 리셋' 시간이 필요합니다. 양 발뒤꿈치, 엉덩이, 등, 뒤통수를 평평한 벽에 밀착시키고 서 있는 '벽 서기'가 어긋난 정렬을 리셋해 줍니다.",
-          "script_en": "After 50 minutes of work, a 5-minute 'posture reset' is mandatory. 'Wall standing,' where you press your heels, hips, back, and back of the head flat against a wall, resets your misaligned posture.",
-          "duration_sec": 15.4
-        },
-        {
-          "seq": 25,
-          "script_kr": "언제 어디서나 할 수 있는 자가 재활 운동의 핵심은 '친턱(Chin-Tuck) 운동'입니다. 시선을 정면에 두고 정수리를 위로 뽑아 올리듯 턱을 몸쪽 수평 방향으로 당겨 심부경추굴곡근을 강화합니다.",
-          "script_en": "The core self-rehabilitation exercise you can do anywhere is the 'Chin-Tuck'. Look straight, pull your chin horizontally towards your body as if pulling the crown of your head up, strengthening the deep neck flexors.",
-          "duration_sec": 15.7
-        },
-        {
-          "seq": 26,
-          "script_kr": "다음은 '맥켄지 신전 운동'입니다. 가슴을 크게 열면서 등 뒤의 양 날개뼈(견갑골)를 중앙으로 꽉 조이고, 허리 전만을 유지한 채 고개를 뒤로 지그시 젖혀 줍니다.",
-          "script_en": "Next is the 'McKenzie Extension'. Open your chest wide, firmly squeeze both shoulder blades (scapulae) together in the back, and gently tilt your head backward while maintaining lumbar lordosis.",
-          "duration_sec": 13.0
-        }
-      ]
-    },
-    {
-      "code": "CA-003",
-      "category": "CA",
-      "title_kr": "열심히 운동하는데 왜 자꾸 아플까? | 웨이트 트레이닝 부상의 과학",
-      "title_en": "Workout Injury: The Science of Weight Lifting",
-      "hook_kr": "초음속으로 날아오를 때, 슈트 속 사람의 척추에 무슨 일이?",
-      "logline_kr": "G포스·추간판 압박·충격흡수의 역학",
-      "status": "published",
-      "priority": 6,
-      "runtime_sec": null,
-      "youtube_kr": "qytcAZOiEsQ",
-      "youtube_en": "qytcAZOiEsQ",
-      "publish_date": null,
-      "reverse_spec": null,
-      "style_profile": null,
-      "scenes": []
     }
   ],
   "counts": {
-    "episodes": 55,
-    "published": 3,
+    "episodes": 57,
+    "published": 6,
     "categories": 6
   }
 }

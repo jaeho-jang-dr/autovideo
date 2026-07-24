@@ -1,0 +1,47 @@
+# W3 거센소리·된소리 — 명동 배경 15종 (사람없음·파스텔·씬별)
+# Flow 붙여넣기용. 각 씬 배경 = bg_w3_XX
+
+### S1 — 명동 초입 거리(아침, 조용)
+quiet early-morning Myeongdong shopping street entrance, closed shutters, paper lanterns, Seoul, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S2 — 화장품 가게 거리
+Myeongdong cosmetics shop street, pastel storefront signs in a row, empty, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S3 — 호떡·간식 노점(김 오름)
+Myeongdong street-food cart with a hotteok griddle, gentle rising steam, no vendor, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S4 — 간판 걸린 좁은 골목
+narrow Myeongdong side alley with hanging shop signs and lanterns, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S5 — 상점 줄지은 거리
+Myeongdong storefront row with awnings and lanterns, tidy and empty, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S6 — 아늑한 뒷골목
+cozy quiet Myeongdong back alley, potted plants, warm light, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S7 — 과일·옷가게 앞
+Myeongdong fruit stall and clothing shop front, colorful awnings, empty, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S8 — 좁은 모퉁이 골목
+tight Myeongdong corner alley, brick wall, single lantern, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S9 — 유명 식당 앞(쌍 등불)
+front of a famous Myeongdong restaurant, twin red lanterns, wooden sign, empty, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S10 — 떡볶이·빵집 노점
+Myeongdong tteokbokki and bakery stall front, steam, no people, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S11 — 명동 항공 조감뷰
+aerial birds-eye view of Myeongdong rooftops and grid of streets from above, Seoul, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S12 — 먹자골목
+Myeongdong food alley lined with small eateries and lanterns, empty, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S13 — 명동 위치 지도
+stylized pastel illustrated map of central Seoul with a pin marking Myeongdong location, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S14 — 세 가게 나란히
+row of three small Myeongdong shops side by side, distinct signs, empty, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9
+
+### S15 — 명동성당(노을)
+iconic Myeongdong Cathedral gothic spire at soft sunset, Seoul, empty plaza, soft pastel storybook illustration, thick friendly outlines, flat colors, gentle warm pastel palette, no text, no people, leave the left third and lower area open for a character, 16:9

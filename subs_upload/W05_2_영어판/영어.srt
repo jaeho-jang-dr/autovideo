@@ -1,0 +1,136 @@
+1
+00:00:00,250 --> 00:00:00,626
+Hello!
+
+2
+00:00:00,626 --> 00:00:04,199
+Today we'll learn 'double vowels' and 'semivowel glides',
+
+3
+00:00:04,199 --> 00:00:07,020
+where two sounds slide together. Let's begin!
+
+4
+00:00:10,050 --> 00:00:12,239
+When two vowels join and sound like one,
+
+5
+00:00:12,239 --> 00:00:13,771
+we call it a 'double vowel'.
+
+6
+00:00:13,771 --> 00:00:16,890
+Its key feature is that your mouth shape glides smoothly.
+
+7
+00:00:21,070 --> 00:00:26,075
+Hidden at the front of a double vowel is a quick 'semivowel'.
+
+8
+00:00:26,075 --> 00:00:29,193
+There are two kinds: a glide from 'ㅣ',
+
+9
+00:00:29,193 --> 00:00:31,490
+and a glide from 'ㅗ' or 'ㅜ'.
+
+10
+00:00:33,600 --> 00:00:36,313
+First, the 'ㅣ' glide.
+
+11
+00:00:36,313 --> 00:00:45,100
+Slide quickly from 'ㅣ' to 'ㅏ' and you get 'ㅑ' — the sound in 야 (ya).
+
+12
+00:00:49,300 --> 00:00:55,635
+The same way, 'ㅓ' becomes 'ㅕ', 'ㅗ' becomes 'ㅛ',
+
+13
+00:00:55,635 --> 00:01:02,240
+and 'ㅜ' becomes 'ㅠ', all gliding gently from 'ㅣ'.
+
+14
+00:01:08,220 --> 00:01:14,876
+Practice with words: 'ㅑ' in 야구 (baseball),
+
+15
+00:01:14,876 --> 00:01:20,739
+'ㅕ' in 여우 (fox), 'ㅛ' in 요리 (cooking),
+
+16
+00:01:20,739 --> 00:01:26,920
+'ㅠ' in 우유 (milk). Let your mouth glide.
+
+17
+00:01:29,100 --> 00:01:36,490
+'ㅐ' also glides to 'ㅒ', and 'ㅔ' to 'ㅖ',
+
+18
+00:01:36,490 --> 00:01:43,880
+as in 얘기 (talk, ㅒ) and 예의 (manners, ㅖ).
+
+19
+00:01:47,370 --> 00:01:50,848
+Now the 'ㅗ', 'ㅜ' glide.
+
+20
+00:01:50,848 --> 00:02:00,830
+Slide from 'ㅗ' to 'ㅏ' and you get 'ㅘ' — the 과 sound in 사과 (apple).
+
+21
+00:02:05,280 --> 00:02:12,753
+'ㅜ' plus 'ㅓ' makes 'ㅝ', 'ㅗ' plus 'ㅣ' makes 'ㅚ',
+
+22
+00:02:12,753 --> 00:02:17,047
+and 'ㅜ' plus 'ㅣ' makes 'ㅟ'.
+
+23
+00:02:17,047 --> 00:02:21,340
+Round your lips, then open.
+
+24
+00:02:27,800 --> 00:02:35,969
+Practice: 'ㅘ' in 사과 (apple), 'ㅝ' in 샤워 (shower),
+
+25
+00:02:35,969 --> 00:02:42,606
+'ㅚ' in 외투 (coat), 'ㅟ' in 가위 (scissors).
+
+26
+00:02:42,606 --> 00:02:46,180
+Feel the round glide.
+
+27
+00:02:48,640 --> 00:02:54,794
+Last is 'ㅢ', a special glide from 'ㅡ' to 'ㅣ'.
+
+28
+00:02:54,794 --> 00:02:59,990
+Pronounce it like the 의 in 의자 (chair).
+
+29
+00:03:04,720 --> 00:03:09,894
+In sum, 'ㅑ', 'ㅕ', 'ㅛ', 'ㅠ', 'ㅘ', 'ㅝ', 'ㅟ', 'ㅚ',
+
+30
+00:03:09,894 --> 00:03:15,838
+'ㅢ' are all double vowels made by a gliding semivowel.
+
+31
+00:03:15,838 --> 00:03:19,360
+Remember the flow of your mouth.
+
+32
+00:03:22,170 --> 00:03:25,295
+Today we learned double vowels and semivowel glides.
+
+33
+00:03:25,295 --> 00:03:27,878
+Look for double vowels in words around you.
+
+34
+00:03:27,878 --> 00:03:28,960
+See you next time!
+

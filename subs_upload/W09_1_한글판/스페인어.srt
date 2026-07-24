@@ -1,0 +1,163 @@
+1
+00:00:00,000 --> 00:00:07,282
+¡Hola! Si vives en Corea, escucharás la pregunta '어디에 있어요? ' (¿Dónde está?) muy a menudo.
+
+2
+00:00:07,282 --> 00:00:15,410
+Hoy aprenderemos expresiones para describir ubicaciones. Así podrás guiar con confianza a otros por nuestro vecindario.
+
+3
+00:00:15,860 --> 00:00:26,258
+Las ubicaciones se suelen decir en el orden de '장소' [jang-so] (lugar) + '위치말' [wi-chi-mal] (palabra de ubicación) + '에' [e] (en). Por ejemplo, como '학교' [hak-gyo] (escuela) '앞에' [ap-pe] (delante de).
+
+4
+00:00:26,258 --> 00:00:31,240
+Hoy, aprendamos las palabras de ubicación lentamente, una por una.
+
+5
+00:00:31,690 --> 00:00:41,091
+'앞' [ap] (delante) significa la parte frontal de algo. Por ejemplo, '학교 앞에서 만나요.' (Nos vemos delante de la escuela.)
+
+6
+00:00:41,091 --> 00:00:51,560
+ se dice. Solo tienes que añadir '앞에' [ap-pe] (delante de) después de un lugar. Ahora, repite después de mí lentamente. '앞' [ap].
+
+7
+00:00:52,010 --> 00:01:02,444
+'뒤' [dwi] (detrás) significa lo opuesto al frente, el lado al que le das la espalda. Por ejemplo, '집 뒤에 공원이 있어요.' (Hay un parque detrás de la casa.)
+
+8
+00:01:02,444 --> 00:01:08,620
+ se dice. Ahora, repite después de mí lentamente. '뒤' [dwi].
+
+9
+00:01:09,070 --> 00:01:18,897
+'옆' [yeop] (al lado) significa justo al lado, el lado contiguo. Por ejemplo, '은행 옆에 카페가 있어요.' (Hay una cafetería al lado del banco.)
+
+10
+00:01:18,897 --> 00:01:27,290
+ se dice. Úsalo cuando dos lugares están uno al lado del otro. Ahora, repite después de mí. '옆' [yeop].
+
+11
+00:01:27,740 --> 00:01:35,893
+'위' [wi] (encima) significa la parte superior. Por ejemplo, '책상 위에 책이 있어요.' (Hay un libro encima del escritorio.)
+
+12
+00:01:35,893 --> 00:01:45,210
+ se dice. Úsalo para decir lo que está sobre una superficie. Ahora, repite después de mí. '위' [wi].
+
+13
+00:01:45,660 --> 00:01:57,902
+'밑' [mit] (debajo) significa la parte inferior, abajo. Por ejemplo, '의자 밑에 가방이 있어요.' (Hay un bolso debajo de la silla.)
+
+14
+00:01:57,902 --> 00:02:09,080
+ se dice. '밑' [mit] (debajo) y '아래' [a-rae] (abajo) son similares. Ahora, repite después de mí. '밑' [mit].
+
+15
+00:02:09,530 --> 00:02:19,582
+'안' [an] (dentro) significa el interior de un espacio determinado. Por ejemplo, '가방 안에 책이 있어요.' (Hay un libro dentro de la bolsa.)
+
+16
+00:02:19,582 --> 00:02:28,350
+ se dice. Úsalo para hablar del interior de algo. Ahora, repite después de mí. '안' [an].
+
+17
+00:02:28,800 --> 00:02:42,087
+'밖' [bak] (fuera) es lo opuesto a '안' [an], que significa el exterior. Por ejemplo, '집 밖에 자동차가 있어요.' (Hay un coche fuera de la casa.)
+
+18
+00:02:42,087 --> 00:02:54,820
+ se dice. Recuerda '안' [an] (dentro) y '밖' [bak] (fuera) como un par. Ahora, repite después de mí. '밖' [bak].
+
+19
+00:02:55,270 --> 00:03:04,590
+'사이' [sa-i] (entre) significa el medio de dos cosas. Por ejemplo, '은행과 카페 사이에 있어요.' (Está entre el banco y la cafetería.)
+
+20
+00:03:04,590 --> 00:03:13,100
+ se dice. Señala el medio de dos lugares. Ahora, repite después de mí. '사이' [sa-i].
+
+21
+00:03:13,550 --> 00:03:23,521
+'왼쪽' [wen-jjok] (izquierda) significa el lado izquierdo. Por ejemplo, decimos '왼쪽에 학교가 있어요.' (Hay una escuela a la izquierda.)
+
+22
+00:03:23,521 --> 00:03:31,000
+Se usa muy a menudo para señalar una dirección. Ahora, repite después de mí. '왼쪽' [wen-jjok].
+
+23
+00:03:31,450 --> 00:03:41,042
+'오른쪽' [o-reun-jjok] (derecha) significa el lado derecho. Por ejemplo, '오른쪽에 마트가 있어요.' (Hay un supermercado a la derecha.)
+
+24
+00:03:41,042 --> 00:03:52,740
+ se dice. Recuerda '왼쪽' [wen-jjok] (izquierda) y '오른쪽' [o-reun-jjok] (derecha) juntos. Ahora, repite después de mí. '오른쪽' [o-reun-jjok].
+
+25
+00:03:53,190 --> 00:04:01,220
+Ahora aprendamos también nombres de lugares. '마트' [ma-teu] (supermercado) significa una tienda grande que vende productos.
+
+26
+00:04:01,220 --> 00:04:09,250
+Decimos '마트에서 우유를 사요.' (Compro leche en el supermercado). Ahora, repite después de mí. '마트' [ma-teu].
+
+27
+00:04:09,700 --> 00:04:19,837
+'학교' [hak-gyo] (escuela) significa un lugar para estudiar. Decimos '학교에 걸어서 가요.' (Voy a la escuela andando.)
+
+28
+00:04:19,837 --> 00:04:28,130
+La partícula '에' [e] (a/en) después de un lugar muestra dirección. Ahora, repite después de mí. '학교' [hak-gyo].
+
+29
+00:04:28,580 --> 00:04:37,664
+'은행' [eun-haeng] (banco), '카페' [ka-pe] (cafetería) y '공원' [gong-won] (parque) también aparecen a menudo. '은행 옆에 카페가 있어요.' (Hay una cafetería al lado del banco.)
+
+30
+00:04:37,664 --> 00:04:45,640
+'공원 안에서 산책해요.' (Paseo dentro del parque). Puedes usarlos con palabras de ubicación así.
+
+31
+00:04:46,090 --> 00:04:57,004
+Una pequeña regla más. Usa '에' [e] (en) para ubicación y '에서' [e-seo] (en/desde) para acción. '학교에 가요.' (Voy a la escuela.)
+
+32
+00:04:57,004 --> 00:05:05,070
+ es dirección, '학교에서 공부해요.' (Estudio en la escuela) es acción allí.
+
+33
+00:05:05,520 --> 00:05:11,270
+Ahora, una situación real. Si alguien pregunta '마트가 어디에 있어요?' (¿Dónde está el supermercado?)
+
+34
+00:05:11,270 --> 00:05:19,320
+, tú respondes '학교 앞에 있어요.' (Está delante de la escuela). Practiquemos juntos.
+
+35
+00:05:19,770 --> 00:05:27,060
+Una vez más. '은행이 어디에 있어요?' (¿Dónde está el banco?) Entonces puedes responder '카페 옆에 있어요.' (Está al lado de la cafetería.)
+
+36
+00:05:27,060 --> 00:05:33,790
+ o '공원과 카페 사이에 있어요.' (Está entre el parque y la cafetería).
+
+37
+00:05:34,240 --> 00:05:40,885
+Intentemos también dar direcciones. '왼쪽으로 가세요.' (Vaya a la izquierda). '그리고 학교 앞에서 오른쪽이에요.' (Y es a la derecha delante de la escuela.)
+
+38
+00:05:40,885 --> 00:05:46,720
+. Si conectas palabras de ubicación, puedes dar direcciones. ¡Lo estás haciendo genial!
+
+39
+00:05:47,170 --> 00:05:59,770
+Aquí están las palabras de ubicación que aprendimos hoy. Delante, detrás, al lado, encima, debajo, dentro, fuera, entre, izquierda, derecha.
+
+40
+00:05:59,770 --> 00:06:11,835
+¿Las leemos en voz alta una vez más? ¡Maravilloso! Asegúrate de usar las expresiones de hoy.
+
+41
+00:06:11,835 --> 00:06:15,320
+¡Hasta la próxima!

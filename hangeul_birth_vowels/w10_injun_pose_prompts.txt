@@ -1,0 +1,49 @@
+# W10 인준 35포즈 프롬프트 (일괄 재생성·W10 전용 세트, 일관성 위해 base 참조)
+# ★ 외모 고정(canonical = assets/graphics/poses/injun_base.png): 짧은 검은 머리, 점 두 개 눈+옅은 미소, 옅은 피부,
+#   남색(navy) 반팔 티셔츠, 베이지(탄색) 긴 바지, 흰색 운동화, 슬림한 성인 체형. 머리·옷·체형·신발 절대 불변, 자세만 변경.
+# 스타일 = 굵은 검정 외곽선 + 플랫 컬러 카툰(라인아트 아님). 다이나믹·적극적 큰 제스처로 상점 일·단어 설명.
+#
+# STYLE_PREFIX: Flat cartoon illustration of a young Korean man named Injun — short black tidy hair, simple face with two small dot eyes and a gentle smile, light skin, slim adult build; wearing a NAVY BLUE short-sleeve T-shirt, BEIGE tan long chino pants, WHITE sneakers;
+# STYLE_SUFFIX: ; keep the EXACT same character design (same hair, same navy tee, same beige pants, same white sneakers, same body) — change only the pose; flat solid color fill, thick clean black outlines, dynamic energetic full-body pose, centered, plain solid white background, no text, no signature
+# 참조(필수): 매 생성에 assets/graphics/poses/injun_base.png 를 레퍼런스로 넣어 외모 유지
+#
+# key | action
+# --- 기본/전환 (5) ---
+base | standing upright facing forward, friendly confident open stance
+walk_left | walking briskly to the left, mid-stride, arms swinging energetically
+walk_right | walking briskly to the right, mid-stride, arms swinging energetically
+turn | turning head and upper body to look over the shoulder, mid-motion
+lean_in | leaning forward eagerly toward the viewer to explain
+# --- 인사/감정 (10) ---
+wave_left | waving one hand high to the left energetically, big smile
+wave_right | waving one hand high to the right energetically, big smile
+greeting | both arms open in a warm welcoming gesture, slight bow
+bow | bowing politely with both hands together
+thumbs_up | giving a big enthusiastic thumbs up, happy proud face
+clapping | clapping both hands together energetically
+cheering | both arms thrown up high, cheering in joy
+surprise | reacting with big surprise, both hands up, wide eyes, leaning back
+thinking | one hand on chin, other arm crossed, curious pondering look
+nod | nodding in agreement, one hand giving an OK sign, positive
+# --- 가리키기/설명 (11) ---
+point_left | pointing dynamically far to the left with a fully extended arm
+point_right | pointing dynamically far to the right with a fully extended arm
+point_up | pointing up toward the upper corner with extended arm, looking up
+point_center | pointing straight ahead at a nearby spot, leaning in
+point_self | pointing to self with thumb, confident grin
+count_fingers | holding up one hand counting on fingers, other hand gesturing
+raising_hand | raising one hand very high to explain enthusiastically
+presenting | one arm sweeping wide outward, presenting toward the side
+speak | speaking energetically, one hand near mouth, other arm gesturing out
+listen | cupping one hand to the ear, leaning in to listen intently
+your_turn | extending both open hands forward invitingly toward the viewer
+# --- 쇼핑 제스처 (9) — 물체는 파라메트릭으로 얹으므로 손 위치 중심 ---
+hold_item | holding up one hand at eye level as if showing something, looking at it
+pick_up | reaching forward and down with one open hand to pick something up
+offer_item | extending both open hands forward as if offering something
+offer_card | extending one hand forward, fingers pinched as if holding a small card
+hold_cash | holding out one flat open hand palm up as if presenting money
+tap_card | leaning forward, one hand extended down as if tapping a payment terminal
+look_price | leaning in, one hand raised near the face, looking closely and curious
+basket | one arm bent at the side as if carrying a basket, other hand pointing forward
+browse | one hand reaching forward toward a shelf, looking around curiously

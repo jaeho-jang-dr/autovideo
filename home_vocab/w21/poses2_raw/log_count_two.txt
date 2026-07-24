@@ -1,0 +1,16 @@
+이미지 생성을 위해 서버 용량(Gemini Image Model Capacity)이 해제되기를 기다리는 중입니다. 잠시 후 이미지를 생성하고 지정된 경로(`D:/Entertainments/DevEnvironment/autovideo/home_vocab/w21/poses2_raw/mj_w21_count_two.png`)로 저장하겠습니다.
+Gemini 이미지 생성을 위한 서버 대기열이 해제되기를 15초 간 기다리는 중입니다. 용량이 확보되는 대로 즉시 생성을 재시도하겠습니다.
+요청하신 마담제이 캐릭터 이미지가 기준 이미지의 스타일과 요소를 정확히 반영하여 성공적으로 생성되었습니다.
+
+### 🎨 적용된 주요 스타일 및 사양
+- **기준 이미지 참조**: `D:/Entertainments/DevEnvironment/autovideo/W21/madam_front_base_frame1.png`
+- **팔다리 표현**: 폭과 속채움이 없는 **단 하나의 얇은 검정 선(single stroke line)**
+- **피부 톤**: 순백색이 아닌 **따뜻한 크림빛 살색** 및 볼의 연한 발그레
+- **의상 및 캐릭터 디자인**: 진갈색 탑번 쪽머리(양옆 잔머리), 점 눈·작은 코·미소, 코랄/살구색 V넥 조끼, 흰색 A라인 치마, 흰 벙어리장갑 손, 흰 운동화
+- **포즈**: 정면에서 한 손을 들어 검지와 중지로 숫자 2를 펴 보이며 웃는 전신
+- **배경**: 그림자 및 바닥선이 없는 순백색(#ffffff) 배경
+
+---
+
+### 📁 저장 위치
+`D:/Entertainments/DevEnvironment/autovideo/home_vocab/w21/poses2_raw/mj_w21_count_two.png`

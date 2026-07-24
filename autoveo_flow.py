@@ -44,15 +44,18 @@ class BrowserRebootException(Exception):
     pass
 
 
-def force_kill_profile_chrome():
-    """프로필(assets/chrome_profile)을 쓰는 크롬만 강제 종료하고 락 파일을 제거한다.
-    사용자의 일반 크롬 세션은 CommandLine 필터로 보존한다(절대 건드리지 않음)."""
+def force_kill_profile_chrome(profile_path=None):
+    """지정된 크롬 프로필 폴더를 쓰는 크롬만 강제 종료하고 락 파일을 제거한다.
+    사용자의 일반 크롬 세션은 CommandLine 필터로 보존한다."""
+    if not profile_path:
+        profile_path = PROFILE
+    profile_name = os.path.basename(profile_path)
     try:
         ps = (
-            "Get-CimInstance Win32_Process -Filter \"Name='chrome.exe'\" | "
-            "Where-Object { $_.CommandLine -like '*assets\\chrome_profile*' } | "
-            "ForEach-Object { try { Stop-Process -Id $_.ProcessId -Force "
-            "-ErrorAction SilentlyContinue } catch {} }"
+            f"Get-CimInstance Win32_Process -Filter \"Name='chrome.exe'\" | "
+            f"Where-Object {{ $_.CommandLine -like '*assets\\\\{profile_name}*' }} | "
+            f"ForEach-Object {{ try {{ Stop-Process -Id $_.ProcessId -Force "
+            f"-ErrorAction SilentlyContinue }} catch {{}} }}"
         )
         subprocess.run(["powershell", "-NoProfile", "-Command", ps], timeout=30)
     except Exception as e:
@@ -62,7 +65,7 @@ def force_kill_profile_chrome():
             pass
     for lock in ("SingletonLock", "SingletonCookie", "SingletonSocket"):
         try:
-            p = os.path.join(PROFILE, lock)
+            p = os.path.join(profile_path, lock)
             if os.path.exists(p) or os.path.islink(p):
                 os.remove(p)
         except Exception:
@@ -76,7 +79,7 @@ for _s in (sys.stdout, sys.stderr):
         pass
 
 BASE = "https://labs.google/fx/tools/flow"
-PROFILE = os.path.abspath("assets/chrome_profile")
+PROFILE = os.path.abspath("assets/chrome_profile") # Default fallback
 DBG = "debug"
 DL_DIR = os.path.abspath(os.path.join(DBG, "downloads"))
 OUT_DIR = ""
@@ -225,18 +228,60 @@ def is_mp4(path):
 
 
 def parse_prompts(path):
-    scenes, pat = {}, re.compile(r"\[Scene\s+(\d+)\]\s+(.*)", re.IGNORECASE)
+    scenes = {}
+    curr_scene = None
+    curr_img = None
+    curr_mot = None
+    
     with open(path, "r", encoding="utf-8") as f:
-        for line in f:
-            m = pat.match(line.strip())
-            if not m:
-                continue
-            n, body = int(m.group(1)), m.group(2).strip()
-            if "::" in body:
-                img, mot = body.split("::", 1)
-                scenes[n] = (img.strip(), mot.strip())
-            else:
-                scenes[n] = (body, body)
+        lines = f.readlines()
+        
+    for line in lines:
+        line_str = line.strip()
+        if not line_str or line_str.startswith("#"):
+            continue
+            
+        # Check for [Scene X] pattern
+        scene_match = re.match(r"\[Scene\s+(\d+)\](.*)", line_str, re.IGNORECASE)
+        if scene_match:
+            # Save previous scene if exists
+            if curr_scene is not None:
+                img_val = curr_img if curr_img else ""
+                mot_val = curr_mot if curr_mot else img_val
+                scenes[curr_scene] = (img_val, mot_val)
+            
+            curr_scene = int(scene_match.group(1))
+            rest = scene_match.group(2).strip()
+            curr_img = None
+            curr_mot = None
+            
+            # Check if it is a single-line format: [Scene X] image :: motion
+            if rest:
+                if "::" in rest:
+                    img_val, mot_val = rest.split("::", 1)
+                    curr_img = img_val.strip()
+                    curr_mot = mot_val.strip()
+                else:
+                    curr_img = rest
+                    curr_mot = rest
+        else:
+            # We are inside a scene block
+            if curr_scene is not None:
+                if line_str.lower().startswith("image:"):
+                    curr_img = line_str[6:].strip()
+                elif line_str.lower().startswith("motion:"):
+                    mot_part = line_str[7:].strip()
+                    # If motion starts with ::, strip it
+                    if mot_part.startswith("::"):
+                        mot_part = mot_part[2:].strip()
+                    curr_mot = mot_part
+                    
+    # Save the last scene
+    if curr_scene is not None:
+        img_val = curr_img if curr_img else ""
+        mot_val = curr_mot if curr_mot else img_val
+        scenes[curr_scene] = (img_val, mot_val)
+        
     return scenes
 
 
@@ -261,6 +306,60 @@ def dismiss(page):
             for (const b of backdrops) {
                 b.remove();
             }
+            
+            // "이동 중에도" 또는 "새 항목에서 열기" 모바일 홍보 팝업 및 다이얼로그 강제 제거 (바디 하위 포털 정리) - React 크래시 방지를 위해 삭제 대신 숨김 처리
+            try {
+                const bodyChildren = Array.from(document.body.children);
+                for (const child of bodyChildren) {
+                    if (child.id === '__next' || child.id === 'root' || child.tagName === 'SCRIPT' || child.tagName === 'STYLE') {
+                        continue;
+                    }
+                    const text = child.innerText || '';
+                    if (text.includes('이동 중에도') || text.includes('새 항목에서') || text.includes('사용해 보세요')) {
+                        child.style.display = 'none';
+                        child.style.pointerEvents = 'none';
+                    } else {
+                        const style = window.getComputedStyle(child);
+                        if (style.position === 'fixed' || style.position === 'absolute') {
+                            child.style.display = 'none';
+                            child.style.pointerEvents = 'none';
+                        }
+                    }
+                }
+            } catch (portalErr) {}
+
+            // 전체 화면을 덮는 고정 백드롭/블러 레이어 강제 숨김
+            try {
+                const allElements = document.querySelectorAll('*');
+                for (const el of allElements) {
+                    if (el === document.body || el === document.documentElement || el.id === '__next' || el.id === 'root' || el.tagName === 'SCRIPT' || el.tagName === 'STYLE') {
+                        continue;
+                    }
+                    const style = window.getComputedStyle(el);
+                    if (style.position === 'fixed' || style.position === 'absolute') {
+                        const rect = el.getBoundingClientRect();
+                        if (rect.width > window.innerWidth * 0.8 && rect.height > window.innerHeight * 0.8) {
+                            el.style.display = 'none';
+                            el.style.pointerEvents = 'none';
+                        }
+                    }
+                }
+            } catch (overlayErr) {}
+
+            // pointer-events: none 및 blur 필터 차단 해제 복구
+            try {
+                document.body.style.pointerEvents = 'auto';
+                document.body.style.filter = 'none';
+                document.body.style.overflow = 'auto';
+                document.documentElement.style.pointerEvents = 'auto';
+                document.documentElement.style.filter = 'none';
+                
+                const mainApp = document.getElementById('__next') || document.getElementById('root');
+                if (mainApp) {
+                    mainApp.style.filter = 'none';
+                    mainApp.style.pointerEvents = 'auto';
+                }
+            } catch (styleErr) {}
         }""")
     except Exception:
         pass
@@ -380,16 +479,111 @@ def open_new_project(page):
     except Exception:
         pass
     dismiss(page)
-    if "/project/" not in page.url:
-        success_click = (
-            click_text(page, "+ 새 프로젝트") or 
-            click_text(page, "새 프로젝트") or 
-            click_text(page, "+ New project") or 
-            click_text(page, "New project")
-        )
+    # Landing page enter check
+    try:
+        for enter_sel in [
+            "button:has-text('Google Flow로 만들기')", 
+            "a:has-text('Google Flow로 만들기')", 
+            "div:has-text('Google Flow로 만들기')", 
+            "button:has-text('Make with Google Flow')", 
+            "a:has-text('Make with Google Flow')"
+        ]:
+            loc = page.locator(enter_sel).first
+            if loc.is_visible(timeout=1000):
+                log(f"  [CLI-AUTO] Landing page detected. Clicking enter button: {enter_sel}")
+                loc.click(timeout=3000)
+                page.wait_for_timeout(3000)
+                break
+    except Exception as enter_err:
+        log(f"  [CLI-AUTO] Landing page enter button click error: {enter_err}")
+        
+    # 에디터 프롬프트 박스가 아직 안 보이는 상태라면 새 프로젝트 버튼을 클릭해야 함
+    prompt_visible = False
+    try:
+        if page.locator(PROMPT_SELECTOR).first.is_visible(timeout=500):
+            prompt_visible = True
+    except Exception:
+        pass
+
+    if ("/project/" not in page.url) or (not prompt_visible):
+        success_click = False
+        # 1. JS direct click on the project button (very robust fallback)
+        try:
+            button_html = page.evaluate(r"""() => {
+                const btn = Array.from(document.querySelectorAll('*')).find(el => {
+                    const txt = (el.innerText || '').trim();
+                    return (txt === '+ 새 프로젝트' || txt === '+ 새로운 프로젝트' || txt === '새 프로젝트' || txt === '새로운 프로젝트' || txt === '+ New project' || txt === 'New project');
+                });
+                if (btn) {
+                    let clickable = btn;
+                    while (clickable && clickable.parentElement && clickable.tagName !== 'BUTTON' && clickable.getAttribute('role') !== 'button' && !clickable.className.includes('button') && !clickable.className.includes('btn')) {
+                        clickable = clickable.parentElement;
+                    }
+                    return clickable ? clickable.outerHTML : btn.outerHTML;
+                }
+                return 'Not Found';
+            }""")
+            log(f"  [CLI-AUTO] 매칭된 새 프로젝트 버튼 HTML: {button_html}")
+
+            clicked_via_js = page.evaluate(r"""() => {
+                const btn = Array.from(document.querySelectorAll('*')).find(el => {
+                    const txt = (el.innerText || '').trim();
+                    return (txt === '+ 새 프로젝트' || txt === '+ 새로운 프로젝트' || txt === '새 프로젝트' || txt === '새로운 프로젝트' || txt === '+ New project' || txt === 'New project');
+                });
+                if (btn) {
+                    let clickable = btn;
+                    while (clickable && clickable.parentElement && clickable.tagName !== 'BUTTON' && clickable.getAttribute('role') !== 'button' && !clickable.className.includes('button') && !clickable.className.includes('btn')) {
+                        clickable = clickable.parentElement;
+                    }
+                    const target = clickable || btn;
+                    target.click();
+                    const events = ['pointerdown', 'mousedown', 'pointerup', 'mouseup', 'click'];
+                    for (const name of events) {
+                        try {
+                            target.dispatchEvent(new MouseEvent(name, { bubbles: true, cancelable: true, view: window }));
+                        } catch (e) {}
+                    }
+                    return true;
+                }
+                return false;
+            }""")
+            if clicked_via_js:
+                log("  [CLI-AUTO] JS로 새 프로젝트 버튼 클릭 (전체 마우스 이벤트) 성공 ✔")
+                success_click = True
+        except Exception as js_click_err:
+            log(f"  [WARN] JS 새 프로젝트 버튼 클릭 오류: {js_click_err}")
+
+        # 1.5 Playwright native button locator click fallback
         if not success_click:
             try:
-                for sel in ["div:has-text('새 프로젝트')", "div:has-text('New project')", "div:has-text('+')"]:
+                for selector in [
+                    "button:has-text('새로운 프로젝트')",
+                    "button:has-text('새 프로젝트')",
+                    "button:has-text('New project')",
+                    "button:has-text('add_2')"
+                ]:
+                    loc = page.locator(selector).first
+                    if loc.is_visible(timeout=500):
+                        loc.click(timeout=2000, force=True)
+                        log(f"  [CLI-AUTO] Playwright 네이티브 로케이터 클릭 성공 ({selector}) ✔")
+                        success_click = True
+                        break
+            except Exception as pl_click_err:
+                log(f"  [WARN] Playwright 네이티브 로케이터 클릭 실패: {pl_click_err}")
+
+        # 2. Playwright text click fallback
+        if not success_click:
+            success_click = (
+                click_text(page, "+ 새로운 프로젝트") or
+                click_text(page, "새로운 프로젝트") or
+                click_text(page, "+ 새 프로젝트") or 
+                click_text(page, "새 프로젝트") or 
+                click_text(page, "+ New project") or 
+                click_text(page, "New project")
+            )
+        if not success_click:
+            try:
+                for sel in ["div:has-text('새로운 프로젝트')", "div:has-text('새 프로젝트')", "div:has-text('New project')", "div:has-text('+')"]:
                     loc = page.locator(sel).first
                     if loc.is_visible(timeout=1000):
                         loc.click(timeout=3000, force=True)
@@ -617,8 +811,10 @@ def generate(page):
     return False
 
 
-def wait_image(page, n, timeout_s=40):
-    """최대 40초 동안 이미지가 생성되기를 기다립니다. 5초 주기로 스캔합니다.
+def wait_image(page, n, timeout_s=100):
+    """최대 100초 동안 이미지가 생성되기를 기다립니다. 3초 주기로 스캔합니다.
+    ★타임아웃이 짧으면(구 40초) Nano Banana2가 늦게 끝날 때 '다시 실행'이 눌려
+      이미지가 하나 더 생성됨(2크레딧 낭비). 넉넉히 기다려 중복 생성을 막는다.
     만약 40초 동안 생성되지 않으면, 실패로 처리하고 사용자의 프로토콜을 수행합니다:
     1. 스크린샷 캡처
     2. 재시작(Retry) 버튼 감지하여 클릭
@@ -630,13 +826,13 @@ def wait_image(page, n, timeout_s=40):
     deadline = time.time() + timeout_s
     success = False
     
-    # 5초 간격으로 확인하며 40초 한도 대기
+    # 3초 간격으로 확인하며 한도까지 대기 (완성 즉시 감지 → 불필요한 재시도 방지)
     while time.time() < deadline:
         if page.evaluate(BIG_MEDIA_IMG_JS):
             page.wait_for_timeout(1500)
             success = True
             break
-        page.wait_for_timeout(5000)
+        page.wait_for_timeout(3000)
         
     if success:
         return True
@@ -896,7 +1092,37 @@ def make_video(page, out_path, motion_prompt, n, budget_s=80):
             
         target = posters[0]
         log(f"  가장 왼쪽 비디오 타일 클릭 시도 ({target['x']}, {target['y']})")
-        page.mouse.click(target["x"], target["y"])
+        
+        # Session 0 백그라운드 환경 크래시 방지를 위해 try-except 감싸고 JS dispatch 클릭 병행
+        clicked = False
+        try:
+            page.mouse.click(target["x"], target["y"])
+            clicked = True
+        except Exception as e:
+            log(f"  [WARN] mouse.click 에러 (무시하고 JS dispatch 시도): {e}")
+            
+        # JS click event dispatch (세그폴트 방지 및 백그라운드 100% 신뢰성 보장)
+        try:
+            js_clicked = page.evaluate(r"""() => {
+                const imgs = Array.from(document.querySelectorAll('img')).filter(im => {
+                    const s = im.getAttribute('src') || '';
+                    if (!/media\.getMediaUrlRedirect|googleusercontent/.test(s)) return false;
+                    const r = im.getBoundingClientRect();
+                    return r.width >= 120 && r.height >= 120 && r.width <= 1200 && r.height <= 1600;
+                });
+                if (imgs.length > 0) {
+                    imgs.sort((a, b) => a.getBoundingClientRect().left - b.getBoundingClientRect().left);
+                    const targetImg = imgs[0];
+                    targetImg.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+                    return true;
+                }
+                return false;
+            }""")
+            if js_clicked:
+                clicked = True
+        except Exception as js_err:
+            log(f"  [WARN] JS dispatch 클릭 오류: {js_err}")
+            
         page.wait_for_timeout(2000)
         
         # 3. 라이트박스가 정상적으로 열렸는지 (우상단 다운로드 버튼 유무로) 검증
@@ -914,9 +1140,31 @@ def make_video(page, out_path, motion_prompt, n, budget_s=80):
         if not lightbox_open:
             log("  [WARN] 라이트박스가 열리지 않음. 스크린샷 후 마우스 이동 재클릭 시도.")
             shot(page, f"s{n}_lightbox_retry")
-            page.mouse.move(target["x"], target["y"])
-            page.wait_for_timeout(300)
-            page.mouse.click(target["x"], target["y"])
+            
+            try:
+                page.mouse.move(target["x"], target["y"])
+                page.wait_for_timeout(300)
+                page.mouse.click(target["x"], target["y"])
+            except Exception:
+                pass
+                
+            # JS 재클릭 시도
+            try:
+                page.evaluate(r"""() => {
+                    const imgs = Array.from(document.querySelectorAll('img')).filter(im => {
+                        const s = im.getAttribute('src') || '';
+                        if (!/media\.getMediaUrlRedirect|googleusercontent/.test(s)) return false;
+                        const r = im.getBoundingClientRect();
+                        return r.width >= 120 && r.height >= 120 && r.width <= 1200 && r.height <= 1600;
+                    });
+                    if (imgs.length > 0) {
+                        imgs.sort((a, b) => a.getBoundingClientRect().left - b.getBoundingClientRect().left);
+                        imgs[0].dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+                    }
+                }""")
+            except Exception:
+                pass
+                
             page.wait_for_timeout(2000)
             
             # 재확인
@@ -1049,7 +1297,7 @@ def upload_image(page, image_path):
     return True
 
 
-def make_scene_upload(page, n, image_path, motion_prompt):
+def make_scene_upload(page, n, image_path, motion_prompt, aspect="16:9"):
     """업로드 기반 씬: 텍스트→이미지 대신 레퍼런스 이미지를 업로드해 첫 프레임으로 쓰고,
     이후 모션→영상→다운로드는 검증된 make_video 파이프라인을 그대로 사용."""
     global OUT_DIR
@@ -1059,6 +1307,7 @@ def make_scene_upload(page, n, image_path, motion_prompt):
         log("[ERR] 프로젝트/컴포저 진입 실패")
         return False
     shot(page, f"s{n}_00_editor")
+    set_image_mode(page, aspect=aspect)
     if not upload_image(page, image_path):
         log("[ERR] 이미지 업로드 실패")
         shot(page, f"s{n}_upload_fail")
@@ -1180,16 +1429,24 @@ def main():
     ap.add_argument("--upload", default="", help="이 이미지를 업로드해 첫 프레임으로 사용(텍스트→이미지 생성 대신). --scene N 과 함께 사용.")
     ap.add_argument("--motion", default="", help="업로드 씬의 모션 프롬프트 직접 지정(미지정 시 프롬프트 파일의 모션 사용).")
     ap.add_argument("--aspect", default="16:9", help="영상 가로세로 비율 (16:9, 9:16 등)")
+    ap.add_argument("--profile-idx", type=int, help="특정 번호의 크롬 프로필을 고정으로 사용 (0-9)")
+    ap.add_argument("--profiles-count", type=int, help="라운드 로빈으로 교대하여 사용할 총 크롬 프로필 수 (지정 시 매 씬마다 교대 가동)")
+    ap.add_argument("--profile-cycle", default="", help="명시적 프로필 순환 순서(쉼표). 예: '0,1,0,2,0,3,0,4,0,5' — 대용량 계정(0)을 매번 끼워 소진 극대화. --profiles-count보다 우선.")
+    ap.add_argument("--interactive", action="store_true", help="프로필 로그인을 위한 수동 인터랙티브 모드 기동 (브라우저를 열어두고 대기)")
     args = ap.parse_args()
 
     scenes = parse_prompts(args.prompts)
-    if not scenes:
+    if not scenes and not args.interactive:
         log("프롬프트 없음")
         return
         
+    global PROFILE
+    if args.profile_idx is not None:
+        PROFILE = os.path.abspath(f"assets/chrome_profile_{args.profile_idx}")
+        log(f"[PROFILE] 지정된 단일 프로필 사용: {PROFILE}")
+
     # Set output directory to project root, named after the prompts file (e.g. chiropractic_science)
     prompts_base = os.path.splitext(os.path.basename(args.prompts))[0]
-    # Remove '_prompts' suffix if present
     if prompts_base.endswith("_prompts"):
         prompts_base = prompts_base[:-8]
     global OUT_DIR
@@ -1198,6 +1455,37 @@ def main():
     os.makedirs(DBG, exist_ok=True)
     os.makedirs(DL_DIR, exist_ok=True)
     os.makedirs(OUT_DIR, exist_ok=True)
+
+    # 1. 수동 인터랙티브 로그인 헬퍼 모드
+    if args.interactive:
+        log(f"\n==================================================================")
+        log(f"[INTERACTIVE MODE] 크롬 프로필 로그인 세션을 활성화합니다.")
+        log(f"타겟 프로필 경로: {PROFILE}")
+        log(f"구글 계정 로그인을 완료한 뒤, 정상 브라우징이 가능한 상태가 되면")
+        log(f"이 명령 프롬프트 창에서 [Enter] 키를 눌러 브라우저를 닫고 세션을 저장해 주세요.")
+        log(f"==================================================================\n")
+        
+        force_kill_profile_chrome(PROFILE)
+        with sync_playwright() as p:
+            c = p.chromium.launch_persistent_context(
+                PROFILE, channel="chrome", headless=False, locale="ko-KR", no_viewport=True,
+                ignore_default_args=["--enable-automation"],
+                args=["--start-maximized", "--no-first-run", "--disable-session-crashed-bubble", "--lang=ko-KR"])
+            pg = c.pages[0] if c.pages else c.new_page()
+            try:
+                pg.goto(BASE)
+            except Exception as ge:
+                log(f"페이지 접속 실패 (무시 가능): {ge}")
+            
+            # 사용자 엔터 입력 대기
+            print("\n>>> 구글 계정 로그인을 완전히 마치셨다면 이 창에서 [Enter] 키를 입력하세요...", flush=True)
+            input()
+            try:
+                c.close()
+            except Exception:
+                pass
+        log("[INTERACTIVE] 세션 설정 및 저장이 성공적으로 완료되었습니다!")
+        return
 
     progress_file = os.path.join(OUT_DIR, "progress_scenes.json")
     progress = {}
@@ -1210,7 +1498,7 @@ def main():
         except Exception as e:
             log(f"진행도 파일 로드 오류: {e}")
 
-    todo = [args.scene] if args.scene else sorted(scenes)
+    todo = [args.scene] if args.scene is not None else sorted(scenes)
 
     class BrowserWrapper:
         def __init__(self, obj, is_cdp):
@@ -1226,89 +1514,167 @@ def main():
             else:
                 try:
                     self.obj.close()
+                    log("  [BROWSER] 브라우저 컨텍스트 정상 종료 완료.")
                 except Exception as e:
                     log(f"  [BROWSER] close 오류: {e}")
 
     ok, fail = [], []
-    with sync_playwright() as p:
-        def launch_browser():
-            import urllib.request
-            try:
-                urllib.request.urlopen("http://localhost:9222/json", timeout=2)
-                log("  [CDP] localhost:9222에서 실행 중인 크롬 감지! CDP 연결을 시도합니다.")
-                c = p.chromium.connect_over_cdp("http://localhost:9222")
-                if c.contexts:
-                    ctx = c.contexts[0]
-                    pg = ctx.pages[0] if ctx.pages else ctx.new_page()
-                else:
-                    pg = c.new_page()
-                return BrowserWrapper(c, True), pg
-            except Exception:
-                log("  [CDP] localhost:9222 감지 실패. 새 브라우저 컨텍스트를 기동합니다.")
-                c = p.chromium.launch_persistent_context(
-                    PROFILE, channel="chrome", headless=False, locale="ko-KR", no_viewport=True,
-                    accept_downloads=True, downloads_path=DL_DIR, slow_mo=150,
-                    ignore_default_args=["--enable-automation"],
-                    args=["--start-maximized", "--no-first-run", "--disable-session-crashed-bubble", "--lang=ko-KR", "--disable-gpu"])
-                pg = c.pages[0] if c.pages else c.new_page()
-                return BrowserWrapper(c, False), pg
 
-        ctx, page = launch_browser()
-        idx = 0
-        while idx < len(todo):
-            n = todo[idx]
+    # 명시적 순환 순서(예: 0,1,0,2,0,3,0,4,0,5) — 대용량 계정 0을 매번 끼워 소진 극대화
+    _cyc = [int(x) for x in args.profile_cycle.split(",") if x.strip() != ""] if args.profile_cycle else None
+    _cyc_pos = {"i": 0}
+
+    def get_run_profile(scene_num):
+        if _cyc:
+            idx = _cyc[_cyc_pos["i"] % len(_cyc)]; _cyc_pos["i"] += 1
+            return os.path.abspath(f"assets/chrome_profile_{idx}")
+        if args.profiles_count and args.profiles_count >= 1:
+            idx = scene_num % args.profiles_count
+            return os.path.abspath(f"assets/chrome_profile_{idx}")
+        return PROFILE
+
+    # A. 라운드 로빈 순환 모드 (매 씬마다 브라우저를 새로 열고 닫음)
+    if (args.profiles_count and args.profiles_count >= 1) or _cyc:
+        log(f"[SCHEDULER] 총 {args.profiles_count}개 크롬 프로필 라운드 로빈 순환 생성 모드 시작")
+        for n in todo:
             if n not in scenes:
-                idx += 1
                 continue
-            
-            # 증분 생성 조건 체크: 이미 성공했고 파일도 있으면 생성 건너뜀
+                
             out_path = os.path.join(OUT_DIR, f"scene_{n}.mp4")
             if not args.force and progress.get(str(n)) == "success" and os.path.exists(out_path) and os.path.getsize(out_path) > 0:
                 log(f"[SKIP-PROGRESS] 이미 성공한 씬: {out_path}")
                 ok.append(n)
-                idx += 1
                 continue
 
+            current_profile = get_run_profile(n)
+            log(f"\n>>> [ROUND-ROBIN] Scene {n} 생성 시작 | 프로필: {os.path.basename(current_profile)}")
+            
+            # 기동 전 안전 락 클리어
+            force_kill_profile_chrome(current_profile)
+            time.sleep(1)
+            
             try:
-                if args.upload:
-                    success = make_scene_upload(page, n, args.upload, args.motion or scenes[n][1])
-                else:
-                    success = make_scene(page, n, *scenes[n], force=args.force, aspect=args.aspect)
-                
-                # 성공 및 실패 여부를 진행도 파일에 기록
-                import json
-                progress[str(n)] = "success" if success else "fail"
-                try:
-                    with open(progress_file, "w", encoding="utf-8") as f:
-                        json.dump(progress, f, indent=2, ensure_ascii=False)
-                except Exception as e:
-                    log(f"진행도 기록 저장 실패: {e}")
+                with sync_playwright() as p:
+                    log(f"  [LAUNCH] {os.path.basename(current_profile)} persistent context 기동")
+                    c = p.chromium.launch_persistent_context(
+                        current_profile, channel="chrome", headless=False, locale="ko-KR", no_viewport=True,
+                        accept_downloads=True, downloads_path=DL_DIR, slow_mo=150,
+                        ignore_default_args=["--enable-automation"],
+                        args=["--start-maximized", "--no-first-run", "--disable-session-crashed-bubble", "--lang=ko-KR", "--disable-gpu"])
+                    pg = c.pages[0] if c.pages else c.new_page()
+                    
+                    if args.upload:
+                        success = make_scene_upload(pg, n, args.upload, args.motion or scenes[n][1], aspect=args.aspect)
+                    else:
+                        success = make_scene(pg, n, *scenes[n], force=args.force, aspect=args.aspect)
+                        
+                    # 진행 상황 저장
+                    import json
+                    progress[str(n)] = "success" if success else "fail"
+                    try:
+                        with open(progress_file, "w", encoding="utf-8") as f:
+                            json.dump(progress, f, indent=2, ensure_ascii=False)
+                    except Exception as e:
+                        log(f"진행도 기록 저장 실패: {e}")
 
-                if success:
-                    ok.append(n)
-                else:
-                    fail.append(n)
-                idx += 1
-            except BrowserRebootException as re_err:
-                log(f"[REBOOT] 브라우저 재기동 요구 발생: {re_err}. 크롬 강제 종료 후 5초 쿨다운 뒤 세션을 재시작합니다.")
-                try:
-                    ctx.close()
-                except Exception:
-                    pass
-                force_kill_profile_chrome()   # 제약: 프로필 크롬 강제 종료 + 락 제거
-                time.sleep(5)                  # 제약: 5초 쿨다운
-                ctx, page = launch_browser()   # 제약: 세션 재기동
+                    if success:
+                        ok.append(n)
+                    else:
+                        fail.append(n)
+                    
+                    try:
+                        c.close()
+                    except Exception:
+                        pass
             except Exception as e:
-                log(f"[ERR] Scene {n} 일반 에러: {e}")
+                log(f"[ERR] Scene {n} 순환 처리 에러: {e}")
                 traceback.print_exc()
-                shot(page, f"s{n}_error")
                 fail.append(n)
-                idx += 1
-        log(f"완료 — 성공 {ok} / 실패 {fail}")
-        try:
-            ctx.close()
-        except Exception:
-            pass
+            
+            # 프로세스 정리 및 쿨다운
+            force_kill_profile_chrome(current_profile)
+            time.sleep(3) # 씬 전환 간의 간격 쿨다운
+            
+    # B. 기존 단일 세션 연속 처리 모드 (전동 스택 호환성 보존)
+    else:
+        with sync_playwright() as p:
+            def launch_browser():
+                import urllib.request
+                try:
+                    urllib.request.urlopen("http://localhost:9222/json", timeout=2)
+                    log("  [CDP] localhost:9222에서 실행 중인 크롬 감지! CDP 연결을 시도합니다.")
+                    c = p.chromium.connect_over_cdp("http://localhost:9222")
+                    if c.contexts:
+                        ctx = c.contexts[0]
+                        pg = ctx.pages[0] if ctx.pages else ctx.new_page()
+                    else:
+                        pg = c.new_page()
+                    return BrowserWrapper(c, True), pg
+                except Exception:
+                    log("  [CDP] localhost:9222 감지 실패. 새 브라우저 컨텍스트를 기동합니다.")
+                    c = p.chromium.launch_persistent_context(
+                        PROFILE, channel="chrome", headless=False, locale="ko-KR", no_viewport=True,
+                        accept_downloads=True, downloads_path=DL_DIR, slow_mo=150,
+                        ignore_default_args=["--enable-automation"],
+                        args=["--start-maximized", "--no-first-run", "--disable-session-crashed-bubble", "--lang=ko-KR", "--disable-gpu"])
+                    pg = c.pages[0] if c.pages else c.new_page()
+                    return BrowserWrapper(c, False), pg
+
+            ctx, page = launch_browser()
+            idx = 0
+            while idx < len(todo):
+                n = todo[idx]
+                if n not in scenes:
+                    idx += 1
+                    continue
+                
+                out_path = os.path.join(OUT_DIR, f"scene_{n}.mp4")
+                if not args.force and progress.get(str(n)) == "success" and os.path.exists(out_path) and os.path.getsize(out_path) > 0:
+                    log(f"[SKIP-PROGRESS] 이미 성공한 씬: {out_path}")
+                    ok.append(n)
+                    idx += 1
+                    continue
+
+                try:
+                    if args.upload:
+                        success = make_scene_upload(page, n, args.upload, args.motion or scenes[n][1], aspect=args.aspect)
+                    else:
+                        success = make_scene(page, n, *scenes[n], force=args.force, aspect=args.aspect)
+                    
+                    import json
+                    progress[str(n)] = "success" if success else "fail"
+                    try:
+                        with open(progress_file, "w", encoding="utf-8") as f:
+                            json.dump(progress, f, indent=2, ensure_ascii=False)
+                    except Exception as e:
+                        log(f"진행도 기록 저장 실패: {e}")
+
+                    if success:
+                        ok.append(n)
+                    else:
+                        fail.append(n)
+                    idx += 1
+                except BrowserRebootException as re_err:
+                    log(f"[REBOOT] 브라우저 재기동 요구 발생: {re_err}. 크롬 강제 종료 후 5초 쿨다운 뒤 세션을 재시작합니다.")
+                    try:
+                        ctx.close()
+                    except Exception:
+                        pass
+                    force_kill_profile_chrome(PROFILE)
+                    time.sleep(5)
+                    ctx, page = launch_browser()
+                except Exception as e:
+                    log(f"[ERR] Scene {n} 일반 에러: {e}")
+                    traceback.print_exc()
+                    shot(page, f"s{n}_error")
+                    fail.append(n)
+                    idx += 1
+            try:
+                ctx.close()
+            except Exception:
+                pass
+
+    log(f"최종 완료 — 성공 {ok} / 실패 {fail}")
 
 
 if __name__ == "__main__":
