@@ -43,6 +43,20 @@
     - **효과음(SFX)**: 장면 전환 시점의 슉(whoosh), 딱(pop) 등의 오디오 사운드 임팩트를 믹싱합니다.
     - **4K 출력**: 유튜브의 선명한 코덱(VP09) 혜택을 받기 위해, 내보내기 시 **4K(3840x2160) 해상도로 강제 업스케일링**하여 최종 렌더링합니다.
 
+### 3. 4대 전담 에이전트 및 4대 구글 Flow(Veo) 생성 스크립트 표준
+- **4대 전담 에이전트 역할 분담**:
+  - **Movie Agent**: 비디오 컴파일, 오디오-비디오 믹싱, 1차/2차 렌더링 및 `patch_scene.py` 부분 렌더링 관장.
+  - **Text / Drawing Agent**: 파라메트릭 Cafe24Dongdong 한글 글자 드로잉, 캐릭터 반대편 자막/어노테이션 상자 배치.
+  - **Cut / Scene Agent**: 대본 씬 분할(5초/4초 단위), 카메라 앵글 연출, 캐릭터 동선(Z 좌표) 블로킹.
+  - **YouTube Agent**: 유튜브 업로드, SRT 자막 등록, 아웃트로 추천 카드/최종 화면, 댓글 핀 고정, AI 생성물 공개 표시 관리.
+- **4대 구글 Flow 에셋 자동 생성 스크립트**:
+  - **`flow_make_clip.py`**: 캐릭터 동영상(Character Motion Video) 생성.
+  - **`flow_make_pose.py`**: 캐릭터 스틸 포즈(Character Still Pose) 생성.
+  - **`flow_make_bgmv.py`**: 동영상 배경(Motion Background Video) 생성.
+  - **`flow_make_bg.py`**: 정적 배경 이미지(Static Background Image) 생성.
+- **Playwright 브라우저 자동 제어 원칙**:
+  - 단일 에셋(이미지/비디오) 생성 완료 시 브라우저 세션을 완전 리셋 및 종료하고, 다음 에셋 생성 시 새 세션을 재기동하여 세션 오염 및 타임아웃을 근본 차단함.
+
 ---
 
 ## 캐릭터 「이미지재생성」 (일관성 포즈 생성)
