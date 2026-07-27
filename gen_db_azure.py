@@ -54,8 +54,18 @@ def load_w15():
         print("w15 단어파일 없음:", p); sys.exit(1)
     return [l.strip() for l in open(p, encoding="utf-8") if l.strip()]
 
+def load_w22():
+    p = "scratch/w22_need_words.txt"
+    if not os.path.exists(p):
+        print("w22 단어파일 없음:", p); sys.exit(1)
+    return [l.strip() for l in open(p, encoding="utf-8") if l.strip()]
+
 mode = sys.argv[1] if len(sys.argv) > 1 else "w10"
-if mode == "w15":
+if mode == "w22":
+    words = load_w22()
+elif mode == "w22_fill":
+    words = [w for w in load_w22() if not os.path.exists(f"{TARGET}/{w}.mp3")]
+elif mode == "w15":
     words = load_w15()
 elif mode == "w15_fill":
     words = [w for w in load_w15() if not os.path.exists(f"{TARGET}/{w}.mp3")]

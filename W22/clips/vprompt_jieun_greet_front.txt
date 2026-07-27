@@ -1,0 +1,11 @@
+[지은 정면 보고 인사하기(wave) — 캐릭터 동영상 프롬프트]
+기준 첫프레임(가이드): W22/jieun_spring_front.png  (정면)
+※ Flow에 정면 가이드 업로드 → 타일 ⋮ → 애니메이션 적용 → 아래 프롬프트 → 동영상·8s·9:16
+※ 아동정책으로 wave가 막혔었음 → "adult woman over 20 years old" 성인 프레이밍으로 재작성. 막히면 재시도.
+
+■ 영어 프롬프트 (Flow 붙여넣기):
+Clean flat 2D cartoon illustration, adult educational style. A clearly adult woman over 20 years old, a young adult professional female language teacher — pink cardigan, light-blue long dress, white sneakers, a small rectangular teacher's name badge pinned on the RIGHT side of her chest (a little name tag labeled 선생님), long wavy brown hair, with a warm natural skin-toned face and hands (soft light-peach skin color, NOT a white or pale ivory face) — standing and facing forward. She smiles warmly and raises one hand to give a friendly welcoming wave, calm mature demeanor, gentle natural body sway, hair moves slightly. Full body fully visible from head to shoes, centered, constant size. Plain solid white background only, no floor line, no shadow, no props, no text, no logos. Keep the same 2D cartoon art style, outfit, hairstyle and face as the reference image. Camera fixed. 9:16 vertical.
+
+■ 동작: 정면, 한 손 들어 친근하게 손 흔들며 환영 인사, 부드러운 몸 흔들림.
+■ 규격: 8초 · 9:16 · 순백 배경(그림자 없음) · 그림은 지은 그대로.
+■ 완성 후: 컷랑 build로 프레임 컷아웃·키770px 통일 → DB.

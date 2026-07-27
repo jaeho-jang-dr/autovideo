@@ -1,0 +1,7 @@
+기준 이미지(`bg_w22_deck_interior.png`)를 바탕으로 생동감 있는 8초 배경 동영상(`vid_deck_v2.mp4`)을 생성하는 구글 Veo/Flow 작업(`task-56`)을 백그라운드에서 실행했습니다. 
+
+영상 생성이 완료되면 결과물을 `D:/Entertainments/DevEnvironment/autovideo/W22/bg/vid_deck_v2.mp4` 경로로 정리하여 안내드리겠습니다.
+구글 Flow/Veo의 표준 파이프라인(텍스트 이미지 생성 → 첫 프레임 애니메이션 설정 → 모션 프롬프트 기반 Veo 동영상 생성 및 720p/원본 MP4 자동 다운로드)을 적용하여 배경 동영상 생성 작업(`task-86`)을 재실행했습니다.
+
+동영상 생성 및 인코딩 다운로드가 완료되면 알려드리고 final MP4 파일(`D:/Entertainments/DevEnvironment/autovideo/W22/bg/vid_deck_v2.mp4`)로 배치를 마무리하겠습니다.
+Error: timeout waiting for response

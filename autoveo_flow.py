@@ -404,15 +404,16 @@ def click_text(page, t, ymin=None, timeout=4000):
     return False
 
 
-def open_new_project(page):
-    # 이미 프로젝트 페이지에 정상 진입해 있고 프롬프트 입력창이 활성화되어 있다면 바로 진행
-    if "/project/" in page.url:
+def open_new_project(page, force_new=True):
+    # 이미 프로젝트 페이지에 정상 진입해 있고 프롬프트 입력창이 활성화되어 있더라도 force_new가 참이면 새 프로젝트를 생성
+    if not force_new and "/project/" in page.url:
         try:
             if page.locator(PROMPT_SELECTOR).first.is_visible(timeout=3000):
                 log("  [NAV] 이미 프로젝트 화면에 정상 진입해 있습니다. 바로 진행합니다.")
                 return True
         except Exception:
             pass
+
 
     # 브라우저 기동 직후 첫 내비게이션이 net::ERR_CONNECTION_RESET 등으로 일시 실패하는
     # 경우가 있어, 일시적 네트워크 오류에 한해 짧은 백오프로 재시도한다(씬 영구 누락 방지).
@@ -1312,14 +1313,14 @@ def make_scene_upload(page, n, image_path, motion_prompt, aspect="16:9"):
         log("[ERR] 이미지 업로드 실패")
         shot(page, f"s{n}_upload_fail")
         return False
-    page.wait_for_timeout(9000)   # 업로드 타일이 완전히 준비(렌더 완료)될 때까지 충분히 대기
+    page.wait_for_timeout(30000)  # 업로드는 실제 ~30초 걸림(사장님 확정). 타일 완전 준비 전엔 '애니메이션 적용'이 없어 실패함
     animated = False
-    for attempt in range(4):
+    for attempt in range(5):
         if animate_image(page):
             animated = True
             break
-        log(f"  [UPLOAD] 애니메이션 적용 재시도 {attempt+1}/4 (타일 준비 대기)...")
-        page.wait_for_timeout(4000)
+        log(f"  [UPLOAD] 애니메이션 적용 재시도 {attempt+1}/5 (타일 준비 대기)...")
+        page.wait_for_timeout(6000)
     if not animated:
         log("[ERR] '애니메이션 적용' 실패")
         shot(page, f"s{n}_animate_fail")

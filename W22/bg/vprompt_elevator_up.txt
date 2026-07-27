@@ -1,0 +1,15 @@
+[BG1 elevator_up — 배경 동영상 프롬프트]  (기준 첫프레임: W22/bg/bg_w22_elevator_up.png)
+
+■ 사용법: Flow에서 이 이미지 타일 → 더보기(⋮) → "애니메이션 적용" → 아래 영어 프롬프트 붙여넣기 → 동영상·8s·16:9 → 생성.
+
+■ 영어 프롬프트 (Flow 붙여넣기):
+Pastel colored-pencil storybook style, bold soft black outlines, no people, no text, no logos. Inside a glass observation elevator near the top of its rise, camera held steady looking out through the curved glass. Clear ascending motion: the distant city far below slowly drifts DOWNWARD and shrinks just a little as the elevator keeps rising; soft white clouds drift gently from left to right and gradually sink past the glass, giving a strong sense of going up; warm golden sunlight rays sweep slowly across the glass with a subtle shimmer; one tiny bird glides far away across the sky. Gentle, calm, continuous upward feeling, faint reflections moving on the glass. The rise eases to a stop and the scene settles into a bright, peaceful arrival view. Keep the EXACT same hand-drawn 2D cartoon art style, line work, pastel colors and composition as the first frame. 16:9.
+
+■ 핵심 움직임 포인트(밋밋 방지):
+- 구름이 유리 아래로 서서히 가라앉음(=상승감의 주포인트)
+- 저 아래 도시가 조금씩 멀어지고 작아짐
+- 햇살 광선이 유리를 천천히 쓸고 지나가며 반짝임
+- 먼 하늘에 작은 새 한 마리가 가로질러 활공
+- 마지막엔 부드럽게 멈춰 밝은 "도착" 스틸로 굳음
+
+■ 규격: 8초 · 16:9 · 사람/글자 없음 · 원본 화풍·구도 100% 유지.

@@ -1,0 +1,5 @@
+기준 이미지: D:/Entertainments/DevEnvironment/autovideo/assets/graphics/poses/jieun_w15_spring_base.png (이 캐릭터를 반드시 참고 — 지은: 길고 부드러운 웨이브의 연한 갈색 긴 머리, 점 두 개 눈에 작은 코·작은 미소, 하늘색(라이트블루) 민소매 원피스 위에 연분홍 카디건(소매 걷지 않음), 흰색 운동화, 굵고 부드러운 검정 외곽선의 납작한 카툰 스타일, 크림색 피부).
+이 캐릭터와 머리·얼굴·옷(원피스+카디건)·색·신발·비율을 100% 똑같이 유지하되, 방향만 바꿔 그린다.
+방향/포즈: 몸 전체가 오른쪽을 향한 완전한 우측 측면(옆모습)으로 곧게 서 있는 전신. 앞(오른쪽)을 바라봄. 팔은 몸 옆에 자연스럽게 내림.
+머리끝부터 발끝까지 전신, 순백색(#ffffff) 배경, 그림자·바닥선·글자·워터마크 없음. 나노바나나(제미나이 이미지)로 직접 생성, Google Flow 금지.
+결과 PNG 저장: D:/Entertainments/DevEnvironment/autovideo/W22/jieun_spring_side_right.png

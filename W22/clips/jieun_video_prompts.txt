@@ -1,0 +1,39 @@
+========================================================
+지은 캐릭터 동영상 프롬프트 모음 (W22) — 컷 분할용 8초 클립
+공통 규격: 동영상 · 8s · 9:16 · 순백 배경(그림자 없음, 투명 컷아웃용)
+          20대 성인 표현(아동정책 통과) + 그림은 지은 그대로 유지
+사용법: 해당 기준 이미지 타일 → ⋮ → 애니메이션 적용 → 프롬프트 붙여넣기
+========================================================
+
+■ 공통 접두(각 프롬프트에 이미 포함):
+"2D flat cartoon storybook illustration, the SAME adult woman in her twenties from the first frame — pink cardigan, light-blue long sleeveless dress, white sneakers, a small rectangular teacher's name badge pinned on the RIGHT side of her chest (a little name tag labeled 선생님), long wavy brown hair, with a warm natural skin-toned face and hands (soft light-peach skin color, NOT a white or pale ivory face)."
+공통 접미: "Full body fully visible from head to shoes, centered, constant size. Plain solid white background only, no floor line, no shadow, no props, no text, no logos. Keep the EXACT same hand-drawn 2D cartoon art style, black outline, pastel colors, face and body proportions as the first frame. Camera fixed. 9:16 vertical."
+
+
+===== [A] 정면 기준 =====  기준 이미지: W22/jieun_spring_front.png
+
+[A1] wave (인사/환영)
+2D flat cartoon storybook illustration, the SAME adult woman in her twenties from the first frame — pink cardigan, light-blue long sleeveless dress, white sneakers, a small rectangular teacher's name badge pinned on the RIGHT side of her chest (a little name tag labeled 선생님), long wavy brown hair, with a warm natural skin-toned face and hands (soft light-peach skin color, NOT a white or pale ivory face). Facing forward, she smiles warmly and raises one hand to give a friendly welcoming wave, gentle natural body sway, hair moves slightly. Full body fully visible from head to shoes, centered, constant size. Plain solid white background only, no floor line, no shadow, no props, no text, no logos. Keep the EXACT same hand-drawn 2D cartoon art style, black outline, pastel colors, face and body proportions as the first frame. Camera fixed. 9:16 vertical.
+
+[A2] count_trips (손가락으로 횟수 셈)  ※ 이미 제작됨: Girl_counting_on_fingers_202607251449.mp4
+2D flat cartoon storybook illustration, the SAME adult woman in her twenties from the first frame — pink cardigan, light-blue long sleeveless dress, white sneakers, a small rectangular teacher's name badge pinned on the RIGHT side of her chest (a little name tag labeled 선생님), long wavy brown hair, with a warm natural skin-toned face and hands (soft light-peach skin color, NOT a white or pale ivory face). Facing forward, she smiles and counts on her fingers — raising one finger, then two, then three — as if counting how many times she has traveled, small natural head and body movement. Full body fully visible from head to shoes, centered, constant size. Plain solid white background only, no floor line, no shadow, no props, no text, no logos. Keep the EXACT same hand-drawn 2D cartoon art style, black outline, pastel colors, face and body proportions as the first frame. Camera fixed. 9:16 vertical.
+
+[A3] open_arms (두 팔 벌려 감탄)
+2D flat cartoon storybook illustration, the SAME adult woman in her twenties from the first frame — pink cardigan, light-blue long sleeveless dress, white sneakers, a small rectangular teacher's name badge pinned on the RIGHT side of her chest (a little name tag labeled 선생님), long wavy brown hair, with a warm natural skin-toned face and hands (soft light-peach skin color, NOT a white or pale ivory face). Facing forward, she opens both arms wide in a warm gesture of wonder and admiration, looking impressed with a bright smile, gentle sway, hair moves slightly. Full body fully visible from head to shoes, centered, constant size. Plain solid white background only, no floor line, no shadow, no props, no text, no logos. Keep the EXACT same hand-drawn 2D cartoon art style, black outline, pastel colors, face and body proportions as the first frame. Camera fixed. 9:16 vertical.
+
+[A4] point_far (먼 곳 가리킴 — '가 봤다')
+2D flat cartoon storybook illustration, the SAME adult woman in her twenties from the first frame — pink cardigan, light-blue long sleeveless dress, white sneakers, a small rectangular teacher's name badge pinned on the RIGHT side of her chest (a little name tag labeled 선생님), long wavy brown hair, with a warm natural skin-toned face and hands (soft light-peach skin color, NOT a white or pale ivory face). Facing forward, she lifts one arm and points far into the distance to her side, following her own hand with her gaze and a soft smile, natural gentle body turn. Full body fully visible from head to shoes, centered, constant size. Plain solid white background only, no floor line, no shadow, no props, no text, no logos. Keep the EXACT same hand-drawn 2D cartoon art style, black outline, pastel colors, face and body proportions as the first frame. Camera fixed. 9:16 vertical.
+
+[A5] dream_gaze (꿈꾸듯 올려다봄 — 미래 계획)
+2D flat cartoon storybook illustration, the SAME adult woman in her twenties from the first frame — pink cardigan, light-blue long sleeveless dress, white sneakers, a small rectangular teacher's name badge pinned on the RIGHT side of her chest (a little name tag labeled 선생님), long wavy brown hair, with a warm natural skin-toned face and hands (soft light-peach skin color, NOT a white or pale ivory face). Facing forward, she tilts her head slightly up and gazes into the distance dreamily with a soft hopeful smile, hands lightly clasped near her chest, gentle sway and slow breathing. Full body fully visible from head to shoes, centered, constant size. Plain solid white background only, no floor line, no shadow, no props, no text, no logos. Keep the EXACT same hand-drawn 2D cartoon art style, black outline, pastel colors, face and body proportions as the first frame. Camera fixed. 9:16 vertical.
+
+[A6] look_out (창가에서 바라봄)
+2D flat cartoon storybook illustration, the SAME adult woman in her twenties from the first frame — pink cardigan, light-blue long sleeveless dress, white sneakers, a small rectangular teacher's name badge pinned on the RIGHT side of her chest (a little name tag labeled 선생님), long wavy brown hair, with a warm natural skin-toned face and hands (soft light-peach skin color, NOT a white or pale ivory face). Facing forward, she leans in slightly and raises one hand as if gently touching a large window, looking out with curiosity and a soft smile, subtle lean and calm breathing. Full body fully visible from head to shoes, centered, constant size. Plain solid white background only, no floor line, no shadow, no props, no text, no logos. Keep the EXACT same hand-drawn 2D cartoon art style, black outline, pastel colors, face and body proportions as the first frame. Camera fixed. 9:16 vertical.
+
+
+===== [B] 측면 기준 =====  기준 이미지: W22/jieun_spring_side_right.png
+
+[B1] walk_right (오른편 걷기)
+2D flat cartoon storybook illustration, the SAME adult woman in her twenties from the first frame — pink cardigan, light-blue long sleeveless dress, white sneakers, long wavy brown hair — shown in clean right-side profile. She walks steadily to the RIGHT with a natural smooth walk cycle: the legs stride forward one after the other with clear knee bend, the arms swing gently back and forth, the long hair sways and bounces lightly with each step, the skirt hem swings naturally. Her whole body stays fully visible from the top of the head to the shoes, centered, at a constant size. Plain solid white background only, NO floor line, NO shadow, no props, no text, no logos. Keep the EXACT same hand-drawn 2D cartoon art style, black outline, pastel colors, face and body proportions as the first frame. Camera fixed, steady continuous side-view walking. 9:16 vertical.
+
+(왼편 걷기 = B1 결과를 좌우 반전하여 사용 — 별도 생성 불필요)

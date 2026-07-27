@@ -88,7 +88,7 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
                 <b class="lr-title">
                   {isEn ? x.title_en : x.title_ko}
                   {x.anchor
-                    ? (x.week <= 13
+                    ? (x.week <= 21
                         ? <a class="tag tag-video yt-trigger" href="#" data-week={x.week}>▶ {isEn ? 'video' : '영상'}</a>
                         : <a class="tag tag-video" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">▶ {isEn ? 'video' : '영상'}</a>
                       )
@@ -192,7 +192,14 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
     12: { ko: 'pM7eN6Qt6s4', en: 'VPgmXo5jXtY' },
     13: { ko: 'zsfOc4R4IbA', en: 'XT0jYFhrsxY' },
     14: { ko: 'B9kZVCxppPk', en: 'pGLrxq2xvC8' },
-    15: { ko: 'UVnkuRI7WQQ', en: 'XHtb4xBTnj0' }
+    15: { ko: 'UVnkuRI7WQQ', en: 'XHtb4xBTnj0' },
+    16: { ko: 'l35_jlJEEzU', en: 'Eu9BvXmn2ck' },
+    17: { ko: '-Gw2cCugmlc', en: '8raRKVBvU-k' },
+    18: { ko: '2ew4QrXW72E', en: 'fPLm0vLq0ls' },
+    19: { ko: '0x7LxGc3DNo', en: 'PvTm1Df3RVs' },
+    20: { ko: 'L9QsqYAuAH8', en: '9J_0D2Ger4M' },
+    21: { ko: 'yyeIBiEIp6E', en: 'TKjiVsG8MuI' },
+    22: { ko: 'CZMYZUehC7k', en: 'XI9cmlczbkw' }
   };
 
   function renderYtPlayer(week: number, activeLang: 'ko' | 'en') {

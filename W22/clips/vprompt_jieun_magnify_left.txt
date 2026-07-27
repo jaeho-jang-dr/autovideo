@@ -1,0 +1,11 @@
+[지은 왼쪽으로 다가가 돋보기로 살펴보기 — 캐릭터 동영상 프롬프트]
+기준 첫프레임(가이드): W22/jieun_spring_side_left.png  (좌향 측면 = 오른걷기 f32의 좌우반전, 흰배경)
+※ Flow에 이 좌향 가이드 먼저 업로드 → 타일 ⋮ → 애니메이션 적용 → 아래 프롬프트 → 동영상·8s·9:16
+※ 인물이라 아동정책 위험 → "adult woman over 20 years old" 프레이밍 유지. 막히면 재시도.
+
+■ 영어 프롬프트 (Flow 붙여넣기):
+Clean flat 2D cartoon illustration, adult educational style. A clearly adult woman over 20 years old, a young adult professional female teacher — pink cardigan, light-blue long dress, white sneakers, a small rectangular teacher's name badge pinned on the RIGHT side of her chest (a little name tag labeled 선생님), long wavy brown hair, with a warm natural skin-toned face and hands (soft light-peach skin color, NOT a white or pale ivory face) — shown in clean LEFT-side profile (facing left). She takes a couple of steps to the LEFT, then stops, raises a round magnifying glass in one hand, bends forward at the waist and peers closely through the magnifying glass, examining something small in front of her with a focused, curious expression and a slight head tilt. Natural smooth continuous motion. Her whole body stays fully visible from the top of the head to the shoes, centered, at a constant size. Plain solid white background only, NO floor line, NO shadow, no text, no logos (only the magnifying glass prop in her hand). Keep the EXACT same 2D cartoon art style, black outline, pastel colors, outfit, hairstyle and face as the reference image. Camera fixed. 9:16 vertical.
+
+■ 동작 순서: 왼쪽으로 몇 걸음 다가감 → 멈춤 → 한 손에 둥근 돋보기 → 허리 굽혀 앞의 작은 것을 자세히 관찰(집중·호기심).
+■ 규격: 8초 · 9:16 · 순백 배경(그림자 없음) · 그림은 지은 그대로 · 돋보기 소품만 허용.
+■ 완성 후: 컷랑 dump/build로 프레임 컷아웃·키770px 통일 → DB(jieun_w22 magnify 동작컷).

@@ -1,0 +1,9 @@
+[지은 두 팔 벌려 감탄(open_arms) — 큰 동작 · 정면]
+기준 첫프레임(가이드): W22/jieun_teacher_front.png  (정면, Teacher JY 명찰)
+※ 선생님(Teacher JY) 명찰 + 20세 이상 + 살색 얼굴 + 지은 동일. Flow: 가이드 ⋮ → 애니메이션 적용 → 동영상·8s·9:16.
+
+■ 영어 프롬프트 (Flow 붙여넣기):
+Clean flat 2D cartoon illustration, adult educational style. The SAME clearly adult woman over 20 years old, a young adult female teacher, exactly as in the first frame — identical face, identical long wavy brown hair, identical pink cardigan over a light-blue long dress, identical white sneakers, the same small white rectangular name badge reading 'Teacher JY' on the LEFT side of her chest, with ALL her visible skin — face, neck, arms, hands and legs — rendered in the SAME warm natural skin tone (soft light-peach skin color, NOT white, NOT pale ivory, NOT gray) — facing forward. BIG expressive gesture of wonder and welcome: she throws BOTH arms wide open out to her sides in a large sweeping motion, tilts her head back with a big amazed delighted smile and sparkling eyes as if admiring a stunning view, rises slightly on her toes, then brings both hands together toward her chest in joy and opens her arms wide again; her upper body sways and her long hair bounces with the movement. Large, lively, clearly visible motion (NOT a static pose). Plain solid white background only, no shadow, no floor line. Keep the EXACT same 2D cartoon art style, black outline, pastel colors and character as the reference image. Camera fixed. 9:16 vertical.
+
+■ 동작: 두 팔 크게 활짝 벌려 감탄 → 고개 젖히고 환한 미소 → 두 손 모았다 다시 활짝. 상체 살랑·머리 흔들림.
+■ 규격: 8초 · 9:16 · 순백 배경(그림자 없음) · 그림은 지은 그대로.

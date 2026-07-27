@@ -25,9 +25,15 @@ DB = "channel/content.db"
 
 
 # ───────────────────── 검증된 컷아웃/정규화 (걷기와 동일) ─────────────────────
+HOLE_FILL_MAX = 8000   # 이보다 작은 '완전히 둘러싸인' 구멍은 메운다.
+# 흰 운동화·흰 소품은 '밝은 무채색'이라 배경으로 잘려 구멍이 된다(한 짝 ≈4~5천px²).
+# 예전 1500px² 로는 신발이 뻥 뚫린 채 남았다. 발 사이·팔 사이 같은 '열린 틈'은
+# 이미지 가장자리와 이어져 있어 구멍으로 잡히지 않으므로 이 값을 올려도 안전하다.
+
+
 def cutout_char(arr):
     """밝고 무채색(배경·바닥그림자·발/팔 사이)이 아닌 것 = 캐릭터.
-    최대덩어리만(워터마크 제거) + 작은 내부구멍만 메움(얼굴 하이라이트), 큰 열린틈은 투명 유지."""
+    최대덩어리만(워터마크 제거) + 둘러싸인 구멍 메움(얼굴 하이라이트·흰 운동화), 열린틈은 투명 유지."""
     arr = arr.copy()
     rgb = arr[:, :, :3].astype(int)
     lo = rgb.min(axis=2); hi = rgb.max(axis=2)
@@ -42,7 +48,7 @@ def cutout_char(arr):
     hl, hn = ndimage.label(filled & ~char)
     if hn:
         hsz = ndimage.sum(np.ones_like(hl), hl, range(1, hn + 1))
-        small = {i + 1 for i, a in enumerate(hsz) if a < 1500}
+        small = {i + 1 for i, a in enumerate(hsz) if a < HOLE_FILL_MAX}
         if small:
             char |= np.isin(hl, list(small))
     arr[~char, 3] = 0; arr[char, 3] = 255
@@ -78,10 +84,13 @@ def measure_base(path):
     return span, int(ys.max()), im.width, im.height     # target_body, feet_y, canvas_w, canvas_h
 
 
-def normalize(crop, target_body, feet_y, cw, ch):
-    """비율유지 리사이즈(크롭X)로 몸높이 통일 + 발끝 정렬 + 몸통중심 가로정중앙."""
+def normalize(crop, target_body, feet_y, cw, ch, scale=None):
+    """비율유지 리사이즈(크롭X)로 몸높이 통일 + 발끝 정렬 + 몸통중심 가로정중앙.
+    scale 을 주면 그 배율을 그대로 쓴다 — 앉기·점프처럼 몸높이가 줄어드는 동작에서
+    프레임마다 770px로 늘리면 앉을수록 캐릭터가 커지는 역효과가 나므로,
+    첫 컷에서 잰 배율을 전 컷에 고정한다(--lock-scale)."""
     span, cx = body_metrics(crop)
-    s = target_body / span
+    s = scale if scale else target_body / span
     nw, nh = max(1, round(crop.shape[1] * s)), max(1, round(crop.shape[0] * s))
     im = Image.fromarray(crop).resize((nw, nh), Image.LANCZOS)
     cv = Image.new("RGBA", (cw, ch), (0, 0, 0, 0))
@@ -142,14 +151,30 @@ def cmd_build(a):
     print(f"기준({os.path.basename(a.base)}): 몸높이 {tb}px · 발끝 y{fy} · 캔버스 {cw}x{ch} → 동작컷 이 규격으로 통일")
     out_dir = a.out_dir
     made = []
-    for i, fno in enumerate(picks):
+
+    crops = []
+    for fno in picks:
         src = f"{seq}/{fno:04d}.png"
         arr = np.array(Image.open(src).convert("RGBA")) if os.path.exists(src) else grab(a.video, fno / a.fps, tmp)
-        crop = cutout_char(arr)
-        cv, span = normalize(crop, tb, fy, cw, ch)
+        crops.append(cutout_char(arr))
+    spans = [body_metrics(c)[0] for c in crops]
+
+    # 자세별 키 규격(사장님 확정): 서기 100% · 웅크리기 70% · 의자앉기 60% · 땅에 주저앉기 50%.
+    # 원본 몸높이를 프레임마다 100%로 늘리면 앉을수록 커지고, 원본배율 고정은 규격을 안 지킨다.
+    # → 가장 큰(선) 컷을 100%, 가장 작은(앉은) 컷을 --pose-floor% 로 두고 그 사이를 선형 배분.
+    targets = [tb] * len(picks)
+    if a.pose_floor:
+        lo, hi = min(spans), max(spans)
+        fr = a.pose_floor / 100.0
+        rng = (hi - lo) or 1
+        targets = [round(tb * (fr + (1 - fr) * (s - lo) / rng)) for s in spans]
+        print(f"  [POSE] 서기 100%({tb}px) ~ 최저자세 {a.pose_floor}%({round(tb*fr)}px) 선형 배분")
+
+    for i, (fno, crop, tgt) in enumerate(zip(picks, crops, targets)):
+        cv, span = normalize(crop, tgt, fy, cw, ch)
         op = f"{out_dir}/{a.char}_{a.action}_{i}.png"
         cv.save(op); made.append(op)
-        print(f"  {a.char}_{a.action}_{i}  <- 프레임 {fno}  원본몸높이 {span}px → {tb}px")
+        print(f"  {a.char}_{a.action}_{i}  <- 프레임 {fno}  원본몸높이 {span}px → {tgt}px ({round(tgt/tb*100)}%)")
     rev = []
     if a.reverse:
         for i, p in enumerate(made):
@@ -184,6 +209,8 @@ def main():
     b.add_argument("--frames"); b.add_argument("--start", type=int, default=0); b.add_argument("--interval", type=int, default=4)
     b.add_argument("--count", type=int, default=8); b.add_argument("--fps", type=float, default=24)
     b.add_argument("--reverse", action="store_true"); b.add_argument("--project", default="W19")
+    b.add_argument("--pose-floor", type=int, default=0,
+                   help="가장 낮은 자세의 키(%%). 서기 100%% 기준 — 웅크리기 70, 의자앉기 60, 땅에 주저앉기 50")
     b.add_argument("--out-dir", default="assets/graphics/poses"); b.set_defaults(func=cmd_build)
     a = ap.parse_args(); a.func(a)
 

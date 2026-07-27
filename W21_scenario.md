@@ -38,18 +38,18 @@
 
 ## 4막 — 연결어미 '-고'로 두 가지를 잇기 (S18–S22)
 
-- **S18** '-고'로 잇는다 | `-고` | "외모와 성격을 한 문장에 잇고 싶을 땐 '-고'를 써요. 형용사 뒤에 '-고'를 붙이면 '그리고'의 뜻이 돼요. '크다' + 고 = '크고'." → (To join two traits in one sentence, use '-고'. Add '-고' after an adjective and it means 'and'. '크다' + 고 = '크고'.) | `cafe_terrace` | connect_hands→explain | 문법
-- **S19** 키가 크고 친절해요 | `키가 크고 친절해요` | "이제 이어 볼까요? '키가 크다'와 '친절하다'를 '-고'로 이으면 '키가 크고 친절해요'. 외모 다음 성격, 순서대로요." → (Let's connect them. '키가 크다' + '친절하다' with '-고' → '키가 크고 친절해요' — tall and kind. Looks first, then personality.) | `brick_street` | point_right→hand_heart | 예문1
-- **S20** 머리가 길고 예뻐요 | `머리가 길고 예뻐요` | "하나 더요. '머리가 길다'와 '예쁘다'를 이으면 '머리가 길고 예뻐요'. 저 카페 사장님을 딱 설명하네요." → (One more. '머리가 길다' + '예쁘다' → '머리가 길고 예뻐요' — long hair and pretty. That describes the cafe owner perfectly.) | `cafe_interior` | touch_hair_long→admire | 예문2
-- **S21** 재미있고 활발해요 | `재미있고 활발해요` | "성격끼리도 이을 수 있어요. '재미있다'와 '활발하다'를 이으면 '재미있고 활발해요'. 제 친구 이야기예요!" → (You can join two personalities too. '재미있다' + '활발하다' → '재미있고 활발해요' — fun and lively. That's my friend!) | `seoul_forest` | laugh→cheer_arms | 예문3
-- **S22** 여러 사람을 묘사해요 | `여러 명 묘사` | "성수동 카페엔 다양한 사람이 있죠. 한 명은 '키가 작고 조용해요'. 또 한 명은 '멋있고 똑똑해요'. 이렇게 이어서 말해요." → (A cafe in 성수동 has all kinds of people. One is '키가 작고 조용해요'. Another is '멋있고 똑똑해요'. Just link them like that.) | `cafe_terrace` | point_left→point_right | 종합예문
+- **S18** '-고'로 잇는다 | `-고` | "이제 두 가지를 한 문장으로 잇는 '-고'를 배워요. 방법은 쉬워요. 형용사 기본형에서 '다'를 떼고 '고'를 붙여요. '크다'는 '크고', '작다'는 '작고', '길다'는 '길고'. 마지막 말에만 정중하게 '-요'로 끝맺고, 앞말은 그대로 '고'로 둬요." → (Now let's learn '-고', which joins two things in one sentence. It's easy. Take an adjective's base form, drop '다', and add '고'. '크다' becomes '크고', '작다' becomes '작고', '길다' becomes '길고'. Only the last word gets the polite ending, and the first one just stays '고'.) | `cafe_terrace` | connect_hands→explain | 문법
+- **S19** 키가 크고 친절해요 | `키가 크고 친절해요` | "직접 만들어요. '키가 크다'와 '친절하다'를 이어요. 앞은 '크고', 뒤는 '친절해요'. 합치면 '키가 크고 친절해요'. 외모를 먼저, 성격을 나중에요." → (Let's build one. '키가 크다' and '친절하다'. The first becomes '크고', the last stays '친절해요'. Together: '키가 크고 친절해요' — tall and kind. Looks first, personality second.) | `brick_street` | point_right→hand_heart | 예문1
+- **S20** 머리가 길고 예뻐요 | `머리가 길고 예뻐요` | "하나 더요. '머리가 길다'와 '예쁘다'. '길다'는 '길고', '예쁘다'는 '예뻐요'. 그래서 '머리가 길고 예뻐요'. 규칙이 보이죠?" → (One more. '머리가 길다' and '예쁘다'. '길다' becomes '길고', '예쁘다' becomes '예뻐요'. So: '머리가 길고 예뻐요' — long hair and pretty. See the pattern?) | `cafe_interior` | touch_hair_long→admire | 예문2
+- **S21** 재미있고 활발해요 | `재미있고 활발해요` | "외모끼리, 성격끼리도 이을 수 있어요. '재미있다'와 '활발하다'를 이으면 '재미있고 활발해요'. 두 개든 세 개든 '-고'로 계속 이어가면 돼요." → (You can join two looks, or two personalities, too. '재미있다' and '활발하다' become '재미있고 활발해요' — fun and lively. Two or three, just keep linking with '-고'.) | `seoul_forest` | laugh→cheer_arms | 예문3
+- **S22** 여러 사람을 묘사해요 | `여러 명 묘사` | "이제 성수동 사람들을 묘사해요. 한 명은 '키가 작고 조용해요'. 또 한 명은 '멋있고 똑똑해요'. 이렇게 '-고'로 외모와 성격을 자유롭게 이어요." → (Now describe people in '성수동'. One is '키가 작고 조용해요' — short and quiet. Another is '멋있고 똑똑해요' — cool and smart. Freely link looks and personality with '-고'.) | `cafe_terrace` | point_left→point_right | 종합예문
 
 ## 5막 — 정리·마무리 (S23–S26)
 
-- **S23** 친구를 소개해요 | `친구 소개` | "배운 걸 모아 친구를 소개해 봐요. '제 친구는 머리가 길고 친절해요. 그리고 아주 재미있어요.' 여러분도 만들어 보세요!" → (Let's put it together to introduce a friend: '제 친구는 머리가 길고 친절해요. 그리고 아주 재미있어요.' Now you try!) | `brick_street` | present_right→smile_bright | 적용
-- **S24** 오늘의 복습 | `복습` | "빠르게 정리해요. 외모 — '키가 크다', '머리가 짧다', '예쁘다', '멋있다'. 성격 — '친절하다', '조용하다', '똑똑하다'. 그리고 '-고'로 이어요." → (Quick recap. Looks — '키가 크다', '머리가 짧다', '예쁘다', '멋있다'. Personality — '친절하다', '조용하다', '똑똑하다'. Then link with '-고'.) | `popup_store` | count_fingers→nod | 복습
-- **S25** 성수동을 걸으며 | `성수동` | "이제 성수동 골목을 걸으며 지나가는 사람들을 마음속으로 묘사해 보세요. '저 사람은 키가 크고 멋있어요.' 연습이 실력이 돼요." → (Now walk the 성수동 alleys and describe people in your head: '저 사람은 키가 크고 멋있어요.' Practice becomes skill.) | `brick_street` | walk_l→look_around | 마무리연습
-- **S26** 다음에 또 만나요 | `안녕히 가세요` | "오늘도 정말 잘하셨어요! 이제 사람을 한국어로 묘사할 수 있어요. 다음엔 더 재미있는 표현으로 만나요. '안녕히 가세요'!" → (Great job today! Now you can describe people in Korean. See you next time with more fun expressions. '안녕히 가세요'!) | `cafe_terrace` | greet→wave | 인사·마무리
+- **S23** 친구를 소개해요 | `친구 소개` | "배운 걸 모아 친구를 소개해요. '제 친구는 머리가 길고 친절해요. 그리고 정말 재미있어요.' 문장을 이으면 소개가 술술 돼요." → (Let's introduce a friend with all we learned: '제 친구는 머리가 길고 친절해요. 그리고 정말 재미있어요.' Linking sentences makes an introduction flow.) | `brick_street` | present_right→smile_bright | 적용
+- **S24** 오늘의 복습 | `복습` | "오늘 배운 걸 정리해요. 외모는 '크다', '작다', '길다', '짧다', '예쁘다', '멋있다'. 성격은 '친절하다', '착하다', '조용하다', '활발하다', '똑똑하다'. 그리고 둘을 '-고'로 이어요." → (Let's wrap up. Looks: '크다', '작다', '길다', '짧다', '예쁘다', '멋있다'. Personality: '친절하다', '착하다', '조용하다', '활발하다', '똑똑하다'. And link the two with '-고'.) | `popup_store` | count_fingers→nod | 복습
+- **S25** 성수동을 걸으며 | `성수동` | "이제 길을 걸으며 지나가는 사람을 마음속으로 묘사해 보세요. '저 사람은 키가 크고 멋있어요.' 매일 조금씩 하면 금방 늘어요." → (Now, as you walk, describe people in your head: '저 사람은 키가 크고 멋있어요' — that person is tall and cool. A little each day, and you'll improve fast.) | `brick_street` | walk_l→look_around | 마무리연습
+- **S26** 다음에 또 만나요 | `안녕히 가세요` | "오늘 정말 잘하셨어요! 이제 사람의 외모와 성격을 '-고'로 이어 멋지게 묘사할 수 있어요. 오늘 배운 표현으로 주변 사람을 소개해 보세요. 다음 시간에 또 만나요. '안녕히 가세요'!" → (You did great today! Now you can describe someone's looks and personality, linked with '-고', beautifully. Try introducing the people around you with today's expressions. See you next time — '안녕히 가세요'!) | `cafe_terrace` | greet→wave | 인사·마무리
 
 ---
 

@@ -63,22 +63,28 @@ def save_tts_azure(text, output_path, lang='ko'):
         voice = "en-US-EmmaMultilingualNeural"
     else:
         voice = "ko-KR-SunHiNeural"
-    cfg = sp.SpeechConfig(subscription=key, region=region)
-    cfg.speech_synthesis_voice_name = voice
-    cfg.set_speech_synthesis_output_format(sp.SpeechSynthesisOutputFormat.Audio24Khz48KBitRateMonoMp3)
-    ac = sp.audio.AudioOutputConfig(filename=output_path)
-    syn = sp.SpeechSynthesizer(speech_config=cfg, audio_config=ac)
-    r = syn.speak_text_async(text).get()
-    if r.reason != sp.ResultReason.SynthesizingAudioCompleted:
-        det = r.cancellation_details.error_details if r.reason == sp.ResultReason.Canceled else str(r.reason)
-        raise RuntimeError(f"Azure TTS failed: {det}")
-    try:
-        with open(output_path + ".txt", "w", encoding="utf-8") as f:
-            f.write(text.strip())
-    except Exception:
-        pass
-    print(f"[TTS] Azure (voice={voice}, lang={lang}) — 상업 라이선스")
-    return output_path
+    # ★일시적 타임아웃/RTF 초과로 edge 폴백(무허가) 되지 않게 — 최대 3회 재시도(최종본 무결성).
+    import time as _time
+    last = None
+    for _attempt in range(3):
+        cfg = sp.SpeechConfig(subscription=key, region=region)
+        cfg.speech_synthesis_voice_name = voice
+        cfg.set_speech_synthesis_output_format(sp.SpeechSynthesisOutputFormat.Audio24Khz48KBitRateMonoMp3)
+        ac = sp.audio.AudioOutputConfig(filename=output_path)
+        syn = sp.SpeechSynthesizer(speech_config=cfg, audio_config=ac)
+        r = syn.speak_text_async(text).get()
+        if r.reason == sp.ResultReason.SynthesizingAudioCompleted:
+            try:
+                with open(output_path + ".txt", "w", encoding="utf-8") as f:
+                    f.write(text.strip())
+            except Exception:
+                pass
+            print(f"[TTS] Azure (voice={voice}, lang={lang}) — 상업 라이선스" + (f" [retry {_attempt}]" if _attempt else ""))
+            return output_path
+        last = r.cancellation_details.error_details if r.reason == sp.ResultReason.Canceled else str(r.reason)
+        print(f"[TTS] Azure 재시도 {_attempt+1}/3 — {str(last)[:60]}")
+        _time.sleep(2.0)
+    raise RuntimeError(f"Azure TTS failed after 3 tries: {last}")
 
 
 def save_tts_edge_tts(text, output_path, lang='ko'):

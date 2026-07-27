@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:03,078
-¡Hola a todos! Esto es '설악산' [seol-ak-san] (Seoraksan),
+¡Hola a todos! Esto es '설악산' [seo-rak-ssan] (Seoraksan),
 
 2
 00:00:03,078 --> 00:00:05,386
@@ -24,7 +24,7 @@ Subir una montaña despierta todo tipo de pensamientos.
 
 7
 00:00:22,740 --> 00:00:28,620
-El tema de hoy es '의견 표현' [ui-gyeon-pyo-hyeon] (expresar opiniones) y '설득' [seol-deuk] (persuasión).
+El tema de hoy es '의견 표현' [ui-gyeon pyo-hyeon] (expresar opiniones) y '설득' [seol-deuk] (persuasión).
 
 8
 00:00:28,620 --> 00:00:34,670
@@ -60,7 +60,7 @@ comencemos la lección de hoy en este fresco sendero de otoño.
 
 16
 00:01:03,970 --> 00:01:08,150
-El inicio más común: '제 생각에는' [je-saeng-gak-e-neun] (en mi opinión).
+El inicio más común: '제 생각에는' [je saeng-ga-ge-neun] (en mi opinión).
 
 17
 00:01:08,150 --> 00:01:10,880
@@ -80,11 +80,11 @@ Para expresar una afirmación con claridad,
 
 21
 00:01:27,148 --> 00:01:30,506
-usa '저는 ~다고 생각해요' [jeo-neun-~-da-go-saeng-gak-hae-yo] (yo creo que ~).
+usa '저는 ~다고 생각해요' [jeo-neun da-go saeng-ga-kae-yo] (yo creo que ~).
 
 22
 00:01:30,506 --> 00:01:33,640
-'생각하다' [saeng-gak-ha-da] (pensar) es un verbo.
+'생각하다' [saeng-ga-ka-da] (pensar) es un verbo.
 
 23
 00:01:40,260 --> 00:01:45,533
@@ -96,7 +96,7 @@ Te deja sin aliento, ¿verdad?
 
 25
 00:01:50,740 --> 00:01:58,610
-Para estar de acuerdo, usa '동의하다' [dong-ui-ha-da]. '저도 그렇게 생각해요' [jeo-do-geu-reot-ge-saeng-gak-hae-yo] o '동의해요' [dong-ui-hae-yo].
+Para estar de acuerdo, usa '동의하다' [dong-ui-ha-da]. '저도 그렇게 생각해요' [jeo-do geu-reo-ke saeng-ga-kae-yo] o '동의해요' [dong-ui-hae-yo].
 
 26
 00:02:04,370 --> 00:02:06,986
@@ -144,11 +144,11 @@ El patrón central de hoy — afirmación y razón en una: '저는 ___다고 생
 
 37
 00:03:08,130 --> 00:03:17,884
-'-다고' [--da-go] es cita indirecta: '예쁘다' [ye-ppeu-da] se vuelve '예쁘다고' [ye-ppeu-da-go],
+'-다고' [--da-go] es cita indirecta: '예쁘다' se vuelve '예쁘다고',
 
 38
 00:03:17,884 --> 00:03:21,590
-'좋다' [jot-da] se vuelve '좋다고' [jot-da-go].
+'좋다' [jo-ta] se vuelve '좋다고' [jo-ta-go].
 
 39
 00:03:28,740 --> 00:03:30,452
@@ -280,7 +280,7 @@ Si una razón resuena contigo,
 
 71
 00:06:06,264 --> 00:06:10,280
-responde con '저도 그렇게 생각해요' [jeo-do-geu-reot-ge-saeng-gak-hae-yo] (yo también lo creo).
+responde con '저도 그렇게 생각해요' [jeo-do geu-reo-ke saeng-ga-kae-yo] (yo también lo creo).
 
 72
 00:06:14,260 --> 00:06:17,231
@@ -292,7 +292,7 @@ pero yo creo que ~'. Entonces es una conversación.
 
 74
 00:06:25,410 --> 00:06:30,694
-¿Con curiosidad? Pregunta '왜 그렇게 생각하세요' [wae-geu-reot-ge-saeng-gak-ha-se-yo]? (¿Por qué piensa así?
+¿Con curiosidad? Pregunta '왜 그렇게 생각하세요' [wae geu-reo-ke saeng-ga-ka-se-yo]? (¿Por qué piensa así?
 
 75
 00:06:30,694 --> 00:06:30,910
@@ -380,7 +380,7 @@ Con los mayores, sé aún más cortés.
 
 96
 00:08:01,490 --> 00:08:05,808
-Hoy aprendimos a abrir con '제 생각에는' [je-saeng-gak-e-neun],
+Hoy aprendimos a abrir con '제 생각에는' [je saeng-ga-ge-neun],
 
 97
 00:08:05,808 --> 00:08:10,680

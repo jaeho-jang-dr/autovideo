@@ -1,0 +1,10 @@
+[BG1 elevator_up v2 — 빠른 상승(배경 급하강) 배경 동영상]
+기준 첫프레임: W22/bg/bg_w22_elevator_up_v2.png  (건물군·다리·강·산·절벽·거리 크게 보임)
+※ Flow: 이 이미지 ⋮ → 애니메이션 적용 → 동영상·8s·16:9 → 아래 프롬프트.
+※ 목표: 뒤 배경(건물·다리·거리·구름)이 "빠르고 정확하게 수직으로 아래로 떨어져" 급상승이 확 느껴지게 → 마지막에 정지(스틸).
+
+■ 영어 프롬프트 (Flow 붙여넣기):
+2D pastel colored-pencil storybook style, bold soft outlines, no people, no text. Inside a glass observation elevator, the camera holds steady looking out through the curved glass. STRONG, FAST RISING elevator motion: the entire city landscape below — the clustered tall buildings, the streets with tiny cars, the long suspension bridge and the blue river — slides straight DOWNWARD quickly and steadily (accurate vertical drop) as the elevator rapidly ascends; the buildings visibly shrink and drop out of the bottom of the frame, white clouds rush downward past the glass, and more open blue sky opens up from the top. Fast, smooth, continuous upward acceleration that gives a strong sense of quickly shooting up very high. In the last moment the rise eases and comes to a gentle STOP, settling and freezing on a calm high-altitude view. Keep the EXACT same hand-drawn 2D pastel storybook art style, line work and colors as the first frame. 16:9.
+
+■ 핵심: 건물·다리·거리 전체가 빠르고 곧게 아래로 하강(=급상승 체감) → 구름도 아래로 흐름 → 위로 하늘 열림 → 마지막 정지 스틸.
+■ 규격: 8초 · 16:9 · 사람/글자 없음 · 원본 화풍 유지.

@@ -49,11 +49,16 @@ def pack(week, prefix=None):
             if os.path.exists(src):
                 shutil.copy(src, os.path.join(dst, f"{YT[code]}.srt")); got.append(code)
         # ② ja / zh / es — 번역본
+        #    ①scratch/fixed_subs/<주차>_<n>_<판>/<언어명>.srt (W1~W14 방식)
+        #    ②hangeul_birth_vowels/w<NN>pkg/<prefix>.<code>.srt (W20+ translate_srt_wNN.py 산출)
         tdir = os.path.join(TRANS, f"{week}_{ord_}_{ed}")
+        pdir = os.path.join(HB, f"w{int(week[1:]):d}pkg")
         for code in ("ja", "zh", "es"):
-            src = os.path.join(tdir, f"{YT[code]}.srt")
-            if os.path.exists(src):
-                shutil.copy(src, os.path.join(dst, f"{YT[code]}.srt")); got.append(code)
+            for src in (os.path.join(tdir, f"{YT[code]}.srt"),
+                        os.path.join(pdir, f"{prefix}.{code}.srt")):
+                if os.path.exists(src):
+                    shutil.copy(src, os.path.join(dst, f"{YT[code]}.srt")); got.append(code)
+                    break
         miss = [c for c in YT if c not in got]
         mark = "OK" if not miss else "★"
         print(f"  {mark} {week}_{ord_}_{ed:<4} {len(got)}/5  " +

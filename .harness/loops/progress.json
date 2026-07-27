@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-07-11",
+  "last_updated": "2026-07-27",
   "project": "autovideo",
   "agents": {
     "orchestrator": "Antigravity (Gemini)",
@@ -9,8 +9,8 @@
   "current_session": {
     "status": "in_progress",
     "started": "2026-07-01",
-    "goal": "Generate and compile 'Sejong the Great & Hangeul' 16-minute main hybrid video and short drafts in multi-languages (KO/EN/JA), including 48-scene Veo motion clips and ElevenLabs narration.",
-    "phase": "sejong_main_hybrid_rendering"
+    "goal": "KO-W22 여행 경험·계획 강의 최종화 및 유튜브 공개 완료. 다음: W23 제작 / W17~W21 자막 재업로드 여부 결정.",
+    "phase": "hangeul_w22_published"
   },
   "completed_tasks": [
     "KO-W01: built stickman_factory.py (parametric 12-joint ink stickman) -> 30-pose library registered to content.db (register_poses.py)",
@@ -170,7 +170,9 @@
     "Web/Video (2026-07-16): 거북목 및 운동손상 한/영 쇼츠 4종 빌드 완료 (Google Flow 미사용, 기존 씬 비디오 첫 프레임 키프레임 추출 9:16 세로 4K 업스케일 합성), 구글 드라이브 Shorts 폴더 저장 완료",
     "Flow/Account (2026-07-16): 6개 구글 Advanced 구독 계정(drjang00~004) 세션 등록 연동 완료 및 autoveo_flow.py 다중 프로필 라운드 로빈 순환 자동화 빌더 검증 완료",
     "W17 Advanced (2026-07-20, Gemini=조감독): W17 Advanced Course scenario (w17_scenario.txt) and spec (w17_scenario_spec.md) finalized according to user feedback (1-on-1 polite/casual comparison, mobile slang warning, K-Pop/K-Drama shadowing tools, and Emma/SunHi voice cross-linguality).",
-    "W17 Advanced (2026-07-20, Gemini=조감독): Completely purged unaligned new poses (5 types) and backgrounds (3 types) from files and SQLite assets table. Restored the 48-scene compilation map to only use verified 9 character poses and 10 Bulguksa backgrounds (scene_0.png ~ scene_47.png successfully regenerated)."
+    "W17 Advanced (2026-07-20, Gemini=조감독): Completely purged unaligned new poses (5 types) and backgrounds (3 types) from files and SQLite assets table. Restored the 48-scene compilation map to only use verified 9 character poses and 10 Bulguksa backgrounds (scene_0.png ~ scene_47.png successfully regenerated).",
+    "자막 발음기호를 철자식 → 표준 발음법(연음·경음화·비음화·격음화·유음화·구개음화) 실제 발음 표기로 전환 (add_pron_to_srt.py 재작성 + refresh_pron_srt.py + test_pron_rules.py 36케이스). W17~W22 로컬 자막 53개 갱신(유튜브 미반영).",
+    "KO-W22 '여행 경험·미래 계획'(지은·하늘 전망대) 최종화: Azure TTS(선희/Emma) 4K 렌더 KO/EN, 썸네일 2종, 5개국어 자막·제목·설명, 태그 29개, 10개 조항 통과, API 업로드(KO=CZMYZUehC7k, EN=XI9cmlczbkw), 자막 10개 API 업로드, 노출 4단계(재생목록·고정댓글·카드·최종화면 W21 지정), 공개 전환, 웹 임베드(CF Pages+Vercel) 완료."
   ],
   "pending_tasks": [
     "Binge-Watching: Run autoveo_flow.py with binge_watching/shorts_prompts.txt to generate 9:16 portrait video clips (scene_0, 2, 20).",

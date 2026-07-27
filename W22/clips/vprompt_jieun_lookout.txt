@@ -1,0 +1,11 @@
+[지은 창밖 바라보기(look_out) — 큰 동작 · 우측으로 가서 오른쪽 창 보기]
+기준 첫프레임(가이드): W22/jieun_teacher_side_right.png  (우측면, Teacher JY 명찰, 오른쪽 향함)
+※ 시나리오: 오른쪽으로 몇 걸음 걸어가 → 오른쪽(앞쪽)에 있는 큰 창을 바라봄. 계속 오른쪽 향함, 절대 뒤돌지 않음(좌측 안 봄).
+※ 흰배경이라 창은 안 보임(배경은 렌더서 합성). 유리에 손 대는 동작은 "허공(보이지 않는 유리)에 손 짚기".
+※ Teacher JY 명찰 + 20세 이상 + 살색 얼굴 + 지은 동일. Flow: 가이드 ⋮ → 애니메이션 적용 → 동영상·8s·9:16.
+
+■ 영어 프롬프트 (Flow 붙여넣기):
+Clean flat 2D cartoon illustration, adult educational style. The SAME clearly adult woman over 20 years old, a young adult female teacher — identical face, identical long wavy brown hair, identical pink cardigan over a light-blue long dress, identical white sneakers, the same small white rectangular name badge reading 'Teacher JY' on the LEFT side of her chest, with ALL her visible skin — face, neck, arms, hands and legs — rendered in the SAME warm natural skin tone (soft light-peach skin color, NOT white, NOT pale ivory, NOT gray) — shown in clean RIGHT-side profile, facing to the viewer's RIGHT the whole time. Motion: she takes a couple of steps forward to the RIGHT, then stops in front of a large window that is ahead of her on the RIGHT; she leans her upper body forward toward the window, presses one hand flat forward as if on the glass and raises her other hand near her face, and gazes far out to the RIGHT and slightly UPWARD in big wide-eyed wonder with her mouth slightly open in awe, then turns her head to scan across the distant view. She stays facing right and does NOT turn around or look back to the left at any point. Large, lively, clearly visible motion (NOT a static pose), her long hair swinging with the movement. Plain solid white background only, no window drawn, no shadow, no floor line. Keep the EXACT same 2D cartoon art style, black outline, pastel colors and character as the reference image. Camera fixed. 9:16 vertical.
+
+■ 동작: 오른쪽으로 몇 걸음 → 멈춰서 앞(오른쪽) 큰 창으로 상체 숙여 손 짚고 먼 곳을 위로 올려다보며 감탄 → 고개 돌려 전경 훑기. 계속 오른쪽 향함(뒤돌지 않음).
+■ 규격: 8초 · 9:16 · 순백 배경(그림자·창 없음) · 그림은 지은 그대로.

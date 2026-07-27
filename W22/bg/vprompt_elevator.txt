@@ -1,0 +1,4 @@
+[BG elevator_up]
+W22/bg/bg_w22_elevator_up_v2.png  — 상승(배경 급하강)
+
+2D pastel colored-pencil storybook style, bold soft outlines, no people, no text. Inside a glass observation elevator, the camera holds steady looking out through the curved glass. STRONG FAST RISING motion: the entire city landscape below — the clustered tall buildings, streets with tiny cars, the long suspension bridge and the blue river — slides straight DOWNWARD quickly and steadily as the elevator rapidly ascends; buildings visibly shrink and drop out of the bottom, white clouds rush downward past the glass, and open blue sky opens up from the top. Fast smooth continuous upward acceleration, a strong sense of shooting up very high. In the last moment the rise eases and comes to a gentle STOP, freezing on a calm high view. Keep the EXACT same hand-drawn 2D pastel storybook art style, line work and colors as the first frame. 16:9.

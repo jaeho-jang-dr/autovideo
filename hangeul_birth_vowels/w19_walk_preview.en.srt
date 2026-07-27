@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:03,078
-Hi, everyone! This is '설악산' (Seoraksan),
+Hi, everyone! This is '설악산' [seo-rak-ssan] (Seoraksan),
 
 2
 00:00:03,078 --> 00:00:05,386
@@ -24,7 +24,7 @@ Curious how to say them clearly?
 
 7
 00:00:22,930 --> 00:00:28,677
-Today's theme is '의견 표현' (expressing opinions) and '설득' (persuasion).
+Today's theme is '의견 표현' [ui-gyeon pyo-hyeon] (expressing opinions) and '설득' [seol-deuk] (persuasion).
 
 8
 00:00:28,677 --> 00:00:34,590
@@ -40,7 +40,7 @@ organizing our thoughts as we go.
 
 11
 00:00:43,460 --> 00:00:47,226
-Remember: a good opinion needs a '근거' (reason).
+Remember: a good opinion needs a '근거' [geun-geo] (reason).
 
 12
 00:00:47,226 --> 00:00:49,630
@@ -60,7 +60,7 @@ because you can enjoy the leaves slowly.
 
 16
 00:01:18,480 --> 00:01:22,253
-After reasons, close with '따라서': 'Therefore,
+After reasons, close with '따라서' [tta-ra-seo] : 'Therefore,
 
 17
 00:01:22,253 --> 00:01:24,140

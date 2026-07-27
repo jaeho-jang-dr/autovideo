@@ -1,0 +1,2 @@
+file 'D:\Entertainments\DevEnvironment\autovideo\hangeul_birth_vowels\_tail_head.mp4'
+file 'D:\Entertainments\DevEnvironment\autovideo\hangeul_birth_vowels\_tail_tail.mp4'

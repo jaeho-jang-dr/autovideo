@@ -1,0 +1,11 @@
+[지은 우측 3/4 각도로 인사하기(wave) — 캐릭터 동영상 프롬프트]
+기준 첫프레임(가이드): W22/jieun_spring_3q_right.png  (우측 3/4, 얼굴 오른쪽으로 ~35° 회전)
+※ 정면 얼굴 노출을 줄여 아동정책 통과율↑ 목적. 와브 중에도 3/4 각도 유지(정면으로 돌지 말 것).
+※ Flow: 이 3/4 가이드 업로드 → 타일 ⋮ → 애니메이션 적용 → 아래 프롬프트 → 동영상·8s·9:16. 막히면 재시도.
+
+■ 영어 프롬프트 (Flow 붙여넣기):
+Clean flat 2D cartoon illustration, adult educational style. A clearly adult woman over 20 years old, a young adult professional female language teacher — pink cardigan, light-blue long dress, white sneakers, a small rectangular teacher's name badge pinned on the RIGHT side of her chest (a little name tag labeled 선생님), long wavy brown hair, with a warm natural skin-toned face and hands (soft light-peach skin color, NOT a white or pale ivory face) — shown in a RIGHT three-quarter view, her face and body angled about 35 degrees toward the viewer's right (as in the first frame). Keeping this same three-quarter angle the whole time (she must NOT rotate to a full-front view), she smiles warmly and raises one hand to give a friendly welcoming wave, calm mature demeanor, gentle natural body sway, hair moves slightly. Full body fully visible from head to shoes, centered, constant size. Plain solid white background only, no floor line, no shadow, no props, no text, no logos. Keep the EXACT same 2D cartoon art style, outfit, hairstyle and face as the reference image. Camera fixed. 9:16 vertical.
+
+■ 동작: 우측 3/4 각도 유지한 채 한 손 들어 친근하게 손 흔들며 환영 인사, 부드러운 몸 흔들림.
+■ 규격: 8초 · 9:16 · 순백 배경(그림자 없음) · 그림은 지은 그대로 · 3/4 각도 고정.
+■ 완성 후: 컷랑 build로 프레임 컷아웃·키770px 통일 → DB.

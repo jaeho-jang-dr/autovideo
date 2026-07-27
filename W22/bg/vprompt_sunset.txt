@@ -1,0 +1,4 @@
+[BG sunset_city]
+W22/bg/bg_w22_sunset_city_v2.png  — 도시로 밀고 들어가며 노을·불빛
+
+2D pastel colored-pencil storybook style, bold soft outlines, no people, no text. Looking out over a wide city skyline at sunset. DYNAMIC PUSH-IN: the camera glides smoothly FORWARD toward the city skyline; as it moves in, the sky deepens from pale orange to pink to soft purple, and warm building lights switch on one by one across the city, a gentle glow spreading. Smooth cinematic forward push. In the last moment it eases and FREEZES on the glowing sunset cityscape. Keep the EXACT same hand-drawn 2D pastel storybook art style, line work and colors as the first frame. 16:9.

@@ -16,7 +16,7 @@ Cuando viajas,
 
 5
 00:00:14,793 --> 00:00:19,895
-puedes sentirte mal de repente o '잃어버리다' [il-eo-beo-ri-da] (perder) algo valioso.
+puedes sentirte mal de repente o '잃어버리다' [i-reo-beo-ri-da] (perder) algo valioso.
 
 6
 00:00:19,895 --> 00:00:23,440
@@ -40,7 +40,7 @@ un adjetivo descriptivo.
 
 11
 00:00:45,205 --> 00:00:50,090
-Pon la parte delante: '배가 아파요' [bae-ga-a-pa-yo] — me duele el estómago.
+Pon la parte delante: '배가 아파요' [bae-ga a-pa-yo] — me duele el estómago.
 
 12
 00:00:53,640 --> 00:00:59,769
@@ -48,7 +48,7 @@ Si te caes o te golpeas: '다치다' [da-chi-da] (lastimarse),
 
 13
 00:00:59,769 --> 00:01:03,600
-un verbo. '다리를 다쳤어요' [da-ri-reul-da-chyeot-eo-yo] — me lastimé la pierna.
+un verbo. '다리를 다쳤어요' [da-ri-reul da-chyeo-sseo-yo] — me lastimé la pierna.
 
 14
 00:01:06,550 --> 00:01:08,348
@@ -56,11 +56,11 @@ Para síntomas leves,
 
 15
 00:01:08,348 --> 00:01:12,244
-busca una '약국' [yak-guk] (farmacia) — busca la cruz verde.
+busca una '약국' [yak-kkuk] (farmacia) — busca la cruz verde.
 
 16
 00:01:12,244 --> 00:01:15,840
-Solo di '약 주세요' [yak-ju-se-yo] — medicina, por favor.
+Solo di '약 주세요' [yak ju-se-yo] — medicina, por favor.
 
 17
 00:01:19,140 --> 00:01:22,436
@@ -68,7 +68,7 @@ Si es grave, ve a un '병원' [byeong-won] (hospital).
 
 18
 00:01:22,436 --> 00:01:27,490
-Di '병원에 가고 싶어요' [byeong-won-e-ga-go-sip-eo-yo] — quiero ir al hospital.
+Di '병원에 가고 싶어요' [byeong-wo-ne ga-go si-peo-yo] — quiero ir al hospital.
 
 19
 00:01:31,060 --> 00:01:35,302
@@ -88,7 +88,7 @@ Para delitos o peligro, llama al '112', la policía.
 
 23
 00:01:57,440 --> 00:02:01,018
-Cuando algo desaparece: '잃어버리다' [il-eo-beo-ri-da] (perder),
+Cuando algo desaparece: '잃어버리다' [i-reo-beo-ri-da] (perder),
 
 24
 00:02:01,018 --> 00:02:04,160
@@ -96,11 +96,11 @@ un verbo — y la expresión clave de hoy.
 
 25
 00:02:07,900 --> 00:02:16,130
-La frase más tranquilizadora: '도와주세요' [do-wa-ju-se-yo] — una petición cortés de '돕다' [dop-da] (ayudar).
+La frase más tranquilizadora: '도와주세요' [do-wa-ju-se-yo] — una petición cortés de '돕다' [dop-tta] (ayudar).
 
 26
 00:02:20,810 --> 00:02:25,324
-El patrón clave de hoy: '___을 잃어버렸어요' [_-_-_-eul-il-eo-beo-ryeot-eo-yo] (perdí ___).
+El patrón clave de hoy: '___을 잃어버렸어요' [eul i-reo-beo-ryeo-sseo-yo] [_-_-_-eul-il-eo-beo-ryeot-eo-yo] (perdí ___).
 
 27
 00:02:25,324 --> 00:02:28,180
@@ -108,7 +108,7 @@ Pon el objeto perdido en el espacio.
 
 28
 00:02:28,770 --> 00:02:33,754
-'지갑을 잃어버렸어요' [ji-gap-eul-il-eo-beo-ryeot-eo-yo] — perdí mi cartera.
+'지갑을 잃어버렸어요' [ji-ga-beul i-reo-beo-ryeo-sseo-yo] — perdí mi cartera.
 
 29
 00:02:33,754 --> 00:02:37,960
@@ -124,7 +124,7 @@ Añade '도와주세요' [do-wa-ju-se-yo] delante para urgencia: '도와주세�
 
 32
 00:02:48,940 --> 00:02:51,854
-Te preguntarán '어디에서 잃어버렸어요' [eo-di-e-seo-il-eo-beo-ryeot-eo-yo]?
+Te preguntarán '어디에서 잃어버렸어요' [eo-di-e-seo i-reo-beo-ryeo-sseo-yo]?
 
 33
 00:02:51,854 --> 00:02:54,544
@@ -132,11 +132,11 @@ Te preguntarán '어디에서 잃어버렸어요' [eo-di-e-seo-il-eo-beo-ryeot-e
 
 34
 00:02:54,544 --> 00:02:58,130
-Responde '지하철에서요' [ji-ha-cheol-e-seo-yo] — en el metro.
+Responde '지하철에서요' [ji-ha-cheo-re-seo-yo] — en el metro.
 
 35
 00:02:59,950 --> 00:03:05,879
-'배가 아파요' [bae-ga-a-pa-yo] — me duele el estómago; '다리를 다쳤어요' [da-ri-reul-da-chyeot-eo-yo] — me lastimé la pierna.
+'배가 아파요' [bae-ga a-pa-yo] — me duele el estómago; '다리를 다쳤어요' [da-ri-reul da-chyeo-sseo-yo] — me lastimé la pierna.
 
 36
 00:03:05,879 --> 00:03:08,420
@@ -144,7 +144,7 @@ Señala dónde te duele.
 
 37
 00:03:11,200 --> 00:03:15,115
-Sé cortés. Empieza con '실례합니다' [sil-rye-hap-ni-da] (disculpe),
+Sé cortés. Empieza con '실례합니다' [sil-lye-ham-ni-da] (disculpe),
 
 38
 00:03:15,115 --> 00:03:18,470
@@ -160,7 +160,7 @@ y dónde. Solo sé claro con esos dos.
 
 41
 00:03:33,940 --> 00:03:37,781
-Preguntarán '무슨 일이에요' [mu-seun-il-i-e-yo]? — ¿Qué pasó?
+Preguntarán '무슨 일이에요' [mu-seun i-ri-e-yo]? — ¿Qué pasó?
 
 42
 00:03:37,781 --> 00:03:39,750
@@ -188,19 +188,19 @@ Aunque tengas prisa, ve despacio.
 
 48
 00:04:04,082 --> 00:04:09,461
-Si no entienden: '다시 말해 주세요' [da-si-mal-hae-ju-se-yo] — repítalo, por favor.
+Si no entienden: '다시 말해 주세요' [da-si mal-hae ju-se-yo] — repítalo, por favor.
 
 49
 00:04:09,461 --> 00:04:14,750
-Da tu ubicación: '여기는 이태원역 근처예요' [yeo-gi-neun-i-tae-won-yeok-geun-cheo-ye-yo] — estoy cerca de la estación de Itaewon.
+Da tu ubicación: '여기는 이태원역 근처예요' [yeo-gi-neun i-tae-wo-nyeok geun-cheo-ye-yo] — estoy cerca de la estación de Itaewon.
 
 50
 00:04:15,200 --> 00:04:19,575
-Ahora un juego de rol. En la farmacia, di '배가 아파요' [bae-ga-a-pa-yo],
+Ahora un juego de rol. En la farmacia, di '배가 아파요' [bae-ga a-pa-yo],
 
 51
 00:04:19,575 --> 00:04:24,234
-'소화제 주세요' [so-hwa-je-ju-se-yo] — me duele el estómago; medicina digestiva,
+'소화제 주세요' [so-hwa-je ju-se-yo] — me duele el estómago; medicina digestiva,
 
 52
 00:04:24,234 --> 00:04:24,900
@@ -208,7 +208,7 @@ por favor.
 
 53
 00:04:27,990 --> 00:04:33,048
-En objetos perdidos: '가방을 잃어버렸어요. 도와주세요' [ga-bang-eul-il-eo-beo-ryeot-eo-yo-.-do-wa-ju-se-yo].
+En objetos perdidos: '가방을 잃어버렸어요. 도와주세요' [ga-bang-eul i-reo-beo-ryeo-sseo-yo do-wa-ju-se-yo].
 
 54
 00:04:33,048 --> 00:04:36,460
@@ -224,7 +224,7 @@ En Corea, ayudar en una crisis es natural.
 
 57
 00:04:50,160 --> 00:04:53,549
-Después de recibir ayuda, di '고맙습니다' [go-map-seup-ni-da] — gracias.
+Después de recibir ayuda, di '고맙습니다' [go-map-sseum-ni-da] — gracias.
 
 58
 00:04:53,549 --> 00:04:56,090
@@ -232,11 +232,11 @@ Un pequeño gracias significa mucho.
 
 59
 00:05:00,020 --> 00:05:06,010
-Hoy aprendimos '아프다' [a-peu-da], '다치다' [da-chi-da], '잃어버리다' [il-eo-beo-ri-da],
+Hoy aprendimos '아프다' [a-peu-da], '다치다' [da-chi-da], '잃어버리다' [i-reo-beo-ri-da],
 
 60
 00:05:06,010 --> 00:05:13,074
-pedimos ayuda con '___을 잃어버렸어요' [_-_-_-eul-il-eo-beo-ryeot-eo-yo] y '도와주세요' [do-wa-ju-se-yo],
+pedimos ayuda con '___을 잃어버렸어요' [eul i-reo-beo-ryeo-sseo-yo] [_-_-_-eul-il-eo-beo-ryeot-eo-yo] y '도와주세요' [do-wa-ju-se-yo],
 
 61
 00:05:13,074 --> 00:05:18,910

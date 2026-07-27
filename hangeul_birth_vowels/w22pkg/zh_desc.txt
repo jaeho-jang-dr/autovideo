@@ -1,0 +1,20 @@
+从高高的天空展望台俯瞰城市，学习用韩语讲述去过的「여행 경험(旅行经历)」和未来的「계획(计划)」。
+
+先掌握旅行必备词汇 —「여행(旅行)」「경험(经历)」「명소(名胜)」「예약(预约)」「숙소(住宿)」「계획(计划)」。然后是今天的两个句型：去过的地方用「가 본 적이 있어요」，没去过的用「가 본 적이 없어요」。未来的打算用「할 계획이에요」— 只要把想做的事放在前面，就是「갈 계획이에요(打算去)」「등산할 계획이에요(打算爬山)」「예약할 계획이에요(打算预订)」。最后练习实战对话：「어디에 가 본 적이 있어요?」→「언제 갈 계획이에요?」
+
+欢迎初级和中级学习者。为只用韩文学习的朋友，字幕中标注了实际发音的罗马音(含连音)。
+
+📚 核心表达
+여행 · 경험 · 명소 · 예약 · 숙소 · 계획 · 가 본 적이 있어요 · 가 본 적이 없어요 · 두 번 가 본 적이 있어요 · 할 계획이에요 · 갈 계획이에요 · 등산할 계획이에요 · 예약할 계획이에요 · 언제 갈 계획이에요? · 제주도 · 부산
+
+⏱️ Chapters
+0:00 Arrival · today's two patterns
+0:42 Travel vocabulary
+2:10 Past experience: 가 본 적이 있어요
+3:11 Future plans: 할 계획이에요
+4:05 Real conversation · review · wrap-up
+
+🤖 제작 안내 / AI note
+배경 이미지는 Google Gemini(Nano Banana), 배경 영상은 Google Veo·Flow로 생성했고, 캐릭터 애니메이션은 자체 엔진, 나레이션은 Microsoft Azure TTS(선희·Emma)로 만들었습니다. Backgrounds by Google Gemini and Veo/Flow, character animation by our own engine, narration by Azure TTS. AI-generated and AI-assisted content.
+
+🌐 drjayed.com

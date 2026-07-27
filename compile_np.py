@@ -120,11 +120,11 @@ try:
                 _t = _pron.process_line(_t)
                 # ★고유명사 이중 대괄호 교정: '한라산' [han-ra-san] [Hallasan] → … (Hallasan)
                 #   자막 원칙 = 단어 '한글' [로마자] (뜻). 뜻/영문명은 소괄호로.
-                _t = re.sub(r"(\[[a-z][a-z\-]*\])\s*\[([A-Z][A-Za-z]*)\]", r"\1 (\2)", _t)
+                _t = re.sub(r"(\[[a-z][a-z\- ]*\])\s*\[([A-Z][A-Za-z]*)\]", r"\1 (\2)", _t)
                 _t = re.sub(r"\s+\)", ")", re.sub(r"\(\s+", "(", _t))   # "( " / " )" 정리
                 _lines.append(_t)
         open(_s, "w", encoding="utf-8").write("\n".join(_lines) + "\n")
-        _n = len(re.findall(r"\[[a-z\-]+\]", open(_s, encoding="utf-8").read()))
+        _n = len(re.findall(r"\[[a-z\- ]+\]", open(_s, encoding="utf-8").read()))
         log(f"[자막 발음기호] {os.path.basename(_s)}: [로마자] {_n}개")
 except Exception as _e:
     log(f"[경고] 발음기호 후처리 실패 — 자막 원칙 위반 위험: {_e}")

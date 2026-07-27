@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:03,078
-Hi, everyone! This is '설악산' [seol-ak-san] (Seoraksan),
+Hi, everyone! This is '설악산' [seo-rak-ssan] (Seoraksan),
 
 2
 00:00:03,078 --> 00:00:05,386
@@ -24,7 +24,7 @@ Curious how to say them clearly?
 
 7
 00:00:22,740 --> 00:00:28,620
-Today's theme is '의견 표현' [ui-gyeon-pyo-hyeon] (expressing opinions) and '설득' [seol-deuk] (persuasion).
+Today's theme is '의견 표현' [ui-gyeon pyo-hyeon] (expressing opinions) and '설득' [seol-deuk] (persuasion).
 
 8
 00:00:28,620 --> 00:00:34,670
@@ -60,7 +60,7 @@ Ready?
 
 16
 00:01:03,970 --> 00:01:08,150
-The most common opener: '제 생각에는' [je-saeng-gak-e-neun] (in my opinion).
+The most common opener: '제 생각에는' [je saeng-ga-ge-neun] (in my opinion).
 
 17
 00:01:08,150 --> 00:01:10,880
@@ -80,11 +80,11 @@ To state a claim clearly,
 
 21
 00:01:27,148 --> 00:01:30,506
-use '저는 ~다고 생각해요' [jeo-neun-~-da-go-saeng-gak-hae-yo] (I think ~).
+use '저는 ~다고 생각해요' [jeo-neun da-go saeng-ga-kae-yo] (I think ~).
 
 22
 00:01:30,506 --> 00:01:33,640
-'생각하다' [saeng-gak-ha-da] (to think) is a verb.
+'생각하다' [saeng-ga-ka-da] (to think) is a verb.
 
 23
 00:01:40,260 --> 00:01:45,533
@@ -96,7 +96,7 @@ It takes your breath away, right?
 
 25
 00:01:50,740 --> 00:01:58,610
-To agree, use '동의하다' [dong-ui-ha-da]. '저도 그렇게 생각해요' [jeo-do-geu-reot-ge-saeng-gak-hae-yo] or '동의해요' [dong-ui-hae-yo].
+To agree, use '동의하다' [dong-ui-ha-da]. '저도 그렇게 생각해요' [jeo-do geu-reo-ke saeng-ga-kae-yo] or '동의해요' [dong-ui-hae-yo].
 
 26
 00:02:04,370 --> 00:02:06,986
@@ -144,11 +144,11 @@ Today's core pattern — claim and reason in one: '저는 ___다고 생각해요
 
 37
 00:03:08,130 --> 00:03:17,884
-'-다고' [--da-go] is indirect quotation: '예쁘다' [ye-ppeu-da] becomes '예쁘다고' [ye-ppeu-da-go],
+'-다고' [--da-go] is indirect quotation: '예쁘다' becomes '예쁘다고',
 
 38
 00:03:17,884 --> 00:03:21,590
-'좋다' [jot-da] becomes '좋다고' [jot-da-go].
+'좋다' [jo-ta] becomes '좋다고' [jo-ta-go].
 
 39
 00:03:28,740 --> 00:03:30,452
@@ -280,7 +280,7 @@ If a reason resonates,
 
 71
 00:06:06,264 --> 00:06:10,280
-follow with '저도 그렇게 생각해요' [jeo-do-geu-reot-ge-saeng-gak-hae-yo] (I think so too).
+follow with '저도 그렇게 생각해요' [jeo-do geu-reo-ke saeng-ga-kae-yo] (I think so too).
 
 72
 00:06:14,260 --> 00:06:17,231
@@ -292,7 +292,7 @@ but I think ~'. Then it's a conversation.
 
 74
 00:06:25,410 --> 00:06:30,694
-Curious? Ask '왜 그렇게 생각하세요' [wae-geu-reot-ge-saeng-gak-ha-se-yo]? (Why do you think so?
+Curious? Ask '왜 그렇게 생각하세요' [wae geu-reo-ke saeng-ga-ka-se-yo]? (Why do you think so?
 
 75
 00:06:30,694 --> 00:06:30,910
@@ -380,7 +380,7 @@ The summit at last!
 
 96
 00:08:01,490 --> 00:08:05,808
-Today we learned to open with '제 생각에는' [je-saeng-gak-e-neun],
+Today we learned to open with '제 생각에는' [je saeng-ga-ge-neun],
 
 97
 00:08:05,808 --> 00:08:10,680

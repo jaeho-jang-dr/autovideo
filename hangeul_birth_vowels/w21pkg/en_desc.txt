@@ -1,0 +1,20 @@
+Walk through Seoul's '성수동' (Seongsu-dong) with Madam J and learn how to describe a person's looks (외모) and personality (성격) in Korean.
+
+Talk about height (키가 크다/작다), hair (머리가 길다/짧다), and use '예쁘다' (pretty), '잘생기다' (handsome), '멋있다' (cool), '날씬하다' (slim) for looks — and '친절하다' (kind), '착하다' (good-hearted), '재미있다' (fun), '조용하다' (quiet), '활발하다' (lively), '똑똑하다' (smart) for personality. Then today's key point: the connective '-고' that joins two descriptions in one sentence. Just drop '다' from the base form and add '고' — '크다' becomes '크고' — to make '키가 크고 친절해요' (tall and kind). Finish by introducing a friend with everything you learned!
+
+Great for beginners and intermediate learners. Romanization is included in the subtitles for those studying with Korean only.
+
+📚 Key expressions
+외모 · 성격 · 형용사 · 키가 크다 · 키가 작다 · 머리가 길다 · 머리가 짧다 · 예쁘다 · 잘생기다 · 멋있다 · 날씬하다 · 안경을 쓰다 · 친절하다 · 착하다 · 재미있다 · 조용하다 · 활발하다 · 똑똑하다 · -고 · 키가 크고 친절해요 · 머리가 길고 예뻐요 · 재미있고 활발해요 · 안녕히 가세요
+
+⏱️ 챕터 / Chapters
+0:00 성수동 도착 · 오늘의 인물 묘사 수업
+0:49 외모 표현 (키 · 머리 · 예쁘다 · 잘생기다 · 멋있다 · 날씬 · 안경)
+2:33 성격 표현 (친절 · 착하다 · 재미있다 · 조용 · 활발 · 똑똑)
+3:57 '-고'로 잇기 (키가 크고 친절해요)
+6:01 친구 소개 · 복습 · 마무리
+
+🤖 제작 안내 / AI note
+배경 이미지는 Google Gemini(Nano Banana)로 생성했고, 캐릭터 애니메이션은 자체 엔진, 나레이션은 Microsoft Azure TTS(선희·Emma)로 만들었습니다. Backgrounds by Google Gemini, character animation by our own engine, narration by Azure TTS.
+
+🌐 drjayed.com

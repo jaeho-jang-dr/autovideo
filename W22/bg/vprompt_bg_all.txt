@@ -1,0 +1,24 @@
+========================================================
+W22 배경 동영상 프롬프트 (다이나믹 무브 → 정지 스틸)
+공통: 동영상 · 8s · 16:9 · 사람/글자 없음 · 원본 화풍 유지 · 마지막에 정지(freeze)
+사용: 해당 v2 이미지 ⋮ → 애니메이션 적용 → 프롬프트 → 동영상·8s·16:9
+※ 크롬 세션 1~2개마다 재로그인(fail 회피)
+========================================================
+
+[BG1 elevator_up] 기준: W22/bg/bg_w22_elevator_up_v2.png  — 상승(배경 급하강)
+2D pastel colored-pencil storybook style, bold soft outlines, no people, no text. Inside a glass observation elevator, the camera holds steady looking out through the curved glass. STRONG FAST RISING motion: the entire city landscape below — the clustered tall buildings, streets with tiny cars, the long suspension bridge and the blue river — slides straight DOWNWARD quickly and steadily as the elevator rapidly ascends; buildings visibly shrink and drop out of the bottom, white clouds rush downward past the glass, and open blue sky opens up from the top. Fast smooth continuous upward acceleration, a strong sense of shooting up very high. In the last moment the rise eases and comes to a gentle STOP, freezing on a calm high view. Keep the EXACT same hand-drawn 2D pastel storybook art style, line work and colors as the first frame. 16:9.
+
+[BG2 sky_window] 기준: W22/bg/bg_w22_sky_window_v2.png  — 먼 다리가 확 줌인
+2D pastel colored-pencil storybook style, bold soft outlines, no people, no text. Looking out through a big glass panoramic window at a wide daytime landscape. DYNAMIC ZOOM-IN: the small faraway suspension bridge in the distance is rapidly pulled forward — the camera pushes toward it so the bridge grows quickly from tiny to large until the whole bridge and its towers fill the view, the blue bay and green hills sweeping past on the sides, a few clouds parting. Fast smooth dramatic push-in. In the last moment the motion eases and FREEZES on the close full view of the bridge. Keep the EXACT same hand-drawn 2D pastel storybook art style, line work and colors as the first frame. 16:9.
+
+[BG3 deck_interior] 기준: W22/bg/bg_w22_deck_interior.png  — 차분(설명용, 미세)
+2D pastel colored-pencil storybook style, bold soft outlines, no people, no text. A calm observation-deck interior with wooden benches, potted plants and round warm lights. GENTLE subtle motion only: the warm light slowly brightens a touch, a plant leaf sways slightly, faint dust motes drift in a soft sunbeam. Very calm and steady, suitable behind a talking scene. Settles into a still. Keep the EXACT same hand-drawn 2D pastel storybook art style, line work and colors as the first frame. 16:9.
+
+[BG4 sunset_city] 기준: W22/bg/bg_w22_sunset_city_v2.png  — 도시로 밀고 들어가며 노을·불빛
+2D pastel colored-pencil storybook style, bold soft outlines, no people, no text. Looking out over a wide city skyline at sunset. DYNAMIC PUSH-IN: the camera glides smoothly FORWARD toward the city skyline; as it moves in, the sky deepens from pale orange to pink to soft purple, and warm building lights switch on one by one across the city, a gentle glow spreading. Smooth cinematic forward push. In the last moment it eases and FREEZES on the glowing sunset cityscape. Keep the EXACT same hand-drawn 2D pastel storybook art style, line work and colors as the first frame. 16:9.
+
+[BG5 glass_floor] 기준: W22/bg/bg_w22_glass_floor_v2.png  — 아래 도시가 확 솟구쳐 올라옴(고소감)
+2D pastel colored-pencil storybook style, bold soft outlines, no people, no text. Looking straight DOWN through a transparent glass observation floor at a city far below. DYNAMIC VERTIGO ZOOM: the tiny city far below rushes UP toward the viewer quickly (fast dolly/zoom toward the ground) — the streets, buildings and cars grow rapidly larger, a slight dizzying sway, thin clouds whipping past. Then the zoom eases and FREEZES on a closer overhead view of the city below. Keep the EXACT same hand-drawn 2D pastel storybook art style, line work and colors as the first frame. 16:9.
+
+[BG6 night_stars] 기준: W22/bg/bg_w22_night_stars_v2.png  — 도시불빛에서 별하늘로 팬업
+2D pastel colored-pencil storybook style, bold soft outlines, no people, no text. A night observation-deck view, city lights glittering below and a night sky above. DYNAMIC TILT-UP: the camera tilts UP from the glittering city lights toward the wide night sky; as it rises, more and more stars appear and twinkle brighter, one soft shooting star crosses, and a distant landmark tower glows warmly. Smooth upward tilt. In the last moment it eases and FREEZES on the star-filled night sky. Keep the EXACT same hand-drawn 2D pastel storybook art style, line work and colors as the first frame. 16:9.

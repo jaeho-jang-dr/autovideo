@@ -192,6 +192,26 @@ def scene_bg(scene):
     return base
 
 
+_BGVID = {}
+def bg_video_frame(path, tt, dur):
+    """배경 동영상 프레임(t) — 영상 끝나면 마지막 프레임에서 정지(freeze). W×H 커버 + 하단 스크림."""
+    if path not in _BGVID:
+        from moviepy import VideoFileClip
+        _BGVID[path] = VideoFileClip(path)
+    clip = _BGVID[path]
+    ts = max(0.0, min(tt, clip.duration - 0.05))     # 영상 끝 이후 = 마지막 프레임 정지
+    im = Image.fromarray(clip.get_frame(ts)).convert("RGB")
+    s = max(W / im.width, H / im.height)
+    nw, nh = int(im.width * s + 0.5), int(im.height * s + 0.5)
+    im = im.resize((nw, nh), Image.LANCZOS).crop(((nw - W) // 2, (nh - H) // 2, (nw - W) // 2 + W, (nh - H) // 2 + H))
+    base = im.convert("RGBA")
+    scr = np.zeros((H, W, 4), np.uint8)
+    yy = np.linspace(0, 1, H)[:, None]
+    scr[..., 3] = np.broadcast_to((np.clip((yy - 0.62) / 0.38, 0, 1) ** 1.4 * 90).astype(np.uint8), (H, W))
+    base.alpha_composite(Image.fromarray(scr, "RGBA"))
+    return base
+
+
 def resolve_path(fp):
     for cand in (os.path.join(ROOT, fp), os.path.join(ROOT, "assets", fp), fp):
         if os.path.exists(cand):
@@ -231,7 +251,7 @@ def load_scenes(lang="ko"):
             draw_font=spec.get("draw_font"), draw_dur=spec.get("draw_dur"),
             draw_text=spec.get("draw_text"), draw_align=spec.get("draw_align"),
             char_mode=spec.get("char_mode"), char_key=spec.get("char_key"),
-            anim_seq=spec.get("anim_seq"),
+            anim_seq=spec.get("anim_seq"), bg_video=spec.get("bg_video"),
             cam=spec.get("cam") or CAM_MODES[(s["seq"] - 1) % len(CAM_MODES)], objs=objs))
     con.close()
     if scenes:
@@ -465,7 +485,10 @@ def seq_state(tt, dur, seq="teacher_board"):
             local = min(1.0, max(0.0, (p - acc) / max(1e-6, d)))
             x = b["x_from"] + (b["x_to"] - b["x_from"]) * _smooth(local)
             cyc = b["cycle"]
-            if len(cyc) > 1:
+            if len(cyc) > 1 and b.get("oneshot"):
+                # ★동작 동영상: 시퀀스를 이 비트 동안 처음~끝 1회 재생(순환 X)
+                ci = min(len(cyc) - 1, int(local * len(cyc)))
+            elif len(cyc) > 1:
                 # ★걷기 순환: WALK_STRIDE_SEC 지정 시 '1 스트라이드(cycle 전체)=그 초'로 절대시간 재생
                 #   (미지정=기존 동작: 비트당 6순환). 사장님 지시 2026-07-23: 1스트라이드=1.08초.
                 _stride = os.environ.get("WALK_STRIDE_SEC", "").strip()
@@ -545,7 +568,7 @@ def draw_subtitle(base, text):
     f = get_font(FONT_BD, 37)
     lines = wrap(d, text, f, W - 150)
     lh = 50
-    by = H - lh * len(lines) - 30
+    by = H - lh * len(lines) - 85
     for ln in lines:
         tw = d.textlength(ln, font=f)
         x = (W - tw) / 2
@@ -604,10 +627,14 @@ def subtitle_text(scene, tt, final):
 def compose(scene, t=None, lang="ko", overlay=True):
     """t=None -> static final frame (preview). else animated frame at time t.
     overlay=False -> 자막/캡션 생략(카메라 무빙 뒤에 따로 얹기 위함)."""
-    base = scene_bg(scene)
     dur = scene["dur"]
     final = t is None
     tt = dur if final else t
+    _bgv = scene.get("bg_video")
+    if _bgv:
+        base = bg_video_frame(resolve_path(_bgv) or _bgv, tt, dur)
+    else:
+        base = scene_bg(scene)
     sched = scene.get("sound_sched") or []
     gestures = scene.get("gestures")
     for o in sorted(scene["objs"], key=lambda x: x["z"]):

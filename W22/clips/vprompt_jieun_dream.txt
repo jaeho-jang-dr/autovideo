@@ -1,0 +1,10 @@
+[지은 꿈꾸듯 올려다봄(dream_gaze) — 큰 동작 · 우측 3/4]
+기준 첫프레임(가이드): W22/jieun_teacher_3q_right.png  (우측 3/4, Teacher JY 명찰)
+※ 미래 계획 상상하듯 하늘을 크게 올려다보는 꿈꾸는 동작. Teacher JY 명찰 + 20세 이상 + 살색 얼굴 + 지은 동일.
+※ Flow: 가이드 ⋮ → 애니메이션 적용 → 동영상·8s·9:16.
+
+■ 영어 프롬프트 (Flow 붙여넣기):
+Clean flat 2D cartoon illustration, adult educational style. The SAME clearly adult woman over 20 years old, a young adult female teacher — identical face, identical long wavy brown hair, identical pink cardigan over a light-blue long dress, identical white sneakers, the same small white rectangular name badge reading 'Teacher JY' on the LEFT side of her chest, with ALL her visible skin — face, neck, arms, hands and legs — rendered in the SAME warm natural skin tone (soft light-peach skin color, NOT white, NOT pale ivory, NOT gray) — shown in a RIGHT three-quarter view. BIG dreamy gesture: she clasps her hands together near her chest, rises slightly, then leans back and tilts her head far up toward the sky, sweeping one arm up and open wide toward the sky, with a big hopeful dreamy smile and sparkling eyes as if imagining a future trip; she gently spins/sways her upper body and her long hair flows with the motion. Large, lively, clearly visible motion (NOT a static pose). Plain solid white background only, no shadow, no floor line. Keep the EXACT same 2D cartoon art style, black outline, pastel colors and character as the reference image. Camera fixed. 9:16 vertical.
+
+■ 동작: 두 손 모아 가슴 앞 → 몸 젖히며 하늘 크게 올려다봄 → 한 팔 하늘로 크게 펼침, 상체 살랑 회전·머리 흩날림(꿈꾸는 감성).
+■ 규격: 8초 · 9:16 · 순백 배경(그림자 없음) · 그림은 지은 그대로.

@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "flow-ultra": {
+      "command": "python",
+      "args": ["mcp_flow_ultra.py"],
+      "cwd": "D:\\Entertainments\\DevEnvironment\\autovideo"
+    }
+  }
+}

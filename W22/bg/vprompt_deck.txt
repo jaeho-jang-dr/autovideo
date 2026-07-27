@@ -1,0 +1,4 @@
+[BG deck_interior]
+W22/bg/bg_w22_deck_interior.png  — 차분(설명용, 미세)
+
+2D pastel colored-pencil storybook style, bold soft outlines, no people, no text. A calm observation-deck interior with wooden benches, potted plants and round warm lights. GENTLE subtle motion only: the warm light slowly brightens a touch, a plant leaf sways slightly, faint dust motes drift in a soft sunbeam. Very calm and steady, suitable behind a talking scene. Settles into a still. Keep the EXACT same hand-drawn 2D pastel storybook art style, line work and colors as the first frame. 16:9.

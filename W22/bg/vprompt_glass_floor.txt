@@ -1,0 +1,4 @@
+[BG glass_floor]
+W22/bg/bg_w22_glass_floor_v2.png  — 아래 도시가 확 솟구쳐 올라옴(고소감)
+
+2D pastel colored-pencil storybook style, bold soft outlines, no people, no text. Looking straight DOWN through a transparent glass observation floor at a city far below. DYNAMIC VERTIGO ZOOM: the tiny city far below rushes UP toward the viewer quickly (fast dolly/zoom toward the ground) — the streets, buildings and cars grow rapidly larger, a slight dizzying sway, thin clouds whipping past. Then the zoom eases and FREEZES on a closer overhead view of the city below. Keep the EXACT same hand-drawn 2D pastel storybook art style, line work and colors as the first frame. 16:9.

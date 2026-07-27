@@ -1,0 +1,17 @@
+[지은 오른편 걷기 — 캐릭터 동영상 프롬프트]  (기준 첫프레임: W22/jieun_spring_side_right.png)
+
+■ 사용법: Flow에서 이 우측면 이미지 타일 → 더보기(⋮) → "애니메이션 적용" → 아래 영어 프롬프트 붙여넣기 → 동영상·8s·9:16 → 생성.
+   (인물이라 아동정책 차단 위험 있음 → 프롬프트에 "adult woman in her twenties" 넣어 통과 시도. 막히면 표정/문구 더 성인풍으로 조정.)
+
+■ 영어 프롬프트 (Flow 붙여넣기):
+2D flat cartoon storybook illustration, the SAME adult woman in her twenties from the first frame — pink cardigan, light-blue long sleeveless dress, white sneakers, a small rectangular teacher's name badge pinned on the RIGHT side of her chest (a little name tag labeled 선생님), long wavy brown hair, with a warm natural skin-toned face and hands (soft light-peach skin color, NOT a white or pale ivory face) — shown in clean right-side profile. She walks steadily to the RIGHT with a natural smooth walk cycle: the legs stride forward one after the other with clear knee bend, the arms swing gently back and forth, the long hair sways and bounces lightly with each step, the skirt hem swings naturally. Her whole body stays fully visible from the top of the head to the shoes, centered, at a constant size. Plain solid white background only, NO floor line, NO shadow, no props, no text, no logos. Keep the EXACT same hand-drawn 2D cartoon art style, black outline, pastel colors, face and body proportions as the first frame. Camera fixed, steady continuous side-view walking. 9:16 vertical.
+
+■ 핵심(걷기 컷아웃용):
+- 완전 측면, 오른쪽으로 걷는 자연스러운 워크 사이클(무릎 굽힘·팔 스윙·머리/치마 흔들림)
+- 전신 항상 프레임 안(머리~신발), 크기 일정, 카메라 고정
+- 순백 배경·그림자 없음(투명 컷아웃 쉽게)
+- 원본 화풍·의상·얼굴·비율 100% 유지
+
+■ 규격: 8초 · 9:16 · 순백 배경.
+
+■ 다음 처리(우리 몫): 24fps로 뽑아 한 스트라이드에서 8컷 균등 추출 → 투명 컷아웃 → 오른편 걷기 순환. 좌우 반전=왼편 걷기.

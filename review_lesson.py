@@ -77,6 +77,7 @@ HTML = r"""<!doctype html><html lang=ko><head><meta charset=utf-8>
 .right{flex:1;display:flex;flex-direction:column;border-left:1px solid #e2e8f0;background:#ffffff;min-width:360px}
 h1{font-size:15px;margin:0 0 8px;color:#15803d;font-weight:700}
 video{width:100%;background:#f1f5f9;border-radius:10px;max-height:58vh}
+video::cue{background:rgba(0,0,0,0.75);color:#ffffff;font-size:26px;line-height:1.35;font-family:'Malgun Gothic',sans-serif}
 .tl{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;overflow-y:auto;max-height:28vh}
 .chip{font-size:11px;padding:4px 7px;border-radius:7px;background:#f1f5f9;color:#334155;cursor:pointer;border:1px solid #e2e8f0;white-space:nowrap;max-width:230px;overflow:hidden;text-overflow:ellipsis}
 .chip:hover{background:#e2e8f0} .chip.cur{background:#22c55e;color:#ffffff;font-weight:700}

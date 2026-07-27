@@ -1,0 +1,4 @@
+[BG night_stars]
+W22/bg/bg_w22_night_stars_v2.png  — 도시불빛에서 별하늘로 팬업
+
+2D pastel colored-pencil storybook style, bold soft outlines, no people, no text. A night observation-deck view, city lights glittering below and a night sky above. DYNAMIC TILT-UP: the camera tilts UP from the glittering city lights toward the wide night sky; as it rises, more and more stars appear and twinkle brighter, one soft shooting star crosses, and a distant landmark tower glows warmly. Smooth upward tilt. In the last moment it eases and FREEZES on the star-filled night sky. Keep the EXACT same hand-drawn 2D pastel storybook art style, line work and colors as the first frame. 16:9.

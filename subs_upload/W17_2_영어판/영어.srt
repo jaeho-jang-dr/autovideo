@@ -4,7 +4,7 @@ Hello, everyone!
 
 2
 00:00:01,351 --> 00:00:10,129
-This is '불국사' [bul-guk-sa] (Bulguksa) Temple in '경주' [gyeong-ju] (Gyeongju) — a beautiful temple famous as a World Heritage site.
+This is '불국사' [bul-guk-ssa] (Bulguksa) Temple in '경주' [gyeong-ju] (Gyeongju) — a beautiful temple famous as a World Heritage site.
 
 3
 00:00:10,129 --> 00:00:14,350
@@ -24,7 +24,7 @@ Those expressions are today's stars.
 
 7
 00:00:31,470 --> 00:00:37,554
-Today we'll learn '반말' [ban-mal] (casual speech) and '축약어' [chuk-yak-eo] (shortened words).
+Today we'll learn '반말' [ban-mal] (casual speech) and '축약어' [chu-gya-geo] (shortened words).
 
 8
 00:00:37,554 --> 00:00:41,550
@@ -60,11 +60,11 @@ Are you all ready?
 
 16
 00:01:11,830 --> 00:01:20,010
-Korean speech splits into two: '존댓말' [jon-daet-mal] (polite speech) and '반말' [ban-mal] (casual speech).
+Korean speech splits into two: '존댓말' [jon-daen-mal] (polite speech) and '반말' [ban-mal] (casual speech).
 
 17
 00:01:24,280 --> 00:01:29,348
-'존댓말' [jon-daet-mal] (polite speech) is for elders and people you just met.
+'존댓말' [jon-daen-mal] (polite speech) is for elders and people you just met.
 
 18
 00:01:29,348 --> 00:01:33,740
@@ -72,7 +72,7 @@ Korean speech splits into two: '존댓말' [jon-daet-mal] (polite speech) and '�
 
 19
 00:01:35,790 --> 00:01:43,492
-The secret is simple: just drop the ending '요' [yo] (yo) or '습니다' [seup-ni-da] (seumnida),
+The secret is simple: just drop the ending '요' [yo] (yo) or '습니다' [seum-ni-da] (seumnida),
 
 20
 00:01:43,492 --> 00:01:47,450
@@ -80,11 +80,11 @@ and it becomes casual. Let's compare!
 
 21
 00:01:49,900 --> 00:01:54,262
-First: '밥 먹었어요' [bap-meok-eot-eo-yo]? (Have you eaten?).
+First: '밥 먹었어요' [bap meo-geo-sseo-yo]? (Have you eaten?).
 
 22
 00:01:54,262 --> 00:02:00,320
-Drop the '요' [yo], and to a friend it becomes '밥 먹었어' [bap-meok-eot-eo]?.
+Drop the '요' [yo], and to a friend it becomes '밥 먹었어' [bap meo-geo-sseo]?.
 
 23
 00:02:04,270 --> 00:02:08,195
@@ -96,19 +96,19 @@ Among close friends,
 
 25
 00:02:10,109 --> 00:02:14,130
-we drop the '요' [yo] and casually ask '밥 먹었어' [bap-meok-eot-eo]?.
+we drop the '요' [yo] and casually ask '밥 먹었어' [bap meo-geo-sseo]?.
 
 26
 00:02:18,710 --> 00:02:23,432
-Second: '어디 가요' [eo-di-ga-yo]? (Where are you going?).
+Second: '어디 가요' [eo-di ga-yo]? (Where are you going?).
 
 27
 00:02:23,432 --> 00:02:28,500
-Among friends, drop the '요' [yo] and ask '어디 가' [eo-di-ga]?.
+Among friends, drop the '요' [yo] and ask '어디 가' [eo-di ga]?.
 
 28
 00:02:31,500 --> 00:02:35,854
-'어디 가요' [eo-di-ga-yo]? shortens to '어디 가' [eo-di-ga]?. The shorter it gets,
+'어디 가요' [eo-di ga-yo]? shortens to '어디 가' [eo-di ga]?. The shorter it gets,
 
 29
 00:02:35,854 --> 00:02:40,120
@@ -140,7 +140,7 @@ Same when parting.
 
 36
 00:03:09,743 --> 00:03:17,390
-'잘 가요' [jal-ga-yo] (Goodbye) becomes '잘 가' [jal-ga] to a friend without the '요' [yo].
+'잘 가요' [jal ga-yo] (Goodbye) becomes '잘 가' [jal ga] to a friend without the '요' [yo].
 
 37
 00:03:20,200 --> 00:03:22,728
@@ -164,7 +164,7 @@ yet sounds very rude to elders or strangers.
 
 42
 00:03:43,660 --> 00:03:46,637
-Next, let's look at '축약어' [chuk-yak-eo] (abbreviation),
+Next, let's look at '축약어' [chu-gya-geo] (abbreviation),
 
 43
 00:03:46,637 --> 00:03:51,720
@@ -172,7 +172,7 @@ the fun shortened words you often see in messages and on social media.
 
 44
 00:03:55,410 --> 00:03:57,969
-'축약어' [chuk-yak-eo] (abbreviation) isn't standard,
+'축약어' [chu-gya-geo] (abbreviation) isn't standard,
 
 45
 00:03:57,969 --> 00:04:03,230
@@ -192,7 +192,7 @@ Let's compare the full words with their short forms.
 
 49
 00:04:15,680 --> 00:04:20,015
-'생일 축하해' [saeng-il-chuk-ha-hae] (Happy birthday) shortens to '생축' [saeng-chuk].
+'생일 축하해' [saeng-il chu-ka-hae] (Happy birthday) shortens to '생축' [saeng-chuk].
 
 50
 00:04:20,015 --> 00:04:23,140
@@ -212,7 +212,7 @@ Cafés use it too.
 
 54
 00:04:40,263 --> 00:04:44,013
-'아이스 아메리카노' [a-i-seu-a-me-ri-ka-no] (iced americano) is long,
+'아이스 아메리카노' [a-i-seu a-me-ri-ka-no] (iced americano) is long,
 
 55
 00:04:44,013 --> 00:04:47,560
@@ -220,7 +220,7 @@ so people often shorten it to '아아' [a-a].
 
 56
 00:04:50,750 --> 00:04:56,243
-Order '아아 주세요' [a-a-ju-se-yo] at a café and you'll sound truly Korean.
+Order '아아 주세요' [a-a ju-se-yo] at a café and you'll sound truly Korean.
 
 57
 00:04:56,243 --> 00:04:58,240
@@ -228,7 +228,7 @@ The hot one is '뜨아' [tteu-a]!
 
 58
 00:05:03,100 --> 00:05:08,009
-How about '진짜 재미있다' [jin-jja-jae-mi-it-da] (really fun)?
+How about '진짜 재미있다' [jin-jja jae-mi-it-tta] (really fun)?
 
 59
 00:05:08,009 --> 00:05:15,150
@@ -292,7 +292,7 @@ This '섀도잉' [syae-do-ing] (shadowing) practice is very effective.
 
 74
 00:06:24,640 --> 00:06:33,380
-Now let's practice a real phone call with a close friend using the casual speech we learned — here at the peaceful '석굴암' [seok-gul-am] (Seokguram).
+Now let's practice a real phone call with a close friend using the casual speech we learned — here at the peaceful '석굴암' [seok-kku-ram] (Seokguram).
 
 75
 00:06:36,250 --> 00:06:36,593
@@ -304,7 +304,7 @@ listen carefully to the casual question your friend asks.
 
 77
 00:06:43,130 --> 00:06:44,890
-The question: '주말에 뭐 해' [ju-mal-e-mwo-hae]?
+The question: '주말에 뭐 해' [ju-ma-re mwo hae]?
 
 78
 00:06:44,890 --> 00:06:47,310
@@ -316,7 +316,7 @@ The question: '주말에 뭐 해' [ju-mal-e-mwo-hae]?
 
 80
 00:06:51,500 --> 00:06:57,328
-'주말에 뭐 해요' [ju-mal-e-mwo-hae-yo]? drops the '요' [yo] to become '주말에 뭐 해' [ju-mal-e-mwo-hae]?.
+'주말에 뭐 해요' [ju-ma-re mwo hae-yo]? drops the '요' [yo] to become '주말에 뭐 해' [ju-ma-re mwo hae]?.
 
 81
 00:06:57,328 --> 00:07:02,660
@@ -344,7 +344,7 @@ with natural pronunciation and intonation — like a real conversation!
 
 87
 00:07:27,550 --> 00:07:31,862
-Today we compared '존댓말' [jon-daet-mal] and '반말' [ban-mal] one by one,
+Today we compared '존댓말' [jon-daen-mal] and '반말' [ban-mal] one by one,
 
 88
 00:07:31,862 --> 00:07:34,900
@@ -400,7 +400,7 @@ makes the learning feel wonderfully vivid.
 
 101
 00:08:10,650 --> 00:08:13,181
-Master standard '존댓말' [jon-daet-mal] first,
+Master standard '존댓말' [jon-daen-mal] first,
 
 102
 00:08:13,181 --> 00:08:19,510

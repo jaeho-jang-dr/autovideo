@@ -1,0 +1,9 @@
+[지은 먼 곳 가리킴(point_far) — 큰 동작 · 우측 3/4]
+기준 첫프레임(가이드): W22/jieun_teacher_3q_right.png  (우측 3/4, Teacher JY 명찰)
+※ '가 봤다'·명소 가리키기. 오른쪽 먼 곳을 가리킴. 선생님(Teacher JY) 명찰 + 20세 이상 + 살색 얼굴 + 지은 동일.
+
+■ 영어 프롬프트 (Flow 붙여넣기):
+Clean flat 2D cartoon illustration, adult educational style. The SAME clearly adult woman over 20 years old, a young adult female teacher, exactly as in the first frame — identical face, identical long wavy brown hair, identical pink cardigan over a light-blue long dress, identical white sneakers, the same small white rectangular name badge reading 'Teacher JY' on the LEFT side of her chest, with ALL her visible skin — face, neck, arms, hands and legs — rendered in the SAME warm natural skin tone (soft light-peach skin color, NOT white, NOT pale ivory, NOT gray) — shown in a RIGHT three-quarter view. BIG pointing gesture: she raises her right arm and points far into the distance to her RIGHT with her arm fully extended, leaning her whole upper body toward that direction, following her pointing hand with a bright excited gaze and open smile as if showing a famous faraway place; then she sweeps her extended arm across to point at another distant spot, her head and long hair following the motion. Large, lively, clearly visible motion (NOT a static pose). Plain solid white background only, no shadow, no floor line. Keep the EXACT same 2D cartoon art style, black outline, pastel colors and character as the reference image. Camera fixed. 9:16 vertical.
+
+■ 동작: 오른팔 쭉 뻗어 먼 곳 가리키며 상체 기울임 → 팔 크게 훑어 다른 먼 곳 가리킴. 고개·머리 따라 움직임.
+■ 규격: 8초 · 9:16 · 순భ 배경(그림자 없음) · 그림은 지은 그대로.
