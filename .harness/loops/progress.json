@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-07-27",
+  "last_updated": "2026-07-28",
   "project": "autovideo",
   "agents": {
     "orchestrator": "Antigravity (Gemini)",
@@ -9,8 +9,8 @@
   "current_session": {
     "status": "in_progress",
     "started": "2026-07-01",
-    "goal": "KO-W22 여행 경험·계획 강의 최종화 및 유튜브 공개 완료. 다음: W23 제작 / W17~W21 자막 재업로드 여부 결정.",
-    "phase": "hangeul_w22_published"
+    "goal": "KO-W23 모임약속·시간조율 강의 유튜브 공개 완료(KO=5xet4FQDdX8 / EN=8lob0SW542k). 다음: W24 제작.",
+    "phase": "hangeul_w23_published"
   },
   "completed_tasks": [
     "KO-W01: built stickman_factory.py (parametric 12-joint ink stickman) -> 30-pose library registered to content.db (register_poses.py)",
@@ -172,7 +172,10 @@
     "W17 Advanced (2026-07-20, Gemini=조감독): W17 Advanced Course scenario (w17_scenario.txt) and spec (w17_scenario_spec.md) finalized according to user feedback (1-on-1 polite/casual comparison, mobile slang warning, K-Pop/K-Drama shadowing tools, and Emma/SunHi voice cross-linguality).",
     "W17 Advanced (2026-07-20, Gemini=조감독): Completely purged unaligned new poses (5 types) and backgrounds (3 types) from files and SQLite assets table. Restored the 48-scene compilation map to only use verified 9 character poses and 10 Bulguksa backgrounds (scene_0.png ~ scene_47.png successfully regenerated).",
     "자막 발음기호를 철자식 → 표준 발음법(연음·경음화·비음화·격음화·유음화·구개음화) 실제 발음 표기로 전환 (add_pron_to_srt.py 재작성 + refresh_pron_srt.py + test_pron_rules.py 36케이스). W17~W22 로컬 자막 53개 갱신(유튜브 미반영).",
-    "KO-W22 '여행 경험·미래 계획'(지은·하늘 전망대) 최종화: Azure TTS(선희/Emma) 4K 렌더 KO/EN, 썸네일 2종, 5개국어 자막·제목·설명, 태그 29개, 10개 조항 통과, API 업로드(KO=CZMYZUehC7k, EN=XI9cmlczbkw), 자막 10개 API 업로드, 노출 4단계(재생목록·고정댓글·카드·최종화면 W21 지정), 공개 전환, 웹 임베드(CF Pages+Vercel) 완료."
+    "KO-W22 '여행 경험·미래 계획'(지은·하늘 전망대) 최종화: Azure TTS(선희/Emma) 4K 렌더 KO/EN, 썸네일 2종, 5개국어 자막·제목·설명, 태그 29개, 10개 조항 통과, API 업로드(KO=CZMYZUehC7k, EN=XI9cmlczbkw), 자막 10개 API 업로드, 노출 4단계(재생목록·고정댓글·카드·최종화면 W21 지정), 공개 전환, 웹 임베드(CF Pages+Vercel) 완료.",
+    "무비랑(movierang) 에이전트 등록(.claude/agents/movierang.md) — 영상 제작 엔진·스택 총괄(캐릭터/컷랑/렌더/TTS/자막/4K), 업로드·노출은 유튜브랑. W22 실측 스택 지도 내장.",
+    "★캐릭터 가이드 이미지 3종(front/side/right-3q) Flow 통일 규칙 확정·기록 — W22의 정지↔무빙 캐릭터 불일치(엔진 혼용: 정지=agy 나노바나나, 무빙=Flow Veo) 재발방지. VEO_WORKFLOW.md 절 추가 + 메모리 character-guide-image-flow-unify + bugrang #9 기록.",
+    "KO-W23: 36씬 · 4K · Azure(선희/Emma) · 자막5개국어×2 · 노출4대(재생목록·고정댓글·카드·최종화면) · drjayed.com 임베드 · 공개 전환 완료 (2026-07-28)"
   ],
   "pending_tasks": [
     "Binge-Watching: Run autoveo_flow.py with binge_watching/shorts_prompts.txt to generate 9:16 portrait video clips (scene_0, 2, 20).",
@@ -199,6 +202,7 @@
     "Caching bug resolved: Old audio clips are now automatically deleted/overwritten on run to ensure narration matches subtitles.",
     "Tofu block bug resolved: Absolute font path C:\\Windows\\Fonts\\malgun.ttf is enforced.",
     "CLI session cutoff resolved: Rendering processes are monitored synchronously until execution ends.",
-    "Windows Session 0 / Sandbox screen grab error bypassed: Replaced pyautogui.screenshot() with Pillow's ImageGrab.grab(all_screens=True) to ensure reliable background UI auto-approval."
+    "Windows Session 0 / Sandbox screen grab error bypassed: Replaced pyautogui.screenshot() with Pillow's ImageGrab.grab(all_screens=True) to ensure reliable background UI auto-approval.",
+    "W22 게시본에 정지 포즈와 동작 영상의 캐릭터 정체성 불일치가 남아 있음(엔진 혼용). W23부터 가이드 3종 Flow 통일 규칙 적용 — VEO_WORKFLOW.md 마지막 절."
   ]
 }

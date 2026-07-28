@@ -129,13 +129,21 @@ with sync_playwright() as pw:
 
     # 6) 저장 — JS 클릭 + edit_video POST 검증
     if SAVE:
+        # ★'변경사항 저장 안함'(취소)도 이름에 '저장'이 들어간다 — 그걸 누르면 저장 없이 닫힌다.
+        #   실제 저장 버튼만 남기려면 **이름이 정확히 '저장'** 인 것만 받는다(2026-07-28 실측 사고).
+        # ★ytcp-button 은 is_enabled()가 False로 나와도 실제로는 눌린다 → 활성 판정을 믿지 않는다.
+        #   대신 **이름에 '안함'/'취소'가 든 것만 배제**하고 오른쪽 것부터 JS 클릭한다.
         cands = []
         for loc in (pg.get_by_role("button", name="저장"), pg.get_by_text("저장", exact=True)):
             for i in range(loc.count()):
                 try:
-                    bb2 = loc.nth(i).bounding_box()
-                    if bb2 and loc.nth(i).is_enabled():
-                        cands.append((loc.nth(i), bb2))
+                    el = loc.nth(i)
+                    txt = (el.inner_text() or "").strip()
+                    if "안함" in txt or "취소" in txt:
+                        continue
+                    bb2 = el.bounding_box()
+                    if bb2:
+                        cands.append((el, bb2))
                 except Exception:
                     pass
         cands.sort(key=lambda t: -t[1]["x"])

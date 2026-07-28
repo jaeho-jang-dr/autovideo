@@ -108,6 +108,7 @@ textarea{width:100%;height:80px;background:#ffffff;color:#0f172a;border:1px soli
       <option value="">(기본 장치)</option>
     </select>
     <button class=btn style="width:auto;padding:5px 10px;font-size:12px" onclick=loadSinks()>장치 새로고침</button>
+    <button class=btn style="width:auto;padding:5px 10px;font-size:12px" onclick=fixSound()>🔊 소리 복구</button>
   </div>
   <div id=snkst style="font-size:11px;color:#6b8;margin:-2px 0 6px 2px"></div>
   <video id=vid controls preload=metadata crossorigin=anonymous>
@@ -193,7 +194,17 @@ function load(){fetch('/api/feedback').then(function(r){return r.json()}).then(r
 function addNote(){var n=document.getElementById('note').value.trim();if(!n)return;var t=vid.currentTime,s=sceneAt(t);fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({t:t,note:n,scene:s.seq})}).then(function(r){return r.json()}).then(function(fb){render(fb);document.getElementById('note').value=''})}
 function del(id){fetch('/api/feedback/delete',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:id})}).then(function(r){return r.json()}).then(render)}
 document.getElementById('note').addEventListener('keydown',function(e){if(e.ctrlKey&&e.key=='Enter')addNote()});
-vid.addEventListener('loadedmetadata',function(){try{for(var i=0;i<vid.textTracks.length;i++)vid.textTracks[i].mode='showing';}catch(e){}});
+vid.addEventListener('loadedmetadata',function(){try{for(var i=0;i<vid.textTracks.length;i++)vid.textTracks[i].mode='showing';}catch(e){}
+  // ★소리 보정: 브라우저가 기억한 음소거·0볼륨 때문에 안 들리는 경우가 있다(시스템 설정은 안 건드림)
+  try{vid.muted=false;vid.volume=1.0;}catch(e){}});
+function fixSound(){                                  // 🔊 버튼 — 언뮤트 + 볼륨 최대 + 기본 출력장치 재부착
+  try{vid.muted=false;vid.volume=1.0;}catch(e){}
+  try{localStorage.removeItem(SINK_KEY);}catch(e){}
+  applySink('');
+  var s=document.getElementById('snkst');
+  if(s) s.textContent='▶ 소리 복구 실행 — 음소거 해제·볼륨 100%·컴퓨터 기본 출력';
+  vid.play().catch(function(){});
+}
 setTimeout(function(){try{if(vid.textTracks[0])vid.textTracks[0].mode='showing';}catch(e){}},1200);
 buildTL(); load(); setInterval(tick,250);
 </script></body></html>"""
