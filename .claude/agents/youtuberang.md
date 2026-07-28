@@ -96,7 +96,13 @@ model: opus
 - **컴파일**: 일일강의 `compile_np.py`(1영상+KO/EN 2오디오+자막+1080p) 또는 플랫 `compile_flat_lesson`. 메모리 [[flat-canvas-lesson-method]] [[hangeul-lesson-w5-automation]] [[hangeul-lesson-b-standard]]
 
 ## 5. 렌더 → 교정 → 최종
+0. ★★ **캐릭터 동영상(동작컷) 검수는 `cut_preview.py`** (사장님 확정 2026-07-28) — 렌더 전에 이걸로 먼저 본다.
+   `python cut_preview.py` → ①격자 전체 상영(시퀀스별 8fps 루프=원본 속도) ②정밀 검사 뷰어
+   (왼쪽 전체 프레임 썸네일+실제 컷 번호 / 오른쪽 애니+원본 큰 정지컷, `←``→` 이동, `X` 불량 표시).
+   불량 프레임을 **번호로 지목**받아 그 컷만 격리·재생성한다. 담당은 컷랑.
 1. 시나리오+캐릭터모션+자막 → 렌더 → **교정앱에 올려 제작자(나)에게 검사**받는다. **영어판까지**. 교정앱: `review_lesson.py`(srt기반 자체서빙, 좌영상+자막 우메모). 메모리 [[video-review-correction-app]] [[project-web-deploy]]
+   ★렌더 전 방향 점검 필수 — 캐릭터는 **항상 화면 중앙**을 향한다. **예외는 걸어 들어올 때·걸어 나갈 때뿐.**
+   자산 방향은 만들 때 실측해 DB에 저장해 두고 **조회**해서 쓴다. [[character-facing-center-rule]]
 2. 최종 검사 OK → **한글판·영어판 새로 렌더 → 4K 업스케일 → 자막 5개국어(ko/en/ja/zh/es) 완성**
 3. 유튜브 업로드 + **웹페이지에 임베드**(유튜브 링크/임베드만, R2에 유튜브 영상 복사 금지). drjayed.com(CF Pages)+Vercel. 메모리 [[feedback-no-youtube-to-r2.md]] [[project-web-deploy]]
 
