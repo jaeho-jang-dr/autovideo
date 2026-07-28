@@ -80,3 +80,13 @@ assets/chrome_profile_tmp/
 # YouTube Data API 인증 (절대 커밋 금지)
 client_secret_*.json
 yt_token.json
+
+# ─── 2026-07-28 히스토리 정리 대상 (재생성 가능 / 비밀 포함) ───
+# 크롬 프로필 = 로그인 쿠키·Login Data 포함. PUBLIC 레포에 올리면 안 된다.
+assets/chrome_profile_0/
+assets/chrome_profile_1/
+assets/chrome_profile*/
+# TTS 캐시 = 대본에서 언제든 재생성된다(219MB, 14k 파일)
+hangeul_birth_vowels/tts_cache/
+# 작업용 임시 폴더 = 10GB, 스크린샷·중간 산출물
+scratch/
