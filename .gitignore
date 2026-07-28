@@ -90,3 +90,7 @@ assets/chrome_profile*/
 hangeul_birth_vowels/tts_cache/
 # 작업용 임시 폴더 = 10GB, 스크린샷·중간 산출물
 scratch/
+
+# ★DB는 바이너리 — git이 되돌리면 작업이 통째로 날아간다(2026-07-28 사고)
+channel/content.db
+channel/content.db.backup_*
