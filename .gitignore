@@ -94,3 +94,13 @@ scratch/
 # ★DB는 바이너리 — git이 되돌리면 작업이 통째로 날아간다(2026-07-28 사고)
 channel/content.db
 channel/content.db.backup_*
+
+# ★W24 생성 자산 — git clean 으로부터 보호 (2026-08-03 전량 삭제 사고)
+#   추적 안 되는(untracked) 파일이라 `git clean -fd` 가 통째로 지웠다.
+#   여기 적어 두면 ignored 로 분류돼 `git clean -fd`(-x 없이)가 건너뛴다.
+W24/group_cuts/
+W24/group_clips/
+W24/cut_preview/
+W24/_view/
+W24/_final/
+W24/_gframes/
