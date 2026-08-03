@@ -209,7 +209,42 @@ def render_pose(pose, seed=7):
         draw_pencil(draw, P, lw, rng, pose["pencil"])
 
     img = img.resize((CANVAS, CANVAS), Image.LANCZOS)
+    if pose.get("glow"):
+        img = add_line_glow(img, pose.get("glow"))
     return img
+
+
+# ---- ★라인 발광(네온) — 스틱맨이 심심해 보이지 않게 (사장님 지시 2026-07-28) ----
+GLOW_PRESET = {
+    # 이름: (RGB, 바깥 번짐 반경, 안쪽 코어 반경, 세기)
+    "cyan":   ((120, 230, 255), 26, 8, 1.00),
+    "warm":   ((255, 208, 120), 26, 8, 0.95),
+    "mint":   ((140, 255, 200), 24, 7, 0.95),
+    "violet": ((190, 150, 255), 26, 8, 1.00),
+    "white":  ((255, 255, 255), 22, 7, 0.85),
+}
+
+
+def add_line_glow(img, spec="cyan"):
+    """선 주위에 빛을 입힌다. 알파를 두 번(넓게/좁게) 흐려 **바깥 번짐 + 안쪽 코어**를 겹치고,
+    원본 잉크선을 맨 위에 다시 얹어 형태는 그대로 유지한다.
+    spec = 프리셋 이름 또는 (r,g,b) 또는 {"color":(r,g,b),"blur":26,"core":8,"gain":1.0}"""
+    if isinstance(spec, str):
+        rgb, blur, core, gain = GLOW_PRESET.get(spec, GLOW_PRESET["cyan"])
+    elif isinstance(spec, dict):
+        rgb = tuple(spec.get("color", (120, 230, 255)))
+        blur, core, gain = spec.get("blur", 26), spec.get("core", 8), spec.get("gain", 1.0)
+    else:
+        rgb, blur, core, gain = tuple(spec), 26, 8, 1.0
+
+    a = img.split()[-1]
+    out = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    for radius, weight in ((blur, 0.55 * gain), (core, 0.85 * gain)):
+        halo = a.filter(ImageFilter.GaussianBlur(radius)).point(lambda v: int(min(255, v * weight)))
+        layer = Image.new("RGBA", img.size, rgb + (0,))
+        layer.putalpha(halo)
+        out = Image.alpha_composite(out, layer)
+    return Image.alpha_composite(out, img)          # 원본 선을 맨 위에 — 형태 보존
 
 
 # ---- 졸라걸(주황머리) 통통 손그림 렌더 — 외곽선 튜브 팔다리 + 손·발 ----------

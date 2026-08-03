@@ -1,0 +1,33 @@
+EXACTLY TWO CHARACTERS in the frame, no more and no fewer, each appearing ONE TIME ONLY:
+@madamjay - a coloured cartoon woman who looks about forty, smooth youthful face, rosy cheeks, glossy dark brown hair in a neat bun, vivid coral sleeveless vest over a white blouse, white knee-length skirt.
+@teacherjay - a coloured cartoon man, bald head with a single curl of hair, blue and white checked shirt with rolled sleeves, beige trousers, white sneakers.
+
+TWO PEOPLE SIT SIDE BY SIDE ON SIMPLE WOODEN CHAIRS, as if in a classroom. @teacherjay on the left, @madamjay on the right. THE CHAIRS ARE PART OF THE PICTURE and must be fully visible.
+0-3s: both sit up straight with hands resting on their knees, heads turned to their LEFT as if listening to someone standing off-frame on that side.
+3-5.5s: still seated and still turned left, both CLAP their hands in front of their chests, several clear claps, smiling warmly.
+5.5-8s: they stop clapping, turn their heads to face STRAIGHT AT THE CAMERA, hands back on their knees, and hold perfectly still looking forward.
+
+STYLE: Flat 2D cartoon illustration, bold clean black outlines, flat colours, no gradients.
+HEIGHT ORDER (keep exact): @teacherjay is clearly taller than @madamjay.
+
+SET: a completely EMPTY seamless studio backdrop of plain light grey (#e8e8e8). Nothing else at all -
+no floor line, no furniture, no scenery, no props, no shadows cast on the backdrop. Only a soft
+contact shadow directly under each pair of feet. The background must stay perfectly plain so the
+figures can be cut out cleanly.
+
+CAMERA: LOCKED OFF on a tripod. The camera does not move even slightly - no pan, no tilt, no zoom,
+no dolly, no handheld shake, no rack focus. One single continuous shot, wide, straight-on at chest
+height. The framing is identical in the first frame and the last frame.
+
+STAGING: every character stays ON THE SPOT for the whole eight seconds. Nobody walks across the
+frame, nobody enters, nobody leaves. Their feet stay planted in the same place; only the body,
+arms, head and expression move. FULL BODY from the top of the head to below the shoes is inside
+the frame at all times, with clear empty margin above the heads and below the feet.
+
+ANATOMY LOCK: each character has exactly one head, two arms with two hands (five fingers each) and
+two legs. No extra or missing limbs, no fused bodies, no floating hands, no duplicated characters.
+
+NEGATIVE: no text, no letters, no numbers, no signage, no logos, no watermark, no captions,
+no name labels, no motion blur, no lens flare.
+★NOTHING IS EVER DRAWN IN THE AIR: when a character mimes writing or drawing, the hand moves through empty space and NO ink trail, NO stroke, NO letter, NO shape and NO glowing line appears. The air stays completely empty. Only the characters themselves are visible against the backdrop.
+16:9, 1280x720, 8 seconds.
