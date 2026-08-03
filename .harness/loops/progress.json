@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-07-28",
+  "last_updated": "2026-08-03",
   "project": "autovideo",
   "agents": {
     "orchestrator": "Antigravity (Gemini)",
@@ -9,10 +9,11 @@
   "current_session": {
     "status": "in_progress",
     "started": "2026-07-01",
-    "goal": "KO-W23 모임약속·시간조율 강의 유튜브 공개 완료(KO=5xet4FQDdX8 / EN=8lob0SW542k). 다음: W24 제작.",
-    "phase": "hangeul_w23_published"
+    "goal": "KO-W23 모임약속·시간조율 강의 유튜브 공개 완료. 다음: W24 및 전체 테마 관리.",
+    "phase": "dark_theme_restored"
   },
   "completed_tasks": [
+    "Restored dark deep-space black theme (#090a0f / #0b0d14) for both Astro website and review_lesson.py UI upon user request.",
     "KO-W01: built stickman_factory.py (parametric 12-joint ink stickman) -> 30-pose library registered to content.db (register_poses.py)",
     "KO-W01: built object_factory.py -> 15 ink props incl. 4 mouth shapes, registered to content.db (type=object)",
     "KO-W01: wrote episode + 15-scene scenario into content.db (scenario_db.py), expanded vowels 5->8 (ㅣ ㅐ ㅔ)",

@@ -72,39 +72,39 @@ HTML = r"""<!doctype html><html lang=ko><head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>교정 리뷰 — 한글강의 __LABEL__</title>
 <style>
-*{box-sizing:border-box} body{margin:0;font-family:'Malgun Gothic',sans-serif;background:#f8f9fa;color:#1d1d1f;display:flex;height:100vh;overflow:hidden}
+*{box-sizing:border-box} body{margin:0;font-family:'Malgun Gothic',sans-serif;background:#090a0f;color:#f1f5f9;display:flex;height:100vh;overflow:hidden}
 .left{flex:1.45;display:flex;flex-direction:column;padding:14px;min-width:0}
-.right{flex:1;display:flex;flex-direction:column;border-left:1px solid #e2e8f0;background:#ffffff;min-width:360px}
-h1{font-size:15px;margin:0 0 8px;color:#15803d;font-weight:700}
-video{width:100%;background:#f1f5f9;border-radius:10px;max-height:58vh}
-video::cue{background:rgba(0,0,0,0.75);color:#ffffff;font-size:26px;line-height:1.35;font-family:'Malgun Gothic',sans-serif}
+.right{flex:1;display:flex;flex-direction:column;border-left:1px solid #1e293b;background:#0f172a;min-width:360px}
+h1{font-size:15px;margin:0 0 8px;color:#4ade80;font-weight:700}
+video{width:100%;background:#020617;border-radius:10px;max-height:58vh}
+video::cue{background:rgba(0,0,0,0.85);color:#ffffff;font-size:26px;line-height:1.35;font-family:'Malgun Gothic',sans-serif}
 .tl{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;overflow-y:auto;max-height:28vh}
-.chip{font-size:11px;padding:4px 7px;border-radius:7px;background:#f1f5f9;color:#334155;cursor:pointer;border:1px solid #e2e8f0;white-space:nowrap;max-width:230px;overflow:hidden;text-overflow:ellipsis}
-.chip:hover{background:#e2e8f0} .chip.cur{background:#22c55e;color:#ffffff;font-weight:700}
+.chip{font-size:11px;padding:4px 7px;border-radius:7px;background:#1e293b;color:#cbd5e1;cursor:pointer;border:1px solid #334155;white-space:nowrap;max-width:230px;overflow:hidden;text-overflow:ellipsis}
+.chip:hover{background:#334155} .chip.cur{background:#22c55e;color:#ffffff;font-weight:700}
 .chip.has{border-color:#ea580c}
 .panel{padding:14px;display:flex;flex-direction:column;height:100%}
-.now{font-size:13px;color:#64748b;margin-bottom:6px}
-.now b{color:#15803d}
-.cap{font-size:14px;color:#1e293b;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;margin-bottom:8px;min-height:38px}
-textarea{width:100%;height:80px;background:#ffffff;color:#0f172a;border:1px solid #cbd5e1;border-radius:8px;padding:10px;font-size:14px;resize:vertical;font-family:inherit}
+.now{font-size:13px;color:#94a3b8;margin-bottom:6px}
+.now b{color:#4ade80}
+.cap{font-size:14px;color:#f8fafc;background:#1e293b;border:1px solid #334155;border-radius:8px;padding:8px 10px;margin-bottom:8px;min-height:38px}
+textarea{width:100%;height:80px;background:#0f172a;color:#f8fafc;border:1px solid #334155;border-radius:8px;padding:10px;font-size:14px;resize:vertical;font-family:inherit}
 .btn{margin-top:8px;background:#16a34a;color:#fff;border:0;border-radius:8px;padding:10px;font-weight:700;cursor:pointer;font-size:14px}
 .btn:hover{background:#15803d}
-.hint{font-size:11px;color:#64748b;margin-top:4px}
-.list{margin-top:14px;overflow-y:auto;flex:1;border-top:1px solid #e2e8f0;padding-top:10px}
-.item{background:#f8fafc;border-radius:8px;padding:9px 10px;margin-bottom:8px;font-size:13px;border:1px solid #e2e8f0;border-left:4px solid #ea580c;color:#1e293b}
-.item .ts{color:#16a34a;font-weight:700;cursor:pointer}
-.item .sc{color:#64748b;font-size:11px}
-.item .nt{margin-top:3px;color:#0f172a;white-space:pre-wrap}
+.hint{font-size:11px;color:#94a3b8;margin-top:4px}
+.list{margin-top:14px;overflow-y:auto;flex:1;border-top:1px solid #1e293b;padding-top:10px}
+.item{background:#1e293b;border-radius:8px;padding:9px 10px;margin-bottom:8px;font-size:13px;border:1px solid #334155;border-left:4px solid #ea580c;color:#f8fafc}
+.item .ts{color:#4ade80;font-weight:700;cursor:pointer}
+.item .sc{color:#94a3b8;font-size:11px}
+.item .nt{margin-top:3px;color:#f8fafc;white-space:pre-wrap}
 .item .del{float:right;color:#94a3b8;cursor:pointer;font-size:12px}
 .row{display:flex;align-items:center}
-.jump{margin-left:auto;font-size:11px;color:#475569}
+.jump{margin-left:auto;font-size:11px;color:#94a3b8}
 </style></head><body>
 <div class=left>
   <div class=row><h1>🎬 교정 리뷰 — 한글강의 __LABEL__</h1>
     <span class=jump>영상 정지 → 메모 입력 → 추가</span></div>
   <div class=row style="gap:8px;margin:6px 0">
-    <span style="font-size:12px;color:#475569">🎧 소리 출력</span>
-    <select id=snk style="flex:1;background:#ffffff;color:#0f172a;border:1px solid #cbd5e1;border-radius:6px;padding:5px;font-size:12px">
+    <span style="font-size:12px;color:#94a3b8">🎧 소리 출력</span>
+    <select id=snk style="flex:1;background:#0f172a;color:#f8fafc;border:1px solid #334155;border-radius:6px;padding:5px;font-size:12px">
       <option value="">(기본 장치)</option>
     </select>
     <button class=btn style="width:auto;padding:5px 10px;font-size:12px" onclick=loadSinks()>장치 새로고침</button>

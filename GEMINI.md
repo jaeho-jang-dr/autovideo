@@ -169,6 +169,7 @@ Antigravity + Claude Code
 | 2026-07-24 | `pending` | **W1~W20 정순서 커리큘럼 개편, 화이트 크리스탈 테마 적용 및 Korea 168 명소 사진 100% 보강 완료** | Day 1 핵심 앵커 영상을 W1~W20으로 명확히 정돈(sub: W1-1~W24-7), 웹사이트 및 교정 리뷰 앱을 맑은 화이트 크리스탈 테마(#ffffff)로 전면 개편, Korea 168 깨진 프록시 URL 78곳 전면 복구로 168개 명소 고화질 이미지 100% 수록 및 Cloudflare/Vercel 라이브 배포 완료 버전. |
 | 2026-07-27 | `pending` | **W22 정밀 부분 렌더링(patch_scene) 보정 및 양방향 자막 교정앱 연동 완수** | W22 씬 11(우측 지시 포즈) & 씬 20(우측 시작 동선 및 글자 가림 해제) 부분 렌더링(patch_scene.py) 적용 완료, 번인 없는 깨끗한 MP4 복구 및 교정앱(review_lesson.py) 상향 자막 위치(video::cue bottom:65px) 및 양방향 자막(both) 모드 완수 버전. |
 | 2026-07-28 | `pending` | **글로벌 4대 에이전트 & 4대 구글 Flow 스크립트 아키텍처 수립 및 저장 완수** | Movie/Text/Cut/YouTube 4대 전담 에이전트와 flow_make_clip/pose/bgmv/bg 4대 Flow 생성 스크립트를 글로벌 스킬(`autovideo_agent_pipeline`)로 표준화 등록하고, 단일 에셋 생성 후 브라우저 세션 클린 리셋 원칙을 정립하여 라이브 저장 완료한 버전. |
+| 2026-08-03 | `pending` | **블랙 딥스페이스 다크 테마 완벽 복원 및 교정 리뷰앱/웹사이트 전면 반영** | 제작자 요청에 따라 웹사이트(Astro) 및 교정 리뷰 앱(review_lesson.py)을 본래의 고급스러운 다크 스페이스 블랙(#090a0f / #0b0d14) 테마로 원상 복구 완료한 버전. |
 
 
 

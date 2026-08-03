@@ -1,26 +1,26 @@
 /* =====================================================================
-   drjay-ed — 전역 스타일 (애플 스타일 화이트 크리스탈 테마)
-   맑고 투명한 화이트 배경 · 미니멀한 그레이 계층 ·
-   글래스모피즘(반투명/블러) 카드 · Inter / Outfit / Noto Sans KR 웹폰트
+   drjay-ed — 전역 스타일 (다크 딥 스페이스 블랙 테마)
+   고급스러운 블랙 배경 · 다크 글래스모피즘 · 미니멀 네온 오로라 광채 ·
+   Inter / Outfit / Noto Sans KR 웹폰트
    ===================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap');
 
 :root {
-  /* --- 배경 (화이트 -> 애플 연한 회색) --- */
-  --bg-0: #ffffff;
-  --bg-1: #f5f5f7;
-  --bg-2: #fafafa;
+  /* --- 배경 (다크 딥 스페이스 블랙) --- */
+  --bg-0: #090a0f;
+  --bg-1: #0f111a;
+  --bg-2: #161926;
 
-  /* --- 글래스 표면 (반투명 화이트) --- */
-  --surface: rgba(255, 255, 255, 0.70);
-  --surface-strong: rgba(255, 255, 255, 0.88);
-  --border: rgba(0, 0, 0, 0.06);
-  --border-strong: rgba(0, 0, 0, 0.12);
+  /* --- 글래스 표면 (반투명 다크) --- */
+  --surface: rgba(22, 25, 38, 0.75);
+  --surface-strong: rgba(30, 34, 50, 0.88);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
 
-  /* --- 텍스트 (애플 챠콜 그레이 계층) --- */
-  --text-0: #1d1d1f;
-  --text-1: #424245;
-  --text-2: #86868b;
+  /* --- 텍스트 (네온 화이트 / 골드 / 차콜 그레이 계층) --- */
+  --text-0: #f8fafc;
+  --text-1: #cbd5e1;
+  --text-2: #94a3b8;
 
   /* --- 포인트 컬러 (네온 바이올렛 / 블루 / 시안) --- */
   --neon-violet: hsl(265 92% 60%);
@@ -28,11 +28,11 @@
   --neon-cyan: hsl(190 95% 48%);
   --grad-neon: linear-gradient(120deg, hsl(265 92% 60%), hsl(216 96% 56%) 55%, hsl(190 95% 48%));
   --grad-neon-soft: linear-gradient(120deg, hsl(265 92% 60% / 0.85), hsl(216 96% 56% / 0.85));
-  --glow-violet: rgba(138, 43, 226, 0.15);
-  --glow-blue: rgba(30, 144, 255, 0.12);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.08);
+  --glow-violet: rgba(138, 43, 226, 0.25);
+  --glow-blue: rgba(30, 144, 255, 0.2);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
 
   /* --- 형태 --- */
   --radius: 18px;
@@ -55,11 +55,11 @@ body {
   font-family: var(--font-sans);
   color: var(--text-0);
   background-color: var(--bg-1);
-  /* 화사한 크리스탈 파스텔 앰비언트 광채 */
+  /* 고급 다크 오로라 앰비언트 광채 */
   background-image:
-    radial-gradient(800px 500px at 10% -5%, rgba(138, 43, 226, 0.06), transparent 70%),
-    radial-gradient(750px 480px at 90% 0%, rgba(30, 144, 255, 0.07), transparent 60%),
-    radial-gradient(1000px 700px at 50% 110%, rgba(32, 196, 244, 0.05), transparent 70%);
+    radial-gradient(800px 500px at 10% -5%, rgba(138, 43, 226, 0.18), transparent 70%),
+    radial-gradient(750px 480px at 90% 0%, rgba(30, 144, 255, 0.16), transparent 60%),
+    radial-gradient(1000px 700px at 50% 110%, rgba(32, 196, 244, 0.14), transparent 70%);
   background-attachment: fixed;
   line-height: 1.62;
   -webkit-font-smoothing: antialiased;
@@ -124,11 +124,11 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; margin: 0; lett
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(15, 17, 26, 0.82);
   backdrop-filter: blur(20px) saturate(190%);
   -webkit-backdrop-filter: blur(20px) saturate(190%);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
 }
 .site-header .bar {
   display: flex;
@@ -142,7 +142,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; margin: 0; lett
   background: var(--grad-neon);
   display: grid; place-items: center;
   color: #fff; font-weight: 800; font-size: 0.82rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .brand .logo img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
 .nav { display: flex; align-items: center; gap: 4px; margin-left: auto; }
@@ -150,7 +150,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; margin: 0; lett
   padding: 6px 12px; border-radius: 8px; color: var(--text-1);
   font-size: 0.88rem; font-weight: 500; transition: color 0.18s, background-color 0.18s;
 }
-.nav a:hover, .nav a.active { color: var(--text-0); background-color: rgba(0, 0, 0, 0.04); }
+.nav a:hover, .nav a.active { color: var(--text-0); background-color: rgba(255, 255, 255, 0.08); }
 
 /* 언어 토글 — 글래스모피즘 캡슐 (KO | EN) */
 .lang-switch {
@@ -159,11 +159,11 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; margin: 0; lett
   padding: 3px;
   gap: 2px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(22, 25, 38, 0.7);
   backdrop-filter: blur(14px) saturate(170%);
   -webkit-backdrop-filter: blur(14px) saturate(170%);
-  border: 1px solid rgba(138, 43, 226, 0.18);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 10px rgba(30, 60, 120, 0.08);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 .lang-switch a {
   position: relative;

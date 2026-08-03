@@ -987,18 +987,18 @@ const payload = {
 
 <style>
   .curriculum {
-    /* 따뜻한 베이지 & 잉크 블랙 (Outfit/Inter 폰트는 전역 상속) */
-    --c-bg: #f4ecdb;
-    --c-panel: #faf4e8;
-    --c-card: #fffdf7;
-    --c-ink: #1c1813;
-    --c-ink-2: #5b5142;
-    --c-ink-3: #8c7f6a;
-    --c-line: rgba(28, 24, 19, 0.12);
-    --c-line-strong: rgba(28, 24, 19, 0.22);
-    --c-gold: #b5852a;
-    --c-gold-soft: rgba(181, 133, 42, 0.16);
-    --c-glow: rgba(181, 133, 42, 0.45);
+    /* 다크 딥 스페이스 블랙 테마 */
+    --c-bg: #0b0d14;
+    --c-panel: #131722;
+    --c-card: #1a1f2e;
+    --c-ink: #f8fafc;
+    --c-ink-2: #cbd5e1;
+    --c-ink-3: #94a3b8;
+    --c-line: rgba(255, 255, 255, 0.10);
+    --c-line-strong: rgba(255, 255, 255, 0.20);
+    --c-gold: #d8a93f;
+    --c-gold-soft: rgba(216, 169, 63, 0.20);
+    --c-glow: rgba(216, 169, 63, 0.50);
     --c-radius: 18px;
 
     position: relative;
@@ -1114,18 +1114,18 @@ const payload = {
   /* --- 보기 전환 바 (타일/리스트) --- */
   .cur-viewbar { display: flex; align-items: center; gap: 8px; margin: 6px 0 16px; }
   .cv-label { font-size: 0.85rem; color: var(--c-ink-3); margin-right: 2px; }
-  .cv-btn { border: 1.5px solid var(--c-line); background: #fff; color: var(--c-ink-2); border-radius: 999px; padding: 6px 14px; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: all .15s; }
-  .cv-btn.active { background: var(--c-ink-1, #2b2620); color: #fff; border-color: var(--c-ink-1, #2b2620); }
+  .cv-btn { border: 1.5px solid var(--c-line); background: var(--c-card); color: var(--c-ink-2); border-radius: 999px; padding: 6px 14px; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: all .15s; }
+  .cv-btn.active { background: var(--c-gold); color: #fff; border-color: var(--c-gold); }
 
   /* --- 주차 아코디언 --- */
   .week-accordion { display: flex; flex-direction: column; gap: 12px; }
   .week-accordion.hidden { display: none; }
-  .wk-item { border: 1.5px solid var(--c-line); border-radius: 14px; background: #fff; overflow: hidden; }
-  .wk-item.open { box-shadow: 0 6px 20px rgba(60,48,30,0.08); }
+  .wk-item { border: 1.5px solid var(--c-line); border-radius: 14px; background: var(--c-card); overflow: hidden; }
+  .wk-item.open { box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
   .wk-head { width: 100%; display: flex; align-items: center; gap: 12px; padding: 16px 18px; background: transparent; border: none; cursor: pointer; text-align: left; }
-  .wk-head:hover { background: rgba(28,24,19,0.025); }
+  .wk-head:hover { background: rgba(255,255,255,0.03); }
   .wk-no { font-size: 0.8rem; font-weight: 800; color: #fff; background: var(--c-accent, #3aaa5c); padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
-  .wk-title { font-size: 1.05rem; font-weight: 700; color: var(--c-ink-1); flex: 1; }
+  .wk-title { font-size: 1.05rem; font-weight: 700; color: var(--c-ink); flex: 1; }
   .wk-tgt { font-size: 0.8rem; color: var(--c-ink-3); display: none; }
   .wk-caret { font-size: 1rem; color: var(--c-ink-3); transition: transform .2s; }
   .wk-item.open .wk-caret { transform: rotate(180deg); }
@@ -1135,20 +1135,20 @@ const payload = {
   /* 7일 강의 — 타일형(그리드) / 리스트형(세로) */
   .day-lectures[data-view="tile"] { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
   .day-lectures[data-view="list"] { display: flex; flex-direction: column; gap: 8px; }
-  .day-lec { border: 1.5px solid var(--c-line); border-radius: 12px; background: #fff; overflow: hidden; }
-  .day-lec.dl-on { border-color: var(--c-accent, #3aaa5c); box-shadow: 0 4px 14px rgba(60,48,30,0.1); }
+  .day-lec { border: 1.5px solid var(--c-line); border-radius: 12px; background: var(--c-card); overflow: hidden; }
+  .day-lec.dl-on { border-color: var(--c-accent, #3aaa5c); box-shadow: 0 4px 14px rgba(0,0,0,0.4); }
   .dl-open { width: 100%; padding: 0; background: transparent; border: none; cursor: pointer; text-align: left; position: relative; display: block; }
-  .dl-thumb { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #f3f1ec; }
+  .dl-thumb { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #161926; }
   .dl-meta { display: flex; flex-direction: column; gap: 2px; padding: 8px 10px 10px; }
   .dl-meta b { font-size: 0.74rem; color: var(--c-ink-3); font-weight: 700; }
-  .dl-meta i { font-size: 0.85rem; color: var(--c-ink-1); font-style: normal; font-weight: 600; line-height: 1.25; }
+  .dl-meta i { font-size: 0.85rem; color: var(--c-ink); font-style: normal; font-weight: 600; line-height: 1.25; }
   .dl-badge { position: absolute; top: 8px; right: 8px; font-size: 0.66rem; font-weight: 800; padding: 3px 8px; border-radius: 999px; color: #fff; }
   .dl-v { background: #e44c4c; } .dl-n { background: #f09e28; }
-  .day-panel { display: none; padding: 10px; border-top: 1px dashed var(--c-line); background: rgba(28,24,19,0.015); }
+  .day-panel { display: none; padding: 10px; border-top: 1px dashed var(--c-line); background: rgba(255,255,255,0.02); }
   .day-lec.dl-on .day-panel { display: block; }
   .day-picker { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
   .dp-hint { font-size: 0.78rem; color: var(--c-ink-3); margin-right: 2px; }
-  .dm-btn { border: 1.5px solid var(--c-line); background: #fff; color: var(--c-ink-2); border-radius: 8px; padding: 6px 11px; font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all .15s; }
+  .dm-btn { border: 1.5px solid var(--c-line); background: var(--c-card); color: var(--c-ink-2); border-radius: 8px; padding: 6px 11px; font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all .15s; }
   .dm-btn:hover { border-color: var(--c-accent, #3aaa5c); }
   .dm-btn.active { background: var(--c-accent, #3aaa5c); color: #fff; border-color: var(--c-accent, #3aaa5c); }
   .dm-soon { font-size: 0.82rem; color: var(--c-ink-3); font-style: italic; }
