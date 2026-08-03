@@ -136,6 +136,26 @@ ACTS = [
      "6-8s: they land, straighten, and hold still standing beside their chairs, ready for the next "
      "scene."),
 
+    # ★사장님 지시(2026-08-03) — 벽에 걸린 액자(썸네일)에서 캐릭터가 걸어 나오는 장면.
+    #   배경만으로는 안 되고 7캐릭터를 참조로 붙여 **통짜로** 만든다. 합성 없이 그대로 쓴다.
+    ("gallery_emerge", "ALL",
+     ["teacherjay", "zollaman", "zollagirl", "stickman", "injun", "jieun", "madamjay"], "S29",
+     "INSIDE A MODERN ART GALLERY ROOM: white walls with track lighting, a plain blank blackboard "
+     "against the left wall, a wooden lectern, and a row of SEVEN LARGE EMPTY PICTURE FRAMES hanging "
+     "along the walls. Several empty wooden chairs stand in a loose arc on the right. The camera is "
+     "LOCKED OFF and never moves. "
+     "0-1.5s: the room is still and empty; each frame holds a flat blank pale panel with nothing in it. "
+     "1.5-6s: ONE BY ONE, FROM LEFT TO RIGHT, A CHARACTER STEPS OUT OF A FRAME. The blank panel "
+     "brightens, the character appears inside it as a flat picture, then CLIMBS FORWARD OVER THE "
+     "BOTTOM EDGE OF THE FRAME and drops onto the gallery floor, turning from a flat picture into a "
+     "solid figure as they land. The frame they came out of is left EMPTY and pale behind them. "
+     "Order: teacherjay, zollaman, zollagirl, stickman, injun, jieun, madamjay - each about half a "
+     "second after the one before. "
+     "6-8s: all seven stand on the floor in front of the wall facing the camera and hold still. "
+     "Every frame on the wall is now empty. "
+     "EXACTLY SEVEN CHARACTERS, each appearing ONE TIME ONLY, each stepping out of a DIFFERENT frame. "
+     "Nobody is duplicated and nobody stays inside a frame at the end."),
+
     ("b_ask_price", "B", ["injun", "jieun"], "S13",
      "TWO PEOPLE, ASKING AND ANSWERING A PRICE, facing each other.\n"
      "@injun stands on the left facing right; @jieun stands on the right facing left.\n"
@@ -249,14 +269,20 @@ ACTS = [
      "6-8s: they nod once more together, at the same moment, and hold still."),
 ]
 
-STYLE_OF = {"A": (STYLE_A, HEIGHT_A), "B": (STYLE_HUMAN, HEIGHT_B), "C": (STYLE_HUMAN, HEIGHT_C)}
+HEIGHT_ALL = ("HEIGHT ORDER (keep exact): @injun tallest, then @zollaman, then @teacherjay and "
+              "@stickman, then @jieun, then @zollagirl, then @madamjay shortest.")
+STYLE_ALL = ("@zollaman @zollagirl @stickman stay hand-drawn black ink line figures; @teacherjay "
+             "@injun @jieun @madamjay stay fully coloured cartoon people. Do not blend the two styles. "
+             "Flat 2D cartoon illustration, bold clean black outlines.")
+STYLE_OF = {"A": (STYLE_A, HEIGHT_A), "B": (STYLE_HUMAN, HEIGHT_B), "C": (STYLE_HUMAN, HEIGHT_C),
+            "ALL": (STYLE_ALL, HEIGHT_ALL)}
 
 
 def build(key, grp, refs, scenes, action):
     style, height = STYLE_OF[grp]
     who = "\n".join(DESC[r] for r in refs)
     n = len(refs)
-    head = (f"EXACTLY {['','ONE','TWO','THREE'][n]} CHARACTERS in the frame, no more and no fewer, "
+    head = (f"EXACTLY {['','ONE','TWO','THREE','FOUR','FIVE','SIX','SEVEN'][n]} CHARACTERS in the frame, no more and no fewer, "
             f"each appearing ONE TIME ONLY:\n{who}\n")
     return f"{head}\n{action}\n\nSTYLE: {style}\n{height}\n{TAIL}".strip() + "\n"
 

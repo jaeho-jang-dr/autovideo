@@ -1,6 +1,17 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"[최우선 규칙] 사용자 메시지가 도착하면 하던 작업을 즉시 멈추고 먼저 대답한다. 하던 일을 마저 끝내고 나중에 답하지 않는다. 백그라운드 작업이 돌고 있으면 그 사실을 알리고 중단할지 물어본다.\"}}'",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
     "SessionStart": [
       {
         "hooks": [

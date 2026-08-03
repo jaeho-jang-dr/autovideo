@@ -31,7 +31,7 @@ os.chdir(ROOT)
 PROFILE = os.path.abspath("assets/chrome_profile")
 PROMPT_DIR = "W24/prompts"
 OUT_DIR = "W24/group_clips"
-GEN_WAIT = 240          # 생성 대기 상한(초)
+GEN_WAIT = 420   # ★7참조 통짜 컷은 더 오래 걸린다          # 생성 대기 상한(초)
 
 # ★★Flow 캐릭터는 **프로젝트별**이다(2026-08-03 실측 사고).
 #   배경 작업이 설정 칩을 잡으려고 새 프로젝트를 여럿 만들어 놨는데, 거기엔 캐릭터가 없다.
@@ -153,7 +153,7 @@ def add_ref(pg, name):
     return True
 
 
-def set_chip(pg, want=("8s", "16:9")):
+def set_chip(pg, want=("동영상", "8s", "16:9")):
     """설정 칩을 열어 길이·비율을 맞춘다. 항목이 없으면 현재 설정을 유지한다."""
     chip = pg.evaluate("""() => {
       for (const b of document.querySelectorAll('button')) {
