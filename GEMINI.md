@@ -170,6 +170,7 @@ Antigravity + Claude Code
 | 2026-07-27 | `pending` | **W22 정밀 부분 렌더링(patch_scene) 보정 및 양방향 자막 교정앱 연동 완수** | W22 씬 11(우측 지시 포즈) & 씬 20(우측 시작 동선 및 글자 가림 해제) 부분 렌더링(patch_scene.py) 적용 완료, 번인 없는 깨끗한 MP4 복구 및 교정앱(review_lesson.py) 상향 자막 위치(video::cue bottom:65px) 및 양방향 자막(both) 모드 완수 버전. |
 | 2026-07-28 | `pending` | **글로벌 4대 에이전트 & 4대 구글 Flow 스크립트 아키텍처 수립 및 저장 완수** | Movie/Text/Cut/YouTube 4대 전담 에이전트와 flow_make_clip/pose/bgmv/bg 4대 Flow 생성 스크립트를 글로벌 스킬(`autovideo_agent_pipeline`)로 표준화 등록하고, 단일 에셋 생성 후 브라우저 세션 클린 리셋 원칙을 정립하여 라이브 저장 완료한 버전. |
 | 2026-08-03 | `pending` | **블랙 딥스페이스 다크 테마 완벽 복원 및 교정 리뷰앱/웹사이트 전면 반영** | 제작자 요청에 따라 웹사이트(Astro) 및 교정 리뷰 앱(review_lesson.py)을 본래의 고급스러운 다크 스페이스 블랙(#090a0f / #0b0d14) 테마로 원상 복구 완료한 버전. |
+| 2026-08-04 | `bad96bf` | **Azure TTS 구독 재활성화/키 정상 검증 & 애플 라이트 클린 테마 전면 개편 및 drjayed.com 커스텀 도메인 복구 완수** | MS/Azure 계정 비밀번호 재설정 및 구독 업그레이드로 정식 상용 Azure TTS Key 복구 및 검증 완료, Cloudflare DNS CNAME(drjayed.pages.dev / 76.76.21.21) 자동 복구로 drjayed.com 200 OK 접속 완수, 제작자 지시에 따라 웹사이트를 애플 스타일의 맑고 산뜻한 프리미엄 라이트 테마(#ffffff / #f5f5f7) 및 딥 차콜/블랙(#1d1d1f) 고대비 타이포그래피로 전면 전환 완료한 버전. |
 
 
 
