@@ -1,0 +1,1 @@
+To give directions: '왼쪽으로 가세요' (go left), '오른쪽으로 가세요' (go right), '곧장 가세요' (go straight).

@@ -1,6 +1,7 @@
 EXACTLY TWO CHARACTERS in the frame, no more and no fewer, each appearing ONE TIME ONLY:
-@injun - a coloured cartoon young man, tall and slim, short black hair, navy blue t-shirt, beige trousers, white sneakers.
-@jieun - a coloured cartoon young woman, long wavy light brown hair, pale yellow floral dress.
+@injun - a coloured cartoon young man, tall and slim, short black hair, navy blue t-shirt, beige trousers, white sneakers. HE IS 176 CM TALL.
+@jieun - a coloured cartoon young woman, long wavy light brown hair, pale yellow floral dress. SHE IS 161 CM TALL.
+COUNT LOCK: in the whole frame there is exactly ONE figure with a navy blue t-shirt, exactly ONE figure with a pale yellow floral dress. No duplicates, no twins, no extra people - 2 figures in total.
 
 TWO PEOPLE GIVING AND FOLLOWING DIRECTIONS.
 @jieun stands on the right, @injun stands on the left.
@@ -9,26 +10,28 @@ TWO PEOPLE GIVING AND FOLLOWING DIRECTIONS.
 6-8s: both hold - her arm still extended, his gaze still following it, so her hand and his line of sight lie along one straight line.
 
 STYLE: Flat 2D cartoon illustration, bold clean black outlines, flat colours, no gradients.
-HEIGHT ORDER (keep exact): @injun is clearly taller than @jieun.
+HEIGHT LOCK (exact, in centimetres): @injun is 176 cm, @jieun is 161 cm. @injun is the tallest. Side by side, the TOP OF @jieun's HEAD reaches only up to @injun's EYES. There is a clear, obvious height gap - they are NOT the same height. Height is measured from the TOP OF THE HEAD to the SOLES OF THE FEET only - raised arms, held objects and chairs do not count. All are FULL-GROWN ADULTS, nobody child-sized, and these heights are identical in every frame.
 
-SET: a completely EMPTY seamless studio backdrop of plain light grey (#e8e8e8). Nothing else at all -
-no floor line, no furniture, no scenery, no props, no shadows cast on the backdrop. Only a soft
-contact shadow directly under each pair of feet. The background must stay perfectly plain so the
-figures can be cut out cleanly.
+SET: background is PURE FLAT WHITE (#FFFFFF), UNBROKEN from the very top edge to the very bottom
+edge, like blank paper. There is NO horizontal line, NO band, NO stripe, NO strip of grey, NO
+shelf, NO ceiling, NO table, NO wall, NO skirting, NO horizon and NO floor line anywhere in the
+picture. No gradient, no vignette, no scenery, no props, no cast shadows. The ONLY marks on the
+white are the characters themselves plus a faint contact shadow under each pair of shoes.
 
-CAMERA: LOCKED OFF on a tripod. The camera does not move even slightly - no pan, no tilt, no zoom,
-no dolly, no handheld shake, no rack focus. One single continuous shot, wide, straight-on at chest
-height. The framing is identical in the first frame and the last frame.
+CAMERA: LOCKED OFF on a tripod - no pan, tilt, zoom, dolly or shake. One continuous wide shot,
+straight on at chest height; the first and last frames are framed identically.
 
-STAGING: every character stays ON THE SPOT for the whole eight seconds. Nobody walks across the
-frame, nobody enters, nobody leaves. Their feet stay planted in the same place; only the body,
-arms, head and expression move. FULL BODY from the top of the head to below the shoes is inside
-the frame at all times, with clear empty margin above the heads and below the feet.
+STAGING: everyone stays ON THE SPOT for all eight seconds, feet planted; nobody walks, enters or
+leaves. They stand well APART with a clear gap between them and never overlap or touch each other.
 
-ANATOMY LOCK: each character has exactly one head, two arms with two hands (five fingers each) and
-two legs. No extra or missing limbs, no fused bodies, no floating hands, no duplicated characters.
+FRAMING (think of the frame as 10 rows, 1 at the top to 10 at the bottom): the tallest head is in
+row 2 and every pair of SHOES is in row 8; rows 1, 9 and 10 stay empty white. Shot wide, from far
+back. Nothing is cropped - every head, hand and shoe stays inside the frame at all times.
 
-NEGATIVE: no text, no letters, no numbers, no signage, no logos, no watermark, no captions,
-no name labels, no motion blur, no lens flare.
+ANATOMY LOCK: one head, two arms with two five-fingered hands and two legs each. No extra or
+missing limbs, no fused bodies, no floating hands, no duplicated characters.
+
+NEGATIVE: no text, letters, numbers, signage, logos, watermark, captions, name labels, motion blur
+or lens flare.
 ★NOTHING IS EVER DRAWN IN THE AIR: when a character mimes writing or drawing, the hand moves through empty space and NO ink trail, NO stroke, NO letter, NO shape and NO glowing line appears. The air stays completely empty. Only the characters themselves are visible against the backdrop.
 16:9, 1280x720, 8 seconds.

@@ -16,6 +16,7 @@
 """
 import argparse
 import glob
+import importlib.util
 import json
 import os
 import re
@@ -44,6 +45,17 @@ GLOBAL_SCALE = MAX_ON_SCREEN_H / max(SPEC.values())      # 432/770 ≈ 0.561
 KO2KEY = {"인준": "injun", "지은": "jieun", "티쳐제이": "teacher_jay",
           "마담제이": "madam_jay", "졸라맨": "zolla_man", "졸라걸": "zolla_girl",
           "스틱맨": "stickman"}
+
+# ── 그룹 통짜 컷 (사장님 지시 2026-08-04) ──
+# 그룹 영상 한 컷에 2~3명이 상호작용 거리째로 들어있다. 잘라서 흩으면 상호작용이 깨지므로
+# **통짜 한 덩어리**로 배치하고, 64컷을 씬 길이에 맞춰 1회 재생한다(motion_type='gseq:<시퀀스>').
+CUT_DIR = "W24/group_cuts"
+SEQ_PREFIX = "w24_"
+REF2KEY = {"zollaman": "zolla_man", "zollagirl": "zolla_girl", "stickman": "stickman",
+           "injun": "injun", "jieun": "jieun", "madamjay": "madam_jay",
+           "teacherjay": "teacher_jay"}
+EDGE_MARGIN = 24                    # 화면 좌우 끝에서 최소 이만큼
+MIN_GAP = 16                        # ★인물 덩어리끼리 최소 간격 — 겹치지 않게
 
 # ── 파라메트릭 글자 규칙 (사장님 지시) ──
 TEXT_MARGIN = 90                    # 좌우 가장자리에서 최소 이만큼 뗀다
@@ -201,6 +213,80 @@ def text_layout(glyph, ko, tracks):
                 cx=int(cx), cy=int(cy), side=side)
 
 
+def load_group_map():
+    """gen_w24_group_prompts.py 의 ACTS 가 원천 — 씬↔그룹동작 매핑은 추측하지 않는다.
+    반환: {씬번호: [dict(seq, members, w, h), ...]}"""
+    spec = importlib.util.spec_from_file_location("_g", "gen_w24_group_prompts.py")
+    mod = importlib.util.module_from_spec(spec)
+    try:
+        spec.loader.exec_module(mod)
+    except SystemExit:
+        pass
+    from PIL import Image
+    def scene_nums(txt):
+        ns = []
+        for a, b in re.findall(r"S(\d+)\s*[~-]\s*S(\d+)", txt):
+            ns += list(range(int(a), int(b) + 1))
+        ns += [int(x) for x in re.findall(r"S(\d+)", re.sub(r"S\d+\s*[~-]\s*S\d+", "", txt))]
+        return sorted(set(ns))
+
+    entries = []
+    for key, _grp, refs, scenes, _action in mod.ACTS:
+        cuts = sorted(glob.glob(f"{CUT_DIR}/{key}/*.png"))
+        if not cuts:
+            continue                                   # 컷이 아직 없는 동작(gallery_emerge)
+        w, h = Image.open(cuts[0]).size                # 한 동작 안에서 전 프레임 크기 동일
+        entries.append((key, refs, scenes, scene_nums(scenes), w, h))
+
+    # ★같은 '범위'를 여러 그룹이 공유하면(예: a/b/c_sit_class 가 모두 "S30~S32")
+    #   한 씬에 다 넣지 말고 **씬마다 한 그룹씩** 나눠 배정한다.
+    #   고정 배율에서 세 그룹을 한 화면에 넣으면 폭이 넘치고, 크기를 줄이는 건 금지다.
+    shared = {}
+    for e in entries:
+        if "~" in e[2] or "-" in e[2]:
+            shared.setdefault(e[2], []).append(e[0])
+
+    out = {}
+    for key, refs, scenes, ns, w, h in entries:
+        peers = shared.get(scenes, [])
+        targets = [ns[peers.index(key) % len(ns)]] if len(peers) > 1 else ns
+        for n in targets:
+            out.setdefault(n, []).append(dict(
+                seq=SEQ_PREFIX + key, members=[REF2KEY[r] for r in refs],
+                w=w, h=h, tag=key))
+    return out
+
+
+def layout_no_overlap(boxes):
+    """★사장님 지시(2026-08-04) — 인물이 화면 안에서 겹치지 않게 정리한다.
+    ★★★캐릭터 크기는 절대 바꾸지 않는다 — 크기가 바뀌면 영상 폐기 수준의 미달이다.
+    그래서 겹침은 **위치로만** 푼다. 축소는 하지 않는다. 고정 배율로 안 들어가면
+    빈 문자열이 아니라 사유를 돌려주고 빌드를 세운다(사람이 씬을 나눠야 한다).
+    boxes: [dict(cx=희망중심, w=화면폭, ...)] — 제자리에서 고친다. 반환=넘침 사유 or None."""
+    if not boxes:
+        return None
+    usable = CANVAS_W - 2 * EDGE_MARGIN
+    need = sum(b["w"] for b in boxes) + MIN_GAP * (len(boxes) - 1)
+    if need > usable:                                  # ★줄이지 않는다 — 세우고 사람에게 알린다
+        return (f"고정 배율로 폭 {need:.0f}px 필요 > 가용 {usable}px — "
+                f"덩어리 {len(boxes)}개({', '.join(b['tag'] for b in boxes)})")
+    boxes.sort(key=lambda b: b["cx"])
+    right = EDGE_MARGIN                                # 왼쪽부터 순서대로 앉힌다
+    for b in boxes:
+        cx = max(b["cx"], right + b["w"] / 2)
+        b["cx"] = cx
+        right = cx + b["w"] / 2 + MIN_GAP
+    over = (right - MIN_GAP) - (CANVAS_W - EDGE_MARGIN)
+    if over > 0:                                       # 오른쪽으로 삐져나가면 통째로 왼쪽으로
+        shift = min(over, boxes[0]["cx"] - boxes[0]["w"] / 2 - EDGE_MARGIN)
+        for b in boxes:
+            b["cx"] -= shift
+    for b in boxes:                                    # 마지막 안전장치 — 화면 안으로
+        b["cx"] = max(EDGE_MARGIN + b["w"] / 2,
+                      min(CANVAS_W - EDGE_MARGIN - b["w"] / 2, b["cx"]))
+    return None
+
+
 def main(dry):
     sc, mo = parse_scenario(SCEN), parse_motion(MOTION)
     log(f"시나리오 {len(sc)}씬 · 모션 트랙 {sum(len(v) for v in mo.values())}줄")
@@ -257,25 +343,51 @@ def main(dry):
                 "INSERT INTO scenes (episode,seq,script_kr,script_en,image_prompt,veo_prompt,"
                 "duration_sec) VALUES (?,?,?,?,?,?,?)",
                 (EP, n, s["ko"], s["en"], json.dumps(spec, ensure_ascii=False), "", 8.0))
+        # ── ① 그룹 통짜 컷 덩어리 (상호작용 거리째로 한 장) ──
+        boxes, covered = [], set()
+        for g in gmap.get(n, []):
+            mt = [t for t in tracks if t["char"] in g["members"]]
+            scale = round(GLOBAL_SCALE, 4)             # ★전 씬 고정 — 절대 바꾸지 않는다
+            anchor = next((k for m in g["members"] for k in aid if k.startswith(m + "_")), None)
+            if anchor is None:
+                continue                               # 앵커(=/poses/ 경로) 없으면 시퀀스가 안 돈다
+            cx = sum(z2x(t["z_to"]) for t in mt) / len(mt) if mt else CANVAS_W / 2
+            boxes.append(dict(kind="grp", tag=g["tag"], seq=g["seq"], asset=anchor,
+                              cx=cx, w=g["w"] * scale, h=g["h"] * scale, scale=scale))
+            covered |= {t["char"] for t in mt}
+        # ── ② 그룹에 안 들어간 인물은 기존대로 정지 포즈 ──
         for t in tracks:
             ch = t["char"]
-            h = SPEC[ch] * GLOBAL_SCALE * t["ratio"]
-            cy = int(GROUND_Y - h / 2)
-            scale = round(GLOBAL_SCALE * t["ratio"], 4)
             pose = next((p for p in t["poses"] if not p.startswith("walk_")), None)
             walk = next((p for p in t["poses"] if p.startswith("walk_")), None)
             key = f"{ch}_{pose}" if pose and f"{ch}_{pose}" in aid else None
+            h = SPEC[ch] * GLOBAL_SCALE * t["ratio"]
+            scale = round(GLOBAL_SCALE * t["ratio"], 4)
             spec["chars"].append(dict(char=ch, pose=pose, walk=walk, dir=t["dir"],
                                       z_from=t["z_from"], z_to=t["z_to"],
-                                      cx=z2x(t["z_to"]), cy=cy, scale=scale,
-                                      h=int(h), asset=key))
-            if not dry and key:
+                                      cx=z2x(t["z_to"]), cy=int(GROUND_Y - h / 2),
+                                      scale=scale, h=int(h), asset=key,
+                                      in_group=ch in covered))
+            if ch in covered or not key:
+                continue
+            boxes.append(dict(kind="one", tag=key, asset=key, cx=float(z2x(t["z_to"])),
+                              w=png_size(key)[0] * scale, h=h, scale=scale,
+                              motion="walk" if walk else "gesture"))
+        # ── ③ 겹치지 않게 정리 (위치만 — 크기는 절대 안 건드린다) ──
+        err = layout_no_overlap(boxes)
+        if err:
+            overflow.append(f"S{n}: {err}")
+        for b in boxes:
+            cy = int(GROUND_Y - b["h"] / 2)
+            if not dry:
                 cur.execute(
                     "INSERT INTO scene_objects (episode,scene_seq,asset_id,cx,cy,scale,z_order,"
                     "motion_type,is_point) VALUES (?,?,?,?,?,?,?,?,?)",
-                    (EP, n, aid[key], z2x(t["z_to"]), cy, scale, 5,
-                     "walk" if walk else "gesture", 0))
-                nobj += 1
+                    (EP, n, aid[b["asset"]], int(round(b["cx"])), cy, b["scale"], 5,
+                     f"gseq:{b['seq']}" if b["kind"] == "grp" else b["motion"], 0))
+            nobj += 1
+            if b["kind"] == "grp":
+                ngrp += 1
         tl = text_layout(s["glyph"], s["ko"], tracks)
         if tl:
             spec["text"] = tl

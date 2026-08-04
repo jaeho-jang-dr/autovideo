@@ -22,6 +22,17 @@ PAGE = "W24/cuts.html"
 W, H = 1280, 720
 FPS = 8          # 64컷 ÷ 8fps = 8초 (원본과 동일)
 
+# ★2026-08-04: 새로 만든 컷(group_cuts_v2)에도 그대로 쓰려고 경로만 인자로 뺐다. 나머지는 그대로.
+import argparse as _argparse
+_ap = _argparse.ArgumentParser(add_help=False)
+_ap.add_argument("--cuts")
+_ap.add_argument("--out")
+_ap.add_argument("--page")
+_args, _ = _ap.parse_known_args()
+CUTS = _args.cuts or CUTS
+OUT = _args.out or OUT
+PAGE = _args.page or PAGE
+
 META = {
     "a_write_jamo":  ("A", "졸라맨·졸라걸·스틱맨", "S5 S6", "허공에 자모 획을 긋는다"),
     "a_stack_block": ("A", "졸라맨·졸라걸·스틱맨", "S7", "블록이 손에서 손으로 넘어가며 쌓인다"),
@@ -96,7 +107,7 @@ def page(keys):
 <div class="card" data-g="{g}">
   <div class="hd"><span class="g" style="background:{COLOR[g]}22;color:{COLOR[g]}">{g}</span>
     <b>{k}</b><span class="who">{who}</span><span class="sc">{sc}</span></div>
-  <video src="/cut_preview/{k}.mp4" loop muted playsinline controls></video>
+  <video src="/{OUT}/{k}.mp4" loop muted playsinline controls></video>
   <div class="ft">{what}<span class="n">{n}컷 · {sz[0]}×{sz[1]}</span></div>
 </div>""")
     html = f"""<!doctype html>

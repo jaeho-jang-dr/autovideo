@@ -153,41 +153,8 @@ def add_ref(pg, name):
     return True
 
 
-def set_chip(pg, want=("동영상", "8s", "16:9")):
-    """설정 칩을 열어 길이·비율을 맞춘다. 항목이 없으면 현재 설정을 유지한다."""
-    chip = pg.evaluate("""() => {
-      for (const b of document.querySelectorAll('button')) {
-        const t = (b.innerText||'').trim(); const r = b.getBoundingClientRect();
-        if (r.width > 0 && r.top > 700 && /crop_|동영상\\s*·|Nano Banana/.test(t))
-          return {t: t.replace(/\\n/g,' '), x: Math.round(r.left+r.width/2),
-                  y: Math.round(r.top+r.height/2)};
-      }
-      return null;
-    }""")
-    if not chip:
-        log("    ★설정 칩 없음 — 현재 설정으로 진행")
-        return False
-    log(f"    칩: {chip['t'][:34]!r}")
-    pg.mouse.click(chip["x"], chip["y"])
-    time.sleep(2.5)
-    for w in want:
-        it = pg.evaluate("""(w) => {
-          for (const b of document.querySelectorAll("button,[role=menuitem],[role=option]")) {
-            const t = (b.innerText||'').trim(); const r = b.getBoundingClientRect();
-            if (r.width > 0 && t.replace(/\\s/g,'').includes(w.replace(/\\s/g,'')))
-              return {x: Math.round(r.left+r.width/2), y: Math.round(r.top+r.height/2)};
-          }
-          return null;
-        }""", w)
-        if it:
-            pg.mouse.click(it["x"], it["y"])
-            time.sleep(2)
-            log(f"    {w} 선택")
-        else:
-            log(f"    ({w} 항목 없음 — 유지)")
-    pg.keyboard.press("Escape")
-    time.sleep(1.5)
-    now = pg.evaluate("""() => {
+def chip_text(pg):
+    return pg.evaluate("""() => {
       for (const b of document.querySelectorAll('button')) {
         const t = (b.innerText||'').trim();
         if (b.getBoundingClientRect().width > 0 && /crop_|동영상\\s*·|Nano Banana/.test(t))
@@ -195,7 +162,40 @@ def set_chip(pg, want=("동영상", "8s", "16:9")):
       }
       return '?';
     }""")
-    log(f"    확정: {now[:34]!r}")
+
+
+def set_chip(pg, model="Veo 3.1 - Lite", aspect="16:9", secs="8s"):
+    """동영상 모델·비율·길이를 맞춘다.
+
+    ★2026-08-04 수정(사장님 승인). 이전 판은 칩을 **한 번만 열고** '동영상·8s·16:9' 를
+      연달아 누르려 했다. 항목을 고를 때마다 메뉴가 닫히기 때문에 첫 개만 먹고 나머지는
+      '항목 없음' 으로 흘렀고, **모델 드롭다운을 아예 안 건드려서** 칩이 이미지 생성기
+      (Nano Banana 2)에 남았다 → 동영상이 안 만들어지고 420초 대기 후 실패(a_write_jamo).
+      검증된 flow_cdp_pipeline 의 순서를 그대로 쓴다 — **고를 때마다 칩을 다시 연다.**
+    """
+    log(f"    칩(전): {chip_text(pg)[:40]!r}")
+    P.open_chip(pg)
+    # ★아이콘 이름이 play_circle 이 아니라 videocam 이다(2026-08-04 DOM 실측). 이것 때문에
+    #   '동영상'을 못 찾아 이미지 모델(Nano Banana)에 머물렀다.
+    P.click_btn(pg, "videocam\\n동영상", label="동영상")
+    # ★설정은 한 패널에 다 펼쳐져 있다. 모델이 이미 맞으면 드롭다운을 건드리지 않는다
+    #   — 열었다 닫으면 패널째 닫혀서 뒤 항목들을 못 누른다.
+    if not P.find_btn(pg, model.replace(" ", "\\s*")):
+        P.click_btn(pg, "arrow_drop_down", label="모델 드롭다운")
+        if not P.click_btn(pg, model, label=model):
+            log(f"    ★모델 '{model}' 항목 없음")
+        P.open_chip(pg)
+    else:
+        log(f"    모델 이미 {model}")
+    for rx, lb in ((f"crop_\\S*\\n{aspect}", aspect), (f"^{secs}$", secs), ("^x1$", "x1")):
+        P.click_btn(pg, rx, label=lb)
+    pg.keyboard.press("Escape")
+    time.sleep(1.2)
+    now = chip_text(pg)
+    log(f"    칩(후): {now[:40]!r}")
+    if "Nano Banana" in now:                    # ★이미지 모드면 만들어봐야 동영상이 안 나온다
+        log("    ★아직 이미지 모델이다 — 생성하지 않는다")
+        return False
     return True
 
 
@@ -230,11 +230,19 @@ def run_one(pg, key):
     pg.goto(CHAR_PROJECT, wait_until="domcontentloaded")
     time.sleep(9)
 
-    log(f"[1] 이전 참조 지우기 (현재 {refcount(pg)}개)")
+    # ★순서는 사장님 지시(2026-08-04): **①동영상 설정 → ②캐릭터 → ③프롬프트 → ④만들기.**
+    #   설정을 나중에 건드리면 앞서 붙인 참조·프롬프트가 흔들리고, 이미지 모델인 채로
+    #   캐릭터를 다 붙여 놓고 실패하면 그 수고가 통째로 날아간다.
+    log("[1] 설정 — 동영상 / Veo 3.1 Lite / 16:9 / 8초")
+    if not set_chip(pg):
+        log("    ★동영상 모드 전환 실패 — 크레딧 낭비 막으려고 여기서 멈춘다")
+        return False
+
+    log(f"[2] 이전 참조 지우기 (현재 {refcount(pg)}개)")
     clear_refs(pg)
     log(f"    남은 참조 {refcount(pg)}개")
 
-    log("[2] 이 그룹의 캐릭터만 참조로 붙이기")
+    log("[3] 이 그룹의 캐릭터만 참조로 붙이기 (★피커는 단일 선택 — 하나씩 누적)")
     for nm in refs:
         add_ref(pg, nm)
         log(f"    + {nm}  (붙은 참조 {refcount(pg)}개)")
@@ -244,9 +252,6 @@ def run_one(pg, key):
     if got != len(refs):
         log(f"    ★참조 개수 불일치: {got} ≠ {len(refs)} — 생성하지 않고 중단한다")
         return False
-
-    log("[3] 설정 — 8초 / 16:9")
-    set_chip(pg)
 
     log(f"[4] 프롬프트 입력 ({len(prompt)}자)")
     box = pg.locator("div[role='textbox'][contenteditable='true']").first

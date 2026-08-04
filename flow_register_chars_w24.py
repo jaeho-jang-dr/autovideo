@@ -34,8 +34,11 @@ CHARS = [
      "with rolled sleeves, beige trousers, white sneakers. Flat 2D cartoon illustration with bold "
      "clean black outlines and flat colours."),
     ("zollaman", "zollaman.png",
-     "A hand-drawn black ink stick figure with thin ink limbs and no clothes, his head filled solid "
-     "black like a bowl cut. A simple line drawing, never a coloured person."),
+     # ★2026-08-04 사장님 지시로 얼굴 변경 — 얼굴은 희게, 눈·입만, 머리카락만 검게.
+     "A hand-drawn black ink stick figure with thin ink limbs and no clothes. His face is white and "
+     "empty except for two dot eyes and a small mouth; only his hair is solid black, a very short "
+     "boyish crop cut high above the ears so both ears are fully visible - not a bob, no fringe. "
+     "A simple line drawing, never a coloured person."),
     ("zollagirl", "zollagirl.png",
      "A hand-drawn black ink stick figure with thin ink limbs and no clothes, her head an open white "
      "circle with bright orange hair tied in a bun. A simple line drawing, never a coloured person."),

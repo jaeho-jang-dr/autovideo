@@ -1,35 +1,38 @@
 EXACTLY SEVEN CHARACTERS in the frame, no more and no fewer, each appearing ONE TIME ONLY:
-@teacherjay - a coloured cartoon man, bald head with a single curl of hair, blue and white checked shirt with rolled sleeves, beige trousers, white sneakers.
-@zollaman - a HAND-DRAWN BLACK INK STICK FIGURE with thin ink limbs and no clothes, his head filled SOLID BLACK like a bowl cut.
-@zollagirl - a HAND-DRAWN BLACK INK STICK FIGURE with thin ink limbs and no clothes, her head an open white circle with BRIGHT ORANGE hair tied in a bun.
-@stickman - the plainest BLACK LINE STICK FIGURE drawn in thick smooth ink strokes: an empty white circle head with two dot eyes, a straight line body, thin line arms and legs, no hair, no hands, no feet, no clothes. He is a PERSON, never an object and NEVER A PEN OR MARKER. His ink lines glow softly cyan.
-@injun - a coloured cartoon young man, tall and slim, short black hair, navy blue t-shirt, beige trousers, white sneakers.
-@jieun - a coloured cartoon young woman, long wavy light brown hair, pale yellow floral dress.
-@madamjay - a coloured cartoon woman who looks about forty, smooth youthful face, rosy cheeks, glossy dark brown hair in a neat bun, vivid coral sleeveless vest over a white blouse, white knee-length skirt.
+@teacherjay - cartoon man, bald with one curl, blue checked shirt, beige trousers, white sneakers. 171 cm.
+@zollaman - black ink stick figure, WHITE face with dot eyes, very short black hair above bare ears, a man. 174 cm.
+@zollagirl - black ink stick figure, white circle head, ORANGE hair in a bun. 159 cm.
+@stickman - plain black line stick figure, empty white circle head, ink lines glow cyan. A person, never a pen. 171 cm.
+@injun - cartoon young man, short black hair, navy t-shirt, beige trousers, white sneakers. 176 cm.
+@jieun - cartoon young woman, long wavy light brown hair, pale yellow floral dress. 161 cm.
+@madamjay - cartoon woman about forty, dark brown hair in a bun, coral vest over white blouse, white skirt. 158 cm.
+COUNT LOCK: in the whole frame there is exactly ONE figure with a blue and white checked shirt, exactly ONE figure with a WHITE face with dot eyes and VERY SHORT black hair above bare ears, exactly ONE figure with ORANGE hair tied in a bun, exactly ONE figure with an EMPTY WHITE circle head with a soft CYAN glow, exactly ONE figure with a navy blue t-shirt, exactly ONE figure with a pale yellow floral dress, exactly ONE figure with a coral sleeveless vest. No duplicates, no twins, no extra people - 7 figures in total.
 
 INSIDE A MODERN ART GALLERY ROOM: white walls with track lighting, a plain blank blackboard against the left wall, a wooden lectern, and a row of SEVEN LARGE EMPTY PICTURE FRAMES hanging along the walls. Several empty wooden chairs stand in a loose arc on the right. The camera is LOCKED OFF and never moves. 0-1.5s: the room is still and empty; each frame holds a flat blank pale panel with nothing in it. 1.5-6s: ONE BY ONE, FROM LEFT TO RIGHT, A CHARACTER STEPS OUT OF A FRAME. The blank panel brightens, the character appears inside it as a flat picture, then CLIMBS FORWARD OVER THE BOTTOM EDGE OF THE FRAME and drops onto the gallery floor, turning from a flat picture into a solid figure as they land. The frame they came out of is left EMPTY and pale behind them. Order: teacherjay, zollaman, zollagirl, stickman, injun, jieun, madamjay - each about half a second after the one before. 6-8s: all seven stand on the floor in front of the wall facing the camera and hold still. Every frame on the wall is now empty. EXACTLY SEVEN CHARACTERS, each appearing ONE TIME ONLY, each stepping out of a DIFFERENT frame. Nobody is duplicated and nobody stays inside a frame at the end.
 
 STYLE: @zollaman @zollagirl @stickman stay hand-drawn black ink line figures; @teacherjay @injun @jieun @madamjay stay fully coloured cartoon people. Do not blend the two styles. Flat 2D cartoon illustration, bold clean black outlines.
-HEIGHT ORDER (keep exact): @injun tallest, then @zollaman, then @teacherjay and @stickman, then @jieun, then @zollagirl, then @madamjay shortest.
+HEIGHT LOCK (exact, in centimetres): @injun is 176 cm, @zollaman is 174 cm, @teacherjay is 171 cm, @stickman is 171 cm, @jieun is 161 cm, @zollagirl is 159 cm, @madamjay is 158 cm. @injun is the tallest. Side by side, the TOP OF @zollaman's HEAD reaches only up to just a hair below the top of @injun's head; the TOP OF @teacherjay's HEAD reaches only up to just a hair below the top of @injun's head; the TOP OF @stickman's HEAD reaches only up to just a hair below the top of @injun's head; the TOP OF @jieun's HEAD reaches only up to @injun's EYES; the TOP OF @zollagirl's HEAD reaches only up to @injun's EYES; the TOP OF @madamjay's HEAD reaches only up to @injun's EYES. There is a clear, obvious height gap - they are NOT the same height. Height is measured from the TOP OF THE HEAD to the SOLES OF THE FEET only - raised arms, held objects and chairs do not count. All are FULL-GROWN ADULTS, nobody child-sized, and these heights are identical in every frame.
 
-SET: a completely EMPTY seamless studio backdrop of plain light grey (#e8e8e8). Nothing else at all -
-no floor line, no furniture, no scenery, no props, no shadows cast on the backdrop. Only a soft
-contact shadow directly under each pair of feet. The background must stay perfectly plain so the
-figures can be cut out cleanly.
+SET: background is PURE FLAT WHITE (#FFFFFF), UNBROKEN from the very top edge to the very bottom
+edge, like blank paper. There is NO horizontal line, NO band, NO stripe, NO strip of grey, NO
+shelf, NO ceiling, NO table, NO wall, NO skirting, NO horizon and NO floor line anywhere in the
+picture. No gradient, no vignette, no scenery, no props, no cast shadows. The ONLY marks on the
+white are the characters themselves plus a faint contact shadow under each pair of shoes.
 
-CAMERA: LOCKED OFF on a tripod. The camera does not move even slightly - no pan, no tilt, no zoom,
-no dolly, no handheld shake, no rack focus. One single continuous shot, wide, straight-on at chest
-height. The framing is identical in the first frame and the last frame.
+CAMERA: LOCKED OFF on a tripod - no pan, tilt, zoom, dolly or shake. One continuous wide shot,
+straight on at chest height; the first and last frames are framed identically.
 
-STAGING: every character stays ON THE SPOT for the whole eight seconds. Nobody walks across the
-frame, nobody enters, nobody leaves. Their feet stay planted in the same place; only the body,
-arms, head and expression move. FULL BODY from the top of the head to below the shoes is inside
-the frame at all times, with clear empty margin above the heads and below the feet.
+STAGING: everyone stays ON THE SPOT for all eight seconds, feet planted; nobody walks, enters or
+leaves. They stand well APART with a clear gap between them and never overlap or touch each other.
 
-ANATOMY LOCK: each character has exactly one head, two arms with two hands (five fingers each) and
-two legs. No extra or missing limbs, no fused bodies, no floating hands, no duplicated characters.
+FRAMING (think of the frame as 10 rows, 1 at the top to 10 at the bottom): the tallest head is in
+row 2 and every pair of SHOES is in row 8; rows 1, 9 and 10 stay empty white. Shot wide, from far
+back. Nothing is cropped - every head, hand and shoe stays inside the frame at all times.
 
-NEGATIVE: no text, no letters, no numbers, no signage, no logos, no watermark, no captions,
-no name labels, no motion blur, no lens flare.
+ANATOMY LOCK: one head, two arms with two five-fingered hands and two legs each. No extra or
+missing limbs, no fused bodies, no floating hands, no duplicated characters.
+
+NEGATIVE: no text, letters, numbers, signage, logos, watermark, captions, name labels, motion blur
+or lens flare.
 ★NOTHING IS EVER DRAWN IN THE AIR: when a character mimes writing or drawing, the hand moves through empty space and NO ink trail, NO stroke, NO letter, NO shape and NO glowing line appears. The air stays completely empty. Only the characters themselves are visible against the backdrop.
 16:9, 1280x720, 8 seconds.

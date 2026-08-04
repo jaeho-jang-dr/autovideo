@@ -1,0 +1,1 @@
+To ask the time, say '몇 시예요?' (what time is it?): 한 시, 두 시, 세 시. Repeat after me.

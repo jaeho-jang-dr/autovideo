@@ -1,0 +1,1 @@
+Describe your day: 일어나요 (get up), 먹어요 (eat), 일해요 (work), 자요 (sleep). In order, it's easy.

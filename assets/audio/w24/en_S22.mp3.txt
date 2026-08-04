@@ -1,0 +1,1 @@
+For weather: 맑아요 (it's clear), 비가 와요 (it's raining), 바람이 불어요 (it's windy). Today is a fine one.

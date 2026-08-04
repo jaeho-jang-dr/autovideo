@@ -24,29 +24,76 @@ OUT_DIR = "W24/prompts"
 
 # ── 캐릭터 묘사 — ★clip5_prompt.txt / Flow 등록 설명과 문구를 맞춘다(일관성) ──
 DESC = {
-    "zollaman": "@zollaman - a HAND-DRAWN BLACK INK STICK FIGURE with thin ink limbs and no clothes, "
-                "his head filled SOLID BLACK like a bowl cut.",
+    # ★2026-08-04 사장님 지시로 얼굴을 바꿨다 — 예전엔 머리 전체가 검게 칠해져 표정이 없었다.
+    "zollaman": "@zollaman - a MAN, clearly MALE and boyish, a HAND-DRAWN BLACK INK STICK FIGURE "
+                "with thin ink limbs and no clothes. His FACE IS WHITE and EMPTY except for two "
+                "dot EYES and a small MOUTH. Only his HAIR is SOLID BLACK - a MAN'S VERY SHORT "
+                "CREW CUT, a thin black cap on the very top of the skull, cut high above the ears "
+                "so BOTH EARS SHOW. NEVER a bob, NEVER long or chin-length hair, no fringe, "
+                "nothing covering the ears or neck - he must never look like a woman. "
+                "HE IS 174 CM TALL.",
     "zollagirl": "@zollagirl - a HAND-DRAWN BLACK INK STICK FIGURE with thin ink limbs and no clothes, "
-                 "her head an open white circle with BRIGHT ORANGE hair tied in a bun.",
-    "stickman": "@stickman - the plainest BLACK LINE STICK FIGURE drawn in thick smooth ink strokes: "
-                "an empty white circle head with two dot eyes, a straight line body, thin line arms and "
-                "legs, no hair, no hands, no feet, no clothes. He is a PERSON, never an object and "
-                "NEVER A PEN OR MARKER. His ink lines glow softly cyan.",
+                 "her head an open white circle with BRIGHT ORANGE hair tied in a bun. SHE IS 159 CM TALL.",
+    "stickman": "@stickman - the plainest BLACK LINE STICK FIGURE in thick smooth ink: an empty "
+                "white circle head with two dot eyes, a line body, thin line arms and legs, no "
+                "hair, no clothes. He is a PERSON, NEVER a pen or marker. His ink lines glow "
+                "softly cyan. HE IS 171 CM TALL.",
     "injun": "@injun - a coloured cartoon young man, tall and slim, short black hair, navy blue "
-             "t-shirt, beige trousers, white sneakers.",
+             "t-shirt, beige trousers, white sneakers. HE IS 176 CM TALL.",
     "jieun": "@jieun - a coloured cartoon young woman, long wavy light brown hair, pale yellow "
-             "floral dress.",
+             "floral dress. SHE IS 161 CM TALL.",
     "madamjay": "@madamjay - a coloured cartoon woman who looks about forty, smooth youthful face, "
                 "rosy cheeks, glossy dark brown hair in a neat bun, vivid coral sleeveless vest over "
-                "a white blouse, white knee-length skirt.",
+                "a white blouse, white knee-length skirt. SHE IS 158 CM TALL.",
     "teacherjay": "@teacherjay - a coloured cartoon man, bald head with a single curl of hair, blue "
-                  "and white checked shirt with rolled sleeves, beige trousers, white sneakers.",
+                  "and white checked shirt with rolled sleeves, beige trousers, white sneakers. "
+                  "HE IS 171 CM TALL.",
 }
 
-HEIGHT_A = ("HEIGHT ORDER (keep exact): @zollaman is the tallest, @stickman is a little shorter, "
-            "@zollagirl is the shortest.")
-HEIGHT_B = "HEIGHT ORDER (keep exact): @injun is clearly taller than @jieun."
-HEIGHT_C = "HEIGHT ORDER (keep exact): @teacherjay is clearly taller than @madamjay."
+# ★키 비율은 서술형("조금 더 작다")으로 쓰면 Veo 가 제멋대로 해석한다 — 실제로 2026-08-03 생성분에서
+#   스틱맨이 규격 98% 인데 67~73% 로, 지은·마담제이가 92% 인데 82~83% 로 그려졌다.
+#   그래서 **퍼센트로 못박고**, 재는 방법(머리끝~발끝)까지 같이 적는다.
+# ★키는 **캐릭터 설명 안에 cm 로 박아 두었다**(사장님 지시 2026-08-04). 퍼센트 서술은 클립마다
+#   다르게 해석돼 같은 인물이 627px → 577px 로 8% 흔들렸다. 여기서는 그 cm 를 다시 못박기만 한다.
+CM = {"injun": 176, "zollaman": 174, "teacherjay": 171, "stickman": 171,
+      "jieun": 161, "zollagirl": 159, "madamjay": 158}
+_HOW = ("Height is measured from the TOP OF THE HEAD to the SOLES OF THE FEET only - raised arms, "
+        "held objects and chairs do not count. All are FULL-GROWN ADULTS, nobody child-sized, and "
+        "these heights are identical in every frame.")
+
+
+def height_lock(refs):
+    """참조 인물들의 키를 cm 로 나열하고, 큰 사람 대비 **정수리가 어디에 오는지**까지 적는다.
+
+    ★2026-08-04: cm 만으로는 졸라걸(159cm)이 졸라맨(174cm)과 똑같은 키(99%)로 그려졌다.
+      둘 다 '잉크 스틱 피규어'라 Veo 가 체격을 같게 본다. 숫자에 더해 **눈으로 그릴 수 있는
+      상대 위치**를 줘야 차이가 살아난다.
+    """
+    tall = max(refs, key=lambda r: CM[r])
+    body = ", ".join(f"@{r} is {CM[r]} cm" for r in sorted(refs, key=lambda r: -CM[r]))
+    rel = []
+    for r in sorted(refs, key=lambda r: -CM[r]):
+        if r == tall:
+            continue
+        pct = CM[r] / CM[tall]
+        where = ("just a hair below the top of @%s's head" % tall if pct >= 0.97 else
+                 "@%s's EYEBROWS" % tall if pct >= 0.93 else
+                 "@%s's EYES" % tall if pct >= 0.89 else
+                 "@%s's CHIN" % tall)
+        rel.append(f"the TOP OF @{r}'s HEAD reaches only up to {where}")
+    return (f"HEIGHT LOCK (exact, in centimetres): {body}. @{tall} is the tallest. "
+            + ("Side by side, " + "; ".join(rel) + ". " if rel else "")
+            + "There is a clear, obvious height gap - they are NOT the same height. " + _HOW)
+
+# ★앉은 자세 — 2026-08-03 생성분은 앉았는데도 선 키 그대로(100%)여서 거인처럼 보였다.
+SEATED = """
+SEATED HEIGHT LOCK: when a character sits on a chair, the distance from the top of their head to
+the soles of their feet on the floor must be 75% of that same character's standing height. Only the
+legs fold; the torso and head stay full adult size. NEVER draw a seated character as tall as a
+standing one, and NEVER shrink a seated character to child size. The chairs are ordinary adult
+chairs, correctly proportioned to the people sitting on them, and all chairs in the shot are the
+SAME design and the SAME size.
+"""
 
 STYLE_A = ("All three are simple hand-drawn black ink line figures - never coloured people. "
            "Flat 2D cartoon illustration, bold clean black outlines.")
@@ -54,25 +101,27 @@ STYLE_HUMAN = ("Flat 2D cartoon illustration, bold clean black outlines, flat co
 
 # ★공통 꼬리표 — 컷아웃 전제 촬영 규격
 TAIL = """
-SET: a completely EMPTY seamless studio backdrop of plain light grey (#e8e8e8). Nothing else at all -
-no floor line, no furniture, no scenery, no props, no shadows cast on the backdrop. Only a soft
-contact shadow directly under each pair of feet. The background must stay perfectly plain so the
-figures can be cut out cleanly.
+SET: background is PURE FLAT WHITE (#FFFFFF), UNBROKEN from the very top edge to the very bottom
+edge, like blank paper. There is NO horizontal line, NO band, NO stripe, NO strip of grey, NO
+shelf, NO ceiling, NO table, NO wall, NO skirting, NO horizon and NO floor line anywhere in the
+picture. No gradient, no vignette, no scenery, no props, no cast shadows. The ONLY marks on the
+white are the characters themselves plus a faint contact shadow under each pair of shoes.
 
-CAMERA: LOCKED OFF on a tripod. The camera does not move even slightly - no pan, no tilt, no zoom,
-no dolly, no handheld shake, no rack focus. One single continuous shot, wide, straight-on at chest
-height. The framing is identical in the first frame and the last frame.
+CAMERA: LOCKED OFF on a tripod - no pan, tilt, zoom, dolly or shake. One continuous wide shot,
+straight on at chest height; the first and last frames are framed identically.
 
-STAGING: every character stays ON THE SPOT for the whole eight seconds. Nobody walks across the
-frame, nobody enters, nobody leaves. Their feet stay planted in the same place; only the body,
-arms, head and expression move. FULL BODY from the top of the head to below the shoes is inside
-the frame at all times, with clear empty margin above the heads and below the feet.
+STAGING: everyone stays ON THE SPOT for all eight seconds, feet planted; nobody walks, enters or
+leaves. They stand well APART with a clear gap between them and never overlap or touch each other.
 
-ANATOMY LOCK: each character has exactly one head, two arms with two hands (five fingers each) and
-two legs. No extra or missing limbs, no fused bodies, no floating hands, no duplicated characters.
+FRAMING (think of the frame as 10 rows, 1 at the top to 10 at the bottom): the tallest head is in
+row 2 and every pair of SHOES is in row 8; rows 1, 9 and 10 stay empty white. Shot wide, from far
+back. Nothing is cropped - every head, hand and shoe stays inside the frame at all times.
 
-NEGATIVE: no text, no letters, no numbers, no signage, no logos, no watermark, no captions,
-no name labels, no motion blur, no lens flare.
+ANATOMY LOCK: one head, two arms with two five-fingered hands and two legs each. No extra or
+missing limbs, no fused bodies, no floating hands, no duplicated characters.
+
+NEGATIVE: no text, letters, numbers, signage, logos, watermark, captions, name labels, motion blur
+or lens flare.
 ★NOTHING IS EVER DRAWN IN THE AIR: when a character mimes writing or drawing, the hand moves through empty space and NO ink trail, NO stroke, NO letter, NO shape and NO glowing line appears. The air stays completely empty. Only the characters themselves are visible against the backdrop.
 16:9, 1280x720, 8 seconds.
 """
@@ -274,17 +323,55 @@ HEIGHT_ALL = ("HEIGHT ORDER (keep exact): @injun tallest, then @zollaman, then @
 STYLE_ALL = ("@zollaman @zollagirl @stickman stay hand-drawn black ink line figures; @teacherjay "
              "@injun @jieun @madamjay stay fully coloured cartoon people. Do not blend the two styles. "
              "Flat 2D cartoon illustration, bold clean black outlines.")
-STYLE_OF = {"A": (STYLE_A, HEIGHT_A), "B": (STYLE_HUMAN, HEIGHT_B), "C": (STYLE_HUMAN, HEIGHT_C),
-            "ALL": (STYLE_ALL, HEIGHT_ALL)}
+STYLE_OF = {"A": STYLE_A, "B": STYLE_HUMAN, "C": STYLE_HUMAN, "ALL": STYLE_ALL}
+
+
+# ★2026-08-04: "EXACTLY THREE CHARACTERS ... ONE TIME ONLY" 만으로는 복제를 못 막았다.
+#   졸라맨과 스틱맨이 둘 다 '검은 잉크 스틱 피규어'라 Veo 가 검은 머리를 두 번 그렸다(4명 생성).
+#   → 인물마다 **눈에 띄는 특징의 개수**로 못박는다.
+MARK = {
+    "zollaman": "a WHITE face with dot eyes and VERY SHORT black hair above bare ears",
+    "zollagirl": "ORANGE hair tied in a bun",
+    "stickman": "an EMPTY WHITE circle head with a soft CYAN glow",
+    "injun": "a navy blue t-shirt",
+    "jieun": "a pale yellow floral dress",
+    "madamjay": "a coral sleeveless vest",
+    "teacherjay": "a blue and white checked shirt",
+}
+
+
+# ★인원이 많은 컷(gallery_emerge = 7인)은 묘사를 다 넣으면 6,300자가 넘어 Flow 가 거부한다.
+#   5명 이상이면 **짧은 묘사**로 바꾼다 — 캐릭터는 어차피 Flow 에 등록돼 있어 @이름이 본체다.
+SHORT = {
+    "zollaman": "@zollaman - black ink stick figure, WHITE face with dot eyes, very short black "
+                "hair above bare ears, a man. 174 cm.",
+    "zollagirl": "@zollagirl - black ink stick figure, white circle head, ORANGE hair in a bun. 159 cm.",
+    "stickman": "@stickman - plain black line stick figure, empty white circle head, ink lines glow "
+                "cyan. A person, never a pen. 171 cm.",
+    "injun": "@injun - cartoon young man, short black hair, navy t-shirt, beige trousers, white "
+             "sneakers. 176 cm.",
+    "jieun": "@jieun - cartoon young woman, long wavy light brown hair, pale yellow floral dress. 161 cm.",
+    "madamjay": "@madamjay - cartoon woman about forty, dark brown hair in a bun, coral vest over "
+                "white blouse, white skirt. 158 cm.",
+    "teacherjay": "@teacherjay - cartoon man, bald with one curl, blue checked shirt, beige "
+                  "trousers, white sneakers. 171 cm.",
+}
 
 
 def build(key, grp, refs, scenes, action):
-    style, height = STYLE_OF[grp]
-    who = "\n".join(DESC[r] for r in refs)
+    style = STYLE_OF[grp]
+    height = height_lock(refs)          # ★참조 인물의 cm 를 그대로 나열 — 조합이 뭐든 맞는다
+    src = SHORT if len(refs) >= 5 else DESC      # ★5명 이상은 짧은 묘사(길이 제한 회피)
+    who = "\n".join(src[r] for r in refs)
     n = len(refs)
     head = (f"EXACTLY {['','ONE','TWO','THREE','FOUR','FIVE','SIX','SEVEN'][n]} CHARACTERS in the frame, no more and no fewer, "
             f"each appearing ONE TIME ONLY:\n{who}\n")
-    return f"{head}\n{action}\n\nSTYLE: {style}\n{height}\n{TAIL}".strip() + "\n"
+    # ★특징 개수 잠금 — 같은 화풍의 인물이 복제되는 것을 막는다
+    head += ("COUNT LOCK: in the whole frame there is exactly ONE figure with "
+             + ", exactly ONE figure with ".join(MARK[r] for r in refs)
+             + f". No duplicates, no twins, no extra people - {n} figures in total.\n")
+    seated = SEATED if ("sit" in key or "sit" in action.lower()) else ""
+    return f"{head}\n{action}\n\nSTYLE: {style}\n{height}\n{seated}{TAIL}".strip() + "\n"
 
 
 def main(listonly=False):

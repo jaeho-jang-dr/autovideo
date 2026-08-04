@@ -1,7 +1,8 @@
 EXACTLY THREE CHARACTERS in the frame, no more and no fewer, each appearing ONE TIME ONLY:
-@zollaman - a HAND-DRAWN BLACK INK STICK FIGURE with thin ink limbs and no clothes, his head filled SOLID BLACK like a bowl cut.
-@zollagirl - a HAND-DRAWN BLACK INK STICK FIGURE with thin ink limbs and no clothes, her head an open white circle with BRIGHT ORANGE hair tied in a bun.
-@stickman - the plainest BLACK LINE STICK FIGURE drawn in thick smooth ink strokes: an empty white circle head with two dot eyes, a straight line body, thin line arms and legs, no hair, no hands, no feet, no clothes. He is a PERSON, never an object and NEVER A PEN OR MARKER. His ink lines glow softly cyan.
+@zollaman - a MAN, clearly MALE and boyish, a HAND-DRAWN BLACK INK STICK FIGURE with thin ink limbs and no clothes. His FACE IS WHITE and EMPTY except for two dot EYES and a small MOUTH. Only his HAIR is SOLID BLACK - a MAN'S VERY SHORT CREW CUT, a thin black cap on the very top of the skull, cut high above the ears so BOTH EARS SHOW. NEVER a bob, NEVER long or chin-length hair, no fringe, nothing covering the ears or neck - he must never look like a woman. HE IS 174 CM TALL.
+@zollagirl - a HAND-DRAWN BLACK INK STICK FIGURE with thin ink limbs and no clothes, her head an open white circle with BRIGHT ORANGE hair tied in a bun. SHE IS 159 CM TALL.
+@stickman - the plainest BLACK LINE STICK FIGURE in thick smooth ink: an empty white circle head with two dot eyes, a line body, thin line arms and legs, no hair, no clothes. He is a PERSON, NEVER a pen or marker. His ink lines glow softly cyan. HE IS 171 CM TALL.
+COUNT LOCK: in the whole frame there is exactly ONE figure with a WHITE face with dot eyes and VERY SHORT black hair above bare ears, exactly ONE figure with ORANGE hair tied in a bun, exactly ONE figure with an EMPTY WHITE circle head with a soft CYAN glow. No duplicates, no twins, no extra people - 3 figures in total.
 
 THE THREE INK FIGURES SIT SIDE BY SIDE ON SIMPLE WOODEN CHAIRS in a row, as if in a classroom. THE CHAIRS ARE PART OF THE PICTURE and must be fully visible under each of them.
 0-3s: all three sit up straight with their hands resting on their knees, heads turned to their LEFT as if listening to a teacher standing off-frame on that side. They hold this calmly.
@@ -9,26 +10,35 @@ THE THREE INK FIGURES SIT SIDE BY SIDE ON SIMPLE WOODEN CHAIRS in a row, as if i
 5.5-8s: they stop clapping, turn their heads to face STRAIGHT AT THE CAMERA, hands back on their knees, and hold perfectly still looking forward.
 
 STYLE: All three are simple hand-drawn black ink line figures - never coloured people. Flat 2D cartoon illustration, bold clean black outlines.
-HEIGHT ORDER (keep exact): @zollaman is the tallest, @stickman is a little shorter, @zollagirl is the shortest.
+HEIGHT LOCK (exact, in centimetres): @zollaman is 174 cm, @stickman is 171 cm, @zollagirl is 159 cm. @zollaman is the tallest. Side by side, the TOP OF @stickman's HEAD reaches only up to just a hair below the top of @zollaman's head; the TOP OF @zollagirl's HEAD reaches only up to @zollaman's EYES. There is a clear, obvious height gap - they are NOT the same height. Height is measured from the TOP OF THE HEAD to the SOLES OF THE FEET only - raised arms, held objects and chairs do not count. All are FULL-GROWN ADULTS, nobody child-sized, and these heights are identical in every frame.
 
-SET: a completely EMPTY seamless studio backdrop of plain light grey (#e8e8e8). Nothing else at all -
-no floor line, no furniture, no scenery, no props, no shadows cast on the backdrop. Only a soft
-contact shadow directly under each pair of feet. The background must stay perfectly plain so the
-figures can be cut out cleanly.
+SEATED HEIGHT LOCK: when a character sits on a chair, the distance from the top of their head to
+the soles of their feet on the floor must be 75% of that same character's standing height. Only the
+legs fold; the torso and head stay full adult size. NEVER draw a seated character as tall as a
+standing one, and NEVER shrink a seated character to child size. The chairs are ordinary adult
+chairs, correctly proportioned to the people sitting on them, and all chairs in the shot are the
+SAME design and the SAME size.
 
-CAMERA: LOCKED OFF on a tripod. The camera does not move even slightly - no pan, no tilt, no zoom,
-no dolly, no handheld shake, no rack focus. One single continuous shot, wide, straight-on at chest
-height. The framing is identical in the first frame and the last frame.
+SET: background is PURE FLAT WHITE (#FFFFFF), UNBROKEN from the very top edge to the very bottom
+edge, like blank paper. There is NO horizontal line, NO band, NO stripe, NO strip of grey, NO
+shelf, NO ceiling, NO table, NO wall, NO skirting, NO horizon and NO floor line anywhere in the
+picture. No gradient, no vignette, no scenery, no props, no cast shadows. The ONLY marks on the
+white are the characters themselves plus a faint contact shadow under each pair of shoes.
 
-STAGING: every character stays ON THE SPOT for the whole eight seconds. Nobody walks across the
-frame, nobody enters, nobody leaves. Their feet stay planted in the same place; only the body,
-arms, head and expression move. FULL BODY from the top of the head to below the shoes is inside
-the frame at all times, with clear empty margin above the heads and below the feet.
+CAMERA: LOCKED OFF on a tripod - no pan, tilt, zoom, dolly or shake. One continuous wide shot,
+straight on at chest height; the first and last frames are framed identically.
 
-ANATOMY LOCK: each character has exactly one head, two arms with two hands (five fingers each) and
-two legs. No extra or missing limbs, no fused bodies, no floating hands, no duplicated characters.
+STAGING: everyone stays ON THE SPOT for all eight seconds, feet planted; nobody walks, enters or
+leaves. They stand well APART with a clear gap between them and never overlap or touch each other.
 
-NEGATIVE: no text, no letters, no numbers, no signage, no logos, no watermark, no captions,
-no name labels, no motion blur, no lens flare.
+FRAMING (think of the frame as 10 rows, 1 at the top to 10 at the bottom): the tallest head is in
+row 2 and every pair of SHOES is in row 8; rows 1, 9 and 10 stay empty white. Shot wide, from far
+back. Nothing is cropped - every head, hand and shoe stays inside the frame at all times.
+
+ANATOMY LOCK: one head, two arms with two five-fingered hands and two legs each. No extra or
+missing limbs, no fused bodies, no floating hands, no duplicated characters.
+
+NEGATIVE: no text, letters, numbers, signage, logos, watermark, captions, name labels, motion blur
+or lens flare.
 ★NOTHING IS EVER DRAWN IN THE AIR: when a character mimes writing or drawing, the hand moves through empty space and NO ink trail, NO stroke, NO letter, NO shape and NO glowing line appears. The air stays completely empty. Only the characters themselves are visible against the backdrop.
 16:9, 1280x720, 8 seconds.

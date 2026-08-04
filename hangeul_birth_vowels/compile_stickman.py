@@ -697,6 +697,18 @@ def compose(scene, t=None, lang="ko", overlay=True):
                     im = load_img_flip(pp) if flip else load_img(pp)
                 dx += (tx - o["cx"])               # 절대 위치 tx로 이동(그림자 함께)
                 # 앉기(zw_sitting/zw_reading) 컷아웃엔 의자가 이미 포함됨 — 별도 의자 안 그림
+        elif is_pose and str(o["motion"]).startswith("gseq:"):
+            # ★그룹 통짜 컷 시퀀스 — 시퀀스를 **오브젝트별로** 지정한다(W24, 2026-08-04 사장님 승인).
+            # 씬 단위 anim_seq 로는 한 씬에 하나뿐이라 A·B·C 세 그룹이 동시에 앉는 씬을 못 그린다.
+            # motion_type 에 'gseq:<시퀀스명>' 을 실어 보내며, 컷은 char_key='w24_grp' 에 모여 있다.
+            st = seq_state(tt, dur, o["motion"][5:])
+            if st:
+                _tx, pose_name = st
+                pp, flip, _pen = char_pose_info("w24_grp", pose_name)
+                if pp is not None:
+                    im = load_img_flip(pp) if flip else load_img(pp)
+                # ★비트의 x는 쓰지 않는다 — 그룹 컷은 제자리 동작이고, 한 씬에 여러 그룹이
+                # 동시에 서므로 위치는 scene_objects.cx 가 정한다(안 그러면 전부 중앙에 겹친다).
         elif is_pose and cmode == "sit":                 # 진지한 설명 = 의자에 앉아 설명
             si = pose_img("zw_sitting")
             if si is not None:
