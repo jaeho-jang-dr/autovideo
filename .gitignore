@@ -104,3 +104,10 @@ W24/cut_preview/
 W24/_view/
 W24/_final/
 W24/_gframes/
+
+# ── 그래픽 데이터는 로컬만 (사장님 지시 2026-08-04) ── 깃에는 정보만 올린다
+W24/*.jpeg
+W24/*.jpg
+W24/_orig/
+W24/clips/
+W24/cut_preview/
