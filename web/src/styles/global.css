@@ -1,38 +1,38 @@
 /* =====================================================================
-   drjay-ed — 전역 스타일 (다크 딥 스페이스 블랙 테마)
-   고급스러운 블랙 배경 · 다크 글래스모피즘 · 미니멀 네온 오로라 광채 ·
+   drjay-ed — 전역 스타일 (애플 프리미엄 라이트 테마)
+   애플 스타일의 산뜻한 화이트 배경 · 딥 다크 타이포그래피 · 미니멀 리파인드 그라디언트
    Inter / Outfit / Noto Sans KR 웹폰트
    ===================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap');
 
 :root {
-  /* --- 배경 (다크 딥 스페이스 블랙) --- */
-  --bg-0: #090a0f;
-  --bg-1: #0f111a;
-  --bg-2: #161926;
+  /* --- 배경 (애플 라이트 프리미엄) --- */
+  --bg-0: #ffffff;
+  --bg-1: #f5f5f7;
+  --bg-2: #e8e8ed;
 
-  /* --- 글래스 표면 (반투명 다크) --- */
-  --surface: rgba(22, 25, 38, 0.75);
-  --surface-strong: rgba(30, 34, 50, 0.88);
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.16);
+  /* --- 글래스 표면 (라이트 글래스 & 스노우 화이트) --- */
+  --surface: #ffffff;
+  --surface-strong: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.14);
 
-  /* --- 텍스트 (네온 화이트 / 골드 / 차콜 그레이 계층) --- */
-  --text-0: #f8fafc;
-  --text-1: #cbd5e1;
-  --text-2: #94a3b8;
+  /* --- 텍스트 (애플 딥 블랙 / 쿨 차콜 / 애플 그레이 계층) --- */
+  --text-0: #1d1d1f;   /* 애플 메인 딥 텍스트 */
+  --text-1: #424245;   /* 애플 차콜 서브 텍스트 */
+  --text-2: #86868b;   /* 애플 쿨그레이 메타 텍스트 */
 
-  /* --- 포인트 컬러 (네온 바이올렛 / 블루 / 시안) --- */
-  --neon-violet: hsl(265 92% 60%);
-  --neon-blue: hsl(216 96% 56%);
-  --neon-cyan: hsl(190 95% 48%);
-  --grad-neon: linear-gradient(120deg, hsl(265 92% 60%), hsl(216 96% 56%) 55%, hsl(190 95% 48%));
-  --grad-neon-soft: linear-gradient(120deg, hsl(265 92% 60% / 0.85), hsl(216 96% 56% / 0.85));
-  --glow-violet: rgba(138, 43, 226, 0.25);
-  --glow-blue: rgba(30, 144, 255, 0.2);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+  /* --- 포인트 컬러 (애플 블루 / 비비드 바이올렛) --- */
+  --neon-violet: #8e24aa;
+  --neon-blue: #0071e3;
+  --neon-cyan: #0288d1;
+  --grad-neon: linear-gradient(135deg, #0071e3 0%, #8e24aa 50%, #d81b60 100%);
+  --grad-neon-soft: linear-gradient(135deg, #0071e3 0%, #8e24aa 100%);
+  --glow-violet: rgba(142, 36, 170, 0.12);
+  --glow-blue: rgba(0, 113, 227, 0.15);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
 
   /* --- 형태 --- */
   --radius: 18px;
@@ -55,11 +55,10 @@ body {
   font-family: var(--font-sans);
   color: var(--text-0);
   background-color: var(--bg-1);
-  /* 고급 다크 오로라 앰비언트 광채 */
+  /* 산뜻하고 은은한 애플 스타일 앰비언트 글로우 */
   background-image:
-    radial-gradient(800px 500px at 10% -5%, rgba(138, 43, 226, 0.18), transparent 70%),
-    radial-gradient(750px 480px at 90% 0%, rgba(30, 144, 255, 0.16), transparent 60%),
-    radial-gradient(1000px 700px at 50% 110%, rgba(32, 196, 244, 0.14), transparent 70%);
+    radial-gradient(900px 600px at 15% -5%, rgba(0, 113, 227, 0.05), transparent 70%),
+    radial-gradient(850px 550px at 85% 0%, rgba(142, 36, 170, 0.04), transparent 70%);
   background-attachment: fixed;
   line-height: 1.62;
   -webkit-font-smoothing: antialiased;
@@ -418,7 +417,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; margin: 0; lett
   z-index: -1;            /* 모든 콘텐츠 뒤 */
   overflow: hidden;
   pointer-events: none;
-  background-color: var(--bg-0);
+  background-color: var(--bg-1);
 }
 .bg-video {
   position: absolute;
@@ -427,54 +426,54 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; margin: 0; lett
   min-width: 100%; min-height: 100%;
   width: auto; height: auto;
   object-fit: cover;
-  filter: brightness(0.4) contrast(1.25) invert(0.92);
-  opacity: 0.55;
+  filter: brightness(1.05) contrast(0.95);
+  opacity: 0.18;
 }
-/* 다크 딥스페이스 스크림으로 선명한 텍스트 가독성 확보 */
+/* 애플 스타일 산뜻한 스노우 화이트 스크림 */
 .bg-scrim {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(1200px 700px at 50% -10%, rgba(138, 43, 226, 0.28), transparent 70%),
+    radial-gradient(1000px 600px at 50% -10%, rgba(0, 113, 227, 0.04), transparent 70%),
     linear-gradient(180deg,
-      rgba(9, 10, 15, 0.78) 0%,
-      rgba(9, 10, 15, 0.86) 50%,
-      rgba(9, 10, 15, 0.98) 100%);
+      rgba(255, 255, 255, 0.70) 0%,
+      rgba(245, 245, 247, 0.88) 50%,
+      rgba(245, 245, 247, 0.98) 100%);
 }
 /* 배경 영상 호환 본문 처리 */
-body.has-bg-video { background: var(--bg-0); }
+body.has-bg-video { background: var(--bg-1); }
 body.has-bg-video main { position: relative; z-index: 1; }
-/* 영상 위 히어로 글자 고대비 그림자 선명화 */
+/* 애플 히어로 타이틀 딥 타이포그래피 */
 body.has-bg-video .hero h1 {
-  color: #ffffff !important;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.95), 0 0 40px rgba(138, 43, 226, 0.6) !important;
+  color: #1d1d1f !important;
+  text-shadow: none !important;
 }
 body.has-bg-video .hero .lead {
-  color: #cbd5e1 !important;
+  color: #424245 !important;
   font-weight: 500;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95) !important;
+  text-shadow: none !important;
 }
-/* 영상 위 통계칩 선명한 다크 글래스모피즘 */
+/* 애플 스타일 라이트 엠보싱 통계 칩 */
 body.has-bg-video .stat {
-  background: rgba(15, 17, 26, 0.85) !important;
-  backdrop-filter: blur(18px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.16) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+  background: #ffffff !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
 }
 body.has-bg-video .stat .num {
-  color: #ffffff !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+  color: #1d1d1f !important;
+  text-shadow: none !important;
 }
 body.has-bg-video .stat .label {
-  color: #94a3b8 !important;
+  color: #86868b !important;
   font-weight: 600;
 }
 body.has-bg-video .site-footer {
-  background: rgba(9, 10, 15, 0.92) !important;
+  background: rgba(255, 255, 255, 0.90) !important;
   backdrop-filter: blur(20px) saturate(170%);
   -webkit-backdrop-filter: blur(20px) saturate(170%);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -482,13 +481,13 @@ body.has-bg-video .site-footer {
   .bg-stage { background: var(--bg-1); }
 }
 
-/* --- 다크 럭셔리 GNB (헤더 + 프로스티드 글래스) --- */
+/* --- 애플 스타일 GNB (헤더 + 프로스티드 라이트 글래스) --- */
 .site-header {
-  background: rgba(9, 10, 15, 0.90) !important;
-  backdrop-filter: blur(28px) saturate(200%);
-  -webkit-backdrop-filter: blur(28px) saturate(200%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
-  box-shadow: 0 6px 34px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
 }
 .site-header .bar { height: 70px; gap: 26px; }
 .brand { font-size: 1.26rem; gap: 11px; letter-spacing: -0.01em; transition: transform 0.2s ease; }
@@ -734,13 +733,13 @@ body.has-bg-video .site-footer {
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(12px);
-  background: rgba(15, 17, 26, 0.94);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   min-width: 170px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
   padding: 8px;
   display: flex;
   flex-direction: column;
@@ -764,7 +763,7 @@ body.has-bg-video .site-footer {
   padding: 10px 16px;
   font-size: 0.9rem !important;
   font-weight: 600 !important;
-  color: var(--text-1) !important;
+  color: #1d1d1f !important;
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -780,8 +779,8 @@ body.has-bg-video .site-footer {
 }
 
 .dropdown-menu a:hover, .dropdown-menu a.active {
-  color: #ffffff !important;
-  background-color: rgba(138, 43, 226, 0.25) !important;
+  color: #0071e3 !important;
+  background-color: rgba(0, 113, 227, 0.08) !important;
 }
 
 .dropdown-arrow {
