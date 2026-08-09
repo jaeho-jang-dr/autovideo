@@ -175,9 +175,23 @@ def set_chip(pg, model="Veo 3.1 - Lite", aspect="16:9", secs="8s"):
     """
     log(f"    칩(전): {chip_text(pg)[:40]!r}")
     P.open_chip(pg)
-    # ★아이콘 이름이 play_circle 이 아니라 videocam 이다(2026-08-04 DOM 실측). 이것 때문에
-    #   '동영상'을 못 찾아 이미지 모델(Nano Banana)에 머물렀다.
-    P.click_btn(pg, "videocam\\n동영상", label="동영상")
+    # ★아이콘 이름이 play_circle 이 아니라 videocam 이다(2026-08-04 DOM 실측).
+    # ★★왼쪽 레일에도 'videocam 동영상 보기'(x≈40)가 있어 그쪽을 눌러 버린다.
+    #   설정 패널은 x>900 이므로 **좌표로 걸러** 패널 안의 '동영상'만 누른다(2026-08-05).
+    it = pg.evaluate("""() => {
+      for (const b of document.querySelectorAll('button,[role=menuitem],[role=option]')) {
+        const r = b.getBoundingClientRect(); const t = (b.innerText||'').trim();
+        if (r.width > 0 && r.left > 900 && /^videocam\\n?동영상$/.test(t))
+          return {x: Math.round(r.left + r.width/2), y: Math.round(r.top + r.height/2)};
+      }
+      return null;
+    }""")
+    if it:
+        pg.mouse.click(it["x"], it["y"])
+        log(f"    동영상 선택 ({it['x']},{it['y']})")
+        time.sleep(1.5)
+    else:
+        log("    (설정 패널에 '동영상' 항목 없음 — 이미 동영상 모드로 본다)")
     # ★설정은 한 패널에 다 펼쳐져 있다. 모델이 이미 맞으면 드롭다운을 건드리지 않는다
     #   — 열었다 닫으면 패널째 닫혀서 뒤 항목들을 못 누른다.
     if not P.find_btn(pg, model.replace(" ", "\\s*")):

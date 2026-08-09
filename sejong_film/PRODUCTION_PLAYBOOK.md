@@ -1,14 +1,14 @@
 # 다국어 교육영상 표준 제작 플레이북 (세종대왕과 한글 방식)
 
 > 확정 표준. 이 순서를 그대로 따르면 어떤 주제든 동일 품질의 **다국어(1영상·5자막·5나레이션) 교육영상**을 만든다.
-> 핵심 철학: **NotebookLM 딥리서치로 근거 확보 → 스팟 이미지(키프레임) 확정 → 거기서만 최소 모션(Veo) → 한 영상에 다국어**.
+> 핵심 철학: **Gemini Notebook 딥리서치로 근거 확보 → 스팟 이미지(키프레임) 확정 → 거기서만 최소 모션(Veo) → 한 영상에 다국어**.
 > 왜 스팟 이미지 방식? AI 풀생성은 왜곡·한글 깨짐·통제불가 → 정지 이미지를 먼저 확정하고 움직임만 입혀 **구도·인물·정확성 완전 제어**.
 > 왜 한 영상? 관리 1회 + 4K 업스케일 1회.
 
 ---
 
-## 0단계 · 자료·근거 (NotebookLM Deep Research)  ★앞부분
-> 자료·아티팩트는 **NotebookLM이 자기 소스로** 만든다(내가 요약한 글을 떠먹이지 않는다 = 1주차 실패). nlm CLI(`~/AppData/Roaming/Python/Python313/Scripts/nlm`).
+## 0단계 · 자료·근거 (Gemini Notebook Deep Research)  ★앞부분
+> 자료·아티팩트는 **Gemini Notebook이 자기 소스로** 만든다(내가 요약한 글을 떠먹이지 않는다 = 1주차 실패). nlm CLI(`~/AppData/Roaming/Python/Python313/Scripts/nlm`).
 ```bash
 nlm notebook create "세종대왕과 한글 창제"          # 노트북 생성
 nlm alias set sejong <notebook_id>

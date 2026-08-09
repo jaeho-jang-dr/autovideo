@@ -53,8 +53,33 @@ def _render_alpha(text, fp, size_px, pad=0.22, align="center"):
     tw, th = bb[2] - bb[0], bb[3] - bb[1]
     W, H = tw + 2 * px, th + 2 * px
     a = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(a).text((px - bb[0], px - bb[1]), text, font=fnt, fill=255)
+    d = ImageDraw.Draw(a)
+    ox, oy = px - bb[0], px - bb[1]
+    d.text((ox, oy), text, font=fnt, fill=255)
+    _draw_araea(d, text, fnt, tmp, ox, oy, size_px)
     return a
+
+
+# ★사장님 교정(2026-08-08): "아래아 ㆍ 가 안 보인다. 크게 검은색 작은 원을 그리듯 하나 찍어줘."
+#   원인 — 한글 폰트에 U+318D(ㆍ) 글리프가 없다. 자리(advance)만 잡고 아무것도 안 그린다.
+#   (Cafe24Dongdong 실측: ㆍ bbox 세로 0. ● · • 등 원 문자도 전부 세로 0 — 치환으로는 못 푼다.)
+#   → 그 빈 칸에 **채운 원을 직접 찍는다.** 아래아가 없는 글에는 아무 영향이 없다.
+ARAEA = "ㆍ"
+
+
+def _draw_araea(draw, text, fnt, tmp, ox, oy, size_px):
+    if ARAEA not in text:
+        return
+    asc, desc = fnt.getmetrics()
+    r = size_px * SS * 0.13                       # 반지름 — 글자 높이의 약 26%
+    cy = oy + asc * 0.62                          # 가로줄(ㅡ)과 눈높이가 맞게
+    for i, ch in enumerate(text):
+        if ch != ARAEA:
+            continue
+        x0 = tmp.textlength(text[:i], font=fnt)
+        adv = tmp.textlength(text[:i + 1], font=fnt) - x0
+        cx = ox + x0 + adv / 2.0
+        draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=255)
 
 
 def render_text_writing(text, key, size_px, progress=1.0, ink=INK, pen=True, align="center"):

@@ -55,7 +55,7 @@ model: opus
 - 상세 가이드: `.harness/context/flow_accounts_spec.md`. [[flow-abnormal-activity-block]] [[shorts-video-dual-aspect-flow6]]
 
 ## 1. 제작 파이프라인 (표준 0~8단계)
-0. **딥리서치**: NotebookLM 한글교육 노트북(자기 소스로 생성) / 웹페이지 참고 → 시나리오 근거
+0. **딥리서치**: Gemini Notebook 한글교육 노트북(자기 소스로 생성) / 웹페이지 참고 → 시나리오 근거
 1. **시나리오 확장**: 뼈대 → 최소 4분 분량. 교육 시나리오 + **그에 맞는 캐릭터 움직임 시나리오**를 같이 짠다(혼연일체). content.db `scenes`(image_prompt에 JSON: cap_ko/cap_en/bg/char_key/char_mode/anim_seq/motion) + `scene_objects`
 2. **키프레임/스팟이미지** → 3. **Veo/Flow 모션**(단순 줌인 Ken Burns 금지, 실제 물리동작·카메라워킹. VEO_WORKFLOW.md). 단, 현재 표준 제작은 **플랫 레이어드**(정적 플랫그림 중첩+짧은 3~4초 클립 가미)가 왜곡0·깔끔
 4. **합성** → 5. **나레이션 타이밍**(gTTS/edge-tts 선희·Emma; 원어민 ElevenLabs는 필요시) 

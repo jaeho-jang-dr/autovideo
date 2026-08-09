@@ -1,0 +1,65 @@
+{
+  "week": "W24",
+  "video_lang": "영어",
+  "video": "hangeul_birth_vowels/hangeul_w24r_full_en.mp4",
+  "thumbnail": "hangeul_birth_vowels/thumb_w24_en_1280x720.jpg",
+  "langs": [
+    {
+      "row": "한국어",
+      "srt": "hangeul_birth_vowels/w24pkg/hangeul_w24r_full.ko.srt",
+      "add": false,
+      "do": [
+        "sub",
+        "meta"
+      ],
+      "title": "hangeul_birth_vowels/w24pkg/ko_title.txt",
+      "desc": "hangeul_birth_vowels/w24pkg/ko_desc.txt"
+    },
+    {
+      "row": "영어",
+      "srt": "hangeul_birth_vowels/w24pkg/hangeul_w24r_full.en.srt",
+      "add": true,
+      "do": [
+        "sub",
+        "meta"
+      ],
+      "title": "hangeul_birth_vowels/w24pkg/en_title.txt",
+      "desc": "hangeul_birth_vowels/w24pkg/en_desc.txt"
+    },
+    {
+      "row": "일본어",
+      "srt": "hangeul_birth_vowels/w24pkg/hangeul_w24r_full.ja.srt",
+      "add": true,
+      "do": [
+        "sub",
+        "meta"
+      ],
+      "title": "hangeul_birth_vowels/w24pkg/ja_title.txt",
+      "desc": "hangeul_birth_vowels/w24pkg/ja_desc.txt"
+    },
+    {
+      "row": "중국어(중국)",
+      "srt": "hangeul_birth_vowels/w24pkg/hangeul_w24r_full.zh.srt",
+      "add": true,
+      "do": [
+        "sub",
+        "meta"
+      ],
+      "title": "hangeul_birth_vowels/w24pkg/zh_title.txt",
+      "desc": "hangeul_birth_vowels/w24pkg/zh_desc.txt"
+    },
+    {
+      "row": "스페인어",
+      "srt": "hangeul_birth_vowels/w24pkg/hangeul_w24r_full.es.srt",
+      "add": true,
+      "do": [
+        "sub",
+        "meta"
+      ],
+      "title": "hangeul_birth_vowels/w24pkg/es_title.txt",
+      "desc": "hangeul_birth_vowels/w24pkg/es_desc.txt"
+    }
+  ],
+  "video_id": "HIvrnNWk3K8",
+  "url": "https://www.youtube.com/watch?v=HIvrnNWk3K8"
+}

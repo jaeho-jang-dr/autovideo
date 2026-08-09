@@ -487,7 +487,14 @@ def seq_state(tt, dur, seq="teacher_board"):
             cyc = b["cycle"]
             if len(cyc) > 1 and b.get("oneshot"):
                 # ★동작 동영상: 시퀀스를 이 비트 동안 처음~끝 1회 재생(순환 X)
-                ci = min(len(cyc) - 1, int(local * len(cyc)))
+                # ★사장님 지시(2026-08-07): "스틸동영상 속도는 원래 속도대로 상영한다."
+                #   비트에 fps 가 실려 있으면 **절대시간**으로 재생한다(64컷÷8초=8fps).
+                #   없으면 종전대로 씬 길이에 맞춰 늘린다 — 기존 시퀀스는 영향 없다.
+                _fps = b.get("fps")
+                if _fps:
+                    ci = min(len(cyc) - 1, int(tt * float(_fps)))
+                else:
+                    ci = min(len(cyc) - 1, int(local * len(cyc)))
             elif len(cyc) > 1:
                 # ★걷기 순환: WALK_STRIDE_SEC 지정 시 '1 스트라이드(cycle 전체)=그 초'로 절대시간 재생
                 #   (미지정=기존 동작: 비트당 6순환). 사장님 지시 2026-07-23: 1스트라이드=1.08초.
@@ -550,13 +557,64 @@ def draw_logo(base):
         base.alpha_composite(_LOGO, (18, 14))
 
 
+# ★사장님 지시(2026-08-08): "왼편 위에 로고를 없애고 오른 아래로 가져와서
+#   크기 맞추어서 로고로 워터마크 덮어."
+#   → 좌상단 로고(draw_logo)는 더 이상 그리지 않는다. 로고는 우하단 하나뿐이고,
+#     그 하나가 Veo 워터마크를 덮는다.
+#
+#   실측(캔버스 1280x720 기준, 배경 25종 전부 확인 — scratchpad/wm_sheet.png):
+#     · 배경 동영상(.mp4) 반짝임 : x 1136~1184 · y 576~624   중심 (1160,600)
+#     · 배경 정지컷(.png) 반짝임 : x 1169~1215 · y 599~645   중심 (1192,622)
+#     · 코너 'Veo' 글자는 bg_w24_award 하나에만 : x 1237~1272 · y 690~707
+#   두 반짝임(각각 48x48 마름모)의 꼭짓점 8개를 모두 담는 **최소 포함 원**을 계산하면
+#     가장 먼 두 점 (1136,600)-(1218,629) 거리 = √(82²+29²) = 87.0
+#     → 지름 88 · 중심 (1177,615) 이면 8점 전부 반지름 44 안에 들어온다(최대 43.7).
+#   이보다 작으면 반드시 어딘가 삐져나온다. 즉 이것이 최소 크기다.
+WM_LOGO_PATH = os.path.join(ROOT, "assets", "drjay_ed_logo_circle.png")
+WM_D = 88
+WM_CX, WM_CY = 1177, 615
+#   코너 'Veo' 글자는 자리가 고정이다 — x 1236 · y 690 · 36x20 (여유 두어 넉넉히).
+# ★사장님 지시(2026-08-08): "코너 글자는 주변의 색을 따서 덮고 워터마크는 로고로 덮는다."
+#   → 로고를 하나 더 얹지 않고, 글자 둘레의 색을 떠서 그 색으로 메운다.
+WM_VEO_BOX = (1232, 686, 44, 28)                      # x, y, w, h
+_WM = {}
+
+
+def _fill_from_around(base, box, pad=7, feather=4):
+    """box 를 그 둘레 화소의 색으로 메운다(중앙값). 가장자리는 부드럽게."""
+    import numpy as _np
+    x, y, w, h = box
+    x0, y0 = max(0, x - pad), max(0, y - pad)
+    x1, y1 = min(W, x + w + pad), min(H, y + h + pad)
+    a = _np.asarray(base.convert("RGB").crop((x0, y0, x1, y1)), _np.float32)
+    ring = _np.concatenate([a[:pad].reshape(-1, 3), a[-pad:].reshape(-1, 3),
+                            a[:, :pad].reshape(-1, 3), a[:, -pad:].reshape(-1, 3)])
+    col = tuple(int(v) for v in _np.median(ring, axis=0))
+    patch = Image.new("RGBA", (w, h), col + (255,))
+    m = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(m).rectangle([feather, feather, w - 1 - feather, h - 1 - feather], fill=255)
+    patch.putalpha(m.filter(ImageFilter.GaussianBlur(feather)))
+    base.alpha_composite(patch, (x, y))
+
+
+def draw_wm_cover(base, bg=None):
+    if not _WM:
+        src = (Image.open(WM_LOGO_PATH).convert("RGBA")
+               if os.path.exists(WM_LOGO_PATH) else None)
+        _WM["main"] = src.resize((WM_D, WM_D), Image.LANCZOS) if src else None
+    _fill_from_around(base, WM_VEO_BOX)                # ①코너 'Veo' 글자 → 주변 색으로
+    if _WM.get("main"):                                # ②반짝임 워터마크 → 로고 하나로
+        base.alpha_composite(_WM["main"], (WM_CX - WM_D // 2, WM_CY - WM_D // 2))
+
+
 def draw_place(base, place):
     if not place:
         return
     d = ImageDraw.Draw(base)
     f = get_font(FONT, 14)                            # 절반 크기(사용자 요청)
     tw = d.textlength(place, font=f)
-    d.text((W - tw - 16, H - 24), place, font=f, fill=(255, 255, 255),
+    # ★오른쪽 여백 16 → 54: 워터마크 덮개 로고와 겹치지 않게 왼쪽으로 비킨다(2026-08-08)
+    d.text((W - tw - 54, H - 24), place, font=f, fill=(255, 255, 255),
            stroke_width=2, stroke_fill=(28, 24, 18))
 
 
@@ -635,6 +693,9 @@ def compose(scene, t=None, lang="ko", overlay=True):
         base = bg_video_frame(resolve_path(_bgv) or _bgv, tt, dur)
     else:
         base = scene_bg(scene)
+    # ★사장님 지시(2026-08-08): 레이어 순서는 **배경 → 워터마크 → 캐릭터 → 자막**.
+    #   워터마크 덮개는 배경 바로 위에만 얹는다. 캐릭터·글자가 그 위로 지나가야 자연스럽다.
+    draw_wm_cover(base, scene.get("bg"))
     sched = scene.get("sound_sched") or []
     gestures = scene.get("gestures")
     for o in sorted(scene["objs"], key=lambda x: x["z"]):
@@ -767,8 +828,7 @@ def compose(scene, t=None, lang="ko", overlay=True):
     if overlay:
         draw_caption(base, scene["cap"])
         draw_subtitle(base, subtitle_text(scene, tt, final))
-        draw_logo(base)
-        draw_place(base, scene.get("place_en"))
+        draw_place(base, scene.get("place_en"))        # ★좌상단 로고 없앰(2026-08-08)
     return base.convert("RGB")
 
 
@@ -966,7 +1026,6 @@ def render_video(lang="ko"):
             fr = apply_camera(fr, t, sdur, cam).convert("RGBA")       # 지미집 카메라 무빙
             draw_caption(fr, scene["cap"])                            # 자막/캡션은 고정 오버레이
             draw_subtitle(fr, subtitle_text(scene, t, False))        # 시간순 자막 청크
-            draw_logo(fr)                                             # 좌상단 로고
             draw_place(fr, scene.get("place_en"))                    # 우하단 장소 영문명
             return np.asarray(fr.convert("RGB"))
 

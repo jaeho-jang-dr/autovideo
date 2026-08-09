@@ -1,9 +1,17 @@
-The exact same character as in the reference image: a friendly bald middle-aged man with a single curl of hair on top, blue-and-white gingham checked shirt with rolled-up sleeves, brown leather belt, khaki chino trousers, and WHITE canvas sneakers on BOTH feet. Thick clean black outline, flat cartoon coloring, identical face and proportions to the reference.
+[티쳐제이 오른편 걷기 — 캐릭터 동영상 프롬프트]  (2026-08-05 성공분)
 
-ACTION: He is NOT holding anything. Both hands are empty. He walks steadily to the RIGHT in a perfect side profile view, completing three full natural walking strides. Arms swing naturally and in opposition to the legs — when the right leg steps forward the left arm swings forward. Knees bend naturally, heel strikes first then the toe pushes off. Head stays level and faces right, gentle friendly smile.
+■ 사용법 (★W22 지은 걷기와 동일 — 이게 핵심):
+   Flow에서 우측면 이미지 타일 → 더보기(⋮) → **"애니메이션 적용"** → 아래 영어 프롬프트 →
+   동영상 · 8s → 생성.
+   ★'프롬프트에 추가'가 아니라 '애니메이션 적용'이다. 참조 영상은 필요 없다.
+   ★인물 차단을 피하려 "adult man in his fifties" 를 넣는다(W22는 adult woman in her twenties).
 
-ANATOMY LOCK (must not be violated): exactly ONE head, ONE neck, TWO arms with exactly two elbows, TWO hands with five fingers each, TWO legs with exactly two knees, TWO feet each wearing a WHITE sneaker. No extra limbs, no extra legs, no duplicated feet, no floating body parts. Joints bend only in anatomically correct directions — knees bend backward only, elbows bend forward only. The bouquet of flowers from the reference image is completely removed.
+■ 가이드 이미지: W17 정면(assets/graphics/poses/tj_w17_bow.png) → 나노바나나로 우측면 생성 →
+   그 타일에 애니메이션 적용.
 
-CAMERA: locked static camera, side view at eye level, the man stays centered in frame and walks in place as if on a treadmill so his body does not drift out of frame. No zoom, no pan, no rotation.
+■ 영어 프롬프트 (Flow 붙여넣기):
+2D flat cartoon storybook illustration, the SAME adult man in his fifties from the first frame - bald head with a single thin hair strand standing up and splitting into two wisps, a white face with one small black dot eye and a thin eyebrow, a small curved nose and a small smiling mouth, a blue-and-white gingham checked shirt with a pointed collar and sleeves rolled up below the elbow, plain white rounded mitten gloves, beige chinos with turned-up cuffs, white canvas sneakers - shown in clean RIGHT-SIDE profile. He walks steadily to the RIGHT with a natural smooth walk cycle: the legs stride forward one after the other with clear knee bend, the heel touching down and the toe pushing off, the arms swing gently back and forth in opposition to the legs, the body rises and falls very slightly with each step. His whole body stays fully visible from the top of the head to the shoes, centered, at a constant size. Plain solid white background only, NO floor line, NO shadow, no props, no text, no logos. Keep the EXACT same hand-drawn 2D cartoon art style, thin black outline, flat colours, face and body proportions as the first frame. Camera fixed, steady continuous side-view walking. 9:16 vertical.
 
-BACKGROUND: completely plain pure white empty background. No floor line, no shadow, no scenery, no props, no text, no watermark. Nothing but flat white behind the character.
+■ 뽑은 컷: 24fps 192프레임 중 25·29·33·37·41·45·49·53 (한 스트라이드 16프레임의 8등분)
+■ 처리: cutrang.py build --char teacher_jay_w24 --action walk_r --reverse
+        → 키 926px → 697px 통일 · 좌우반전 8컷 · DB 등록

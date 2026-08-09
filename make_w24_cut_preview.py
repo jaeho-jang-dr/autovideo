@@ -54,8 +54,10 @@ META = {
     "b_sit_class":   ("B", "인준·지은", "S30~S32", "듣기 → 박수 → 정면"),
     "c_sit_class":   ("C", "마담제이·티쳐제이", "S30~S32", "듣기 → 박수 → 정면"),
     "flower_give":   ("C", "티쳐제이·인준", "S32", "★꽃다발이 네 손 사이에서 건네진다"),
+    # ★2026-08-05 추가 — 8/3 에는 컷이 없어 표에서 빠져 있었다.
+    "gallery_emerge": ("ALL", "일곱 명 전원", "S29", "벽 썸네일에서 사람들이 빠져나온다"),
 }
-COLOR = {"A": "#5ec8f0", "B": "#5e8cf0", "C": "#6fd39b"}
+COLOR = {"A": "#5ec8f0", "B": "#5e8cf0", "C": "#6fd39b", "ALL": "#e0a45e"}
 
 
 def checker(w, h, sq=24):
@@ -138,8 +140,8 @@ def page(keys):
   키는 규격표대로 통일(인준770·졸라맨761·티쳐제이749·스틱맨749·지은706·졸라걸697·마담제이693).
  </div>
  <div class="bar">
-  <button class="on" data-f="all">전체 11</button>
-  <button data-f="A">A 3인</button><button data-f="B">B 2인</button><button data-f="C">C 2인</button>
+  <button class="on" data-f="all">전체</button>
+  <button data-f="A">A 3인</button><button data-f="B">B 2인</button><button data-f="C">C 2인</button><button data-f="ALL">전원</button>
   <button onclick="document.querySelectorAll('video').forEach(v=>v.play())">전부 재생</button>
   <button onclick="document.querySelectorAll('video').forEach(v=>{{v.pause();v.currentTime=0}})">전부 정지</button>
  </div>

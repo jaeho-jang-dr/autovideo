@@ -156,7 +156,10 @@ def render_lang(lang):
             fr=cs.compose(scene, t=t, lang="ko", overlay=False)    # ★ 항상 ko(드로잉 동일)
             fr=cs.apply_camera(fr, t, sdur, cam).convert("RGBA")
             draw_note_box(fr, cp)                         # ★ 왼위 그 언어 박스(중앙캡션 X)
-            cs.draw_logo(fr); cs.draw_place(fr, scene.get("place_en"))
+            # ★사장님 지시(2026-08-08): 좌상단 로고 제거 — 로고는 우하단 워터마크 덮개 하나로.
+            # ★워터마크 덮개는 compose() 안에서 배경 바로 위에 이미 얹혔다
+            #   (레이어 순서: 배경 → 워터마크 → 캐릭터 → 자막)
+            cs.draw_place(fr, scene.get("place_en"))
             return np.asarray(fr.convert("RGB"))
         clips.append(VideoClip(frame_function=mk, duration=dur))
     video=concatenate_videoclips(clips, method="compose")

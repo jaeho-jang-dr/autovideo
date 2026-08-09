@@ -25,11 +25,11 @@ def run_nlm_cmd(args):
     return result.stdout.strip()
 
 def sync(target_notebook_title="Korea 168 Scenic Places for Foreign Visitors (drjayed)"):
-    print(f"Checking NotebookLM integration for '{target_notebook_title}'...")
+    print(f"Checking Gemini Notebook integration for '{target_notebook_title}'...")
     # List notebooks
     notebooks_out = run_nlm_cmd(["notebook", "list", "--json"])
     if notebooks_out is None:
-        print("NotebookLM CLI (nlm) is not logged in or not working properly. Please run 'nlm login' manually if needed.")
+        print("Gemini Notebook CLI (nlm) is not logged in or not working properly. Please run 'nlm login' manually if needed.")
         return
         
     notebook_id = None
@@ -130,7 +130,7 @@ def sync(target_notebook_title="Korea 168 Scenic Places for Foreign Visitors (dr
         # Add file source instead of raw text to avoid command-line length limits (WinError 206)
         run_nlm_cmd(["source", "add", alias_name, "--file", filename, "--title", title, "--wait"])
         
-    print("NotebookLM Sync Completed Successfully!")
+    print("Gemini Notebook Sync Completed Successfully!")
 
 if __name__ == "__main__":
     import argparse

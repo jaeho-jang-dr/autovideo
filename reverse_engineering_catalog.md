@@ -41,7 +41,7 @@
 | :--- | :--- | :--- | :--- |
 | `korean_education_deep_research.md` | Deep Research: 한글의 과학적 특성과 외국인을 위한 자음/모음 발음·쓰기 교육 가이드 | [korean_education_deep_research.md](file:///D:/Entertainments/DevEnvironment/autovideo/scratch/korean_education_deep_research.md) | 이 문서는 외국인 학습자에게 한글(Hangul)의 기초적인 특성, 자음과 모음의 조음 원리, 쓰기법 및 읽기법을 체계적으로 교육하기 위한 지식 소스 자료입니다. 또한, 유튜브 레퍼런스 영상("How to think in English")의 연출 기법을 한글 교육에 적용하기 위한 역공학 분석을 포함합니다. |
 | `pet_family_deep_research.md` | Deep Research: 반려견과 인간의 공존 — 갈등 실태와 상호 펫티켓 | [pet_family_deep_research.md](file:///D:/Entertainments/DevEnvironment/autovideo/scratch/pet_family_deep_research.md) | > 본 문서는 "이 아이들은 내 가족 입니다, 사랑해 주세요 !!" 에피소드 시나리오(scenario.txt) 작성을 위한 기초 지식 리서치 자료입니다. 반려인과 비반려인의 양대 관점을 분석하고, 반려견의 시선까지 융합하여 상호 오해를 풀고 평화롭게 공존할 수 있는 의학적·행동학적 근거를 제시합니다. |
-| `turtle_neck_deep_research.md` | Deep Research Pack: 스마트폰과 거북목, 인류의 다음 진화? | [turtle_neck_deep_research.md](file:///D:/Entertainments/DevEnvironment/autovideo/scratch/turtle_neck_deep_research.md) | > **Note for NotebookLM:** 이 문서는 '스마트폰 사용으로 인한 거북목 증후군(Text Neck)의 생체역학적 영향과 이것이 인류의 신체 구조 진화에 미치는 영향'에 대한 전문 의학적/과학적 연구 리서치 자료입니다. 이 데이터를 소스로 활용하여 심층적인 분석 레포트와 오버뷰를 생성하십시오. |
+| `turtle_neck_deep_research.md` | Deep Research Pack: 스마트폰과 거북목, 인류의 다음 진화? | [turtle_neck_deep_research.md](file:///D:/Entertainments/DevEnvironment/autovideo/scratch/turtle_neck_deep_research.md) | > **Note for Gemini Notebook:** 이 문서는 '스마트폰 사용으로 인한 거북목 증후군(Text Neck)의 생체역학적 영향과 이것이 인류의 신체 구조 진화에 미치는 영향'에 대한 전문 의학적/과학적 연구 리서치 자료입니다. 이 데이터를 소스로 활용하여 심층적인 분석 레포트와 오버뷰를 생성하십시오. |
 
 ## Workflow & Automation Guidelines (가이드라인)
 

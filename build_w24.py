@@ -58,7 +58,8 @@ EDGE_MARGIN = 24                    # 화면 좌우 끝에서 최소 이만큼
 MIN_GAP = 16                        # ★인물 덩어리끼리 최소 간격 — 겹치지 않게
 
 # ── 파라메트릭 글자 규칙 (사장님 지시) ──
-TEXT_MARGIN = 90                    # 좌우 가장자리에서 최소 이만큼 뗀다
+TEXT_MARGIN = 154                   # ★좌우 안전여백 12%(1280×0.12) — 끝에 붙이지 않는다
+                                    #   (W24R/TEXT_LAYOUT_SPEC.md · 사장님 지시 2026-08-06)
 TEXT_MAX_LINES = 2                  # ★두 줄까지만
 TEXT_MIN_PX, TEXT_MAX_PX = 84, 150  # ★이전(62~128)보다 크게
 TEXT_BOX_W, TEXT_BOX_H = 470, 330
@@ -213,6 +214,18 @@ def text_layout(glyph, ko, tracks):
                 cx=int(cx), cy=int(cy), side=side)
 
 
+_PNGSZ = {}
+
+
+def png_size(key):
+    """포즈 PNG 의 실제 크기(캐시). 겹침 정리에 화면 폭이 필요하다."""
+    if key not in _PNGSZ:
+        from PIL import Image
+        p = f"{POSE_DIR}/w24_{key}.png"
+        _PNGSZ[key] = Image.open(p).size if os.path.exists(p) else (300, 700)
+    return _PNGSZ[key]
+
+
 def load_group_map():
     """gen_w24_group_prompts.py 의 ACTS 가 원천 — 씬↔그룹동작 매핑은 추측하지 않는다.
     반환: {씬번호: [dict(seq, members, w, h), ...]}"""
@@ -324,7 +337,11 @@ def main(dry):
             (EP, "KO", "종합 진단과 수료 발표", "Wrap-up Diagnostic & Graduation",
              "building", PLACE))
 
-    nobj, ntext = 0, 0
+    # ★그룹 통짜 컷 배선 — 씬↔동작 매핑은 gen_w24_group_prompts 의 ACTS 가 원천
+    gmap = load_group_map()
+    log(f"그룹 동작 {sum(len(v) for v in gmap.values())}건이 {len(gmap)}개 씬에 배정됨")
+
+    nobj, ntext, ngrp, nwrite, overflow = 0, 0, 0, 0, []
     for n in sorted(sc):
         s = sc[n]; tracks = mo.get(n, [])
         # ★compile_stickman.load_scenes 가 요구하는 키를 그대로 채운다(W23 규격).
@@ -392,7 +409,19 @@ def main(dry):
         if tl:
             spec["text"] = tl
             spec["draw_text"] = tl["text"]          # ★파라메트릭 글자 본문
+            spec["draw_align"] = "center"
             ntext += 1
+            # ★★파라메트릭 한글이 화면에 나오려면 **motion_type='write' scene_object** 가 있어야 한다.
+            #   compile_stickman 은 이 오브젝트의 cx·cy·scale 로 글자를 그린다(draw_text 는 위치를 모른다).
+            #   이게 빠져 있어서 W24 는 글자가 한 자도 안 나왔다(W23 은 36개) — 2026-08-06 복구.
+            #   asset 은 경로만 있으면 되는 자리표시자다(파일명이 letter_/word_ 로 시작하지만 않으면 된다).
+            if not dry and aid:
+                ph = aid[sorted(aid)[0]]
+                cur.execute(
+                    "INSERT INTO scene_objects (episode,scene_seq,asset_id,cx,cy,scale,z_order,"
+                    "motion_type,is_point) VALUES (?,?,?,?,?,?,?,?,?)",
+                    (EP, n, ph, tl["cx"], tl["cy"], tl["size"], 7, "write", 0))
+                nwrite += 1
         if not dry:
             cur.execute("UPDATE scenes SET image_prompt=? WHERE episode=? AND seq=?",
                         (json.dumps(spec, ensure_ascii=False), EP, n))

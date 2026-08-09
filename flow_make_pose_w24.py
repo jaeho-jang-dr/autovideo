@@ -31,7 +31,9 @@ GUIDES = {
     "jieun":       "assets/graphics/poses/jieun_w13_base.png",     # 노란 원피스
     "injun":       "assets/graphics/poses/injun_w10_base.png",     # 해상도 큰 쪽
     "madam_jay":   "assets/graphics/poses/mj_w14_base.png",
-    "teacher_jay": "assets/graphics/poses/tj_w17_bow.png",
+    # ★2026-08-04 사장님 지시로 교체 — W17 이미지는 화풍이 다르다(얇은 선·크림 배경·벙어리장갑 손).
+    #   실제로 만들어진 W24 티쳐제이 정면(그룹 영상에서 뽑은 것)을 가이드로 쓴다.
+    "teacher_jay": "assets/graphics/poses/w24_teacher_jay_stand_up.png",
 }
 OUT_DIR = "W24/guides"
 DL_DIR = "debug/downloads"

@@ -103,7 +103,7 @@
 
 ### 2막 — A그룹: 글자와 수 (S4–S10) · 낮 · 스틱맨 · 졸라맨 · 졸라걸
 
-- **S4** 선으로 된 셋이 나왔어요 | `함께` | "먼저 선으로 그린 세 친구예요. 졸라맨, 졸라걸, 스틱맨. 글자도 선이니까 잘 어울리죠." → (First, the three drawn in lines: 졸라맨, 졸라걸, 스틱맨. Letters are lines too, so they suit each other.) | `ddp_hall`[STILL] | A그룹 walk_r 로 왼쪽에서 들어와 Z35·Z50·Z65 에 서서 정면 전환 | 그룹A등장
+- **S4** 선으로 된 셋이 나왔어요 | `함께` | "먼저 선으로 그린 세 친구예요. 졸라맨, 졸라걸, 스틱맨. 글자도 선이니까 잘 어울리죠." → (First, the three drawn in lines: 졸라맨, 졸라걸, 스틱맨. Letters are lines too, so they suit each other.) | `to_hall`[VIDEO] | A그룹 walk_r 로 왼쪽에서 들어와 Z35·Z50·Z65 에 서서 정면 전환 | 그룹A등장
 - **S5** 첫 주에 배운 것 — 하늘과 땅과 사람 | `ㄱ · ㄴ · ㅇ` | "첫 주에는 한글이 어떻게 태어났는지 배웠어요. 하늘과 땅과 사람. 그 셋에서 글자가 나왔어요." → (In week one we learned how Hangeul was born — heaven, earth and human. The letters came out of those three.) | `board_time`[VIDEO] | 흰 벽에서 자모가 걸어 나옴 · A그룹 a_write_jamo | 복습W1
 - **S6** 자음을 다시 그려 봐요 | `ㄱ · ㄷ · ㅁ` | "자음은 입 모양을 본떴어요. 'ㄱ'은 혀뿌리, 'ㅁ'은 입술. 자, 따라 그려 보세요." → (Consonants copy the shape of the mouth: 'ㄱ' the root of the tongue, 'ㅁ' the lips. Trace them with me.) | `ddp_hall`[STILL] | A그룹 a_write_jamo · 글자는 화면 오른편, 셋은 왼편에서 오른쪽을 봄 | 복습W1
 - **S7** 모아쓰면 글자가 돼요 | `가 · 나 · 다` | "자음과 모음을 모아쓰면 한 글자가 돼요. 블록처럼 쌓이죠. '가', '나', '다'." → (Put a consonant and a vowel together and you get one syllable block: '가', '나', '다'.) | `ddp_hall`[STILL] | A그룹 a_stack_block 셋이 글자 블록을 위로 쌓음 | 복습W2
@@ -113,28 +113,28 @@
 
 ### 이음매 1 — A와 B가 만나요 (S11)
 
-- **S11** 밖에서 부르는 소리 | `함께` | "그때 밖에서 부르는 소리가 들려요. 다른 친구들이 벌써 나가 있었어요." → (Just then someone calls from outside — the other friends had already gone out.) | `ddp_path`[STILL] | A그룹 Z25~45 왼편 · 인준·지은 Z75·Z88 오른편에서 손을 흔듦 · 서로 마주봄 | 합류1
+- **S11** 밖에서 부르는 소리 | `함께` | "그때 밖에서 부르는 소리가 들려요. 다른 친구들이 벌써 나가 있었어요." → (Just then someone calls from outside — the other friends had already gone out.) | `to_path`[VIDEO] | A그룹 Z25~45 왼편 · 인준·지은 Z75·Z88 오른편에서 손을 흔듦 · 서로 마주봄 | 합류1
 
 ### 3막 — B그룹: 거리에서 쓰는 말 (S12–S18) · 오후 · 인준 · 지은
 
 - **S12** 둘이 다니며 배운 말 | `배웠어요` | "인준이와 지은이는 밖에서 쓰는 말을 배웠어요. 가게에서, 길에서, 버스에서요." → (인준 and 지은 learned the words you use outside — in shops, on the street, on the bus.) | `ddp_path`[STILL] | B그룹만 남음 · 인준 Z35 오른쪽 · 지은 Z65 왼쪽 마주봄 | 그룹B등장
 - **S13** 얼마예요? | `얼마예요?` | "가게에서는 '얼마예요?' 하고 물어요. 값을 묻는 가장 짧은 말이에요. 자, 따라 해 보세요." → (In a shop you ask '얼마예요?' (how much is it?) — the shortest way to ask a price. Repeat after me.) | `ddp_path`[STILL] | B그룹 b_ask_price 인준이 묻고 지은이 손으로 값을 알려 줌 | 복습W10
 - **S14** 깎아 주세요 | `깎아 주세요` | "조금 싸게 사고 싶으면 '깎아 주세요' 해요. 웃으면서 말하면 더 좋아요." → (If you want it cheaper, say '깎아 주세요' (please give me a discount) — better with a smile.) | `ddp_path`[STILL] | 지은 Z62 고개를 살짝 기울이며 웃음 왼쪽 | 복습W10
-- **S15** 어떻게 가요? | `어떻게 가요?` | "길에서는 '어떻게 가요?' 하고 물어요. 지하철로 가요, 버스로 가요, 걸어서 가요." → (On the street you ask '어떻게 가요?' (how do I get there?): by subway, by bus, on foot.) | `ddp_ruins`[STILL] | B그룹 b_ride_gesture 둘이 나란히 손잡이를 잡는 시늉 | 복습W12
+- **S15** 어떻게 가요? | `어떻게 가요?` | "길에서는 '어떻게 가요?' 하고 물어요. 지하철로 가요, 버스로 가요, 걸어서 가요." → (On the street you ask '어떻게 가요?' (how do I get there?): by subway, by bus, on foot.) | `to_ruins`[VIDEO] | B그룹 b_ride_gesture 둘이 나란히 손잡이를 잡는 시늉 | 복습W12
 - **S16** 왼쪽으로 가세요 | `왼쪽 · 오른쪽 · 곧장` | "길을 알려 줄 때는 '왼쪽으로 가세요', '오른쪽으로 가세요', '곧장 가세요' 해요." → (To give directions: '왼쪽으로 가세요' (go left), '오른쪽으로 가세요' (go right), '곧장 가세요' (go straight).) | `ddp_ruins`[STILL] | B그룹 b_point_way 지은이 오른쪽을 가리키고 인준이 그쪽을 봄 | 복습W13
 - **S17** 지하에는 옛 성벽이 | `배웠어요` | "여기 지하에는 조선의 성벽이 남아 있어요. 옛것 위에 새것이 서 있죠. 공부도 그래요." → (Below ground here, a Joseon-era wall remains. The new stands on the old — study is like that too.) | `ddp_ruins`[STILL] | 인준 Z38 point_board 성벽 쪽을 가리킴 · 지은 끄덕임 | 장소의미
 - **S18** 자주 해요? | `자주 · 가끔 · 전혀` | "취미를 물을 때는 얼마나 자주 하는지도 물어요. '자주'는 부사예요. 자주, 가끔, 전혀." → (When you ask about hobbies, you also ask how often. '자주' (often) is an adverb: 자주, 가끔, 전혀.) | `ddp_path`[STILL] | B그룹 b_highfive 둘이 하이파이브 | 복습W16
 
 ### 이음매 2 — B와 C가 만나요 (S19)
 
-- **S19** 잔디에 앉은 두 사람 | `함께` | "둘레길 끝, 잔디언덕에 두 사람이 먼저 앉아 있었어요." → (At the end of the path, on the grass hill, two people were already sitting.) | `ddp_grass`[STILL] | 인준·지은 Z20·Z32 왼편에서 걸어옴 · 마담제이·티쳐제이 Z70·Z84 앉아 있음 · 서로 봄 | 합류2
+- **S19** 잔디에 앉은 두 사람 | `함께` | "둘레길 끝, 잔디언덕에 두 사람이 먼저 앉아 있었어요." → (At the end of the path, on the grass hill, two people were already sitting.) | `to_grass`[VIDEO] | 인준·지은 Z20·Z32 왼편에서 걸어옴 · 마담제이·티쳐제이 Z70·Z84 앉아 있음 · 서로 봄 | 합류2
 
 ### 4막 — C그룹: 마음과 생각의 말 (S20–S27) · 해질녘 · 마담제이 · 티쳐제이
 
 - **S20** 앉아서 나누는 말 | `배웠어요` | "마담제이와 티쳐제이는 마음을 말하는 법을 배웠어요. 앉아서 천천히 하는 이야기죠." → (마담제이 and 티쳐제이 learned how to speak the heart — the slow kind of talk you have sitting down.) | `ddp_grass`[STILL] | C그룹만 남음 · 티쳐제이 Z35 오른쪽 · 마담제이 Z65 왼쪽 마주 앉음 | 그룹C등장
 - **S21** 하루를 말해요 | `일어나요 · 먹어요 · 자요` | "하루 일과를 말해 봐요. 일어나요, 먹어요, 일해요, 자요. 순서대로 말하면 쉬워요." → (Describe your day: 일어나요 (get up), 먹어요 (eat), 일해요 (work), 자요 (sleep). In order, it's easy.) | `ddp_grass`[STILL] | C그룹 c_talk_sit 둘이 마주 앉아 이야기 | 복습W14
 - **S22** 날씨가 좋아요 | `비가 와요 · 맑아요` | "날씨는 이렇게 말해요. 맑아요, 비가 와요, 바람이 불어요. 오늘은 참 좋네요." → (For weather: 맑아요 (it's clear), 비가 와요 (it's raining), 바람이 불어요 (it's windy). Today is a fine one.) | `ddp_grass`[STILL] | C그룹 c_weather_look 둘이 하늘을 올려다봄 | 복습W15
-- **S23** 기뻐요, 속상해요 | `기뻐요 · 속상해요` | "마음도 말할 수 있어요. 기뻐요, 속상해요, 설레요. 마음을 말하면 가벼워져요." → (You can speak feelings too: 기뻐요 (I'm glad), 속상해요 (I'm upset), 설레요 (I'm excited). Saying it makes it lighter.) | `ddp_rose`[STILL] | C그룹 c_emotion_face 둘이 서로 보며 표정이 바뀜 | 복습W18
+- **S23** 기뻐요, 속상해요 | `기뻐요 · 속상해요` | "마음도 말할 수 있어요. 기뻐요, 속상해요, 설레요. 마음을 말하면 가벼워져요." → (You can speak feelings too: 기뻐요 (I'm glad), 속상해요 (I'm upset), 설레요 (I'm excited). Saying it makes it lighter.) | `to_rose`[VIDEO] | C그룹 c_emotion_face 둘이 서로 보며 표정이 바뀜 | 복습W18
 - **S24** 제 생각에는 | `제 생각에는` | "의견을 말할 때는 '제 생각에는'으로 시작해요. 부드럽고 분명하게 들려요." → (To give an opinion, start with '제 생각에는' (in my opinion) — it sounds gentle and clear.) | `ddp_rose`[STILL] | 마담제이 Z62 stand_speak 왼쪽 · 티쳐제이 끄덕임 | 복습W19
 - **S25** 저도 그렇게 생각해요 | `저도 그렇게 생각해요` | "동의할 때는 '저도 그렇게 생각해요' 해요. 짧지만 사이를 가깝게 만드는 말이에요." → (To agree: '저도 그렇게 생각해요' (I think so too) — short, but it brings people closer.) | `ddp_rose`[STILL] | C그룹 c_nod_agree 둘이 서로 끄덕임 | 복습W19
 - **S26** 가 본 적이 있어요 | `가 본 적이 있어요` | "여행 이야기도 했죠. 경험은 '가 본 적이 있어요'로 말해요. 저는 제주도에 가 본 적이 있어요." → (We talked about travel too. For experience: '가 본 적이 있어요' (I have been there). I have been to Jeju.) | `ddp_rose`[STILL] | 티쳐제이 Z38 explain 오른쪽 · 마담제이 듣기 | 복습W22
@@ -142,16 +142,16 @@
 
 ### 5막 — 전원 합류 · 수료식 (S28–S33) · 저녁
 
-- **S28** 일곱이 모였어요 | `함께` | "이제 일곱이 다 모였어요. 스물네 주 만에 처음으로 한 교실에 앉았어요." → (Now all seven are together — sitting in one classroom for the first time in twenty-four weeks.) | `classroom`[STILL] | 전원 착석 · 티쳐제이 Z22 교단 오른쪽 · 학생 6인 Z50~Z84 왼쪽 | 전원합류
+- **S28** 일곱이 모였어요 | `함께` | "이제 일곱이 다 모였어요. 스물네 주 만에 처음으로 한 교실에 앉았어요." → (Now all seven are together — sitting in one classroom for the first time in twenty-four weeks.) | `to_gallery`[VIDEO] | 전원 착석 · 티쳐제이 Z22 교단 오른쪽 · 학생 6인 Z50~Z84 왼쪽 | 전원합류
 - **S29** 이제 수료해요 | `수료` | "이제 '수료'해요. 과정을 다 마쳤다는 뜻이에요. 자, 따라 해 보세요." → (Now we '수료' (complete the course) — it means you've finished the whole thing. Repeat after me.) | `classroom`[STILL] | 티쳐제이 call_name 오른쪽 · 전원 정면 | 어휘핵심
-- **S30** 축하합니다, 고맙습니다 | `축하합니다 · 고맙습니다` | "이름을 부르면 나와서 받아요. 주는 사람은 '축하합니다', 받는 사람은 '고맙습니다'." → (When your name is called, come and receive it. The giver says '축하합니다' (congratulations), the receiver '고맙습니다' (thank you).) | `classroom`[STILL] | 티쳐제이 give_flower 오른쪽 · 인준 receive_flower 왼쪽 · 나머지 박수 | 어휘
+- **S30** 축하합니다, 고맙습니다 | `축하합니다 · 고맙습니다` | "이름을 부르면 나와서 받아요. 주는 사람은 '축하합니다', 받는 사람은 '고맙습니다'." → (When your name is called, come and receive it. The giver says '축하합니다' (congratulations), the receiver '고맙습니다' (thank you).) | `gallery_wake`[VIDEO] | 티쳐제이 give_flower 오른쪽 · 인준 receive_flower 왼쪽 · 나머지 박수 | 어휘
 - **S31** 앞에서 보고 계셨어요 | `덕분에` | "저 앞에서 계속 보고 계셨어요. 한글을 만드신 분이요. 그분 '덕분에' 우리가 여기까지 왔어요." → (Someone was watching from the front all along — the man who made Hangeul. '덕분에' (thanks to) him, we came this far.) | `classroom_sejong`[VIDEO] | 세종대왕 초상이 수염을 쓰다듬고 빙그레 웃는다 작게 한 번 · 전원 정면을 봄 | 디테일
 - **S32** 자신 있어요 | `자신 있어요 · 잘했어요` | "이제 말할 수 있어요. '자신 있어요.' 서로에게도 말해 줘요. '잘했어요.'" → (Now you can say it: '자신 있어요' (I feel confident). And say it to each other too: '잘했어요' (well done).) | `classroom`[STILL] | 전원 박수 · 티쳐제이 clap 오른쪽 | 감정
-- **S33** 밖으로 나가요 | `앞으로 · 계속` | "자, 밖으로 나가요. 오늘은 축제예요. '앞으로'도 '계속' 이어져요." → (Now let's go outside — today is a celebration. It keeps going '앞으로' (onward), '계속' (continuously).) | `plaza_gather`[VIDEO] | 사방에서 군중이 몰려와 원을 만듦 · 7인 원 안으로 걸어 들어감 | 전환
+- **S33** 밖으로 나가요 | `앞으로 · 계속` | "자, 밖으로 나가요. 오늘은 축제예요. '앞으로'도 '계속' 이어져요." → (Now let's go outside — today is a celebration. It keeps going '앞으로' (onward), '계속' (continuously).) | `gallery_out`[VIDEO] | 사방에서 군중이 몰려와 원을 만듦 · 7인 원 안으로 걸어 들어감 | 전환
 
 ### 6막 — 피날레 (S34) · 밤
 
-- **S34** 여러분 차례예요 | `자신 있어요 · 고맙습니다` | "여기까지 왔어요. 이제 여러분 차례예요. 자신 있게, 계속하세요. 고맙습니다!" → (You made it this far. Now it's your turn — go on with confidence. Thank you!) | `plaza_day`[STILL] | 이 씬 뒤에 완성된 피날레 50초를 붙인다 | 피날레
+- **S34** 여러분 차례예요 | `자신 있어요 · 고맙습니다` | "여기까지 왔어요. 이제 여러분 차례예요. 자신 있게, 계속하세요. 고맙습니다!" → (You made it this far. Now it's your turn — go on with confidence. Thank you!) | `plaza_gather`[VIDEO] | 이 씬 뒤에 완성된 피날레 50초를 붙인다 | 피날레
 
 > ★**이번 렌더에서는 피날레(50초)를 붙이지 않는다.** 사장님 검수용이므로 S1~S34까지만 렌더한다.
 > 최종 납품 때 `W24/_final/W24_finale_50s_MASTER.mp4` 를 S34 뒤에 이어 붙인다.

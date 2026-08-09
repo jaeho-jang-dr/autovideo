@@ -45,8 +45,8 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
     <h1>{L.title}</h1>
     <p class="lr-sub">{L.sub}</p>
     <p class="lr-credit">{isEn
-      ? 'Grounded in the NotebookLM Korean-education notebook (126 sources: TTMIK, Sogang Korean, King Sejong Institute, NIKL Standard Curriculum…). Day 1 of each week is the existing core video; Days 2–7 are all-new daily lessons (no overlap).'
-      : 'NotebookLM 한글교육 노트북 126개 소스(TTMIK·서강한국어·세종학당·국립국어원 표준교육과정 등) 기반. 각 주차 1일차는 기존 핵심 영상, 2~7일차는 전부 새 일일 강의(중복 없음).'}</p>
+      ? 'Grounded in the Gemini Notebook Korean-education notebook (126 sources: TTMIK, Sogang Korean, King Sejong Institute, NIKL Standard Curriculum…). Day 1 of each week is the existing core video; Days 2–7 are all-new daily lessons (no overlap).'
+      : 'Gemini Notebook 한글교육 노트북 126개 소스(TTMIK·서강한국어·세종학당·국립국어원 표준교육과정 등) 기반. 각 주차 1일차는 기존 핵심 영상, 2~7일차는 전부 새 일일 강의(중복 없음).'}</p>
     <div class="lr-stats">
       <span class="stat"><b>{total}</b>{L.lessons}</span>
       <span class="stat"><b>24</b>{L.week}</span>
@@ -88,7 +88,7 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
                 <b class="lr-title">
                   {isEn ? x.title_en : x.title_ko}
                   {x.anchor
-                    ? (x.week <= 23
+                    ? (x.week <= 24
                         ? <a class="tag tag-video yt-trigger" href="#" data-week={x.week}>▶ {isEn ? 'video' : '영상'}</a>
                         : <a class="tag tag-video" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">▶ {isEn ? 'video' : '영상'}</a>
                       )
@@ -115,7 +115,7 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
               </div>
               <div class="lc-title">{isEn ? x.title_en : x.title_ko}</div>
               {x.anchor
-                ? (wk.week <= 13
+                ? (wk.week <= 24
                     ? <a class="lc-link yt-trigger" href="#" data-week={wk.week}>{isEn ? '▶ Watch video' : '▶ 영상 보기'}</a>
                     : <a class="lc-link" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">{isEn ? '▶ Watch video' : '▶ 영상 보기'}</a>
                   )
@@ -199,7 +199,8 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
     19: { ko: '0x7LxGc3DNo', en: 'PvTm1Df3RVs' },
     20: { ko: 'L9QsqYAuAH8', en: '9J_0D2Ger4M' },
     21: { ko: 'yyeIBiEIp6E', en: 'TKjiVsG8MuI' },
-    22: { ko: 'CZMYZUehC7k', en: 'XI9cmlczbkw' }, 23: { ko: '5xet4FQDdX8', en: '8lob0SW542k' }
+    22: { ko: 'CZMYZUehC7k', en: 'XI9cmlczbkw' }, 23: { ko: '5xet4FQDdX8', en: '8lob0SW542k' },
+    24: { ko: 't07lEIZqTpQ', en: 'HIvrnNWk3K8' }
   };
 
   function renderYtPlayer(week: number, activeLang: 'ko' | 'en') {

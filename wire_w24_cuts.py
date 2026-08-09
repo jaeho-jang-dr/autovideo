@@ -23,7 +23,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 os.chdir(ROOT)
 
 DB = "channel/content.db"
-CUT_DIR = "W24/group_cuts"
+# ★2026-08-05: 새로 만든 19개 클립을 재컷팅한 결과로 갈아탄다(옛 group_cuts 는 폐기분).
+CUT_DIR = "W24/group_cuts_v2"
 CHAR_KEY = "w24_grp"                # 그룹 컷은 '한 덩어리'라 캐릭터 키 하나로 모은다
 SEQ_PREFIX = "w24_"
 CANVAS_CX = 640                     # 통짜 배치 = 화면 중앙

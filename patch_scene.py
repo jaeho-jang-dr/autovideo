@@ -128,7 +128,8 @@ for q in SEQS:
         fr = cs.compose(scene, t=tt, lang="ko", overlay=False)
         fr = cs.apply_camera(fr, tt, sdur, cam).convert("RGBA")
         draw_note_box(fr, cp)
-        cs.draw_logo(fr); cs.draw_place(fr, scene.get("place_en"))
+        # ★워터마크 덮개는 compose() 안(배경 바로 위)에서 처리된다
+        cs.draw_place(fr, scene.get("place_en"))      # ★좌상단 로고 없앰(2026-08-08)
         return np.asarray(fr.convert("RGB"))
 
     log(f"[S{q}] 렌더 ({dur:.1f}s) …")

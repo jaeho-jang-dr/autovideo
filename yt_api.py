@@ -26,9 +26,9 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 TOKEN = os.path.join(ROOT, "yt_token.json")
 
 # 유튜브 언어행 한국어명 → BCP-47 코드
-ROW2CODE = {"한국어": "ko", "영어": "en", "일본어": "ja", "중국어": "zh-Hans", "스페인어": "es"}
+ROW2CODE = {"한국어": "ko", "영어": "en", "일본어": "ja", "중국어": "zh-Hans", "스페인어": "es-419"}
 # 자막 표시용 이름
-CODE2NAME = {"ko": "한국어", "en": "English", "ja": "日本語", "zh-Hans": "中文", "es": "Español"}
+CODE2NAME = {"ko": "한국어", "en": "English", "ja": "日本語", "zh-Hans": "中文", "es-419": "Español"}
 
 
 def yt():
