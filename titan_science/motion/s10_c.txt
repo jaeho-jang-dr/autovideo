@@ -1,0 +1,7 @@
+Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
+
+0-1s: hold drifting among the spherical voids in the large chamber.
+1-4.5s: the camera reverses and flies back out through the chamber walls, the lattice receding, and bursts out through the skin surface into open air above a specimen study page where three comparison vignettes sit in hand-inked frames.
+4.5-8s: it sweeps along the row of vignettes and settles above the middle one showing a broken block of foam and its bubbles.
+
+Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.

@@ -8,9 +8,9 @@
   },
   "current_session": {
     "status": "in_progress",
-    "started": "2026-07-01",
-    "goal": "KO-W23 모임약속·시간조율 강의 유튜브 공개 완료. 다음: W24 및 전체 테마 관리.",
-    "phase": "dark_theme_restored"
+    "started": "2026-08-10",
+    "goal": "titan_science (CA-002) 진격의 거인의 과학 시나리오 및 핸드오버 완료. 감독(Claude) 지시 대기.",
+    "phase": "handover_to_director"
   },
   "completed_tasks": [
     "Restored dark deep-space black theme (#090a0f / #0b0d14) for both Astro website and review_lesson.py UI upon user request.",

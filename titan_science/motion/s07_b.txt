@@ -1,0 +1,7 @@
+Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
+
+0-1s: hold inside the packed knot of orange particles pressing against the inner wall.
+1-4.5s: the camera backs out through the body outline and rises, the whole giant figure coming into view packed to bursting, then sweeps across to the small outline beside it where only a handful of particles drift calmly.
+4.5-8s: it settles between the two outlines so the density difference reads in one frame, escape arrows sparse on the giant and plentiful on the small one.
+
+Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.

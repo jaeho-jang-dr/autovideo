@@ -1,0 +1,7 @@
+Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
+
+0-1s: hold where the upward and downward arrows meet and cancel on the whale's flank.
+1-4.5s: the camera drops away beneath the animal and descends through the water column, the pale belly filling the frame above, bubble strings rising past, until the dune seafloor and a half-buried wreck rib cage appear below.
+4.5-8s: it settles at the seafloor looking up, the whale a vast shape against the bright surface far above.
+
+Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.

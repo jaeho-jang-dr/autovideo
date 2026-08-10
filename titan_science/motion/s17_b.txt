@@ -1,0 +1,7 @@
+Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
+
+0-1s: hold on the spreading hairline cracks in the greying surface.
+1-4.5s: the camera pulls back and cranes down the figure's side to the hillside, then flies forward through the tall grass past the twisted tree and the collapsed stone arch, the light warming back toward gold as it travels.
+4.5-8s: it rises and settles beside the figure's shoulder where thin warm arrows enter the skin like absorbed sunlight.
+
+Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.

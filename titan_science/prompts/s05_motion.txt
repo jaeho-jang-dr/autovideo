@@ -1,0 +1,22 @@
+Animate this exact illustration. Keep the drawing style, colours, line work and every
+object precisely as they are in the source image - the warm cream paper background, the
+hand-inked outlines, the chalky white columns, the ochre load blocks and the drawing
+tools around them. Do not redraw, do not restyle, do not change the palette, do not turn
+it into parchment or add pen hatching. No text anywhere.
+
+The only things that move are the camera and the load.
+
+0-1s: start low at the base of the tall slender column on the left, looking up its length,
+the ochre load block hanging above it.
+1-4.5s: the camera rises fast alongside that column in one continuous vertical crane move,
+the internal lattice sliding past the lens, and arcs over the top just as the ochre block
+settles down onto it. The lattice slowly opens, thin pale lines widening between the
+struts, and fine chalk dust drifts down. The short stout column on the right stays
+completely intact and unmarked under its identical block.
+4.5-6.5s: the camera dives back down and pushes in hard on the tall column's midsection
+until the widening lattice lines fill the frame.
+6.5-8s: it holds there, chalk dust drifting slowly through the shot.
+
+Continuous camera travel with strong parallax, no static framing, no screen shake, no
+flashing. No people. No red, no crimson, nothing that could read as liquid - the strain
+marks stay amber and dry.

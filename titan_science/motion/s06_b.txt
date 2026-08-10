@@ -1,0 +1,7 @@
+Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
+
+0-1s: hold inside the footprint crater, loose soil trickling down its wall.
+1-4.5s: the camera rises out of the crater and sweeps sideways at ground height along the parade ground, past sandbags and ammunition crates, arriving alongside the tank's continuous track and racing along its length, track links flicking past the lens.
+4.5-8s: it cranes up over the hull and settles looking down at the two shallow even grooves the tracks have pressed into the dirt.
+
+Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.

@@ -1,0 +1,9 @@
+Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
+
+0-1s: hold on the cracked knuckle skin filling the frame, steam drifting across it.
+1-4.5s: the camera pulls back fast and cranes downward along the wall face, the whole hand and then the wall rim shrinking away above, stone courses streaking upward past the lens, until the cobbled street and the tiny townspeople appear far below.
+4.5-8s: it levels out at street height among the scattered clay pots and the tipped handcart, and settles looking back up the wall with the fingers now small at the top.
+
+Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.
+
+ANATOMY LOCK (critical): the colossal hand over the wall must stay anatomically correct at every single frame - EXACTLY FIVE fingers, one thumb and four fingers, in correct order and proportion, each with three visible segments and a nail, all curling the same way over the parapet. Never six fingers, never four, never fused or melted fingers, never a hand that turns into stone or into the crowd. Keep the hand clearly separated from the tiny human silhouettes on the wall walk - they must not merge. If the hand becomes small in frame, draw it simpler rather than distorted.

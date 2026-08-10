@@ -1,0 +1,7 @@
+Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
+
+0-1s: hold on the opened lattice of the tall column, chalk dust drifting.
+1-4.5s: the camera pulls back and rises above both columns, then falls vertically between them, rotating as it drops, the tall lattice sliding past one side and the short smooth column the other, and levels out at ground height between them.
+4.5-8s: it pushes toward the base of the tall column where fine hairline lines have opened in the chalk and pale dust has gathered on the ground line, and settles there.
+
+Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.

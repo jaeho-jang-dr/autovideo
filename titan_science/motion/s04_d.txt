@@ -1,0 +1,7 @@
+Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
+
+0-1s: hold on the giant creature's swollen leg contour.
+1-4.5s: the camera pulls back and tracks sideways along the ruled ground line past the three cubes again, each one swelling and passing, the weight stacks climbing out of frame while the small tile columns barely grow beside them.
+4.5-8s: it cranes up alongside the tallest disc stack and settles looking down its length, the tile column tiny far below.
+
+Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.

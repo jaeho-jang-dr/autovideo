@@ -1,0 +1,7 @@
+Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
+
+0-1s: hold at the base of the stone column where shaft meets platform.
+1-4.5s: the camera cranes straight up the flutes to the capital, then pulls back and sweeps 180 degrees around so the colonnade, the sauropod limb study and the bent human leg study rotate past each other in one continuous arc.
+4.5-8s: it settles facing the three side by side, their force arrows aligned - curved and bunched on the bent leg, straight and clean on the other two.
+
+Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.

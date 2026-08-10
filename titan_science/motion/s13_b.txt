@@ -1,0 +1,7 @@
+Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
+
+0-1s: hold inside the honeycomb of hollow chambers, thin walls glowing around the lens.
+1-4.5s: the camera reverses out through the block's surface and pulls back fast, the whole sauropod resolving around it, then drops to water level and skims forward across the braided river between the animal's legs, spray flicking past.
+4.5-8s: it bursts into the open channel and settles looking back at the herd drinking, pterosaurs crossing above.
+
+Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.

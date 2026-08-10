@@ -1,0 +1,7 @@
+Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
+
+0-1s: hold on the backlit fibrous chamber wall, its fibres glowing.
+1-4.5s: the camera drives forward through that wall into the next chamber, and the next, and the next, cell walls bursting past on all sides in a continuous tunnel of openings, the structure opening endlessly ahead.
+4.5-8s: it slows in a much larger open chamber and settles drifting among spherical voids catching pale light.
+
+Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.
