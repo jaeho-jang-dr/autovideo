@@ -139,3 +139,10 @@ titan_science/_diag/
 titan_science/_reject/
 titan_science/audio/
 titan_science/_audio_edge_draft/
+
+# 채널 조사 원본 dump — 슬림본(*.slim.jsonl)만 커밋한다
+research/orthotv_videos.jsonl
+research/orthotv_shorts.jsonl
+research/*.err
+research/orthotv_raw.json
+research/orthotv_shorts.json
