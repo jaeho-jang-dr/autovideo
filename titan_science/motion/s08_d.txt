@@ -1,7 +1,7 @@
 Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
 
 0-1s: hold in the top-down over the plaza and its heat ring.
-1-4.5s: the camera falls vertically toward the figure, rotating as it drops, thermal bands resolving from violet through orange to intense white, and pulls out of the dive at ground height right at the feet.
-4.5-8s: it cranes up the front of the body and settles looking at the white-hot core through rising heat shimmer.
+1-4.5s: the camera falls vertically toward the centre of the ring, rotating as it drops, warm colour bands resolving from violet through orange to intense white, and pulls out of the dive at ground height.
+4.5-8s: it cranes upward through the rising heat shimmer and settles looking at the white-hot core.
 
 Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.

@@ -1,0 +1,576 @@
+1
+00:00:00,000 --> 00:00:01,450
+Un muro de cincuenta metros de altura.
+
+2
+00:00:01,510 --> 00:00:06,102
+Durante cien años, nada lo había traspasado: ni un ejército, ni un asedio,
+
+3
+00:00:06,162 --> 00:00:06,646
+ni una sola vez.
+
+4
+00:00:06,706 --> 00:00:09,788
+Y una mañana, aparecieron dedos por encima.
+
+5
+00:00:09,848 --> 00:00:14,017
+Dedos con forma humana, agrietados y humeantes, cada uno de cuatro metros de ancho.
+
+6
+00:00:24,000 --> 00:00:28,034
+Pero aquí viene lo extraño, y es la parte de la que casi nadie habla.
+
+7
+00:00:28,094 --> 00:00:29,940
+Corta uno de esos enormes brazos,
+
+8
+00:00:30,000 --> 00:00:34,371
+y una sola patada lo hace rebotar por el barro como una caja de cartón vacía.
+
+9
+00:00:34,431 --> 00:00:36,950
+Un monstruo de sesenta metros, más ligero que el unicel.
+
+10
+00:00:37,010 --> 00:00:41,268
+Ahí es donde comienza la historia de hoy, no con lo aterradora que es esta criatura,
+
+11
+00:00:41,328 --> 00:00:42,390
+sino con una pregunta.
+
+12
+00:00:42,450 --> 00:00:44,409
+¿Por qué este gigante tenía que ser ligero?
+
+13
+00:00:48,000 --> 00:00:53,157
+La respuesta fue escrita trescientos ochenta años antes de que el manga existiera.
+
+14
+00:00:53,217 --> 00:00:54,213
+El año es 1638.
+
+15
+00:00:54,273 --> 00:00:58,125
+Galileo Galilei, viejo y quedándose ciego, publica su último libro.
+
+16
+00:00:58,185 --> 00:01:01,976
+Y enterrada en él hay una advertencia sobre los gigantes: no pueden existir.
+
+17
+00:01:02,036 --> 00:01:04,274
+Agrandas un cuerpo lo suficiente, escribió,
+
+18
+00:01:04,334 --> 00:01:06,882
+y colapsará bajo su propio peso.
+
+19
+00:01:12,000 --> 00:01:14,660
+La lógica es lo suficientemente simple como para hacerla con los dedos.
+
+20
+00:01:14,720 --> 00:01:15,659
+Duplica la altura,
+
+21
+00:01:15,719 --> 00:01:20,654
+y la sección transversal del hueso —la parte que realmente soporta la carga— crece cuatro veces.
+
+22
+00:01:20,714 --> 00:01:22,874
+Pero el peso del cuerpo crece ocho veces.
+
+23
+00:01:22,934 --> 00:01:24,150
+Ahora, escálalo diez veces.
+
+24
+00:01:24,210 --> 00:01:26,315
+El hueso se vuelve cien veces más fuerte,
+
+25
+00:01:26,375 --> 00:01:28,812
+mientras que el cuerpo se vuelve mil veces más pesado.
+
+26
+00:01:28,872 --> 00:01:30,588
+La fuerza escala con el cuadrado.
+
+27
+00:01:30,648 --> 00:01:32,142
+El peso escala con el cubo.
+
+28
+00:01:32,202 --> 00:01:35,639
+Y cuanto más crece esa brecha, menos puede un cuerpo sostenerse a sí mismo.
+
+29
+00:01:44,000 --> 00:01:47,540
+Entonces, ¿qué le sucede a un titán de quince metros construido con densidad humana?
+
+30
+00:01:47,600 --> 00:01:48,722
+Observa el primer paso.
+
+31
+00:01:48,782 --> 00:01:51,140
+En el instante en que su peso se desplaza a una pierna,
+
+32
+00:01:51,200 --> 00:01:56,147
+el estrés dentro de ese fémur supera el límite que el hueso puede soportar físicamente.
+
+33
+00:01:56,207 --> 00:01:57,553
+Ya no camina.
+
+34
+00:01:57,613 --> 00:01:58,453
+Se está derrumbando.
+
+35
+00:01:58,513 --> 00:01:59,635
+El genetista J.B.S.
+
+36
+00:01:59,695 --> 00:02:04,585
+Haldane lo resumió en una sola frase que nunca ha sido mejorada: para cada tamaño,
+
+37
+00:02:04,645 --> 00:02:05,935
+hay una forma adecuada.
+
+38
+00:02:08,000 --> 00:02:09,942
+Y los números solo lo empeoran.
+
+39
+00:02:10,002 --> 00:02:15,776
+Un titán de quince metros con densidad humana pesa alrededor de cuarenta y ocho toneladas, lo mismo que un tanque de guerra.
+
+40
+00:02:15,836 --> 00:02:18,122
+Pero mira cómo un tanque soporta esa carga.
+
+41
+00:02:18,182 --> 00:02:21,668
+Dos orugas largas, distribuyendo el peso a lo largo de metros de terreno.
+
+42
+00:02:21,728 --> 00:02:23,327
+El titán tiene dos huellas.
+
+43
+00:02:23,387 --> 00:02:25,157
+Esa es toda la superficie de contacto.
+
+44
+00:02:32,000 --> 00:02:34,440
+Pero algo falla antes de que los huesos lo hagan.
+
+45
+00:02:34,500 --> 00:02:34,995
+El calor corporal.
+
+46
+00:02:35,055 --> 00:02:36,495
+El calor es producido por el volumen,
+
+47
+00:02:36,555 --> 00:02:40,551
+por cada célula del cuerpo quemando combustible, y el volumen escala con el cubo.
+
+48
+00:02:40,611 --> 00:02:41,995
+El calor escapa a través de la piel,
+
+49
+00:02:42,055 --> 00:02:45,329
+a través del área de superficie, y eso escala solo con el cuadrado.
+
+50
+00:02:45,389 --> 00:02:47,884
+Entonces, cuanto más grande te haces, más calor produces,
+
+51
+00:02:47,944 --> 00:02:49,773
+y más estrecha se vuelve la salida.
+
+52
+00:02:49,833 --> 00:02:50,773
+El horno crece.
+
+53
+00:02:50,833 --> 00:02:51,884
+La chimenea no.
+
+54
+00:03:04,000 --> 00:03:06,309
+Haz los cálculos y el resultado es implacable.
+
+55
+00:03:06,369 --> 00:03:16,646
+Un titán de quince metros con una tasa metabólica humana elevaría su temperatura interna por encima de doscientos grados Celsius, aproximadamente tres veces el punto en el que las proteínas de un cuerpo se cocinan y solidifican.
+
+56
+00:03:16,706 --> 00:03:18,261
+Nunca llegaría a un enemigo.
+
+57
+00:03:18,321 --> 00:03:20,738
+Ni siquiera terminaría de cruzar el campo.
+
+58
+00:03:20,798 --> 00:03:23,807
+Se cocinaría, ahí de pie, en el calor de su propia creación.
+
+59
+00:03:23,867 --> 00:03:26,391
+Romper tus huesos al caminar, o hervirte quieto.
+
+60
+00:03:26,451 --> 00:03:29,406
+La física ofrecía exactamente dos muertes, y ninguna tercera opción.
+
+61
+00:03:36,000 --> 00:03:38,448
+Pero el autor sabía todo esto.
+
+62
+00:03:38,508 --> 00:03:42,722
+Él sabía, y tenía una respuesta lista mucho antes de que alguien hiciera la pregunta.
+
+63
+00:03:42,782 --> 00:03:46,198
+En la historia, un investigador examina una extremidad de titán amputada,
+
+64
+00:03:46,258 --> 00:03:47,908
+esperando toneladas de peso muerto,
+
+65
+00:03:47,968 --> 00:03:51,783
+y en su lugar grita una sola frase: ¡es extraño, es demasiado ligero!
+
+66
+00:03:51,843 --> 00:03:54,177
+Esa única frase, descartada en un panel,
+
+67
+00:03:54,237 --> 00:03:57,653
+resuelve silenciosamente cada problema de física que acabamos de ver acumularse.
+
+68
+00:04:00,000 --> 00:04:03,655
+Pon el tejido de un titán bajo un microscopio y la respuesta está ahí.
+
+69
+00:04:03,715 --> 00:04:07,427
+No está lleno de músculo en absoluto, es una estructura porosa,
+
+70
+00:04:07,487 --> 00:04:10,016
+plagada de bolsas de aire, con paredes delgadas como el papel.
+
+71
+00:04:10,076 --> 00:04:12,156
+Es el mismo truco utilizado por el unicel.
+
+72
+00:04:12,216 --> 00:04:13,225
+Por un pan.
+
+73
+00:04:13,285 --> 00:04:16,940
+Y por el hueso esponjoso que se encuentra dentro de tu propio esqueleto ahora mismo.
+
+74
+00:04:17,000 --> 00:04:18,967
+Mantén el volumen, elimina la densidad.
+
+75
+00:04:19,027 --> 00:04:22,176
+La naturaleza resolvió esto hace cientos de millones de años.
+
+76
+00:04:32,000 --> 00:04:33,965
+Sintamos la escala por un segundo.
+
+77
+00:04:34,025 --> 00:04:39,504
+Un titán colosal de sesenta metros tiene aproximadamente el volumen de dieciocho ballenas azules apiladas.
+
+78
+00:04:39,564 --> 00:04:40,517
+Con densidad humana,
+
+79
+00:04:40,577 --> 00:04:44,686
+eso son miles de toneladas, un número que simplemente no puede sostenerse sobre piernas.
+
+80
+00:04:44,746 --> 00:04:47,783
+Y sin embargo, en la historia, esta cosa trepa un muro.
+
+81
+00:04:47,843 --> 00:04:48,319
+Camina.
+
+82
+00:04:48,379 --> 00:04:48,855
+Patea.
+
+83
+00:04:48,915 --> 00:04:50,999
+Lo que te dice que la densidad fue reducida.
+
+84
+00:04:51,059 --> 00:04:52,190
+Y drásticamente reducida.
+
+85
+00:04:56,000 --> 00:04:58,162
+Y aquí el giro cambia una vez más.
+
+86
+00:04:58,222 --> 00:04:59,986
+Porque ligero no significa débil.
+
+87
+00:05:00,046 --> 00:05:02,892
+El poder destructivo no es masa, es energía cinética.
+
+88
+00:05:02,952 --> 00:05:05,114
+Masa, por velocidad al cuadrado, sobre dos.
+
+89
+00:05:05,174 --> 00:05:08,989
+Reduce la masa a la mitad pero duplica la velocidad, y el daño se duplica con ella.
+
+90
+00:05:09,049 --> 00:05:09,843
+Además,
+
+91
+00:05:09,903 --> 00:05:17,194
+el cuerpo del titán está lleno de vapor presurizado a trescientos cincuenta grados, un propulsor integrado en una estructura ligera.
+
+92
+00:05:17,254 --> 00:05:19,245
+Así que no es débil por ser ligero.
+
+93
+00:05:19,305 --> 00:05:20,898
+Es rápido por ser ligero.
+
+94
+00:05:20,958 --> 00:05:23,063
+Y el muro se rompe porque es rápido.
+
+95
+00:05:28,000 --> 00:05:30,434
+Y nada de esto es una invención de ficción.
+
+96
+00:05:30,494 --> 00:05:32,868
+Gigantes reales resolvieron el mismo problema.
+
+97
+00:05:32,928 --> 00:05:36,728
+Argentinosaurus: treinta y cinco metros de largo, ochenta toneladas de animal.
+
+98
+00:05:36,788 --> 00:05:39,340
+Abre sus huesos y los encontrarás huecos.
+
+99
+00:05:39,400 --> 00:05:40,053
+Como un pájaro,
+
+100
+00:05:40,113 --> 00:05:44,328
+tenía sacos de aire incrustados profundamente en su esqueleto para desprenderse del peso que no necesitaba.
+
+101
+00:05:44,388 --> 00:05:46,287
+Mantén el volumen, reduce la densidad.
+
+102
+00:05:46,347 --> 00:05:49,434
+Esa es, precisa y exactamente, la solución del titán.
+
+103
+00:06:00,000 --> 00:06:02,153
+Pero deshacerse del peso es solo la mitad del trabajo.
+
+104
+00:06:02,213 --> 00:06:04,475
+Todavía tienes que sostener lo que queda.
+
+105
+00:06:04,535 --> 00:06:06,364
+Así que mira las patas de un dinosaurio gigante.
+
+106
+00:06:06,424 --> 00:06:07,228
+No se doblan.
+
+107
+00:06:07,288 --> 00:06:10,143
+Se mantienen rectas y verticales, como columnas de templo.
+
+108
+00:06:10,203 --> 00:06:12,680
+Una pata doblada carga la articulación con estrés de flexión,
+
+109
+00:06:12,740 --> 00:06:14,408
+y la flexión es lo que rompe el hueso.
+
+110
+00:06:14,468 --> 00:06:18,565
+Una recta canaliza la fuerza limpiamente hacia abajo por el fuste y hacia el suelo.
+
+111
+00:06:18,625 --> 00:06:22,830
+Es la misma razón por la que la pata de un elefante parece un pilar en lugar de un resorte.
+
+112
+00:06:24,000 --> 00:06:26,357
+Los elefantes fueron un paso más allá.
+
+113
+00:06:26,417 --> 00:06:28,659
+Compara el hueso de la pata de una cría con el de un adulto,
+
+114
+00:06:28,719 --> 00:06:33,379
+y el del adulto es desproporcionadamente más grueso para el tamaño de su cuerpo, no solo más grande,
+
+115
+00:06:33,439 --> 00:06:35,048
+sino más grande de lo que debería ser.
+
+116
+00:06:35,108 --> 00:06:37,810
+El grosor del hueso se ajustó para superar el crecimiento corporal.
+
+117
+00:06:37,870 --> 00:06:40,112
+Los seres vivos ajustaron este dial lentamente,
+
+118
+00:06:40,172 --> 00:06:42,529
+a lo largo de millones de años de prueba y error.
+
+119
+00:06:42,589 --> 00:06:44,544
+Un titán de ficción no tuvo tanto tiempo.
+
+120
+00:06:44,604 --> 00:06:46,961
+Así que su autor optó por la densidad.
+
+121
+00:06:48,000 --> 00:06:52,539
+Y luego está el animal más pesado en la historia de este planeta: la ballena azul,
+
+122
+00:06:52,599 --> 00:06:54,072
+ciento noventa toneladas.
+
+123
+00:06:54,132 --> 00:06:56,371
+¿Cómo se mueve algo tan pesado?
+
+124
+00:06:56,431 --> 00:06:56,919
+El océano.
+
+125
+00:06:56,979 --> 00:06:59,930
+Bajo el agua, la flotabilidad cancela la gravedad casi por completo,
+
+126
+00:06:59,990 --> 00:07:04,584
+y una ballena azul nunca tiene que sostenerse sobre las piernas ni un segundo de su vida.
+
+127
+00:07:04,644 --> 00:07:06,445
+No venció la maldición de la escala.
+
+128
+00:07:06,505 --> 00:07:08,800
+Se movió a un lugar donde la maldición no se aplica.
+
+129
+00:07:08,860 --> 00:07:12,139
+Pon un titán en el mar, y la física no se quejaría en absoluto.
+
+130
+00:07:20,000 --> 00:07:21,481
+Todavía falta una pieza.
+
+131
+00:07:21,541 --> 00:07:23,251
+En la historia, los titanes no comen.
+
+132
+00:07:23,311 --> 00:07:26,961
+Extraen su energía de la luz solar, y cuando el sol se pone,
+
+133
+00:07:27,021 --> 00:07:27,931
+simplemente se detienen.
+
+134
+00:07:27,991 --> 00:07:29,758
+Eso tampoco es una coincidencia.
+
+135
+00:07:29,818 --> 00:07:35,580
+Quemar comida para obtener energía siempre produce calor, el problema exacto que acabamos de ver matarlos dos veces.
+
+136
+00:07:35,640 --> 00:07:39,633
+Cambia el metabolismo a la luz solar, apaga todo por la noche,
+
+137
+00:07:39,693 --> 00:07:42,373
+y el problema del auto-cocinado desaparece silenciosamente.
+
+138
+00:07:44,000 --> 00:07:46,872
+Así que la ligereza del titán nunca fue un atajo perezoso.
+
+139
+00:07:46,932 --> 00:07:48,596
+Huesos que se rompen bajo carga.
+
+140
+00:07:48,656 --> 00:07:50,033
+Un cuerpo que se cocina a sí mismo.
+
+141
+00:07:50,093 --> 00:07:52,907
+Y suficiente fuerza para derribar un muro de cincuenta metros.
+
+142
+00:07:52,967 --> 00:07:56,241
+Una sola respuesta resuelve las tres a la vez: hazlo ligero.
+
+143
+00:07:56,301 --> 00:07:59,231
+Una buena imaginación no ignora las leyes de la física.
+
+144
+00:07:59,291 --> 00:08:03,427
+Las aprende primero, y luego busca la grieta por la que caminar.
+

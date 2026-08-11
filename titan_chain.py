@@ -39,6 +39,7 @@ import autoveo_flow as avf                             # noqa: E402
 CLIP_DIR = "titan_science/keyframes"
 MOTION_DIR = "titan_science/motion"
 LAST_DIR = "titan_science/_lastframe"
+SHOT_DIR = "titan_science/_failshot"       # ★생성 실패 순간의 화면 — 추측 대신 읽으려고
 GEN_WAIT = 180
 COOL = 10
 
@@ -101,11 +102,16 @@ def make_one(key):
     if not os.path.exists(mp):
         raise RuntimeError(f"모션 프롬프트 없음: {mp}")
     prompt = re.sub(r"\s+", " ", open(mp, encoding="utf-8").read()).strip()
+    # ★진단용 — 같은 이미지에 다른 프롬프트를 물려 '이미지 문제냐 프롬프트 문제냐'를 가른다
+    if os.environ.get("TITAN_PROMPT"):
+        prompt = os.environ["TITAN_PROMPT"].strip()
+        log(f"    [진단] 프롬프트 대체 ({len(prompt)}자)")
     pk = prev_key(key)
     if not pk:
         raise RuntimeError(f"앞 컷을 못 찾음: {key}")
     img = last_frame(pk)
-    out = os.path.abspath(os.path.join(CLIP_DIR, key + ".mp4"))
+    suffix = "_diag" if os.environ.get("TITAN_PROMPT") else ""
+    out = os.path.abspath(os.path.join(CLIP_DIR, key + suffix + ".mp4"))
 
     P.launch_chrome(os.path.abspath("assets/chrome_profile"))
     time.sleep(3)
@@ -222,6 +228,25 @@ def make_one(key):
                 log(f"    {(i+1)*15}s — 새 미디어 확인")
                 break
         if not src:
+            # ★추측으로 프롬프트를 고치지 말고 **화면이 뭐라고 하는지 읽는다**.
+            #   Flow 는 거부·오류를 화면에 띄우는데, 지금까지 그걸 안 보고 있었다.
+            shot = os.path.abspath(os.path.join(SHOT_DIR, key + "_fail.png"))
+            os.makedirs(SHOT_DIR, exist_ok=True)
+            try:
+                pg.screenshot(path=shot, full_page=False)
+                log(f"    [실패화면] {shot}")
+            except Exception as e:
+                log(f"    화면 캡처 실패: {str(e)[:60]}")
+            try:
+                txt = pg.evaluate("() => document.body.innerText")
+                hits = [ln.strip() for ln in txt.splitlines() if ln.strip() and
+                        re.search(r"오류|실패|불가|거부|지원되지|다시 시도|정책|위반|한도|"
+                                  r"error|failed|unable|denied|policy|violat|limit|quota",
+                                  ln, re.I)]
+                for h in list(dict.fromkeys(hits))[:8]:
+                    log(f"    [화면문구] {h[:110]}")
+            except Exception as e:
+                log(f"    화면 문구 수집 실패: {str(e)[:60]}")
             raise RuntimeError("생성 실패(시간 초과)")
 
         log("  [6] 내려받기")

@@ -1,7 +1,7 @@
 Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
 
 0-1s: hold on the blazing seam between the paving stones.
-1-4.5s: the camera rises fast off the plaza floor into a high wide view, the figure small at the centre of its dark heat ring, then continues climbing into a full top-down over the whole plaza.
+1-4.5s: the camera rises fast off the plaza floor into a high wide view, the dark heat ring shrinking away below, then continues climbing into a full top-down over the whole plaza.
 4.5-8s: it settles in the top-down, the ring of heat-darkened stone spreading outward beneath, pale flecks drifting up through the frame.
 
 Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.

@@ -1,7 +1,7 @@
 Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
 
 0-1s: hold at the ground line beside the tiny houses and train carriages.
-1-4.5s: the camera cranes straight up the colossal figure's body at speed, muscle striations and venting crimson steam blurring past, and arcs over the shoulder to look back down at the whole arrangement far below.
+1-4.5s: the camera cranes straight up the colossal figure at speed, surface striations and rising rose-pink vapour blurring past, and arcs over the shoulder to look back down at the whole arrangement far below.
 4.5-8s: it descends toward the balance scale and settles on its pivot as the beam grinds another notch over.
 
 Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.

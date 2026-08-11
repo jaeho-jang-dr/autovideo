@@ -1,0 +1,576 @@
+1
+00:00:00,000 --> 00:00:01,450
+A wall fifty meters high.
+
+2
+00:00:01,510 --> 00:00:06,102
+For a hundred years, nothing had ever breached it — not an army, not a siege,
+
+3
+00:00:06,162 --> 00:00:06,646
+not once.
+
+4
+00:00:06,706 --> 00:00:09,788
+And then one morning, fingers appeared over the top.
+
+5
+00:00:09,848 --> 00:00:14,017
+Human-shaped fingers, cracked and steaming, each one four meters wide.
+
+6
+00:00:24,000 --> 00:00:28,034
+But here's the strange part, and it's the part almost nobody talks about.
+
+7
+00:00:28,094 --> 00:00:29,940
+Cut off one of those massive arms,
+
+8
+00:00:30,000 --> 00:00:34,371
+and a single kick sends it bouncing across the mud like an empty cardboard box.
+
+9
+00:00:34,431 --> 00:00:36,950
+A sixty-meter monster, lighter than styrofoam.
+
+10
+00:00:37,010 --> 00:00:41,268
+That's where today's story starts — not with how terrifying this creature is,
+
+11
+00:00:41,328 --> 00:00:42,390
+but with a question.
+
+12
+00:00:42,450 --> 00:00:44,409
+Why did this giant have to be light?
+
+13
+00:00:48,000 --> 00:00:53,157
+The answer was written three hundred and eighty years before the manga ever existed.
+
+14
+00:00:53,217 --> 00:00:54,213
+The year is 1638.
+
+15
+00:00:54,273 --> 00:00:58,125
+Galileo Galilei, old and going blind, publishes his final book.
+
+16
+00:00:58,185 --> 00:01:01,976
+And buried in it is a warning about giants: they cannot exist.
+
+17
+00:01:02,036 --> 00:01:04,274
+Scale a body up far enough, he wrote,
+
+18
+00:01:04,334 --> 00:01:06,882
+and it will collapse under its own weight.
+
+19
+00:01:12,000 --> 00:01:14,660
+The logic is simple enough to do on your fingers.
+
+20
+00:01:14,720 --> 00:01:15,659
+Double the height,
+
+21
+00:01:15,719 --> 00:01:20,654
+and the bone's cross-section — the part that actually carries the load — grows four times.
+
+22
+00:01:20,714 --> 00:01:22,874
+But the body's weight grows eight times.
+
+23
+00:01:22,934 --> 00:01:24,150
+Now scale it ten times.
+
+24
+00:01:24,210 --> 00:01:26,315
+The bone gets a hundred times stronger,
+
+25
+00:01:26,375 --> 00:01:28,812
+while the body gets a thousand times heavier.
+
+26
+00:01:28,872 --> 00:01:30,588
+Strength scales with the square.
+
+27
+00:01:30,648 --> 00:01:32,142
+Weight scales with the cube.
+
+28
+00:01:32,202 --> 00:01:35,639
+And the wider that gap grows, the less a body can carry itself.
+
+29
+00:01:44,000 --> 00:01:47,540
+So what happens to a fifteen-meter titan built at human density?
+
+30
+00:01:47,600 --> 00:01:48,722
+Watch the first step.
+
+31
+00:01:48,782 --> 00:01:51,140
+The instant its weight shifts onto one leg,
+
+32
+00:01:51,200 --> 00:01:56,147
+the stress inside that thigh bone climbs past the limit that bone can physically survive.
+
+33
+00:01:56,207 --> 00:01:57,553
+It isn't walking anymore.
+
+34
+00:01:57,613 --> 00:01:58,453
+It's collapsing.
+
+35
+00:01:58,513 --> 00:01:59,635
+The geneticist J.B.S.
+
+36
+00:01:59,695 --> 00:02:04,585
+Haldane summed this up in a single line that has never been improved on: for every size,
+
+37
+00:02:04,645 --> 00:02:05,935
+there is a fitting form.
+
+38
+00:02:08,000 --> 00:02:09,942
+And the numbers only make it worse.
+
+39
+00:02:10,002 --> 00:02:15,776
+A fifteen-meter titan at human density weighs about forty-eight tons — the same as a main battle tank.
+
+40
+00:02:15,836 --> 00:02:18,122
+But look at how a tank carries that load.
+
+41
+00:02:18,182 --> 00:02:21,668
+Two long tracks, spreading the weight across meters of ground.
+
+42
+00:02:21,728 --> 00:02:23,327
+The titan has two footprints.
+
+43
+00:02:23,387 --> 00:02:25,157
+That's the entire contact patch.
+
+44
+00:02:32,000 --> 00:02:34,440
+But something fails before the bones ever do.
+
+45
+00:02:34,500 --> 00:02:34,995
+Body heat.
+
+46
+00:02:35,055 --> 00:02:36,495
+Heat is produced by volume,
+
+47
+00:02:36,555 --> 00:02:40,551
+by every cell in the body burning fuel — and volume scales with the cube.
+
+48
+00:02:40,611 --> 00:02:41,995
+Heat escapes through skin,
+
+49
+00:02:42,055 --> 00:02:45,329
+through surface area — and that scales only with the square.
+
+50
+00:02:45,389 --> 00:02:47,884
+So the bigger you get, the more heat you make,
+
+51
+00:02:47,944 --> 00:02:49,773
+and the narrower the exit becomes.
+
+52
+00:02:49,833 --> 00:02:50,773
+The furnace grows.
+
+53
+00:02:50,833 --> 00:02:51,884
+The chimney doesn't.
+
+54
+00:03:04,000 --> 00:03:06,309
+Run the numbers and the result is merciless.
+
+55
+00:03:06,369 --> 00:03:16,646
+A fifteen-meter titan with a human metabolic rate would drive its internal temperature past two hundred degrees Celsius — roughly three times the point where the proteins in a body cook solid.
+
+56
+00:03:16,706 --> 00:03:18,261
+It would never reach an enemy.
+
+57
+00:03:18,321 --> 00:03:20,738
+It would never even finish crossing the field.
+
+58
+00:03:20,798 --> 00:03:23,807
+It would cook, standing there, in heat of its own making.
+
+59
+00:03:23,867 --> 00:03:26,391
+Snap your bones walking, or boil standing still.
+
+60
+00:03:26,451 --> 00:03:29,406
+Physics offered exactly two deaths, and no third option.
+
+61
+00:03:36,000 --> 00:03:38,448
+But the author knew about every bit of this.
+
+62
+00:03:38,508 --> 00:03:42,722
+He knew — and he had an answer ready long before anyone asked the question.
+
+63
+00:03:42,782 --> 00:03:46,198
+In the story, a researcher is examining a severed titan limb,
+
+64
+00:03:46,258 --> 00:03:47,908
+expecting tons of dead weight,
+
+65
+00:03:47,968 --> 00:03:51,783
+and instead shouts a single line: it's strange — it's far too light!
+
+66
+00:03:51,843 --> 00:03:54,177
+That one sentence, thrown away in a panel,
+
+67
+00:03:54,237 --> 00:03:57,653
+quietly solves every physics problem we just watched pile up.
+
+68
+00:04:00,000 --> 00:04:03,655
+Put titan tissue under a microscope and the answer is right there.
+
+69
+00:04:03,715 --> 00:04:07,427
+It isn't packed solid with muscle at all — it's a porous structure,
+
+70
+00:04:07,487 --> 00:04:10,016
+riddled with air pockets, walls thin as paper.
+
+71
+00:04:10,076 --> 00:04:12,156
+It's the same trick used by styrofoam.
+
+72
+00:04:12,216 --> 00:04:13,225
+By a loaf of bread.
+
+73
+00:04:13,285 --> 00:04:16,940
+And by the spongy bone sitting inside your own skeleton right now.
+
+74
+00:04:17,000 --> 00:04:18,967
+Keep the volume, delete the density.
+
+75
+00:04:19,027 --> 00:04:22,176
+Nature worked this out hundreds of millions of years ago.
+
+76
+00:04:32,000 --> 00:04:33,965
+Let's feel the scale for a second.
+
+77
+00:04:34,025 --> 00:04:39,504
+A sixty-meter colossal titan has roughly the volume of eighteen blue whales stacked together.
+
+78
+00:04:39,564 --> 00:04:40,517
+At human density,
+
+79
+00:04:40,577 --> 00:04:44,686
+that is thousands of tons — a number that simply cannot stand on legs.
+
+80
+00:04:44,746 --> 00:04:47,783
+And yet in the story, this thing climbs onto a wall.
+
+81
+00:04:47,843 --> 00:04:48,319
+It walks.
+
+82
+00:04:48,379 --> 00:04:48,855
+It kicks.
+
+83
+00:04:48,915 --> 00:04:50,999
+Which tells you the density was cut.
+
+84
+00:04:51,059 --> 00:04:52,190
+And cut drastically.
+
+85
+00:04:56,000 --> 00:04:58,162
+And here the twist flips one more time.
+
+86
+00:04:58,222 --> 00:04:59,986
+Because light doesn't mean weak.
+
+87
+00:05:00,046 --> 00:05:02,892
+Destructive power isn't mass — it's kinetic energy.
+
+88
+00:05:02,952 --> 00:05:05,114
+Mass, times velocity squared, over two.
+
+89
+00:05:05,174 --> 00:05:08,989
+Halve the mass but double the speed, and the damage doubles with it.
+
+90
+00:05:09,049 --> 00:05:09,843
+On top of that,
+
+91
+00:05:09,903 --> 00:05:17,194
+the titan's body is filled with pressurized steam at three hundred and fifty degrees — a thruster built into a lightweight frame.
+
+92
+00:05:17,254 --> 00:05:19,245
+So it isn't weak because it's light.
+
+93
+00:05:19,305 --> 00:05:20,898
+It's fast because it's light.
+
+94
+00:05:20,958 --> 00:05:23,063
+And the wall breaks because it's fast.
+
+95
+00:05:28,000 --> 00:05:30,434
+And none of this is a fictional invention.
+
+96
+00:05:30,494 --> 00:05:32,868
+Real giants solved the identical problem.
+
+97
+00:05:32,928 --> 00:05:36,728
+Argentinosaurus — thirty-five meters long, eighty tons of animal.
+
+98
+00:05:36,788 --> 00:05:39,340
+Cut its bones open and you find them hollow.
+
+99
+00:05:39,400 --> 00:05:40,053
+Like a bird,
+
+100
+00:05:40,113 --> 00:05:44,328
+it packed air sacs deep into its skeleton to shed weight it didn't need.
+
+101
+00:05:44,388 --> 00:05:46,287
+Keep the volume, cut the density.
+
+102
+00:05:46,347 --> 00:05:49,434
+That is, precisely and exactly, the titan's solution.
+
+103
+00:06:00,000 --> 00:06:02,153
+But shedding weight is only half the job.
+
+104
+00:06:02,213 --> 00:06:04,475
+You still have to hold up whatever is left.
+
+105
+00:06:04,535 --> 00:06:06,364
+So look at a giant dinosaur's legs.
+
+106
+00:06:06,424 --> 00:06:07,228
+They don't bend.
+
+107
+00:06:07,288 --> 00:06:10,143
+They stand straight and vertical, like temple columns.
+
+108
+00:06:10,203 --> 00:06:12,680
+A bent leg loads the joint with bending stress,
+
+109
+00:06:12,740 --> 00:06:14,408
+and bending is what breaks bone.
+
+110
+00:06:14,468 --> 00:06:18,565
+A straight one channels the force cleanly down the shaft and into the ground.
+
+111
+00:06:18,625 --> 00:06:22,830
+It's the same reason an elephant's leg looks like a pillar instead of a spring.
+
+112
+00:06:24,000 --> 00:06:26,357
+Elephants went one step further than that.
+
+113
+00:06:26,417 --> 00:06:28,659
+Compare a calf's leg bone to an adult's,
+
+114
+00:06:28,719 --> 00:06:33,379
+and the adult's is disproportionately thicker for its body size — not just bigger,
+
+115
+00:06:33,439 --> 00:06:35,048
+but bigger than it should be.
+
+116
+00:06:35,108 --> 00:06:37,810
+Bone thickness was tuned to outpace body growth.
+
+117
+00:06:37,870 --> 00:06:40,112
+Living things adjusted this dial slowly,
+
+118
+00:06:40,172 --> 00:06:42,529
+over millions of years of trial and error.
+
+119
+00:06:42,589 --> 00:06:44,544
+A fictional titan had no such time.
+
+120
+00:06:44,604 --> 00:06:46,961
+So its author reached for density instead.
+
+121
+00:06:48,000 --> 00:06:52,539
+And then there's the heaviest animal in the history of this planet — the blue whale,
+
+122
+00:06:52,599 --> 00:06:54,072
+one hundred and ninety tons.
+
+123
+00:06:54,132 --> 00:06:56,371
+How does something that heavy move at all?
+
+124
+00:06:56,431 --> 00:06:56,919
+The ocean.
+
+125
+00:06:56,979 --> 00:06:59,930
+Underwater, buoyancy cancels gravity almost completely,
+
+126
+00:06:59,990 --> 00:07:04,584
+and a blue whale never has to hold itself up on legs for a single second of its life.
+
+127
+00:07:04,644 --> 00:07:06,445
+It didn't beat the curse of scale.
+
+128
+00:07:06,505 --> 00:07:08,800
+It moved somewhere the curse doesn't apply.
+
+129
+00:07:08,860 --> 00:07:12,139
+Put a titan in the sea, and physics wouldn't complain at all.
+
+130
+00:07:20,000 --> 00:07:21,481
+One piece is still missing.
+
+131
+00:07:21,541 --> 00:07:23,251
+In the story, titans don't eat.
+
+132
+00:07:23,311 --> 00:07:26,961
+They draw their energy from sunlight, and when the sun goes down,
+
+133
+00:07:27,021 --> 00:07:27,931
+they simply stop.
+
+134
+00:07:27,991 --> 00:07:29,758
+That isn't a coincidence either.
+
+135
+00:07:29,818 --> 00:07:35,580
+Burning food for energy always produces heat — the exact problem we just watched kill them twice over.
+
+136
+00:07:35,640 --> 00:07:39,633
+Switch the metabolism to sunlight, power the whole thing down at night,
+
+137
+00:07:39,693 --> 00:07:42,373
+and the self-cooking problem quietly disappears.
+
+138
+00:07:44,000 --> 00:07:46,872
+So the titan's lightness was never a lazy shortcut.
+
+139
+00:07:46,932 --> 00:07:48,596
+Bones that shatter under load.
+
+140
+00:07:48,656 --> 00:07:50,033
+A body that cooks itself.
+
+141
+00:07:50,093 --> 00:07:52,907
+And enough force to bring down a fifty-meter wall.
+
+142
+00:07:52,967 --> 00:07:56,241
+One single answer solves all three at once: make it light.
+
+143
+00:07:56,301 --> 00:07:59,231
+Good imagination doesn't ignore the laws of physics.
+
+144
+00:07:59,291 --> 00:08:03,427
+It learns them first — and then goes looking for the gap to walk through.
+

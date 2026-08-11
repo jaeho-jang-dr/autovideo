@@ -1,7 +1,7 @@
 Continue directly from this exact frame. Keep the drawing style, colours, line work and every object precisely as they are in the source image - do not redraw, do not restyle, do not change the palette, do not add parchment texture or pen hatching. No text, letters or numbers anywhere. The only things that change are the camera and the motion described below.
 
-0-1s: hold inside the crimson steam pouring from the nape vent.
-1-4.5s: the camera backs out of the steam and cranes away and downward along the thermally glowing body, violet, orange and white bands sliding past, until it reaches the plaza floor where the stones are heat-darkened in a widening ring.
-4.5-8s: it pushes in on a glowing seam between two paving stones and settles as the crack line blazes white-yellow.
+0-1s: hold close on the centre of the frame.
+1-4.5s: the camera backs out with strong parallax, then cranes away and downward in one continuous move, travelling the full height of the frame as the warm colour bands slide past, until it reaches ground level and the paved surface opens out beneath it.
+4.5-8s: it pushes in on a narrow glowing seam in the paving and settles there as that line brightens to white-yellow.
 
-Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Never zoom in on a face or a person - push in only on objects.
+Continuous camera travel with strong parallax, no static framing, no screen shake, no flashing, no micro-motion-only shots. Push in only on objects.

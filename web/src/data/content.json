@@ -93,6 +93,228 @@
       "scenes": []
     },
     {
+      "code": "KO-W24",
+      "category": "KO",
+      "title_kr": "종합 진단과 수료 발표",
+      "title_en": "Wrap-up Diagnostic & Graduation",
+      "hook_kr": null,
+      "logline_kr": null,
+      "status": "building",
+      "priority": 2,
+      "runtime_sec": null,
+      "youtube_kr": null,
+      "youtube_en": null,
+      "publish_date": null,
+      "reverse_spec": null,
+      "style_profile": null,
+      "scenes": [
+        {
+          "seq": 1,
+          "script_kr": "스물네 주가 끝났어요. 오늘은 마지막 시간이에요. '수료'는 과정을 다 마쳤다는 뜻이에요.",
+          "script_en": "Twenty-four weeks are over; today is the last lesson. '수료' means you have finished the whole course.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 2,
+          "script_kr": "받침은 '어려웠어요'. 그래도 글자가 모아질 때는 '재미있었어요'.",
+          "script_en": "The final consonants '어려웠어요' (were hard), but when the letters came together it '재미있었어요' (was fun).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 3,
+          "script_kr": "오늘은 스물네 주를 되짚어요. 글자를 되짚고, 거리의 말을 되짚고, 마음의 말을 되짚어요. '함께'요.",
+          "script_en": "Today we look back over twenty-four weeks - the letters, the street words, the words of the heart. '함께' (together).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 4,
+          "script_kr": "스물네 주 동안 참 '열심히' 했어요. 하루도 쉽지 않았죠.",
+          "script_en": "You worked '열심히' (hard) for twenty-four weeks - not one day was easy.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 5,
+          "script_kr": "자, 눈을 감아 보세요. 스물네 주가 '함께' 지나가요.",
+          "script_en": "Now close your eyes - twenty-four weeks go by '함께' (together).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 6,
+          "script_kr": "교실이 사라지고 그동안 '배웠어요' 한 것들이 떠올라요.",
+          "script_en": "The classroom fades, and everything we '배웠어요' (learned) rises up.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 7,
+          "script_kr": "지하에 옛 성벽이 남아 있어요. 그 위로 글자가 떠올라요. 하늘과 땅과 사람이에요.",
+          "script_en": "An old fortress wall remains underground, and letters rise above it - heaven, earth and human.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 8,
+          "script_kr": "자음은 입 모양을 본떴어요. 'ㄱ'은 혀뿌리, 'ㅁ'은 입술이에요.",
+          "script_en": "Consonants copy the shape of the mouth - 'ㄱ' the root of the tongue, 'ㅁ' the lips.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 9,
+          "script_kr": "자, 따라 그려 보세요. 'ㅅ', 'ㅈ', 'ㅎ'. 획순은 위에서 아래, 왼쪽에서 오른쪽이에요.",
+          "script_en": "Trace them with me: 'ㅅ', 'ㅈ', 'ㅎ'. Strokes go top to bottom, left to right.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "자음과 모음을 모아쓰면 한 글자가 돼요. 블록처럼 쌓여요.",
+          "script_en": "Put a consonant and a vowel together and you get one block-like syllable.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 11,
+          "script_kr": "수를 세어 봐요. 하나, 둘, 셋. 한국말은 수를 두 가지로 세요.",
+          "script_en": "Count: 하나, 둘, 셋. Korean counts numbers two different ways.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "시간을 물을 때는 '몇 시예요?' 해요. 한 시, 두 시, 세 시예요.",
+          "script_en": "To ask the time: '몇 시예요?' [myeot si-ye-yo] (what time is it?) - 한 시 [han si], 두 시 [du si], 세 시 [se si].",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "복도를 지나 전시장으로 가요. 스물네 주 동안 배운 글자들이 벽에 걸려 있어요.",
+          "script_en": "Down the corridor to the gallery - the letters we learned over twenty-four weeks hang on the walls.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "전시를 보다가 궁금하면 '이건 뭐예요?' 하고 물어요. 어디서나 쓰는 말이에요.",
+          "script_en": "When you're curious at an exhibition, ask '이건 뭐예요?' [i-geon mwo-ye-yo] (what is this?) - it works anywhere.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "본 것을 말할 때는 '좋았어요', '멋있었어요' 해요. 지난 일을 말하는 말이에요.",
+          "script_en": "To talk about what you saw: '좋았어요' (it was good), '멋있었어요' (it was wonderful) - past-tense words.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "밖에서 쓰는 말도 '배웠어요'. 가게에서, 길에서, 버스에서요.",
+          "script_en": "We also '배웠어요' (learned) the words you use outside - in shops, on the street, on the bus.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "가게에서는 '얼마예요?' 하고 물어요. 값을 묻는 가장 짧은 말이에요.",
+          "script_en": "In a shop you ask '얼마예요?' [eol-ma-ye-yo] (how much is it?) - the shortest way to ask a price.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "조금 싸게 사고 싶으면 '깎아 주세요' 해요. 웃으면서 말하면 더 좋아요.",
+          "script_en": "If you want it cheaper: '깎아 주세요' - and it works better with a smile.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "길에서는 '어떻게 가요?' 하고 물어요. 지하철로, 버스로, 걸어서요.",
+          "script_en": "On the street: '어떻게 가요?' - by subway, by bus, on foot.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "길을 알려 줄 때는 '왼쪽으로 가세요', '오른쪽으로 가세요', '곧장 가세요' 해요.",
+          "script_en": "To give directions: go left, go right, go straight ahead.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "취미를 물을 때는 얼마나 자주 하는지도 물어요. '자주'는 부사예요.",
+          "script_en": "When you ask about hobbies you also ask how often - '자주' (often) is an adverb.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "마음을 말하는 법도 '배웠어요'. 천천히 하는 이야기예요.",
+          "script_en": "We also '배웠어요' (learned) how to speak the heart - the slow kind of talk.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "하루 일과를 말해 봐요. 일어나요, 먹어요, 일해요, 자요. 순서대로 말하면 쉬워요.",
+          "script_en": "Describe your day: get up, eat, work, sleep. In order, it's easy.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "날씨는 이렇게 말해요. 맑아요, 비가 와요, 바람이 불어요.",
+          "script_en": "For weather: it's clear, it's raining, it's windy.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "마음도 말할 수 있어요. 기뻐요, 속상해요, 설레요. 마음을 말하면 가벼워져요.",
+          "script_en": "You can speak feelings too: glad, upset, excited. Saying it makes it lighter.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "의견을 말할 때는 '제 생각에는'으로 시작해요. 부드럽고 분명하게 들려요.",
+          "script_en": "To give an opinion, start with '제 생각에는' (in my opinion) - gentle and clear.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 27,
+          "script_kr": "지난주엔 '약속을 잡다'와 '시간 조율'을 배웠어요. 여럿이 만나려면 꼭 필요해요.",
+          "script_en": "Last week: making an appointment and coordinating times - you need both to meet as a group.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 28,
+          "script_kr": "눈을 뜨면 다시 교실이에요. 여러분 '덕분에' 여기까지 왔어요.",
+          "script_en": "Open your eyes - back in the classroom. '덕분에' (thanks to) you, we came this far.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 29,
+          "script_kr": "스물네 주를 다 되짚었어요. '잘했어요.'",
+          "script_en": "We looked back over all twenty-four weeks. '잘했어요' (well done).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 30,
+          "script_kr": "이제 이름을 부를게요. 여러분은 앞으로 무엇을 '하고 싶어요'? '하고 싶어요'는 바라는 것을 말할 때 써요.",
+          "script_en": "Now I will call your names. What do you want to do next? '하고 싶어요' [ha-go si-peo-yo] means 'I want to do' - use it for what you wish for.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 31,
+          "script_kr": "앞으로 나와서 수료증을 받아요. 주는 사람은 '축하합니다', 받는 사람은 '고맙습니다'.",
+          "script_en": "Come forward for the certificate - the giver says '축하합니다', the receiver '고맙습니다'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 32,
+          "script_kr": "꽃다발도 받아요. 스물네 주를 걸어온 사람에게 주는 꽃이에요.",
+          "script_en": "And a bouquet too - flowers for someone who walked twenty-four weeks.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 33,
+          "script_kr": "이제 말할 수 있어요. '자신 있어요.' 서로에게도 말해 줘요.",
+          "script_en": "Now you can say it: '자신 있어요' (I feel confident). Say it to each other too.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 34,
+          "script_kr": "자, 다 같이 일어서요. 공부는 여기서 끝이 아니에요. '앞으로'도 '계속' 이어져요!",
+          "script_en": "Now everybody stand up. Study does not end here - it goes on '앞으로' (onward), '계속' (continuously)!",
+          "duration_sec": 8.0
+        }
+      ]
+    },
+    {
       "code": "CA-001",
       "category": "CA",
       "title_kr": "몰아보기는 정말 우리 몸에 나쁠까?",
@@ -1000,15 +1222,15 @@
     {
       "code": "CA-002",
       "category": "CA",
-      "title_kr": "진격의 거인이 실존한다면?",
-      "title_en": "If Titans Were Real",
-      "hook_kr": "50m 거인은 한 걸음 떼는 순간 제 뼈에 으스러진다?",
+      "title_kr": "60m 거인은 왜 '스티로폼'보다 가벼워야만 했나 — 물리학이 밝힌 충격적 설계",
+      "title_en": "Why a 60m Giant Must Be Lighter Than Styrofoam — The Physics Nobody Talks About",
+      "hook_kr": "60미터 거인의 팔은 왜 종이 상자처럼 튀어 오를까? 제곱-세제곱 법칙이 거인에게 내린 판결을 8분에 담았습니다.",
       "logline_kr": "제곱-세제곱 법칙과 골강도 한계 (스케일의 저주)",
-      "status": "idea",
+      "status": "published",
       "priority": 11,
-      "runtime_sec": null,
-      "youtube_kr": null,
-      "youtube_en": null,
+      "runtime_sec": 486,
+      "youtube_kr": "6L1Alpb5YVg",
+      "youtube_en": "ElFxT9Q7IOg",
       "publish_date": null,
       "reverse_spec": null,
       "style_profile": null,
@@ -5970,57 +6192,159 @@
       "scenes": [
         {
           "seq": 1,
-          "script_kr": "안녕하세요! 사람을 소개할 때 외모와 성격을 잘 묘사하면 대화가 생생해져요. 오늘은 인물을 섬세하게 표현하는 어휘를 배워 봐요.",
-          "script_en": "Hello! Describing looks and personality makes conversations vivid. Today we'll learn vocabulary to portray people in detail.",
-          "duration_sec": 29.0
+          "script_kr": "안녕하세요! 붉은 벽돌과 예쁜 카페가 가득한 서울 '성수동'이에요. 오늘은 사람의 '외모'와 '성격'을 한국어로 묘사하는 법을 배워 봐요!",
+          "script_en": "Hi! This is Seoul's '성수동', full of red-brick buildings and lovely cafes. Today, let's learn to describe a person's '외모' (looks) and '성격' (personality) in Korean!",
+          "duration_sec": 8.0
         },
         {
           "seq": 2,
-          "script_kr": "사람은 '외모'(겉모습)와 '성격'(마음)으로 나눠 묘사해요. 성격은 '내향적/외향적'으로 표현할 수 있어요.",
-          "script_en": "Describe people by '외모' (looks) and '성격' (personality). Personality can be 'introverted/extroverted'.",
-          "duration_sec": 25.0
+          "script_kr": "친구를 소개하거나 누군가를 설명할 때, 우리는 그 사람이 어떻게 '생기다'고 어떤 '성격'인지 말해요. 딱 두 가지면 돼요 — 외모와 성격!",
+          "script_en": "When we introduce a friend or describe someone, we say how they look — '생기다' — and their '성격'. Just two things: looks and personality!",
+          "duration_sec": 8.0
         },
         {
           "seq": 3,
-          "script_kr": "'외모'는 사람의 겉모습라는 뜻이에요. 예를 들어, 그 배우는 외모가 멋있어요. 라고 말해요. 키·눈매·머리형을 함께 말해요. 자, 천천히 따라 해 보세요. '외모'.",
-          "script_en": "'외모' means appearance. For example: That actor is good-looking. Now repeat slowly after me: '외모'.",
-          "duration_sec": 34.0
+          "script_kr": "인물 묘사는 대부분 '형용사'로 해요. 상태나 성질을 나타내는 말이죠. 오늘 배울 표현을 성수동을 걸으며 하나씩 만나 봐요.",
+          "script_en": "We describe people mostly with '형용사' (adjectives) — words for qualities. Let's meet today's expressions one by one, walking through 성수동.",
+          "duration_sec": 8.0
         },
         {
           "seq": 4,
-          "script_kr": "'성격'는 사람의 마음과 행동 특징라는 뜻이에요. 예를 들어, 제 친구는 성격이 친절해요. 라고 말해요. '성격이 + 형용사'로 써요. 자, 천천히 따라 해 보세요. '성격'.",
-          "script_en": "'성격' means personality. For example: My friend has a kind personality. Now repeat slowly after me: '성격'.",
-          "duration_sec": 34.0
+          "script_kr": "먼저 키예요. 키가 높으면 '키가 크다'예요. 저기 지나가는 분은 '키가 커요'.",
+          "script_en": "First, height. If someone is tall: '키가 크다'. That person walking by — '키가 커요'.",
+          "duration_sec": 8.0
         },
         {
           "seq": 5,
-          "script_kr": "'내향적'는 조용하고 차분한 성격라는 뜻이에요. 예를 들어, 저는 좀 내향적이에요. 라고 말해요. 혼자 있는 걸 편해해요. 자, 천천히 따라 해 보세요. '내향적'.",
-          "script_en": "'내향적' means introverted. For example: I'm a bit introverted. Now repeat slowly after me: '내향적'.",
-          "duration_sec": 34.0
+          "script_kr": "반대로 키가 낮으면 '키가 작다'예요. '작다'는 크기가 작을 때 쓰는 형용사죠. 아이는 '키가 작아요'.",
+          "script_en": "The opposite: '키가 작다' (short). '작다' is the adjective for small. A child is '키가 작아요'.",
+          "duration_sec": 8.0
         },
         {
           "seq": 6,
-          "script_kr": "'외향적'는 활발하고 사람을 좋아하는 성격라는 뜻이에요. 예를 들어, 그는 외향적이라 친구가 많아요. 라고 말해요. 사람들과 어울리길 좋아해요. 자, 천천히 따라 해 보세요. '외향적'.",
-          "script_en": "'외향적' means extroverted. For example: He's extroverted, so he has many friends. Now repeat slowly after me: '외향적'.",
-          "duration_sec": 34.0
+          "script_kr": "이제 머리 모양이에요. 머리카락이 길면 '머리가 길다'예요. 저 카페 사장님은 '머리가 길어요'.",
+          "script_en": "Now hairstyle. Long hair: '머리가 길다'. That cafe owner has '머리가 길어요'.",
+          "duration_sec": 8.0
         },
         {
           "seq": 7,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '새 친구는 어때요?' 하고 물으면, '성격이 밝고 외향적이에요.' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'What's your new friend like?', you can answer, 'She's bright and extroverted.'. Let's practice together.",
-          "duration_sec": 33.0
+          "script_kr": "짧으면 '머리가 짧다'예요. '짧다'는 길이가 짧을 때 쓰죠. 바리스타는 '머리가 짧아요'.",
+          "script_en": "Short hair: '머리가 짧다'. '짧다' is for short length. The barista has '머리가 짧아요'.",
+          "duration_sec": 8.0
         },
         {
           "seq": 8,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "script_kr": "보기에 곱고 아름다우면 '예쁘다'예요. 사람에게도 물건에게도 써요. 이 꽃도, 저 사람도 '예뻐요'.",
+          "script_en": "If something is lovely to look at: '예쁘다' (pretty). Use it for people and things alike. This flower — and that person — are '예뻐요'.",
+          "duration_sec": 8.0
         },
         {
           "seq": 9,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
+          "script_kr": "얼굴이 멋지게 생겼으면 '잘생기다'예요. 주로 남자에게 쓰지만 꼭 그렇지도 않아요. '잘생겼어요'!",
+          "script_en": "For a handsome face: '잘생기다'. Often used for men, but not only. '잘생겼어요'!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "성수동엔 스타일 좋은 사람이 많죠? 세련되고 근사하면 '멋있다'예요. 저 사람 옷차림, 정말 '멋있어요'.",
+          "script_en": "성수동 is full of stylish people, right? For someone chic and impressive: '멋있다'. That outfit is really '멋있어요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 11,
+          "script_kr": "몸매가 가늘고 보기 좋으면 '날씬하다'예요. 그리고 눈이 나빠 안경을 끼면 '안경을 쓰다'라고 해요.",
+          "script_en": "Slim and trim: '날씬하다'. And if someone wears glasses: '안경을 쓰다'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "이제 성격이에요. 남을 따뜻하게 대하면 '친절하다'예요. 성수동 카페 직원들은 정말 '친절해요'.",
+          "script_en": "Now personality. Warm and helpful to others: '친절하다' (kind). The cafe staff in 성수동 are really '친절해요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "마음이 곱고 남을 잘 도우면 '착하다'예요. '친절하다'와 비슷하지만, '착하다'는 마음씨를 말해요. 그 아이는 '착해요'.",
+          "script_en": "Kind-hearted and helpful: '착하다'. Similar to '친절하다', but '착하다' is about the heart. That child is '착해요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "함께 있으면 즐겁고 웃기면 '재미있다'예요. 반대는 '재미없다'죠. 제 친구는 정말 '재미있어요'.",
+          "script_en": "Fun to be around and funny: '재미있다'. The opposite is '재미없다'. My friend is so '재미있어요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "말이 적고 차분하면 '조용하다'예요. 시끄러운 것의 반대죠. 저 손님은 늘 '조용해요'.",
+          "script_en": "Quiet and calm, few words: '조용하다'. The opposite of loud. That customer is always '조용해요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "밝고 기운차게 잘 움직이면 '활발하다'예요. 조용한 것의 반대죠. 성수동을 뛰어다니는 아이들은 '활발해요'.",
+          "script_en": "Bright and full of energy: '활발하다' (lively). The opposite of quiet. The kids running around 성수동 are '활발해요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "머리가 좋고 영리하면 '똑똑하다'예요. 무엇이든 빨리 이해하죠. 그 학생은 아주 '똑똑해요'.",
+          "script_en": "Bright and clever: '똑똑하다' (smart). Understands anything quickly. That student is very '똑똑해요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "이제 두 가지를 한 문장으로 잇는 '-고'를 배워요. 방법은 쉬워요. 형용사 기본형에서 '다'를 떼고 '고'를 붙여요. '크다'는 '크고', '작다'는 '작고', '길다'는 '길고'. 마지막 말에만 정중하게 '-요'로 끝맺고, 앞말은 그대로 '고'로 둬요.",
+          "script_en": "Now let's learn '-고', which joins two things in one sentence. It's easy. Take an adjective's base form, drop '다', and add '고'. '크다' becomes '크고', '작다' becomes '작고', '길다' becomes '길고'. Only the last word gets the polite ending, and the first one just stays '고'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "직접 만들어요. '키가 크다'와 '친절하다'를 이어요. 앞은 '크고', 뒤는 '친절해요'. 합치면 '키가 크고 친절해요'. 외모를 먼저, 성격을 나중에요.",
+          "script_en": "Let's build one. '키가 크다' and '친절하다'. The first becomes '크고', the last stays '친절해요'. Together: '키가 크고 친절해요' — tall and kind. Looks first, personality second.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "하나 더요. '머리가 길다'와 '예쁘다'. '길다'는 '길고', '예쁘다'는 '예뻐요'. 그래서 '머리가 길고 예뻐요'. 규칙이 보이죠?",
+          "script_en": "One more. '머리가 길다' and '예쁘다'. '길다' becomes '길고', '예쁘다' becomes '예뻐요'. So: '머리가 길고 예뻐요' — long hair and pretty. See the pattern?",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "외모끼리, 성격끼리도 이을 수 있어요. '재미있다'와 '활발하다'를 이으면 '재미있고 활발해요'. 두 개든 세 개든 '-고'로 계속 이어가면 돼요.",
+          "script_en": "You can join two looks, or two personalities, too. '재미있다' and '활발하다' become '재미있고 활발해요' — fun and lively. Two or three, just keep linking with '-고'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "이제 성수동 사람들을 묘사해요. 한 명은 '키가 작고 조용해요'. 또 한 명은 '멋있고 똑똑해요'. 이렇게 '-고'로 외모와 성격을 자유롭게 이어요.",
+          "script_en": "Now describe people in '성수동'. One is '키가 작고 조용해요' — short and quiet. Another is '멋있고 똑똑해요' — cool and smart. Freely link looks and personality with '-고'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "배운 걸 모아 친구를 소개해요. '제 친구는 머리가 길고 친절해요. 그리고 정말 재미있어요.' 문장을 이으면 소개가 술술 돼요.",
+          "script_en": "Let's introduce a friend with all we learned: '제 친구는 머리가 길고 친절해요. 그리고 정말 재미있어요.' Linking sentences makes an introduction flow.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "오늘 배운 걸 정리해요. 외모는 '크다', '작다', '길다', '짧다', '예쁘다', '멋있다'. 성격은 '친절하다', '착하다', '조용하다', '활발하다', '똑똑하다'. 그리고 둘을 '-고'로 이어요.",
+          "script_en": "Let's wrap up. Looks: '크다', '작다', '길다', '짧다', '예쁘다', '멋있다'. Personality: '친절하다', '착하다', '조용하다', '활발하다', '똑똑하다'. And link the two with '-고'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "이제 길을 걸으며 지나가는 사람을 마음속으로 묘사해 보세요. '저 사람은 키가 크고 멋있어요.' 매일 조금씩 하면 금방 늘어요.",
+          "script_en": "Now, as you walk, describe people in your head: '저 사람은 키가 크고 멋있어요' — that person is tall and cool. A little each day, and you'll improve fast.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "오늘 정말 잘하셨어요! 이제 사람의 외모와 성격을 '-고'로 이어 멋지게 묘사할 수 있어요. 오늘 배운 표현으로 주변 사람을 소개해 보세요. 다음 시간에 또 만나요. '안녕히 가세요'!",
+          "script_en": "You did great today! Now you can describe someone's looks and personality, linked with '-고', beautifully. Try introducing the people around you with today's expressions. See you next time — '안녕히 가세요'!",
+          "duration_sec": 8.0
         }
       ]
     },
@@ -6042,51 +6366,147 @@
       "scenes": [
         {
           "seq": 1,
-          "script_kr": "안녕하세요! 여행 이야기는 어디서나 즐거운 대화 주제예요. 오늘은 다녀온 경험을 말하고 앞으로의 계획을 세우는 표현을 배워 봐요.",
-          "script_en": "Hello! Travel stories are a delightful topic anywhere. Today we'll learn to talk about past trips and make future plans.",
-          "duration_sec": 30.0
+          "script_kr": "안녕하세요! 여행 이야기는 언제 들어도 설레죠. 오늘은 '가 본 적이 있어요'로 다녀온 경험을, '할 계획이에요'로 앞으로의 계획을 말하는 법을 배워요.",
+          "script_en": "Hi! Travel stories are always exciting. Today we'll learn to talk about places you've visited with '가 본 적이 있어요', and future plans with '할 계획이에요'.",
+          "duration_sec": 8.0
         },
         {
           "seq": 2,
-          "script_kr": "경험은 '~한 적이 있어요', 계획은 '~할 거예요'로 말해요. 과거와 미래를 자연스럽게 이어 봐요.",
-          "script_en": "Talk about experience with '~한 적이 있어요' and plans with '~할 거예요'. Connect past and future naturally.",
-          "duration_sec": 23.0
+          "script_kr": "딱 두 가지예요. 지나온 '경험'을 말하는 표현과, 앞으로의 '계획'을 말하는 표현. 과거와 미래를 자연스럽게 이어 봐요.",
+          "script_en": "Just two things: talking about your past '경험' (experience), and your future '계획' (plans). Let's connect past and future naturally.",
+          "duration_sec": 8.0
         },
         {
           "seq": 3,
-          "script_kr": "'가 본 적이 있어요'는 전에 가 본 경험을 말하는 표현라는 뜻이에요. 예를 들어, 저는 서울에 가 본 적이 있어요. 라고 말해요. '장소에 가 본 적이 있어요'. 자, 천천히 따라 해 보세요. '가 본 적이 있어요'.",
-          "script_en": "'가 본 적이 있어요' means have been to. For example: I have been to Seoul. Now repeat slowly after me: '가 본 적이 있어요'.",
-          "duration_sec": 34.0
+          "script_kr": "저 멀리 보이는 곳들, 어떤 곳은 가 봤고 어떤 곳은 가 보고 싶죠? 그 마음을 한국어로 말해 봐요.",
+          "script_en": "Some places out there you've been to, others you want to visit, right? Let's say that feeling in Korean.",
+          "duration_sec": 8.0
         },
         {
           "seq": 4,
-          "script_kr": "'여행'는 다른 곳에 다녀오는 것라는 뜻이에요. 예를 들어, 여름에 가족과 여행을 가요. 라고 말해요. '여행을 가다/하다'. 자, 천천히 따라 해 보세요. '여행'.",
-          "script_en": "'여행' means travel. For example: In summer I travel with my family. Now repeat slowly after me: '여행'.",
-          "duration_sec": 34.0
+          "script_kr": "'여행'은 다른 곳에 다녀오는 것이에요. '여행을 가다', '여행을 하다'처럼 써요. 여름에 가족과 여행을 가요.",
+          "script_en": "'여행' means travel — going somewhere and coming back. Use it like '여행을 가다' or '여행을 하다'. In summer I travel with my family.",
+          "duration_sec": 8.0
         },
         {
           "seq": 5,
-          "script_kr": "'계획'는 앞으로 하려고 정한 일라는 뜻이에요. 예를 들어, 주말에 등산할 계획이에요. 라고 말해요. '~할 계획이에요'로 말해요. 자, 천천히 따라 해 보세요. '계획'.",
-          "script_en": "'계획' means plan. For example: I plan to go hiking this weekend. Now repeat slowly after me: '계획'.",
-          "duration_sec": 34.0
+          "script_kr": "해 본 일은 '경험'이에요. 여행에서 얻은 '경험'은 오래 남죠. '좋은 경험이었어요'라고 말해요.",
+          "script_en": "'경험' means experience — something you've done. Travel '경험' stays with you. Say '좋은 경험이었어요' — it was a good experience.",
+          "duration_sec": 8.0
         },
         {
           "seq": 6,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '제주도에 가 봤어요?' 하고 물으면, '네, 두 번 가 본 적이 있어요. 다음엔 부산에 갈 계획이에요.' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'Have you been to Jeju Island?', you can answer, 'Yes, I've been twice. Next, I plan to go to Busan.'. Let's practice together.",
-          "duration_sec": 34.0
+          "script_kr": "많은 사람이 찾는 유명한 곳은 '명소'예요. 도시마다 멋진 '명소'가 있어요. 저기도 이름난 '명소'죠.",
+          "script_en": "'명소' means a famous spot many people visit. Every city has great '명소'. That one out there is a well-known '명소'.",
+          "duration_sec": 8.0
         },
         {
           "seq": 7,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "script_kr": "미리 자리를 잡아 두는 건 '예약'이에요. 여행 전에 표와 방을 '예약'해요. '예약했어요?'라고 물어요.",
+          "script_en": "'예약' means reservation — booking in advance. Before a trip, you '예약' tickets and rooms. Ask '예약했어요?' — did you book?",
+          "duration_sec": 8.0
         },
         {
           "seq": 8,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
+          "script_kr": "여행지에서 자는 곳은 '숙소'예요. 호텔도 게스트하우스도 다 '숙소'죠. '숙소를 예약했어요'.",
+          "script_en": "'숙소' means accommodation — where you sleep on a trip. Hotels and guesthouses are all '숙소'. '숙소를 예약했어요' — I booked a place to stay.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 9,
+          "script_kr": "앞으로 하려고 정한 일은 '계획'이에요. '~할 계획이에요'로 미래를 말해요. 주말에 등산할 계획이에요.",
+          "script_en": "'계획' means plan — what you've decided to do. Use '~할 계획이에요' for the future. I plan to go hiking this weekend.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 10,
+          "script_kr": "이제 경험을 말해요. 장소 뒤에 '에 가 본 적이 있어요'를 붙이면 '거기 가 봤다'는 뜻이에요. 천천히 따라 해요, '가 본 적이 있어요'.",
+          "script_en": "Now, experiences. Add '에 가 본 적이 있어요' after a place to say you've been there. Repeat slowly: '가 본 적이 있어요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 11,
+          "script_kr": "예를 들어요. '제주도에 가 본 적이 있어요.' 파란 바다가 아름다운 곳이죠. 손으로 저 멀리 가리키며 말해 봐요.",
+          "script_en": "For example: '제주도에 가 본 적이 있어요' — I've been to Jeju Island, a place with beautiful blue seas. Point far away as you say it.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 12,
+          "script_kr": "하나 더요. '서울에 가 본 적이 있어요.' 여러분은 어디에 가 본 적이 있어요? 떠올리며 말해 봐요.",
+          "script_en": "One more: '서울에 가 본 적이 있어요' — I've been to Seoul. Where have you been? Think of it and say it.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 13,
+          "script_kr": "횟수도 넣어요. '두 번 가 본 적이 있어요.' 여러 번 갔으면 '여러 번 가 본 적이 있어요'라고 해요.",
+          "script_en": "Add how many times: '두 번 가 본 적이 있어요' — I've been twice. If many times: '여러 번 가 본 적이 있어요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 14,
+          "script_kr": "안 해 본 일에도 써요. '한 적이 있어요'는 경험이 있다는 뜻, 없으면 '한 적이 없어요'라고 답해요.",
+          "script_en": "Use it for any experience: '한 적이 있어요' means you have the experience; if not, answer '한 적이 없어요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 15,
+          "script_kr": "이제 미래예요. 하려는 일 뒤에 '할 계획이에요'를 붙여요. '갈 계획이에요', '볼 계획이에요'처럼요.",
+          "script_en": "Now the future. Add '할 계획이에요' after what you intend to do: '갈 계획이에요' (plan to go), '볼 계획이에요' (plan to see).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "예를 들어요. '다음엔 부산에 갈 계획이에요.' 바다와 야경이 멋진 곳이죠. 노을을 보며 꿈꾸듯 말해 봐요.",
+          "script_en": "For example: '다음엔 부산에 갈 계획이에요' — Next, I plan to go to Busan, famous for its sea and night views. Say it dreamily, watching the sunset.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "장소만이 아니에요. 하고 싶은 일도 말해요. '주말에 등산할 계획이에요.' '쉴 계획이에요'도 좋아요.",
+          "script_en": "Not just places — also things to do: '주말에 등산할 계획이에요' — I plan to hike this weekend. '쉴 계획이에요' (plan to rest) works too.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "여행 전엔 준비를 해요. '숙소를 예약할 계획이에요.' 배운 어휘를 계획에 넣어 말해 봐요.",
+          "script_en": "Before a trip you prepare: '숙소를 예약할 계획이에요' — I plan to book a place to stay. Put today's words into your plans.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "질문도 돼요. '언제 갈 계획이에요?' 이렇게 물으면 상대의 계획을 들을 수 있어요.",
+          "script_en": "You can ask, too: '언제 갈 계획이에요?' — When do you plan to go? That's how you hear someone's plans.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "실제 대화예요. '제주도에 가 본 적이 있어요?' 물으면, '네, 두 번 가 본 적이 있어요.' 하고 답해요.",
+          "script_en": "A real conversation. If asked '제주도에 가 본 적이 있어요?' (Have you been to Jeju?), answer '네, 두 번 가 본 적이 있어요' (Yes, I've been twice).",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "경험을 말한 뒤 계획을 이어요. '두 번 가 본 적이 있어요. 다음엔 부산에 갈 계획이에요.' 과거와 미래가 한 번에!",
+          "script_en": "Follow experience with a plan: '두 번 가 본 적이 있어요. 다음엔 부산에 갈 계획이에요.' — Past and future in one breath!",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "이제 여러분 차례예요. 가 본 곳 하나, 갈 곳 하나를 떠올려 말해 보세요. '___에 가 본 적이 있어요. ___에 갈 계획이에요.'",
+          "script_en": "Your turn. Think of one place you've been and one you'll go: '___에 가 본 적이 있어요. ___에 갈 계획이에요.'",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "정리해요. 어휘는 '여행·경험·계획·명소·예약·숙소'. 경험은 '가 본 적이 있어요', 계획은 '할 계획이에요'.",
+          "script_en": "Recap. Words: 여행·경험·계획·명소·예약·숙소. Experience: '가 본 적이 있어요'. Plans: '할 계획이에요'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "정말 잘하셨어요! 오늘 배운 표현으로 여러분의 여행 이야기를 만들어 보세요. 다음 시간에 또 만나요!",
+          "script_en": "Great job! Make your own travel story with today's expressions. See you next time!",
+          "duration_sec": 8.0
         }
       ]
     },
@@ -6100,125 +6520,227 @@
       "status": "rendered",
       "priority": 12,
       "runtime_sec": 233,
-      "youtube_kr": "5xet4FQDdX8",
-      "youtube_en": "8lob0SW542k",
+      "youtube_kr": null,
+      "youtube_en": null,
       "publish_date": null,
       "reverse_spec": null,
       "style_profile": "{\"look\": \"character=dr_jay; left char + right vocab; no idle shake\", \"narration\": \"edge-tts SunHi 1.1x; DB clips boosted; bilingual KR/EN\", \"canvas\": [1280, 720]}",
       "scenes": [
         {
           "seq": 1,
-          "script_kr": "안녕하세요! 여러 사람과 모임을 잡으려면 일정 조율이 필요해요. 오늘은 약속을 정하고 시간을 맞추는 표현을 배워, 사회생활을 부드럽게 해 봐요.",
-          "script_en": "Hello! Setting up a group meetup needs schedule coordination. Today we'll learn to make plans and align times for smooth social life.",
-          "duration_sec": 33.0
+          "script_kr": "안녕하세요! 오늘은 여러 사람이 함께 모이는 '모임'을 직접 잡아 볼 거예요. 먼저 서로 시간을 맞춰야 하죠.",
+          "script_en": "Hello! Today we'll set up a '모임' (gathering) with several people. First we have to match everyone's times.",
+          "duration_sec": 8.0
         },
         {
           "seq": 2,
-          "script_kr": "모임은 '약속을 잡다 → 시간 조율 → 확정' 순서로 진행돼요. 정중하게 제안하고 조율해요.",
-          "script_en": "A gathering flows as 'make plans → coordinate time → confirm'. Suggest and adjust politely.",
-          "duration_sec": 21.0
+          "script_kr": "열쇠는 세 개예요. 날을 정하는 '약속을 잡다', 시간을 맞추는 '시간 조율', 함께 모이는 '모임'. 이 셋이면 충분해요.",
+          "script_en": "Three keys: '약속을 잡다' (set up an appointment), '시간 조율' (coordinate times), '모임' (a gathering).",
+          "duration_sec": 8.0
         },
         {
           "seq": 3,
-          "script_kr": "'약속을 잡다'는 만날 약속을 정하는 것라는 뜻이에요. 예를 들어, 친구와 저녁 약속을 잡았어요. 라고 말해요. '약속을 잡다/정하다'. 자, 천천히 따라 해 보세요. '약속을 잡다'.",
-          "script_en": "'약속을 잡다' means make plans. For example: I made dinner plans with a friend. Now repeat slowly after me: '약속을 잡다'.",
-          "duration_sec": 34.0
+          "script_kr": "사람이 많으면 '일정'이 다 달라요. 바람 따라 물결치는 저 꽃밭처럼, 되는 시간이 저마다 다르죠.",
+          "script_en": "With more people, every '일정' (schedule) differs. Like that rippling flower field, each is free at a different time.",
+          "duration_sec": 8.0
         },
         {
           "seq": 4,
-          "script_kr": "'시간 조율'는 서로 맞는 시간을 정하는 것라는 뜻이에요. 예를 들어, 다 같이 시간 조율이 필요해요. 라고 말해요. 여러 일정을 맞출 때 써요. 자, 천천히 따라 해 보세요. '시간 조율'.",
-          "script_en": "'시간 조율' means coordinate time. For example: We all need to coordinate times. Now repeat slowly after me: '시간 조율'.",
-          "duration_sec": 34.0
+          "script_kr": "그래서 '조율'이 필요해요. 다른 일정을 하나로 맞추는 일이죠. 명사는 조율, 동사는 조율하다예요.",
+          "script_en": "So you need '조율' (coordination) — fitting different schedules into one. Noun 조율, verb 조율하다.",
+          "duration_sec": 8.0
         },
         {
           "seq": 5,
-          "script_kr": "'모임'는 여러 사람이 함께 모이는 것라는 뜻이에요. 예를 들어, 금요일에 동아리 모임이 있어요. 라고 말해요. '모임이 있다/하다'. 자, 천천히 따라 해 보세요. '모임'.",
-          "script_en": "'모임' means gathering. For example: There's a club gathering on Friday. Now repeat slowly after me: '모임'.",
-          "duration_sec": 34.0
+          "script_kr": "순서는 간단해요. 제안하고, 조율하고, 확정해요. 지난 시간 '할 계획이에요'가 오늘은 '약속을 잡다'예요.",
+          "script_en": "Simple order: suggest, coordinate, confirm. Last time's '할 계획이에요' (I plan to) becomes today's '약속을 잡다'.",
+          "duration_sec": 8.0
         },
         {
           "seq": 6,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '이번 주에 모임 어때요?' 하고 물으면, '좋아요. 시간 조율해서 약속을 잡아요.' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'How about a meetup this week?', you can answer, 'Sounds good. Let's coordinate times and set it up.'. Let's practice together.",
-          "duration_sec": 34.0
+          "script_kr": "이제 어휘예요. 오늘 쓸 말은 일곱 개, 모두 '모임' 하나를 위한 말이에요.",
+          "script_en": "Now the words — seven today, and every one of them serves a single '모임' (gathering).",
+          "duration_sec": 8.0
         },
         {
           "seq": 7,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "script_kr": "'약속'은 명사예요. 만나기로 정한 일이죠. 약속이 있어요, 약속을 지켜요. 자, 따라 해 보세요.",
+          "script_en": "'약속' (appointment) is a noun — what you agreed to do: 약속이 있어요, 약속을 지켜요. Repeat after me.",
+          "duration_sec": 8.0
         },
         {
           "seq": 8,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
-        }
-      ]
-    },
-    {
-      "code": "KO-W24",
-      "category": "KO",
-      "title_kr": "종합 정리와 수료 축하",
-      "title_en": "Wrap-up & Graduation",
-      "hook_kr": "24주 여정의 마무리, 축하해요!",
-      "logline_kr": "중급 16주차. 종합 정리와 수료 축하 — stickman 진행, 이중언어.",
-      "status": "rendered",
-      "priority": 12,
-      "runtime_sec": 234,
-      "youtube_kr": "t07lEIZqTpQ",
-      "youtube_en": "HIvrnNWk3K8",
-      "publish_date": null,
-      "reverse_spec": null,
-      "style_profile": "{\"look\": \"character=stickman; left char + right vocab; no idle shake\", \"narration\": \"edge-tts SunHi 1.1x; DB clips boosted; bilingual KR/EN\", \"canvas\": [1280, 720]}",
-      "scenes": [
-        {
-          "seq": 1,
-          "script_kr": "안녕하세요! 드디어 마지막 시간이에요. 24주 동안 정말 잘 해내셨어요. 오늘은 그동안의 여정을 정리하고, 수료를 축하하며 발표로 마무리해 봐요.",
-          "script_en": "Hello! At last, the final lesson. You've done wonderfully over 24 weeks. Today we'll review the journey, celebrate your completion, and wrap up with a presentation.",
-          "duration_sec": 34.0
+          "script_kr": "'약속을 잡다'는 만날 날을 정한다는 뜻이에요. 잡다는 동사죠. 친구와 저녁 약속을 잡았어요. 자, 따라 해 보세요.",
+          "script_en": "'약속을 잡다' means to set the appointment; '잡다' is the verb. 친구와 저녁 약속을 잡았어요. Repeat after me.",
+          "duration_sec": 8.0
         },
         {
-          "seq": 2,
-          "script_kr": "끝까지 해낸 자신을 칭찬해요. 배운 것을 '발표'로 정리하면 실력이 한 번 더 단단해져요.",
-          "script_en": "Praise yourself for finishing. Summarizing what you learned in a 'presentation' makes your skills even stronger.",
-          "duration_sec": 21.0
+          "seq": 9,
+          "script_kr": "'시간 조율'은 서로 맞는 시간을 정하는 일이에요. 다 같이 시간 조율이 필요해요. 자, 따라 해 보세요.",
+          "script_en": "'시간 조율' means settling a time that fits everyone. 다 같이 시간 조율이 필요해요. Repeat after me.",
+          "duration_sec": 8.0
         },
         {
-          "seq": 3,
-          "script_kr": "'수료'는 과정을 끝까지 마치는 것라는 뜻이에요. 예를 들어, 한국어 과정을 수료했어요. 라고 말해요. '수료를 축하해요!' 자, 천천히 따라 해 보세요. '수료'.",
-          "script_en": "'수료' means completion. For example: I completed the Korean course. Now repeat slowly after me: '수료'.",
-          "duration_sec": 34.0
+          "seq": 10,
+          "script_kr": "'모임'은 여러 사람이 함께 모이는 자리예요. 금요일에 동아리 모임이 있어요. 자, 따라 해 보세요.",
+          "script_en": "'모임' (gathering) is people coming together. 금요일에 동아리 모임이 있어요. Repeat after me.",
+          "duration_sec": 8.0
         },
         {
-          "seq": 4,
-          "script_kr": "'발표'는 사람들 앞에서 내용을 말하는 것라는 뜻이에요. 예를 들어, 내일 한국어로 발표가 있어요. 라고 말해요. 천천히 또박또박 말해요. 자, 천천히 따라 해 보세요. '발표'.",
-          "script_en": "'발표' means presentation. For example: I have a presentation in Korean tomorrow. Now repeat slowly after me: '발표'.",
-          "duration_sec": 34.0
+          "seq": 11,
+          "script_kr": "'회식'은 직장 사람들이 함께 먹는 모임이에요. 다음 주에 회식이 있어요. 자, 따라 해 보세요.",
+          "script_en": "'회식' (company dinner) is coworkers eating together. 다음 주에 회식이 있어요. Repeat after me.",
+          "duration_sec": 8.0
         },
         {
-          "seq": 5,
-          "script_kr": "'최종 평가'는 마지막으로 실력을 확인하는 것라는 뜻이에요. 예를 들어, 오늘 최종 평가를 잘 봤어요. 라고 말해요. 그동안의 노력을 보여 줘요. 자, 천천히 따라 해 보세요. '최종 평가'.",
-          "script_en": "'최종 평가' means final review. For example: I did well on the final review today. Now repeat slowly after me: '최종 평가'.",
-          "duration_sec": 34.0
+          "seq": 12,
+          "script_kr": "'장소'는 만나는 곳이에요. 장소를 정해요, 장소가 어디예요. 찾기 쉬운 장소가 좋아요. 자, 따라 해 보세요.",
+          "script_en": "'장소' (place) is where you meet: 장소를 정해요, 장소가 어디예요. Easy to find is best. Repeat after me.",
+          "duration_sec": 8.0
         },
         {
-          "seq": 6,
-          "script_kr": "이번엔 실제 상황이에요. 누군가 '드디어 수료네요! 소감이 어때요?' 하고 물으면, '뿌듯해요. 이제 한국어로 자신 있게 말할 수 있어요!' 하고 답할 수 있어요. 함께 연습해 봐요.",
-          "script_en": "Now a real situation. If someone asks, 'You're finally graduating! How do you feel?', you can answer, 'I'm proud. Now I can speak Korean with confidence!'. Let's practice together.",
-          "duration_sec": 34.0
+          "seq": 13,
+          "script_kr": "'시간 정하다'는 몇 시에 만날지 정한다는 뜻이에요. 시간부터 정하면 장소는 금방이죠. 자, 따라 해 보세요.",
+          "script_en": "'시간 정하다' (to decide the time) settles what hour you meet. Set the time and the place follows. Repeat after me.",
+          "duration_sec": 8.0
         },
         {
-          "seq": 7,
-          "script_kr": "오늘 배운 표현이에요. 소리 내어 한 번 더 읽어 볼까요? 잘 하고 있어요!",
-          "script_en": "Here are today's expressions. Let's read them aloud once more. You're doing great!",
-          "duration_sec": 17.0
+          "seq": 14,
+          "script_kr": "이제 '시간 조율'을 말로 해 봐요. 저 코스터가 지나가듯, 대화도 순서대로 지나가요. 묻고, 답하고, 정해요.",
+          "script_en": "Now let's do '시간 조율' (coordinating times) aloud. Like that coaster, the talk moves in order: ask, answer, decide.",
+          "duration_sec": 8.0
         },
         {
-          "seq": 8,
-          "script_kr": "훌륭해요! 오늘 표현을 오늘 하루 꼭 한 번 써 보세요. 작은 연습이 큰 실력이 돼요. 다음 시간에 또 만나요!",
-          "script_en": "Wonderful! Try using today's expressions at least once today. Small practice builds big skills. See you next time!",
-          "duration_sec": 26.0
+          "seq": 15,
+          "script_kr": "조율은 질문으로 시작해요. '언제가 괜찮으세요?' 상대가 편한 시간을 먼저 묻는 말이에요. 자, 따라 해 보세요.",
+          "script_en": "Start with a question: '언제가 괜찮으세요?' (When works for you?) It asks their easy time first. Repeat after me.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 16,
+          "script_kr": "조심스럽게 물을 때는 앞에 '혹시'를 붙여요. 혹시는 부사예요. 혹시 토요일 오후에 괜찮으세요?",
+          "script_en": "To ask gently, add '혹시' (by any chance) in front — it's an adverb. 혹시 토요일 오후에 괜찮으세요?",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 17,
+          "script_kr": "'조율'은 급하게 하는 게 아니에요. 대나무를 천천히 먹는 저 판다처럼, 한 사람씩 물어봐요.",
+          "script_en": "'조율' (coordination) is never rushed. Like that panda chewing bamboo slowly, ask one person at a time.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 18,
+          "script_kr": "각자에게 '가능한 시간'을 물어봐요. 전화로도, 메시지로도 좋아요. 가능한 시간을 알려 주세요.",
+          "script_en": "Ask each person their '가능한 시간' (available time) — by phone or message. 가능한 시간을 알려 주세요.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 19,
+          "script_kr": "시간이 넉넉하면 '언제든 괜찮아요'라고 답해요. 언제든은 부사예요. 자, 따라 해 보세요.",
+          "script_en": "If your time is open, answer '언제든 괜찮아요' (any time works). '언제든' is an adverb. Repeat after me.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 20,
+          "script_kr": "안 되는 날은 부드럽게 말해요. '어려울 것 같아요'는 직접 거절하는 말보다 정중해요. 자, 따라 해 보세요.",
+          "script_en": "For a day that won't work, soften it: '어려울 것 같아요' (that may be hard) beats a flat no. Repeat after me.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 21,
+          "script_kr": "거절만 하면 조율이 멈춰요. '어떠세요?'는 상대의 생각을 묻는 정중한 말이에요. 일요일 오전은 어떠세요?",
+          "script_en": "Refusing alone stalls things. '어떠세요?' (how about it?) asks their opinion politely: 일요일 오전은 어떠세요?",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 22,
+          "script_kr": "시간이 정해졌어요. 이제 '장소'예요. 저 회전목마처럼 눈에 잘 띄고, 누구나 찾을 수 있는 곳이 좋아요.",
+          "script_en": "The time is set — now the '장소' (place). Easy to spot like that carousel, easy for anyone to find.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 23,
+          "script_kr": "장소 뒤에 '에서 만나요'를 붙여요. '카페에서 만나요', '역에서 만나요'처럼요. 자, 따라 해 보세요.",
+          "script_en": "Add '에서 만나요' (let's meet at) after the place: '카페에서 만나요', '역에서 만나요'. Repeat after me.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 24,
+          "script_kr": "찾기 쉬운 곳을 대요. '정문 앞에서 만나요'라고 하면 아무도 헤매지 않아요. 앞에서는 위치를 알려 줘요.",
+          "script_en": "Name an easy landmark: '정문 앞에서 만나요' (meet in front of the main gate). '앞에서' tells them where.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 25,
+          "script_kr": "제안할 때는 이 문형이에요. '우리 같이 갈래요?' 같이는 부사고, 을래요는 부드럽게 권하는 끝맺음이에요.",
+          "script_en": "To suggest, use '우리 같이 갈래요?' (shall we go together?). '같이' is an adverb; -(으)ㄹ래요 softly invites.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 26,
+          "script_kr": "시간과 장소가 모였어요. 이제 '확정'이에요. 저 관람차가 한 바퀴를 돌듯, 대화도 여기서 마쳐요.",
+          "script_en": "Time and place have met, so now comes '확정' (confirmation). Like that wheel finishing its turn, the talk closes.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 27,
+          "script_kr": "합의가 되면 '만나기로 해요'로 정리해요. 기로 하다는 서로 그렇게 정했다는 문형이에요. 자, 따라 해 보세요.",
+          "script_en": "Once you agree, close with '만나기로 해요' (let's agree to meet). -기로 하다 = decided together. Repeat after me.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 28,
+          "script_kr": "'그럼 그렇게 해요'는 약속이 확정됐다는 신호예요. 미리 예약해 둘게요를 덧붙이면 든든하죠.",
+          "script_en": "One last line: '그럼 그렇게 해요' (then let's do that) signals it's locked. Add 미리 예약해 둘게요 — I'll book ahead.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 29,
+          "script_kr": "이제 실전이에요. 퍼레이드가 지나가는 이 길에서, 세 사람이 '모임'을 잡는 대화를 들어 봐요.",
+          "script_en": "Now for real. On this parade route, hear three people set up a '모임' (gathering) from start to finish.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 30,
+          "script_kr": "첫 번째예요. 한 사람이 물어요. '모임 어때요?' 그러면 이렇게 답해요. 좋아요, 시간 조율해서 약속을 잡아요.",
+          "script_en": "First, someone asks '모임 어때요?' (how about a meetup?). Answer: 좋아요, 시간 조율해서 약속을 잡아요.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 31,
+          "script_kr": "두 번째예요. '언제가 괜찮으세요?' 한 사람은 오전, 한 사람은 저녁만 돼요. 그럼 일요일 오후로 옮겨요.",
+          "script_en": "Second: '언제가 괜찮으세요?' One is free Saturday morning, the other only evening — so move to Sunday afternoon.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 32,
+          "script_kr": "세 번째예요. 시간이 정해졌으니 장소를 정해요. '정문 앞에서 만나요' 하면, '그럼 그렇게 해요' 하고 답해요.",
+          "script_en": "Third: the time is set, so pick the place. '정문 앞에서 만나요' — and the reply, '그럼 그렇게 해요'. Done.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 33,
+          "script_kr": "이제 여러분 차례예요. 정중하게 묻고, '가능한 시간'을 말하고, 안 되는 날은 부드럽게 넘기고, 확정해요.",
+          "script_en": "Your turn. Ask politely, give your '가능한 시간' (available time), soften the days that fail, then confirm.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 34,
+          "script_kr": "한국에는 '회식'이 있어요. 직장 사람들이 함께 먹는 모임이죠. 날짜는 보통 단체 대화방에서 조율해요.",
+          "script_en": "Korea has '회식' (company dinner) — coworkers sharing a meal. The date is usually coordinated in a group chat.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 35,
+          "script_kr": "조율에도 예절이 있어요. 거절만 하지 말고, 되는 시간을 알려 줘요. '시간 조율'과 '약속을 잡다'로 채워 볼까요?",
+          "script_en": "Etiquette: don't just refuse — offer one time that works. Now fill the blanks with '시간 조율' and '약속을 잡다'.",
+          "duration_sec": 8.0
+        },
+        {
+          "seq": 36,
+          "script_kr": "정리해요. '약속을 잡다', 시간 조율, 모임. 지난 시간의 여행 계획 영상도 보면 훨씬 쉬워져요. 다음에 또 만나요!",
+          "script_en": "Recap: '약속을 잡다', 시간 조율, 모임. Last lesson's travel-plans video makes it even easier. See you next time!",
+          "duration_sec": 8.0
         }
       ]
     },
@@ -6344,7 +6866,7 @@
   ],
   "counts": {
     "episodes": 57,
-    "published": 6,
+    "published": 7,
     "categories": 6
   }
 }

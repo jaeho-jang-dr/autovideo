@@ -126,3 +126,16 @@ W24R/_view/
 W24R/
 W24/
 *.mp4
+
+# titan_science — 그래픽·영상·음성은 로컬만 (정보 파일만 커밋)
+titan_science/keyframes/
+titan_science/_lastframe/
+titan_science/_failshot/
+titan_science/_thumb/
+titan_science/_wm/
+titan_science/_preview/
+titan_science/_out/
+titan_science/_diag/
+titan_science/_reject/
+titan_science/audio/
+titan_science/_audio_edge_draft/
