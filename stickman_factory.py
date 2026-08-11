@@ -150,6 +150,21 @@ def draw_face(draw, head_c, head_r_px, expr, facing, rng, col=INK):
         draw.ellipse([cxf - r, my - r, cxf + r, my + r], outline=col, width=int(head_r_px * 0.12))
     elif expr == "tired":
         arc_mouth(my + head_r_px * 0.05, mw * 0.8, head_r_px * 0.18, -1)
+    elif expr.startswith("mouth_"):
+        # ★모음 입 모양 (W1-2 어휘 강의용) — 개구도·입술 모양을 그대로 그린다.
+        #   교재 기준: ㅏ=최대 세로 · ㅣ=옆으로 최대 · ㅗ=원형 · ㅜ=작고 뾰족 · ㅕ=중간
+        #   (w, h) = 입의 가로/세로 반지름, head_r 대비 비율
+        SHAPE = {
+            "mouth_a":   (0.20, 0.36),   # 아 — 턱을 크게 떨어뜨림 (세로 최대)
+            "mouth_i":   (0.40, 0.15),   # 이 — 옆으로 활짝. ★납작해도 '열린 입'으로 보이게 높이를 준다
+            "mouth_o":   (0.25, 0.25),   # 오 — 동그란 원순
+            "mouth_u":   (0.15, 0.17),   # 우 — 더 작고 오므림 (테 하나만, 굵게)
+            "mouth_yeo": (0.19, 0.27),   # 여 — ㅣ→ㅓ 중간
+        }
+        w, h = SHAPE.get(expr, (0.22, 0.22))
+        rw, rh = head_r_px * w, head_r_px * h
+        lwm = head_r_px * (0.15 if expr == "mouth_u" else 0.11)   # 우는 굵게 = 오므린 느낌
+        draw.ellipse([cxf - rw, my - rh, cxf + rw, my + rh], outline=col, width=int(lwm))
     else:  # neutral
         seg = [(cxf - mw * 0.7, my), (cxf + mw * 0.7, my)]
         stamp_stroke(draw, seg, head_r_px * 0.12, rng, wobble=0.15, fill=col)
@@ -168,13 +183,27 @@ def render_pose(pose, seed=7):
     wob = 0.5 if zolla else 1.3
 
     # limbs (cubic: start C start, mid, end) — draw legs/body first, arms on top
-    body = cubic(P["chest"], P["chest"], P["body"], P["pelvis"])
-    legL = cubic(P["pelvis"], P["pelvis"], P["kneeLeft"], P["feetLeft"])
-    legR = cubic(P["pelvis"], P["pelvis"], P["kneeRight"], P["feetRight"])
-    armL = cubic(P["chest"], P["chest"], P["elbowLeft"], P["handLeft"])
-    armR = cubic(P["chest"], P["chest"], P["elbowRight"], P["handRight"])
+    # ★크게 꺾인 관절은 곡선으로 그리면 모서리를 잘라먹어 국수처럼 늘어진다.
+    #   앉기·쪼그리기 같은 상호작용 포즈에서 무릎이 실제 다리에서 벗어나 보였다(2026-08-11).
+    #   그래서 **꺾임이 크면 두 개의 직선**(관절을 실제로 지나가게)으로 그린다.
+    def limb(root, joint, tip, bend_limit=125.0):
+        v1 = (joint[0] - root[0], joint[1] - root[1])
+        v2 = (tip[0] - joint[0], tip[1] - joint[1])
+        n1 = math.hypot(*v1) or 1.0
+        n2 = math.hypot(*v2) or 1.0
+        cosang = (v1[0] * v2[0] + v1[1] * v2[1]) / (n1 * n2)
+        ang = math.degrees(math.acos(max(-1.0, min(1.0, cosang))))
+        if ang > 180.0 - bend_limit:              # 방향이 크게 꺾였다
+            return [[root, joint], [joint, tip]]  # 두 직선 — 관절을 정확히 지난다
+        return [cubic(root, root, joint, tip)]
 
-    for path in (body, legL, legR, armL, armR):
+    body = cubic(P["chest"], P["chest"], P["body"], P["pelvis"])
+    legL = limb(P["pelvis"], P["kneeLeft"], P["feetLeft"])
+    legR = limb(P["pelvis"], P["kneeRight"], P["feetRight"])
+    armL = limb(P["chest"], P["elbowLeft"], P["handLeft"])
+    armR = limb(P["chest"], P["elbowRight"], P["handRight"])
+
+    for path in [body] + legL + legR + armL + armR:
         stamp_stroke(draw, path, lw, rng, wobble=wob)
     # neck stub (chest up to head bottom)
     head_c = P["head"]
@@ -207,6 +236,8 @@ def render_pose(pose, seed=7):
               col=(250, 250, 248, 255) if zolla else INK)
     if pose.get("pencil"):
         draw_pencil(draw, P, lw, rng, pose["pencil"])
+    if pose.get("card"):
+        draw_card(draw, P, lw, rng, pose["card"])
 
     img = img.resize((CANVAS, CANVAS), Image.LANCZOS)
     if pose.get("glow"):
@@ -351,6 +382,54 @@ def draw_pencil(draw, P, lw, rng, spec):
     stamp_stroke(draw, [p92, tip], pw * 0.5, rng, wobble=0.04, taper=True)          # graphite point
 
 
+# ---- 삽화 카드 (손에 든 사각 카드) ------------------------------------------
+# ★W1-2 어휘 강의의 핵심 소품 — 그림을 글자 옆에 붙이는 '삽화 매칭' 활동에 쓴다.
+CARD_FILL = (252, 250, 244, 255)     # 크림색 카드 바탕
+
+
+def draw_card(draw, P, lw, rng, spec):
+    """두 손 사이에 든 정사각 카드. spec:
+       {"w":12, "h":12, "fan":1, "tilt":0}  — fan>1 이면 부채처럼 여러 장."""
+    hl, hr_ = P["handLeft"], P["handRight"]
+    cx = (hl[0] + hr_[0]) / 2
+    cy = (hl[1] + hr_[1]) / 2
+    w = spec.get("w", 12) * S * SS / 2
+    h = spec.get("h", 12) * S * SS / 2
+    fan = int(spec.get("fan", 1))
+    spread = float(spec.get("spread", 1.5))     # ★부채 벌림 — 1.5=기본, 크게 줄수록 활짝
+    tilt = float(spec.get("tilt", 0.0))         # ★바깥장 기울기(라디안)
+    outline_w = int(lw * 0.75)
+
+    # 부채는 뒤장부터 그려 앞장이 위로 오게 한다
+    for i in range(fan - 1, -1, -1):
+        t = 0 if fan == 1 else (i / (fan - 1) - 0.5)      # -0.5 … +0.5
+        ox = t * w * spread
+        oy = -abs(t) * h * 0.35 * min(1.0, spread / 1.5)
+        if tilt and t:
+            # 바깥장을 바깥으로 기울인다 — 회전한 사각형을 폴리곤으로 그린다
+            ang = tilt * (t * 2)
+            ca, sa = math.cos(ang), math.sin(ang)
+            pts = []
+            for dx, dy in ((-w, -h), (w, -h), (w, h), (-w, h)):
+                pts.append((cx + ox + dx * ca - dy * sa, cy + oy + dx * sa + dy * ca))
+            draw.polygon(pts, fill=CARD_FILL, outline=INK)
+            for k in range(4):
+                stamp_stroke(draw, [pts[k], pts[(k + 1) % 4]], outline_w, rng, wobble=0.1)
+            continue
+        box = [cx - w + ox, cy - h + oy, cx + w + ox, cy + h + oy]
+        draw.rectangle(box, fill=CARD_FILL, outline=INK, width=outline_w)
+
+    # 앞장 안쪽에 그림 자리 표시(빈 액자) — 실제 삽화는 합성에서 얹는다
+    inset = w * 0.22
+    draw.rectangle([cx - w + inset, cy - h + inset, cx + w - inset, cy + h - inset],
+                   outline=INK, width=max(1, int(outline_w * 0.55)))
+
+    # ★손이 카드 뒤로 숨지 않게 — 카드 양옆에 손끝을 다시 얹는다(들고 있는 게 보여야 한다)
+    for hx, hy in ((cx - w, cy), (cx + w, cy)):
+        stamp_stroke(draw, [(hx - w * 0.16, hy - h * 0.18), (hx + w * 0.16, hy + h * 0.18)],
+                     lw * 0.95, rng, wobble=0.15)
+
+
 # ---- full pose registry -----------------------------------------------------
 # Each: pts, expr, facing, and bilingual description (for content.db assets).
 POSES = {
@@ -477,6 +556,129 @@ POSES = {
                           expr="happy", facing="right", ko="고개 숙여 인사(절)", en="Bowing politely"),
     "listening":     dict(pts=P(elbowRight=(35, 18), handRight=(34, 11.5)), expr="happy",
                           ko="귀에 손, 듣는 자세(헤드폰)", en="Listening, hand to ear"),
+
+    # ── W1-2 「모음으로 만드는 첫 단어」 전용 8포즈 ────────────────────────────
+    # ★몸은 base 그대로 두고 **얼굴(입 모양)만** 바꾼다 — 5종이 한 사람으로 보여야 한다.
+    "w1d2_mouth_a":   dict(pts=P(), expr="mouth_a",
+                           ko="입 모양 '아' — 턱을 세로로 최대 개방",
+                           en="Mouth shape 'a' — jaw dropped wide"),
+    "w1d2_mouth_i":   dict(pts=P(), expr="mouth_i",
+                           ko="입 모양 '이' — 입술을 옆으로 활짝",
+                           en="Mouth shape 'i' — lips pulled wide"),
+    "w1d2_mouth_o":   dict(pts=P(), expr="mouth_o",
+                           ko="입 모양 '오' — 입술을 동그랗게",
+                           en="Mouth shape 'o' — lips rounded"),
+    "w1d2_mouth_u":   dict(pts=P(), expr="mouth_u",
+                           ko="입 모양 '우' — 입술을 작게 앞으로",
+                           en="Mouth shape 'u' — lips small and forward"),
+    "w1d2_mouth_yeo": dict(pts=P(), expr="mouth_yeo",
+                           ko="입 모양 '여' — ㅣ에서 ㅓ로 넘어가는 중간",
+                           en="Mouth shape 'yeo' — mid glide from i to eo"),
+    # ★카드는 **두 손을 가슴 높이로 모아** 그 사이에 든다
+    # ★카드는 **머리를 가리지 않게** 가슴 아래(y≈28)에서 든다. 머리 아래끝이 y≈18.5 다.
+    "w1d2_card_hold": dict(pts=P(elbowLeft=(24.5, 27), handLeft=(23.0, 28),
+                                 elbowRight=(35.5, 27), handRight=(37.0, 28)),
+                           expr="happy", card=dict(w=14, h=13, fan=1),
+                           ko="삽화 카드를 가슴 앞에 들어 보임",
+                           en="Holding an illustration card in front of the chest"),
+    "w1d2_card_fan":  dict(pts=P(elbowLeft=(24, 27), handLeft=(22.0, 28),
+                                 elbowRight=(36, 27), handRight=(38.0, 28)),
+                           expr="happy", card=dict(w=12, h=11, fan=3),
+                           ko="삽화 카드 세 장을 부채처럼 펼쳐 보임",
+                           en="Fanning out three illustration cards"),
+    # ── 상호작용 포즈 — 배경의 어느 부분에 가서 쓴다 (인터랙트랑) ──────────────
+    # ★엉덩이(pelvis)가 앵커에 오도록 배치한다. 무릎을 앞으로 접고 발은 바닥에.
+    # ★사장님 지시(2026-08-11)
+    #   ① **고관절 90도 · 무릎 90도** — 허벅지 수평, 정강이 수직
+    #   ② **정면에서 45도 튼 3/4 뷰**가 제일 보기 좋다 — 얼굴도 보이고 다리 접힘도 보인다
+    #   3/4 라서 허벅지는 앞으로 나오며 **짧아 보이게**(원근 단축) 그린다: 11 → 약 7단위
+    #   ③ **화면 중앙을 향해 튼다** — 왼편에 있으면 오른쪽으로, 오른편에 있으면 왼쪽으로.
+    #      그래서 좌우 두 벌을 둔다(`_r` = 오른쪽을 향해 튼 것, 왼편에 놓을 때 쓴다).
+    "w1d2_sit_bench_r": dict(pts=P(head=(28.5, 13), chest=(28.5, 22), body=(28.7, 31),
+                                   pelvis=(29, 41),
+                                   kneeLeft=(35.5, 42), feetLeft=(35.5, 56),
+                                   kneeRight=(33, 43), feetRight=(33, 57),
+                                   elbowLeft=(25.5, 30), handLeft=(27, 39.5),
+                                   elbowRight=(32, 30), handRight=(33, 39.5)),
+                             expr="happy", facing="right",
+                             ko="벤치에 걸터앉기 — 오른쪽으로 45도 튼 3/4 뷰(왼편 배치용)",
+                             en="Perched on a bench, turned right 45°, for left-side placement"),
+    "w1d2_sit_bench_l": dict(pts=P(head=(31.5, 13), chest=(31.5, 22), body=(31.3, 31),
+                                   pelvis=(31, 41),
+                                   kneeLeft=(27, 43), feetLeft=(27, 57),
+                                   kneeRight=(24.5, 42), feetRight=(24.5, 56),
+                                   elbowLeft=(28, 30), handLeft=(27, 39.5),
+                                   elbowRight=(34.5, 30), handRight=(33, 39.5)),
+                             expr="happy", facing="left",
+                             ko="벤치에 걸터앉기 — 왼쪽으로 45도 튼 3/4 뷰(오른편 배치용)",
+                             en="Perched on a bench, turned left 45°, for right-side placement"),
+    # ★난간 잡기 — **손(handRight)** 이 앵커에 온다. 팔은 앞으로 뻗고 몸은 3/4.
+    "w1d2_grab_rail_r": dict(pts=P(head=(28, 11.5), chest=(28, 20), body=(28.5, 30),
+                                   pelvis=(29, 41),
+                                   elbowRight=(34, 25), handRight=(40, 27),
+                                   elbowLeft=(25, 29), handLeft=(24, 39),
+                                   kneeLeft=(27, 52), feetLeft=(26, 66),
+                                   kneeRight=(31.5, 52), feetRight=(33, 66)),
+                             expr="happy", facing="right",
+                             ko="난간을 오른손으로 잡는 자세(오른쪽을 향해)",
+                             en="Grabbing a railing with the right hand, facing right"),
+    "w1d2_grab_rail_l": dict(pts=P(head=(32, 11.5), chest=(32, 20), body=(31.5, 30),
+                                   pelvis=(31, 41),
+                                   elbowLeft=(26, 25), handLeft=(20, 27),
+                                   elbowRight=(35, 29), handRight=(36, 39),
+                                   kneeLeft=(28.5, 52), feetLeft=(27, 66),
+                                   kneeRight=(33, 52), feetRight=(34, 66)),
+                             expr="happy", facing="left",
+                             ko="난간을 왼손으로 잡는 자세(왼쪽을 향해)",
+                             en="Grabbing a railing with the left hand, facing left"),
+    # ★땅 짚고 살피기 — 쪼그려 앉아 한 손은 땅(handRight), 다른 손은 무릎.
+    #   고관절·무릎을 깊게 접는다. 손이 앵커에 온다.
+    # ★쪼그려 앉기 — 엉덩이가 **발뒤꿈치 가까이**(y58) 내려가고 무릎이 **크게 올라온다**(y46).
+    #   허벅지는 뒤로 접히고 정강이는 앞으로 세워진다. 발은 바닥(y66) 그대로.
+    #   상체는 앞으로 살짝 숙이고, 오른손이 **바닥(y66)** 을 짚는다 — 여기가 앵커.
+    # ★쪼그려 앉기 — **길이를 지켜서 접는다**(서기: 허벅지 11 · 정강이 14 · 몸통 21).
+    #   발은 바닥 y66 → 정강이를 앞으로 세워 무릎 y53 → 허벅지를 뒤로 접어 엉덩이 y59.
+    #   무릎이 엉덩이보다 **위**에 오는 것이 쪼그림의 핵심. 상체는 앞으로 살짝 숙인다.
+    #   오른손이 **바닥 y66** 을 짚는다 — 여기가 앵커.
+    # ★사장님 지시(2026-08-11): **엉덩이가 땅에 닿는다.**
+    #   엉덩이 y66(바닥) · 무릎을 세워 앞으로 · 발은 바닥. 다리를 벌려 겹치지 않게 한다.
+    "w1d2_crouch_ground_r": dict(pts=P(head=(28, 37), chest=(28.5, 46), body=(29, 56),
+                                       pelvis=(29.5, 66),
+                                       kneeLeft=(37, 55), feetLeft=(36, 66),
+                                       kneeRight=(33.5, 58), feetRight=(33, 66),
+                                       elbowRight=(34, 55), handRight=(39, 66),
+                                       elbowLeft=(26, 52), handLeft=(31, 60)),
+                                 expr="happy", facing="right",
+                                 ko="땅에 주저앉아(엉덩이가 바닥) 오른손으로 바닥을 짚고 살피는 자세",
+                                 en="Sitting on the ground, right hand touching the ground"),
+    # ★난간에 **바짝 붙어 등을 기대고** 두 팔을 난간 위에 올린다(2026-08-11 재작업).
+    #   ①몸통을 뒤로 살짝 눕혀 등이 난간에 닿는 느낌 ②두 팔을 다 난간 위로 벌려 올린다
+    #   ③다리는 앞으로 내밀어 발이 몸보다 앞에 — 기댄 사람의 무게중심
+    "w1d2_lean_rail_r": dict(pts=P(head=(27, 12), chest=(28, 21), body=(29.5, 30),
+                                   pelvis=(31, 40),
+                                   elbowRight=(33, 22), handRight=(38, 19.5),
+                                   elbowLeft=(24, 23), handLeft=(20, 20.5),
+                                   kneeLeft=(30, 52), feetLeft=(28, 66),
+                                   kneeRight=(34, 51), feetRight=(36, 66)),
+                             expr="happy", facing="right",
+                             ko="난간에 등을 기대고 두 팔을 난간 위에 올린 자세",
+                             en="Leaning back against a railing, both arms resting on it"),
+    # ★벤치 **뒤에 서서 두 팔을 등받이에 올린다.** 몸 아랫부분은 벤치에 가려진다.
+    "w1d2_stand_behind_bench": dict(pts=P(head=(30, 11), chest=(30, 20), body=(30, 30),
+                                          pelvis=(30, 41),
+                                          elbowLeft=(25, 24), handLeft=(21, 26),
+                                          elbowRight=(35, 24), handRight=(39, 26),
+                                          kneeLeft=(28, 52), feetLeft=(27, 66),
+                                          kneeRight=(32, 52), feetRight=(33, 66)),
+                                    expr="happy",
+                                    ko="벤치 뒤에 서서 두 팔을 등받이에 올린 자세",
+                                    en="Standing behind a bench, both arms resting on the backrest"),
+    "w1d2_surprise":  dict(pts=P(head=(30, 10.6),
+                                 elbowLeft=(25, 26), handLeft=(22, 19),
+                                 elbowRight=(35, 26), handRight=(38, 19)),
+                           expr="mouth_o",
+                           ko="두 손을 들고 놀란 자세 — '오!'",
+                           en="Hands up in surprise — 'oh!'"),
     # --- video-specific: Birth of Hangeul & Simple Vowels ---
     "sejong":        dict(pts=P(head=(30, 11), elbowLeft=(26, 28), handLeft=(29.5, 34),
                                 elbowRight=(34, 28), handRight=(30.5, 34)), expr="neutral",
