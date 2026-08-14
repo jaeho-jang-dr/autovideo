@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-03",
+  "last_updated": "2026-08-14",
   "project": "autovideo",
   "agents": {
     "orchestrator": "Antigravity (Gemini)",
@@ -8,9 +8,9 @@
   },
   "current_session": {
     "status": "in_progress",
-    "started": "2026-08-10",
-    "goal": "titan_science (CA-002) 진격의 거인의 과학 시나리오 및 핸드오버 완료. 감독(Claude) 지시 대기.",
-    "phase": "handover_to_director"
+    "started": "2026-08-14",
+    "goal": "KO-W1-2 기본 모음 씬 컴파일 및 렌더링 준비. 최근 작업 git 커밋·푸시 및 프로덕션 배포.",
+    "phase": "save_commit_push_deploy"
   },
   "completed_tasks": [
     "Restored dark deep-space black theme (#090a0f / #0b0d14) for both Astro website and review_lesson.py UI upon user request.",
@@ -176,7 +176,9 @@
     "KO-W22 '여행 경험·미래 계획'(지은·하늘 전망대) 최종화: Azure TTS(선희/Emma) 4K 렌더 KO/EN, 썸네일 2종, 5개국어 자막·제목·설명, 태그 29개, 10개 조항 통과, API 업로드(KO=CZMYZUehC7k, EN=XI9cmlczbkw), 자막 10개 API 업로드, 노출 4단계(재생목록·고정댓글·카드·최종화면 W21 지정), 공개 전환, 웹 임베드(CF Pages+Vercel) 완료.",
     "무비랑(movierang) 에이전트 등록(.claude/agents/movierang.md) — 영상 제작 엔진·스택 총괄(캐릭터/컷랑/렌더/TTS/자막/4K), 업로드·노출은 유튜브랑. W22 실측 스택 지도 내장.",
     "★캐릭터 가이드 이미지 3종(front/side/right-3q) Flow 통일 규칙 확정·기록 — W22의 정지↔무빙 캐릭터 불일치(엔진 혼용: 정지=agy 나노바나나, 무빙=Flow Veo) 재발방지. VEO_WORKFLOW.md 절 추가 + 메모리 character-guide-image-flow-unify + bugrang #9 기록.",
-    "KO-W23: 36씬 · 4K · Azure(선희/Emma) · 자막5개국어×2 · 노출4대(재생목록·고정댓글·카드·최종화면) · drjayed.com 임베드 · 공개 전환 완료 (2026-07-28)"
+    "KO-W23: 36씬 · 4K · Azure(선희/Emma) · 자막5개국어×2 · 노출4대(재생목록·고정댓글·카드·최종화면) · drjayed.com 임베드 · 공개 전환 완료 (2026-07-28)",
+    "KO-W1-2 (기본 모음): 스틱맨 6관절 컷 라이브러리(motion6_defs.py, cut_motion6.py) 및 배경 연출/동선 엔진(bg_defs.py) 구축, W1_2_scenario.md / W1_2_motion.md 씬 타임라인 정밀 설계 및 포즈 매니페스트(_manifest.json) 동기화 완료 (2026-08-14)",
+    "Agent/Memory: 컷랑·글씨랑·무비랑·노트랑 Agent 명세 갱신 및 GEMINI.md 컨텍스트 업데이트 완료 (2026-08-14)"
   ],
   "pending_tasks": [
     "Binge-Watching: Run autoveo_flow.py with binge_watching/shorts_prompts.txt to generate 9:16 portrait video clips (scene_0, 2, 20).",

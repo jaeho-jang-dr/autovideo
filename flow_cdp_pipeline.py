@@ -67,21 +67,64 @@ def launch_chrome(profile, url="https://labs.google/fx/tools/flow"):
     raise RuntimeError("CDP 9222 기동 실패")
 
 
+# ★찾은 요소에 달아 두는 표식 (사장님 지시 2026-08-12)
+#   좌표 클릭을 버리고 **locator.click()** 으로 가려면 "JS 가 찾은 바로 그 요소"를
+#   Playwright 쪽에서도 집어야 한다. 표식을 달고 그 표식으로 locator 를 만든다.
+CLICK_MARK = "data-cc-click"
+
+
 def find_btn(page, rx, ymin=None):
-    """정규식으로 보이는 버튼/메뉴항목 하나를 찾아 {t,x,y} 반환."""
-    return page.evaluate("""([rx, ymin]) => {
+    """정규식으로 보이는 버튼/메뉴항목 하나를 찾아 {t,x,y} 반환.
+
+    ★찾은 요소에 `data-cc-click` 표식을 달아 둔다 — click_btn 이 좌표가 아니라
+      locator 로 **그 요소를 직접** 누를 수 있게 하기 위해서다. 표식은 다음 find_btn
+      호출 때 싹 지워지므로 남지 않는다.
+    """
+    return page.evaluate("""([rx, ymin, mark]) => {
       const re = new RegExp(rx);
+      for (const e of document.querySelectorAll('[' + mark + ']')) e.removeAttribute(mark);
       for (const b of document.querySelectorAll("button,[role='button'],[role='menuitem'],[role='option']")) {
         const r = b.getBoundingClientRect();
         if (r.width === 0 || r.height === 0) continue;
         if (ymin !== null && r.top < ymin) continue;
         const t = (b.innerText || '').trim();
-        if (re.test(t))
+        if (re.test(t)) {
+          b.setAttribute(mark, '1');
           return {t: t.slice(0, 40), x: Math.round(r.left + r.width / 2),
                   y: Math.round(r.top + r.height / 2)};
+        }
       }
       return null;
-    }""", [rx, ymin])
+    }""", [rx, ymin, CLICK_MARK])
+
+
+def click_marked(page, b, label="", timeout=8000):
+    """표식이 달린 요소를 누른다 — **locator.click() 우선**.
+
+    ★사장님 지시(2026-08-12): "playwright locator.click() 사용하라."
+      좌표 클릭(page.mouse.click)은 그 지점에 팝오버·오버레이가 겹쳐 있어도 그냥 찍어
+      버려서 **가로채여도 성공한 것처럼 보인다.** 2026-08-12 skid_stop 이 그 꼴로
+      죽었다 — 로그엔 `[CLICK] 8s (1198,911)` 이 멀쩡히 찍혔는데 칩은 안 눌렸고,
+      생성이 조용히 삼켜져 180초 대기 후 시간 초과가 났다.
+      locator.click() 은 가시성·가려짐·안정성을 Playwright 가 검사하므로 가려져 있으면
+      그 자리에서 오류가 난다 — 조용히 실패하지 않는다.
+
+    막히면 JS 클릭 → 좌표 클릭 순으로 떨어진다. 좌표 클릭을 남겨 두는 건 이 함수를
+    같이 쓰는 다른 검증된 경로(포즈·배경 생성)를 깨지 않기 위해서다.
+    """
+    loc = page.locator(f"[{CLICK_MARK}='1']")
+    try:
+        loc.click(timeout=timeout)
+        return "locator"
+    except Exception as e:
+        log(f"  [CLICK-FALLBACK] {label} locator 실패: {str(e).splitlines()[0][:70]}")
+    try:                                    # ★JS 클릭 — 가려진 요소도 눌린다
+        loc.evaluate("e => e.click()")
+        return "js"
+    except Exception as e:
+        log(f"  [CLICK-FALLBACK] {label} js 실패: {str(e).splitlines()[0][:70]}")
+    page.mouse.click(b["x"], b["y"])
+    return f"좌표 {b['x']},{b['y']}"
 
 
 def click_btn(page, rx, ymin=None, wait=1200, label=""):
@@ -89,9 +132,9 @@ def click_btn(page, rx, ymin=None, wait=1200, label=""):
     if not b:
         log(f"  [MISS] 버튼 못 찾음: {label or rx}")
         return False
-    page.mouse.click(b["x"], b["y"])
+    how = click_marked(page, b, label or rx)
     page.wait_for_timeout(wait)
-    log(f"  [CLICK] {label or rx} → {b['t']!r} ({b['x']},{b['y']})")
+    log(f"  [CLICK] {label or rx} → {b['t']!r} [{how}]")
     return True
 
 
@@ -120,7 +163,7 @@ def open_chip(page):
         chip = find_btn(page, "crop_|동영상 ·|Nano", ymin=1000)
         if not chip:
             return False
-        page.mouse.click(chip["x"], chip["y"])
+        click_marked(page, chip, "칩 열기")
         page.wait_for_timeout(1500)
     return bool(find_btn(page, "arrow_drop_down"))
 

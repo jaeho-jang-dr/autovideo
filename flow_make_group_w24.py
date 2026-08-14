@@ -164,7 +164,11 @@ def chip_text(pg):
     }""")
 
 
-def set_chip(pg, model="Veo 3.1 - Lite", aspect="16:9", secs="8s"):
+# ★모델을 이번 실행에서 이미 맞췄는지 — 동영상을 죽 뽑을 때 첫 클립에서만 맞춘다
+_MODEL_SET = {}
+
+
+def set_chip(pg, model="Veo 3.1 - Lite", aspect="16:9", secs="8s", recheck=False):
     """동영상 모델·비율·길이를 맞춘다.
 
     ★2026-08-04 수정(사장님 승인). 이전 판은 칩을 **한 번만 열고** '동영상·8s·16:9' 를
@@ -178,29 +182,48 @@ def set_chip(pg, model="Veo 3.1 - Lite", aspect="16:9", secs="8s"):
     # ★아이콘 이름이 play_circle 이 아니라 videocam 이다(2026-08-04 DOM 실측).
     # ★★왼쪽 레일에도 'videocam 동영상 보기'(x≈40)가 있어 그쪽을 눌러 버린다.
     #   설정 패널은 x>900 이므로 **좌표로 걸러** 패널 안의 '동영상'만 누른다(2026-08-05).
-    it = pg.evaluate("""() => {
+    # ★좌표 클릭 → locator.click() (사장님 지시 2026-08-12). 요소에 표식을 달고
+    #   그 표식으로 locator 를 만들어 누른다 — 겹친 팝오버에 가로채이면 오류가 난다.
+    it = pg.evaluate("""([mark]) => {
+      for (const e of document.querySelectorAll('[' + mark + ']')) e.removeAttribute(mark);
       for (const b of document.querySelectorAll('button,[role=menuitem],[role=option]')) {
         const r = b.getBoundingClientRect(); const t = (b.innerText||'').trim();
-        if (r.width > 0 && r.left > 900 && /^videocam\\n?동영상$/.test(t))
+        if (r.width > 0 && r.left > 900 && /^videocam\\n?동영상$/.test(t)) {
+          b.setAttribute(mark, '1');
           return {x: Math.round(r.left + r.width/2), y: Math.round(r.top + r.height/2)};
+        }
       }
       return null;
-    }""")
+    }""", [P.CLICK_MARK])
     if it:
-        pg.mouse.click(it["x"], it["y"])
-        log(f"    동영상 선택 ({it['x']},{it['y']})")
+        how = P.click_marked(pg, it, "동영상")
+        log(f"    동영상 선택 [{how}]")
         time.sleep(1.5)
     else:
         log("    (설정 패널에 '동영상' 항목 없음 — 이미 동영상 모드로 본다)")
-    # ★설정은 한 패널에 다 펼쳐져 있다. 모델이 이미 맞으면 드롭다운을 건드리지 않는다
-    #   — 열었다 닫으면 패널째 닫혀서 뒤 항목들을 못 누른다.
-    if not P.find_btn(pg, model.replace(" ", "\\s*")):
-        P.click_btn(pg, "arrow_drop_down", label="모델 드롭다운")
-        if not P.click_btn(pg, model, label=model):
-            log(f"    ★모델 '{model}' 항목 없음")
-        P.open_chip(pg)
+    # ★★모델 — **늘 Omni Flash 하나만 쓴다** (사장님 확정 2026-08-13).
+    #   "그냥 항상 옴니 플래시로만 하자. **동영상 만들 때는 처음에만 바꾼다.**
+    #    이미지일 때만 한 번 바꾸고, 이미지와 영상이 번갈아 나올 때 확인하도록 하고."
+    #
+    #   왜 이렇게 하나 — 무조건 누르게 했더니 클립 한 장마다 40초가 더 붙었다.
+    #   동영상만 죽 뽑을 때는 첫 클립에서 한 번 맞춰 놓으면 그 뒤로는 그대로 남는다.
+    #   그래서 **첫 클립에서만 확인**하고, 그 뒤로는 지나간다.
+    #   ※ 이미지 생성(Nano Banana)과 번갈아 쓰는 경로는 모델이 도로 바뀌므로
+    #     `set_chip(..., recheck=True)` 로 불러 매번 확인시킨다.
+    t_m = time.time()
+    if recheck or not _MODEL_SET.get(model):
+        if P.find_btn(pg, model.replace(" ", "\\s*")):
+            log(f"    모델 {model} 확인")
+        else:
+            P.click_btn(pg, "arrow_drop_down", wait=500, label="모델 드롭다운")
+            if not P.click_btn(pg, model, wait=500, label=model):
+                log(f"    ★모델 '{model}' 항목 없음")
+            if not P.find_btn(pg, f"^{secs}$"):   # 뒤 항목이 사라졌을 때만 다시 연다
+                P.open_chip(pg)
+        _MODEL_SET[model] = True
+        log(f"    모델 {time.time() - t_m:.1f}초")
     else:
-        log(f"    모델 이미 {model}")
+        log(f"    모델 {model} — 첫 클립에서 맞춰 뒀다(건너뜀)")
     for rx, lb in ((f"crop_\\S*\\n{aspect}", aspect), (f"^{secs}$", secs), ("^x1$", "x1")):
         P.click_btn(pg, rx, label=lb)
     pg.keyboard.press("Escape")

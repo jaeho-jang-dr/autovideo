@@ -1,27 +1,827 @@
 [
   {
-    "name": "z_wave",
-    "file": "assets/graphics/poses/stickman_z_wave.png",
+    "name": "arms_open",
+    "file": "assets/graphics/poses/stickman_arms_open.png",
     "expr": "happy",
     "facing": "front",
-    "ko": "졸라맨 손 흔들며 인사",
-    "en": "Zolla waving hello"
+    "ko": "두 팔 벌려 설명/환영",
+    "en": "Arms open, explaining"
   },
   {
-    "name": "z_point_r",
-    "file": "assets/graphics/poses/stickman_z_point_r.png",
+    "name": "bowing",
+    "file": "assets/graphics/poses/stickman_bowing.png",
     "expr": "happy",
-    "facing": "front",
-    "ko": "졸라맨 오른쪽 힘차게 가리키며 설명",
-    "en": "Zolla pointing right"
+    "facing": "right",
+    "ko": "고개 숙여 인사(절)",
+    "en": "Bowing politely"
   },
   {
-    "name": "z_point_l",
-    "file": "assets/graphics/poses/stickman_z_point_l.png",
+    "name": "cheer",
+    "file": "assets/graphics/poses/stickman_cheer.png",
     "expr": "happy",
     "facing": "front",
-    "ko": "졸라맨 왼쪽 가리키며 설명",
-    "en": "Zolla pointing left"
+    "ko": "두 팔 들고 환호",
+    "en": "Cheering, both arms up"
+  },
+  {
+    "name": "clap",
+    "file": "assets/graphics/poses/stickman_clap.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "박수",
+    "en": "Clapping"
+  },
+  {
+    "name": "dr_jay_base_front",
+    "file": "assets/graphics/poses/stickman_dr_jay_base_front.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "닥터제이 base front",
+    "en": "base front"
+  },
+  {
+    "name": "dr_jay_base_side",
+    "file": "assets/graphics/poses/stickman_dr_jay_base_side.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "닥터제이 base side",
+    "en": "base side"
+  },
+  {
+    "name": "dr_jay_cheering",
+    "file": "assets/graphics/poses/stickman_dr_jay_cheering.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "닥터제이 cheering",
+    "en": "cheering"
+  },
+  {
+    "name": "dr_jay_holding_book",
+    "file": "assets/graphics/poses/stickman_dr_jay_holding_book.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "닥터제이 holding book",
+    "en": "holding book"
+  },
+  {
+    "name": "dr_jay_pointing",
+    "file": "assets/graphics/poses/stickman_dr_jay_pointing.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "닥터제이 pointing",
+    "en": "pointing"
+  },
+  {
+    "name": "dr_jay_presenting",
+    "file": "assets/graphics/poses/stickman_dr_jay_presenting.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "닥터제이 presenting",
+    "en": "presenting"
+  },
+  {
+    "name": "dr_jay_thinking",
+    "file": "assets/graphics/poses/stickman_dr_jay_thinking.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "닥터제이 thinking",
+    "en": "thinking"
+  },
+  {
+    "name": "dr_jay_waving",
+    "file": "assets/graphics/poses/stickman_dr_jay_waving.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "닥터제이 waving",
+    "en": "waving"
+  },
+  {
+    "name": "greeting_wave",
+    "file": "assets/graphics/poses/stickman_greeting_wave.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "손 흔들며 인사",
+    "en": "Waving hello"
+  },
+  {
+    "name": "hands_on_hips",
+    "file": "assets/graphics/poses/stickman_hands_on_hips.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "허리에 손, 당당한 자세",
+    "en": "Hands on hips, confident"
+  },
+  {
+    "name": "holding_mirror",
+    "file": "assets/graphics/poses/stickman_holding_mirror.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "거울을 들고 입모양 점검",
+    "en": "Holding a mirror to face"
+  },
+  {
+    "name": "holding_phone",
+    "file": "assets/graphics/poses/stickman_holding_phone.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "휴대폰을 들고 보는 자세",
+    "en": "Holding/looking at phone"
+  },
+  {
+    "name": "injun_base",
+    "file": "assets/graphics/poses/stickman_injun_base.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 base",
+    "en": "base"
+  },
+  {
+    "name": "injun_baseball",
+    "file": "assets/graphics/poses/stickman_injun_baseball.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 baseball",
+    "en": "baseball"
+  },
+  {
+    "name": "injun_bicycle",
+    "file": "assets/graphics/poses/stickman_injun_bicycle.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 bicycle",
+    "en": "bicycle"
+  },
+  {
+    "name": "injun_camping",
+    "file": "assets/graphics/poses/stickman_injun_camping.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 camping",
+    "en": "camping"
+  },
+  {
+    "name": "injun_cheering",
+    "file": "assets/graphics/poses/stickman_injun_cheering.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 cheering",
+    "en": "cheering"
+  },
+  {
+    "name": "injun_fishing",
+    "file": "assets/graphics/poses/stickman_injun_fishing.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 fishing",
+    "en": "fishing"
+  },
+  {
+    "name": "injun_hiking",
+    "file": "assets/graphics/poses/stickman_injun_hiking.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 hiking",
+    "en": "hiking"
+  },
+  {
+    "name": "injun_holding_book",
+    "file": "assets/graphics/poses/stickman_injun_holding_book.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 holding book",
+    "en": "holding book"
+  },
+  {
+    "name": "injun_pointing",
+    "file": "assets/graphics/poses/stickman_injun_pointing.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 pointing",
+    "en": "pointing"
+  },
+  {
+    "name": "injun_presenting",
+    "file": "assets/graphics/poses/stickman_injun_presenting.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 presenting",
+    "en": "presenting"
+  },
+  {
+    "name": "injun_reading",
+    "file": "assets/graphics/poses/stickman_injun_reading.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 reading",
+    "en": "reading"
+  },
+  {
+    "name": "injun_thinking",
+    "file": "assets/graphics/poses/stickman_injun_thinking.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 thinking",
+    "en": "thinking"
+  },
+  {
+    "name": "injun_waving",
+    "file": "assets/graphics/poses/stickman_injun_waving.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "인준 waving",
+    "en": "waving"
+  },
+  {
+    "name": "jieun_base",
+    "file": "assets/graphics/poses/stickman_jieun_base.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 base",
+    "en": "base"
+  },
+  {
+    "name": "jieun_bowing",
+    "file": "assets/graphics/poses/stickman_jieun_bowing.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 bowing",
+    "en": "bowing"
+  },
+  {
+    "name": "jieun_cheering",
+    "file": "assets/graphics/poses/stickman_jieun_cheering.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 cheering",
+    "en": "cheering"
+  },
+  {
+    "name": "jieun_clapping",
+    "file": "assets/graphics/poses/stickman_jieun_clapping.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 clapping",
+    "en": "clapping"
+  },
+  {
+    "name": "jieun_drawing",
+    "file": "assets/graphics/poses/stickman_jieun_drawing.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 drawing",
+    "en": "drawing"
+  },
+  {
+    "name": "jieun_jumping",
+    "file": "assets/graphics/poses/stickman_jieun_jumping.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 jumping",
+    "en": "jumping"
+  },
+  {
+    "name": "jieun_pointing",
+    "file": "assets/graphics/poses/stickman_jieun_pointing.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 pointing",
+    "en": "pointing"
+  },
+  {
+    "name": "jieun_raising_hand",
+    "file": "assets/graphics/poses/stickman_jieun_raising_hand.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 raising hand",
+    "en": "raising hand"
+  },
+  {
+    "name": "jieun_reading",
+    "file": "assets/graphics/poses/stickman_jieun_reading.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 reading",
+    "en": "reading"
+  },
+  {
+    "name": "jieun_sitting",
+    "file": "assets/graphics/poses/stickman_jieun_sitting.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 sitting",
+    "en": "sitting"
+  },
+  {
+    "name": "jieun_studying",
+    "file": "assets/graphics/poses/stickman_jieun_studying.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 studying",
+    "en": "studying"
+  },
+  {
+    "name": "jieun_thinking",
+    "file": "assets/graphics/poses/stickman_jieun_thinking.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 thinking",
+    "en": "thinking"
+  },
+  {
+    "name": "jieun_waving",
+    "file": "assets/graphics/poses/stickman_jieun_waving.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "지은 waving",
+    "en": "waving"
+  },
+  {
+    "name": "jumping",
+    "file": "assets/graphics/poses/stickman_jumping.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "점프(신남)",
+    "en": "Jumping with joy"
+  },
+  {
+    "name": "listening",
+    "file": "assets/graphics/poses/stickman_listening.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "귀에 손, 듣는 자세(헤드폰)",
+    "en": "Listening, hand to ear"
+  },
+  {
+    "name": "madam_jay_base_front",
+    "file": "assets/graphics/poses/stickman_madam_jay_base_front.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "마담제이 base front",
+    "en": "base front"
+  },
+  {
+    "name": "madam_jay_base_side",
+    "file": "assets/graphics/poses/stickman_madam_jay_base_side.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "마담제이 base side",
+    "en": "base side"
+  },
+  {
+    "name": "madam_jay_cheering",
+    "file": "assets/graphics/poses/stickman_madam_jay_cheering.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "마담제이 cheering",
+    "en": "cheering"
+  },
+  {
+    "name": "madam_jay_holding_book",
+    "file": "assets/graphics/poses/stickman_madam_jay_holding_book.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "마담제이 holding book",
+    "en": "holding book"
+  },
+  {
+    "name": "madam_jay_pointing",
+    "file": "assets/graphics/poses/stickman_madam_jay_pointing.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "마담제이 pointing",
+    "en": "pointing"
+  },
+  {
+    "name": "madam_jay_presenting",
+    "file": "assets/graphics/poses/stickman_madam_jay_presenting.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "마담제이 presenting",
+    "en": "presenting"
+  },
+  {
+    "name": "madam_jay_thinking",
+    "file": "assets/graphics/poses/stickman_madam_jay_thinking.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "마담제이 thinking",
+    "en": "thinking"
+  },
+  {
+    "name": "madam_jay_waving",
+    "file": "assets/graphics/poses/stickman_madam_jay_waving.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "마담제이 waving",
+    "en": "waving"
+  },
+  {
+    "name": "mouth_demo",
+    "file": "assets/graphics/poses/stickman_mouth_demo.png",
+    "expr": "talk",
+    "facing": "front",
+    "ko": "자기 입을 가리키며 발음 시범",
+    "en": "Pointing to own mouth (pronunciation)"
+  },
+  {
+    "name": "pencil_point",
+    "file": "assets/graphics/poses/stickman_pencil_point.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "컬러 연필로 오른쪽을 가리키며 설명",
+    "en": "Pointing with a colored pencil"
+  },
+  {
+    "name": "pencil_present",
+    "file": "assets/graphics/poses/stickman_pencil_present.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "컬러 연필 들고 두 팔 벌려 설명",
+    "en": "Presenting with a colored pencil"
+  },
+  {
+    "name": "pencil_wave",
+    "file": "assets/graphics/poses/stickman_pencil_wave.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "컬러 연필 들고 인사",
+    "en": "Waving with a colored pencil"
+  },
+  {
+    "name": "pencil_write",
+    "file": "assets/graphics/poses/stickman_pencil_write.png",
+    "expr": "neutral",
+    "facing": "right",
+    "ko": "컬러 연필로 글씨 쓰는 자세",
+    "en": "Writing with a colored pencil"
+  },
+  {
+    "name": "point_self",
+    "file": "assets/graphics/poses/stickman_point_self.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "자기 가슴을 가리킴(바로 나!)",
+    "en": "Pointing at self"
+  },
+  {
+    "name": "pointing_down",
+    "file": "assets/graphics/poses/stickman_pointing_down.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "아래(땅)를 가리킴",
+    "en": "Pointing down (earth)"
+  },
+  {
+    "name": "pointing_left",
+    "file": "assets/graphics/poses/stickman_pointing_left.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "왼쪽을 가리키며 설명",
+    "en": "Pointing left (presenting)"
+  },
+  {
+    "name": "pointing_right",
+    "file": "assets/graphics/poses/stickman_pointing_right.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "오른쪽을 가리키며 설명",
+    "en": "Pointing right (presenting)"
+  },
+  {
+    "name": "pointing_up",
+    "file": "assets/graphics/poses/stickman_pointing_up.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "위(하늘)를 가리킴",
+    "en": "Pointing up (heaven)"
+  },
+  {
+    "name": "presenting",
+    "file": "assets/graphics/poses/stickman_presenting.png",
+    "expr": "happy",
+    "facing": "right",
+    "ko": "칠판/화면 앞에서 발표",
+    "en": "Presenting at a board"
+  },
+  {
+    "name": "raising_hand",
+    "file": "assets/graphics/poses/stickman_raising_hand.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "손 번쩍 들기(질문/참여)",
+    "en": "Raising hand"
+  },
+  {
+    "name": "reading",
+    "file": "assets/graphics/poses/stickman_reading.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "책을 들고 읽는 자세",
+    "en": "Reading a book"
+  },
+  {
+    "name": "running",
+    "file": "assets/graphics/poses/stickman_running.png",
+    "expr": "happy",
+    "facing": "right",
+    "ko": "달리는 자세",
+    "en": "Running"
+  },
+  {
+    "name": "sejong",
+    "file": "assets/graphics/poses/stickman_sejong.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "세종대왕(두 손 모은 위엄) — 왕관/곤룡포는 소품",
+    "en": "King Sejong, hands clasped (regal)"
+  },
+  {
+    "name": "shrug",
+    "file": "assets/graphics/poses/stickman_shrug.png",
+    "expr": "surprised",
+    "facing": "front",
+    "ko": "어깨 으쓱, 갸우뚱(모름)",
+    "en": "Shrug, confused"
+  },
+  {
+    "name": "sitting",
+    "file": "assets/graphics/poses/stickman_sitting.png",
+    "expr": "neutral",
+    "facing": "right",
+    "ko": "의자에 앉은 자세(옆모습)",
+    "en": "Sitting on a chair (side)"
+  },
+  {
+    "name": "standing",
+    "file": "assets/graphics/poses/stickman_standing.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "가만히 서 있는 기본 자세",
+    "en": "Standing neutral"
+  },
+  {
+    "name": "standing_happy",
+    "file": "assets/graphics/poses/stickman_standing_happy.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "웃으며 서 있는 자세",
+    "en": "Standing, smiling"
+  },
+  {
+    "name": "thinking",
+    "file": "assets/graphics/poses/stickman_thinking.png",
+    "expr": "neutral",
+    "facing": "right",
+    "ko": "턱에 손(팔꿈치 바깥), 양팔 보이는 생각 자세",
+    "en": "Thinking, hand on chin (both arms visible)"
+  },
+  {
+    "name": "thumbs_up",
+    "file": "assets/graphics/poses/stickman_thumbs_up.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "엄지 척",
+    "en": "Thumbs up"
+  },
+  {
+    "name": "tired_slump",
+    "file": "assets/graphics/poses/stickman_tired_slump.png",
+    "expr": "tired",
+    "facing": "front",
+    "ko": "책상에 엎드린 듯 지친 자세",
+    "en": "Tired, slumped at desk"
+  },
+  {
+    "name": "w1d2_card_fan",
+    "file": "assets/graphics/poses/stickman_w1d2_card_fan.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "삽화 카드 세 장을 부채처럼 펼쳐 보임",
+    "en": "Fanning out three illustration cards"
+  },
+  {
+    "name": "w1d2_card_hold",
+    "file": "assets/graphics/poses/stickman_w1d2_card_hold.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "삽화 카드를 가슴 앞에 들어 보임",
+    "en": "Holding an illustration card in front of the chest"
+  },
+  {
+    "name": "w1d2_mouth_a",
+    "file": "assets/graphics/poses/stickman_w1d2_mouth_a.png",
+    "expr": "mouth_a",
+    "facing": "front",
+    "ko": "입 모양 '아' — 턱을 세로로 최대 개방",
+    "en": "Mouth shape 'a' — jaw dropped wide"
+  },
+  {
+    "name": "w1d2_mouth_i",
+    "file": "assets/graphics/poses/stickman_w1d2_mouth_i.png",
+    "expr": "mouth_i",
+    "facing": "front",
+    "ko": "입 모양 '이' — 입술을 옆으로 활짝",
+    "en": "Mouth shape 'i' — lips pulled wide"
+  },
+  {
+    "name": "w1d2_mouth_o",
+    "file": "assets/graphics/poses/stickman_w1d2_mouth_o.png",
+    "expr": "mouth_o",
+    "facing": "front",
+    "ko": "입 모양 '오' — 입술을 동그랗게",
+    "en": "Mouth shape 'o' — lips rounded"
+  },
+  {
+    "name": "w1d2_mouth_u",
+    "file": "assets/graphics/poses/stickman_w1d2_mouth_u.png",
+    "expr": "mouth_u",
+    "facing": "front",
+    "ko": "입 모양 '우' — 입술을 작게 앞으로",
+    "en": "Mouth shape 'u' — lips small and forward"
+  },
+  {
+    "name": "w1d2_mouth_yeo",
+    "file": "assets/graphics/poses/stickman_w1d2_mouth_yeo.png",
+    "expr": "mouth_yeo",
+    "facing": "front",
+    "ko": "입 모양 '여' — ㅣ에서 ㅓ로 넘어가는 중간",
+    "en": "Mouth shape 'yeo' — mid glide from i to eo"
+  },
+  {
+    "name": "w1d2_surprise",
+    "file": "assets/graphics/poses/stickman_w1d2_surprise.png",
+    "expr": "mouth_o",
+    "facing": "front",
+    "ko": "두 손을 들고 놀란 자세 — '오!'",
+    "en": "Hands up in surprise — 'oh!'"
+  },
+  {
+    "name": "w24_walk_r_0",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_0.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r 0",
+    "en": "w24 walk r 0"
+  },
+  {
+    "name": "w24_walk_r_1",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_1.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r 1",
+    "en": "w24 walk r 1"
+  },
+  {
+    "name": "w24_walk_r_2",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_2.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r 2",
+    "en": "w24 walk r 2"
+  },
+  {
+    "name": "w24_walk_r_3",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_3.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r 3",
+    "en": "w24 walk r 3"
+  },
+  {
+    "name": "w24_walk_r_4",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_4.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r 4",
+    "en": "w24 walk r 4"
+  },
+  {
+    "name": "w24_walk_r_5",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_5.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r 5",
+    "en": "w24 walk r 5"
+  },
+  {
+    "name": "w24_walk_r_6",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_6.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r 6",
+    "en": "w24 walk r 6"
+  },
+  {
+    "name": "w24_walk_r_7",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_7.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r 7",
+    "en": "w24 walk r 7"
+  },
+  {
+    "name": "w24_walk_r_rev_0",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_rev_0.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r rev 0",
+    "en": "w24 walk r rev 0"
+  },
+  {
+    "name": "w24_walk_r_rev_1",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_rev_1.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r rev 1",
+    "en": "w24 walk r rev 1"
+  },
+  {
+    "name": "w24_walk_r_rev_2",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_rev_2.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r rev 2",
+    "en": "w24 walk r rev 2"
+  },
+  {
+    "name": "w24_walk_r_rev_3",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_rev_3.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r rev 3",
+    "en": "w24 walk r rev 3"
+  },
+  {
+    "name": "w24_walk_r_rev_4",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_rev_4.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r rev 4",
+    "en": "w24 walk r rev 4"
+  },
+  {
+    "name": "w24_walk_r_rev_5",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_rev_5.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r rev 5",
+    "en": "w24 walk r rev 5"
+  },
+  {
+    "name": "w24_walk_r_rev_6",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_rev_6.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r rev 6",
+    "en": "w24 walk r rev 6"
+  },
+  {
+    "name": "w24_walk_r_rev_7",
+    "file": "assets/graphics/poses/stickman_w24_walk_r_rev_7.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "w24 walk r rev 7",
+    "en": "w24 walk r rev 7"
+  },
+  {
+    "name": "walking",
+    "file": "assets/graphics/poses/stickman_walking.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "걷는 자세",
+    "en": "Walking"
+  },
+  {
+    "name": "waving",
+    "file": "assets/graphics/poses/stickman_waving.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "waving",
+    "en": "waving"
+  },
+  {
+    "name": "writing",
+    "file": "assets/graphics/poses/stickman_writing.png",
+    "expr": "neutral",
+    "facing": "right",
+    "ko": "책상에서 글씨 쓰는 자세",
+    "en": "Writing at a desk"
+  },
+  {
+    "name": "z_cheer",
+    "file": "assets/graphics/poses/stickman_z_cheer.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 두 팔 들고 환호",
+    "en": "Zolla cheering"
+  },
+  {
+    "name": "z_clap",
+    "file": "assets/graphics/poses/stickman_z_clap.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 박수",
+    "en": "Zolla clapping"
   },
   {
     "name": "z_explain",
@@ -32,20 +832,20 @@
     "en": "Zolla explaining, hand up"
   },
   {
-    "name": "z_strong",
-    "file": "assets/graphics/poses/stickman_z_strong.png",
-    "expr": "talk",
+    "name": "z_flex",
+    "file": "assets/graphics/poses/stickman_z_flex.png",
+    "expr": "happy",
     "facing": "front",
-    "ko": "졸라맨 주먹 불끈, 힘주기(된소리)",
-    "en": "Zolla tensing fists (tense sound)"
+    "ko": "졸라맨 알통 자랑(힘!) — 남성 시그니처",
+    "en": "Zolla flexing biceps (male signature)"
   },
   {
-    "name": "z_sit_think",
-    "file": "assets/graphics/poses/stickman_z_sit_think.png",
-    "expr": "neutral",
-    "facing": "right",
-    "ko": "졸라맨 앉아서 턱 괴고 생각",
-    "en": "Zolla sitting, thinking"
+    "name": "z_hero",
+    "file": "assets/graphics/poses/stickman_z_hero.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 허리에 손, 당당한 히어로 포즈",
+    "en": "Zolla hands on hips, hero stance"
   },
   {
     "name": "z_jump",
@@ -54,6 +854,22 @@
     "facing": "front",
     "ko": "졸라맨 번쩍 점프(신남)",
     "en": "Zolla jumping up"
+  },
+  {
+    "name": "z_lean",
+    "file": "assets/graphics/poses/stickman_z_lean.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 몸 기울여 설명",
+    "en": "Zolla leaning to explain"
+  },
+  {
+    "name": "z_point_l",
+    "file": "assets/graphics/poses/stickman_z_point_l.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 왼쪽 가리키며 설명",
+    "en": "Zolla pointing left"
   },
   {
     "name": "z_point_l2",
@@ -72,6 +888,22 @@
     "en": "Zolla left hand pointing up-left"
   },
   {
+    "name": "z_point_r",
+    "file": "assets/graphics/poses/stickman_z_point_r.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 오른쪽 힘차게 가리키며 설명",
+    "en": "Zolla pointing right"
+  },
+  {
+    "name": "z_present",
+    "file": "assets/graphics/poses/stickman_z_present.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 두 팔 벌려 발표",
+    "en": "Zolla presenting, arms open"
+  },
+  {
     "name": "z_sit_left",
     "file": "assets/graphics/poses/stickman_z_sit_left.png",
     "expr": "neutral",
@@ -80,19 +912,371 @@
     "en": "Zolla sitting, angled left"
   },
   {
-    "name": "z_flex",
-    "file": "assets/graphics/poses/stickman_z_flex.png",
-    "expr": "happy",
-    "facing": "front",
-    "ko": "졸라맨 알통 자랑(힘!) — 남성 시그니처",
-    "en": "Zolla flexing biceps (male signature)"
+    "name": "z_sit_think",
+    "file": "assets/graphics/poses/stickman_z_sit_think.png",
+    "expr": "neutral",
+    "facing": "right",
+    "ko": "졸라맨 앉아서 턱 괴고 생각",
+    "en": "Zolla sitting, thinking"
   },
   {
-    "name": "z_hero",
-    "file": "assets/graphics/poses/stickman_z_hero.png",
+    "name": "z_strong",
+    "file": "assets/graphics/poses/stickman_z_strong.png",
+    "expr": "talk",
+    "facing": "front",
+    "ko": "졸라맨 주먹 불끈, 힘주기(된소리)",
+    "en": "Zolla tensing fists (tense sound)"
+  },
+  {
+    "name": "z_think",
+    "file": "assets/graphics/poses/stickman_z_think.png",
+    "expr": "neutral",
+    "facing": "right",
+    "ko": "졸라맨 턱에 손, 생각/듣기",
+    "en": "Zolla thinking/listening"
+  },
+  {
+    "name": "z_thumb",
+    "file": "assets/graphics/poses/stickman_z_thumb.png",
     "expr": "happy",
     "facing": "front",
-    "ko": "졸라맨 허리에 손, 당당한 히어로 포즈",
-    "en": "Zolla hands on hips, hero stance"
+    "ko": "졸라맨 엄지 척",
+    "en": "Zolla thumbs up"
+  },
+  {
+    "name": "z_tissue",
+    "file": "assets/graphics/poses/stickman_z_tissue.png",
+    "expr": "talk",
+    "facing": "front",
+    "ko": "졸라맨 손을 입 앞에 (휴지 실험)",
+    "en": "Zolla hand at mouth (tissue test)"
+  },
+  {
+    "name": "z_wave",
+    "file": "assets/graphics/poses/stickman_z_wave.png",
+    "expr": "happy",
+    "facing": "front",
+    "ko": "졸라맨 손 흔들며 인사",
+    "en": "Zolla waving hello"
+  },
+  {
+    "name": "zg_explain",
+    "file": "assets/graphics/poses/stickman_zg_explain.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 explain",
+    "en": "explain"
+  },
+  {
+    "name": "zg_look",
+    "file": "assets/graphics/poses/stickman_zg_look.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 look",
+    "en": "look"
+  },
+  {
+    "name": "zg_look_front",
+    "file": "assets/graphics/poses/stickman_zg_look_front.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 look front",
+    "en": "look front"
+  },
+  {
+    "name": "zg_point_right",
+    "file": "assets/graphics/poses/stickman_zg_point_right.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 point right",
+    "en": "point right"
+  },
+  {
+    "name": "zg_sig_jump",
+    "file": "assets/graphics/poses/stickman_zg_sig_jump.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 sig jump",
+    "en": "sig jump"
+  },
+  {
+    "name": "zg_sig_thinker",
+    "file": "assets/graphics/poses/stickman_zg_sig_thinker.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 sig thinker",
+    "en": "sig thinker"
+  },
+  {
+    "name": "zg_sit_front",
+    "file": "assets/graphics/poses/stickman_zg_sit_front.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 sit front",
+    "en": "sit front"
+  },
+  {
+    "name": "zg_sit_read",
+    "file": "assets/graphics/poses/stickman_zg_sit_read.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 sit read",
+    "en": "sit read"
+  },
+  {
+    "name": "zg_sit_think",
+    "file": "assets/graphics/poses/stickman_zg_sit_think.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 sit think",
+    "en": "sit think"
+  },
+  {
+    "name": "zg_walk1",
+    "file": "assets/graphics/poses/stickman_zg_walk1.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 walk1",
+    "en": "walk1"
+  },
+  {
+    "name": "zg_walk2",
+    "file": "assets/graphics/poses/stickman_zg_walk2.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 walk2",
+    "en": "walk2"
+  },
+  {
+    "name": "zg_write_dn",
+    "file": "assets/graphics/poses/stickman_zg_write_dn.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 write dn",
+    "en": "write dn"
+  },
+  {
+    "name": "zg_write_mid",
+    "file": "assets/graphics/poses/stickman_zg_write_mid.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 write mid",
+    "en": "write mid"
+  },
+  {
+    "name": "zg_write_up",
+    "file": "assets/graphics/poses/stickman_zg_write_up.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라걸 write up",
+    "en": "write up"
+  },
+  {
+    "name": "zm_base",
+    "file": "assets/graphics/poses/stickman_zm_base.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 base",
+    "en": "base"
+  },
+  {
+    "name": "zm_bowing",
+    "file": "assets/graphics/poses/stickman_zm_bowing.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 bowing",
+    "en": "bowing"
+  },
+  {
+    "name": "zm_cheering",
+    "file": "assets/graphics/poses/stickman_zm_cheering.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 cheering",
+    "en": "cheering"
+  },
+  {
+    "name": "zm_clapping",
+    "file": "assets/graphics/poses/stickman_zm_clapping.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 clapping",
+    "en": "clapping"
+  },
+  {
+    "name": "zm_jumping",
+    "file": "assets/graphics/poses/stickman_zm_jumping.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 jumping",
+    "en": "jumping"
+  },
+  {
+    "name": "zm_point_l",
+    "file": "assets/graphics/poses/stickman_zm_point_l.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 point l",
+    "en": "point l"
+  },
+  {
+    "name": "zm_point_r",
+    "file": "assets/graphics/poses/stickman_zm_point_r.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 point r",
+    "en": "point r"
+  },
+  {
+    "name": "zm_pointing",
+    "file": "assets/graphics/poses/stickman_zm_pointing.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 pointing",
+    "en": "pointing"
+  },
+  {
+    "name": "zm_reading",
+    "file": "assets/graphics/poses/stickman_zm_reading.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 reading",
+    "en": "reading"
+  },
+  {
+    "name": "zm_sitting",
+    "file": "assets/graphics/poses/stickman_zm_sitting.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 sitting",
+    "en": "sitting"
+  },
+  {
+    "name": "zm_sitting_left",
+    "file": "assets/graphics/poses/stickman_zm_sitting_left.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 sitting left",
+    "en": "sitting left"
+  },
+  {
+    "name": "zm_studying",
+    "file": "assets/graphics/poses/stickman_zm_studying.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 studying",
+    "en": "studying"
+  },
+  {
+    "name": "zm_thinking",
+    "file": "assets/graphics/poses/stickman_zm_thinking.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 thinking",
+    "en": "thinking"
+  },
+  {
+    "name": "zm_waving",
+    "file": "assets/graphics/poses/stickman_zm_waving.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라맨 waving",
+    "en": "waving"
+  },
+  {
+    "name": "zw_base",
+    "file": "assets/graphics/poses/stickman_zw_base.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라우먼 base",
+    "en": "base"
+  },
+  {
+    "name": "zw_cheering",
+    "file": "assets/graphics/poses/stickman_zw_cheering.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라우먼 cheering",
+    "en": "cheering"
+  },
+  {
+    "name": "zw_clapping",
+    "file": "assets/graphics/poses/stickman_zw_clapping.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라우먼 clapping",
+    "en": "clapping"
+  },
+  {
+    "name": "zw_jumping",
+    "file": "assets/graphics/poses/stickman_zw_jumping.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라우먼 jumping",
+    "en": "jumping"
+  },
+  {
+    "name": "zw_point_l",
+    "file": "assets/graphics/poses/stickman_zw_point_l.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라우먼 point l",
+    "en": "point l"
+  },
+  {
+    "name": "zw_raising_hand",
+    "file": "assets/graphics/poses/stickman_zw_raising_hand.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라우먼 raising hand",
+    "en": "raising hand"
+  },
+  {
+    "name": "zw_reading",
+    "file": "assets/graphics/poses/stickman_zw_reading.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라우먼 reading",
+    "en": "reading"
+  },
+  {
+    "name": "zw_sitting",
+    "file": "assets/graphics/poses/stickman_zw_sitting.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라우먼 sitting",
+    "en": "sitting"
+  },
+  {
+    "name": "zw_sitting_r",
+    "file": "assets/graphics/poses/stickman_zw_sitting_r.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라우먼 sitting r",
+    "en": "sitting r"
+  },
+  {
+    "name": "zw_studying",
+    "file": "assets/graphics/poses/stickman_zw_studying.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라우먼 studying",
+    "en": "studying"
+  },
+  {
+    "name": "zw_thinking",
+    "file": "assets/graphics/poses/stickman_zw_thinking.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라우먼 thinking",
+    "en": "thinking"
+  },
+  {
+    "name": "zw_waving",
+    "file": "assets/graphics/poses/stickman_zw_waving.png",
+    "expr": "neutral",
+    "facing": "front",
+    "ko": "졸라우먼 waving",
+    "en": "waving"
   }
 ]

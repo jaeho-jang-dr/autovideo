@@ -43,9 +43,9 @@ def collect(args):
 
 
 class GridViewer:
-    def __init__(self, files):
+    def __init__(self, files, thumb=120):
         self.files = files
-        self.thumb = 120
+        self.thumb = max(60, min(360, int(thumb)))
         self.sel = 0
         self._thumbcache = {}
         self._btns = {}
@@ -188,7 +188,16 @@ class GridViewer:
 
 
 if __name__ == "__main__":
-    files = collect(sys.argv[1:])
+    # --thumb N : 왼쪽 썸네일을 처음부터 크게 띄운다 (안 주면 120)
+    argv, thumb = [], 120
+    it = iter(range(len(sys.argv[1:])))
+    args = sys.argv[1:]
+    i = 0
+    while i < len(args):
+        if args[i] == "--thumb" and i + 1 < len(args):
+            thumb = int(args[i + 1]); i += 2; continue
+        argv.append(args[i]); i += 1
+    files = collect(argv)
     if not files:
         print("표시할 이미지 없음"); sys.exit(1)
-    GridViewer(files)
+    GridViewer(files, thumb)

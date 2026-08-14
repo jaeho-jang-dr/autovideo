@@ -75,7 +75,18 @@ def make_one(key):
                 break
         if not done:
             raise RuntimeError("file input 주입 실패")
-        pg.wait_for_timeout(25000)
+
+        # ★고정 25초를 세지 않는다 (사장님 2026-08-13 "가이드 이미지 띄울 때 50초 걸린다").
+        #   업로드가 반영되면 **미디어 타일이 뜬다** — 그걸 보고 바로 넘어간다.
+        #   ※ 타일 판별은 검증된 `flow_cdp_pipeline.media_tiles()` 를 그대로 쓴다.
+        #     처음엔 blob:/data-testid 로 직접 찾았는데 하나도 안 걸려 상한 25초를
+        #     꽉 채웠다(2026-08-13). Flow 는 googleusercontent 주소로 그린다.
+        t0 = time.time()
+        for _ in range(50):
+            if P.media_tiles(pg):
+                break
+            pg.wait_for_timeout(500)
+        log("    업로드 반영 %.1f초" % (time.time() - t0))
 
         log("  [2-2] '+' → 프롬프트에 추가")
         plus = pg.locator("button").filter(has_text=re.compile("add_2")).filter(
@@ -83,12 +94,17 @@ def make_one(key):
         if plus.count() == 0:
             raise RuntimeError("'+' 버튼 없음")
         plus.click(timeout=15000)
-        pg.wait_for_timeout(2800)
-        w = pg.evaluate("""() => { for (const e of document.querySelectorAll('button')) {
-            const t=(e.innerText||'').trim(); const b=e.getBoundingClientRect();
-            if(b.width>200 && t==='프롬프트에 추가'){ e.click(); return Math.round(b.width); } }
-            return 0; }""")
-        pg.wait_for_timeout(2500)
+        # '프롬프트에 추가'(넓은 단추)가 뜰 때까지만 기다린다 — 고정 2.8초가 아니라
+        w = 0
+        for _ in range(20):
+            pg.wait_for_timeout(300)
+            w = pg.evaluate("""() => { for (const e of document.querySelectorAll('button')) {
+                const t=(e.innerText||'').trim(); const b=e.getBoundingClientRect();
+                if(b.width>200 && t==='프롬프트에 추가'){ e.click(); return Math.round(b.width); } }
+                return 0; }""")
+            if w:
+                break
+        pg.wait_for_timeout(1200)
         n = pg.evaluate("""() => { const box=document.querySelector("div[role='textbox'][contenteditable='true']");
             if(!box) return -1; let p=box.parentElement;
             for(let i=0;i<5&&p;i++,p=p.parentElement){ const c=p.querySelectorAll('img').length; if(c) return c; }

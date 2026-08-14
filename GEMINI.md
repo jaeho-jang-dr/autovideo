@@ -43,12 +43,13 @@
     - **효과음(SFX)**: 장면 전환 시점의 슉(whoosh), 딱(pop) 등의 오디오 사운드 임팩트를 믹싱합니다.
     - **4K 출력**: 유튜브의 선명한 코덱(VP09) 혜택을 받기 위해, 내보내기 시 **4K(3840x2160) 해상도로 강제 업스케일링**하여 최종 렌더링합니다.
 
-### 3. 4대 전담 에이전트 및 4대 구글 Flow(Veo) 생성 스크립트 표준
-- **4대 전담 에이전트 역할 분담 (전역 별칭 매핑)**:
+### 3. 5대 전담 에이전트 및 4대 구글 Flow(Veo) 생성 스크립트 표준
+- **5대 전담 에이전트 역할 분담 (전역 별칭 매핑)**:
   - **Movie Agent (무비랑 / Movie-Rang)**: Playwright `locator.click()` 및 Last Image Transition 기법으로 비디오 클립 생성/다운로드 제어, 오디오-비디오 믹싱, 1차/2차 렌더링 및 `patch_scene.py` 부분 렌더링 관장.
   - **Text / Drawing Agent (글씨랑 / Text-Rang)**: 파라메트릭 Cafe24Dongdong 한글 글자 드로잉, 캐릭터 반대편 자막/어노테이션 상자 배치 및 자막 오버레이.
   - **Cut / Scene Agent (컷랑 / Cut-Rang)**: 대본 씬 분할(5초/4초 단위), 18개 핵심 키프레임 선(先)생성 앵커 설계, 카메라 앵글 연출, 캐릭터 동선(Z 좌표) 블로킹.
   - **YouTube Agent (유튜브랑 / YouTube-Rang)**: 유튜브 업로드, SRT 자막 등록, 아웃트로 추천 카드/최종 화면, 댓글 핀 고정, AI 생성물 공개 표시 관리.
+  - **Interact Agent (인터액트랑 / Interact-Rang)**: 캐릭터와 배경 요소, 캐릭터와 소품/오브젝트 간의 상호작용 연출(터치, 시선 추종, 물리적 충돌, 오토 컷아웃 결합) 기획 및 설계.
 - **4대 구글 Flow 에셋 자동 생성 스크립트**:
   - **`flow_make_clip.py`**: 캐릭터 동영상(Character Motion Video) 생성.
   - **`flow_make_pose.py`**: 캐릭터 스틸 포즈(Character Still Pose) 생성.
@@ -172,7 +173,8 @@ Antigravity + Claude Code
 | 2026-07-27 | `pending` | **W22 정밀 부분 렌더링(patch_scene) 보정 및 양방향 자막 교정앱 연동 완수** | W22 씬 11(우측 지시 포즈) & 씬 20(우측 시작 동선 및 글자 가림 해제) 부분 렌더링(patch_scene.py) 적용 완료, 번인 없는 깨끗한 MP4 복구 및 교정앱(review_lesson.py) 상향 자막 위치(video::cue bottom:65px) 및 양방향 자막(both) 모드 완수 버전. |
 | 2026-07-28 | `pending` | **글로벌 4대 에이전트 & 4대 구글 Flow 스크립트 아키텍처 수립 및 저장 완수** | Movie/Text/Cut/YouTube 4대 전담 에이전트와 flow_make_clip/pose/bgmv/bg 4대 Flow 생성 스크립트를 글로벌 스킬(`autovideo_agent_pipeline`)로 표준화 등록하고, 단일 에셋 생성 후 브라우저 세션 클린 리셋 원칙을 정립하여 라이브 저장 완료한 버전. |
 | 2026-08-03 | `pending` | **블랙 딥스페이스 다크 테마 완벽 복원 및 교정 리뷰앱/웹사이트 전면 반영** | 제작자 요청에 따라 웹사이트(Astro) 및 교정 리뷰 앱(review_lesson.py)을 본래의 고급스러운 다크 스페이스 블랙(#090a0f / #0b0d14) 테마로 원상 복구 완료한 버전. |
-| 2026-08-04 | `bad96bf` | **Azure TTS 구독 재활성화/키 정상 검증 & 애플 라이트 클린 테마 전면 개편 및 drjayed.com 커스텀 도메인 복구 완수** | MS/Azure 계정 비밀번호 재설정 및 구독 업그레이드로 정식 상용 Azure TTS Key 복구 및 검증 완료, Cloudflare DNS CNAME(drjayed.pages.dev / 76.76.21.21) 자동 복구로 drjayed.com 200 OK 접속 완수, 제작자 지시에 따라 웹사이트를 애플 스타일의 맑고 산뜻한 프리미엄 라이트 테마(#ffffff / #f5f5f7) 및 딥 차콜/블랙(#1d1d1f) 고대비 타이포그래피로 전면 전환 완료한 버전. |
+| 2026-08-14 | `pending` | **W1-2 기본 모음 6관절 모션 엔진 & 컷 라이브러리 구축** | W1-2 기본 모음 에피소드 스틱맨 6관절 컷 라이브러리(motion6_defs.py, cut_motion6.py) 및 배경 연출/동선 엔진(bg_defs.py) 구축, 씬 타임라인 설계 및 포즈 매니페스트 동기화 완료 버전. |
+
 
 
 

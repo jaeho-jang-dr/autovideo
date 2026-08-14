@@ -1,18 +1,33 @@
-# W1-2 시나리오 — 모음으로 만드는 첫 단어 (광화문광장) [22씬 · 약 7분]
+# W1-2 시나리오 — 모음의 확장 (광화문광장) [26씬 · 7분 58초]
 
 > **강의** W1-2 · 1주차 **Day 2 = 어휘 확장** · 초급
-> **제목(KO)** 모음으로 만드는 첫 단어 ／ **(EN)** First Words from Vowels
+> **제목(KO)** 모음만으로 만드는 첫 단어 ／ **(EN)** First Words Made of Vowels Alone
 > **배경** 광화문광장 (`korea_lesson_places.json` week1/day2)
-> **캐릭터** 스틱맨 단독
-> **단어 7개** 아이 · 이 · 오이 · 우유 · 오 · 아우 · **여우**
+> **캐릭터** 스틱맨(선생) · 졸라맨 · 졸라걸 — 3인
+> **단어 7개 + 보너스 1** 아이 · 이 · 오이 · 우유 · 오 · 아우 · 여우 ＋ **야외**
+
+## ★이 판을 새로 쓴 이유 (사장님 지시 2026-08-11)
+
+> "스틱맨이 제일 잘 못 움직일 거라는 선입견을 없애는 강좌가 되면 좋겠다.
+>  달리고 걷고 앉고 서고 기대고 만지고 살펴보고, 다른 캐릭터와 상호작용도 하고,
+>  왼편에서 설명하다가 화면 중간으로 달려가 우측 끝 먼 곳에서 사라지기도 하고,
+>  작아졌다가 돌아 달려 나오면서 커지기도 하고, 앞구르기·백플립도 하고."
+
+**교육 내용은 그대로, 연출을 통째로 바꿨다.** 스틱맨이 한자리에 서서 설명하지 않는다.
+광장을 무대 삼아 **단어를 찾아 뛰어다니고**, 물건을 집고, 계단·벤치·난간에 몸을 걸고,
+동료 둘과 주고받는다. 동작 대본은 한 벌인 `W1_2/W1_2_motion.md` 에 있다.
 
 ## 근거 자료 (셋을 겹쳐서 만들었다)
 
 | 출처 | 가져온 것 |
 |---|---|
-| 웹 `hangeul_w1d2_notes_ko.md` · `slides.pdf`(9쪽) | 9섹션 뼈대 · 6단어 · 나레이션 어투 |
-| NotebookLM「한글 교육」 Day2 설계 | **활동 2가지**(삽화 매칭 · 음절 끊어 읽기) · **여우** 추가 |
-| 노트북 메모 9개 | 레고 블록 · 컬러 코딩(양성 난색/음성 한색) · 음절 상자 |
+| 웹 `hangeul_w1d2_notes_ko.md` · `hangeul_w1d2_slides.pdf`(9쪽) | 9섹션 뼈대 · 단어 6개 · 나레이션 어투 |
+| NotebookLM「한글 교육: 자음과 모음의 과학적 원리 및 발음법」 W1-2 답변 | **손가락 개구도** 표현 · 모음만 단어 목록(**여우·야외** 추가) · 무음 ㅇ = 자리 표시자 · **국립국어원·세종학당 학습 순서** |
+| 같은 노트북 메모 9개 | 레고 블록 스냅 · 음양 컬러 코딩(양성 난색/음성 한색/중성 무채색) · 음절 상자 |
+
+**단어 순서** — 교재 표준 순서는 `아이→오이→이→오→우유→여우→아우` 이지만,
+이 판은 **무대 이동 순서**(계단→좌판→분수→벤치→산책로)를 우선했다.
+좌판에 오이·우유가 함께 있고 분수에서 "오!"가 터지는 편이 화면에서 훨씬 자연스럽다.
 
 ## ★경계 — 옆날을 침범하지 않는다
 
@@ -20,74 +35,99 @@
 |---|---|
 | **Day 2 (오늘)** | **어휘.** 그림↔글자 잇기, 음절 끊어 읽기 |
 | Day 3 | ㅇ+모음 결합 규칙 · 좌우/상하 결합 → **오늘은 한 줄만 짚고 넘어간다** |
-| Day 4 | ㅓ/ㅗ, ㅡ/ㅜ 발음 대조 → **오늘은 깊이 들어가지 않는다** |
+| Day 4 | ㅓ/ㅗ, ㅡ/ㅜ 발음 대조와 교정법 → **오늘은 입 모양만 보여주고 파고들지 않는다** |
 | Day 5 | 3초 발성 드릴 · Day 6 획순 쓰기 · Day 7 평가 |
 
 ---
 
 ## 0. 원칙
 
-1. **자음을 가르치지 않는다.** 소리는 전부 모음이다
+1. **자음을 가르치지 않는다.** 오늘 나는 소리는 전부 모음이다
 2. **그림과 소리로 익힌다** — 단어마다 **삽화 카드**를 글자 옆에 붙인다(1:1 매칭)
 3. **음절을 끊어 읽는다** — 블록 두 개가 스냅으로 붙는 모션과 함께
 4. **컬러 코딩** — 양성(ㅏㅗ)=난색, 음성(ㅓㅜ)=한색, 중성(ㅣ)=무채색·반투명
-5. 한 씬 = 나레이션 한 덩어리. 동작은 나레이션과 1:1
-6. 글자는 인물 반대편. 자막은 5개국어 소프트(번인 금지)
+5. 한 씬 = 나레이션 한 덩어리. **동작은 나레이션과 1:1**
+6. 글자는 인물 반대편. 자막은 5개국어 소프트(**번인 금지**)
+7. ★**글자는 늘 같은 자리에 뜬다** — 화면 **상반부**, **가로 중앙**, **최대 세 줄**.
+   보는 사람의 눈이 매번 같은 곳을 찾게 하려는 것이다(§0-B).
+   캐릭터는 글자를 피해 다니지 않는다 — 글자가 떠 있으면 **아래로 지나가거나,
+   구르거나, 멀어져 작아지면** 된다. 캐릭터·글자·배경에 구역 제한을 두지 않는다
 
-## 0-B. 화면 구성
+## 0-B. 화면 구성 — 글자 자리 (사장님 확정 2026-08-12)
+
+> "글자는 일관성 있게 늘 있는 위치에 있어야 보는 사람 눈에 보이니, 글자의 위치는
+>  화면의 **상 1/2** 에 준하고 **좌우에 너무 치우치지 않게** 하고 **세 줄까지** 되게 정하자."
 
 ```
-┌──────────────────────────────────────┐
-│ ┌────────────┐                       │
-│ │ 씬 핵심     │      광화문광장         │
-│ │ 텍스트박스   │                       │
-│ └────────────┘         스틱맨          │
-│      [삽화카드] + 파라메트릭 한글        │
-│         (자막 = 소프트 srt 5개국어)      │
-└──────────────────────────────────────┘
+┌──────────────────────────────────────────────┐  y 0
+│                                              │
+│        씬 핵심 텍스트 · 파라메트릭 한글          │  ← 글자는 **여기에만**
+│        (가로 중앙 · 최대 세 줄)                 │     상반부 · 중앙
+│                                              │
+├ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┤  y 360  (화면 절반)
+│                                              │
+│      캐릭터가 좌우 어디든 자유롭게 움직인다        │
+│                                              │
+└──────────────────────────────────────────────┘  y 720
+        (자막 = 소프트 srt 5개국어, 별도)
 ```
 
-## 0-C. 배경 (2~3씬당 1개 · 왼편 비움)
+| 항목 | 값 |
+|---|---|
+| 세로 | **상반부** — `y 60 ~ 340` 안에 든다 |
+| 가로 | **중앙 정렬**(cx = 640) · 좌우 여백 대칭 · 폭 최대 880px(`x 200~1080`) |
+| 줄 수 | **최대 세 줄** |
 
-| 배경키 | 장면 | 씬 |
-|---|---|---|
-| `gwanghwamun_wide` | 광장 전경, 세종대왕 동상이 오른편 멀리 | S1–S3 |
-| `gwanghwamun_statue` | 동상 아래 계단 | S4–S6 |
-| `gwanghwamun_stall` | 광장 한켠 좌판 — 오이·우유가 놓임 | S7–S11 |
-| `gwanghwamun_bench` | 벤치와 화단 | S12–S16 |
-| `gwanghwamun_path` | 은행나무 산책로 | S17–S19 |
-| `gwanghwamun_dusk` | 해질녘, 광화문에 불이 들어옴 | S20–S22 |
+★**캐릭터에 구역 제한을 두지 않는다.** 글자가 떠 있는 동안에도 캐릭터는 화면 어디든
+간다 — 글자 아래로 지나가거나, 굴러서 빠지거나, 멀어져 작아지면 된다.
+글자와 겹치는 구간에서만 캐릭터를 글자 **뒤**(레이어 아래)로 넣는다.
+
+## 0-C. 배경 (3~4씬당 1개 · 왼편 비움 · 카메라 고정)
+
+| 배경키 | 종류 | 장면 | 씬 |
+|---|---|---|---|
+| `gwanghwamun_wide` | 동영상 | 광장 전경, 분수 줄이 차례로 솟는다 | S1–S4 |
+| `gwanghwamun_steps` | 정지 | 세종대왕 동상 아래 **넓은 계단**과 난간 | S5–S7 |
+| `gwanghwamun_stall` | 동영상 | 좌판 — **오이가 굴러오고 우유팩이 넘어진다** | S8–S12 |
+| `gwanghwamun_fountain` | 동영상 | 분수가 크게 솟구친다 | S13–S14 |
+| `gwanghwamun_bench` | 정지 ✅있음 | 긴 나무 벤치 + 낮은 돌난간 | S15–S18 |
+| `gwanghwamun_path` | 동영상 | 은행나무 산책로 — **여우가 고개를 내밀고 잎이 날린다** | S19–S22 |
+| `gwanghwamun_dusk` | 동영상 | 해질녘, 광화문 등이 하나씩 켜진다 | S23–S26 |
 
 ---
 
 ## 1. 씬 구성표
 
-| 씬 | 배경 | 초 | 누계 | 핵심 |
-|---|---|---:|---:|---|
-| S1 | wide | 18 | 0:18 | 인사 · 어제 배운 모음 8개 |
-| S2 | wide | 20 | 0:38 | 오늘은 그 모음만으로 **단어**를 만든다 |
-| S3 | wide | 18 | 0:56 | 소리 없는 ㅇ은 자리만 지킨다 (한 줄) |
-| S4 | statue | 22 | 1:18 | **아이** — 삽화 카드 등장 |
-| S5 | statue | 20 | 1:38 | 아이 — 음절 끊어 읽기 (블록 스냅) |
-| S6 | statue | 18 | 1:56 | **이** — 한 글자도 단어 |
-| S7 | stall | 22 | 2:18 | **오이** — 좌판의 초록 채소 |
-| S8 | stall | 20 | 2:38 | 오이 — 끊어 읽기 |
-| S9 | stall | 22 | 3:00 | **우유** — 하얀 우유 |
-| S10 | stall | 20 | 3:20 | 우유 — 끊어 읽기 |
-| S11 | stall | 18 | 3:38 | 아이·오이 — 뒷소리가 같다 |
-| S12 | bench | 18 | 3:56 | **오** — 놀랄 때 그 소리 |
-| S13 | bench | 22 | 4:18 | **아우** — 손아래 동생 |
-| S14 | bench | 20 | 4:38 | 아우 — 끊어 읽기 |
-| S15 | bench | 22 | 5:00 | **여우** — 숲의 여우 |
-| S16 | bench | 20 | 5:20 | 여우 — 끊어 읽기 |
-| S17 | path | 22 | 5:42 | 컬러 코딩 — 따뜻한 소리, 차가운 소리 |
-| S18 | path | 20 | 6:02 | 'ㅣ'는 무채색 — 누구와도 어울린다 |
-| S19 | path | 22 | 6:24 | **삽화 매칭 놀이** — 그림과 글자 잇기 |
-| S20 | dusk | 22 | 6:46 | 일곱 단어 한 번에 |
-| S21 | dusk | 20 | 7:06 | 거울 앞에서 또박또박 |
-| S22 | dusk | 18 | 7:24 | 다음 시간 예고 · 인사 |
+| 씬 | 배경 | 초 | 누계 | 핵심 | ★동작 하이라이트 |
+|---|---|---:|---:|---|---|
+| S1 | wide | 20 | 0:20 | 인사 · 어제의 모음 8개 | **소실점에서 달려 나오며 커진다** |
+| S2 | wide | 16 | 0:36 | 오늘은 모음만으로 단어 | **백플립** 착지에 글자가 튄다 |
+| S3 | wide | 14 | 0:50 | 소리 없는 ㅇ (한 줄) | 오른끝까지 달려가 **돌아서서** 가리킨다 |
+| S4 | wide | 12 | 1:02 | 단어 사냥을 나선다 | **앞구르기**로 굴러와 일어선다 |
+| S5 | steps | 22 | 1:24 | **아이** | 계단에 **걸터앉아** 카드 |
+| S6 | steps | 18 | 1:42 | 아이 — 끊어 읽기 | 계단을 **두 번 뛰어내리며** 아─이 |
+| S7 | steps | 18 | 2:00 | **이** | **난간을 잡고** 몸을 기울여 살핀다 |
+| S8 | stall | 22 | 2:22 | **오이** | 달려와 **쭈그려 앉아 집는다** |
+| S9 | stall | 18 | 2:40 | 오이 — 끊어 읽기 | 오이를 들고 일어서며 입 모양 |
+| S10 | stall | 20 | 3:00 | **우유** | 넘어지는 우유팩을 **손 뻗어 받는다** |
+| S11 | stall | 18 | 3:18 | 우유 — 끊어 읽기 | 우유팩을 들어 보인다 |
+| S12 | stall | 18 | 3:36 | 아이·오이 뒷소리가 같다 | **난간에 기대** 느긋하게 가리킨다 |
+| S13 | fountain | 22 | 3:58 | **오** | 물기둥에 놀라 **뒤로 백플립** 착지 |
+| S14 | fountain | 18 | 4:16 | 오 = 다섯 | 물방울 다섯을 **하나씩 짚는다** |
+| S15 | bench | 22 | 4:38 | **아우** — 졸라맨 등장 | 달려와 **옆에 앉아 어깨동무** |
+| S16 | bench | 18 | 4:56 | 아우 — 끊어 읽기 | 나란히 앉아 입 모양 · 블록이 **튕겼다 붙는다** |
+| S17 | bench | 16 | 5:12 | 컬러 코딩 | 졸라걸 뛰어와 **하이파이브** |
+| S18 | bench | 16 | 5:28 | 'ㅣ'는 무채색 | 셋이 **나란히 서서** ㅣ 자세 |
+| S19 | path | 22 | 5:50 | **여우** | **살금살금** 다가가 쭈그려 살핀다 |
+| S20 | path | 18 | 6:08 | 여우 — 끊어 읽기 | 여우가 숨자 **엉덩방아** |
+| S21 | path | 18 | 6:26 | 소리에는 온도가 있다 | 두 팔 벌려 좌우를 가른다 |
+| S22 | path | 18 | 6:44 | 'ㅣ'는 누구와도 어울린다 | 떨어지는 잎을 **점프해서 잡는다** |
+| S23 | dusk | 20 | 7:04 | **삽화 매칭 놀이** | 카드 부채 → 둘이 **한 장씩 받아 간다** |
+| S24 | dusk | 22 | 7:26 | 일곱 단어 + **야외** | 셋이 **동시에 손을 든다** |
+| S25 | dusk | 14 | 7:40 | 복습 과제 | 거울을 든다 |
+| S26 | dusk | 18 | 7:58 | 예고 · 인사 | ★**달려 나가 저 멀리 소실점으로 사라진다** |
 
-**총 22씬 · 7분 24초**
+**총 26씬 · 7분 58초**
 
 ---
 
@@ -100,9 +140,8 @@
 **화면 한글** ㅏ ㅓ ㅗ ㅜ ㅡ ㅣ ㅐ ㅔ
 
 ### S2 `gwanghwamun_wide` — 오늘의 목표
-**KO** 오늘은 그 모음만으로 만드는 아주 쉬운 첫 단어들을 함께 익혀 봐요.
-자음은 하나도 쓰지 않습니다.
-**EN** Today we'll learn the very first words made from those vowels alone. Not a single consonant.
+**KO** 오늘은 그 모음만으로 단어를 만들어 볼 거예요. 자음은 하나도 쓰지 않습니다.
+**EN** Today we'll build whole words from those vowels alone. Not a single consonant.
 **텍스트박스** 모음만으로 만드는 단어
 **화면 한글** 모음 + 모음 = 단어
 
@@ -110,122 +149,143 @@
 **KO** 글자를 쓸 때 앞자리에 동그라미 ㅇ이 앉지만, 소리는 나지 않아요. 자리만 지키는 빈 의자랍니다.
 **EN** When we write, a small circle ㅇ sits in front — but it makes no sound. It just holds the seat.
 **텍스트박스** ㅇ = 소리 없는 자리
-**화면 한글** 아 = ㅇ + ㅏ
+**화면 한글** 아 = ㅇ + ㅏ ← ㅇ은 회색
 
-### S4 `gwanghwamun_statue` — 아이
+### S4 `gwanghwamun_wide` — 단어 사냥
+**KO** 자, 광장으로 나가 볼까요? 오늘의 단어들이 이 광장 곳곳에 숨어 있어요.
+**EN** Shall we head out into the plaza? Today's words are hiding all around it.
+**텍스트박스** 오늘의 단어 7개
+**화면 한글** 아이 · 이 · 오이 · 우유 · 오 · 아우 · 여우
+
+### S5 `gwanghwamun_steps` — 아이
 **KO** 첫 번째 단어, 아이. 어린아이를 뜻하는 말이에요. 받침 없이 ㅏ와 ㅣ, 모음 두 개로만 이루어졌어요.
 **EN** Our first word — 아이. It means a child. Just two vowels, ㅏ and ㅣ, and no batchim.
 **텍스트박스** 아이 (a child)
 **화면 한글** 아이 · **삽화** 아이 그림 카드
 
-### S5 `gwanghwamun_statue` — 아이 끊어 읽기
-**KO** 끊어서 두 번. 아 — 이. 이제 붙여서 한 번. 아이. 따라 해 보세요.
-**EN** Break it in two. 아 — 이. Now together. 아이. Say it with me.
+### S6 `gwanghwamun_steps` — 아이 끊어 읽기
+**KO** 계단을 내려오듯 끊어서 두 번. 아 — 이. 이제 붙여서 한 번. 아이. 따라 해 보세요.
+**EN** Step down through it, one at a time. 아 — 이. Now together. 아이. Say it with me.
 **텍스트박스** 아 + 이 → 아이
 **화면 한글** 아│이 → 아이 (블록 스냅)
 
-### S6 `gwanghwamun_statue` — 이
+### S7 `gwanghwamun_steps` — 이
 **KO** 두 번째, 이. 입을 옆으로 활짝 당겨 내는 ㅣ 하나면 단어가 돼요. 우리 몸의 이, 바로 치아를 뜻하지요.
 **EN** Second — 이. A single ㅣ, lips pulled wide, is already a word. It means a tooth.
 **텍스트박스** 이 (a tooth)
 **화면 한글** 이 · **삽화** 치아 그림 카드
 
-### S7 `gwanghwamun_stall` — 오이
-**KO** 세 번째, 오이. 아삭아삭한 초록 채소죠. ㅗ와 ㅣ, 역시 모음 두 개예요.
-**EN** Third — 오이, a crunchy green cucumber. Again two vowels, ㅗ and ㅣ.
+### S8 `gwanghwamun_stall` — 오이
+**KO** 어? 뭐가 굴러오네요. 세 번째 단어, 오이예요. 아삭아삭한 초록 채소죠. ㅗ와 ㅣ, 역시 모음 두 개예요.
+**EN** Oh — something's rolling this way. Our third word: 오이, a crunchy green cucumber. Again two vowels, ㅗ and ㅣ.
 **텍스트박스** 오이 (a cucumber)
 **화면 한글** 오이 · **삽화** 오이 그림 카드
 
-### S8 `gwanghwamun_stall` — 오이 끊어 읽기
+### S9 `gwanghwamun_stall` — 오이 끊어 읽기
 **KO** 입술을 동그랗게 모았다가 옆으로 당기며. 오 — 이. 오이.
 **EN** Round your lips, then pull them wide. 오 — 이. 오이.
 **텍스트박스** 오 + 이 → 오이
 **화면 한글** 오│이 → 오이 (블록 스냅)
 
-### S9 `gwanghwamun_stall` — 우유
-**KO** 네 번째, 우유. 하얗고 고소한 우유예요. ㅜ와 ㅠ, 둘 다 입술을 동그랗게 내미는 소리죠.
-**EN** Fourth — 우유, sweet white milk. Both ㅜ and ㅠ push the lips forward and round.
+### S10 `gwanghwamun_stall` — 우유
+**KO** 저건 놓치면 안 되겠네요! 네 번째, 우유. 하얗고 고소한 우유예요. ㅜ와 ㅠ, 둘 다 입술을 동그랗게 내미는 소리죠.
+**EN** Careful — don't let that one fall! Fourth: 우유, sweet white milk. Both ㅜ and ㅠ push the lips forward and round.
 **텍스트박스** 우유 (milk)
 **화면 한글** 우유 · **삽화** 우유팩 그림 카드
 
-### S10 `gwanghwamun_stall` — 우유 끊어 읽기
+### S11 `gwanghwamun_stall` — 우유 끊어 읽기
 **KO** 천천히. 우 — 유. 우유.
 **EN** Slowly now. 우 — 유. 우유.
 **텍스트박스** 우 + 유 → 우유
 **화면 한글** 우│유 → 우유 (블록 스냅)
 
-### S11 `gwanghwamun_stall` — 뒷소리가 같다
+### S12 `gwanghwamun_stall` — 뒷소리가 같다
 **KO** 아이와 오이. 뒷소리가 같지요? 둘 다 이로 끝나요. 앞소리 하나가 바뀌면 뜻이 달라집니다.
 **EN** 아이 and 오이 — same ending, both end in 이. Change one sound in front and the meaning changes.
 **텍스트박스** 아이 ↔ 오이
 **화면 한글** 아**이** · 오**이**
 
-### S12 `gwanghwamun_bench` — 오
-**KO** 다섯 번째, 오. 놀랄 때 오! 하고 내는 그 소리, 그대로 단어가 돼요. 숫자 다섯이기도 하지요.
-**EN** Fifth — 오. The sound you make when surprised, 오!, is itself a word. It also means five.
-**텍스트박스** 오 (oh! / five)
-**화면 한글** 오 · **삽화** 손가락 다섯 그림 카드
+### S13 `gwanghwamun_fountain` — 오
+**KO** 우와! 다섯 번째, 오. 놀랄 때 오! 하고 내는 그 소리, 그대로 단어가 돼요.
+**EN** Whoa! Fifth — 오. The sound you make when you're surprised, 오!, is itself a word.
+**텍스트박스** 오 (oh!)
+**화면 한글** 오 · **삽화** 놀란 얼굴 카드
 
-### S13 `gwanghwamun_bench` — 아우
-**KO** 여섯 번째, 아우. 손아래 동생을 다정하게 부르는 말이에요.
-**EN** Sixth — 아우, a warm word for a younger sibling.
+### S14 `gwanghwamun_fountain` — 오 = 다섯
+**KO** 그리고 오는 숫자 다섯이기도 해요. 하나, 둘, 셋, 넷, 다섯 — 오!
+**EN** And 오 also means the number five. One, two, three, four, five — 오!
+**텍스트박스** 오 (five)
+**화면 한글** 오 = 5 · **삽화** 손가락 다섯 그림 카드
+
+### S15 `gwanghwamun_bench` — 아우
+**KO** 벤치에 누가 앉아 있네요. 여섯 번째 단어, 아우. 손아래 동생을 다정하게 부르는 말이에요.
+**EN** Someone's sitting on the bench. Sixth word — 아우, a warm word for a younger sibling.
 **텍스트박스** 아우 (younger sibling)
 **화면 한글** 아우 · **삽화** 형제 그림 카드
 
-### S14 `gwanghwamun_bench` — 아우 끊어 읽기
+### S16 `gwanghwamun_bench` — 아우 끊어 읽기
 **KO** ㅏ에서 ㅜ로. 입을 크게 열었다 동그랗게 모으며. 아 — 우. 아우.
 **EN** From ㅏ to ㅜ. Open wide, then round. 아 — 우. 아우.
 **텍스트박스** 아 + 우 → 아우
 **화면 한글** 아│우 → 아우 (블록 스냅)
 
-### S15 `gwanghwamun_bench` — 여우
-**KO** 일곱 번째, 여우. 숲에 사는 붉은 여우예요. 여와 우, 이것도 모음뿐이랍니다.
-**EN** Seventh — 여우, the red fox of the forest. 여 and 우 — vowels only again.
-**텍스트박스** 여우 (a fox)
-**화면 한글** 여우 · **삽화** 여우 그림 카드
-
-### S16 `gwanghwamun_bench` — 여우 끊어 읽기
-**KO** 여 — 우. 여우. 여는 ㅣ와 ㅓ가 빨리 이어진 소리예요. 지금은 한 소리로 익혀 두세요.
-**EN** 여 — 우. 여우. 여 is ㅣ sliding quickly into ㅓ. For now, just learn it as one sound.
-**텍스트박스** 여 + 우 → 여우
-**화면 한글** 여│우 → 여우 (블록 스냅)
-
-### S17 `gwanghwamun_path` — 컬러 코딩
-**KO** 소리에는 온도가 있어요. ㅏ와 ㅗ는 밝고 따뜻한 소리, ㅓ와 ㅜ는 어둡고 차가운 소리.
-같은 온도끼리 만나면 자석처럼 잘 붙습니다.
-**EN** Sounds have temperature. ㅏ and ㅗ are bright and warm; ㅓ and ㅜ are dark and cool.
-Same temperature, and they snap together like magnets.
+### S17 `gwanghwamun_bench` — 컬러 코딩
+**KO** 소리에도 온도가 있어요. ㅏ와 ㅗ는 밝고 따뜻한 소리, ㅓ와 ㅜ는 어둡고 차가운 소리랍니다.
+**EN** Sounds have a temperature too. ㅏ and ㅗ are bright and warm; ㅓ and ㅜ are dark and cool.
 **텍스트박스** 따뜻한 소리 · 차가운 소리
 **화면 한글** ㅏ ㅗ (난색) ／ ㅓ ㅜ (한색)
 
-### S18 `gwanghwamun_path` — 중성 ㅣ
-**KO** 그런데 ㅣ는 색이 없어요. 서 있는 사람을 본뜬 글자라서, 따뜻한 소리와도 차가운 소리와도
-사이좋게 어울립니다.
+### S18 `gwanghwamun_bench` — 중성 ㅣ
+**KO** 그런데 ㅣ는 색이 없어요. 서 있는 사람을 본뜬 글자라서, 따뜻한 소리와도 차가운 소리와도 사이좋게 어울립니다.
 **EN** But ㅣ has no colour. Shaped after a standing person, it gets along with warm and cool alike.
 **텍스트박스** ㅣ = 중립
 **화면 한글** ㅏ+ㅣ · ㅗ+ㅣ · ㅜ+ㅣ
 
-### S19 `gwanghwamun_path` — 삽화 매칭 놀이
+### S19 `gwanghwamun_path` — 여우
+**KO** 쉿… 덤불에 뭐가 있어요. 일곱 번째 단어, 여우. 숲에 사는 붉은 여우예요. 여와 우, 이것도 모음뿐이랍니다.
+**EN** Shh… something's in the bush. Seventh word — 여우, the red fox of the forest. 여 and 우 — vowels only again.
+**텍스트박스** 여우 (a fox)
+**화면 한글** 여우 · **삽화** 여우 그림 카드
+
+### S20 `gwanghwamun_path` — 여우 끊어 읽기
+**KO** 앗, 숨어 버렸네요. 여 — 우. 여우. 여는 ㅣ와 ㅓ가 빨리 이어진 소리예요. 지금은 한 소리로 익혀 두세요.
+**EN** Oh, it's gone. 여 — 우. 여우. 여 is ㅣ sliding quickly into ㅓ. For now, just learn it as one sound.
+**텍스트박스** 여 + 우 → 여우
+**화면 한글** 여│우 → 여우 (블록 스냅)
+
+### S21 `gwanghwamun_path` — 같은 온도끼리 붙는다
+**KO** 같은 온도끼리 만나면 자석처럼 잘 붙어요. 따뜻한 소리는 따뜻한 소리끼리, 차가운 소리는 차가운 소리끼리.
+**EN** Same temperature, and they snap together like magnets — warm with warm, cool with cool.
+**텍스트박스** 같은 온도끼리
+**화면 한글** ㅗ+ㅏ = ㅘ ／ ㅜ+ㅓ = ㅝ
+
+### S22 `gwanghwamun_path` — ㅣ는 누구와도
+**KO** ㅣ만은 예외예요. 따뜻한 쪽에도, 차가운 쪽에도 스르륵 붙습니다. 떨어지는 잎을 잡듯이요.
+**EN** Only ㅣ is the exception — it slips in on the warm side and the cool side alike. Like catching a falling leaf.
+**텍스트박스** ㅣ = 어디든
+**화면 한글** ㅏ+ㅣ = ㅐ ／ ㅓ+ㅣ = ㅔ
+
+### S23 `gwanghwamun_dusk` — 삽화 매칭 놀이
 **KO** 이제 맞춰 볼까요? 그림을 보고 단어를 말해 보세요. 초록 채소는? 하얀 음료는? 붉은 짐승은?
 **EN** Now let's match. Look at the picture and say the word. The green vegetable? The white drink? The red animal?
 **텍스트박스** 그림 ↔ 글자
 **화면 한글** 오이 · 우유 · 여우 (카드 3장)
 
-### S20 `gwanghwamun_dusk` — 모으기
+### S24 `gwanghwamun_dusk` — 모으기 + 야외
 **KO** 오늘 배운 일곱 단어를 모아 볼까요? 아이, 이, 오이, 우유, 오, 아우, 여우.
-모두 자음 없이 모음만으로 만든 단어랍니다.
+그리고 하나 더 — 우리가 하루 종일 있던 이곳, 야외. 이것도 모음뿐이에요!
 **EN** Let's gather today's seven words — 아이, 이, 오이, 우유, 오, 아우, 여우.
-Every one made of vowels alone.
-**텍스트박스** 오늘의 일곱 단어
-**화면 한글** 아이 이 오이 우유 오 아우 여우
+And one more: the place we spent all day — 야외, "outdoors". Vowels only, again!
+**텍스트박스** 오늘의 일곱 단어 + 야외
+**화면 한글** 아이 이 오이 우유 오 아우 여우 · **야외**
 
-### S21 `gwanghwamun_dusk` — 복습 과제
+### S25 `gwanghwamun_dusk` — 복습 과제
 **KO** 오늘 배운 단어를 거울 앞에서 또박또박 말해 보세요. 입 모양이 보이면 소리도 또렷해집니다.
 **EN** Practice today's words clearly in front of a mirror. When you can see the shape, the sound gets clearer.
 **텍스트박스** 거울 앞에서 연습
 **화면 한글** 아이 오이 우유
 
-### S22 `gwanghwamun_dusk` — 예고 · 인사
+### S26 `gwanghwamun_dusk` — 예고 · 인사
 **KO** 다음 시간엔 소리 없는 ㅇ에 모음을 붙여 글자 블록을 만들어 봐요. 또 만나요!
 **EN** Next time we'll join the silent ㅇ to a vowel and build syllable blocks. See you soon!
 **텍스트박스** 내일 — ㅇ + 모음

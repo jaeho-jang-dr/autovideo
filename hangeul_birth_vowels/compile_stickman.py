@@ -471,6 +471,47 @@ def load_img_flip(path):
     return _FLIPIM[path]
 
 
+def seq_scale(tt, dur, seq):
+    """★원근 이동 — 비트의 `s_from`→`s_to` 를 보간한 **배율 배수**(없으면 1.0).
+
+    소실점에서 달려 나오며 커지거나, 뒤로 물러나 작게 백플립을 도는 연출에 쓴다
+    (W1-2, 2026-08-12 사장님 지시 "큰 동작은 멀리서 작게").
+
+    ★`seq_state` 의 반환값을 늘리면 기존 호출부(W15~W24)가 전부 깨진다.
+      그래서 **함수를 따로 두고** 배율만 따로 묻는다 — 옛 시퀀스는 키가 없어 1.0 이다.
+    """
+    beats = load_sequence(seq)
+    if not beats:
+        return 1.0
+    total = sum(b["dur"] for b in beats) or 1.0
+    p = min(1.0, max(0.0, tt / dur)) * total
+    acc = 0.0
+    for b in beats:
+        d = b["dur"]
+        if p <= acc + d or b is beats[-1]:
+            local = min(1.0, max(0.0, (p - acc) / max(1e-6, d)))
+            # ★s_keys = [[0.0,배율],[0.5,배율],[1.0,배율]] — 한 비트 안에서 여러 번 꺾는다.
+            #   비트를 쪼개면 oneshot+fps 재생이 **절대시간**을 쓰는 탓에 뒤 비트가
+            #   마지막 프레임만 나온다(백플립이 반만 돌던 원인 · 2026-08-12).
+            #   그래서 **비트는 하나로 두고** 깊이 변화는 이 키로 표현한다.
+            ks = b.get("s_keys")
+            if ks:
+                for i in range(len(ks) - 1):
+                    t0, v0 = ks[i]
+                    t1, v1 = ks[i + 1]
+                    if local <= t1 or i == len(ks) - 2:
+                        u = (local - t0) / max(1e-6, t1 - t0)
+                        return float(v0) + (float(v1) - float(v0)) * _smooth(max(0.0, min(1.0, u)))
+                return float(ks[-1][1])
+            if b.get("s_from") is None and b.get("s_to") is None:
+                return 1.0
+            a = float(b.get("s_from", 1.0))
+            z = float(b.get("s_to", a))
+            return a + (z - a) * _smooth(local)
+        acc += d
+    return 1.0
+
+
 def seq_state(tt, dur, seq="teacher_board"):
     """동작선 재생 → (x_abs, pose_name). 이동 구간 x 보간, 포즈는 구간 내 순환."""
     beats = load_sequence(seq)
@@ -762,12 +803,29 @@ def compose(scene, t=None, lang="ko", overlay=True):
             # ★그룹 통짜 컷 시퀀스 — 시퀀스를 **오브젝트별로** 지정한다(W24, 2026-08-04 사장님 승인).
             # 씬 단위 anim_seq 로는 한 씬에 하나뿐이라 A·B·C 세 그룹이 동시에 앉는 씬을 못 그린다.
             # motion_type 에 'gseq:<시퀀스명>' 을 실어 보내며, 컷은 char_key='w24_grp' 에 모여 있다.
-            st = seq_state(tt, dur, o["motion"][5:])
+            # ★캐릭터를 지정할 수 있게 확장(W1-2, 2026-08-12 사장님 승인)
+            #   gseq:<시퀀스>            → char_key='w24_grp' (W24 그룹 컷 · 기존 그대로)
+            #   gseq:<char_key>:<시퀀스> → 그 캐릭터의 컷     (w12_stick / w12_zman / w12_zgirl)
+            _arg = o["motion"][5:]
+            _explicit = ":" in _arg                       # 3부분 = W1-2 방식(캐릭터 지정)
+            _gck, _gsq = _arg.split(":", 1) if _explicit else ("w24_grp", _arg)
+            st = seq_state(tt, dur, _gsq)
             if st:
                 _tx, pose_name = st
-                pp, flip, _pen = char_pose_info("w24_grp", pose_name)
+                pp, flip, _pen = char_pose_info(_gck, pose_name)
                 if pp is not None:
                     im = load_img_flip(pp) if flip else load_img(pp)
+                # ★W1-2 방식(3부분)일 때만 **원근·가로 이동**을 비트가 정한다.
+                #   W24 그룹 컷(2부분)은 제자리 동작이고 위치는 scene_objects.cx 가 정하므로
+                #   손대지 않는다 — 안 그러면 세 그룹이 전부 중앙에 겹친다.
+                if _explicit:
+                    _s = seq_scale(tt, dur, _gsq)
+                    sm *= _s
+                    dx += (_tx - o["cx"])
+                    # ★발을 땅에 붙여 둔다 — 렌더러는 cy 를 **중심**으로 놓으므로,
+                    #   커지고 작아질 때 그만큼 내려 주지 않으면 발이 뜨거나 파묻힌다.
+                    #   (사장님 지적 2026-08-12 "캐릭터가 서 있는 곳을 일정하게 지켜라")
+                    dy += im.height * o["scale"] * (_s - 1.0) / 2.0
                 # ★비트의 x는 쓰지 않는다 — 그룹 컷은 제자리 동작이고, 한 씬에 여러 그룹이
                 # 동시에 서므로 위치는 scene_objects.cx 가 정한다(안 그러면 전부 중앙에 겹친다).
         elif is_pose and cmode == "sit":                 # 진지한 설명 = 의자에 앉아 설명

@@ -1,293 +1,424 @@
 # -*- coding: utf-8 -*-
-"""W12(교통·지하철 환승) 44씬 ~8분: 인준(injun_w12), 인천공항→강남역 여정. 배경 22종(2씬당 1개).
-캐릭터 왼쪽/글자 오른쪽. 관광가이드 톤. 커리큘럼 핵심어: 버스·지하철·타다·환승."""
-import sqlite3, json, os, re as _re2
-from PIL import Image, ImageDraw, ImageFont
+"""W1-2 (모음의 확장 · 광화문광장) 시나리오 → DB. 26씬.
 
-def norm_quotes(s):
-    s = s.replace("‘", "'").replace("’", "'")
-    s = _re2.sub(r"'([^']*?)([?!.]+)'", r"'\1'\2", s)
-    return s
+원천 : `W1_2/W1_2_scenario.md`(나레이션·화면글자) · `W1_2/W1_2_motion.md`(동선·맞물림)
+       · `W1_2/w12_manifest.py`(씬→자산) · `channel/content.db` `char_heights`(키)
+출력 : `scenes` · `scene_objects`  (episode = 'KO-W1-2')
 
-def wrap_write(gl, maxch=7):
-    parts = [p.strip() for p in gl.split("/")] if "/" in gl else [gl]
-    lines = []
-    for part in parts:
-        cur = ""
-        for tok in part.split():
-            if not cur: cur = tok
-            elif len(cur) + 1 + len(tok) <= maxch: cur += " " + tok
-            else: lines.append(cur); cur = tok
-        if cur: lines.append(cur)
-    return lines or [gl]
+★[[build-script-edit-needs-db-rerun]] : 나레이션·자막을 고쳤으면 **이 스크립트를 다시
+  돌려야** DB 에 반영된다. 순서 = 빌드 → DB 실측 → 캐시 삭제 → 렌더.
 
-ROOT = r"D:\Entertainments\DevEnvironment\autovideo"; os.chdir(ROOT)
-DB = "channel/content.db"; FONT = "assets/fonts/Cafe24Dongdong.ttf"
-PLACE = "Incheon Airport → Gangnam, Seoul"
-EP = "KO-W12"
+## 이 판의 규격 (2026-08-12 사장님 확정)
+- 글자 : 화면 **상반부 · 가로 중앙 · 최대 세 줄**. 씬마다 옮기지 않는다
+- 캐릭터 : 구역 제한 없음. 글자에 걸리면 아래로 지나가거나 굴러 빠지거나 멀어져 작아진다
+- 큰 동작은 **멀리서 작게**(백플립 M2·앞구르기 D1)
+- 키 : `char_heights.base_h`(스틱맨 700 · 졸라맨 711 · 졸라걸 651) × 깊이배율
+- 배경 : 8초 클립을 **한 번만 재생하고 마지막 프레임을 붙든다**(loop 금지)
 
-# 배경 키 (22종)
-AR, HA, SB, BS = "bg_w12_arrival", "bg_w12_hall", "bg_w12_signboard", "bg_w12_busstop"
-TK, CH, CO, GA = "bg_w12_ticket", "bg_w12_charge", "bg_w12_counter", "bg_w12_gate"
-PL, PL2, BO, TR = "bg_w12_platform", "bg_w12_platform2", "bg_w12_boarding", "bg_w12_train"
-SS, TF, TF2, MP = "bg_w12_seoulstn", "bg_w12_transfer", "bg_w12_transfer2", "bg_w12_map"
-MP2, ST, PL3, TR2 = "bg_w12_map2", "bg_w12_sign_transfer", "bg_w12_platform_line2", "bg_w12_train2"
-GX, GS, GN = "bg_w12_gangnam_exit", "bg_w12_gangnam_street", "bg_w12_gangnam_night"
+    python build_w12.py [--dry]
+"""
+import argparse
+import json
+import os
+import sqlite3
+import sys
+from datetime import datetime
 
-# (cap_ko, cap_en, glyph, script_kr, script_en, bg, beats[(pose, x_from, x_to, ratio)])
-SC = [
- # ---- 1막 인천공항 도착 (S1~S5) ----
- ("인천공항 도착!","Arrived at Incheon!","인천공항",
-  "안녕하세요! 오늘은 제가 여러분의 가이드예요. 인천공항에서 강남역까지 같이 가 봐요. 버스도 타고, 지하철도 타고, 환승도 해요. 이 영상 하나면 서울에서 길 잃지 않아요!",
-  "Hello! Today I'm your guide. Let's travel together from Incheon Airport to Gangnam Station. We'll take a bus, ride the subway, and transfer. After this video, you won't get lost in Seoul!",
-  AR,[("pull_suitcase",-120,300,0.5),("presenting",300,300,0.5)]),
- ("어떻게 가요?","How do I get there?","어떻게 가요",
-  "공항에 내리면 제일 먼저 드는 생각. '서울까지 어떻게 가지?' 이럴 때 쓰는 만능 문장이 있어요. '어떻게 가요?' 이 한마디면 됩니다.",
-  "The first thought when you land: 'How do I get to Seoul?' There's one magic phrase for this: '어떻게 가요?' — How do I get there?",
-  AR,[("thinking",300,300,0.5),("speak",300,300,0.5)]),
- ("서울까지 어떻게 가요?","How do I get to Seoul?","서울까지",
-  "목적지를 넣어서 말해 봐요. '서울까지 어떻게 가요?' '까지'는 목적지를 나타내요. '강남역까지 어떻게 가요?' 이렇게 바꿔 쓸 수 있어요.",
-  "Add your destination: '서울까지 어떻게 가요?' The word '까지' marks the destination. You can swap it: '강남역까지 어떻게 가요?'",
-  HA,[("speak",300,300,0.6),("nod",300,300,0.4)]),
- ("타다","to ride / to take","타다",
-  "오늘의 핵심 동사예요. '타다'. 버스를 타요. 지하철을 타요. 택시를 타요. 무엇이든 이 동사 하나면 돼요.",
-  "Today's key verb: '타다' — to ride, to take. 버스를 타요 (take a bus). 지하철을 타요 (take the subway). One verb covers them all.",
-  HA,[("presenting",300,300,1.0)]),
- ("두 가지 방법","Two ways","버스 지하철",
-  "공항에서 서울 가는 방법은 크게 두 가지예요. 버스와 지하철. 오늘은 둘 다 배워요.",
-  "There are two main ways from the airport to Seoul: bus and subway. Today we'll learn both.",
-  SB,[("look_up_sign",300,300,0.5),("point_up",300,300,0.5)]),
+ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, ROOT)
+sys.path.insert(0, os.path.join(ROOT, "W1_2"))
+os.chdir(ROOT)
 
- # ---- 2막 공항버스 (S6~S12) ----
- ("버스","bus","버스",
-  "먼저 버스예요. 공항버스는 짐이 많을 때 아주 편해요. 앉아서 편하게 갈 수 있고, 짐은 버스 아래 짐칸에 넣어요.",
-  "First, the bus. The airport bus is great when you have luggage. You sit comfortably, and your bags go in the compartment below.",
-  SB,[("point_right",300,300,0.5),("presenting",300,300,0.5)]),
- ("버스 정류장","bus stop","정류장",
-  "버스를 타는 곳은 '정류장'이라고 해요. 공항 밖으로 나가면 버스 정류장이 있어요. '버스 정류장이 어디예요?' 하고 물어보세요.",
-  "The place you catch a bus is '정류장' (bus stop). Just outside the airport you'll find them. Ask: '버스 정류장이 어디예요?'",
-  BS,[("look_up_sign",280,280,0.5),("speak",280,280,0.5)]),
- ("몇 번 버스예요?","Which bus number?","몇 번 버스",
-  "한국 버스는 번호로 구분해요. 그래서 이렇게 물어요. '몇 번 버스예요?' 번호만 알면 어디든 갈 수 있어요.",
-  "Korean buses are identified by number. So you ask: '몇 번 버스예요?' (Which bus number?). Know the number, and you can go anywhere.",
-  BS,[("speak",280,280,0.5),("count_fingers",280,280,0.5)]),
- ("얼마나 걸려요?","How long does it take?","얼마나 걸려요",
-  "시간이 궁금하면 '얼마나 걸려요?' 하고 물어요. 버스는 길이 막히면 늦을 수 있어요. 그래서 시간을 꼭 물어보세요.",
-  "To ask about time: '얼마나 걸려요?' (How long does it take?). Buses can be delayed by traffic, so always ask.",
-  BS,[("thinking",280,280,0.5),("speak",280,280,0.5)]),
- ("요금이 얼마예요?","How much is the fare?","요금",
-  "돈은 '요금'이라고 해요. '요금이 얼마예요?' 하고 물어요. 공항버스는 지하철보다 조금 비싸요.",
-  "The fare is '요금'. Ask: '요금이 얼마예요?' (How much is the fare?). The airport bus costs a bit more than the subway.",
-  BS,[("hold_cash",280,280,1.0)]),
- ("지하철이 더 빨라요","The subway is faster","빨라요",
-  "그런데 오늘은 지하철로 가요. 왜냐하면 지하철은 길이 막히지 않아서 시간이 정확해요. '빨라요'는 시간이 적게 걸린다는 뜻이에요.",
-  "But today we'll take the subway. Why? It never gets stuck in traffic, so the time is exact. '빨라요' means fast.",
-  SB,[("thumbs_up",300,300,1.0)]),
- ("지하철로 가요","Let's take the subway","지하철",
-  "'지하철'. 땅 아래로 다니는 기차예요. 공항에서 타는 지하철을 공항철도라고 해요. 자, 타러 가요!",
-  "'지하철' — the subway, a train that runs underground. The one from the airport is called the Airport Railroad. Let's go!",
-  SB,[("presenting",300,300,0.4),("walk_right",300,420,0.6)]),
+import w12_manifest as MAN                               # noqa: E402
 
- # ---- 3막 교통카드 (S13~S18) ----
- ("문제 발생!","A problem!","교통카드",
-  "그런데 문제가 생겼어요! 지하철을 타려면 카드가 필요해요. 카드가 없으면 탈 수 없어요. 이 카드를 '교통카드'라고 해요.",
-  "But there's a problem! To ride, you need a card. Without it you can't get in. This card is called '교통카드' (transit card).",
-  TK,[("surprise",300,300,1.0)]),
- ("교통카드 주세요","A transit card, please","교통카드 주세요",
-  "걱정 마세요. 편의점이나 판매기에서 살 수 있어요. '교통카드 주세요.' 이 한마디면 됩니다. '주세요'는 정중한 부탁이에요.",
-  "Don't worry — you can buy one at a convenience store or machine. Just say: '교통카드 주세요' (A transit card, please).",
-  TK,[("speak",300,300,1.0)]),
- ("충전","to charge / top up","충전",
-  "카드를 샀으면 돈을 넣어야 해요. 이걸 '충전'이라고 해요. 카드에 돈을 채우는 거예요.",
-  "Once you have the card, you must put money in. That's '충전' — to top up, to charge the card.",
-  CH,[("point_center",300,300,1.0)]),
- ("만 원 충전해 주세요","Please top up 10,000 won","만 원 충전",
-  "금액을 넣어서 말해요. '만 원 충전해 주세요.' 이 카드 하나로 지하철도 타고 버스도 타요. 아주 편해요.",
-  "Say it with an amount: '만 원 충전해 주세요' (Please top up 10,000 won). One card works for both subway and bus. Very handy.",
-  CO,[("hold_cash",300,300,1.0)]),
- ("카드를 대세요","Tap your card","대세요",
-  "이제 개찰구예요. 카드를 단말기에 살짝 대요. 이걸 '대다'라고 해요. '카드를 대세요.'",
-  "Now the gate. Lightly touch your card to the reader. That's '대다' — to tap. '카드를 대세요' (Tap your card).",
-  GA,[("tap_card",300,300,1.0)]),
- ("삑! 통과","Beep! You're through","통과",
-  "'삑!' 소리가 나면 통과예요. 문이 열려요. 성공! 이제 승강장으로 내려가요.",
-  "'Beep!' — and you're through. The gate opens. Success! Now down to the platform.",
-  GA,[("cheering",300,300,0.5),("walk_right",300,420,0.5)]),
+DB = "channel/content.db"
+EP = "KO-W1-2"
+PLACE = "Gwanghwamun Square, Seoul"
+CANVAS_W, CANVAS_H = 1280, 720
 
- # ---- 4막 공항철도 (S19~S26) ----
- ("어느 쪽이에요?","Which way?","어느 쪽",
-  "승강장에 오면 또 고민이 생겨요. 방향이 두 개예요. 왼쪽? 오른쪽? 어느 쪽으로 가야 할까요?",
-  "On the platform, another puzzle: there are two directions. Left? Right? Which way do we go?",
-  PL,[("look_around",300,300,1.0)]),
- ("문제 발생!","A problem!","반대 방향",
-  "여기서 실수하는 사람이 정말 많아요. 반대 방향으로 타면 어떻게 될까요? 다시 돌아와야 해요. 시간을 많이 버려요.",
-  "So many travelers make a mistake here. Take the wrong direction and you have to come all the way back. A big waste of time.",
-  PL,[("surprise",300,300,1.0)]),
- ("~행","bound for ~","서울역행",
-  "열차에는 '행'이 붙어요. '서울역행'은 서울역으로 가는 열차라는 뜻이에요. 가고 싶은 곳 이름을 찾아보세요.",
-  "Trains are marked with '행' (bound for). '서울역행' means the train bound for Seoul Station. Look for your destination.",
-  PL2,[("look_up_sign",300,300,1.0)]),
- ("이거 서울역 가요?","Does this go to Seoul Station?","서울역 가요",
-  "그래도 헷갈리면 물어보세요. '이거 서울역 가요?' 이 문장이 오늘의 생명줄이에요. 한국 사람들은 친절하게 알려줘요.",
-  "Still unsure? Just ask: '이거 서울역 가요?' (Does this go to Seoul Station?). This phrase is your lifeline — Koreans will gladly help.",
-  PL2,[("speak",300,300,1.0)]),
- ("네, 맞아요","Yes, that's right","맞아요",
-  "'네, 맞아요.' 이 대답을 들으면 안심이에요. 반대로 '아니요'라고 하면 반대편으로 가면 돼요.",
-  "'네, 맞아요' — Yes, that's right. Now you can relax. If they say '아니요' (no), just go to the other side.",
-  PL2,[("nod",300,300,1.0)]),
- ("지하철을 타요","Take the subway","타요",
-  "문이 열리면 타요. 내리는 사람이 먼저예요. 다 내린 다음에 타는 게 예의예요.",
-  "The doors open — get on. But let people off first; that's the polite way in Korea.",
-  BO,[("walk_right",250,420,1.0)]),
- ("손잡이를 잡아요","Hold the strap","손잡이",
-  "자리가 없으면 서서 가요. 천장에 있는 '손잡이'를 잡으세요. 열차가 흔들려도 안전해요.",
-  "No seat? Stand and hold the '손잡이' (strap) hanging from the ceiling. You'll be steady even when the train rocks.",
-  TR,[("hold_strap",300,300,1.0)]),
- ("몇 정거장이에요?","How many stops?","몇 정거장",
-  "얼마나 가야 할까요? '몇 정거장이에요?' 하고 물어요. 그리고 안내방송을 잘 들으세요. 다음 역 이름을 말해 줘요.",
-  "How far is it? Ask '몇 정거장이에요?' (How many stops?). And listen to the announcements — they call out the next station.",
-  TR,[("count_fingers",300,300,0.5),("listen",300,300,0.5)]),
+# 깊이표 — 라벨: (화면 키, 발 y)
+#
+# ★★사장님 확정(2026-08-13) — 두 번 오해했다가 바로잡은 것이니 여기 적어 둔다.
+#   "앞줄은 여태 캐릭터가 서서 설명하던 **자막 바로 위**에서 700 정도의 사이즈(스틱맨)로
+#    하면 되고, 보조 캐릭터는 **그 뒤 어느 곳 600~1** 까지의 사이즈로 움직이면 된다."
+#   "**기준 척도가 700**인데, 여태 **나레이터로 나오던 캐릭터의 사이즈** 대로 하면 된다."
+#
+#   → 700 은 **화면 픽셀이 아니라 척도**다. 스틱맨의 실물 키를 700 으로 삼는다.
+#     화면 키 700 으로 그렸더니 캐릭터가 화면을 꽉 채우고 글자와 겹쳤다(확인 그림).
+#
+# ★앞줄 화면 키 = **400** (사장님 확정 2026-08-13 "앞줄 400으로 가자")
+#   근거 — W19·W21·W22·W23 나레이터는 넷 다 몸높이 770 × scale 0.561 = **화면 432px**.
+#   W24 도 같은 432(제일 큰 인준에 맞추고 나머지는 비율로). 스틱맨은 규격이 749→700 으로
+#   낮아졌으므로 같은 배율이면 393. 그 사이에서 **400** 으로 확정했다.
+#   → 발 y 는 F0(400, 668)에서 지평선 452.9 로 한 줄로 푼다: 발y = 452.9 + 키/1.860
+#
+# ★보조역(졸라맨·졸라걸)은 그 뒤로 **600 이하** 어디든. 작을수록 많이 움직여도 된다
+#   ("작으면 많이 움직여도 표가 덜 난다"). 실제로는 앞줄 400보다 작은 자리에 세운다.
+DEPTH = {"F0": (400, 668), "F1": (340, 636), "M": (280, 604),
+         "M2": (220, 571), "D1": (170, 544), "D2": (120, 518), "V": (70, 491)}
 
- # ---- 5막 서울역 환승 ★핵심 (S27~S36) ----
- ("서울역 도착","Seoul Station","서울역",
-  "서울역에 도착했어요. 그런데 아직 강남역이 아니에요. 여기서 다른 열차로 바꿔 타야 해요.",
-  "We've arrived at Seoul Station. But this isn't Gangnam yet — here we must change to a different train.",
-  SS,[("walk_right",250,350,1.0)]),
- ("환승","transfer","환승",
-  "오늘의 가장 중요한 단어예요. '환승'! 다른 노선으로 갈아타는 것을 환승이라고 해요. 이 단어를 꼭 기억하세요.",
-  "Today's most important word: '환승' — transfer. Changing to a different line is called 환승. Remember this one!",
-  SS,[("presenting",300,300,1.0)]),
- ("갈아타다","to change trains","갈아타다",
-  "'환승하다'와 '갈아타다'는 같은 뜻이에요. '2호선으로 갈아타요.' 둘 다 자주 쓰니까 같이 외우세요.",
-  "'환승하다' and '갈아타다' mean the same thing. '2호선으로 갈아타요' (Change to Line 2). Both are common — learn them together.",
-  TF,[("speak",300,300,1.0)]),
- ("문제 발생!","A problem!","어디서 갈아타요",
-  "환승통로는 정말 커요. 표지판도 많고 사람도 많아요. 어디로 가야 할지 헷갈려요. 그럴 땐 어떻게 할까요?",
-  "Transfer corridors are huge — many signs, many people. It's easy to get confused. So what do we do?",
-  TF,[("thinking",300,300,1.0)]),
- ("어디서 갈아타요?","Where do I transfer?","어디서",
-  "물어보면 돼요! '어디서 갈아타요?' 아주 쉬운 문장이죠. 역무원이나 옆 사람에게 물어보세요.",
-  "Just ask! '어디서 갈아타요?' (Where do I transfer?). Ask a station staff member or the person next to you.",
-  TF2,[("speak",300,300,1.0)]),
- ("~호선","Line ~","2호선",
-  "지하철 노선은 번호로 불러요. 1호선, 2호선, 3호선. '호선'은 노선 번호를 말해요.",
-  "Subway lines are called by number: 1호선, 2호선, 3호선 (Line 1, 2, 3). '호선' means the line number.",
-  MP,[("point_up",300,300,1.0)]),
- ("2호선으로 갈아타세요","Change to Line 2","2호선",
-  "강남역은 2호선에 있어요. 그래서 '2호선으로 갈아타세요.' 우리도 2호선을 찾아가요.",
-  "Gangnam Station is on Line 2. So: '2호선으로 갈아타세요' (Change to Line 2). Let's find it.",
-  MP,[("point_right",300,300,1.0)]),
- ("초록색 2호선","The green Line 2","초록색",
-  "꿀팁이에요! 노선은 색깔이 있어요. 2호선은 초록색이에요. 글자를 못 읽어도 색만 따라가면 돼요.",
-  "Here's a tip! Each line has a color. Line 2 is green. Even if you can't read the letters, just follow the color.",
-  MP2,[("presenting",300,300,1.0)]),
- ("표지판을 따라가요","Follow the signs","따라가요",
-  "이제 초록색 표지판을 따라가요. 화살표가 길을 알려줘요. 표지판만 잘 보면 절대 안 헤매요.",
-  "Now follow the green signs. The arrows show the way. Watch the signs and you'll never get lost.",
-  ST,[("look_up_sign",250,250,0.4),("walk_right",250,420,0.6)]),
- ("환승 성공!","Transfer complete!","환승 성공",
-  "해냈어요! 2호선 승강장에 도착했어요. 이게 바로 환승이에요. 어렵지 않죠?",
-  "We did it! We've reached the Line 2 platform. That's what 환승 means. Not so hard, right?",
-  PL3,[("cheering",300,300,1.0)]),
+# ★척도 — 스틱맨 실물 키. 머리의 아래위 높이가 비율을 정하는 척도다.
+STD_H = 700
+FRONT_H = 400                      # 앞줄(F0) 화면 키 — 나레이션 자리
+# ★보조역(졸라맨·졸라걸) 화면 키 상한 — 600. 이보다 크면 주역과 헷갈린다.
+SUB_MAX_H = 600
 
- # ---- 6막 강남역 + 시내버스 (S37~S44) ----
- ("강남역으로!","To Gangnam!","강남역",
-  "이제 2호선을 타고 강남역으로 가요. 창밖으로 서울 도시가 보여요. 거의 다 왔어요!",
-  "Now we ride Line 2 to Gangnam Station. You can see the city through the window. Almost there!",
-  TR2,[("hold_strap",300,300,0.5),("presenting",300,300,0.5)]),
- ("내리다","to get off","내리다",
-  "'타다'의 반대말은 '내리다'예요. 타다, 내리다. 짝으로 외우면 쉬워요. '여기서 내려요.'",
-  "The opposite of '타다' is '내리다' (to get off). 타다 / 내리다 — learn them as a pair. '여기서 내려요' (I get off here).",
-  TR2,[("speak",300,300,1.0)]),
- ("문제 발생!","A problem!","몇 번 출구",
-  "마지막 문제예요! 강남역은 출구가 정말 많아요. 잘못 나가면 한참 걸어야 해요.",
-  "One last problem! Gangnam Station has a LOT of exits. Take the wrong one and you'll walk a long way.",
-  GX,[("surprise",300,300,1.0)]),
- ("몇 번 출구예요?","Which exit number?","몇 번 출구",
-  "그래서 이렇게 물어요. '몇 번 출구예요?' 한국에서는 약속할 때 출구 번호로 만나요. '강남역 11번 출구에서 만나요.'",
-  "So ask: '몇 번 출구예요?' (Which exit number?). In Korea, people meet by exit number: 'Let's meet at Gangnam Exit 11.'",
-  GX,[("speak",300,300,1.0)]),
- ("11번 출구요","Exit 11","11번 출구",
-  "'11번 출구요.' 번호로 대답해 줘요. 이제 계단을 올라가면 강남 거리예요!",
-  "'11번 출구요' — Exit 11. They answer with a number. Climb the stairs and you're on the streets of Gangnam!",
-  GX,[("count_fingers",300,300,0.4),("walk_stairs",300,380,0.6)]),
- ("버스로 갈아타요","Transfer to a bus","버스 갈아타요",
-  "마지막 꿀팁! 지하철에서 내려서 버스로도 갈아탈 수 있어요. 같은 교통카드를 그냥 대면 돼요. 아주 편하죠?",
-  "Final tip! You can also transfer from the subway to a bus. Just tap the same transit card. So convenient!",
-  GS,[("tap_card",300,300,1.0)]),
- ("오늘의 표현","Today's phrases","타다 환승 내리다",
-  "오늘 배운 걸 정리해요. 버스, 지하철, 타다, 환승, 내리다, 출구. 이 여섯 단어면 서울 어디든 갈 수 있어요.",
-  "Let's review: 버스 (bus), 지하철 (subway), 타다 (ride), 환승 (transfer), 내리다 (get off), 출구 (exit). These six words take you anywhere in Seoul.",
-  GS,[("presenting",300,300,1.0)]),
- ("다음 시간에","See you next time","길 찾기",
-  "강남역 도착! 공항에서 여기까지 함께 왔어요. 다음 시간에는 길 찾기와 위치 안내를 배워요. 그때 또 만나요!",
-  "We made it to Gangnam! We traveled all the way from the airport together. Next time: asking for directions. See you then!",
-  GN,[("bow",300,300,1.0)]),
+# 글자 자리 — 상반부 중앙 고정
+TEXT_BOX = {"cx": 640, "cy": 200, "max_lines": 3, "max_w": 880, "side": "top-center"}
+
+# (seq, 화면한글, KO 나레이션, EN 나레이션)
+NARR = [
+ (1, "ㅏ ㅓ ㅗ ㅜ ㅡ ㅣ ㅐ ㅔ",
+  "안녕하세요! 지난 시간엔 단모음 여덟 개를 배웠죠. ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ.",
+  "Hello! Last time we learned the eight simple vowels - ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ."),
+ (2, "모음 + 모음 = 단어",
+  "오늘은 그 모음만으로 단어를 만들어 볼 거예요. 자음은 하나도 쓰지 않습니다.",
+  "Today we'll build whole words from those vowels alone. Not a single consonant."),
+ (3, "아 = ㅇ + ㅏ",
+  "글자를 쓸 때 앞자리에 동그라미 ㅇ이 앉지만, 소리는 나지 않아요. 자리만 지키는 빈 의자랍니다.",
+  "When we write, a small circle ㅇ sits in front - but it makes no sound. It just holds the seat."),
+ (4, "아이 이 오이 우유 오 아우 여우",
+  "자, 광장으로 나가 볼까요? 오늘의 단어들이 이 광장 곳곳에 숨어 있어요.",
+  "Shall we head out into the plaza? Today's words are hiding all around it."),
+ (5, "아이",
+  "첫 번째 단어, 아이. 어린아이를 뜻하는 말이에요. 받침 없이 ㅏ와 ㅣ, 모음 두 개로만 이루어졌어요.",
+  "Our first word - 아이. It means a child. Just two vowels, ㅏ and ㅣ, and no batchim."),
+ (6, "아 + 이 → 아이",
+  "계단을 내려오듯 끊어서 두 번. 아 — 이. 이제 붙여서 한 번. 아이. 따라 해 보세요.",
+  "Step down through it, one at a time. 아 - 이. Now together. 아이. Say it with me."),
+ (7, "이",
+  "두 번째, 이. 입을 옆으로 활짝 당겨 내는 ㅣ 하나면 단어가 돼요. 우리 몸의 이, 바로 치아를 뜻하지요.",
+  "Second - 이. A single ㅣ, lips pulled wide, is already a word. It means a tooth."),
+ (8, "오이",
+  "어? 뭐가 굴러오네요. 세 번째 단어, 오이예요. 아삭아삭한 초록 채소죠. ㅗ와 ㅣ, 역시 모음 두 개예요.",
+  "Oh - something's rolling this way. Our third word: 오이, a crunchy green cucumber. "
+  "Again two vowels, ㅗ and ㅣ."),
+ (9, "오 + 이 → 오이",
+  "입술을 동그랗게 모았다가 옆으로 당기며. 오 — 이. 오이.",
+  "Round your lips, then pull them wide. 오 - 이. 오이."),
+ (10, "우유",
+  "저건 놓치면 안 되겠네요! 네 번째, 우유. 하얗고 고소한 우유예요. "
+  "ㅜ와 ㅠ, 둘 다 입술을 동그랗게 내미는 소리죠.",
+  "Careful - don't let that one fall! Fourth: 우유, sweet white milk. "
+  "Both ㅜ and ㅠ push the lips forward and round."),
+ (11, "우 + 유 → 우유",
+  "천천히. 우 — 유. 우유.",
+  "Slowly now. 우 - 유. 우유."),
+ (12, "아이 ↔ 오이",
+  "아이와 오이. 뒷소리가 같지요? 둘 다 이로 끝나요. 앞소리 하나가 바뀌면 뜻이 달라집니다.",
+  "아이 and 오이 - same ending, both end in 이. Change one sound in front and the meaning changes."),
+ (13, "오",
+  "우와! 다섯 번째, 오. 놀랄 때 오! 하고 내는 그 소리, 그대로 단어가 돼요.",
+  "Whoa! Fifth - 오. The sound you make when you're surprised, 오!, is itself a word."),
+ (14, "오 = 5",
+  "그리고 오는 숫자 다섯이기도 해요. 하나, 둘, 셋, 넷, 다섯 — 오!",
+  "And 오 also means the number five. One, two, three, four, five - 오!"),
+ (15, "아우",
+  "벤치에 누가 앉아 있네요. 여섯 번째 단어, 아우. 손아래 동생을 다정하게 부르는 말이에요.",
+  "Someone's sitting on the bench. Sixth word - 아우, a warm word for a younger sibling."),
+ (16, "아 + 우 → 아우",
+  "ㅏ에서 ㅜ로. 입을 크게 열었다 동그랗게 모으며. 아 — 우. 아우.",
+  "From ㅏ to ㅜ. Open wide, then round. 아 - 우. 아우."),
+ (17, "ㅏ ㅗ / ㅓ ㅜ",
+  "소리에도 온도가 있어요. ㅏ와 ㅗ는 밝고 따뜻한 소리, ㅓ와 ㅜ는 어둡고 차가운 소리랍니다.",
+  "Sounds have a temperature too. ㅏ and ㅗ are bright and warm; ㅓ and ㅜ are dark and cool."),
+ (18, "ㅏ+ㅣ · ㅗ+ㅣ · ㅜ+ㅣ",
+  "그런데 ㅣ는 색이 없어요. 서 있는 사람을 본뜬 글자라서, "
+  "따뜻한 소리와도 차가운 소리와도 사이좋게 어울립니다.",
+  "But ㅣ has no colour. Shaped after a standing person, it gets along with warm and cool alike."),
+ (19, "여우",
+  "쉿… 덤불에 뭐가 있어요. 일곱 번째 단어, 여우. 숲에 사는 붉은 여우예요. "
+  "여와 우, 이것도 모음뿐이랍니다.",
+  "Shh... something's in the bush. Seventh word - 여우, the red fox of the forest. "
+  "여 and 우 - vowels only again."),
+ (20, "여 + 우 → 여우",
+  "앗, 숨어 버렸네요. 여 — 우. 여우. 여는 ㅣ와 ㅓ가 빨리 이어진 소리예요. 지금은 한 소리로 익혀 두세요.",
+  "Oh, it's gone. 여 - 우. 여우. 여 is ㅣ sliding quickly into ㅓ. For now, just learn it as one sound."),
+ (21, "ㅗ+ㅏ = ㅘ / ㅜ+ㅓ = ㅝ",
+  "같은 온도끼리 만나면 자석처럼 잘 붙어요. 따뜻한 소리는 따뜻한 소리끼리, 차가운 소리는 차가운 소리끼리.",
+  "Same temperature, and they snap together like magnets - warm with warm, cool with cool."),
+ (22, "ㅏ+ㅣ = ㅐ / ㅓ+ㅣ = ㅔ",
+  "ㅣ만은 예외예요. 따뜻한 쪽에도, 차가운 쪽에도 스르륵 붙습니다. 떨어지는 잎을 잡듯이요.",
+  "Only ㅣ is the exception - it slips in on the warm side and the cool side alike. "
+  "Like catching a falling leaf."),
+ (23, "오이 · 우유 · 여우",
+  "이제 맞춰 볼까요? 그림을 보고 단어를 말해 보세요. 초록 채소는? 하얀 음료는? 붉은 짐승은?",
+  "Now let's match. Look at the picture and say the word. The green vegetable? "
+  "The white drink? The red animal?"),
+ (24, "아이 이 오이 우유 오 아우 여우 · 야외",
+  "오늘 배운 일곱 단어를 모아 볼까요? 아이, 이, 오이, 우유, 오, 아우, 여우. "
+  "그리고 하나 더 — 우리가 하루 종일 있던 이곳, 야외. 이것도 모음뿐이에요!",
+  "Let's gather today's seven words - 아이, 이, 오이, 우유, 오, 아우, 여우. "
+  "And one more: the place we spent all day - 야외, \"outdoors\". Vowels only, again!"),
+ (25, "아이 오이 우유",
+  "오늘 배운 단어를 거울 앞에서 또박또박 말해 보세요. 입 모양이 보이면 소리도 또렷해집니다.",
+  "Practice today's words clearly in front of a mirror. When you can see the shape, "
+  "the sound gets clearer."),
+ (26, "ㅇ + ㅏ = 아",
+  "다음 시간엔 소리 없는 ㅇ에 모음을 붙여 글자 블록을 만들어 봐요. 또 만나요!",
+  "Next time we'll join the silent ㅇ to a vowel and build syllable blocks. See you soon!"),
 ]
 
-def make_glyph(gl, path):
-    lines = wrap_write(gl, 7)
-    f = ImageFont.truetype(FONT, 150)
-    W = max(int(f.getlength(l)) for l in lines) + 40
-    H = int(len(lines) * 150 * 1.2) + 40
-    im = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
-    for i, l in enumerate(lines):
-        d.text((20, 20 + i * int(150 * 1.2)), l, font=f, fill=(30, 30, 30, 255))
-    bb = im.getbbox(); im = im.crop(bb) if bb else im
-    os.makedirs(os.path.dirname(path), exist_ok=True); im.save(path)
-    return lines
+# ★나레이션 덧붙임 (사장님 지시 2026-08-12)
+#   "심각하게 줄어드는 곳은 **동작을 다 할 수 있게** 나레이션과 자막을 적당한 길이로 추가하라."
+#
+#   씬 길이는 렌더러가 `max(KO,EN)+0.45s` 로 다시 잡는다(나레이션이 잘리지 않게).
+#   그래서 대본이 짧으면 씬이 줄고 **동작이 끝나기 전에 다음 씬으로 넘어간다.**
+#   1차 렌더 실측(2026-08-12)에서 계획의 절반 안팎으로 줄어든 씬들에 문장을 덧댔다.
+#   ★채우는 말이 아니라 **교육 내용**으로 늘린다 — 뜻·쓰임·발음 요령을 한 겹 더 준다.
+EXTRA = {
+ 1:  ("저 멀리서 제가 달려오고 있죠? 오늘은 광장을 한 바퀴 돌며 배워 볼 거예요.",
+      "Can you see me running up from far away? Today we'll walk right around this plaza as we learn."),
+ 2:  ("자음 없이 모음만으로요. 믿기지 않으시죠? 제가 한 바퀴 돌아 보이면서 시작할게요. "
+      "오늘 배울 단어는 모두 일곱 개입니다.",
+      "Vowels only, no consonants at all. Hard to believe? Let me start with a flip. "
+      "There are seven words waiting for us today."),
+ 4:  ("하나씩 찾을 때마다 같이 소리 내어 읽어 봐요. 준비되셨나요?",
+      "Each time we find one, let's say it out loud together. Ready?"),
+ 5:  ("계단에 앉아서 천천히 볼까요? 아이의 아는 입을 크게 벌리는 소리, "
+      "이는 입을 옆으로 당기는 소리예요.",
+      "Shall we sit on the steps and take it slowly? The 아 in 아이 opens the mouth wide, "
+      "and the 이 pulls it out to the sides."),
+ 6:  ("계단 한 칸이 소리 한 개예요. 아에서 한 칸, 이에서 또 한 칸. "
+      "이렇게 음절을 하나씩 끊어 세면 어떤 단어든 읽을 수 있어요.",
+      "One step is one sound. One step on 아, another on 이. "
+      "Count the syllables one at a time like this and you can read any word."),
+ 8:  ("오이는 물이 많고 시원해서 여름에 많이 먹어요. "
+      "쭈그려 앉아서 하나 주워 볼게요. 자, 잡았습니다!",
+      "Cucumbers are juicy and cool, so we eat a lot of them in summer. "
+      "Let me crouch down and pick one up. There - got it!"),
+ 9:  ("입술을 동그랗게 모았다가 옆으로 활짝. 오 — 이. 두 입 모양이 이어지는 게 보이시나요? "
+      "한 번 더, 오 — 이. 오이.",
+      "Round your lips, then pull them wide. 오 - 이. Can you see the two shapes joining? "
+      "Once more: 오 - 이. 오이."),
+ 11: ("우유팩을 들고 다시 한 번. 우 — 유. 입술이 앞으로 나왔다가 그대로 머무르죠?",
+      "Once more, holding the carton. 우 - 유. Your lips push forward and stay there, don't they?"),
+ 12: ("앞소리 하나만 바뀌었을 뿐인데 뜻이 아주 달라졌어요. 소리 하나의 힘이 이렇게 큽니다.",
+      "Only the first sound changed, and yet the meaning is completely different. "
+      "That's how much one sound can do."),
+ 13: ("놀랄 때 저절로 나오는 소리라서, 배우지 않아도 이미 알고 있는 단어예요.",
+      "It's the sound that comes out by itself when you're startled - "
+      "so you already knew this word before today."),
+ 14: ("손가락을 하나씩 펴 볼까요? 하나, 둘, 셋, 넷, 다섯. "
+      "다섯 손가락을 다 펴면 그게 바로 오예요. 숫자도 되고 감탄도 되는 재미있는 소리죠.",
+      "Shall we open our fingers one by one? One, two, three, four, five. "
+      "All five fingers open - that's 오. It's a number and a cry of surprise at the same time."),
+ 16: ("ㅏ는 입을 크게, ㅜ는 입술을 동그랗게 모아서. 아 — 우. "
+      "제 친구도 따라 하고 있네요. 여러분도 같이 해 보세요. 아 — 우. 아우.",
+      "ㅏ opens wide, ㅜ rounds the lips. 아 - 우. "
+      "My friend is copying me too. Try it with us: 아 - 우. 아우."),
+ 19: ("여우는 꾀가 많은 동물로 옛이야기에 자주 나와요. "
+      "놀라지 않게 살금살금 다가가 볼게요. 쉿, 조용히…",
+      "The fox is famous for being clever, and turns up often in old tales. "
+      "Let me creep up so I don't startle it. Shh, quietly now..."),
+ 15: ("형이나 누나가 손아래 동생을 부를 때 쓰는 말이에요. "
+      "요즘은 자주 쓰지 않지만 옛이야기에는 자주 나온답니다.",
+      "It's what an older brother or sister calls a younger one. "
+      "You don't hear it much these days, but it turns up often in old stories."),
+ 18: ("그래서 ㅣ는 어느 편도 들지 않아요. 늘 가운데에서 조용히 서 있습니다.",
+      "So ㅣ never takes a side. It just stands quietly in the middle."),
+ 21: ("ㅗ와 ㅏ가 만나면 ㅘ, ㅜ와 ㅓ가 만나면 ㅝ가 돼요. 따뜻한 것끼리, 차가운 것끼리.",
+      "ㅗ and ㅏ make ㅘ; ㅜ and ㅓ make ㅝ. Warm with warm, cool with cool."),
+ 22: ("ㅏ에 ㅣ를 더하면 ㅐ, ㅓ에 ㅣ를 더하면 ㅔ. 이렇게 새로운 소리가 태어납니다.",
+      "Add ㅣ to ㅏ and you get ㅐ; add ㅣ to ㅓ and you get ㅔ. That's how a new sound is born."),
+ 23: ("잘 맞히셨나요? 그림과 소리를 함께 기억하면 훨씬 오래 남아요.",
+      "Did you get them? When you remember the picture and the sound together, it stays with you much longer."),
+ 25: ("입 모양이 달라지면 소리도 달라져요. 오늘 배운 단어를 천천히 세 번씩 말해 보세요.",
+      "When the shape of your mouth changes, the sound changes too. "
+      "Say today's words slowly, three times each."),
+ 26: ("오늘 정말 잘하셨어요. 자음 하나 없이도 이렇게 많은 말을 할 수 있다니 놀랍지요? "
+      "저는 이만 광장을 가로질러 가 볼게요. 다음 시간에 또 만나요!",
+      "You did really well today. Isn't it surprising how much you can say without a single consonant? "
+      "I'm off across the plaza now. See you next time!"),
+}
 
-con = sqlite3.connect(DB); cur = con.cursor()
-BASEP = "assets/graphics/poses/injun_w10_base.png"
-r = cur.execute("SELECT id FROM assets WHERE file_path=?", (BASEP,)).fetchone()
-if r: INJUN = r[0]
-else:
-    cur.execute("INSERT INTO assets (name_kr,name_en,type,file_path,flow_prompt) VALUES (?,?,?,?,?)",
-                ("인준W12base", "injun_w12_base", "pose", BASEP, "W12 base")); INJUN = cur.lastrowid
+# 씬별 캐릭터 배치 — (캐릭터, 포즈/컷, 깊이, cx)  ※깊이가 화면 키를 정한다
+#   캐릭터 키는 char_heights 의 것을 쓴다: stickman / zolla_man / zolla_girl
+#
+# ★★사장님 확정 규격 (2026-08-13) — 이 판을 통째로 다시 짠 이유
+#   ① "일단 **한 씬에 한 캐릭터는 하나만** 나온다" — 같은 캐릭터를 둘 세우지 않는다
+#   ② "항상 **스틱맨이 주 캐릭터**" — 앞줄(F0/F1)에서 설명한다
+#   ③ "보조로 졸라맨 졸라걸이 좀 작게 **600 이하**고 **백에** 나오고 **많이 움직여도 된다**"
+#      → 졸라는 D1(320)·D2(220)·V(120) 뒷줄에만 세우고, 정지 포즈보다 **이동컷**을 준다
+#   ④ "**뒷구르기 백플립은 없애자**" — back_flip·back_roll 은 한 줄도 쓰지 않는다
+#      S2·S13 은 새로 만든 `forward_roll2`(38컷)와 `skid_stop` 으로 갈아 끼웠다
+#   ⑤ 앞구르기는 새로 뽑은 **`forward_roll2`** 를 쓴다(옛 `forward_roll` 은 안 쓴다)
+CHARS = {
+ # ── 1막 광장 : 스틱맨이 저 멀리서 달려와 앞줄에 선다 ──────────────────
+ 1:  [("stickman", "run_front", "V→F0", 640)],
+ 2:  [("stickman", "sm_presenting", "F0", 430),
+      ("zolla_man", "zman_run_side2", "D2", 980)],          # 뒤로 졸라맨이 달려 지나간다
+ 3:  [("stickman", "sm_pointing_left", "F0", 430),
+      ("zolla_girl", "zgirl_run_side", "D1", 1000)],
+ 4:  [("stickman", "forward_roll2", "M→D1→M", 640)],        # ★새 앞구르기 38컷
 
-cur.execute("DELETE FROM scene_objects WHERE episode=?", (EP,))
-cur.execute("DELETE FROM scenes WHERE episode=?", (EP,))
-cur.execute("DELETE FROM anim_sequences WHERE seq_name LIKE 'ijw12_s%'")
-scols = [c[1] for c in cur.execute("PRAGMA table_info(anim_sequences)")]
+ # ── 2막 계단 ────────────────────────────────────────────────────
+ 5:  [("stickman", "sit_stand", "M", 640),
+      ("zolla_man", "zman_run_side2", "D2", 300)],
+ 6:  [("stickman", "hop_down", "M2→F1", 640)],
+ 7:  [("stickman", "stickman_w1d2_grab_rail_r", "M", 900)],
 
-for i, (ck, ce, gl, sk, se, bg, beats) in enumerate(SC, 1):
-    sk = norm_quotes(sk); se = norm_quotes(se)
-    rel = f"graphics/letters/w12_{i:02d}.png"; make_glyph(gl, f"assets/{rel}")
-    r = cur.execute("SELECT id FROM assets WHERE file_path=?", (rel,)).fetchone()
-    if r: gasset = r[0]
-    else:
-        cur.execute("INSERT INTO assets (name_kr,name_en,type,file_path,flow_prompt) VALUES (?,?,?,?,?)",
-                    (f"W12글자_{gl[:8]}", f"w12_{i:02d}", "letter", rel, "동동")); gasset = cur.lastrowid
-    aseq = f"ijw12_s{i:02d}"
-    GCX = 560; WB = 1265 - GCX; HB = 340; CAP = 150
-    best = None
-    for _mc in range(4, 17):
-        _ls = wrap_write(gl, _mc); _nl = len(_ls); _mx = max(len(l) for l in _ls)
-        _f = min(WB / (_mx * 0.98), HB / (_nl * 1.18), CAP)
-        if best is None or _f > best[0]: best = (_f, _ls, _nl)
-    size_px, lines, nlines = best; size_px = max(52, size_px)
-    draw_text = "\n".join(lines)
-    gscale = round(size_px / 200, 3); blockH = nlines * size_px * 1.18; gcy = int(28 + blockH / 2)
-    spec = {"cap_ko": ck, "cap_en": ce, "motion": "static", "char_key": "injun_w12", "char_mode": "teacher",
-            "draw_font": "cafe24_dongdong", "draw_dur": 3.0, "draw_text": draw_text, "draw_align": "left",
-            "bg": bg, "place_en": PLACE, "anim_seq": aseq}
-    cur.execute("INSERT INTO scenes (episode,seq,script_kr,script_en,image_prompt,veo_prompt,duration_sec) VALUES (?,?,?,?,?,?,?)",
-                (EP, i, sk, se, json.dumps(spec, ensure_ascii=False), "", 8.0))
-    cur.execute("INSERT INTO scene_objects (episode,scene_seq,asset_id,cx,cy,scale,z_order,motion_type,is_point) VALUES (?,?,?,?,?,?,?,?,?)",
-                (EP, i, gasset, GCX, gcy, gscale, 3, "write", 0))
-    cur.execute("INSERT INTO scene_objects (episode,scene_seq,asset_id,cx,cy,scale,z_order,motion_type,is_point) VALUES (?,?,?,?,?,?,?,?,?)",
-                (EP, i, INJUN, 300, 452, 0.6, 5, "gesture", 0))
-    bj = [{"name": p, "cycle": [p], "x_from": xf, "x_to": xt, "dur": d} for (p, xf, xt, d) in beats]
-    fields = {"seq_name": aseq, "beats_json": json.dumps(bj, ensure_ascii=False)}
-    if "description" in scols: fields["description"] = f"인준 W12 {aseq}"
-    ks = ",".join(fields); qs = ",".join("?" * len(fields))
-    cur.execute(f"INSERT INTO anim_sequences ({ks}) VALUES ({qs})", list(fields.values()))
+ # ── 3막 좌판 ────────────────────────────────────────────────────
+ 8:  [("stickman", "pick_up", "F1", 700)],
+ 9:  [("stickman", "stickman_w1d2_mouth_o", "F0", 430),
+      ("zolla_girl", "zgirl_run_side_l", "D1", 1020)],
+ 10: [("stickman", "reach_catch", "F1", 760)],
+ 11: [("stickman", "stickman_w1d2_mouth_u", "F0", 430),
+      ("zolla_man", "zman_run_side_l", "D2", 1000)],
+ 12: [("stickman", "stickman_w1d2_lean_rail_r", "M", 900)],
 
-con.commit()
-n = cur.execute("SELECT COUNT(*) FROM scenes WHERE episode=?", (EP,)).fetchone()[0]
-# 사용된 배경·포즈 집계(검증용)
-bgs = sorted({s[5] for s in SC}); poses = sorted({b[0] for s in SC for b in s[6]})
-con.close()
-print(f"완료: {EP} {n}씬 (~8분, 인준, 인천공항→강남역)")
-print(f"배경 {len(bgs)}종: {', '.join(b.replace('bg_w12_','') for b in bgs)}")
-print(f"포즈 {len(poses)}종: {', '.join(poses)}")
+ # ── 4막 분수 : 백플립을 뺐다 → 급정지 + 앞구르기 ────────────────────
+ 13: [("stickman", "skid_stop", "D1→F1", 640)],
+ 14: [("stickman", "sm_counting_five", "F0", 430),
+      ("zolla_girl", "zgirl_high_five2", "D1", 1020)],
+
+ # ── 5막 벤치 : 한 씬에 졸라는 하나만 ────────────────────────────────
+ 15: [("stickman", "sit_stand", "M", 560),
+      ("zolla_man", "zman_sit_stand", "D1", 900)],
+ 16: [("stickman", "stickman_w1d2_mouth_a", "F0", 430),
+      ("zolla_man", "zman_head_tilt", "D1", 980)],
+ 17: [("stickman", "high_five", "M", 560),
+      ("zolla_girl", "zgirl_high_five2", "D1", 880)],
+ 18: [("stickman", "sm_arms_out_wide", "F0", 430),
+      ("zolla_man", "zman_attention", "D2", 1010)],
+
+ # ── 6막 산책로 ──────────────────────────────────────────────────
+ 19: [("stickman", "tiptoe", "M", 760),
+      ("zolla_girl", "zgirl_run_side", "D2", 260)],
+ 20: [("stickman", "butt_fall", "M", 760)],
+ 21: [("stickman", "sm_arms_out_wide", "F0", 430),
+      ("zolla_man", "zman_run_side2", "D1", 1000)],
+ 22: [("stickman", "reach_catch", "M→M2→M", 700)],
+
+ # ── 7막 해질녘 ──────────────────────────────────────────────────
+ 23: [("stickman", "stickman_w1d2_card_fan", "F0", 430),
+      ("zolla_girl", "zgirl_card_hold", "D1", 1010)],
+ 24: [("stickman", "sm_greeting_wave", "F0", 430),
+      ("zolla_man", "zman_hands_up", "D1", 1010)],
+ 25: [("stickman", "sm_holding_mirror", "F0", 430),
+      ("zolla_girl", "zgirl_mirror", "D2", 1020)],
+ 26: [("stickman", "m6_run_exit_r", "F0→V", 500)],
+}
+
+
+# ★화면 글자 — 한 줄에 너무 길면 잘린다 (1차 렌더 실측 2026-08-12).
+#   "모음 + 모음 = 단어" 가 "음 + 모음 = 단ㅇ" 로 양쪽이 잘려 나갔다.
+#   사장님 규격: 상반부 중앙 · **최대 세 줄**. 한 줄에 8자를 넘으면 나눈다.
+GLYPH_PER_LINE = 8
+GLYPH_MAX_LINES = 3
+
+
+def wrap_glyph(g):
+    toks = g.split()
+    if not toks:
+        return g
+    lines, cur = [], ""
+    for t in toks:
+        cand = (cur + " " + t).strip()
+        if cur and len(cand.replace(" ", "")) > GLYPH_PER_LINE:
+            lines.append(cur)
+            cur = t
+        else:
+            cur = cand
+    if cur:
+        lines.append(cur)
+    if len(lines) > GLYPH_MAX_LINES:                      # 세 줄을 넘으면 고르게 다시 나눈다
+        per = -(-len(toks) // GLYPH_MAX_LINES)
+        lines = [" ".join(toks[i:i + per]) for i in range(0, len(toks), per)][:GLYPH_MAX_LINES]
+    return "\n".join(lines)
+
+
+def base_h(con):
+    return {k: h for k, h in con.execute("SELECT char_key, base_h FROM char_heights")}
+
+
+def build(con, dry):
+    heights = base_h(con)
+    man = {s[0]: s for s in MAN.SCENES}
+    rows, objs = [], []
+    for seq, glyph, ko, en in NARR:
+        if seq in EXTRA:                                  # ★동작이 다 나오도록 덧댄 문장
+            ko = ko + " " + EXTRA[seq][0]
+            en = en + " " + EXTRA[seq][1]
+        glyph = wrap_glyph(glyph)                         # ★한 줄이 길면 줄바꿈(최대 세 줄)
+        _, sec, bg, cuts, poses, cards, anchors = man[seq]
+        bgp = os.path.join("W1_2/bg", bg + ".mp4")
+        is_vid = os.path.exists(bgp)
+        ev = MAN.BG_EVENTS.get(bg)
+
+        chars = []
+        for ck, pose, depth, cx in CHARS.get(seq, []):
+            d0 = depth.split("→")[0]
+            h_screen = DEPTH.get(d0, DEPTH["M"])[0]
+            chars.append({
+                "char": ck, "pose": pose, "depth": depth,
+                "cx": cx, "foot_y": DEPTH.get(d0, DEPTH["M"])[1],
+                # 화면 키 = 그 깊이의 키 × (그 캐릭터 기본키 / 스틱맨 기본키)
+                "h": round(h_screen * heights.get(ck, 700) / float(heights.get("stickman", 700))),
+            })
+
+        ip = {
+            "cap_ko": "", "cap_en": "",
+            "bg": bg,
+            "bg_video": ("W1_2/bg/%s.mp4" % bg) if is_vid else None,
+            "bg_still": None if is_vid else ("W1_2/bg/%s.png" % bg),
+            "bg_play": "once_hold",          # ★8초 클립을 한 번만 재생하고 마지막 프레임 유지
+            "bg_event": {"what": ev[0], "t": ev[1]} if ev else None,
+            "place_en": PLACE,
+            "glyph": glyph,
+            "text": dict(TEXT_BOX, text=glyph, lines=min(3, 1 + glyph.count("\n"))),
+            "draw_font": "cafe24_dongdong", "draw_dur": 1.6,
+            "draw_align": "center", "draw_text": glyph,
+            "chars": chars,
+            "cards": cards,
+            "anchors": anchors,
+        }
+        rows.append((EP, seq, ko, en, json.dumps(ip, ensure_ascii=False), "", None, float(sec)))
+        for i, c in enumerate(chars):
+            objs.append((EP, seq, None, c["cx"], c["foot_y"], round(c["h"] / 740.0, 3),
+                         5 + i, 0, "pose"))
+
+    if dry:
+        print("씬 %d · 오브젝트 %d (dry)" % (len(rows), len(objs)))
+        for r in rows[:2]:
+            print("   S%-2d %ds  %s" % (r[1], int(r[7]), r[2][:46]))
+        return 0
+
+    # ★★★ scene_objects 는 **건드리지 않는다** (2026-08-12 사고).
+    #   예전 판은 여기서 지우고 asset_id 없이 다시 넣었다. 그 뒤 wire_w12.py 가 제대로
+    #   채우는 구조였는데, 나레이션만 고치려고 build 를 다시 돌리자 배선이 **통째로 지워졌다**.
+    #   `JOIN assets ON a.id=o.asset_id` 가 0행이 되어 **캐릭터도 파라메트릭 글자도
+    #   조용히 사라진 채** 8분짜리가 렌더됐다([[precheck-asset-fidelity-before-render]]).
+    #   → 이제 scene_objects 의 주인은 **wire_w12.py 하나뿐**이다.
+    con.execute("DELETE FROM scenes WHERE episode=?", (EP,))
+    con.executemany(
+        "INSERT INTO scenes(episode,seq,script_kr,script_en,image_prompt,veo_prompt,sfx,"
+        "duration_sec) VALUES(?,?,?,?,?,?,?,?)", rows)
+    con.commit()
+    n_obj = con.execute("SELECT COUNT(*) FROM scene_objects WHERE episode=?",
+                        (EP,)).fetchone()[0]
+    if n_obj == 0:
+        print("  ★★scene_objects 가 비어 있다 — `python W1_2/wire_w12.py` 를 반드시 돌려라")
+    return len(rows), n_obj
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dry", action="store_true")
+    a = ap.parse_args()
+    con = sqlite3.connect(DB)
+    r = build(con, a.dry)
+    if a.dry:
+        return 0
+    n, m = r
+    tot = con.execute("SELECT SUM(duration_sec) FROM scenes WHERE episode=?", (EP,)).fetchone()[0]
+    print("빌드 완료 — %s" % EP)
+    print("  씬 %d개 · 오브젝트 %d개 · 총 %d초 (%d분 %d초)"
+          % (n, m, tot, tot // 60, tot % 60))
+    print("  기록 %s" % datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    con.close()
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
