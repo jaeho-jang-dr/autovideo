@@ -67,7 +67,7 @@
   "desc_en": "Add a silent ㅇ to each vowel to build the syllable blocks 아 어 오 우 으 이.",
   "target": "ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ",
   "anchor": false,
-  "is_new": true,
+  "is_new": false,
   "video": null
  },
  {
@@ -90,7 +90,7 @@
   "desc_en": "Train your ear on tricky pairs: ㅗ vs ㅜ, ㅐ vs ㅔ, ㅏ vs ㅓ.",
   "target": "ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ",
   "anchor": false,
-  "is_new": true,
+  "is_new": false,
   "video": null
  },
  {
@@ -113,7 +113,7 @@
   "desc_en": "Mirror the mouth shapes and pronounce all 8 simple vowels clearly.",
   "target": "ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ",
   "anchor": false,
-  "is_new": true,
+  "is_new": false,
   "video": null
  },
  {
@@ -136,7 +136,7 @@
   "desc_en": "Meet King Sejong's story and the Cheon-Ji-In (·ㅡㅣ) philosophy behind Hangeul.",
   "target": "ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ",
   "anchor": false,
-  "is_new": true,
+  "is_new": false,
   "video": null
  },
  {
@@ -159,7 +159,7 @@
   "desc_en": "Wrap up the week with vowel bingo and matching — review all 8 vowels.",
   "target": "ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ",
   "anchor": false,
-  "is_new": true,
+  "is_new": false,
   "video": null
  },
  {
