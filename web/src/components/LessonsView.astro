@@ -87,11 +87,8 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
               <span class="lr-main">
                 <b class="lr-title">
                   {isEn ? x.title_en : x.title_ko}
-                  {x.anchor
-                    ? (x.week <= 24
-                        ? <a class="tag tag-video yt-trigger" href="#" data-week={x.week}>▶ {isEn ? 'video' : '영상'}</a>
-                        : <a class="tag tag-video" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">▶ {isEn ? 'video' : '영상'}</a>
-                      )
+                  {(x.anchor || x.video || x.youtube_kr)
+                    ? <a class="tag tag-video yt-trigger" href="#" data-lesson={x.no || x.code} data-week={x.week}>▶ {isEn ? 'video' : '영상'}</a>
                     : <span class="tag tag-new">NEW</span>}
                 </b>
                 <span class="lr-alt">{isEn ? x.title_ko : x.title_en}</span>
@@ -111,14 +108,11 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
               </div>
               <div class="lc-skill">
                 {isEn ? x.skill_en : x.skill_ko}
-                {x.anchor ? <span class="tag tag-video">▶</span> : <span class="tag tag-new">NEW</span>}
+                {(x.anchor || x.video || x.youtube_kr) ? <span class="tag tag-video">▶</span> : <span class="tag tag-new">NEW</span>}
               </div>
               <div class="lc-title">{isEn ? x.title_en : x.title_ko}</div>
-              {x.anchor
-                ? (wk.week <= 24
-                    ? <a class="lc-link yt-trigger" href="#" data-week={wk.week}>{isEn ? '▶ Watch video' : '▶ 영상 보기'}</a>
-                    : <a class="lc-link" href={`${R2}/docs/${x.video}_${lang === 'en' ? 'en' : 'ko'}.mp4`} target="_blank" rel="noopener">{isEn ? '▶ Watch video' : '▶ 영상 보기'}</a>
-                  )
+              {(x.anchor || x.video || x.youtube_kr)
+                ? <a class="lc-link yt-trigger" href="#" data-lesson={x.no || x.code} data-week={wk.week}>{isEn ? '▶ Watch video' : '▶ 영상 보기'}</a>
                 : <div class="lc-no">#{x.no}</div>}
             </div>
           ))}
@@ -177,35 +171,63 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
   const ytModalPlayer = document.getElementById('yt-modal-player');
   const currentLang = document.documentElement.lang || 'en';
 
-  const YOUTUBE_MAP: Record<number, { ko: string; en: string }> = {
-    1: { ko: 'PfNFf6umSsc', en: 'X_biKW_jDYg' },
-    2: { ko: 'C8NQM0GaWrc', en: 'KrHzUwFQ0XI' },
-    3: { ko: 'gHYAXDo0MYs', en: '3UOVzWlilB4' },
-    4: { ko: '2Fl5pixR-yE', en: 'UqG0AdEh5Iw' },
-    5: { ko: 'Wo-O0-_914c', en: 'RL7QZ37HVXI' },
-    6: { ko: 'nF04YoEV8jk', en: 'pxufMbQq8sM' },
-    7: { ko: 'zVVrm8De8QY', en: 'YNiTusNTJCM' },
-    8: { ko: 'xp9ktV7zOYY', en: 'xgEedO2aFnk' },
-    9: { ko: 'Qlr6VRthasw', en: 'XHBT49ZsCB0' },
-    10: { ko: 'YTex0QGe17o', en: 'HhSRarWJS0E' },
-    11: { ko: 'TJLaZH-ghC0', en: 'Ecv5l7aQHGE' },
-    12: { ko: 'pM7eN6Qt6s4', en: 'VPgmXo5jXtY' },
-    13: { ko: 'zsfOc4R4IbA', en: 'XT0jYFhrsxY' },
-    14: { ko: 'B9kZVCxppPk', en: 'pGLrxq2xvC8' },
-    15: { ko: 'UVnkuRI7WQQ', en: 'XHtb4xBTnj0' },
-    16: { ko: 'l35_jlJEEzU', en: 'Eu9BvXmn2ck' },
-    17: { ko: '-Gw2cCugmlc', en: '8raRKVBvU-k' },
-    18: { ko: '2ew4QrXW72E', en: 'fPLm0vLq0ls' },
-    19: { ko: '0x7LxGc3DNo', en: 'PvTm1Df3RVs' },
-    20: { ko: 'L9QsqYAuAH8', en: '9J_0D2Ger4M' },
-    21: { ko: 'yyeIBiEIp6E', en: 'TKjiVsG8MuI' },
-    22: { ko: 'CZMYZUehC7k', en: 'XI9cmlczbkw' }, 23: { ko: '5xet4FQDdX8', en: '8lob0SW542k' },
-    24: { ko: 't07lEIZqTpQ', en: 'HIvrnNWk3K8' }
+  const YOUTUBE_MAP: Record<string, { ko: string; en: string }> = {
+    '1': { ko: 'PfNFf6umSsc', en: 'X_biKW_jDYg' },
+    'W1-1': { ko: 'PfNFf6umSsc', en: 'X_biKW_jDYg' },
+    'W1-2': { ko: 'olKPnpFxqMI', en: '-BLkgJlbagg' },
+    '2': { ko: 'C8NQM0GaWrc', en: 'KrHzUwFQ0XI' },
+    'W2-1': { ko: 'C8NQM0GaWrc', en: 'KrHzUwFQ0XI' },
+    '3': { ko: 'gHYAXDo0MYs', en: '3UOVzWlilB4' },
+    'W3-1': { ko: 'gHYAXDo0MYs', en: '3UOVzWlilB4' },
+    '4': { ko: '2Fl5pixR-yE', en: 'UqG0AdEh5Iw' },
+    'W4-1': { ko: '2Fl5pixR-yE', en: 'UqG0AdEh5Iw' },
+    '5': { ko: 'Wo-O0-_914c', en: 'RL7QZ37HVXI' },
+    'W5-1': { ko: 'Wo-O0-_914c', en: 'RL7QZ37HVXI' },
+    '6': { ko: 'nF04YoEV8jk', en: 'pxufMbQq8sM' },
+    'W6-1': { ko: 'nF04YoEV8jk', en: 'pxufMbQq8sM' },
+    '7': { ko: 'zVVrm8De8QY', en: 'YNiTusNTJCM' },
+    'W7-1': { ko: 'zVVrm8De8QY', en: 'YNiTusNTJCM' },
+    '8': { ko: 'xp9ktV7zOYY', en: 'xgEedO2aFnk' },
+    'W8-1': { ko: 'xp9ktV7zOYY', en: 'xgEedO2aFnk' },
+    '9': { ko: 'Qlr6VRthasw', en: 'XHBT49ZsCB0' },
+    'W9-1': { ko: 'Qlr6VRthasw', en: 'XHBT49ZsCB0' },
+    '10': { ko: 'YTex0QGe17o', en: 'HhSRarWJS0E' },
+    'W10-1': { ko: 'YTex0QGe17o', en: 'HhSRarWJS0E' },
+    '11': { ko: 'TJLaZH-ghC0', en: 'Ecv5l7aQHGE' },
+    'W11-1': { ko: 'TJLaZH-ghC0', en: 'Ecv5l7aQHGE' },
+    '12': { ko: 'pM7eN6Qt6s4', en: 'VPgmXo5jXtY' },
+    'W12-1': { ko: 'pM7eN6Qt6s4', en: 'VPgmXo5jXtY' },
+    '13': { ko: 'zsfOc4R4IbA', en: 'XT0jYFhrsxY' },
+    'W13-1': { ko: 'zsfOc4R4IbA', en: 'XT0jYFhrsxY' },
+    '14': { ko: 'B9kZVCxppPk', en: 'pGLrxq2xvC8' },
+    'W14-1': { ko: 'B9kZVCxppPk', en: 'pGLrxq2xvC8' },
+    '15': { ko: 'UVnkuRI7WQQ', en: 'XHtb4xBTnj0' },
+    'W15-1': { ko: 'UVnkuRI7WQQ', en: 'XHtb4xBTnj0' },
+    '16': { ko: 'l35_jlJEEzU', en: 'Eu9BvXmn2ck' },
+    'W16-1': { ko: 'l35_jlJEEzU', en: 'Eu9BvXmn2ck' },
+    '17': { ko: '-Gw2cCugmlc', en: '8raRKVBvU-k' },
+    'W17-1': { ko: '-Gw2cCugmlc', en: '8raRKVBvU-k' },
+    '18': { ko: '2ew4QrXW72E', en: 'fPLm0vLq0ls' },
+    'W18-1': { ko: '2ew4QrXW72E', en: 'fPLm0vLq0ls' },
+    '19': { ko: '0x7LxGc3DNo', en: 'PvTm1Df3RVs' },
+    'W19-1': { ko: '0x7LxGc3DNo', en: 'PvTm1Df3RVs' },
+    '20': { ko: 'L9QsqYAuAH8', en: '9J_0D2Ger4M' },
+    'W20-1': { ko: 'L9QsqYAuAH8', en: '9J_0D2Ger4M' },
+    '21': { ko: 'yyeIBiEIp6E', en: 'TKjiVsG8MuI' },
+    'W21-1': { ko: 'yyeIBiEIp6E', en: 'TKjiVsG8MuI' },
+    '22': { ko: 'CZMYZUehC7k', en: 'XI9cmlczbkw' },
+    'W22-1': { ko: 'CZMYZUehC7k', en: 'XI9cmlczbkw' },
+    '23': { ko: '5xet4FQDdX8', en: '8lob0SW542k' },
+    'W23-1': { ko: '5xet4FQDdX8', en: '8lob0SW542k' },
+    '24': { ko: 't07lEIZqTpQ', en: 'HIvrnNWk3K8' },
+    'W24-1': { ko: 't07lEIZqTpQ', en: 'HIvrnNWk3K8' }
   };
 
-  function renderYtPlayer(week: number, activeLang: 'ko' | 'en') {
+  function renderYtPlayer(lessonKey: string, activeLang: 'ko' | 'en') {
     if (!ytModalPlayer) return;
-    const videoId = YOUTUBE_MAP[week][activeLang];
+    const item = YOUTUBE_MAP[lessonKey] || YOUTUBE_MAP[lessonKey.replace('W', '')] || YOUTUBE_MAP['1'];
+    if (!item) return;
+    const videoId = item[activeLang];
     
     ytModalPlayer.innerHTML = `
       <div class="modal-yt-container">
@@ -223,7 +245,7 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
     ytModalPlayer.querySelectorAll('.modal-yt-tab').forEach(btn => {
       btn.addEventListener('click', () => {
         const targetLang = btn.getAttribute('data-lang') as 'ko' | 'en';
-        renderYtPlayer(week, targetLang);
+        renderYtPlayer(lessonKey, targetLang);
       });
     });
   }
@@ -231,9 +253,9 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
   ytTriggerBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const week = parseInt(btn.getAttribute('data-week') || '1', 10);
+      const lessonKey = btn.getAttribute('data-lesson') || btn.getAttribute('data-week') || '1';
       if (ytModal && ytModalPlayer) {
-        renderYtPlayer(week, currentLang === 'ko' ? 'ko' : 'en');
+        renderYtPlayer(lessonKey, currentLang === 'ko' ? 'ko' : 'en');
         ytModal.classList.add('open');
         ytModal.setAttribute('aria-hidden', 'false');
       }

@@ -42,8 +42,10 @@
   "desc_en": "Learn easy first words made of vowels only — 아이, 오이, 우유 — with pictures and sound.",
   "target": "ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ",
   "anchor": false,
-  "is_new": true,
-  "video": null
+  "is_new": false,
+  "video": "hangeul_w1d2_flat",
+  "youtube_kr": "olKPnpFxqMI",
+  "youtube_en": "-BLkgJlbagg"
  },
  {
   "no": "W1-3",

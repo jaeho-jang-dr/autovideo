@@ -35,8 +35,8 @@ def main():
     categories = []
     for r in cur.execute(
             "SELECT c.code, c.name_kr, c.name_en, c.medical_lens, c.priority, "
-            "(SELECT COUNT(*) FROM episodes e WHERE e.category=c.code) AS count "
-            "FROM categories c ORDER BY c.priority, c.code"):
+            "(SELECT COUNT(*) FROM episodes e WHERE e.category=c.code AND e.category!='KO' AND e.code NOT LIKE 'KO%') AS count "
+            "FROM categories c WHERE c.code!='KO' ORDER BY c.priority, c.code"):
         categories.append(dict(r))
 
     # 씬(세부 대본)을 에피소드별로 미리 묶어 둔다.
@@ -57,7 +57,7 @@ def main():
             "SELECT code, category, title_kr, title_en, hook_kr, logline_kr, "
             "status, priority, runtime_sec, youtube_kr, youtube_en, publish_date, "
             "reverse_spec, style_profile "
-            "FROM episodes ORDER BY priority, code"):
+            "FROM episodes WHERE category!='KO' AND code NOT LIKE 'KO%' ORDER BY priority, code"):
         ep = dict(r)
         ep["scenes"] = scenes_by_episode.get(ep["code"], [])
         episodes.append(ep)
