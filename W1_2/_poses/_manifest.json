@@ -1,0 +1,10 @@
+[
+  {
+    "name": "w1d2_lean_rail_r",
+    "file": "assets/graphics/poses/stickman_w1d2_lean_rail_r.png",
+    "expr": "happy",
+    "facing": "right",
+    "ko": "난간에 등을 기대고 두 팔을 난간 위에 올린 자세",
+    "en": "Leaning back against a railing, both arms resting on it"
+  }
+]

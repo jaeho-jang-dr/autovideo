@@ -1,0 +1,184 @@
+[
+ {
+  "s": 1,
+  "ko": "안녕하세요! 지난 시간엔 단모음 여덟 개를 배웠죠. ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ.",
+  "en": "Hello! Last time we learned the eight simple vowels — ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ, ㅐ, ㅔ.",
+  "box": "단모음 8개",
+  "hangeul": "ㅏ ㅓ ㅗ ㅜ ㅡ ㅣ ㅐ ㅔ"
+ },
+ {
+  "s": 2,
+  "ko": "오늘은 그 모음만으로 단어를 만들어 볼 거예요. 자음은 하나도 쓰지 않습니다.",
+  "en": "Today we'll build whole words from those vowels alone. Not a single consonant.",
+  "box": "모음만으로 만드는 단어",
+  "hangeul": "모음 + 모음 = 단어"
+ },
+ {
+  "s": 3,
+  "ko": "글자를 쓸 때 앞자리에 동그라미 ㅇ이 앉지만, 소리는 나지 않아요. 자리만 지키는 빈 의자랍니다.",
+  "en": "When we write, a small circle ㅇ sits in front — but it makes no sound. It just holds the seat.",
+  "box": "ㅇ = 소리 없는 자리",
+  "hangeul": "아 = ㅇ + ㅏ ← ㅇ은 회색"
+ },
+ {
+  "s": 4,
+  "ko": "자, 광장으로 나가 볼까요? 오늘의 단어들이 이 광장 곳곳에 숨어 있어요.",
+  "en": "Shall we head out into the plaza? Today's words are hiding all around it.",
+  "box": "오늘의 단어 7개",
+  "hangeul": "아이 · 이 · 오이 · 우유 · 오 · 아우 · 여우"
+ },
+ {
+  "s": 5,
+  "ko": "첫 번째 단어, 아이. 어린아이를 뜻하는 말이에요. 받침 없이 ㅏ와 ㅣ, 모음 두 개로만 이루어졌어요.",
+  "en": "Our first word — 아이. It means a child. Just two vowels, ㅏ and ㅣ, and no batchim.",
+  "box": "아이 (a child)",
+  "hangeul": "아이 · **삽화** 아이 그림 카드"
+ },
+ {
+  "s": 6,
+  "ko": "계단을 내려오듯 끊어서 두 번. 아 — 이. 이제 붙여서 한 번. 아이. 따라 해 보세요.",
+  "en": "Step down through it, one at a time. 아 — 이. Now together. 아이. Say it with me.",
+  "box": "아 + 이 → 아이",
+  "hangeul": "아│이 → 아이 (블록 스냅)"
+ },
+ {
+  "s": 7,
+  "ko": "두 번째, 이. 입을 옆으로 활짝 당겨 내는 ㅣ 하나면 단어가 돼요. 우리 몸의 이, 바로 치아를 뜻하지요.",
+  "en": "Second — 이. A single ㅣ, lips pulled wide, is already a word. It means a tooth.",
+  "box": "이 (a tooth)",
+  "hangeul": "이 · **삽화** 치아 그림 카드"
+ },
+ {
+  "s": 8,
+  "ko": "어? 뭐가 굴러오네요. 세 번째 단어, 오이예요. 아삭아삭한 초록 채소죠. ㅗ와 ㅣ, 역시 모음 두 개예요.",
+  "en": "Oh — something's rolling this way. Our third word: 오이, a crunchy green cucumber. Again two vowels, ㅗ and ㅣ.",
+  "box": "오이 (a cucumber)",
+  "hangeul": "오이 · **삽화** 오이 그림 카드"
+ },
+ {
+  "s": 9,
+  "ko": "입술을 동그랗게 모았다가 옆으로 당기며. 오 — 이. 오이.",
+  "en": "Round your lips, then pull them wide. 오 — 이. 오이.",
+  "box": "오 + 이 → 오이",
+  "hangeul": "오│이 → 오이 (블록 스냅)"
+ },
+ {
+  "s": 10,
+  "ko": "저건 놓치면 안 되겠네요! 네 번째, 우유. 하얗고 고소한 우유예요. ㅜ와 ㅠ, 둘 다 입술을 동그랗게 내미는 소리죠.",
+  "en": "Careful — don't let that one fall! Fourth: 우유, sweet white milk. Both ㅜ and ㅠ push the lips forward and round.",
+  "box": "우유 (milk)",
+  "hangeul": "우유 · **삽화** 우유팩 그림 카드"
+ },
+ {
+  "s": 11,
+  "ko": "천천히. 우 — 유. 우유.",
+  "en": "Slowly now. 우 — 유. 우유.",
+  "box": "우 + 유 → 우유",
+  "hangeul": "우│유 → 우유 (블록 스냅)"
+ },
+ {
+  "s": 12,
+  "ko": "아이와 오이. 뒷소리가 같지요? 둘 다 이로 끝나요. 앞소리 하나가 바뀌면 뜻이 달라집니다.",
+  "en": "아이 and 오이 — same ending, both end in 이. Change one sound in front and the meaning changes.",
+  "box": "아이 ↔ 오이",
+  "hangeul": "아**이** · 오**이**"
+ },
+ {
+  "s": 13,
+  "ko": "우와! 다섯 번째, 오. 놀랄 때 오! 하고 내는 그 소리, 그대로 단어가 돼요.",
+  "en": "Whoa! Fifth — 오. The sound you make when you're surprised, 오!, is itself a word.",
+  "box": "오 (oh!)",
+  "hangeul": "오 · **삽화** 놀란 얼굴 카드"
+ },
+ {
+  "s": 14,
+  "ko": "그리고 오는 숫자 다섯이기도 해요. 하나, 둘, 셋, 넷, 다섯 — 오!",
+  "en": "And 오 also means the number five. One, two, three, four, five — 오!",
+  "box": "오 (five)",
+  "hangeul": "오 = 5 · **삽화** 손가락 다섯 그림 카드"
+ },
+ {
+  "s": 15,
+  "ko": "벤치에 누가 앉아 있네요. 여섯 번째 단어, 아우. 손아래 동생을 다정하게 부르는 말이에요.",
+  "en": "Someone's sitting on the bench. Sixth word — 아우, a warm word for a younger sibling.",
+  "box": "아우 (younger sibling)",
+  "hangeul": "아우 · **삽화** 형제 그림 카드"
+ },
+ {
+  "s": 16,
+  "ko": "ㅏ에서 ㅜ로. 입을 크게 열었다 동그랗게 모으며. 아 — 우. 아우.",
+  "en": "From ㅏ to ㅜ. Open wide, then round. 아 — 우. 아우.",
+  "box": "아 + 우 → 아우",
+  "hangeul": "아│우 → 아우 (블록 스냅)"
+ },
+ {
+  "s": 17,
+  "ko": "소리에도 온도가 있어요. ㅏ와 ㅗ는 밝고 따뜻한 소리, ㅓ와 ㅜ는 어둡고 차가운 소리랍니다.",
+  "en": "Sounds have a temperature too. ㅏ and ㅗ are bright and warm; ㅓ and ㅜ are dark and cool.",
+  "box": "따뜻한 소리 · 차가운 소리",
+  "hangeul": "ㅏ ㅗ (난색) ／ ㅓ ㅜ (한색)"
+ },
+ {
+  "s": 18,
+  "ko": "그런데 ㅣ는 색이 없어요. 서 있는 사람을 본뜬 글자라서, 따뜻한 소리와도 차가운 소리와도 사이좋게 어울립니다.",
+  "en": "But ㅣ has no colour. Shaped after a standing person, it gets along with warm and cool alike.",
+  "box": "ㅣ = 중립",
+  "hangeul": "ㅏ+ㅣ · ㅗ+ㅣ · ㅜ+ㅣ"
+ },
+ {
+  "s": 19,
+  "ko": "쉿… 덤불에 뭐가 있어요. 일곱 번째 단어, 여우. 숲에 사는 붉은 여우예요. 여와 우, 이것도 모음뿐이랍니다.",
+  "en": "Shh… something's in the bush. Seventh word — 여우, the red fox of the forest. 여 and 우 — vowels only again.",
+  "box": "여우 (a fox)",
+  "hangeul": "여우 · **삽화** 여우 그림 카드"
+ },
+ {
+  "s": 20,
+  "ko": "앗, 숨어 버렸네요. 여 — 우. 여우. 여는 ㅣ와 ㅓ가 빨리 이어진 소리예요. 지금은 한 소리로 익혀 두세요.",
+  "en": "Oh, it's gone. 여 — 우. 여우. 여 is ㅣ sliding quickly into ㅓ. For now, just learn it as one sound.",
+  "box": "여 + 우 → 여우",
+  "hangeul": "여│우 → 여우 (블록 스냅)"
+ },
+ {
+  "s": 21,
+  "ko": "같은 온도끼리 만나면 자석처럼 잘 붙어요. 따뜻한 소리는 따뜻한 소리끼리, 차가운 소리는 차가운 소리끼리.",
+  "en": "Same temperature, and they snap together like magnets — warm with warm, cool with cool.",
+  "box": "같은 온도끼리",
+  "hangeul": "ㅗ+ㅏ = ㅘ ／ ㅜ+ㅓ = ㅝ"
+ },
+ {
+  "s": 22,
+  "ko": "ㅣ만은 예외예요. 따뜻한 쪽에도, 차가운 쪽에도 스르륵 붙습니다. 떨어지는 잎을 잡듯이요.",
+  "en": "Only ㅣ is the exception — it slips in on the warm side and the cool side alike. Like catching a falling leaf.",
+  "box": "ㅣ = 어디든",
+  "hangeul": "ㅏ+ㅣ = ㅐ ／ ㅓ+ㅣ = ㅔ"
+ },
+ {
+  "s": 23,
+  "ko": "이제 맞춰 볼까요? 그림을 보고 단어를 말해 보세요. 초록 채소는? 하얀 음료는? 붉은 짐승은?",
+  "en": "Now let's match. Look at the picture and say the word. The green vegetable? The white drink? The red animal?",
+  "box": "그림 ↔ 글자",
+  "hangeul": "오이 · 우유 · 여우 (카드 3장)"
+ },
+ {
+  "s": 24,
+  "ko": "오늘 배운 일곱 단어를 모아 볼까요? 아이, 이, 오이, 우유, 오, 아우, 여우.",
+  "en": "Let's gather today's seven words — 아이, 이, 오이, 우유, 오, 아우, 여우.",
+  "box": "오늘의 일곱 단어 + 야외",
+  "hangeul": "아이 이 오이 우유 오 아우 여우 · **야외**"
+ },
+ {
+  "s": 25,
+  "ko": "오늘 배운 단어를 거울 앞에서 또박또박 말해 보세요. 입 모양이 보이면 소리도 또렷해집니다.",
+  "en": "Practice today's words clearly in front of a mirror. When you can see the shape, the sound gets clearer.",
+  "box": "거울 앞에서 연습",
+  "hangeul": "아이 오이 우유"
+ },
+ {
+  "s": 26,
+  "ko": "다음 시간엔 소리 없는 ㅇ에 모음을 붙여 글자 블록을 만들어 봐요. 또 만나요!",
+  "en": "Next time we'll join the silent ㅇ to a vowel and build syllable blocks. See you soon!",
+  "box": "내일 — ㅇ + 모음",
+  "hangeul": "ㅇ + ㅏ = 아"
+ }
+]

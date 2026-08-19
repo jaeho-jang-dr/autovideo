@@ -1,0 +1,130 @@
+[
+ {
+  "n": 9,
+  "title": "태권도",
+  "clip": "W1_2/motion6/tkd_show_v8.mp4",
+  "src_sec": 21.0,
+  "show_sec": 21.07,
+  "start": 0.0,
+  "lines": [
+   {
+    "i": 0,
+    "en": "The square also hosts taekwondo demonstrations.",
+    "ko": "광장에서는 태권도 시범도 열려요.",
+    "box": "태권도 시범",
+    "hangeul": "",
+    "start": 0.0,
+    "dur": 3.36
+   },
+   {
+    "i": 1,
+    "en": "A flying side kick, a 540 spinning kick, and four boards in one jump.",
+    "ko": "뛰어 옆차기, 오백사십도 회전 차기, 그리고 한 번 뛰어 네 장 격파.",
+    "box": "",
+    "hangeul": "",
+    "start": 3.71,
+    "dur": 5.47
+   },
+   {
+    "i": 2,
+    "en": "Doing it outdoors like this is 야외 — ㅑ and ㅚ.",
+    "ko": "저렇게 밖에서 하는 것을 야외라고 해요. 야와 외예요.",
+    "box": "야외 [ya-oe] outdoors",
+    "hangeul": "야외",
+    "start": 9.53,
+    "dur": 3.45
+   },
+   {
+    "i": 3,
+    "en": "Stickman cheers from among the crowd, hand in the air.",
+    "ko": "스틱맨도 구경꾼 사이에서 손을 들어 환호하네요.",
+    "box": "",
+    "hangeul": "",
+    "start": 13.33,
+    "dur": 3.65
+   },
+   {
+    "i": 4,
+    "en": "Shouting in disapproval is 야유 — ㅑ and ㅠ.",
+    "ko": "반대로 못마땅해 소리치는 건 야유라고 해요. 야와 유예요.",
+    "box": "야유 [ya-yu] booing",
+    "hangeul": "야유",
+    "start": 17.33,
+    "dur": 3.39
+   }
+  ]
+ },
+ {
+  "n": 13,
+  "title": "별 · 마무리",
+  "clip": "W1_2/_scenes/w1d2_s25_26_v4.mp4",
+  "src_sec": 49.0,
+  "show_sec": 49.0,
+  "start": 21.07,
+  "lines": [
+   {
+    "i": 0,
+    "en": "Take out a mirror. Watch your own mouth as you copy me.",
+    "ko": "거울을 꺼내 볼까요? 입 모양을 직접 보면서 따라 해 보세요.",
+    "box": "거울로 입 모양 보기",
+    "hangeul": "",
+    "start": 21.07,
+    "dur": 3.72
+   },
+   {
+    "i": 1,
+    "en": "아, 이, 오, 우. See how the shape changes each time?",
+    "ko": "아, 이, 오, 우. 입이 어떻게 바뀌는지 보이지요?",
+    "box": "아 이 오 우",
+    "hangeul": "아 이 오 우",
+    "start": 25.14,
+    "dur": 3.78
+   },
+   {
+    "i": 2,
+    "en": "Today's words — 아이, 이, 위, 오이, 유아, 우유, 이유.",
+    "ko": "오늘 배운 낱말이에요. 아이, 이, 위, 오이, 유아, 우유, 이유.",
+    "box": "오늘의 낱말 ①",
+    "hangeul": "",
+    "start": 29.27,
+    "dur": 4.98
+   },
+   {
+    "i": 3,
+    "en": "And 오, 우와, 야외, 야유, 아우, 여우, 아야, 여유 — fifteen in all.",
+    "ko": "그리고 오, 우와, 야외, 야유, 아우, 여우, 아야, 여유. 모두 열다섯이에요.",
+    "box": "오늘의 낱말 ②",
+    "hangeul": "",
+    "start": 34.6,
+    "dur": 6.07
+   },
+   {
+    "i": 4,
+    "en": "Every one is built from vowels alone. Not a single consonant.",
+    "ko": "모두 모음만으로 만든 말이에요. 자음은 하나도 쓰지 않았지요.",
+    "box": "",
+    "hangeul": "",
+    "start": 41.02,
+    "dur": 4.39
+   },
+   {
+    "i": 5,
+    "en": "Next time we'll put the silent ㅇ in front of a vowel and build syllables — consonants at last.",
+    "ko": "다음 시간에는 소리 없는 ㅇ을 모음 앞에 붙여 음절을 만들어 봅니다. 드디어 자음이에요.",
+    "box": "다음 시간 · 자음",
+    "hangeul": "",
+    "start": 45.76,
+    "dur": 5.67
+   },
+   {
+    "i": 6,
+    "en": "Thank you for following along. See you next time!",
+    "ko": "오늘도 잘 따라와 주셔서 고마워요. 다음 시간에 또 만나요!",
+    "box": "",
+    "hangeul": "",
+    "start": 51.78,
+    "dur": 3.38
+   }
+  ]
+ }
+]

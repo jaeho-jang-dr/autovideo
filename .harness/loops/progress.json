@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-14",
+  "last_updated": "2026-08-19",
   "project": "autovideo",
   "agents": {
     "orchestrator": "Antigravity (Gemini)",
@@ -178,8 +178,11 @@
     "★캐릭터 가이드 이미지 3종(front/side/right-3q) Flow 통일 규칙 확정·기록 — W22의 정지↔무빙 캐릭터 불일치(엔진 혼용: 정지=agy 나노바나나, 무빙=Flow Veo) 재발방지. VEO_WORKFLOW.md 절 추가 + 메모리 character-guide-image-flow-unify + bugrang #9 기록.",
     "KO-W23: 36씬 · 4K · Azure(선희/Emma) · 자막5개국어×2 · 노출4대(재생목록·고정댓글·카드·최종화면) · drjayed.com 임베드 · 공개 전환 완료 (2026-07-28)",
     "KO-W1-2 (기본 모음): 스틱맨 6관절 컷 라이브러리(motion6_defs.py, cut_motion6.py) 및 배경 연출/동선 엔진(bg_defs.py) 구축, W1_2_scenario.md / W1_2_motion.md 씬 타임라인 정밀 설계 및 포즈 매니페스트(_manifest.json) 동기화 완료 (2026-08-14)",
-    "Agent/Memory: 컷랑·글씨랑·무비랑·노트랑 Agent 명세 갱신 및 GEMINI.md 컨텍스트 업데이트 완료 (2026-08-14)"
+    "Agent/Memory: 컷랑·글씨랑·무비랑·노트랑 Agent 명세 갱신 및 GEMINI.md 컨텍스트 업데이트 완료 (2026-08-14)",
+    "KO-W1-2 (기본 모음): 캐릭터 전후방 움직임 강화 및 스틱맨 4방향 8개 동작 동영상(전후방 달리기/걷기 포함) 추가 완성 (2026-08-19)",
+    "Agent/Memory: 컷랑·무비랑·캐릭터랑 3대 에이전트 기록 동기화 및 메모리 업데이트 완료 (2026-08-19)"
   ],
+
   "pending_tasks": [
     "Binge-Watching: Run autoveo_flow.py with binge_watching/shorts_prompts.txt to generate 9:16 portrait video clips (scene_0, 2, 20).",
     "Binge-Watching: Render final KO/EN vertical 4K shorts via make_binge_short_916.py and upload them to YouTube (Unlisted).",

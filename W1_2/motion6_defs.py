@@ -417,7 +417,29 @@ MOTIONS = [
      "arms bent at the elbow and pumping hard in opposition. Roughly five full strides "
      "over the eight seconds. The body leans slightly forward. Stay side-on."),
 
-    ("walk_away", "front",
+    # ★뒷모습 걷기 — 라이브러리에 **순수 뒷모습 걷기가 없었다**(2026-08-17).
+    #   `walk_exit` 는 걷다가 돌아서는 것이고, `walk_exit_back`(4장)은 거기서 잘라낸
+    #   조각이라 한 발만 까딱거린다. 수문장 `perf_guard_away` 만 제대로 된 뒷모습이었다.
+    #   그 프롬프트 규격(빈 원 머리·교대 걸음)을 스틱맨에 그대로 옮긴다.
+    #   기준 이미지는 **기존 뒷모습 프레임**(m6_walk_exit_l_50)을 써서 머리 크기를 맞췄다.
+    ("walk_back", "back",
+     "The stickman is seen FROM DIRECTLY BEHIND, walking AWAY from the camera. "
+     "He walks ON THE SPOT so the cycle can loop.\n"
+     "  0.0 - 8.0s  a steady, even walk seen from straight behind: the two legs "
+     "alternate CLEARLY and evenly, like a soldier marching - one heel lifts and the "
+     "knee bends as that foot swings forward, while the other foot plants flat on the "
+     "ground; then they swap. The arms swing in OPPOSITION to the legs, elbows nearly "
+     "straight, hands passing close to the hips. The shoulders rock gently with each "
+     "step. About SIX unhurried steps (three full strides) over the eight seconds, at "
+     "an even tempo, never pausing.\n\n"
+     "★WE ONLY EVER SEE HIS BACK. He never turns round, never looks over his shoulder. "
+     "His head is an EMPTY CIRCLE - no eyes, no nose, no mouth, no ears, nothing inside "
+     "it at any moment. That empty circle is the back of his head and it must stay "
+     "empty in every single frame.\n"
+     "★He stays centred in frame and does not drift left or right. Same thin black "
+     "lines on plain white as the source image, same head size, same line weight."),
+
+    ("walk_right_away", "front",
      "The stickman walks steadily in place, seen from BEHIND at a THREE-QUARTER angle - "
      "we see mostly his back and a little of his right side, as if he is walking away "
      "from the camera and off to the right. A natural walk cycle, roughly three strides "
