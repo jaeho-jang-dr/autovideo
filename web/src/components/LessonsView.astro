@@ -72,10 +72,16 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
   <div class="lr-weeks" data-view="list">
     {weeks.map((wk) => (
       <section class="week-block" data-level={wk.level}>
-        <h3 class="week-head">
+        <h3 class={`week-head${wk.week === 1 ? ' wk-toggle' : ''}`}
+            role={wk.week === 1 ? 'button' : undefined}
+            tabindex={wk.week === 1 ? 0 : undefined}
+            aria-expanded={wk.week === 1 ? 'false' : undefined}
+            title={wk.week === 1 ? (isEn ? 'Show all 7 days' : '7일 전체 보기') : undefined}>
           <span class={`lvl-badge ${wk.level}`}>{isEn ? LV_EN[wk.level] : LV_KO[wk.level]}</span>
           <span class="wk-no">{L.week} {wk.week}</span>
           <span class="wk-theme">{isEn ? wk.theme_en : wk.theme_ko}</span>
+          {wk.week === 1 && <span class="wk-more">{wk.lessons.length}{L.lessons}</span>}
+          {wk.week === 1 && <span class="wk-caret" aria-hidden="true">▾</span>}
         </h3>
 
         <ol class="lesson-list">
@@ -156,6 +162,22 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
       (b as HTMLElement).style.display = show ? '' : 'none';
     });
   }));
+
+  // ---- 주차 제목 토글: 누르면 그 주 1~7일 전부, 다시 누르면 접힌다 ----
+  const setOpen = (blk: Element, open: boolean) => {
+    blk.classList.toggle('show-all', open);
+    blk.querySelector('.week-head.wk-toggle')?.setAttribute('aria-expanded', open ? 'true' : 'false');
+  };
+  blocks.forEach((blk) => {
+    const head = blk.querySelector('.week-head.wk-toggle');   // ★현재 1주차만
+    if (!head) return;
+    const toggle = () => setOpen(blk, !blk.classList.contains('show-all'));
+    head.addEventListener('click', toggle);
+    head.addEventListener('keydown', (e) => {
+      const k = (e as KeyboardEvent).key;
+      if (k === 'Enter' || k === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
 
   vbtns.forEach((v) => v.addEventListener('click', () => {
     vbtns.forEach((x) => x.classList.remove('active'));
@@ -311,6 +333,16 @@ const LV_EN = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'A
   .lvl-badge.beginner { background: var(--c-b); } .lvl-badge.intermediate { background: var(--c-i); } .lvl-badge.advanced { background: var(--c-a); }
   .wk-no { font-weight: 800; color: var(--c-ink); }
   .wk-theme { color: var(--c-ink-2); font-weight: 600; }
+  /* ★주차 제목을 눌러 그 주 7일을 펼치고 접는다 (사장님 2026-08-20).
+     `show-all` 은 이미 CSS 에 있었는데 붙여 주는 곳이 없어 D1 만 보였다. */
+  .wk-toggle { cursor: pointer; user-select: none; transition: color .15s; }
+  .wk-toggle:hover .wk-no, .wk-toggle:focus-visible .wk-no { color: var(--c-gold); }
+  .wk-toggle:focus-visible { outline: 2px solid var(--c-gold); outline-offset: 3px; border-radius: 6px; }
+  .wk-more { margin-left: auto; font-size: 0.76rem; font-weight: 700; color: var(--c-ink-3);
+             background: var(--c-line); padding: 3px 9px; border-radius: 20px; }
+  .wk-caret { font-size: 0.9rem; color: var(--c-ink-3); transition: transform .2s; }
+  .week-block.show-all .wk-caret { transform: rotate(180deg); }
+  .week-block.show-all .wk-more { background: var(--c-gold); color: #fff; }
 
   /* 리스트 뷰 */
   .lesson-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
