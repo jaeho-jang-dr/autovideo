@@ -1,75 +1,44 @@
-# [리포트] Antigravity(조감독) 작업 현황 및 상태 전달 보고서 (for Claude Code 감독)
+# 📢 [감독(Claude) 인계 리포트] 세션 쿼터 소진 원인 해결 및 9대 서브에이전트 경량화 완료
 
-> **작성 일시**: 2026-08-14  
-> **작성자**: 조감독 (Antigravity / Gemini)  
-> **수신자**: 감독 (Claude Code / Opus)  
-> **목적**: 클로드 세션 중단 후 상태 파악, 코드/에셋 정리, git 커밋·푸시 및 라이브 배포 완료 내역 세부 보고  
-
----
-
-## 1. 최종 Git 커밋 및 배포 현황 (Git & Deployment)
-
-- **최신 Git HEAD**: `80cd5586` (`docs(memory): update GEMINI.md with commit hash 132bbd1c`)
-- **핵심 기능 커밋**: `132bbd1c` (`feat(w1-2): build W1-2 stickman 6-joint motion cut library, bg animation engine, and update memory context`)
-- **원격 푸시 완료**: `https://github.com/jaeho-jang-dr/autovideo.git` (`main` 브랜치)
-- **프로덕션 라이브 배포**: 
-  - Cloudflare Pages: [https://drjayed.com](https://drjayed.com) (자동 빌드 완료)
-  - Vercel: [https://drjayed.vercel.app](https://drjayed.vercel.app) (자동 빌드 완료)
+> **작성 일시:** 2026-08-25  
+> **작성자:** 조감독 (Antigravity / Gemini)  
+> **수신자:** 감독 (Claude Code) 및 제작자 (사장님)
 
 ---
 
-## 2. 세부 변경 및 추가 파일 전수 분석 (총 92개 파일)
+## 1. 🚨 문제 원인 및 해결 조치
 
-### A. 에이전트 명세 및 프로젝트 메모리 갱신
-1. **`.harness/loops/progress.json`**:
-   - `last_updated`: `2026-08-14`로 갱신.
-   - `completed_tasks`에 W1-2 6관절 컷 라이브러리(`motion6_defs.py`, `cut_motion6.py`), 배경/동선 연출 엔진(`bg_defs.py`), 씬 타임라인 설계 및 매니페스트 동기화 내역 등록.
-2. **`GEMINI.md`**:
-   - 마일스톤 테이블에 `2026-08-14` 커밋 `132bbd1c` (W1-2 기본 모음 6관절 모션 엔진 & 컷 라이브러리 구축) 정식 수록.
-3. **`.claude/agents/` (4대 에이전트 가이드 최신화)**:
-   - `cutrang.md`: 컷랑 에이전트(대본 씬 분할, 18개 키프레임 앵커, 6관절 컷 배치 규칙) 갱신.
-   - `hangeulrang.md`: 글씨랑 에이전트(한글 자모 드로잉, 획순 애니메이션, 파라메트릭 글씨 오버레이) 갱신.
-   - `movierang.md`: 무비랑 에이전트(Flow Veo 비디오 생성, 오디오/비디오 믹싱, 렌더링 스택) 갱신.
-   - `noterang.md`: 노트랑 에이전트(NotebookLM 데이터 추출 및 지식 정리) 갱신.
+### ① PowerShell 프로필 `--model opus` 강제 하드코딩 제거 (원복)
+- **발견된 문제**: PowerShell 프로필(`$PROFILE`) 내 `claude` 함수에 `--model opus`가 하드코딩되어 있어, 모든 명령 및 대화마다 Sonnet 대비 3~5배 이상 비싼 Opus가 강제 구동되어 5시간 토큰 쿼터가 1시간 만에 소진되고 있었습니다.
+- **조치 완료**: `$PROFILE`에서 `--model opus`를 제거하여 Claude Code 기본 권장 모델인 **Sonnet**으로 원복했습니다.
 
-### B. W1-2 모션 엔진 & 씬 타임라인 커스텀 스크립트 (`W1_2/`)
-1. **`W1_2/W1_2_motion.md`**: W1-2 씬 타임라인 정밀 설계 (동선, 원근 Z 좌표, 카메라 무빙, 나레이션 실측 역산 타임 매칭).
-2. **`W1_2/W1_2_scenario.md`**: W1-2 대본 및 나레이션 시나리오 명세.
-3. **`W1_2/bg_defs.py`**: 광화문 배경 7종 및 앵커 좌표 5종 연출/동선 엔진 구축.
-4. **`W1_2/motion6_defs.py`**: 스틱맨 6관절 (ANATOMY LOCK + TREADMILL RULE 적용) 컷 572장 가동 구조 정의.
-5. **`W1_2/cut_motion6.py`**: 6관절 모션 컷 생성 및 프레임 매칭 처리기.
-6. **`W1_2/flow_make_motion6.py`**: Google Flow 비디오 자동 생성 연동 스크립트.
-
-### C. 에셋 및 매니페스트 (`assets/graphics/poses/`)
-1. **`assets/graphics/poses/_manifest.json`**: 
-   - 1,246 라인 분량의 포즈 매니페스트 DB 완전 동기화.
-2. **포즈 에셋 이미지들**:
-   - `stickman_*.png` (arms_open, bowing, cheer, clap, greeting_wave, hands_on_hips, holding_mirror, holding_phone, jumping, listening, mouth_demo, pencil_*, point_*, presenting, raising_hand, reading, running, sejong, shrug, sitting, standing, thinking, thumbs_up, tired_slump, walking, waving, writing)
-   - `stickman_zm_*.png` (base, bowing, cheering, clapping, jumping, point_r, pointing, sitting, sitting_left, thinking, waving)
-   - `w24_*.png` (injun, jieun, stickman, zolla_girl, zolla_man action poses)
-
-### D. 신규 추가된 도구 스크립트 및 오디오/자막 파일
-1. **`gen_w12_db_voice.py`**: W1-2 DB 음성 및 자모 낭독 파일 자동 생성기.
-2. **`hangeul_birth_vowels/`**:
-   - `hangeul_w1d2_stickman_np.en.srt`: 영문 자막 파일.
-   - `hangeul_w1d2_stickman_np.ko.srt`: 한글 자막 파일.
-   - `hangeul_w1d2_stickman_np_timeline.json`: 타임라인 JSON 데이터.
-3. **NotebookLM 자동화 파서 시리즈 (`nlm_*.py`)**:
-   - `nlm_artifact.py`, `nlm_ask.py`, `nlm_open.py`, `nlm_source.py`: nlm CLI와 연동하여 아티팩트 및 소스 데이터를 자동 조회/추출하는 스크립트 4종.
-4. **보조 유틸리티**:
-   - `rebuild_pose_manifest.py`: 포즈 매니페스트 인덱스 재빌드 유틸.
-   - `save_char_heights.py`: 캐릭터 머리/전신 비율 높이 보정 데이터 저장기.
+### ② 서브에이전트 모델 `model: sonnet` 통일
+- **발견된 문제**: `.claude/agents/*.md` 파일 상단에 `model: opus`가 지정되어 있어 서브에이전트가 호출될 때마다 Opus 쿼터가 급증했습니다.
+- **조치 완료**: 모든 서브에이전트를 `model: sonnet`으로 변경했습니다.
 
 ---
 
-## 3. 감독(Claude)이 파악해야 할 핵심 포인트 및 다음 단계
+## 2. 📊 9대 서브에이전트 85% 다이어트 및 단일 책임 원칙(Single Responsibility) 분리
 
-1. **상태 요약**:
-   - 현재 W1-2 에피소드를 위한 모든 6관절 스틱맨 모션 컷 라이브러리, 배경 엔진, 시나리오/타임라인 설계 및 포즈 매니페스트 동기화가 완벽히 소스 트리에 추가 및 커밋/푸시 완료되었습니다.
-2. **언트랙트 로컬 임시파일**:
-   - `assets/graphics/poses/w12_zman_sit_stand_v1_*.png` 및 `w12_zman_sit_stand_v2_*.png` 128장 이미지 등은 임시 프레임 컷으로 gitignore 대상으로 관리 중입니다.
-3. **다음 작업 단계**:
-   - `W1_2/W1_2_motion.md` 및 `W1_2/bg_defs.py`를 기반으로 W1-2 최종 씬 렌더링 및 비디오 컴파일(`build_w12.py` / `compile_stickman.py`) 가동 준비.
+기존 138.7KB에 달하던 에이전트 프롬프트들의 **중복 설명(Flow locator.click() 50줄 설명, Last Image transition, 자막 폰트 등)**을 전면 분리하고 각자 전담 역할에만 집중하도록 경량화했습니다.
+
+| 에이전트 | 파일명 | 이전 크기 | **경량화 후** | 핵심 전담 역할 |
+|---|---|---:|---:|---|
+| **유튜브랑** | `youtuberang.md` | 53.4 KB | **3.2 KB** | 유튜브 업로드, YouTube Data API v3 다국어(5개국어) 자막·메타 등록, 태그/SEO, 카드/최종화면 |
+| **무비랑** | `movierang.md` | 20.6 KB | **3.1 KB** | Flow Playwright 비디오 생성, Last Image Transition 연쇄, TTS(Azure/1.1x) 믹싱, MoviePy 2.2.1 4K 렌더 |
+| **한글랑** | `hangeulrang.md` | 23.6 KB | **2.4 KB** | 한글 교육 168강 커리큘럼, 시나리오, 플랫 레이어드 합성 기획, 3채널 동기화, DB 연동 |
+| **캐릭터랑** | `characterang.md` | 11.8 KB | **2.4 KB** | 2.5D 캐릭터(스틱맨/졸라맨/졸라걸) 에셋, 키 규격(DB `char_heights`), ANATOMY LOCK(팔2/다리2), 8방향 세트 |
+| **컷랑** | `cutrang.md` | 9.8 KB | **2.0 KB** | 씬 분할(롱폼 8초/쇼츠 4초), 키프레임 앵커, 64프레임 분해, 투명 컷아웃, `cut_preview.py` 검수 |
+| **글씨랑** | `textrang.md` | 4.6 KB | **1.8 KB** | 파라메트릭 한글 획순 드로잉(`hangeul_write.py`), 소프트 자막(번인 금지), 다국어 번역, 로마자 발음 표기 |
+| **노트랑** | `noterang.md` | 6.6 KB | **1.5 KB** | NotebookLM 자동화 질의/열람(CDP 9222) 및 아티팩트 다운로드 |
+| **인터액트랑** | `interactrang.md` | 4.4 KB | **1.2 KB** | 캐릭터와 배경/소품 간의 상호작용(터치, 시선 추종, 물리 충돌) 연출 기획 |
+| **버그랑** | `bugrang.md` | 3.9 KB | **1.1 KB** | 실수/버그 로깅(`bugrang.py`) 및 자기감사 |
+| **합계** | **9개 에이전트** | **138.7 KB** | **18.7 KB** | **약 85% 토큰 다이어트 완료** |
 
 ---
-**[조감독 보고 완료]** – 본 리포트는 `scratch/gemini_report.md`에 보존되었습니다.
+
+## 3. 🎯 감독(Claude) 실무 가이드
+1. **에이전트 자동 호출**: 작업 성격에 맞게 위 9개 에이전트가 자동 또는 수동으로 가볍게 호출됩니다.
+2. **세션 유지 팁**:
+   - 10턴 이상 작업이 지속될 경우 `/compact` 명령어로 대화 요약을 실행하세요.
+   - 새 프로젝트/에피소드 시작 시 터미널에서 깨끗한 새 세션으로 시작하는 것을 권장합니다.
