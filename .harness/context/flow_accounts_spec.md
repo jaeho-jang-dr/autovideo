@@ -10,12 +10,25 @@
 
 | 인덱스 | 타겟 프로필 폴더 | 연동된 구글 계정 이메일 | 연동 상태 | 비고 |
 | :---: | :--- | :--- | :---: | :--- |
-| **0** | `assets/chrome_profile_0` | `drjang00@gmail.com` | **SUCCESS** | 정상 연동 확인 완료 |
-| **1** | `assets/chrome_profile_1` | `drjang000@gmail.com` | **SUCCESS** | 정상 연동 확인 완료 |
-| **2** | `assets/chrome_profile_2` | `drjang001@gmail.com` | **SUCCESS** | 정상 연동 확인 완료 |
-| **3** | `assets/chrome_profile_3` | `drjang002@gmail.com` | **SUCCESS** | 정상 연동 확인 완료 |
-| **4** | `assets/chrome_profile_4` | `drjang003@gmail.com` | **SUCCESS** | 정상 연동 확인 완료 |
-| **5** | `assets/chrome_profile_5` | `drjang004@gmail.com` | **SUCCESS** | 정상 연동 확인 완료 |
+| **0** | `assets/chrome_profile_0` | `drjang00@gmail.com` | **SUCCESS** | ✅ 2026-08-23 실측 확인 (아바타1·입력칸1) |
+| **1** | `assets/chrome_profile_1` | `drjang000@gmail.com` | **SUCCESS** | ✅ 2026-08-23 사용 중 (무비랑 / 포트 9333) |
+| **2** | `assets/chrome_profile_2` | `drjang001@gmail.com` | (사용 안 함) | ⚠️ **에이전트형 새 UI라 길이(8초) 설정이 없다.** 동영상 생성에 쓰지 마라 |
+| **3** | `assets/chrome_profile_3` | `drjang002@gmail.com` | **FAIL** | ❌ 2026-08-23 실측 **로그아웃** (아바타0·입력칸0·'Get started' 노출) |
+| **4** | `assets/chrome_profile_4` | `drjang003@gmail.com` | **FAIL** | ❌ 2026-08-23 실측 **로그아웃** (아바타0·입력칸0) |
+| **5** | `assets/chrome_profile_5` | `drjang004@gmail.com` | **FAIL** | ❌ 2026-08-23 실측 **로그아웃** (아바타0·입력칸0) |
+
+> ### ⚠️ 2026-08-23 갱신 기록 (캐릭터랑 실측)
+> 이 표는 오래도록 **6개 전부 SUCCESS** 로 적혀 있었으나, 실제로는 **3·4·5 세션이 만료**돼
+> 있었다. 그것을 모르고 `chrome_profile_3` 으로 Flow 를 돌려 첫 클립이 통째로 실패했다
+> (편집기가 아니라 **로그인 안 된 영문 홍보 페이지**가 떴다).
+>
+> **판정은 짐작하지 말고 화면을 읽어라** — 아래 두 값이면 충분하다.
+> * `googleusercontent` 계정 아바타 이미지 수 → **0 이면 로그아웃**
+> * `div[role='textbox'][contenteditable='true']` 개수 → **1 이상이면 편집기 안착**
+>
+> 점검 스크립트: 프로필 하나를 내 포트로 띄워 위 둘을 읽고 바로 닫는다.
+> ★점검할 때도 **무비랑(9333/profile_1)과 사장님 창(프로필 `User`)은 건드리지 않는다.**
+> `taskkill /IM chrome` 은 절대 쓰지 말고, `--remote-debugging-port` 로 PID 를 골라 닫아라.
 
 ---
 

@@ -29,6 +29,7 @@
 | 최종 출력 및 씬 비디오 인덱스 | `autovideo_outputs.md` |
 | AI 역할 구성 및 이력 | `.harness/context/roles_config.md` |
 | 조감독 트러블슈팅 및 작업 인계 리포트 | [gemini_report.md](file:///D:/Entertainments/DevEnvironment/autovideo/scratch/gemini_report.md) |
+| 클로드-제미나이 초고속 실시간 브릿지 상태 | [active_task.json](file:///D:/Entertainments/DevEnvironment/autovideo/scratch/bridge/active_task.json) |
 | 구글 Flow 다중 계정 연동 및 관리 가이드 | `.harness/context/flow_accounts_spec.md` |
 
 
@@ -43,6 +44,11 @@
 ```bash
 # 비디오 컴파일 실행
 python make_video.py
+
+# [초고속 협업 브릿지] 조감독(Gemini)에게 태스크 발송 및 상태 확인
+python scripts/bridge.py send --title "작업 제목" --body "세부 지시 내용" --files "target1.py,target2.py"
+python scripts/bridge.py status
+python scripts/bridge.py wait --timeout 300   # 조감독 완료 자동 대기
 
 # 검증 실행 (작업 완료 전 필수 — 2개 모두)
 python .harness/verify/check_encoding.py

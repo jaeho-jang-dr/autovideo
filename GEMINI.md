@@ -124,21 +124,35 @@ DB의 캐릭터 **베이스 사진**을 레퍼런스로 **같은 캐릭터의 �
 
 ---
 
-## 감독(Claude)-조감독(Gemini) 협업 및 소통 프로토콜
+## 감독(Claude)-조감독(Gemini) 초고속 실시간 브릿지 협업 프로토콜 (2026-08-26 최신화)
 
-감독(Claude)과 조감독(Gemini)은 공동의 프로젝트 목표를 완수하기 위해 상호 정의된 파일 매체와 리포트를 통해 긴밀히 협력합니다.
+감독(Claude Code 터미널)과 조감독(Antigravity Gemini IDE), 제작자(사용자) 간의 **수동 복사-붙여넣기 지연과 소통 병목을 원천 제거**하기 위해 `scripts/bridge.py` 기반의 실시간 IPC 동기화 시스템을 가동합니다.
 
-### 1. 감독(Claude)이 조감독(Gemini)에게 지시할 때
-*   **작업 지시서 생성 (`scratch/gemini_task.md`)**: 감독(Claude)은 세부 설계, 수정이 필요한 소스 코드 파일 목록, 구체적인 요구사항 및 성공 기준을 [gemini_task.md](file:///scratch/gemini_task.md) 파일로 작성하여 조감독에게 위임합니다.
-*   **제작자(사용자) 경유 전달**: 감독(Claude)이 대화창에 작업 방향을 출력하면, 제작자가 이를 복사하여 조감독(Gemini) 대화창에 입력해 기동시킵니다.
+### 1. 감독(Claude Code)이 조감독(Gemini)에게 지시할 때
+*   **원클릭 CLI 태스크 발송 (`scripts/bridge.py send`)**:
+    ```bash
+    python scripts/bridge.py send --title "태스크 요약" --body "상세 지시 내용" --files "target1.py,target2.py"
+    ```
+    - 실행 즉시 `scratch/bridge/active_task.json` 및 `scratch/gemini_task.md`가 동시 자동 생성/동기화됩니다.
+    - 감독은 필요 시 `python scripts/bridge.py wait --timeout 300`으로 조감독의 작업 완료를 터미널에서 자동 대기할 수 있습니다.
 
-### 2. 조감독(Gemini)이 지시를 수행할 때
-*   **코드 편집 및 환경 검증**: 조감독(Gemini)은 지시받은 파일을 직접 편집(`multi_replace_file_content` 등 활용)하고, 필요한 검증(코드 무결성, 인코딩 검사 등)을 수행합니다.
-*   **진행 상태 업데이트**: `.harness/loops/progress.json` 또는 `task.md` 파일을 실시간 업데이트하여 진행 현황을 동기화합니다.
+### 2. 제작자(사용자)의 초간단 트리거 (복붙 불필요)
+*   제작자는 더 이상 긴 지시문을 복사해서 붙여넣을 필요가 없습니다.
+*   조감독(Gemini) 채팅창에 **"브릿지 진행"** 또는 **"지시 수신"** 한마디만 입력하면, 조감독이 최신 브릿지 태스크(`active_task.json` 및 `gemini_task.md`)를 즉시 자동 파싱하여 실행에 착수합니다.
 
-### 3. 조감독(Gemini)이 감독(Claude)에게 보고 및 전달할 때
-*   **결과 리포트 작성 (`scratch/gemini_report.md` 또는 `walkthrough.md`)**: 조감독(Gemini)은 작업을 완료한 후, 수정된 코드 차이(Diff)와 테스트 검증 결과, 생성된 에셋 경로를 리포트 파일로 작성해 감독이 확인할 수 있게 보존합니다.
-*   **컨텍스트 맵 갱신**: 새로 생성된 중요한 명세서나 에셋 파일이 있다면 [CLAUDE.md](file:///CLAUDE.md)의 빠른 참조 맵에 즉시 등록하여 감독(Claude)이 다음 작업을 진행할 때 혼선 없이 인지하게 합니다.
+### 3. 조감독(Gemini)이 지시를 수행할 때
+*   **상태 갱신 & 즉시 코드 실행**:
+    - 태스크 착수 시 `python scripts/bridge.py report --status IN_PROGRESS --summary "작업 착수"` 기록.
+    - 파일 직접 편집 및 CLI 검증 실행 (1.1배속 TTS, soft SRT, malgun.ttf 절대경로 등 황금원칙 엄수).
+    - 교정앱을 띄웠을 경우 `python scripts/bridge.py app --port 8950 --label "앱 라벨"`로 즉시 등록.
+
+### 4. 조감독(Gemini)이 감독(Claude)에게 완료 보고할 때
+*   **원클릭 결과 보고 (`scripts/bridge.py report`)**:
+    ```bash
+    python scripts/bridge.py report --status COMPLETED --summary "작업 완료 요약" --urls "http://localhost:8950/" --details "수정 내역 및 검증 결과"
+    ```
+    - 실행 즉시 `scratch/bridge/active_task.json`과 `scratch/gemini_report.md`에 타임스탬프와 함께 기록됩니다.
+    - 대기 중이던 감독(Claude Code) 터미널에 즉시 완료 알림이 전달되어 후속 단계로 자동 연결됩니다.
 
 ---
 
@@ -182,6 +196,7 @@ Antigravity + Claude Code
 | 2026-08-25 | `pending` | **Claude 세션 리밋 해결 및 서브에이전트 85% 경량화(Sonnet 통일 & 컨텍스트 분리)** | PowerShell 프로필의 `--model opus` 강제 설정을 제거하여 기본 Sonnet으로 원복하고, `.claude/agents/*.md` 9개 서브에이전트의 중복 프롬프트를 85% 다이어트(138KB→18.7KB) 및 모델을 `model: sonnet`으로 통일하여 5시간 쿼터 초고속 소진 문제를 근본 해결한 버전. |
 | 2026-08-25 | `80c238ae` | **UX 원스톱 실행 체계 구축: 다지선다 질문 금지 & 자동 승인 매크로(0.2s) 영구 등록** | 다지선다 선택창(ask_question) 전면 금지 룰 확립, Antigravity IDE 엔터 즉시 전송(chat.sendOnEnter), Allow/Submit 팝업 0.2초 자동 돌파 매크로(run_auto_approve.vbs) 시작프로그램 등록 및 저장 완료 버전. |
 | 2026-08-26 | `pending` | **캐릭터 ↔ 배경 동영상 상호작용 체계화 및 캐릭터랑 에이전트 업그레이드** | 캐릭터와 배경 동영상 간 사건-시각-동작 3채널 맞물림 연출, 소품 분리 순수 동작 컷 생성 규칙, 배경 선행 실측 후 캐릭터 Z축 반응 렌더링 체계 구축 및 메모리 동기화 완료 버전. |
+| 2026-08-26 | `pending` | **클로드-제미나이-제작자 초고속 실시간 브릿지(bridge.py) 개통 & 다지선다 팝업 원천 봉인** | `scripts/bridge.py` 기반 실시간 IPC 큐 구축으로 복붙 소통 지연 100% 제거, `ask_question` 및 계획 승인 모달 원천 차단으로 1~5번/Submit 팝업 없는 100% 자율 직진 실행 체계 확립, W1-6 한글판 렌더 및 피란길(8930)/성북동(8950) 교정앱 연동 완료 버전. |
 
 
 
