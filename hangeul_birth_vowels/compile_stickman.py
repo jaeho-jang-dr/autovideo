@@ -252,6 +252,8 @@ def load_scenes(lang="ko"):
             draw_text=spec.get("draw_text"), draw_align=spec.get("draw_align"),
             char_mode=spec.get("char_mode"), char_key=spec.get("char_key"),
             anim_seq=spec.get("anim_seq"), bg_video=spec.get("bg_video"),
+            bg_rate=spec.get("bg_rate"), bg_offset=spec.get("bg_offset"),
+            fixed_dur=bool(spec.get("fixed_dur")),
             cam=spec.get("cam") or CAM_MODES[(s["seq"] - 1) % len(CAM_MODES)], objs=objs))
     con.close()
     if scenes:
@@ -501,15 +503,95 @@ def seq_scale(tt, dur, seq):
                     t1, v1 = ks[i + 1]
                     if local <= t1 or i == len(ks) - 2:
                         u = (local - t0) / max(1e-6, t1 - t0)
-                        return float(v0) + (float(v1) - float(v0)) * _smooth(max(0.0, min(1.0, u)))
+                        return float(v0) + (float(v1) - float(v0)) * _ease(b, u)
                 return float(ks[-1][1])
             if b.get("s_from") is None and b.get("s_to") is None:
                 return 1.0
             a = float(b.get("s_from", 1.0))
             z = float(b.get("s_to", a))
-            return a + (z - a) * _smooth(local)
+            return a + (z - a) * _ease(b, local)
         acc += d
     return 1.0
+
+
+def _ease(b, u):
+    """비트의 시간 곡선. 기본은 종전 smoothstep, `ease="linear"` 면 **등속**.
+
+    ★왜 필요한가 (W1-6 대질주, 2026-08-23)
+      smoothstep 은 비트의 처음과 끝에서 속도가 0 이다. 그런데 걸음(컷 순환)은
+      `stride` 로 **등속**이라, 다리는 도는데 몸이 안 나가는 **제자리걸음**이 양끝에 생기고
+      한가운데서는 평균의 1.8배로 활강한다. 실측: 한 스트라이드에 0.14키 → 4.4키 → 0.14키
+      (사람이 전력질주하면 한 스트라이드에 2.2~2.6키다).
+      달리기·걷기처럼 등속이어야 하는 구간만 linear 로 돌린다. 키가 없으면 예전 그대로.
+    """
+    u = max(0.0, min(1.0, u))
+    return u if b.get("ease") == "linear" else _smooth(u)
+
+
+_FOOTX = {}
+def foot_offset_x(im):
+    """컷 안에서 **발이 캔버스 중심에서 얼마나 벗어나 있는가**(px).
+
+    ★왜 필요한가 (W1-6, 2026-08-24)
+      렌더러는 캔버스의 **중심**을 비트의 x 에 놓는다. 그런데 컷마다 인물이 캔버스 안에서
+      좌우로 치우쳐 있다 — 실측하니 발 중심이 **-64 ~ +62px** 로 흩어져 있었다.
+      그대로 두면 동작이 바뀔 때마다 캐릭터가 **가로로 최대 126px 튄다.**
+      세로(발밑 y)는 `seq_foot` 로 잡았으니 가로도 같은 기준(발)으로 잡는다.
+      아래 12% 구간의 알파 가로중심을 쓴다 — 팔을 뻗어도 발은 안 움직이기 때문이다.
+    """
+    k = id(im)
+    v = _FOOTX.get(k)
+    if v is None:
+        a = np.asarray(im)[:, :, 3] > 40
+        H = a.shape[0]
+        foot = a[int(H * 0.88):, :]
+        xs = np.where(foot.any(axis=0))[0]
+        if len(xs) < 6:
+            xs = np.where(a.any(axis=0))[0]
+        v = ((xs.min() + xs.max()) / 2.0 - a.shape[1] / 2.0) if len(xs) else 0.0
+        if len(_FOOTX) < 4000:
+            _FOOTX[k] = v
+    return v
+
+
+def seq_foot(tt, dur, seq):
+    """★깊이 이동(세로) — 비트의 `fy_keys` 또는 `fy_from`→`fy_to` 를 보간한 **발밑 y(절대)**.
+
+    없으면 **None** 을 돌려주고 호출부는 예전 동작을 그대로 쓴다 — 옛 시퀀스는 키가
+    없으므로 W12~W24 렌더는 한 화소도 바뀌지 않는다(`seq_scale` 을 붙일 때와 같은 방식).
+
+    왜 필요한가 (W1-6, 2026-08-23)
+      랜드스케이프 배경에서 인준이 **골목을 따라 멀어지며 달린다.** 가로(x)만으로는
+      그 길을 못 따라간다. 또 컷마다 캔버스 높이가 720~792 로 달라서, 중심(cy)을
+      고정해 두면 컷이 바뀔 때 발이 최대 36px 튄다. 발밑 y 를 **절대값으로** 주면
+      호출부가 그때그때의 컷 높이로 중심을 되계산하므로 둘 다 한꺼번에 풀린다.
+    """
+    beats = load_sequence(seq)
+    if not beats:
+        return None
+    total = sum(b["dur"] for b in beats) or 1.0
+    p = min(1.0, max(0.0, tt / dur)) * total
+    acc = 0.0
+    for b in beats:
+        d = b["dur"]
+        if p <= acc + d or b is beats[-1]:
+            local = min(1.0, max(0.0, (p - acc) / max(1e-6, d)))
+            ks = b.get("fy_keys")
+            if ks:
+                for i in range(len(ks) - 1):
+                    t0, v0 = ks[i]
+                    t1, v1 = ks[i + 1]
+                    if local <= t1 or i == len(ks) - 2:
+                        u = (local - t0) / max(1e-6, t1 - t0)
+                        return float(v0) + (float(v1) - float(v0)) * _ease(b, u)
+                return float(ks[-1][1])
+            if b.get("fy_from") is None and b.get("fy_to") is None:
+                return None
+            a = float(b.get("fy_from", 0.0))
+            z = float(b.get("fy_to", a))
+            return a + (z - a) * _ease(b, local)
+        acc += d
+    return None
 
 
 def seq_state(tt, dur, seq="teacher_board"):
@@ -524,7 +606,7 @@ def seq_state(tt, dur, seq="teacher_board"):
         d = b["dur"]
         if p <= acc + d or b is beats[-1]:
             local = min(1.0, max(0.0, (p - acc) / max(1e-6, d)))
-            x = b["x_from"] + (b["x_to"] - b["x_from"]) * _smooth(local)
+            x = b["x_from"] + (b["x_to"] - b["x_from"]) * _ease(b, local)
             cyc = b["cycle"]
             if len(cyc) > 1 and b.get("oneshot"):
                 # ★동작 동영상: 시퀀스를 이 비트 동안 처음~끝 1회 재생(순환 X)
@@ -532,14 +614,34 @@ def seq_state(tt, dur, seq="teacher_board"):
                 #   비트에 fps 가 실려 있으면 **절대시간**으로 재생한다(64컷÷8초=8fps).
                 #   없으면 종전대로 씬 길이에 맞춰 늘린다 — 기존 시퀀스는 영향 없다.
                 _fps = b.get("fps")
-                if _fps:
+                if _fps and b.get("fps_local"):
+                    # ★비트-내 절대초로 재생(W1-6). 한 씬에 동작 비트가 3~4개일 때
+                    #   씬 절대초(tt)를 쓰면 두 번째 비트부터 **마지막 프레임에 얼어붙는다**
+                    #   (64컷÷8fps=8초 를 다 써 버리므로). 그래서 비트마다 0 에서 다시 센다.
+                    #
+                    # ★비트가 컷보다 길면 **왕복 재생**한다(앞으로 → 되돌아 → 앞으로).
+                    #   나레이션이 길어 한 동작을 15초씩 물려야 하는 씬이 있는데, 그냥 두면
+                    #   마지막 프레임에서 얼어붙는다(W1-6 실측 합계 **48초**가 정지였다).
+                    #   느리게 늘여 재생하면 "스틸동영상은 원래 속도대로" 라는 원칙을 어기므로,
+                    #   **속도는 그대로 두고 되돌아온다.** 팔을 들었다 내리는 꼴이라 자연스럽다.
+                    _k = int(local * (d / total) * dur * float(_fps))
+                    _n = len(cyc)
+                    if _n > 1:
+                        _period = 2 * _n - 2
+                        _k %= _period
+                        ci = _k if _k < _n else _period - _k
+                    else:
+                        ci = 0
+                elif _fps:
                     ci = min(len(cyc) - 1, int(tt * float(_fps)))
                 else:
                     ci = min(len(cyc) - 1, int(local * len(cyc)))
             elif len(cyc) > 1:
                 # ★걷기 순환: WALK_STRIDE_SEC 지정 시 '1 스트라이드(cycle 전체)=그 초'로 절대시간 재생
                 #   (미지정=기존 동작: 비트당 6순환). 사장님 지시 2026-07-23: 1스트라이드=1.08초.
-                _stride = os.environ.get("WALK_STRIDE_SEC", "").strip()
+                # ★비트가 스트라이드를 직접 정하면 그것이 우선(W1-6 대질주 = 0.50초/스트라이드).
+                #   환경변수는 회차 전체에 하나뿐이라 "이 씬만 빠르게" 를 못 한다.
+                _stride = str(b.get("stride") or os.environ.get("WALK_STRIDE_SEC", "")).strip()
                 if _stride:
                     beat_secs = (d / total) * dur          # 이 비트가 차지하는 절대 초
                     t_in_beat = local * beat_secs           # 비트 내 경과 초
@@ -612,12 +714,24 @@ def draw_logo(base):
 #     → 지름 88 · 중심 (1177,615) 이면 8점 전부 반지름 44 안에 들어온다(최대 43.7).
 #   이보다 작으면 반드시 어딘가 삐져나온다. 즉 이것이 최소 크기다.
 WM_LOGO_PATH = os.path.join(ROOT, "assets", "drjay_ed_logo_circle.png")
-WM_D = 88
+# ★사장님 지시(2026-08-23): "로고는 너무 크다 딱 워터마크 가릴만큼만 최소의 사이즈로."
+#   88 은 **두 가지 배경(동영상·정지컷)의 반짝임 자리가 다르기 때문에** 둘 다 덮으려고
+#   키운 값이다. 배경이 한 종류뿐이면 그만큼 클 필요가 없다.
+#     · 반짝임 하나 = 48x48 마름모 → 꼭짓점이 중심에서 24 → **지름 48 이면 딱 덮인다**
+#     · 워터마크가 아예 없는 배경(Flow 1K 원본을 받아 쓴 것)이면 덮을 것이 없으므로
+#       로고는 순수 표식이다. 더 작아도 된다.
+#   회차마다 배경 출처가 다르니 **환경변수로 정한다.** 기본값은 예전 그대로 88 이라
+#   앞선 회차 렌더는 하나도 안 바뀐다.
+#     WM_LOGO_D=48  WM_VEO_FILL=0  python compile_np.py ...
+WM_D = int(os.environ.get("WM_LOGO_D", "88"))
 WM_CX, WM_CY = 1177, 615
 #   코너 'Veo' 글자는 자리가 고정이다 — x 1236 · y 690 · 36x20 (여유 두어 넉넉히).
 # ★사장님 지시(2026-08-08): "코너 글자는 주변의 색을 따서 덮고 워터마크는 로고로 덮는다."
 #   → 로고를 하나 더 얹지 않고, 글자 둘레의 색을 떠서 그 색으로 메운다.
+#   ★워터마크가 없는 배경에서는 이것이 **없는 글자를 지우느라 멀쩡한 그림을 뭉갠다.**
+#     그런 회차는 WM_VEO_FILL=0 으로 끈다.
 WM_VEO_BOX = (1232, 686, 44, 28)                      # x, y, w, h
+WM_VEO_FILL = os.environ.get("WM_VEO_FILL", "1") != "0"
 _WM = {}
 
 
@@ -643,7 +757,8 @@ def draw_wm_cover(base, bg=None):
         src = (Image.open(WM_LOGO_PATH).convert("RGBA")
                if os.path.exists(WM_LOGO_PATH) else None)
         _WM["main"] = src.resize((WM_D, WM_D), Image.LANCZOS) if src else None
-    _fill_from_around(base, WM_VEO_BOX)                # ①코너 'Veo' 글자 → 주변 색으로
+    if WM_VEO_FILL:
+        _fill_from_around(base, WM_VEO_BOX)            # ①코너 'Veo' 글자 → 주변 색으로
     if _WM.get("main"):                                # ②반짝임 워터마크 → 로고 하나로
         base.alpha_composite(_WM["main"], (WM_CX - WM_D // 2, WM_CY - WM_D // 2))
 
@@ -731,7 +846,14 @@ def compose(scene, t=None, lang="ko", overlay=True):
     tt = dur if final else t
     _bgv = scene.get("bg_video")
     if _bgv:
-        base = bg_video_frame(resolve_path(_bgv) or _bgv, tt, dur)
+        # ★배경 재생 배속(W1-6). 나레이션이 클립보다 훨씬 길면 8초짜리가 일찍 끝나
+        #   20초 넘게 얼어붙는다. 드론 워킹은 원래 느리므로 1.8~2배로 늘여도 티가 안 나고,
+        #   대신 죽은 화면이 확 준다. 없으면 1.0 = 예전 그대로.
+        _rate = float(scene.get("bg_rate") or 1.0)
+        # ★배경 시작 오프셋(초). 배경 클립 앞부분에 못 쓸 구간(예: 집 외형이 보이는
+        #   도입부)이 있을 때, 그 구간을 건너뛰고 t=offset부터 재생한다.
+        _off = float(scene.get("bg_offset") or 0.0)
+        base = bg_video_frame(resolve_path(_bgv) or _bgv, tt * _rate + _off, dur)
     else:
         base = scene_bg(scene)
     # ★사장님 지시(2026-08-08): 레이어 순서는 **배경 → 워터마크 → 캐릭터 → 자막**.
@@ -784,6 +906,7 @@ def compose(scene, t=None, lang="ko", overlay=True):
             continue
         glayers = None
         pen_hand = None                                # 매직펜 그릴 손 좌표(있으면 글쓰기 중)
+        _footy = None                                  # ★비트가 정한 발밑 y(W1-6) — 그림자도 따라간다
         if is_pose and cmode == "teacher":             # 동작선(칠판 앞 선생님): 저장된 원본 컷아웃 + 좌우이동
             ck = scene.get("char_key") or "zolla_girl"
             _seqnm = scene.get("anim_seq") or "teacher_board"
@@ -822,10 +945,20 @@ def compose(scene, t=None, lang="ko", overlay=True):
                     _s = seq_scale(tt, dur, _gsq)
                     sm *= _s
                     dx += (_tx - o["cx"])
-                    # ★발을 땅에 붙여 둔다 — 렌더러는 cy 를 **중심**으로 놓으므로,
-                    #   커지고 작아질 때 그만큼 내려 주지 않으면 발이 뜨거나 파묻힌다.
-                    #   (사장님 지적 2026-08-12 "캐릭터가 서 있는 곳을 일정하게 지켜라")
-                    dy += im.height * o["scale"] * (_s - 1.0) / 2.0
+                    # ★발밑 y 를 비트가 절대값으로 정하면(W1-6) 그것을 그대로 쓴다.
+                    #   컷마다 캔버스 높이가 달라도 그때그때 되계산하므로 발이 안 튄다.
+                    _fy = seq_foot(tt, dur, _gsq)
+                    if _fy is not None:
+                        dy += (_fy - im.height * o["scale"] * _s / 2.0) - o["cy"]
+                        _footy = _fy                 # 그림자도 여기에 붙인다
+                        # ★가로도 **발**을 기준으로 놓는다(위 foot_offset_x 설명).
+                        #   안 하면 컷이 바뀔 때 캐릭터가 좌우로 튄다.
+                        dx -= foot_offset_x(im) * o["scale"] * _s
+                    else:
+                        # ★발을 땅에 붙여 둔다 — 렌더러는 cy 를 **중심**으로 놓으므로,
+                        #   커지고 작아질 때 그만큼 내려 주지 않으면 발이 뜨거나 파묻힌다.
+                        #   (사장님 지적 2026-08-12 "캐릭터가 서 있는 곳을 일정하게 지켜라")
+                        dy += im.height * o["scale"] * (_s - 1.0) / 2.0
                 # ★비트의 x는 쓰지 않는다 — 그룹 컷은 제자리 동작이고, 한 씬에 여러 그룹이
                 # 동시에 서므로 위치는 scene_objects.cx 가 정한다(안 그러면 전부 중앙에 겹친다).
         elif is_pose and cmode == "sit":                 # 진지한 설명 = 의자에 앉아 설명
@@ -864,15 +997,20 @@ def compose(scene, t=None, lang="ko", overlay=True):
                 sm *= pop
         # soft ground shadow for character poses (그림자는 바닥 고정 — bob에 안 흔들림, 캐시)
         if is_pose:
-            shk = (round(o["cx"] + dx), round(o["cy"]), round(o["scale"] * 100))
+            # ★발밑 y 가 비트로 정해진 씬(W1-6)은 그림자도 그 발밑에 붙이고 크기도 같이 줄인다.
+            #   안 그러면 인준이 멀어져 작아져도 그림자만 제자리에 큼직하게 남는다.
+            _foot_mode = _footy is not None
+            _shs = o["scale"] * sm if _foot_mode else o["scale"]     # 멀어지면 그림자도 작아진다
+            _shy0 = (_footy - 8 * sm) if _foot_mode else (o["cy"] + int(300 * o["scale"]))
+            shk = (round(o["cx"] + dx), round(_shy0), round(_shs * 1000))
             sh = _SHADOW.get(shk)
             if sh is None:
                 sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
                 sd = ImageDraw.Draw(sh)
-                sw = int(150 * o["scale"])
-                shy = o["cy"] + int(300 * o["scale"])
-                sd.ellipse([o["cx"] + dx - sw, shy - 16, o["cx"] + dx + sw, shy + 16], fill=(0, 0, 0, 45))
-                sh = sh.filter(ImageFilter.GaussianBlur(7))
+                sw = max(2, int(150 * _shs))
+                _sr = max(2, int(16 * (sm if _foot_mode else 1.0)))
+                sd.ellipse([o["cx"] + dx - sw, _shy0 - _sr, o["cx"] + dx + sw, _shy0 + _sr], fill=(0, 0, 0, 45))
+                sh = sh.filter(ImageFilter.GaussianBlur(max(2, int(7 * (sm if _foot_mode else 1.0)))))
                 if len(_SHADOW) < 200:
                     _SHADOW[shk] = sh
             base.alpha_composite(sh)
@@ -965,24 +1103,80 @@ _PUNCT = _re.compile(r"^[\s,.!?·…'\"~\-—:;()]*$")
 _KR = _re.compile(r"[가-힣㄰-㆏ᄀ-ᇿ]")
 
 
+_LAT = _re.compile(r"[A-Za-z]")
+
+
 def _split_kr_runs(text):
     """텍스트를 '한글 런 / 비한글 런'으로 분리 → [(run, is_korean), ...].
-    한글은 항상 ko 음성, 그 외는 해당 언어 음성으로 읽어 영어 성우가 한글을 읽는 일을 막는다."""
-    runs, cur, curk = [], "", None
+    한글은 항상 ko 음성, 그 외는 해당 언어 음성으로 읽어 영어 성우가 한글을 읽는 일을 막는다.
+
+    ★★숫자는 **어느 쪽에도 속하지 않는다**(2026-08-24 사장님 지적).
+      예전에는 숫자를 '비한글'로 보아 en 으로 보냈다. 그래서 한국어판에서
+      "1926년" 의 **1926 을 Emma(영어)가 읽고** "년" 만 선희가 읽었다.
+      "10월 9일" 도 숫자만 영어였다. 한 문장 안에서 목소리가 갈렸다.
+
+      고친 규칙 — 글자를 **한글 / 로마자 / 중립(숫자·기호)** 셋으로 나누고,
+      **중립은 앞의 런에 붙인다**(앞이 없으면 뒤에). 그러면
+        한국어  "1926년, 조선어연구회…"      → 앞이 없으니 뒤(한글)에 붙어 **선희**
+        한국어  "10월 9일"                   → '월' 뒤의 ' 9' 가 한글에 붙어 **선희**
+        영어    "October 9th"                → 앞이 로마자라 **Emma**
+        영어    "In 1940, in '안동'"          → 앞이 로마자라 **Emma**
+      즉 숫자는 **그 문장을 읽고 있는 성우**가 그대로 이어 읽는다.
+    """
+    KR, LAT, NEU = "k", "l", "n"
+
+    def kind(c):
+        if _KR.match(c):
+            return KR
+        if _LAT.match(c):
+            return LAT
+        return NEU
+
+    # ① 글자를 세 갈래로 묶는다(공백은 현재 묶음에 붙인다)
+    raw, cur, curk = [], "", None
     for ch in text:
-        if not ch.strip():            # 공백/구두점은 현재 런에 붙임
+        if not ch.strip():
             cur += ch
             continue
-        k = bool(_KR.match(ch))
+        k = kind(ch)
         if curk is None or k == curk:
             cur += ch
             curk = k
         else:
-            if cur.strip():
-                runs.append((cur, curk))
+            raw.append((cur, curk))
             cur, curk = ch, k
-    if cur.strip():
-        runs.append((cur, curk))
+    if cur:
+        raw.append((cur, curk if curk else NEU))
+    if not raw:
+        return [(text, bool(_KR.search(text)))]
+
+    # ② 중립(숫자·기호)을 **앞의 실질 런**에 흡수시킨다(앞이 없으면 뒤에)
+    out = []
+    for seg, k in raw:
+        if k == NEU and out:
+            out[-1] = (out[-1][0] + seg, out[-1][1])
+        else:
+            out.append([seg, k] if False else (seg, k))
+    if out and out[0][1] == NEU:
+        if len(out) > 1:
+            out[1] = (out[0][0] + out[1][0], out[1][1])
+            out = out[1:]
+        else:
+            out = [(out[0][0], KR if _KR.search(text) else LAT)]
+
+    # ③ ★같은 목소리끼리는 **다시 붙인다.**
+    #   안 붙이면 "10" / "월 9" / "일," 처럼 조각조각 따로 합성돼
+    #   "십… 월 구… 일" 로 끊겨 읽힌다(목소리는 맞는데 문장이 부서진다).
+    #   붙여 두면 선희가 "천구백이십육 년" 을 한 호흡으로 읽는다.
+    merged = []
+    for seg, k in out:
+        v = (k == KR)
+        if merged and merged[-1][1] == v:
+            merged[-1] = (merged[-1][0] + seg, v)
+        else:
+            merged.append((seg, v))
+
+    runs = [(seg, v) for seg, v in merged if seg.strip()]
     return runs or [(text, bool(_KR.search(text)))]
 
 
@@ -992,6 +1186,12 @@ def ensure_scene_audio(seq, script, lang):
     from moviepy import AudioFileClip
     import subprocess
     import json as _json
+    # ★TTS 발음 교정 전용(2026-08-27 사장님 교정, W1-6 S30) — **여기(나레이션 TTS 입력)에서만**
+    #   치환한다. 화면 자막·글자 카드는 load_scenes()가 DB script_kr/script_en 원문을 그대로 쓰므로
+    #   영향 없다(이 함수는 오디오 합성에만 쓰인다). edge/Azure 선희 음성이 "흙길"을 [흘길]로
+    #   잘못 읽는다(올바른 발음은 겹받침 단순화+경음화로 [흑낄]) → TTS 입력에서만 "흑길"로 바꿔
+    #   올바르게 읽게 한다. 다른 씬엔 이 낱말이 없어 영향 없음(단순 치환, 없으면 그대로 통과).
+    script = script.replace("흙길", "흑길")
     # ★캐시 키에 TTS 엔진·음성·클립폴더를 포함한다.
     #   (안 넣으면 edge-tts 초안 캐시를 Azure 최종 렌더가 그대로 재사용해 **무허가 음성이 유튜브로 나간다** — W12에서 발견)
     _eng = os.environ.get("TTS_ENGINE", "edge")

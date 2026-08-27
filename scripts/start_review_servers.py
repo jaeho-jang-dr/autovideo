@@ -9,12 +9,12 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PYTHON_EXE = r"C:\Python313\python.exe"
+PYTHON_EXE = sys.executable
 
 APPS = [
-    ("hangeul_birth_vowels/hangeul_w1_6_stickman_np_np_ko.mp4", "hangeul_birth_vowels/hangeul_w1_6_stickman_np_np.ko.srt", "W1-6 한글판 31씬 전체 통본 (v1)", 8932),
-    ("hangeul_birth_vowels/piran_v12.mp4", "hangeul_birth_vowels/piran_v12.ko.srt", "W1-6 피란길 v12", 8930),
-    ("hangeul_birth_vowels/seongbukdong_v3.mp4", "hangeul_birth_vowels/seongbukdong_v3.ko.srt", "W1-6 성북동 v3", 8950),
+    ("hangeul_birth_vowels/hangeul_w1_6_stickman_np_ko.mp4", "hangeul_birth_vowels/hangeul_w1_6_stickman_np.ko.srt", "W1-6 한글판 31씬 전체 통본 (최신 나루터+성북동 교체)", 8932),
+    ("hangeul_birth_vowels/naruteo_s2_v9.mp4", "hangeul_birth_vowels/naruteo_s2_v9.ko.srt", "W1-6 S2 나루터 씬 (발 바닥 안착 + 광학흐름 줌아웃 v9)", 8930),
+    ("hangeul_birth_vowels/seongbukdong_v7.mp4", "hangeul_birth_vowels/seongbukdong_v7.ko.srt", "W1-6 성북동 v7", 8950),
 ]
 
 def is_running(port):

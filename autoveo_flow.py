@@ -51,13 +51,22 @@ def force_kill_profile_chrome(profile_path=None):
         profile_path = PROFILE
     profile_name = os.path.basename(profile_path)
     try:
+        # ★2026-08-24 수정 — 옛 필터는 `-like '*assets\\chrome_profile_0*'`(역슬래시 2개)라
+        #   실제 명령줄(`...\assets\chrome_profile_0`, 역슬래시 1개)과 **절대 안 맞았다.**
+        #   그래서 크롬이 안 죽고 flow_make_lv.launch 가 남의 세션을 조용히 재사용했고,
+        #   그 프로젝트에 뒤늦게 로딩된 **남의 클립**을 결과물로 내려받는 사고가 났다.
+        #   ★단순히 역슬래시 하나로 고치면 이번엔 너무 많이 맞는다 —
+        #     `chrome_profile` 이 `chrome_profile_0/_1/_3` 의 앞자락이라 전부 죽는다.
+        #     `-match` 정규식에 **낱말 경계**를 걸어 그 프로필 하나만 죽인다.
+        #     사장님 창(`User` 밑 기본 프로필)은 `assets\` 밑이 아니라 애초에 안 걸린다.
+        rx = "[\\\\/]assets[\\\\/]" + profile_name + "(?![\\w-])"
         ps = (
             f"Get-CimInstance Win32_Process -Filter \"Name='chrome.exe'\" | "
-            f"Where-Object {{ $_.CommandLine -like '*assets\\\\{profile_name}*' }} | "
+            f"Where-Object {{ $_.CommandLine -match '{rx}' }} | "
             f"ForEach-Object {{ try {{ Stop-Process -Id $_.ProcessId -Force "
-            f"-ErrorAction SilentlyContinue }} catch {{}} }}"
+            f"-ErrorAction Stop }} catch {{}} }}"
         )
-        subprocess.run(["powershell", "-NoProfile", "-Command", ps], timeout=30)
+        subprocess.run(["powershell", "-NoProfile", "-Command", ps], timeout=60)
     except Exception as e:
         try:
             log(f"  [REBOOT] chrome 강제종료 중 경고: {e}")

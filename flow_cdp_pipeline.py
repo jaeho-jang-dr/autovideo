@@ -109,8 +109,8 @@ def click_marked(page, b, label="", timeout=8000):
       locator.click() 은 가시성·가려짐·안정성을 Playwright 가 검사하므로 가려져 있으면
       그 자리에서 오류가 난다 — 조용히 실패하지 않는다.
 
-    막히면 JS 클릭 → 좌표 클릭 순으로 떨어진다. 좌표 클릭을 남겨 두는 건 이 함수를
-    같이 쓰는 다른 검증된 경로(포즈·배경 생성)를 깨지 않기 위해서다.
+    ★막히면 JS 클릭까지만 시도하고, 그래도 안 되면 **오류를 내고 멈춘다.**
+    좌표 클릭은 쓰지 않는다 — 가로채여도 성공한 것처럼 보여 원인을 가린다.
     """
     loc = page.locator(f"[{CLICK_MARK}='1']")
     try:
@@ -123,8 +123,8 @@ def click_marked(page, b, label="", timeout=8000):
         return "js"
     except Exception as e:
         log(f"  [CLICK-FALLBACK] {label} js 실패: {str(e).splitlines()[0][:70]}")
-    page.mouse.click(b["x"], b["y"])
-    return f"좌표 {b['x']},{b['y']}"
+    # ★좌표 클릭은 하지 않는다(사장님 지시). 여기까지 오면 그대로 멈춘다.
+    raise RuntimeError(f"클릭 실패(좌표 안 씀): {label}")
 
 
 def click_btn(page, rx, ymin=None, wait=1200, label=""):
@@ -146,13 +146,44 @@ def media_tiles(page):
         const s = im.getAttribute('src') || '';
         if (!/media\\.getMediaUrlRedirect|googleusercontent/.test(s)) continue;
         const r = im.getBoundingClientRect();
-        if (r.width < 100 || r.height < 100) continue;
+        if (r.width < 60 || r.height < 60) continue;
         out.push({x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2),
                   w: Math.round(r.width), h: Math.round(r.height)});
       }
       out.sort((a, b) => a.y - b.y || a.x - b.x);
       return out;
     }""")
+
+
+def wait_tiles(page, timeout_ms=90000, step_ms=5000):
+    """타일이 그려질 때까지 기다리되, **안 그려지면 '업로드' 칸을 눌러 그리게 한다**.
+
+    ★업로드 직후 '모든 미디어'에서는 img 가 0x0 으로만 잡힌다(게으른 렌더).
+      왼쪽 '업로드'/'이미지' 칸을 누르면 그때 제대로 그려진다(225x400).
+      한 번 보고 포기하면 '업로드가 안 됐다'고 오진한다 — 2026-08-22 그렇게 헤맸다.
+    ★좌표 클릭은 쓰지 않는다. get_by_text + locator.click 만.
+    """
+    waited = 0
+    tabs = ("업로드", "이미지", "모든 미디어")
+    ti = 0
+    while waited < timeout_ms:
+        t = media_tiles(page)
+        if t:
+            log(f"  [TILE] {len(t)}개 (기다린 시간 {waited // 1000}초)")
+            return t
+        # ★칸을 돌아가며 눌러 목록을 그리게 한다
+        name = tabs[ti % len(tabs)]
+        ti += 1
+        try:
+            loc = page.get_by_text(name, exact=True)
+            if loc.count():
+                loc.first.click(timeout=5000)
+                log(f"  [TILE] '{name}' 칸을 눌러 목록을 그리게 한다")
+        except Exception:
+            pass
+        page.wait_for_timeout(step_ms)
+        waited += step_ms
+    return []
 
 
 def open_chip(page):
@@ -189,23 +220,24 @@ def run(image, prompt, out, aspect="9:16", model="Veo 3.1 - Lite", profile=None)
         # 2) '+' 미디어 추가 → '미디어 업로드' → 파일
         if not click_btn(page, "^add\\n미디어 추가", label="미디어 추가(+)"):
             raise RuntimeError("'+' 버튼 없음")
-        up = find_btn(page, "미디어 업로드")
-        if not up:
-            raise RuntimeError("'미디어 업로드' 메뉴 없음")
-        with page.expect_file_chooser(timeout=15000) as fc:
-            page.mouse.click(up["x"], up["y"])
-        fc.value.set_files(image)
+        # ★★검증된 함수를 쓴다 — autoveo_flow.upload_image()
+        #   iframe 안까지 훑고, 넣은 뒤 '추가'를 누르고, 30초를 기다린다.
+        #   내가 새로 짠 코드는 이 셋을 빠뜨려 타일이 안 떴다(2026-08-22).
+        import autoveo_flow as _avf
+        if not _avf.upload_image(page, image):
+            raise RuntimeError("업로드 실패(upload_image)")
         log(f"  [UPLOAD] {image}")
 
-        # 3) 업로드 반영 대기
+        # 3) 업로드 반영 대기 — ★사장님 확정 30초
         page.wait_for_timeout(UPLOAD_WAIT_MS)
-        tiles = media_tiles(page)
+        tiles = wait_tiles(page)                  # ★자랄 때까지 기다린다
         if not tiles:
-            raise RuntimeError("업로드 타일이 뜨지 않음")
+            raise RuntimeError("업로드 타일이 뜨지 않음(90초 기다림)")
 
         # 4) 타일 ⋮ → '프롬프트에 추가'
         t0 = tiles[0]
-        page.mouse.move(t0["x"], t0["y"])
+        # ★hover 도 locator 로 — 좌표는 오버레이에 가려도 그냥 찍힌다
+        page.locator(f"[{CLICK_MARK}='1']").first.hover(timeout=6000)
         page.wait_for_timeout(1500)
         if not click_btn(page, "more_vert\\n더 생성하기", ymin=t0["y"] - 260, label="타일 ⋮"):
             raise RuntimeError("타일 ⋮ 없음")
@@ -242,13 +274,15 @@ def run(image, prompt, out, aspect="9:16", model="Veo 3.1 - Lite", profile=None)
         tiles = media_tiles(page)
         if not tiles:
             raise RuntimeError("생성 타일 없음 — 90초 내 미완성 = 실패")
-        page.mouse.click(tiles[0]["x"], tiles[0]["y"])
+        # ★locator 우선. 표식을 달아 두고 그 요소를 직접 누른다
+        _t = find_btn(page, ".") or tiles[0]
+        page.locator(f"[{CLICK_MARK}='1']").first.click(timeout=8000)
         page.wait_for_timeout(2500)
         dl = find_btn(page, "download\\n다운로드")
         if not dl:
             raise RuntimeError("라이트박스 다운로드 버튼 없음")
         with page.expect_download(timeout=120000) as info:
-            page.mouse.click(dl["x"], dl["y"])
+            click_marked(page, dl, "다운로드")
             page.wait_for_timeout(2500)
             for t in ("원본 크기", "원본", "720p", "1080p", "다운로드"):
                 try:

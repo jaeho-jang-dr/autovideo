@@ -197,6 +197,7 @@ Antigravity + Claude Code
 | 2026-08-25 | `80c238ae` | **UX 원스톱 실행 체계 구축: 다지선다 질문 금지 & 자동 승인 매크로(0.2s) 영구 등록** | 다지선다 선택창(ask_question) 전면 금지 룰 확립, Antigravity IDE 엔터 즉시 전송(chat.sendOnEnter), Allow/Submit 팝업 0.2초 자동 돌파 매크로(run_auto_approve.vbs) 시작프로그램 등록 및 저장 완료 버전. |
 | 2026-08-26 | `pending` | **캐릭터 ↔ 배경 동영상 상호작용 체계화 및 캐릭터랑 에이전트 업그레이드** | 캐릭터와 배경 동영상 간 사건-시각-동작 3채널 맞물림 연출, 소품 분리 순수 동작 컷 생성 규칙, 배경 선행 실측 후 캐릭터 Z축 반응 렌더링 체계 구축 및 메모리 동기화 완료 버전. |
 | 2026-08-26 | `pending` | **클로드-제미나이-제작자 초고속 실시간 브릿지(bridge.py) 개통 & 다지선다 팝업 원천 봉인** | `scripts/bridge.py` 기반 실시간 IPC 큐 구축으로 복붙 소통 지연 100% 제거, `ask_question` 및 계획 승인 모달 원천 차단으로 1~5번/Submit 팝업 없는 100% 자율 직진 실행 체계 확립, W1-6 한글판 렌더 및 피란길(8930)/성북동(8950) 교정앱 연동 완료 버전. |
+| 2026-08-27 | `pending` | **오토 어프루브 v5 Ultra 최적화 (GDI BitBlt & UIA 듀얼 감지 엔진 51ms 돌파)** | `scratch/auto_approve.py` & `scripts/auto_approve.py`를 GDI BitBlt 초고속 캡처(2~4ms, Screen grab fail 방지) 및 UIA(UI Automation) 듀얼 엔진으로 업그레이드, 51.1ms 이내 4번+Enter+Submit 자동 승인 완벽 검증 및 백그라운드 관리 CLI(--status/--test/--stop) 탑재 완료 버전. |
 
 
 

@@ -25,7 +25,7 @@ try: cs.PROJECT_NAME = PREFIX
 except Exception: pass
 PDIR = "hangeul_birth_vowels"
 LEAD, TAIL = 0.0, 0.45   # 나레이션 앞 딜레이 0 (사장님 지시 2026-07-06)
-RES = "1920:1080" if MODE == "review" else "3840:2160"
+RES = "1920:1080" if MODE in ("review", "1080p", "1080") else "3840:2160"
 FF = cs._ff() if hasattr(cs, "_ff") else "ffmpeg"
 def log(m): print(m, flush=True)
 
@@ -85,7 +85,13 @@ meta=[]
 for ko,en in zip(ko_scenes, en_scenes):
     ko_a, ko_dur, ko_js = cs.ensure_scene_audio(ko["seq"], _strip_blank(_strip_en_gloss(_strip_rom(ko["script"]))), "ko")  # ★KO=순수 한국어
     en_a, en_dur, en_js = cs.ensure_scene_audio(en["seq"], _strip_blank(_strip_rom(en["script"])), "en")
-    dur = max(ko_dur, en_dur) + LEAD + TAIL
+    # ★fixed_dur 씬(그림이 길이를 지배 — 피란길·성북동 등)은 나레이션 길이로 늘리거나 줄이지 않는다.
+    #   render_one.py(부분 렌더)는 DB duration_sec 을 그대로 쓰는데, 여기(전체 통본)는 지금까지
+    #   max(ko_dur,en_dur)+LEAD+TAIL 로 **따로** 계산해서 확정한 클립과 통본의 길이가 어긋났다(2026-08-25 발견).
+    if ko.get("fixed_dur"):
+        dur = ko["dur"]   # load_scenes() 가 DB duration_sec 을 그대로 담아온 값
+    else:
+        dur = max(ko_dur, en_dur) + LEAD + TAIL
     meta.append(dict(ko=ko,en=en,ko_a=ko_a,en_a=en_a,ko_dur=ko_dur,en_dur=en_dur,ko_js=ko_js,en_js=en_js,dur=dur))
     log(f"  S{ko['seq']:>2}: KO={ko_dur:4.1f} EN={en_dur:4.1f} → {dur:4.1f}s")
 

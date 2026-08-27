@@ -20,9 +20,18 @@ def log(*a):
     print(*a, flush=True)
 
 with sync_playwright() as pw:
-    ctx = pw.chromium.launch_persistent_context(af.PROFILE, channel="chrome", headless=False,
-        locale="ko-KR", no_viewport=True, ignore_default_args=["--enable-automation"],
-        args=["--start-maximized", "--no-first-run", "--lang=ko-KR", "--disable-gpu"])
+    # ★이미 열려 있는 CDP 크롬(9222)에 붙는다.
+    #   새로 띄우면 같은 프로필을 두 번 열어 "다른 프로세스가 사용 중"으로 죽는다
+    #   (2026-08-22 실측). 없을 때만 예전처럼 새로 띄운다.
+    try:
+        b = pw.chromium.connect_over_cdp("http://localhost:9222")
+        ctx = b.contexts[0]
+        log("  CDP 9222 에 붙었다")
+    except Exception:
+        ctx = pw.chromium.launch_persistent_context(af.PROFILE, channel="chrome", headless=False,
+            locale="ko-KR", no_viewport=True, ignore_default_args=["--enable-automation"],
+            args=["--start-maximized", "--no-first-run", "--lang=ko-KR", "--disable-gpu"])
+        log("  크롬을 새로 띄웠다")
     pg = ctx.pages[0] if ctx.pages else ctx.new_page(); pg.set_default_timeout(45000)
     pg.goto(f"https://studio.youtube.com/video/{SID}/edit", wait_until="domcontentloaded")
     pg.wait_for_timeout(9000)

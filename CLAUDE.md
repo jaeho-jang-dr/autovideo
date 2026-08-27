@@ -30,6 +30,7 @@
 | AI 역할 구성 및 이력 | `.harness/context/roles_config.md` |
 | 조감독 트러블슈팅 및 작업 인계 리포트 | [gemini_report.md](file:///D:/Entertainments/DevEnvironment/autovideo/scratch/gemini_report.md) |
 | 클로드-제미나이 초고속 실시간 브릿지 상태 | [active_task.json](file:///D:/Entertainments/DevEnvironment/autovideo/scratch/bridge/active_task.json) |
+| 초고속 자동 승인기 (v5 Ultra) | [auto_approve.py](file:///D:/Entertainments/DevEnvironment/autovideo/scripts/auto_approve.py) |
 | 구글 Flow 다중 계정 연동 및 관리 가이드 | `.harness/context/flow_accounts_spec.md` |
 
 

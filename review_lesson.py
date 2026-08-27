@@ -52,6 +52,16 @@ def srt_to_vtt(path=None):
     txt = re.sub(r"(\d\d:\d\d:\d\d),(\d\d\d)", r"\1.\2", txt)   # SRT(,) → VTT(.)
     return "WEBVTT\n\n" + txt
 
+# ★이전 판 교정 메모 — 새 판을 볼 때 나란히 두면 고쳐졌는지 바로 대조된다.
+#   읽기 전용이다(지우기·수정 불가). 없으면 그냥 빈 목록.
+PREV_JSON = os.environ.get("REVIEW_PREV", "")
+
+def load_prev():
+    if PREV_JSON and os.path.exists(PREV_JSON):
+        try: return json.load(open(PREV_JSON, encoding="utf-8"))
+        except Exception: return []
+    return []
+
 def load_fb():
     if os.path.exists(FB_JSON):
         try: return json.load(open(FB_JSON, encoding="utf-8"))
@@ -91,6 +101,9 @@ textarea{width:100%;height:80px;background:#0f172a;color:#f8fafc;border:1px soli
 .btn:hover{background:#15803d}
 .hint{font-size:11px;color:#94a3b8;margin-top:4px}
 .list{margin-top:14px;overflow-y:auto;flex:1;border-top:1px solid #1e293b;padding-top:10px}
+.item.prev{opacity:.72;border-left:3px solid #8a7a3a;background:#241f14}
+.item.prev .nt{color:#cfc4a4}
+.prevhead{font-size:11px;letter-spacing:.08em;color:#8a7a3a;font-weight:700;margin:6px 0 6px}
 .item{background:#1e293b;border-radius:8px;padding:9px 10px;margin-bottom:8px;font-size:13px;border:1px solid #334155;border-left:4px solid #ea580c;color:#f8fafc}
 .item .ts{color:#4ade80;font-weight:700;cursor:pointer}
 .item .sc{color:#94a3b8;font-size:11px}
@@ -189,8 +202,18 @@ function sceneAt(t){for(var i=0;i<SCENES.length;i++)if(t>=SCENES[i].start&&t<SCE
 function buildTL(){var h='';SCENES.forEach(function(s){h+='<span class=chip data-seq='+s.seq+' onclick="seek('+s.start+')" title="'+s.cap.replace(/"/g,'')+'">씬'+s.seq+'</span>'});document.getElementById('tl').innerHTML=h}
 function seek(t){vid.currentTime=t+0.05;vid.pause()}
 function tick(){var t=vid.currentTime,s=sceneAt(t);document.getElementById('ct').textContent=fmt(t);document.getElementById('cs').textContent='씬'+s.seq;document.getElementById('cc').textContent=s.cap||'';document.querySelectorAll('.chip').forEach(function(e){e.classList.toggle('cur',+e.dataset.seq==s.seq)})}
-function render(fb){var h='';var marked={};fb.forEach(function(f){marked[f.scene]=1;h+='<div class=item><span class=del onclick="del('+f.id+')">✕</span><span class=ts onclick="seek('+f.t+')">⏱ '+fmt(f.t)+'</span> <span class=sc>씬'+f.scene+'</span><div class=nt>'+f.note.replace(/</g,'&lt;')+'</div></div>'});document.getElementById('list').innerHTML=h;document.querySelectorAll('.chip').forEach(function(e){e.classList.toggle('has',marked[+e.dataset.seq])})}
-function load(){fetch('/api/feedback').then(function(r){return r.json()}).then(render)}
+function render(fb){var h=renderPrev();var marked={};
+ PREV.forEach(function(f){marked[f.scene]=1});fb.forEach(function(f){marked[f.scene]=1;h+='<div class=item><span class=del onclick="del('+f.id+')">✕</span><span class=ts onclick="seek('+f.t+')">⏱ '+fmt(f.t)+'</span> <span class=sc>씬'+f.scene+'</span><div class=nt>'+f.note.replace(/</g,'&lt;')+'</div></div>'});document.getElementById('list').innerHTML=h;document.querySelectorAll('.chip').forEach(function(e){e.classList.toggle('has',marked[+e.dataset.seq])})}
+var PREV=[];
+function renderPrev(){var h='';if(!PREV.length)return h;
+ h+='<div class=prevhead>이전 교정 '+PREV.length+'건 — 고쳐졌는지 대조해 보세요</div>';
+ PREV.slice().sort(function(a,b){return a.t-b.t}).forEach(function(f){
+  h+='<div class="item prev"><span class=ts onclick="seek('+f.t+')">⏱ '+fmt(f.t)+'</span> '
+   +'<span class=sc>씬'+f.scene+'</span><div class=nt>'+f.note.replace(/</g,'&lt;')+'</div></div>'});
+ return h+'<div class=prevhead style="margin-top:14px">이번 판 교정</div>'}
+function load(){fetch('/api/prev').then(function(r){return r.json()})
+ .then(function(p){PREV=p||[];return fetch('/api/feedback')})
+ .then(function(r){return r.json()}).then(render)}
 function addNote(){var n=document.getElementById('note').value.trim();if(!n)return;var t=vid.currentTime,s=sceneAt(t);fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({t:t,note:n,scene:s.seq})}).then(function(r){return r.json()}).then(function(fb){render(fb);document.getElementById('note').value=''})}
 function del(id){fetch('/api/feedback/delete',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:id})}).then(function(r){return r.json()}).then(render)}
 document.getElementById('note').addEventListener('keydown',function(e){if(e.ctrlKey&&e.key=='Enter')addNote()});
@@ -260,6 +283,8 @@ def make_handler():
                 self._send(200, srt_to_vtt(SRT2).encode("utf-8"), "text/vtt; charset=utf-8")  # 짝 언어 자막
             elif self.path == "/api/feedback":
                 self._send(200, json.dumps(load_fb(), ensure_ascii=False))
+            elif self.path == "/api/prev":
+                self._send(200, json.dumps(load_prev(), ensure_ascii=False))
             else:
                 self._send(404, "{}")
         def do_POST(self):

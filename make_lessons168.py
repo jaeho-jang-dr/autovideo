@@ -24,9 +24,13 @@ LEVEL_KO = {"beginner": "초급", "intermediate": "중급", "advanced": "고급"
 
 # 주차별: 짧은 주제(ko/en) + 6일차 '문화' 강의 제목(ko/en) + 문화 설명(ko/en)
 W = {
-    1:  ("단모음", "Simple Vowels", "한글을 만든 세종대왕 이야기", "King Sejong & the Birth of Hangeul",
-         "세종대왕이 백성을 위해 한글을 만든 이야기와 천지인(·ㅡㅣ) 철학을 만나요.",
-         "Meet King Sejong's story and the Cheon-Ji-In (·ㅡㅣ) philosophy behind Hangeul."),
+    # ★W1-D6 은 2026-08-22 에 방향을 바꿨다. 창제 이야기는 이미 채널에 있는
+    #   「세종대왕과 한글」(6lGedBJ5xx4, 11분45초)이 다 다뤄서 겹쳤다.
+    #   그래서 D6 은 '글자가 살아남은 이야기'로 잡는다. 자세한 것은 W1_6/W1D6_PLAN.md
+    1:  ("단모음", "Simple Vowels", "지켜 낸 사람들, 한글날이 정해지기까지", "How Hangeul Was Saved",
+         "한글이 어떻게 지켜졌는지 — 우리말을 지킨 사람들, 사라졌던 해례본, 그리고 10월 9일 한글날이 정해지기까지.",
+
+         "How Hangeul survived — the people who protected the language, the lost Haerye rediscovered, and how October 9 became Hangeul Day."),
     2:  ("기초 자음", "Basic Consonants", "소리를 본뜬 글자, 한글의 과학", "Letters shaped like sounds",
          "자음이 발음 기관 모양을 본떠 만들어진 과학적 원리를 알아봐요.",
          "Discover how consonants were shaped after the speech organs that make them."),

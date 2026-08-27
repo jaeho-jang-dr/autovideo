@@ -1126,6 +1126,23 @@
       "scenes": []
     },
     {
+      "code": "CA-006",
+      "category": "CA",
+      "title_kr": "하루 8천보, 무릎은 정말 닳을까?",
+      "title_en": "8,000 Steps a Day \u2014 Do Your Knees Really Wear Out?",
+      "hook_kr": "\ubb34\ub98e\uc774 \ub2f3\uc744\uae4c \ubd10 \uac77\uae30\ub97c \uadf8\ub9cc\ub450\uc168\ub098\uc694? \uc5f0\uace8\uc740 \ub2f3\ub294 \uac8c \uc544\ub2c8\ub77c \uac77\uc9c0 \uc54a\uc544\uc11c \uad76\uc2b5\ub2c8\ub2e4.",
+      "logline_kr": "\uc5f0\uace8\uc740 \ubb34\ud608\uad00 \uc870\uc9c1\uc774\ub77c \uad00\uc808\uc561\uc774 \uc720\uc77c\ud55c \uacf5\uae09\ub85c\ub2e4. \uac77\uae30\uac00 \uadf8 \ud38c\ud504\ub97c \ub3cc\ub9b0\ub2e4",
+      "status": "published",
+      "priority": 15,
+      "runtime_sec": 431,
+      "youtube_kr": "n3sc6O_9vqA",
+      "youtube_en": "Wm0c2hYyhAE",
+      "publish_date": null,
+      "reverse_spec": null,
+      "style_profile": null,
+      "scenes": []
+    },
+    {
       "code": "GEN-001",
       "category": "GEN",
       "title_kr": "5살 손주의 뇌와 60대 할아버지의 뇌가 만날 때",
