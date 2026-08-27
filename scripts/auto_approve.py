@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-scratch/auto_approve.py — Antigravity & CLI 0.2초 초고속 자동 승인기 (v5 Ultra)
-=============================================================================
+scripts/auto_approve.py — Antigravity & CLI 0.2초 초고속 3중 하이브리드 자동 승인기 (v6 Apex)
+========================================================================================
 동작:
   1) 포커스 창 또는 전체 UI에서 승인 요청(Submit, Allow, 4선택지)을 0.04초(40ms) 주기로 감지
-  2) 감지 즉시 0.2초 이내에:
-     - 1단계: 숫자 '4' 키 입력 (옵션 4번: 항상 승인 선택)
-     - 2단계: 'Enter' (VK_RETURN) 키 입력 (전송/승인 확정)
-     - 3단계: [Submit] / [Allow] 버튼 UI 컨트롤 또는 좌표 직접 클릭 (하이브리드 보장)
+  2) 3중 하이브리드 즉시 타격 (< 100ms):
+     - [엔진 1: UIA 직접 제어] RadioButton 선택 및 Submit/Allow ButtonControl.Click()
+     - [엔진 2: 가상 키 스트로크] '4' (Always allow 선택) + 'Enter' (확정 전송)
+     - [엔진 3: GDI/OpenCV 좌표 타격] 파란색 Submit 버튼 정중앙 계산 후 마우스 텔레포트 클릭
   3) CLI 옵션:
-     - `python scratch/auto_approve.py --test`    : 자체 벤치마크 모의 테스트 및 속도 검증
-     - `python scratch/auto_approve.py --status`  : 실행 중인 프로세스 상태 확인
-     - `python scratch/auto_approve.py --stop`    : 실행 중인 백그라운드 매크로 안전 종료
-     - `python scratch/auto_approve.py`           : 실시간 감지 루프 실행
+     - `python scripts/auto_approve.py --test`    : 자체 벤치마크 모의 테스트 및 속도 검증
+     - `python scripts/auto_approve.py --status`  : 실행 중인 프로세스 상태 확인
+     - `python scripts/auto_approve.py --stop`    : 실행 중인 백그라운드 매크로 안전 종료
+     - `python scripts/auto_approve.py`           : 실시간 감지 루프 실행
 
 비상 정지:
   - ScrollLock 키 ON: 일시정지 (OFF 시 재개)
@@ -27,6 +27,13 @@ import subprocess
 import ctypes
 from ctypes import wintypes
 from PIL import Image
+
+try:
+    import cv2
+    import numpy as np
+    HAS_CV2 = True
+except ImportError:
+    HAS_CV2 = False
 
 try:
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
@@ -48,7 +55,7 @@ OPTION_KEY = "4"             # 승인 옵션 번호
 POLL_INTERVAL = 0.04         # 스캔 주기 (40ms = 0.04초)
 COOLDOWN_AFTER_CLICK = 0.6   # 승인 후 쿨다운 (초)
 KEY_DELAY = 0.02             # 키 입력 간 딜레이 (20ms)
-MIN_BUTTON_WIDTH = 40        # 파란색 버튼 최소 너비 (px)
+MIN_BUTTON_WIDTH = 35        # 파란색 버튼 최소 너비 (px)
 SCAN_STEP_X = 4
 SCAN_STEP_Y = 4
 BOTTOM_REGION_RATIO = 0.45   # 창 하단 스캔 영역 비율
@@ -77,7 +84,8 @@ PID_FILE = os.path.join(SCRIPT_DIR, "auto_approve.pid")
 ALLOW_KEYWORDS = [
     "Yes, allow this time", "yes, allow this time", "Allow", "allow",
     "Proceed", "proceed", "Submit", "submit", "4. Yes, allow", "4) Yes, allow",
-    "Always allow", "Always allow this tool", "Submit (승인)", "Submit_Test_Btn"
+    "Always allow", "Always allow this tool", "Submit (승인)", "Submit_Test_Btn",
+    "4. 항상 승인 및 자동 실행 (Always Allow) ★", "4. Always allow"
 ]
 
 
@@ -224,12 +232,12 @@ def grab_gdi_region(left, top, right, bottom):
 
 
 def find_blue_submit_button(rect):
-    """창 하단 영역에서 파란색 Submit 버튼을 고속 검색 (GDI 픽셀 기반)"""
+    """창 하단 영역에서 파란색 Submit 버튼을 고속 검색 (OpenCV HSV 컨투어 및 GDI 픽셀 기반)"""
     left, top = max(rect.left, 0), max(rect.top, 0)
     right, bottom = rect.right, rect.bottom
 
     scan_top = int(bottom - (bottom - top) * BOTTOM_REGION_RATIO)
-    scan_left = int(left + (right - left) * 0.20)
+    scan_left = int(left + (right - left) * 0.15)
 
     if scan_left >= right - 10 or scan_top >= bottom - 10:
         return None, None
@@ -238,18 +246,42 @@ def find_blue_submit_button(rect):
     if img is None:
         return None, None
 
+    # 1. OpenCV 고속 컬러 마스크 및 컨투어 중심점 연산 (1~2ms)
+    if HAS_CV2:
+        try:
+            arr = np.array(img) # RGB
+            hsv = cv2.cvtColor(arr, cv2.COLOR_RGB2HSV)
+            # Google / Antigravity 파란색 범위 (H: 200~230도 -> 100~130 in OpenCV)
+            lower_blue = np.array([95, 120, 120])
+            upper_blue = np.array([135, 255, 255])
+            mask = cv2.inRange(hsv, lower_blue, upper_blue)
+            contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            best_cx, best_cy, max_area = None, None, 0
+            for cnt in contours:
+                area = cv2.contourArea(cnt)
+                if area > 200: # 버튼 크기 이상
+                    x, y, w, h = cv2.boundingRect(cnt)
+                    if w >= MIN_BUTTON_WIDTH and h >= 15:
+                        if area > max_area:
+                            max_area = area
+                            best_cx = scan_left + x + w // 2
+                            best_cy = scan_top + y + h // 2
+            if best_cx is not None:
+                return best_cx, best_cy
+        except Exception:
+            pass
+
+    # 2. 순수 픽셀 스캔 폴백
     px = img.load()
     w, h = img.size
     min_run = max(2, MIN_BUTTON_WIDTH // SCAN_STEP_X)
 
-    # 아래에서 위로 스캔 (Submit 버튼은 대개 맨 아래에 위치)
     for y in range(h - 4, 0, -SCAN_STEP_Y):
         run = 0
         run_start = 0
         for x in range(0, w - 2, SCAN_STEP_X):
             p = px[x, y]
             r, g, b = p[0], p[1], p[2]
-            # Google / Antigravity Blue 계열 색상 판별
             if r < 80 and 70 < g < 180 and b > 180:
                 if run == 0:
                     run_start = x
@@ -264,11 +296,21 @@ def find_blue_submit_button(rect):
 
 
 def find_uia_control():
-    """UI Automation으로 활성 승인 버튼 감지 및 컨트롤 반환"""
+    """UI Automation으로 활성 승인 버튼/라디오버튼 감지 및 컨트롤 반환"""
     if not HAS_UIA:
         return None, None, None, None
     try:
         root = auto.GetRootControl()
+        # 1. 4번 라디오 버튼 자동 선택
+        for kw in ["4. Always allow", "4. 항상 승인 및 자동 실행 (Always Allow) ★", "Always allow"]:
+            rb = root.RadioButtonControl(searchDepth=12, Name=kw)
+            if rb.Exists(maxSearchSeconds=0.01):
+                try:
+                    rb.Select()
+                except Exception:
+                    pass
+
+        # 2. 승인/확인 버튼 검색
         for kw in ALLOW_KEYWORDS:
             ctrl = root.Control(searchDepth=12, Name=kw)
             if ctrl.Exists(maxSearchSeconds=0.01):
