@@ -189,6 +189,17 @@ def post_comment(y, vid, text_file):
     return cid
 
 
+def do_thumb(y, vid, thumb_path):
+    tp = rp(thumb_path)
+    if not os.path.exists(tp):
+        print(f"  [썸네일] 파일 없음: {tp}")
+        return "no_file"
+    media = MediaFileUpload(tp, mimetype="image/jpeg", resumable=False)
+    y.thumbnails().set(videoId=vid, media_body=media).execute()
+    print(f"  [썸네일] {vid}: 업로드 성공 ({os.path.basename(tp)})")
+    return "ok"
+
+
 def main():
     if len(sys.argv) < 2:
         print(__doc__); return
@@ -208,6 +219,8 @@ def main():
         do_meta(y, sys.argv[2], json.load(open(rp(sys.argv[3]), encoding="utf-8")))
     elif cmd == "tags":
         do_tags(y, sys.argv[2], sys.argv[3])
+    elif cmd == "thumb":
+        do_thumb(y, sys.argv[2], sys.argv[3])
     elif cmd == "localize":
         man = json.load(open(rp(sys.argv[3]), encoding="utf-8"))
         print("=== 자막 ==="); s = do_subs(y, sys.argv[2], man, force)
