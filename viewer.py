@@ -9,6 +9,12 @@
 ★CRD/원격 데스크톱에서는 네이티브 창이 1장만 보이는 문제가 있으니 반드시 --web 모드를 쓴다."""
 import sys, os, glob
 
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 EXT = (".png", ".jpg", ".jpeg", ".webp", ".bmp", ".gif")
 
 def collect(args):
