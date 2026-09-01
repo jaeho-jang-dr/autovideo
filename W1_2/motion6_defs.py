@@ -304,6 +304,13 @@ simple drawn shoes, plain white background. Same line weight, same proportions, 
 hair shape and the same bun. Do not restyle, do not add any other colour, do not add
 shading, do not add a background, do not add a floor line or shadow.
 
+★LIMB THICKNESS - STRICT: the arms and legs are drawn as THIN, SINGLE-WEIGHT LINES,
+exactly as thin as they are in the source image - never thicker, never padded, never
+filled in as solid shapes, never rendered as fat tubes or sausage-like limbs. Keep the
+same razor-thin stick-figure line the whole clip, every single frame, even during fast
+motion like running. Only the torso/body outline may have its normal shape - arms and
+legs stay pure thin lines with no added bulk or muscle.
+
 """ + _ZOLLA_ANATOMY
 
 ZMAN_LOOP = ZMAN_STYLE + "\n\n" + _TREADMILL
@@ -331,6 +338,145 @@ MOTIONS = [
      "the eight seconds. The body leans slightly forward. Her hair bun stays put. Stay "
      "side-on.\n\n" + RUN_LIMBS + "\n\n"
      + COUNT_HARD + "\n\n" + CENTER_HARD + "\n\n" + ZGIRL_LOOP),
+
+    # ★W1-3(청계천) 신규 7종 — 사장님 지시(2026-08-31) "필요한 캐릭터 포즈와 모션 전부다
+    #   만들자." 걷기(측면·정면·후면)·달리기(정면·후면)는 순환(LOOP, 한 스트라이드만 추출),
+    #   block_touch·stumble_bounce는 1회 동작(ONCE, 64컷 추출).
+    #   ★후면은 정면 컷에서 머리만 교체하는 파생(make_run_front_cuts.back_head 방식)을
+    #     검토했으나, 그 함수는 **흰 머리(스틱맨 전용)** 라 주황 머리인 졸라걸엔 그대로
+    #     못 쓴다(머리만 골라 칠하는 마스크가 없어 몸통까지 같이 칠해진다). 이번에 검증된
+    #     guide_zgirl_back.png(2026-08-31, locator 방식으로 성공)를 기준 이미지로 그대로
+    #     써서 **직접 생성**한다 — 이미 파이프라인이 안정적으로 검증됐으니 위험이 적다.
+    ("zgirl_walk_side", "zgirl_side",
+     "Zollagirl WALKS IN PLACE, seen from the SIDE, facing to the RIGHT. A clean, "
+     "natural, unhurried walk cycle: the near leg swings forward and plants heel-first, "
+     "the far leg pushes off behind, arms swinging gently in opposition to the legs, "
+     "never both feet off the ground at once (unlike running). Roughly three full "
+     "strides over the eight seconds, at an even relaxed pace. Her hair bun stays put. "
+     "Stay side-on - do not turn toward or away from the camera.\n\n"
+     + COUNT_HARD + "\n\n" + CENTER_HARD + "\n\n" + ZGIRL_LOOP),
+
+    ("zgirl_walk_front", "zgirl_front",
+     "Zollagirl WALKS IN PLACE, seen from the FRONT, square-on to the camera, body at "
+     "EXACTLY 0 degrees rotation (facing the camera dead-on, not a three-quarter angle). "
+     "A clean, natural, unhurried walk cycle: her legs alternate stepping forward and "
+     "back with a gentle knee bend and a small up-and-down bob, her arms swing gently "
+     "opposite the legs, never both feet off the ground at once. Roughly three full "
+     "strides over the eight seconds. Her hair bun stays put. Her body and shoulders "
+     "stay square to the camera the entire time - never rotate to a side view.\n\n"
+     + COUNT_HARD + "\n\n" + CENTER_HARD + "\n\n" + ZGIRL_LOOP),
+
+    ("zgirl_run_front", "zgirl_front",
+     "Zollagirl RUNS IN PLACE, seen from the FRONT, square-on to the camera, body at "
+     "EXACTLY 0 degrees rotation (facing the camera dead-on, not a three-quarter angle). "
+     "A clear running cycle: knees lift high toward the chest alternately, arms pump "
+     "energetically opposite the legs bent at the elbow, a clear airborne moment where "
+     "both feet leave the ground. Roughly five full strides over the eight seconds. Her "
+     "hair bun stays put. Her body and shoulders stay square to the camera the entire "
+     "time - never rotate to a side view.\n\n" + RUN_LIMBS + "\n\n"
+     + COUNT_HARD + "\n\n" + CENTER_HARD + "\n\n" + ZGIRL_LOOP),
+
+    ("zgirl_walk_back", "zgirl_back",
+     "Zollagirl WALKS IN PLACE, seen from directly BEHIND - her back, the back of her "
+     "head, and the back of her shoulders and legs face the camera, body at EXACTLY 180 "
+     "degrees rotation from front-facing. NO face is visible anywhere, at any point in "
+     "the clip - no eyes, no mouth peeking around either side of the head. The orange "
+     "hair covers the entire back of her head exactly as in the reference image, with "
+     "the bun on top. A clean, natural, unhurried walk cycle: her legs alternate "
+     "stepping with a gentle knee bend and small up-and-down bob, her arms swing gently "
+     "opposite the legs, never both feet off the ground at once. Roughly three full "
+     "strides over the eight seconds. Her shoulders stay square, facing directly away "
+     "from the camera the entire time - never rotate back around to show the face.\n\n"
+     + COUNT_HARD + "\n\n" + CENTER_HARD + "\n\n" + ZGIRL_LOOP),
+
+    ("zgirl_run_back", "zgirl_back",
+     "Zollagirl RUNS IN PLACE, seen from directly BEHIND - her back, the back of her "
+     "head, and the back of her shoulders and legs face the camera, body at EXACTLY 180 "
+     "degrees rotation from front-facing. NO face is visible anywhere, at any point in "
+     "the clip - no eyes, no mouth peeking around either side of the head. The orange "
+     "hair covers the entire back of her head exactly as in the reference image, with "
+     "the bun on top. A clear running cycle: knees lift high alternately, arms pump "
+     "energetically bent at the elbow, a clear airborne moment where both feet leave "
+     "the ground. Roughly five full strides over the eight seconds. Her shoulders stay "
+     "square, facing directly away from the camera the entire time - never rotate back "
+     "around to show the face.\n\n" + RUN_LIMBS + "\n\n"
+     + COUNT_HARD + "\n\n" + CENTER_HARD + "\n\n" + ZGIRL_LOOP),
+
+    ("zgirl_block_touch", "zgirl_front",
+     "Zollagirl reaches out and touches something floating in front of her, seen from "
+     "the FRONT, square-on to the camera. Nothing else is drawn - only she is in the "
+     "frame, reaching into empty space.\n"
+     "  0.0 - 1.5s  standing still, facing the camera, arms relaxed at her sides\n"
+     "  1.5 - 3.5s  she raises her right arm smoothly and reaches forward at chest "
+     "height, fingers opening as if about to touch something invisible\n"
+     "  3.5 - 5.0s  she holds the reach, fingertips extended, a curious focused "
+     "expression\n"
+     "  5.0 - 6.5s  she draws her arm back in, as if pulling that invisible thing "
+     "toward her chest\n"
+     "  6.5 - 8.0s  standing still again, facing the camera\n\n"
+     "★Both halves must be slow and clean enough to lift single frames out of.\n\n"
+     + ZGIRL_ONCE),
+
+    ("zgirl_stumble_bounce", "zgirl_side",
+     "Zollagirl tries to place something in the wrong spot, gets bounced back, and "
+     "stumbles, seen from the SIDE, facing RIGHT. Nothing else is drawn - only she is "
+     "in the frame.\n"
+     "  0.0 - 1.5s  standing still, side-on, leaning slightly forward reaching toward "
+     "something invisible ahead of her\n"
+     "  1.5 - 2.5s  THE BOUNCE. Her whole body is knocked backward sharply, as if "
+     "pushed by an invisible spring - arms fly up and back, torso tips backward\n"
+     "  2.5 - 4.0s  she stumbles backward off balance, legs stepping back to catch "
+     "herself, arms flailing slightly for balance\n"
+     "  4.0 - 5.2s  she loses the fight and sits down hard on the ground, landing on "
+     "her seat, legs splayed out in front of her\n"
+     "  5.2 - 6.5s  she sits there for a moment, a little dazed\n"
+     "  6.5 - 8.0s  she pushes herself back up to standing, side-on, and settles\n\n"
+     "★Both halves must be slow and clean enough to lift single frames out of. This is "
+     "the same kind of beat as W1_2's butt_fall - a comedic backward tumble, not a "
+     "violent fall. ANATOMY LOCK applies through every frame of the tumble, including "
+     "while seated on the ground.\n\n" + ZGIRL_ONCE),
+
+    # ★W1-3(청계천) v2 재설계 보강 3종 — 사장님 지시(2026-09-01) "캐릭터 동작 3개 지금 만들자."
+    ("zgirl_stone_hop", "zgirl_side",
+     "Zollagirl hops in place from one stepping stone to the next, seen from the SIDE, "
+     "facing to the RIGHT. A clean, light hopping cycle: she crouches slightly, springs "
+     "up and forward with both feet leaving the ground briefly, arms swinging up for "
+     "balance, then lands softly with a small knee bend to absorb the landing. Roughly "
+     "three full hops over the eight seconds, at a light, careful, playful pace (not a "
+     "run - this is picking her way across stones one at a time). Her hair bun bounces "
+     "slightly with each landing. Stay side-on - do not turn toward or away from the "
+     "camera.\n\n" + COUNT_HARD + "\n\n" + CENTER_HARD + "\n\n" + ZGIRL_LOOP),
+
+    ("zgirl_cold_flinch", "zgirl_front",
+     "Zollagirl reacts to something cold touching her foot, seen from the FRONT, "
+     "square-on to the camera. Nothing else is drawn - only she is in the frame.\n"
+     "  0.0 - 1.8s  standing still, facing the camera, relaxed, one foot forward as if "
+     "about to step into water\n"
+     "  1.8 - 2.6s  THE FLINCH. She yanks that foot back up sharply, knee lifting high, "
+     "shoulders hunching up, arms drawing in close to her body, an exaggerated startled "
+     "expression\n"
+     "  2.6 - 3.8s  she holds the flinch - foot still lifted, shivering slightly\n"
+     "  3.8 - 5.0s  she lowers the foot back down slowly and carefully this time\n"
+     "  5.0 - 8.0s  standing still again, facing the camera, a little wary but settled\n\n"
+     "★Both halves must be slow and clean enough to lift single frames out of.\n\n"
+     + ZGIRL_ONCE),
+
+    ("zgirl_clap_together", "zgirl_front",
+     "Zollagirl brings two things together in her hands like clapping blocks together, "
+     "seen from the FRONT, square-on to the camera. Nothing else is drawn - only she is "
+     "in the frame, her hands acting on empty space.\n"
+     "  0.0 - 1.5s  standing still, facing the camera, both arms held out wide to her "
+     "sides at chest height, palms facing inward, as if holding something invisible in "
+     "each hand\n"
+     "  1.5 - 3.5s  she brings both arms smoothly toward the centre of her chest, hands "
+     "meeting together in the middle with a small decisive motion, like clapping two "
+     "blocks together\n"
+     "  3.5 - 5.0s  she holds her hands together at her chest, a pleased satisfied smile\n"
+     "  5.0 - 6.5s  she opens her arms back outward, presenting the joined result to the "
+     "viewer, palms up\n"
+     "  6.5 - 8.0s  standing still, arms settled, facing the camera\n\n"
+     "★Both halves must be slow and clean enough to lift single frames out of.\n\n"
+     + ZGIRL_ONCE),
 
     ("zman_sit_stand", "zman_side",
      "Zollaman SITS DOWN and then STANDS BACK UP, seen from the SIDE, facing RIGHT. "

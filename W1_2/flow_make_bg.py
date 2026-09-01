@@ -36,7 +36,9 @@ def log(m):
 
 
 def kill_chrome():
-    subprocess.run(["taskkill", "/F", "/IM", "chrome.exe"], capture_output=True, text=True)
+    # ★사장님 지시(2026-08-31): 통짜 taskkill은 보고 계신 다른 크롬 창까지 닫는다 —
+    #   자동화 프로필(assets/chrome_profile)의 크롬만 골라 끈다 [[never-kill-all-chrome]].
+    avf.force_kill_profile_chrome(os.path.abspath("assets/chrome_profile"))
 
 
 def set_image_mode(pg):

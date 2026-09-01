@@ -1,0 +1,190 @@
+{
+  "pad": 0.35,
+  "total": 230.749,
+  "scenes": [
+    {
+      "scene": "S01",
+      "start": 0.0,
+      "end": 5.721,
+      "len": 5.721,
+      "narration_dur": 5.371208,
+      "audio": "W1_3/_audio_ko/S01.mp3"
+    },
+    {
+      "scene": "S02",
+      "start": 5.721,
+      "end": 17.071,
+      "len": 11.35,
+      "narration_dur": 11.0,
+      "audio": "W1_3/_audio_ko/S02.mp3"
+    },
+    {
+      "scene": "S03",
+      "start": 17.071,
+      "end": 28.812,
+      "len": 11.741,
+      "narration_dur": 11.391458,
+      "audio": "W1_3/_audio_ko/S03.mp3"
+    },
+    {
+      "scene": "S04",
+      "start": 28.812,
+      "end": 41.122,
+      "len": 12.31,
+      "narration_dur": 11.96,
+      "audio": "W1_3/_audio_ko/S04.mp3"
+    },
+    {
+      "scene": "S05",
+      "start": 41.122,
+      "end": 64.538,
+      "len": 23.416,
+      "narration_dur": 23.065958,
+      "audio": "W1_3/_audio_ko/S05.mp3"
+    },
+    {
+      "scene": "S06",
+      "start": 64.538,
+      "end": 72.267,
+      "len": 7.729,
+      "narration_dur": 7.378667,
+      "audio": "W1_3/_audio_ko/S06.mp3"
+    },
+    {
+      "scene": "S07",
+      "start": 72.267,
+      "end": 81.021,
+      "len": 8.754,
+      "narration_dur": 8.40425,
+      "audio": "W1_3/_audio_ko/S07.mp3"
+    },
+    {
+      "scene": "S08",
+      "start": 81.021,
+      "end": 90.277,
+      "len": 9.256,
+      "narration_dur": 8.905958,
+      "audio": "W1_3/_audio_ko/S08.mp3"
+    },
+    {
+      "scene": "S09",
+      "start": 90.277,
+      "end": 101.78,
+      "len": 11.503,
+      "narration_dur": 11.153042,
+      "audio": "W1_3/_audio_ko/S09.mp3"
+    },
+    {
+      "scene": "S10",
+      "start": 101.78,
+      "end": 115.116,
+      "len": 13.336,
+      "narration_dur": 12.985958,
+      "audio": "W1_3/_audio_ko/S10.mp3"
+    },
+    {
+      "scene": "S11",
+      "start": 115.116,
+      "end": 128.756,
+      "len": 13.64,
+      "narration_dur": 13.289583,
+      "audio": "W1_3/_audio_ko/S11.mp3"
+    },
+    {
+      "scene": "S12",
+      "start": 128.756,
+      "end": 138.643,
+      "len": 9.887,
+      "narration_dur": 9.537042,
+      "audio": "W1_3/_audio_ko/S12.mp3"
+    },
+    {
+      "scene": "S13",
+      "start": 138.643,
+      "end": 148.401,
+      "len": 9.758,
+      "narration_dur": 9.408,
+      "audio": "W1_3/_audio_ko/S13.mp3"
+    },
+    {
+      "scene": "S14",
+      "start": 148.401,
+      "end": 157.002,
+      "len": 8.601,
+      "narration_dur": 8.251167,
+      "audio": "W1_3/_audio_ko/S14.mp3"
+    },
+    {
+      "scene": "S15",
+      "start": 157.002,
+      "end": 165.907,
+      "len": 8.905,
+      "narration_dur": 8.555167,
+      "audio": "W1_3/_audio_ko/S15.mp3"
+    },
+    {
+      "scene": "S16",
+      "start": 165.907,
+      "end": 174.311,
+      "len": 8.404,
+      "narration_dur": 8.054375,
+      "audio": "W1_3/_audio_ko/S16.mp3"
+    },
+    {
+      "scene": "S17",
+      "start": 174.311,
+      "end": 182.584,
+      "len": 8.273,
+      "narration_dur": 7.923167,
+      "audio": "W1_3/_audio_ko/S17.mp3"
+    },
+    {
+      "scene": "S18",
+      "start": 182.584,
+      "end": 187.562,
+      "len": 4.978,
+      "narration_dur": 4.627708,
+      "audio": "W1_3/_audio_ko/S18.mp3"
+    },
+    {
+      "scene": "S19",
+      "start": 187.562,
+      "end": 196.467,
+      "len": 8.905,
+      "narration_dur": 8.555167,
+      "audio": "W1_3/_audio_ko/S19.mp3"
+    },
+    {
+      "scene": "S20",
+      "start": 196.467,
+      "end": 205.777,
+      "len": 9.31,
+      "narration_dur": 8.96,
+      "audio": "W1_3/_audio_ko/S20.mp3"
+    },
+    {
+      "scene": "S21",
+      "start": 205.777,
+      "end": 211.802,
+      "len": 6.025,
+      "narration_dur": 5.675208,
+      "audio": "W1_3/_audio_ko/S21.mp3"
+    },
+    {
+      "scene": "S22",
+      "start": 211.802,
+      "end": 224.265,
+      "len": 12.463,
+      "narration_dur": 12.113042,
+      "audio": "W1_3/_audio_ko/S22.mp3"
+    },
+    {
+      "scene": "S23",
+      "start": 224.265,
+      "end": 230.749,
+      "len": 6.484,
+      "narration_dur": 6.134375,
+      "audio": "W1_3/_audio_ko/S23.mp3"
+    }
+  ]
+}
